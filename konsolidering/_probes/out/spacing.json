@@ -1,0 +1,3174 @@
+{
+ "apspace_referenser": [
+  {
+   "token": "--apspace-m",
+   "antal": 9,
+   "kallor": [
+    "certificates",
+    "footer-cro",
+    "fore-efter-cro",
+    "live-ampy-se",
+    "picasso",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "visste-du-att"
+   ]
+  },
+  {
+   "token": "--apspace-s",
+   "antal": 9,
+   "kallor": [
+    "certificates",
+    "footer-cro",
+    "fore-efter-cro",
+    "live-ampy-se",
+    "picasso",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "visste-du-att"
+   ]
+  },
+  {
+   "token": "--apspace-l",
+   "antal": 7,
+   "kallor": [
+    "footer-cro",
+    "fore-efter-cro",
+    "live-ampy-se",
+    "picasso",
+    "rot-gt-cro",
+    "testimonials-block",
+    "visste-du-att"
+   ]
+  },
+  {
+   "token": "--apspace-2xs",
+   "antal": 7,
+   "kallor": [
+    "footer-cro",
+    "fore-efter-cro",
+    "main-form",
+    "picasso",
+    "testimonials-block",
+    "thank-you",
+    "var-process-cro"
+   ]
+  },
+  {
+   "token": "--apspace-xl",
+   "antal": 6,
+   "kallor": [
+    "certificates",
+    "footer-cro",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "visste-du-att"
+   ]
+  },
+  {
+   "token": "--apspace-2xl",
+   "antal": 6,
+   "kallor": [
+    "certificates",
+    "footer-cro",
+    "fore-efter-cro",
+    "testimonials-block",
+    "var-process-cro",
+    "visste-du-att"
+   ]
+  },
+  {
+   "token": "--apspace-xs",
+   "antal": 5,
+   "kallor": [
+    "certificates",
+    "footer-cro",
+    "fore-efter-cro",
+    "picasso",
+    "testimonials-block"
+   ]
+  },
+  {
+   "token": "--apspace-3xs",
+   "antal": 2,
+   "kallor": [
+    "footer-cro",
+    "testimonials-block"
+   ]
+  },
+  {
+   "token": "--apspace-3xl",
+   "antal": 2,
+   "kallor": [
+    "live-ampy-se",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "token": "--apspace-4xs",
+   "antal": 1,
+   "kallor": [
+    "footer-cro"
+   ]
+  }
+ ],
+ "sektion_padding": [
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "varde": "var(--apspace-xl) var(--apspace-xl) · ≤900 vertikalt var(--apspace-2xl) · ≤389 sidopadding 18px",
+   "px_desktop": "56 / 56",
+   "px_mobil": "34.8 / 27.3",
+   "token": "--apspace-xl · --apspace-2xl"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "varde": "var(--apspace-2xl) var(--apspace-xl)",
+   "px_desktop": "79.2 / 56",
+   "px_mobil": "34.8 / 27.3",
+   "token": "--apspace-2xl / --apspace-xl"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "varde": "clamp(2.8rem, 5vw, 6.4rem) clamp(1.6rem, 4vw, 4rem)",
+   "px_desktop": "64 / 40",
+   "px_mobil": "28 / 16",
+   "token": null
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "varde": "var(--ampyfe-space-2xl) var(--ampyfe-space-s) = clamp(31.3px, 4.99vw + 15.3px, 79.2px) clamp(12.8px,",
+   "px_desktop": "79.2 / 19.8",
+   "px_mobil": "34.8 / 13.3",
+   "token": "= --apspace-2xl / --apspace-s i px"
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "varde": "40px 16px 48px (mobil + desktop)",
+   "px_desktop": "40 / 16 / 48",
+   "px_mobil": "40 / 16 / 48",
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "varde": "clamp(12px,1.6vw,20px) clamp(14px,2vw,26px) clamp(20px,2.6vw,30px); ≤992: 10px 10px 16px",
+   "px_desktop": "20 26 30",
+   "px_mobil": "10 10 16",
+   "token": null
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "varde": "var(--apspace-l) alla sidor",
+   "px_desktop": 39.59,
+   "px_mobil": 21.45,
+   "token": "--apspace-l"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "varde": "padding-inline var(--space-xs) (LEGACY-token)",
+   "px_desktop": null,
+   "px_mobil": 9.02,
+   "token": "--space-xs (legacy Core Framework, ej ap*)"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "varde": "clamp(28px,4vw,56px) clamp(16px,3vw,40px)",
+   "px_desktop": "56 40",
+   "px_mobil": "28 16",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "varde": "clamp(2.4rem, 1rem + 4vw, 6rem) clamp(1.2rem, 0.6rem + 2vw, 2.4rem); 0 ≤768px",
+   "px_desktop": "60 / 24",
+   "px_mobil": "0",
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "varde": "clamp(6.4rem,4rem+6vw,11rem) → 110 @1440 / 64 @390",
+   "px_desktop": 110,
+   "px_mobil": 64,
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "varde": "var(--apspace-l) alla sidor · mobil: vertikalt --apspace-xl? nej — uppmätt 27,3 px = --apspace-xl@39",
+   "px_desktop": 39.6,
+   "px_mobil": "27.3 / 9.0",
+   "token": "--apspace-l (desktop) · --space-xs (Core Framework-legacy, mobil)"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "varde": "var(--apspace-2xl) var(--apspace-m) · tablett --apspace-xl --apspace-m · ≤759 --apspace-xl --apspace",
+   "px_desktop": "79.2 / 28",
+   "px_mobil": "27.3 / 13.3",
+   "token": "--apspace-2xl/-m · --apspace-xl/-s"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "varde": "var(--apspace-l) 0 · mobil --apspace-l/--apspace-xl + --apspace-3xs",
+   "px_desktop": "39.6 / 0",
+   "px_mobil": "21.5–27.3 / 6.6",
+   "token": "--apspace-l/-xl/-3xs"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "varde": "24px 20px 28px · ≥992 56px 40px 80px · ≤479 sidopadding 0 (kortet går kant i kant)",
+   "px_desktop": "56 / 40 / 80",
+   "px_mobil": "24 / 0 / 28",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "varde": "40px 20px + padding-bottom var(--apspace-2xl, 48px) (=31,4 @390 / 72,7 @1440 — 'beviset visar 48 och",
+   "px_desktop": "56 / 40 / 72.7",
+   "px_mobil": "40 / 20 / 31.4",
+   "token": "--apspace-2xl"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "varde": "var(--apspace-2xl) var(--apspace-l) · ≤992 --apspace-xl --apspace-m · ≤480 --apspace-l --apspace-s",
+   "px_desktop": "79.2 / 39.6",
+   "px_mobil": "21.5 / 13.3",
+   "token": "--apspace-2xl/-l · -xl/-m · -l/-s"
+  }
+ ],
+ "rader": [
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "artikelmått",
+   "varde": "innehållskolumn 704 px (max-w-article 760 i config men 2-kolumns-grid ger 704) + TOC 320 px sticky; container 1088",
+   "px_desktop": "704 | 320",
+   "px_mobil": "358",
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "h2-rytm",
+   "varde": "mt 48 mb 20 (Tailwind mt-12 mb-5), scroll-mt 112",
+   "px_desktop": "48 / 20",
+   "px_mobil": "48 / 20",
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "h3-rytm",
+   "varde": "mt 32 mb 12",
+   "px_desktop": "32 / 12",
+   "px_mobil": "32 / 12",
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "p-rytm",
+   "varde": "mb 20; listor mb 20 space-y 8",
+   "px_desktop": 20,
+   "px_mobil": 20,
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "kortpadding",
+   "varde": "Snabbt svar 20–24/24; sektionskort 32/40; takeaways 32 (rounded-3xl); lead magnet 48; ComparisonTable 24",
+   "px_desktop": "24–48",
+   "px_mobil": "20–24",
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "kortmarginaler",
+   "varde": "my-6/my-8/my-10/my-12 (24/32/40/48) beroende på komponent",
+   "px_desktop": "24–48",
+   "px_mobil": "24–48",
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "header",
+   "varde": "topbar 36 + nav 66 = 102 px (65 mobil); breadcrumb padding 12",
+   "px_desktop": 102,
+   "px_mobil": 65,
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "footer",
+   "varde": "padding 56 0 32, mt 64",
+   "px_desktop": "56 / 32",
+   "px_mobil": "56 / 32",
+   "token": null
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "Bricks-tabell",
+   "varde": "max-width 44rem (704), margin 3rem auto, cellpadding 1rem",
+   "px_desktop": "704 / 48 / 16",
+   "px_mobil": "48 / 16",
+   "token": null
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "--spacing-xs … 2xl",
+   "varde": "0.5 / 0.75 / 1 / 1.5 / 2 / 3 rem",
+   "px_desktop": "5/7.5/10/15/20/30",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "kort padding / gap",
+   "varde": "20 / 15 (≤600: 15)",
+   "px_desktop": "20/15",
+   "px_mobil": "15/15",
+   "token": null
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "main grid",
+   "varde": "5fr / 7fr gap 20 (512.5 / 717.5)",
+   "px_desktop": "512.5/717.5",
+   "px_mobil": "1 kolumn",
+   "token": null
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "streams gap / legend",
+   "varde": "10; legend 1 kol → 2 kol ≥600 (gap 7.5 15); rad padding 4 0, grid 12px 1fr auto",
+   "px_desktop": "10",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "chart",
+   "varde": "aspect-ratio 2.5/1 (≤560: 1.45/1), min-height 320 (340), padding 10 10 5; topp-remsa 3.2rem, axelremsa 4.4rem, mellanrum",
+   "px_desktop": "675×320",
+   "px_mobil": "363×340",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "skalan som koden deklarerar",
+   "varde": "4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 (fasta px). Rytmregler: syskon i ett kort 16, rubrik→innehåll 24, avdelarlinje 24 på",
+   "px_desktop": "4–64",
+   "px_mobil": "4–64",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "skal (bk-shell)",
+   "varde": "max-width 780; padding 0 clamp(14px, 4vw, 28px) 64px",
+   "px_desktop": "0 28 64",
+   "px_mobil": "0 15.6 64",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "huvud (of-top)",
+   "varde": "min-height 64 (56 ≤480); padding-inline clamp(16px, 3.2vw, 32px); logo 24px hög (20 ≤480); meta gap 12 (8)",
+   "px_desktop": "64 / 32 / h24",
+   "px_mobil": "56 / 16 / h20",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "kortflöde (bk-flow)",
+   "varde": "gap 48, margin-top 48; ≤480: 32/32",
+   "px_desktop": "48 / 48",
+   "px_mobil": "32 / 32",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "kort padding",
+   "varde": "clamp(24px, 3vw, 32px) clamp(16px, 3.2vw, 32px); syskon 16; efter of-h2 24",
+   "px_desktop": "32 / 32",
+   "px_mobil": "24 / 16",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "hero-kort (när)",
+   "varde": "gap 24; when-block gap 16; facts padding-top 24 + border-top; fact-rader gap 16; bricka 34px, glyf 18, gap 16",
+   "px_desktop": "24 / 16 / 24 / 16 / 34",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "elektriker-rad (bk-lead)",
+   "varde": "grid 64px + 1fr (56 ≤480), gap 16, padding-bottom 24 + border-bottom; namn↔roll gap 4",
+   "px_desktop": "64 / 16 / 24",
+   "px_mobil": "56 / 16 / 24",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "arbetslista (of-work)",
+   "varde": "gap 16 (shared 18 överskrivs); li grid 26px + 1fr gap 12; moment med beskrivning → nästa +8; till material 24",
+   "px_desktop": "16 / 12 / 8 / 24",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "details-summary",
+   "varde": "padding 14 16, min-height 48, gap 10; material-ul padding 2 16 16, grid auto-fill minmax(210px,1fr) gap 8 20, li padding",
+   "px_desktop": "14×16 / 48",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "prisrader (bk-row)",
+   "varde": "padding 12 0, border-bottom 1px dashed; gap 4 16; tagg mb 4",
+   "px_desktop": "12",
+   "px_mobil": "12",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "totalplatta (bk-total)",
+   "varde": "margin-top 16; padding 16; gap 12 16; etikett↔not 4; ≤480 kolumn",
+   "px_desktop": "16 / 16",
+   "px_mobil": "16 / 16 (stapel)",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "knappgrid (bk-change__btns)",
+   "varde": "margin-top 24; gap 12; 1 kolumn, ≥680 tre kolumner (211px @1440) med panelen över hela raden",
+   "px_desktop": "24 / 12",
+   "px_mobil": "24 / 12",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "sekundärknapp",
+   "varde": "min-height 52; padding 10 24; border 1.5px; gap 10",
+   "px_desktop": "h52",
+   "px_mobil": "h52",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "panel (bk-panel)",
+   "varde": "padding 16; h3 mb 4; fält margin-top 16; etikett mb 8; två-kolumn gap 12 (1 kol ≤480); skicka mt 16 (shared 14 överskriv",
+   "px_desktop": "16 / 4 / 16 / 8 / 12",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "fält",
+   "varde": "padding 12 (date/select padding-block 0), border 1.5px, höjd 48 (date/select fast 48, textarea min 96)",
+   "px_desktop": "h48 / textarea 96",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "skicka-knapp",
+   "varde": "full bredd, min-height 48, padding 12 22, gap 10, ikon 17",
+   "px_desktop": "h48",
+   "px_mobil": "h48",
+   "token": null
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "sidfot",
+   "varde": "padding 48 clamp(16px,4vw,32px) 40; länk padding 11 2, min-height 44",
+   "px_desktop": "48 / 32 / 40",
+   "px_mobil": "48 / 16 / 40",
+   "token": null
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "sektion padding",
+   "varde": "var(--apspace-xl) var(--apspace-xl) · ≤900 vertikalt var(--apspace-2xl) · ≤389 sidopadding 18px",
+   "px_desktop": "56 / 56",
+   "px_mobil": "34.8 / 27.3",
+   "token": "--apspace-xl · --apspace-2xl"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "sektion margin",
+   "varde": "var(--space-l, 36px) 0",
+   "px_desktop": 36,
+   "px_mobil": 30.1,
+   "token": "--space-l (Core Framework-legacy)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "inner gap text↔kort",
+   "varde": "var(--apspace-m) · ≤900 var(--apspace-xl)",
+   "px_desktop": 28,
+   "px_mobil": 27.3,
+   "token": "--apspace-m / --apspace-xl"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "h2 → p",
+   "varde": "var(--apspace-xs)",
+   "px_desktop": 14,
+   "px_mobil": 10.5,
+   "token": "--apspace-xs"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kortgrid",
+   "varde": "2 kolumner, column-gap var(--apspace-s) (≥ radien 20), row-gap 16px (20 spräcker höjdlåset), max-width 492 · mobil gap 1",
+   "px_desktop": "19.8 / 16",
+   "px_mobil": "16 / 16",
+   "token": "--apspace-s + literal"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "236,1×113 (2,09:1), padding 16px 18px · mobil 159,7×96, padding 12px 14px",
+   "px_desktop": "236×113",
+   "px_mobil": "160×96",
+   "token": null
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "logotyphöjder (optisk massa)",
+   "varde": "IN 35 · ESV 70 · ID06 43 · TH 28 (mobil 25/56/30/20)",
+   "px_desktop": "35/70/43/28",
+   "px_mobil": "25/56/30/20",
+   "token": null
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "blockhöjd (LÅST)",
+   "varde": "354 px @1440 (dagens 354,58) · 456,9 @390",
+   "px_desktop": 354,
+   "px_mobil": 456.9,
+   "token": null
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "sektion padding",
+   "varde": "var(--apspace-2xl) var(--apspace-xl)",
+   "px_desktop": "79.2 / 56",
+   "px_mobil": "34.8 / 27.3",
+   "token": "--apspace-2xl / --apspace-xl"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "sektion margin",
+   "varde": "var(--space-l)",
+   "px_desktop": 36,
+   "px_mobil": 30.1,
+   "token": "--space-l (legacy)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "container gap",
+   "varde": "19.8 / 28 (row/col)",
+   "px_desktop": "19.8 / 28",
+   "px_mobil": "13.3 / 16.9",
+   "token": "--apspace-s / --apspace-m"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "h3 → p",
+   "varde": "20px",
+   "px_desktop": 20,
+   "px_mobil": 0,
+   "token": null
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kortgrid 3×2",
+   "varde": "gap 15px, kort 113,6×90,6, padding var(--apspace-s) 19,8 · mobil 100,7×77,7 padding 13,3",
+   "px_desktop": "15 / 16 rad",
+   "px_mobil": "15 / 16",
+   "token": "--apspace-s (kortpadding)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "logotyper",
+   "varde": "49×49 / 49×51 / 65×26 / 74×44 / 65×25 (max-width 60 %)",
+   "px_desktop": "14–49 px synligt bläck",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "höjd",
+   "varde": "min-height 58px (uppmätt 58 på alla)",
+   "px_desktop": 58,
+   "px_mobil": 58,
+   "token": null
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "padding rådgivning/offert",
+   "varde": "11px 24px; --block 11px 22px",
+   "px_desktop": "11 24",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "padding ring",
+   "varde": "11px 30px 11px 12px (chip vänster); --block 11px 12px 11px 22px (chip höger)",
+   "px_desktop": "11 30 11 12",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "gap text↔ikon",
+   "varde": "16px (pil) / 14px (chip)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "chip",
+   "varde": "36×36, ikon 17×17 optiskt flyttad translate(-1px,1px)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "pil",
+   "varde": "16×16 svg, stroke 1.5",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "uppmätta bredder @1440",
+   "varde": "ring 227.6 · rådgivning 242.3 · offert 206.4 · --block 300 (slot-bredd)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "--space-1 … --space-13",
+   "varde": "0.4 / 0.6 / 0.8 / 1.0 / 1.2 / 1.4 / 1.6 / 1.8 / 2.0 / 2.2 / 2.4 / 2.8 / 3.2 rem",
+   "px_desktop": "4/6/8/10/12/14/16/18/20/22/24/28/32",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "--rhythm-section / --rhythm-group / --rhythm-label",
+   "varde": "24 (≥1024: 32) / 12 / 8",
+   "px_desktop": "32/12/8",
+   "px_mobil": "24/12/8",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "shell padding",
+   "varde": "clamp(2.4rem, 4vw, 5.6rem) clamp(1.6rem, 4vw, 4rem) + safe-area",
+   "px_desktop": "56 / 40",
+   "px_mobil": "24 / 16",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "shell grid",
+   "varde": "≥1024: minmax(36rem,44fr) minmax(46rem,56fr), gap 6.4rem; annars 1 kolumn gap 20 (mobil 16)",
+   "px_desktop": "499.8 / 636.2, gap 64",
+   "px_mobil": "1 kol, gap 16",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "rail min-height",
+   "varde": "--ec-q-minh 56rem (rail-innehållet centreras i samma box på alla vyer)",
+   "px_desktop": 560,
+   "px_mobil": "display:contents",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "kortpadding (--block-padding)",
+   "varde": "24 (≥1024: 32; ≤767: 20)",
+   "px_desktop": 32,
+   "px_mobil": 20,
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "kortets min-height (start + frågor)",
+   "varde": "--ec-q-minh 56rem (≤767: 60rem) — jämn höjd mellan steg",
+   "px_desktop": 560,
+   "px_mobil": 600,
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "crumb margin-bottom",
+   "varde": "24 (≤767: 20); start: 24 → 28 på desktop",
+   "px_desktop": 24,
+   "px_mobil": 20,
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "options gap",
+   "varde": "12 (≥1024: 14)",
+   "px_desktop": 14,
+   "px_mobil": 12,
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "option padding",
+   "varde": "14 16 (≥1024: 16 20)",
+   "px_desktop": "16/20",
+   "px_mobil": "14/16",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "rail: heading→lead / lead→bullets / bullets→CTA / CTA→stat",
+   "varde": "20 / 28 / 28 / 16",
+   "px_desktop": "20/28/28/16",
+   "px_mobil": "0/10/…",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "dualstatus padding / gap",
+   "varde": "18 18 18 16 (≤767: 14 14 14 12) / 14 (mobil 10); ≥1024 width fit-content min 42rem",
+   "px_desktop": "18/16, 14",
+   "px_mobil": "14/12, 10",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "findings gap",
+   "varde": "14 (≥1024: 16)",
+   "px_desktop": 16,
+   "px_mobil": 14,
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "lead-grid",
+   "varde": "2 kol (≤767: 1), gap 20 14, margin-bottom 24",
+   "px_desktop": "278×2",
+   "px_mobil": "1 kol",
+   "token": null
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "blockläge",
+   "varde": "band padding-block clamp(4.8rem, 6vw, 8rem); shell max 76rem centrerad, padding-inline clamp(1.6rem,4vw,2.4rem); blockhe",
+   "px_desktop": "80 / kort 560 kvadrat",
+   "px_mobil": "48",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "sektion padding",
+   "varde": "clamp(2.8rem, 5vw, 6.4rem) clamp(1.6rem, 4vw, 4rem)",
+   "px_desktop": "64 / 40",
+   "px_mobil": "28 / 16",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "rubrik margin-bottom",
+   "varde": "clamp(2.4rem, 3vw, 3.6rem)",
+   "px_desktop": 36,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "grid",
+   "varde": "minmax(0,4fr) minmax(0,6fr), column-gap clamp(2rem, 3vw, 4rem) · ≤992 display:block",
+   "px_desktop": "496 | 744, gap 40",
+   "px_mobil": "staplat, lista margin 20 0",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "samtalskort padding + inre gap",
+   "varde": "clamp(2rem, 2.4vw, 2.8rem); gap 1.6rem",
+   "px_desktop": "28 / 16",
+   "px_mobil": "20 / 16",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "statuspill",
+   "varde": "padding .5rem 1.1rem, gap .8rem, puls .9rem",
+   "px_desktop": "5/11, 26 hög",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "trust-lista",
+   "varde": "padding 1.8rem 0, ram 1px över+under, gap 1.6rem; li grid 2.6rem 1fr col-gap 1.3rem; ikon 2.1rem",
+   "px_desktop": "18 / 16 / 26+13",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "CTA",
+   "varde": "padding 1.5rem 2rem, min-height 5.8rem, gap 1.4rem, ikon 2.4rem · ≤480 padding 1.4rem 1.6rem",
+   "px_desktop": "58 hög, 15/20",
+   "px_mobil": "58 hög, 14/16",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "symptomrad",
+   "varde": "padding clamp(1.8rem, 2vw, 2.2rem) clamp(1.8rem, 2.4vw, 2.6rem), gap 1.3rem, prick 1rem, chevron 2.2rem",
+   "px_desktop": "22 / 26 → 68 hög",
+   "px_mobil": "18 / 18 → 60 hög",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "nivåtagg",
+   "varde": "padding .45rem 1.1rem",
+   "px_desktop": "4.5 / 11, 24 hög",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "panel",
+   "varde": "padding .4rem clamp(1.8rem,2.4vw,2.6rem) clamp(2rem,2.4vw,2.6rem), gap 1.4rem; in-panel CTA max 34rem; säkerhetsruta pad",
+   "px_desktop": "4 / 26 / 26, gap 14; CTA 340",
+   "px_mobil": "4 / 18 / 20",
+   "token": null
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "'Se fler'-knapp",
+   "varde": "padding 1.8rem 1.6rem, gap .8rem, ikon 1.8rem",
+   "px_desktop": "55 hög",
+   "px_mobil": "55 hög",
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "bar padding",
+   "varde": "8px 12px max(env(safe-area-inset-bottom), 16px) — NAMNGIVEN AVVIKELSE (spec sa 8 nertill; 16 ger tap-centrum ≥45 px från",
+   "px_desktop": null,
+   "px_mobil": "8 / 12 / 16",
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "bar totalhöjd",
+   "varde": "1 hairline + 8 + 58 pill + 16 = 83 px (uppmätt 83, body padding-bottom 83 → CLS 0)",
+   "px_desktop": null,
+   "px_mobil": 83,
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "pill",
+   "varde": "min-height 58, padding 11px 12px 11px 22px (ring), gap 14; grön fork 15px 20px gap 14",
+   "px_desktop": null,
+   "px_mobil": "366×58",
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "ikonchip",
+   "varde": "36×36, padding 10.5 10.5 8.5 8.5 (optisk mikro-centrering), glyf 17 px; grön fork ikon 24",
+   "px_desktop": 36,
+   "px_mobil": 36,
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "bar gap (pill ↔ ghost/kryss, dark-fork)",
+   "varde": "10px; ghost min-h 44 padding 0 12; kryss 44×44",
+   "px_desktop": null,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "hörnkort",
+   "varde": "216×128 (dark 240), gutter 24 från höger+botten, padding 14px 16px 19px (optisk balans 19,92/20,00), ledtext mb 15",
+   "px_desktop": "216×128",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "hörnkort-CTA",
+   "varde": "182×58, padding 11 12 11 18, gap 10; verb/nummer staplade gap 2 (18+2+16 = 36 = interiören)",
+   "px_desktop": "182×58",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "sticky samtalskort (desktop, symptomblocket)",
+   "varde": ".eb__aside position:sticky; top: calc(var(--acb-header-h, 88px) + 16px) = 104 px [GAP-9 header-offset ska mätas]",
+   "px_desktop": 104,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "--space-1 … --space-13",
+   "varde": "0.4 → 3.2rem i 2px-steg (identisk med Elcentral)",
+   "px_desktop": "4/6/8/10/12/14/16/18/20/22/24/28/32",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "hero padding",
+   "varde": "clamp(4.8rem, 6vw, 8rem) 0 (≤767: 2.4rem 0 4rem)",
+   "px_desktop": "80/0",
+   "px_mobil": "24/0/40",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": ".wrap",
+   "varde": "max-width 118rem, padding 0 2.4rem (≤767: 1.6rem)",
+   "px_desktop": "1180 / 24",
+   "px_mobil": "/ 16",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "hero__grid",
+   "varde": "minmax(38rem,44fr) minmax(46rem,56fr), column-gap 6.4rem, rader 9.6rem auto auto 1fr (vänsterkolumnen pinnad); ≤1023: 40",
+   "px_desktop": "491 / 625, gap 64",
+   "px_mobil": "1 kol, gap 20",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "hero: h1→sub / sub→foot / trust gap / trust→buttons / button",
+   "varde": "1.4rem / 2.6rem / 1.6rem / 2.8rem / 2rem",
+   "px_desktop": "14/26/16/28/20",
+   "px_mobil": "12/4/–/12/12",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "kort (hero-läge) padding / min-height",
+   "varde": "--space-13 = 32; min-height 56rem (mobil content-sized, padding 16 16 20)",
+   "px_desktop": "32 / 560",
+   "px_mobil": "16-20 / auto (300 mätt)",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "kort (inbäddat läge)",
+   "varde": "max-width 60rem, margin 16 auto, padding 20 22 (≤767: 20, margin 16)",
+   "px_desktop": "600 / 20-22",
+   "px_mobil": "20",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "roomgrid gap",
+   "varde": "12 (≤767: 10), 2 kolumner",
+   "px_desktop": 12,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "roomtile padding / min-height / gap",
+   "varde": "16 / 11.2rem / 8 (≤767: 14 / 9.2rem)",
+   "px_desktop": "16 / 112 / 8",
+   "px_mobil": "14 / 92",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "job-row padding / min-height",
+   "varde": "12 8 / 52 (≤767: 48)",
+   "px_desktop": "12/8 / 52",
+   "px_mobil": "48",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "option padding / min-height",
+   "varde": "16 / 72 (≤767: 14 16 / 64)",
+   "px_desktop": "16 / 72",
+   "px_mobil": "14-16 / 64",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "verdict-rytm",
+   "varde": "crumb→board 16 (hero: 14); judgment→tabs 22 (hero: 16); tabs gap 24 (≤767: 20); tab-body padding-left 10 (≤767: 12), mar",
+   "px_desktop": "…",
+   "px_mobil": "…",
+   "token": null
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "lead-grid",
+   "varde": "2 kol (≤767: 1), gap 16 12",
+   "px_desktop": "273×2",
+   "px_mobil": "1 kol",
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--sp-1 … --sp-9 (4px-grid)",
+   "varde": "0.4 / 0.8 / 1.2 / 1.6 / 2.0 / 2.4 / 3.2 / 4.0 / 5.6 rem + halvsteg --sp-1h 0.6, --sp-2h 1.0, --cta-y 1.6",
+   "px_desktop": "4/8/12/16/20/24/32/40/56",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "page padding",
+   "varde": "40px 24px 56px (≤480: 16px 12px 40px)",
+   "px_desktop": "40/24/56",
+   "px_mobil": "16/12/40",
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "panes gap",
+   "varde": "32 (≥1200: 40); ≤991 kolumn",
+   "px_desktop": 40,
+   "px_mobil": 32,
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "inputkort",
+   "varde": "flex 0 0 42rem, padding 32 (≤480: 20), sticky top 24px på desktop",
+   "px_desktop": "420 bred / 32",
+   "px_mobil": "100 % / 20",
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "resultatkort padding",
+   "varde": "32 (≥1200: 40; ≤480: 16)",
+   "px_desktop": 40,
+   "px_mobil": 16,
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "rightcol gap (result → trust)",
+   "varde": "24",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "inputkortets rytm",
+   "varde": "label→kontroll 8 (≤480: 12); gearhead→innehåll 16; ny frågegrupp 24 (≤480: 32); gear-n2 hairline 24 över + under (≤480: ",
+   "px_desktop": "8/16/24",
+   "px_mobil": "12/16/32",
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "hp-grid gap",
+   "varde": "10 (--sp-2h), 2 kolumner",
+   "px_desktop": 10,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "seg gap",
+   "varde": "6 (--sp-1h); ≤480: 8",
+   "px_desktop": 6,
+   "px_mobil": 8,
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "resultatets rytm",
+   "varde": "anchor margin 12 0 16; storybar → legend 12; spark margin-top 24; spark-list margin-top 16; sp-item gap 8 (≤991: 10); ct",
+   "px_desktop": "12/16/24/16/8/32/16",
+   "px_mobil": "…/10/…",
+   "token": null
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "trust-inner padding",
+   "varde": "30px 32px (≤480: 26px 24px)",
+   "px_desktop": "30/32",
+   "px_mobil": "26/24",
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-xs … 2xl",
+   "varde": "0.5 / 0.75 / 1 / 1.5 / 2 / 3 rem (ingen 3xl)",
+   "px_desktop": "5/7.5/10/15/20/30",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "container padding",
+   "varde": "20px 0 (ingen sidopadding — värden äger marginalerna)",
+   "px_desktop": "20/0",
+   "px_mobil": "20/0",
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "container gap",
+   "varde": "30 (≤768cqi: 20, ≤600cqi: 15)",
+   "px_desktop": 30,
+   "px_mobil": 15,
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "main grid",
+   "varde": "minmax(0,5fr) minmax(0,7fr), gap 20; ≤960cqi 1 kolumn",
+   "px_desktop": "525 / 735 @1280",
+   "px_mobil": "1 kolumn",
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "kort padding / gap (båda korten)",
+   "varde": "20 / 15 (≤600cqi: 15 / 10; ≤420cqi: 10)",
+   "px_desktop": "20/15",
+   "px_mobil": "10/10",
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "tier gap (båda tiers)",
+   "varde": "10 (3-2: samma gap i primär)",
+   "px_desktop": 10,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "monthly-panel padding / gap / stapelgap",
+   "varde": "15 / 10 / 15 (≤600cqi: 10)",
+   "px_desktop": "15/10/15",
+   "px_mobil": "10/10/15",
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "trio column-gap / row-gap",
+   "varde": "15 / 10; ≥560cqi kolumner 1.2fr 1fr",
+   "px_desktop": "369.8 / 308.2",
+   "px_mobil": "1 kolumn",
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "cta-stack",
+   "varde": "gap 10, padding-top 10 + 1px .14-kant",
+   "px_desktop": 10,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "lead-form padding / gap",
+   "varde": "10 / 10 (egen sektion med .06-bg, radius 12)",
+   "px_desktop": 10,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "reveal-stagger",
+   "varde": "40 / 100 / 160 / 220 / 280 ms",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "prefooter padding",
+   "varde": "var(--apspace-xl) var(--apspace-l) var(--apspace-l)",
+   "px_desktop": "56 39.6 39.6",
+   "px_mobil": "27.3 21.5 21.5",
+   "token": "--apspace-xl/-l"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "prefooter row-gap / grid margin-bottom",
+   "varde": "var(--space-m) 24px fast / var(--space-l) 36px fast (Bricks legacy)",
+   "px_desktop": "24 / 36",
+   "px_mobil": "24 / 36",
+   "token": "--space-m/-l (legacy, här som fasta px)"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "prefooter grid",
+   "varde": "repeat(5,1fr) gap 0; @767 1fr 1fr gap --apspace-s; @478 1fr gap 20",
+   "px_desktop": "5 × 256",
+   "px_mobil": "1 kol",
+   "token": null
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "block row-gap / li padding",
+   "varde": "--apspace-xs / --apspace-3xs",
+   "px_desktop": "14 / 7",
+   "px_mobil": "10.5 / 6.6",
+   "token": "--apspace-xs/-3xs"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "footer padding",
+   "varde": "var(--apspace-2xl) var(--apspace-l)",
+   "px_desktop": "79.2 39.6",
+   "px_mobil": "34.8 21.5",
+   "token": "--apspace-2xl/-l"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "footer kolumner",
+   "varde": "brand 30 % (384) · links 60 % (768) flex-end gap 60px 50px, kolumner 30 %/kontakt 50 %; @991 65 % gap 20; @767 100 % kol",
+   "px_desktop": "384 / 768",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "sociala ikoner",
+   "varde": "a padding --apspace-2xs (9.9) höger/topp/botten → 53.8 h; svg 20; gap --apspace-2xs; @478 gap --apspace-m",
+   "px_desktop": "53.8 h",
+   "px_mobil": "50.6 h",
+   "token": "--apspace-2xs"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "Google-rad",
+   "varde": "G-ikon 29 + 4, column-gap 10/5/4, stjärnor 18",
+   "px_desktop": "29 / 18",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "footer-bar",
+   "varde": "bar padding --apspace-4xs --apspace-l; container padding --apspace-s --apspace-l; @478 --apspace-l 0",
+   "px_desktop": "5.2 39.6 / 19.8 39.6 → 68 h",
+   "px_mobil": "→ 126.9 h",
+   "token": "--apspace-4xs/-s/-l"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "logo",
+   "varde": "130×37, max-width 50 %",
+   "px_desktop": "130×37",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "sektion padding",
+   "varde": "var(--ampyfe-space-2xl) var(--ampyfe-space-s) = clamp(31.3px, 4.99vw + 15.3px, 79.2px) clamp(12.8px, 0.73vw + 10.5px, 19",
+   "px_desktop": "79.2 / 19.8",
+   "px_mobil": "34.8 / 13.3",
+   "token": "= --apspace-2xl / --apspace-s i px"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "h2 margin-bottom",
+   "varde": "var(--ampyfe-space-l) = clamp(20px, 2.04vw + 13.5px, 39.6px)",
+   "px_desktop": 39.6,
+   "px_mobil": 21.5,
+   "token": "= --apspace-l i px"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "par-grid",
+   "varde": "repeat(2, minmax(0,1fr)), gap var(--ampyfe-space-m) = 28 · ≤680 cqi: 1 kolumn, gap --ampyfe-space-l",
+   "px_desktop": "626 | 626, gap 28",
+   "px_mobil": "1 kol, gap 21.5",
+   "token": "= --apspace-m / --apspace-l"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "ram",
+   "varde": "aspect-ratio 1/1 → 626×626 @1440, 363×363 @390; ensamt par max 620 centrerat",
+   "px_desktop": 626,
+   "px_mobil": 363.3,
+   "token": null
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "chip-position",
+   "varde": "top/left(/right) var(--ampyfe-space-xs) = 14 (10.5); padding 8px 15px (7 12 ≤420 cqi)",
+   "px_desktop": "14; 8/15 → 32 hög",
+   "px_mobil": "10.5; 7/12 → 28 hög",
+   "token": "= --apspace-xs"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "handtag",
+   "varde": "52 px (46 ≤420 cqi), ikon 23 (20), ring −5 px",
+   "px_desktop": 52,
+   "px_mobil": 46,
+   "token": null
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "ledtråd",
+   "varde": "top calc(50% + 46px) (40), left clamp(102px, pos, 100% − 102px) (94), padding 7px 14px",
+   "px_desktop": "28 hög",
+   "px_mobil": "26 hög",
+   "token": null
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "reglage",
+   "varde": "höjd 44 (tryckyta), spår 6 px, tumme 26 px + 2 px kant, margin-top var(--ampyfe-space-2xs) = 9.9 (8.3)",
+   "px_desktop": "44 / 6 / 26",
+   "px_mobil": "samma",
+   "token": "= --apspace-2xs"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "tagline margin-top",
+   "varde": "var(--ampyfe-space-l)",
+   "px_desktop": 39.6,
+   "px_mobil": 21.5,
+   "token": "= --apspace-l"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "startposition",
+   "varde": "--ampyfe-pos 35 % (@property, initial-value 35%)",
+   "px_desktop": "35 %",
+   "px_mobil": "35 %",
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "sektion padding",
+   "varde": "40px 16px 48px (mobil + desktop)",
+   "px_desktop": "40 / 16 / 48",
+   "px_mobil": "40 / 16 / 48",
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "kort (mobil)",
+   "varde": "max-width 358, padding 24px 20px, ram 1 px #e6ecf6",
+   "px_desktop": null,
+   "px_mobil": "358 bred, 24/20",
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "desktop-grid (≥900 cqi)",
+   "varde": "kortet blir grid minmax(360px,480px) minmax(0,1fr), column-gap clamp(32px, 3.5cqi, 48px) = 43,7 @1280; vänster = eyebrow",
+   "px_desktop": "480 | 724, gap 43.7",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "eyebrow → H2 → info",
+   "varde": "eyebrow h 20 mb 8; H2 mb 12; lead mb 20 (desktop); info padding 14 0, row-gap 10, mb 16",
+   "px_desktop": "8 / 12 / 20 / 14+10",
+   "px_mobil": "8 / 12 / 14+10",
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "glyf-kolumn",
+   "varde": "grid 26px 1fr, column-gap 13, glyf-ruta 25 hög (ikon 22)",
+   "px_desktop": "26 + 13",
+   "px_mobil": "26 + 13",
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "FEM STAPLAR",
+   "varde": "fotoruta 52 (padding 0 16 0 8, chip 36) · 3 fält 52 (padding 0 16) · submit 58 (padding 11 22) — uppmätt 52/52/52/52/58",
+   "px_desktop": "52×4 + 58",
+   "px_mobil": "52×4 + 58",
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "fält-rytm",
+   "varde": "foto mb 8, ansvar mb 16, fält mb 14, etikett mb 6, fel mt 6, submit mb 14, candour mb 10; desktop fältpar namn+telefon i",
+   "px_desktop": "8/16/14/6/14/10, par-gap 20",
+   "px_mobil": "8/16/14/6/14/10",
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "vald stapel",
+   "varde": "52 → 68 hög (användarinitierat, ingen CLS), thumb 40 radie 10, ikonknapp 44, progress 3 px",
+   "px_desktop": 68,
+   "px_mobil": 68,
+   "token": null
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "scroll-margin",
+   "varde": "96 px ('mot den 83 px höga sticky call-baren')",
+   "px_desktop": 96,
+   "px_mobil": 96,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "section padding (.vb2__section)",
+   "varde": "clamp(12px,1.6vw,20px) clamp(14px,2vw,26px) clamp(20px,2.6vw,30px); ≤992: 10px 10px 16px",
+   "px_desktop": "20 26 30",
+   "px_mobil": "10 10 16",
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "content padding-x (.vb2__content)",
+   "varde": "0 clamp(24px,5vw,84px); 561–992: clamp(30px,6vw,60px); ≤560: 0 24px 7vh",
+   "px_desktop": 72,
+   "px_mobil": "24 / bottom 59.08",
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "h1→lead",
+   "varde": "margin-top 18px; ≤560: 14px",
+   "px_desktop": 18,
+   "px_mobil": 14,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "lead→CTA",
+   "varde": "margin-top 32px; ≤560: 26px",
+   "px_desktop": 32,
+   "px_mobil": 26,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "CTA padding",
+   "varde": "11px 26px; ≤992: 10px 24px; ≤560: 9px 22px",
+   "px_desktop": "11 26",
+   "px_mobil": "9 22",
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "CTA gap text→pil",
+   "varde": "16px / 14px / 12px",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "proof position",
+   "varde": "right clamp(24px,3vw,44px) bottom clamp(20px,3vh,32px); ≤560: left 24px bottom 20px, kolumn gap 9px",
+   "px_desktop": "right 43.2 bottom 30",
+   "px_mobil": "left 24 bottom 20",
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "proof gap",
+   "varde": "14px (g-row gap 9px, stars gap 2.5px)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header höjd",
+   "varde": "--header-h 7.6rem = 76px; ≤992: 6.6rem = 66px",
+   "px_desktop": 76,
+   "px_mobil": 66,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header inner padding",
+   "varde": "--wrap 2.8rem = 28px; ≤560: 1.6rem",
+   "px_desktop": 28,
+   "px_mobil": 16,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "nav-länk padding",
+   "varde": "0 2.6rem, gap .8rem",
+   "px_desktop": 26,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header CTA",
+   "varde": "höjd 4.8rem=48px padding 0 2.6rem; ≤992: 4.2rem/1.9rem; ≤400: 4.4rem/1.5rem",
+   "px_desktop": "48 h, 26 x",
+   "px_mobil": "44 h, 15 x",
+   "token": null
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "mega-meny padding",
+   "varde": "3.6rem var(--wrap), row-gap 3.2rem; lösningar 4rem",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "hjälteram",
+   "varde": "S/G/E: yta 1424 bred (viewport − 2×8) radie 22, höjd 683.5 @1440; mobil 374×754 radie 18 (samma ram som Hero-1: 22/18)",
+   "px_desktop": "1424×683.5",
+   "px_mobil": "374×754",
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "S text-padding",
+   "varde": "crumbs 48 32 0 48; mobil 0 24 + 7vh botten (59.08 = Hero-1:s formel)",
+   "px_desktop": 48,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "G inner",
+   "varde": "48px 28px (container 1280); mobil 20 24",
+   "px_desktop": "48 28",
+   "px_mobil": "20 24",
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "Z hero",
+   "varde": "40px 48px 22px; mobil 21.5 12 22; kort padding 20 alla ytor (V18), max-w 450, min-h 600",
+   "px_desktop": "40 48 22",
+   "px_mobil": "21.5 12 22",
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "E inner",
+   "varde": "48 32 56 48; foto 460×528 margin-right 40",
+   "px_desktop": "48 32 56 48",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "Z fältrytm",
+   "varde": "fld margin-top 14 (V18), label→fält 5, group 10, submit margin-top 12, consent 18 under",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "breadcrumb rad",
+   "varde": "topp 20 mobil / 40 @768 / 48 @≥1200, ≥24 luft under",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "knapp-primitiver",
+   "varde": "ampy-btn padding 0 24, gap 10; bibliotekets 11/24 resp 11/30/11/12",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "kort padding",
+   "varde": "28px (bas) / ≤600 24px 20px / ≥601 22px",
+   "px_desktop": 22,
+   "px_mobil": "24 20",
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "kort max-width",
+   "varde": "470px (mobil none)",
+   "px_desktop": 470,
+   "px_mobil": 374,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "group / fld / row2",
+   "varde": "16 / 10 / gap 10 (≥601: 12 / 8 / 8)",
+   "px_desktop": "12 / 8",
+   "px_mobil": "16 / 10",
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "label → fält",
+   "varde": "6px (≥601 5px)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "consent margin-top / submit margin-top",
+   "varde": "14 / 18 (≥601 12 / 14)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "segment gap",
+   "varde": "12 (≥601 10)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "input padding",
+   "varde": "0 16; textarea 12 16",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "uppmätt korthöjd",
+   "varde": "470×585.7 @1440 · 374×832.5 @390",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-xs",
+   "varde": "0.5rem",
+   "px_desktop": 5,
+   "px_mobil": 5,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-sm",
+   "varde": "0.75rem",
+   "px_desktop": 7.5,
+   "px_mobil": 7.5,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-md",
+   "varde": "1rem",
+   "px_desktop": 10,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-lg",
+   "varde": "1.5rem",
+   "px_desktop": 15,
+   "px_mobil": 15,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-xl",
+   "varde": "2rem",
+   "px_desktop": 20,
+   "px_mobil": 20,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-2xl",
+   "varde": "3rem",
+   "px_desktop": 30,
+   "px_mobil": 30,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--spacing-3xl",
+   "varde": "4rem",
+   "px_desktop": 40,
+   "px_mobil": 40,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "container padding",
+   "varde": "20px 15px (≤768: 15px 10px)",
+   "px_desktop": "20/15",
+   "px_mobil": "15/10",
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "container gap header→main",
+   "varde": "30px (≤768: 20px)",
+   "px_desktop": 30,
+   "px_mobil": 20,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "main grid",
+   "varde": "minmax(0,5fr) minmax(0,7fr), gap 20px; ≤960: 1 kolumn",
+   "px_desktop": "512.5 / 717.5 @1280",
+   "px_mobil": "1 kolumn",
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "inputkort padding / gap",
+   "varde": "20px / 15px (≤600: 15px)",
+   "px_desktop": "20/15",
+   "px_mobil": "15/15",
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "resultatkort padding / gap",
+   "varde": "40px / 30px (≤600: 20px 15px / 20px)",
+   "px_desktop": "40/30",
+   "px_mobil": "20-15/20",
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "tier + tier avdelare",
+   "varde": "margin-top 15 + padding-top 15 + 1px border",
+   "px_desktop": 31,
+   "px_mobil": 31,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "trio row-gap / column-gap",
+   "varde": "0.2rem / 15px (≤560: staplas, label margin-top 10)",
+   "px_desktop": "2/15",
+   "px_mobil": "10 mellan grupper",
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "hero-value baseline gap till enhet",
+   "varde": "1.2rem",
+   "px_desktop": 12,
+   "px_mobil": 12,
+   "token": null
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "reveal-stagger",
+   "varde": "40 / 120 / 180 / 260 ms",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "section padding (tema-default .brxe-section)",
+   "varde": "var(--apspace-l) alla sidor",
+   "px_desktop": 39.59,
+   "px_mobil": 21.45,
+   "token": "--apspace-l"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "ROT section padding @480",
+   "varde": "padding-inline var(--space-xs) (LEGACY-token)",
+   "px_desktop": null,
+   "px_mobil": 9.02,
+   "token": "--space-xs (legacy Core Framework, ej ap*)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "ROT kort-padding",
+   "varde": "padding var(--apspace-3xl)? (uppmätt 111.9px @1440) / @480 44.4px 13.03px (padding-inline var(--space-s))",
+   "px_desktop": 111.9,
+   "px_mobil": "44.4 / 13.03",
+   "token": "--apspace-3xl (111.89px) + legacy --space-s"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "GT kort-padding",
+   "varde": "var(--apspace-xl) alla sidor",
+   "px_desktop": 56,
+   "px_mobil": 27.3,
+   "token": "--apspace-xl"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "kort row-gap",
+   "varde": "var(--apspace-l) / @480 var(--apspace-xl)",
+   "px_desktop": 39.59,
+   "px_mobil": 27.3,
+   "token": "--apspace-l / --apspace-xl"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "process-grid gap",
+   "varde": "ROT var(--apspace-s) · GT var(--apspace-m); @1024 --apspace-xl; @780 --apspace-m; @480 --apspace-3xl",
+   "px_desktop": "19.8 (ROT) / 28 (GT)",
+   "px_mobil": 44.39,
+   "token": "--apspace-s/-m/-xl/-3xl"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "steg row-gap ikon→text",
+   "varde": "var(--apspace-s)",
+   "px_desktop": 19.8,
+   "px_mobil": 13.34,
+   "token": "--apspace-s"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "steg mobil kolumn-gap",
+   "varde": "@780 var(--apspace-s) · @480 var(--space-xs) (LEGACY)",
+   "px_desktop": null,
+   "px_mobil": 9.02,
+   "token": "--space-xs legacy"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "knapp padding",
+   "varde": "var(--space-s) var(--space-m) (LEGACY-tokens) -> uppmätt 16px 24px @1440, 13.03px 20.04px @390",
+   "px_desktop": "16 24",
+   "px_mobil": "13.03 20.04",
+   "token": "--space-s/--space-m (legacy) — INTE --apbtn-space (14px 19.8px)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "knapp margin-top @480",
+   "varde": "var(--apspace-l)",
+   "px_desktop": null,
+   "px_mobil": 21.45,
+   "token": "--apspace-l"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "p margin-top",
+   "varde": "10px / @480 8px",
+   "px_desktop": 10,
+   "px_mobil": 8,
+   "token": null
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "ikon negativ margin",
+   "varde": "margin-top:-15px",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "section padding",
+   "varde": "clamp(28px,4vw,56px) clamp(16px,3vw,40px)",
+   "px_desktop": "56 40",
+   "px_mobil": "28 16",
+   "token": null
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "kort padding",
+   "varde": "clamp(28px,3.2vw,48px) clamp(28px,4.5vw,72px); 768–1024: clamp(28,3vw,36)/clamp(28,3.5vw,40); ≤767: 20px 20px 28px",
+   "px_desktop": "46.08 64.8",
+   "px_mobil": "20 20 28",
+   "token": null
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "kort grid",
+   "varde": "1fr 400px, gap clamp(24px,3vw,48px); 768–1024: minmax(0,1fr) clamp(260px,34vw,320px); ≤767: 1fr gap 20",
+   "px_desktop": "gap 43.2",
+   "px_mobil": "gap 20",
+   "token": null
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "text-stack gap",
+   "varde": "16px; CTA margin-top 12px (var 8)",
+   "px_desktop": 16,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "knapp",
+   "varde": "min-h 58, padding 11/30/11/12 (mobil 11/12/11/22 chip höger), gap 14",
+   "px_desktop": 58,
+   "px_mobil": 58,
+   "token": null
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "foto",
+   "varde": "80 % av 400-kolumnen = 320×366 (aspect 320/366), object-position 50% 46%; ≤767: container min(92%,360px) → 292.5×334.6",
+   "px_desktop": "320×366",
+   "px_mobil": "292.5×334.6",
+   "token": null
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "vågor",
+   "varde": "bgwave 44 % bredd nere-höger (offset = kort-padding), overlay-våg 50 % av media (≤767 60 %)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "section-padding",
+   "varde": "clamp(2.4rem, 1rem + 4vw, 6rem) clamp(1.2rem, 0.6rem + 2vw, 2.4rem); 0 ≤768px",
+   "px_desktop": "60 / 24",
+   "px_mobil": "0",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "fotopanel padding",
+   "varde": "3.6rem 2.2rem 7.2rem; mobil 4.4rem 2rem 3.6rem",
+   "px_desktop": "36 / 22 / 72",
+   "px_mobil": "44 / 20 / 36",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "logo-position (absolut)",
+   "varde": "top 2.9rem; left 2.9rem; höjd 2.6rem (uppmätt 91×26)",
+   "px_desktop": "29 / 29 / h26",
+   "px_mobil": "dold",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "fotopanelens innehållsblock",
+   "varde": "gap 1.5rem (mobil 1.4rem); max-width 52rem",
+   "px_desktop": "15 / 520",
+   "px_mobil": "14 / ingen",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "betyg: gap stjärnor↔text / stjärna↔stjärna",
+   "varde": "0.9rem / 0.2rem; stjärna 1.8rem",
+   "px_desktop": "9 / 2 / 18",
+   "px_mobil": "9 / 2 / 18",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "stegrad desktop",
+   "varde": "grid 3 kolumner, gap 1.6rem; ikon 2.2rem; ikon↔text 1rem",
+   "px_desktop": "16 / 22 / 10",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "stegblock mobil",
+   "varde": "padding 3.2rem 3.4rem 3.6rem; gap 2rem; rad: ikon 2rem, gap 1.4rem",
+   "px_desktop": null,
+   "px_mobil": "32 / 34 / 36; 20; 20; 14",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "formulärpanel padding",
+   "varde": "clamp(2.8rem, 1.6rem + 2.2vw, 4.2rem) clamp(2.8rem, 1.6rem + 2.4vw, 4.8rem); mobil 2.8rem 2rem + margin 0 1.6rem",
+   "px_desktop": "42 / 48",
+   "px_mobil": "28 / 20 (ränna 16)",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "rubrikblock",
+   "varde": "gap 1rem; margin-bottom 2.4rem",
+   "px_desktop": "10 / 24",
+   "px_mobil": "10 / 24",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "formulärgrid",
+   "varde": "2 kolumner; gap 2rem 3.2rem (rad/kolumn); 1 kolumn ≤460px",
+   "px_desktop": "20 / 32",
+   "px_mobil": "20 (1 kol)",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "etikett→fält",
+   "varde": "gap 0.8rem",
+   "px_desktop": 8,
+   "px_mobil": 8,
+   "token": "≈ --apspace-2xs (8.3–9.9)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "input padding / höjd",
+   "varde": "1.6rem 1.8rem, border 2px, lh 1.2 → uppmätt 55px hög",
+   "px_desktop": "16 / 18 → h55",
+   "px_mobil": "16 / 18 → h55",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "textarea",
+   "varde": "min-height 7rem (uppmätt 74), resize none",
+   "px_desktop": 70,
+   "px_mobil": 70,
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "adressfält",
+   "varde": "padding-left 4.4rem; ikon 1.8rem vid left 1.6rem",
+   "px_desktop": "44 / 18 / 16",
+   "px_mobil": "44 / 18 / 16",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "adresslista",
+   "varde": "top calc(100% + 0.6rem); max-height 26rem; träff padding 1.1rem 1.4rem, gap 1rem",
+   "px_desktop": "6 / 260 / 11×14",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "manuell adressbox",
+   "varde": "margin-top 1rem; padding 1.8rem; gap 1.6rem 2rem; 2 kolumner (1 ≤460)",
+   "px_desktop": "10 / 18 / 16×20",
+   "px_mobil": "10 / 18 / 16",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "knapp",
+   "varde": "margin-top 0.8rem; padding 1.6rem 3.2rem; full bredd; gap 0.8rem; ikon 1.9rem → uppmätt 52px hög",
+   "px_desktop": "8 / 16×32 / h52",
+   "px_mobil": "8 / 16×32 / h52",
+   "token": "≈ --apbtn-space (14×19.8) NEJ – större"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "samtyckesrad",
+   "varde": "margin-top 0.4rem, centrerad",
+   "px_desktop": 4,
+   "px_mobil": 4,
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "felbanner",
+   "varde": "padding 1.1rem 1.4rem; margin-top 1rem",
+   "px_desktop": "11×14 / 10",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "success-kort",
+   "varde": "gap 1.6rem; padding 4rem 0; ikon 6.4rem cirkel, svg 3.2rem; brödtext max-width 38rem",
+   "px_desktop": "16 / 40 / 64 / 32 / 380",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "section padding-block",
+   "varde": "clamp(6.4rem,4rem+6vw,11rem) → 110 @1440 / 64 @390",
+   "px_desktop": 110,
+   "px_mobil": 64,
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "wrap",
+   "varde": "max 132rem = 1320, padding-inline max(2.4rem, safe-area) = 24",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "head → grid",
+   "varde": "clamp(4.8rem,3rem+2vw,6.4rem) → 64 / 48",
+   "px_desktop": 64,
+   "px_mobil": 48,
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "h2 → lead",
+   "varde": "--s-5 2.4rem = 24",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "grid gap",
+   "varde": "3rem = 30 (Evify); mobil --s-5 24, max-w 44rem",
+   "px_desktop": 30,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "aspect 1/1: 404×404 @1440 (3 × 404 + 2 × 30 = 1272) / 342×342 @390",
+   "px_desktop": 404,
+   "px_mobil": 342,
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "kort body padding / gap",
+   "varde": "--s-5 24 / gap 24",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "spacing-skala (lokal)",
+   "varde": "--s-2 8 · --s-3 12 · --s-4 16 · --s-5 24 · --s-6 32 · --s-7 48 · --s-8 64",
+   "px_desktop": null,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "picasso",
+   "auk": 3,
+   "roll": "ampy-btn padding",
+   "varde": "var(--apspace-2xs) var(--space-m) (mobil ≤640: var(--apspace-s) var(--apspace-l))",
+   "px_desktop": "9.9 / 24",
+   "px_mobil": "13.3 / 21.5",
+   "token": "--apspace-2xs / --space-m (Bricks' egna --space-m, inte --apspace-m)"
+  },
+  {
+   "kalla": "picasso",
+   "auk": 3,
+   "roll": "ampy-btn gap (label → ikon)",
+   "varde": "var(--apspace-l)",
+   "px_desktop": 39.6,
+   "px_mobil": 21.5,
+   "token": "--apspace-l"
+  },
+  {
+   "kalla": "picasso",
+   "auk": 3,
+   "roll": "cta-row gap",
+   "varde": "2rem (mobil --apspace-xs)",
+   "px_desktop": 20,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "sektion padding",
+   "varde": "var(--apspace-l) alla sidor · mobil: vertikalt --apspace-xl? nej — uppmätt 27,3 px = --apspace-xl@390, horisontellt var(",
+   "px_desktop": 39.6,
+   "px_mobil": "27.3 / 9.0",
+   "token": "--apspace-l (desktop) · --space-xs (Core Framework-legacy, mobil)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "kortets padding (ROT)",
+   "varde": "var(--apspace-3xl) alla sidor · mobil: --apspace-3xl vertikalt, var(--space-s) horisontellt",
+   "px_desktop": 111.9,
+   "px_mobil": "44.4 / 13.0",
+   "token": "--apspace-3xl · --space-s"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "kortets padding (GT)",
+   "varde": "var(--apspace-xl) alla sidor",
+   "px_desktop": 56,
+   "px_mobil": 27.3,
+   "token": "--apspace-xl"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "kortets row-gap (H2→grid→knapp)",
+   "varde": "var(--apspace-l) · mobil var(--apspace-xl)",
+   "px_desktop": 39.6,
+   "px_mobil": 27.3,
+   "token": "--apspace-l / --apspace-xl"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "steg-grid gap",
+   "varde": "ROT var(--apspace-s) · GT var(--apspace-m) · mobil båda var(--apspace-3xl)",
+   "px_desktop": "19.8 / 28",
+   "px_mobil": 44.4,
+   "token": "--apspace-s / --apspace-m / --apspace-3xl"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "steg: ikon→text",
+   "varde": "row-gap var(--apspace-s) desktop · mobil row var(--space-s) col var(--space-xs)",
+   "px_desktop": 19.8,
+   "px_mobil": "13.0 / 9.0",
+   "token": "--apspace-s · --space-s/--space-xs"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "knapp padding",
+   "varde": "var(--space-s) var(--space-m)",
+   "px_desktop": "16 / 24",
+   "px_mobil": "13.0 / 20.0",
+   "token": "--space-s/--space-m (legacy)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "knapp margin-top (mobil, full bredd)",
+   "varde": "var(--apspace-l)",
+   "px_desktop": 0,
+   "px_mobil": 21.5,
+   "token": "--apspace-l"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "ikon offset",
+   "varde": "margin-top:-15px",
+   "px_desktop": -15,
+   "px_mobil": -15,
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "block padding",
+   "varde": "clamp(44px, 5.4cqi, 100px) clamp(24px, 4.4cqi, 80px) · ≤900: 28px clamp(14px, calc(5vw - 2px), 16px)",
+   "px_desktop": "74.7 / 60.9",
+   "px_mobil": "28 / 16",
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "grid kolumner + gap",
+   "varde": "minmax(0,1fr) clamp(480px, 37cqi, 530px); gap clamp(48px, 6.3cqi, 96px) · staplat ≤1024cqi: 1 kolumn, gap 56, max-width ",
+   "px_desktop": "700.8 | 480, gap 79.4",
+   "px_mobil": "1 kol, gap 56, max 640",
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "H2 margin-bottom",
+   "varde": "clamp(30px, 3.1vw, 44px) · mobil 40px",
+   "px_desktop": 44,
+   "px_mobil": 40,
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "'Steg för steg' margin-bottom",
+   "varde": "36px · mobil 22px",
+   "px_desktop": 36,
+   "px_mobil": 22,
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "steg↔steg",
+   "varde": "clamp(32px, 3.1vw, 44px) · mobil 28px (uppmätt: H2→steg 44 mot steg↔steg 44 @1440 = 1,0×, ingen kontrast)",
+   "px_desktop": 44,
+   "px_mobil": 28,
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "steg: ring→text / H3→p",
+   "varde": "column-gap 20px (16 mobil), row-gap 6px, p margin-top 4px",
+   "px_desktop": "20 / 6+4",
+   "px_mobil": "16 / 6+4",
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "panel padding",
+   "varde": "clamp(30px, 2.9vw, 44px) clamp(24px, 2.2vw, 32px) · mobil 24px clamp(12px, calc(5vw - 4px), 14px) 20px",
+   "px_desktop": "41.8 / 31.7",
+   "px_mobil": "24 / 14 / 20",
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "kvittorytm",
+   "varde": "panelrubrik pb 16 + 1px linje · rad padding 16 0 (63,8 px hög @1440, 89,3 staplad) · totalplatta mt 16, padding 20 · fin",
+   "px_desktop": "16/16/20/20/32/24",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "CTA",
+   "varde": "min-height 58, padding 11px 32px (24 staplat, 14 ≤430 + width 100 %), gap 16",
+   "px_desktop": "58 hög",
+   "px_mobil": "58 hög, full bredd",
+   "token": null
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "preview-krom (levereras ej)",
+   "varde": "30px 28px 80px · mobil 18px 10px 56px",
+   "px_desktop": 28,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "sektion padding",
+   "varde": "var(--apspace-2xl) var(--apspace-m) · tablett --apspace-xl --apspace-m · ≤759 --apspace-xl --apspace-s",
+   "px_desktop": "79.2 / 28",
+   "px_mobil": "27.3 / 13.3",
+   "token": "--apspace-2xl/-m · --apspace-xl/-s"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "rubrikblock margin-bottom",
+   "varde": "var(--apspace-l) · ≤759 3.2rem",
+   "px_desktop": 39.6,
+   "px_mobil": 32,
+   "token": "--apspace-l / literal"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "h2 → subline",
+   "varde": "var(--apspace-2xs)",
+   "px_desktop": 9.9,
+   "px_mobil": 8.3,
+   "token": "--apspace-2xs"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kort padding",
+   "varde": "var(--apspace-m) var(--apspace-m) var(--apspace-l)",
+   "px_desktop": "28 / 28 / 39.6",
+   "px_mobil": "16.9 / 16.9 / 21.5",
+   "token": "--apspace-m + --apspace-l"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kort min-height",
+   "varde": "360 · tablett 340 · ≤759 300",
+   "px_desktop": 360,
+   "px_mobil": 300,
+   "token": null
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kort gap (Splide)",
+   "varde": "24px",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kortkropp padding",
+   "varde": "var(--apspace-s) 0 · ≤759 var(--apspace-xs) 0",
+   "px_desktop": 19.8,
+   "px_mobil": 10.5,
+   "token": "--apspace-s / --apspace-xs"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "namn mb / divider mb",
+   "varde": "var(--apspace-2xs)",
+   "px_desktop": 9.9,
+   "px_mobil": 8.3,
+   "token": "--apspace-2xs"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "stjärnor gap / meta gap",
+   "varde": "0.3rem / 0.8rem",
+   "px_desktop": "3 / 8",
+   "px_mobil": "3 / 8",
+   "token": null
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "nav margin-top + rating margin-top",
+   "varde": "var(--apspace-s) vardera",
+   "px_desktop": 19.8,
+   "px_mobil": 13.3,
+   "token": "--apspace-s"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "prickar",
+   "varde": "24×6 (aktiv 44×6), gap 0.8rem, träffyta inset −1.2rem −0.4rem",
+   "px_desktop": "24/44 × 6, gap 8",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "badge",
+   "varde": "min-height 44, padding 0.8rem 1.2rem, gap 1.1rem",
+   "px_desktop": "44 hög, 8/12, gap 11",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "sektion padding",
+   "varde": "var(--apspace-l) 0 · mobil --apspace-l/--apspace-xl + --apspace-3xs",
+   "px_desktop": "39.6 / 0",
+   "px_mobil": "21.5–27.3 / 6.6",
+   "token": "--apspace-l/-xl/-3xs"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "vitt bakgrundskort padding",
+   "varde": "var(--apspace-2xl) 0",
+   "px_desktop": 79.2,
+   "px_mobil": "dolt",
+   "token": "--apspace-2xl"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kort padding",
+   "varde": "var(--apspace-m) · mobil --apspace-l vertikalt",
+   "px_desktop": 28,
+   "px_mobil": "21.5 / 16.9",
+   "token": "--apspace-m / --apspace-l"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kort gap (Splide)",
+   "varde": "25px",
+   "px_desktop": 25,
+   "px_mobil": 25,
+   "token": null
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "block row-gap (H2→slider→prickar)",
+   "varde": "var(--apspace-m)",
+   "px_desktop": 28,
+   "px_mobil": 16.9,
+   "token": "--apspace-m"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "sida (main) padding",
+   "varde": "clamp(2.4rem, 4vw, 4.8rem) var(--apspace-m)",
+   "px_desktop": "48 / 28",
+   "px_mobil": "24 / 16.9",
+   "token": "--apspace-m (horisontellt)"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "kort ↔ ghost-länk (main gap)",
+   "varde": "clamp(1.6rem, 2vw, 2rem)",
+   "px_desktop": 20,
+   "px_mobil": 16,
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "kort padding",
+   "varde": "clamp(3.2rem, 4.5vw, 5.2rem) clamp(2.8rem, 4vw, 5.6rem); ≤520px 3.6rem 2.4rem",
+   "px_desktop": "52 / 56",
+   "px_mobil": "36 / 24",
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "kort gap (block↔block)",
+   "varde": "clamp(1.8rem, 2.4vw, 2.4rem); ≤520px 2rem",
+   "px_desktop": 24,
+   "px_mobil": 20,
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "intro gap (bock↔rubrikblock)",
+   "varde": "clamp(1.6rem, 2.2vw, 2.2rem)",
+   "px_desktop": 22,
+   "px_mobil": 16,
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "rubrik↔ingress",
+   "varde": "var(--apspace-s)",
+   "px_desktop": 19.8,
+   "px_mobil": 13.3,
+   "token": "--apspace-s"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "bockens storlek",
+   "varde": "clamp(8.8rem, 11vw, 10.4rem) kvadrat; halo inset 6%",
+   "px_desktop": 104,
+   "px_mobil": 88,
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "betygsrad",
+   "varde": "gap .3rem .7rem; stjärnor 1.6rem, gap .3rem",
+   "px_desktop": "3×7 / 16 / 3",
+   "px_mobil": "samma",
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "divider",
+   "varde": "6rem × 1px",
+   "px_desktop": "60×1",
+   "px_mobil": "60×1",
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "primärknapp padding",
+   "varde": "1.4rem 2.8rem; gap .8rem; ikon 1.4×1.3rem → uppmätt 251×48 / 231×46",
+   "px_desktop": "14 / 28 → h48",
+   "px_mobil": "14 / 28 → h46",
+   "token": null
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "ghost-länk padding",
+   "varde": "var(--apspace-2xs) var(--apspace-s) → uppmätt 136×40 / 112×35 (implementation: 9px 16px)",
+   "px_desktop": "9.9 / 19.8",
+   "px_mobil": "8.3 / 13.3",
+   "token": "--apspace-2xs / --apspace-s"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "aurora-hörn (fixed)",
+   "varde": "topp höger clamp(20rem, 30vw, 40rem); botten vänster clamp(15rem, 22vw, 28rem); opacity .8",
+   "px_desktop": "400 / 280",
+   "px_mobil": "200 / 150",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "rytmstege",
+   "varde": "10 · 20 · 28 · 40 · 56 · 80 ('ap-ladderns 2xs/s/m/l/xl/2xl-positioner hårdkodade i px'); zon/syskon-kvot 2,0 (40/20 mobi",
+   "px_desktop": "10/28/56/80",
+   "px_mobil": "10/20/40",
+   "token": "= --apspace-2xs/s/m/l/xl/2xl @1440 avrundade"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "sektion padding",
+   "varde": "24px 20px 28px · ≥992 56px 40px 80px · ≤479 sidopadding 0 (kortet går kant i kant)",
+   "px_desktop": "56 / 40 / 80",
+   "px_mobil": "24 / 0 / 28",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "kort padding",
+   "varde": "32px 24px 36px · ≤479 32px 20px 36px · ≥992 40px 80px 48px",
+   "px_desktop": "40 / 80 / 48",
+   "px_mobil": "32 / 20 / 36",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "desktop-grid",
+   "varde": "minmax(0,32%) minmax(0,1fr), column-gap 56, rader auto 1fr: rubrik+bevis+brygga vänster (358 px), stegen höger (706 px)",
+   "px_desktop": "358 | 706, gap 56",
+   "px_mobil": "staplat",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "H2 → stegen",
+   "varde": "margin-bottom 40 (mobil); desktop: stegen ligger bredvid",
+   "px_desktop": null,
+   "px_mobil": 40,
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "steg ↔ steg (--apr-gap)",
+   "varde": "20 · ≥992 28",
+   "px_desktop": 28,
+   "px_mobil": 20,
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "etikett → brödtext (--apr-joint)",
+   "varde": "10 (ersätter v1:s 5/4/3)",
+   "px_desktop": 10,
+   "px_mobil": 10,
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "räls (A)",
+   "varde": "medaljong 24 px, indrag 40, linje 1 px vid x=12 från medaljong+10 till nästa −10; medaljong top −1 px (19×1,2−24)/2, des",
+   "px_desktop": "24 / 40",
+   "px_mobil": "24 / 40",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "tid-kolumn (C)",
+   "varde": "88 px + gap 16 mobil · desktop clamp(148px, 12vw, 172px) + söm 24 + off 32, radpadding 20 0",
+   "px_desktop": "172 / 57",
+   "px_mobil": "88 / 16",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "bevisrad",
+   "varde": "avdelare 1×15 margin 0 14; mobil 26×1 margin 10 0; aside margin-top 40 desktop",
+   "px_desktop": "14",
+   "px_mobil": "dold",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "överlämning",
+   "varde": "margin-top --apr-gap (20/28), padding-block 13 → 48 px träffyta, gap 9, pil 18",
+   "px_desktop": "28 / 48",
+   "px_mobil": "20 / 48",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "blockhöjd @390 (utan preview-bar)",
+   "varde": "A 790 (sektion 707) · C 760 — kravet ≤780 (v1: A 633 / B 560 / C 545; dagens block 1 165–1 200)",
+   "px_desktop": null,
+   "px_mobil": "707 / 760",
+   "token": null
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "sektion padding",
+   "varde": "40px 20px + padding-bottom var(--apspace-2xl, 48px) (=31,4 @390 / 72,7 @1440 — 'beviset visar 48 och produktionen 79,2')",
+   "px_desktop": "56 / 40 / 72.7",
+   "px_mobil": "40 / 20 / 31.4",
+   "token": "--apspace-2xl"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "v1 rytm",
+   "varde": "steg-gap 28, medaljong 40, indrag 56, sub mb 28/36, label mb 5/4/3 — '24 godtyckliga tal'",
+   "px_desktop": "28",
+   "px_mobil": "28",
+   "token": null
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "sektion padding",
+   "varde": "var(--apspace-2xl) var(--apspace-l) · ≤992 --apspace-xl --apspace-m · ≤480 --apspace-l --apspace-s",
+   "px_desktop": "79.2 / 39.6",
+   "px_mobil": "21.5 / 13.3",
+   "token": "--apspace-2xl/-l · -xl/-m · -l/-s"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "kort padding",
+   "varde": "var(--apspace-2xl) · ≤992 --apspace-xl · ≤480 --apspace-l",
+   "px_desktop": 79.2,
+   "px_mobil": 21.5,
+   "token": "--apspace-2xl/-xl/-l"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "kort grid",
+   "varde": "minmax(0,1fr) clamp(16rem, 22vw, 26rem), gap --apspace-2xl · ≤992 flex kolumn, lampa först, gap --apspace-m",
+   "px_desktop": "782 | 260, gap 79.2",
+   "px_mobil": "staplat, gap 16.9",
+   "token": "--apspace-2xl / --apspace-m"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "innehållsgap (kicker/h2/text)",
+   "varde": "var(--apspace-s)",
+   "px_desktop": 19.8,
+   "px_mobil": 13.3,
+   "token": "--apspace-s"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "lampa",
+   "varde": "max-width 24rem · ≤992 12rem · ≤480 9.6rem",
+   "px_desktop": 240,
+   "px_mobil": 96,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "header höjd",
+   "varde": "--header-h 7.6rem; ≤992 6.6rem",
+   "px_desktop": 76,
+   "px_mobil": 66,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "container inner padding",
+   "varde": "--wrap 2.8rem; ≤560 1.6rem; ≤339 1.2rem",
+   "px_desktop": 28,
+   "px_mobil": 16,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "nav gap / länk-padding",
+   "varde": "gap 1rem; padding 0 2.6rem; chevron gap .8rem",
+   "px_desktop": "10 / 26 / 8",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "höger-grupp gap",
+   "varde": "1.6rem",
+   "px_desktop": 16,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "CTA",
+   "varde": "höjd 4.8rem padding 0 2.6rem; ≤992 4.2rem/1.9rem; ≤400 4.4rem/1.5rem; ≤339 4rem/1rem",
+   "px_desktop": "48 / 26",
+   "px_mobil": "44 / 15",
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "mega inner padding",
+   "varde": "3.6rem var(--wrap), row-gap 3.2rem; lösningar 4rem topp/botten gap 2rem",
+   "px_desktop": "36 28 / 40",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "mega kolumn",
+   "varde": "padding-right 2.4rem, +.mcol padding-left 2.4rem + border-left 1px --line",
+   "px_desktop": 24,
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "mega länk-padding",
+   "varde": ".7rem 1.1rem, radie --r-sm",
+   "px_desktop": "7 11",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "produkt-tile",
+   "varde": "padding 1.4rem gap 2rem, bild 17×12.4rem radie --r-md; gzone 26rem bred, padding-left 3rem margin-left 2.4rem",
+   "px_desktop": "14 / 20 / 170×124",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "lösnings-kort",
+   "varde": "min-height 23rem, text-padding 2rem, go 3.6rem cirkel",
+   "px_desktop": "230 / 20 / 36",
+   "px_mobil": null,
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "drawer",
+   "varde": "width min(100%,44rem); eyebrow padding 3.2rem 2rem .8rem; list padding 0 2rem; acc-head padding 1.5rem 0; leaf 1rem 0 1r",
+   "px_desktop": null,
+   "px_mobil": "440 / 32 20 8 / 15 / 10 0 10 38 / 56",
+   "token": null
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "burger",
+   "varde": "4.6rem × 4.6rem, streck 2.4×.3rem gap .5rem",
+   "px_desktop": null,
+   "px_mobil": 46,
+   "token": null
+  }
+ ]
+}

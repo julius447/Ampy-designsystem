@@ -1,0 +1,445 @@
+[
+ {
+  "px": 16,
+  "antal": 17,
+  "auk1": [
+   "cta-website",
+   "elcentral-kollen",
+   "elkollen",
+   "energycalc",
+   "hero-1",
+   "live-ampy-se",
+   "rot-gt-cro",
+   "testimonials-block"
+  ],
+  "kallor": [
+   "article-template",
+   "booking-confirmation",
+   "cta-website",
+   "elcentral-kollen",
+   "eljour-sticky-bar",
+   "elkollen",
+   "energycalc",
+   "fore-efter-cro",
+   "hero-1",
+   "hero-2-alternatives",
+   "live-ampy-se",
+   "main-cta",
+   "picasso",
+   "rot-gt-cro",
+   "testimonials-block",
+   "thank-you",
+   "var-process-cro"
+  ],
+  "roller": [
+   "article-template: kort (rounded-2xl)",
+   "article-template: Bricks-tabell ytterram",
+   "booking-confirmation: sekundärknapp (of-btn-secondary) / primärknapp (of-btn-prima",
+   "cta-website: knapp",
+   "elcentral-kollen: --ampy-cta-radius (gradient-CTA:erna)",
+   "eljour-sticky-bar: ring-pill (bar + kort)",
+   "elkollen: hero__btn",
+   "energycalc: --r-lg (lead-inline-body)"
+  ]
+ },
+ {
+  "px": 20,
+  "antal": 17,
+  "auk1": [
+   "cta-website",
+   "eljour-block",
+   "energycalc",
+   "ev-kalkylator",
+   "led-kalkylator",
+   "live-ampy-se",
+   "rot-gt-cro",
+   "testimonials-block",
+   "website-blocks"
+  ],
+  "kallor": [
+   "certificates",
+   "cta-website",
+   "eljour-block",
+   "eljour-sticky-bar",
+   "energycalc",
+   "ev-kalkylator",
+   "fore-efter-cro",
+   "hero-2-alternatives",
+   "hero-2-form",
+   "led-kalkylator",
+   "live-ampy-se",
+   "main-cta",
+   "mini-menu",
+   "rot-gt-cro",
+   "testimonials-block",
+   "var-process-cro",
+   "website-blocks"
+  ],
+  "roller": [
+   "certificates: kort",
+   "certificates: kort",
+   "cta-website: galleri-kort (demo)",
+   "eljour-block: kort + lista (--r-l)",
+   "eljour-sticky-bar: hörnkort",
+   "energycalc: --r-xl (inputkort, resultatkort, trust)",
+   "ev-kalkylator: --radius-lg (korten)",
+   "fore-efter-cro: ram"
+  ]
+ },
+ {
+  "px": 14,
+  "antal": 11,
+  "auk1": [
+   "cta-website",
+   "elcentral-kollen",
+   "eljour-block",
+   "elkollen",
+   "rot-gt-cro",
+   "website-blocks"
+  ],
+  "kallor": [
+   "booking-confirmation",
+   "cta-website",
+   "elcentral-kollen",
+   "eljour-block",
+   "eljour-sticky-bar",
+   "elkollen",
+   "hero-2-alternatives",
+   "hero-2-form",
+   "mini-menu",
+   "rot-gt-cro",
+   "website-blocks"
+  ],
+  "roller": [
+   "booking-confirmation: faktabricka, totalplatta, panel, fält, details, skicka-knapp",
+   "cta-website: galleri-kort (demo)",
+   "elcentral-kollen: --radius-lg (kortet)",
+   "eljour-block: CTA (--r)",
+   "eljour-sticky-bar: grön/dark fork-pill",
+   "elkollen: --radius-lg (kortet)",
+   "hero-2-alternatives: --ap-r-btn",
+   "hero-2-form: fält, segment, chip, disclosure, submit, upload"
+  ]
+ },
+ {
+  "px": 12,
+  "antal": 9,
+  "auk1": [
+   "energycalc",
+   "ev-kalkylator",
+   "led-kalkylator",
+   "live-ampy-se",
+   "rot-gt-cro"
+  ],
+  "kallor": [
+   "article-template",
+   "energycalc",
+   "ev-kalkylator",
+   "fore-efter-cro",
+   "hero-2-alternatives",
+   "led-kalkylator",
+   "live-ampy-se",
+   "rot-gt-cro",
+   "thank-you"
+  ],
+  "roller": [
+   "article-template: TOC-länk / små",
+   "energycalc: --r-md (hp-card, sp-item, cta, share-btn/pop, lead-inline? n",
+   "ev-kalkylator: --radius-md (selector, lista, segmented, knappar, monthly-pa",
+   "fore-efter-cro: --ampyfe-radie-m (deklarerad, oanvänd i mätningen)",
+   "hero-2-alternatives: --ap-r-field",
+   "led-kalkylator: --radius-md: selector-knapp, lista, segmented-spår, select/i",
+   "live-ampy-se: knapp GT",
+   "rot-gt-cro: GT-knapp"
+  ]
+ },
+ {
+  "px": 6,
+  "antal": 8,
+  "auk1": [
+   "elcentral-kollen",
+   "elkollen",
+   "energycalc",
+   "ev-kalkylator",
+   "led-kalkylator"
+  ],
+  "kallor": [
+   "article-template",
+   "elcentral-kollen",
+   "eljour-sticky-bar",
+   "elkollen",
+   "energycalc",
+   "ev-kalkylator",
+   "hero-2-form",
+   "led-kalkylator"
+  ],
+  "roller": [
+   "article-template: TOC-länk / små",
+   "elcentral-kollen: --radius-sm (crumb-knappar, check, tooltip/factnote/akut, sh",
+   "eljour-sticky-bar: ghost fokus / kryss fokus",
+   "elkollen: --radius-sm (job-row, crumb, verdict-src fokus, tab-body)",
+   "energycalc: --r-xs (seg-knapp, seg-pill, stepper, method-summary fokus)",
+   "ev-kalkylator: --radius-sm (ikonruta, option, tick, popover, segment-option",
+   "hero-2-form: consent-box",
+   "led-kalkylator: --radius-sm: selector-ikonruta, segment-option, tick, toolti"
+  ]
+ },
+ {
+  "px": 10,
+  "antal": 7,
+  "auk1": [
+   "elcentral-kollen",
+   "eljour-block",
+   "elkollen"
+  ],
+  "kallor": [
+   "elcentral-kollen",
+   "eljour-block",
+   "elkollen",
+   "fore-efter-cro",
+   "hero-2-alternatives",
+   "hero-2-form",
+   "main-form"
+  ],
+  "roller": [
+   "elcentral-kollen: --radius-md (options, dualstatus, info, CTA:er, lead-input, ",
+   "eljour-block: säkerhetsruta (--r-s)",
+   "elkollen: --radius-md (roomtile, option, badge-board, CTA:er, inputs, ",
+   "fore-efter-cro: --ampyfe-radie-m (deklarerad, oanvänd i mätningen)",
+   "hero-2-alternatives: --ap-r-field",
+   "hero-2-form: payload (preview)",
+   "main-form: manuell adressbox"
+  ]
+ },
+ {
+  "px": 22,
+  "antal": 7,
+  "auk1": [
+   "hero-1",
+   "live-ampy-se",
+   "rot-gt-cro"
+  ],
+  "kallor": [
+   "booking-confirmation",
+   "hero-1",
+   "hero-2-alternatives",
+   "hero-2-form",
+   "live-ampy-se",
+   "mini-menu",
+   "rot-gt-cro"
+  ],
+  "roller": [
+   "booking-confirmation: kort",
+   "hero-1: hero frame",
+   "hero-2-alternatives: hjälteram",
+   "hero-2-form: kort",
+   "live-ampy-se: live hero floating banner",
+   "mini-menu: glas-prototyp kort / glyph",
+   "rot-gt-cro: block",
+   "rot-gt-cro: panel"
+  ]
+ },
+ {
+  "px": 8,
+  "antal": 6,
+  "auk1": [
+   "energycalc",
+   "testimonials-block",
+   "website-blocks"
+  ],
+  "kallor": [
+   "article-template",
+   "eljour-sticky-bar",
+   "energycalc",
+   "main-form",
+   "testimonials-block",
+   "website-blocks"
+  ],
+  "roller": [
+   "article-template: TOC-länk / små",
+   "eljour-sticky-bar: ghost fokus / kryss fokus",
+   "energycalc: sb-dot / hp-check / leadclose",
+   "main-form: input/textarea/adresslista/felbanner",
+   "testimonials-block: paginering",
+   "website-blocks: --r-sm"
+  ]
+ },
+ {
+  "px": 15,
+  "antal": 4,
+  "auk1": [
+   "hero-1",
+   "website-blocks"
+  ],
+  "kallor": [
+   "fore-efter-cro",
+   "hero-1",
+   "main-form",
+   "website-blocks"
+  ],
+  "roller": [
+   "fore-efter-cro: ram",
+   "hero-1: header CTA",
+   "main-form: kort",
+   "website-blocks: CTA"
+  ]
+ },
+ {
+  "px": 32,
+  "antal": 4,
+  "auk1": [
+   "hero-1",
+   "rot-gt-cro"
+  ],
+  "kallor": [
+   "booking-confirmation",
+   "hero-1",
+   "rot-gt-cro",
+   "thank-you"
+  ],
+  "roller": [
+   "booking-confirmation: --r-xl",
+   "hero-1: A-variant kort",
+   "rot-gt-cro: block",
+   "thank-you: kort"
+  ]
+ },
+ {
+  "px": 3,
+  "antal": 3,
+  "auk1": [
+   "elkollen",
+   "energycalc",
+   "website-blocks"
+  ],
+  "kallor": [
+   "elkollen",
+   "energycalc",
+   "website-blocks"
+  ],
+  "roller": [
+   "elkollen: judgment-accent (inbäddat)",
+   "energycalc: sb-dot / hp-check / leadclose",
+   "website-blocks: burger-streck"
+  ]
+ },
+ {
+  "px": 9,
+  "antal": 2,
+  "auk1": [
+   "energycalc"
+  ],
+  "kallor": [
+   "energycalc",
+   "fore-efter-cro"
+  ],
+  "roller": [
+   "energycalc: --r-sm (storybar, hp-ic, lead-field, share-act)",
+   "fore-efter-cro: --ampyfe-radie-m (deklarerad, oanvänd i mätningen)"
+  ]
+ },
+ {
+  "px": 18,
+  "antal": 2,
+  "auk1": [
+   "hero-1"
+  ],
+  "kallor": [
+   "hero-1",
+   "hero-2-alternatives"
+  ],
+  "roller": [
+   "hero-1: hero frame",
+   "hero-2-alternatives: hjälteram"
+  ]
+ },
+ {
+  "px": 24,
+  "antal": 2,
+  "auk1": [
+   "hero-1"
+  ],
+  "kallor": [
+   "article-template",
+   "hero-1"
+  ],
+  "roller": [
+   "article-template: lead magnet / takeaways (rounded-3xl)",
+   "hero-1: A-variant kort"
+  ]
+ },
+ {
+  "px": 28,
+  "antal": 2,
+  "auk1": [
+   "hero-1"
+  ],
+  "kallor": [
+   "hero-1",
+   "hero-2-alternatives"
+  ],
+  "roller": [
+   "hero-1: A-variant kort",
+   "hero-2-alternatives: E foto"
+  ]
+ },
+ {
+  "px": 4,
+  "antal": 1,
+  "auk1": [
+   "led-kalkylator"
+  ],
+  "kallor": [
+   "led-kalkylator"
+  ],
+  "roller": [
+   "led-kalkylator: samtyckesbock"
+  ]
+ },
+ {
+  "px": 19,
+  "antal": 1,
+  "auk1": [],
+  "kallor": [
+   "var-process-cro"
+  ],
+  "roller": [
+   "var-process-cro: B-kort"
+  ]
+ },
+ {
+  "px": 27,
+  "antal": 1,
+  "auk1": [],
+  "kallor": [
+   "hero-2-form"
+  ],
+  "roller": [
+   "hero-2-form: kort"
+  ]
+ },
+ {
+  "px": 72,
+  "antal": 1,
+  "auk1": [],
+  "kallor": [
+   "hero-2-alternatives"
+  ],
+  "roller": [
+   "hero-2-alternatives: E foto"
+  ]
+ },
+ {
+  "px": 100,
+  "antal": 1,
+  "auk1": [
+   "live-ampy-se"
+  ],
+  "kallor": [
+   "live-ampy-se"
+  ],
+  "roller": [
+   "live-ampy-se: Bricks .circle"
+  ]
+ }
+]

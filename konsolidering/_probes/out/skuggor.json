@@ -1,0 +1,1212 @@
+{
+ "skuggor": [
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "shadow-card",
+   "varde": "0 1px 2px rgba(9,11,50,.04), 0 4px 12px rgba(9,11,50,.06)"
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "shadow-cardLg",
+   "varde": "0 4px 16px rgba(9,11,50,.06), 0 12px 32px rgba(9,11,50,.08)"
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "glow / glowGreen (fokus)",
+   "varde": "0 0 0 4px rgba(50,106,253,.12) / 0 0 0 4px rgba(85,255,154,.20)"
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "Tailwind-defaults",
+   "varde": "shadow-sm (rgba(0,0,0,.05)) på 8 element, ring-1 cloud-300 på kort"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "--shadow-sm/md/lg",
+   "varde": "som LED (rgba(15,18,60,.06/.08/.14))"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "resultatkortets glöd",
+   "varde": "identisk radial teal .28 / emerald .16"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "chart-bg",
+   "varde": "rgba(255,255,255,.06) (--on-surface-subtle-bg)"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "0 18px 44px rgba(9,11,50,.09), inset 0 1px 0 rgba(255,255,255,.6) – INGEN backdrop-filter (till skillnad från tack-sidan/offer-accepted)"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "avatar-ring",
+   "varde": "0 0 0 3px #fff, 0 0 0 4.5px rgba(0,169,145,.35)"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "expanderad sekundärknapp",
+   "varde": "0 4px 14px -6px rgba(9,11,50,.35); border-color navy"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "skicka-knapp",
+   "varde": "0 6px 16px -6px rgba(9,11,50,.45); hover 0 10px 22px -8px rgba(9,11,50,.5)"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "fokus",
+   "varde": "outline 3px solid #090b32, offset 3px (globalt :focus-visible); fält offset 2px + border navy; forced-colors → Highlight"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "--shadow-1/2/3 (shared.css)",
+   "varde": "0 1px 2px rgba(15,18,60,.06)… / 0 6px 16px -4px… / 0 24px 50px -10px… – definierade, används inte i bokningen (samma värden som skillens reference/tokens.css)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "0 2px 10px rgba(9,11,50,.10), 0 12px 34px rgba(9,11,50,.10), inset 0 0 0 1px rgba(9,11,50,.07)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kort hover",
+   "varde": "0 4px 14px rgba(9,11,50,.13), 0 18px 44px rgba(9,11,50,.14) + translateY(-2px)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kort focus",
+   "varde": "outline 3px #fff offset 3 + 0 0 0 6px #090b32 + hover-skuggor"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "ingen"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "rådgivning/offert vila",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45)"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "rådgivning/offert hover",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.5), 0 3px 6px rgba(9,11,50,.07), 0 16px 34px -8px rgba(94,199,160,.55)"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "ring vila",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.55), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,177,191,.55)"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "ring hover",
+   "varde": "inset .55, 0 3px 6px rgba(9,11,50,.07), 0 16px 34px -8px rgba(94,177,191,.65)"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "chip",
+   "varde": "0 1px 3px rgba(9,11,50,.14)"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "Hero-1:s kopia av samma knapp",
+   "varde": "0 2px 4px rgba(9,11,50,.10), 0 14px 32px -8px rgba(9,11,50,.40) — AVVIKER (navy-skugga i st.f. grön glow, starkare)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "--shadow-sm (option hover)",
+   "varde": "0 1px 2px rgba(11,13,42,.04)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "--shadow-md (kortet)",
+   "varde": "0 8px 28px rgba(11,13,42,.07)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "--shadow-lg (deklarerad, ej sedd)",
+   "varde": "0 14px 32px rgba(11,13,42,.1)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "--focus-ring (ALLA inputs + knappar)",
+   "varde": "0 0 0 3px rgba(0,122,105,.9) (höjd från .25 för WCAG 2.4.11)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "gradient-CTA",
+   "varde": "0 0 16px rgba(241,241,241,.25) / .23; hover 0 6px 20px rgba(94,177,191,.28) + translateY(-1px) + saturate(1.05)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "sticky-cta (mobil)",
+   "varde": "0 -8px 28px rgba(11,13,42,.10) + 1px --border-default top"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "dualstatus",
+   "varde": "ingen kant/skugga — tint + 4px accentstapel ('not a card')"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "kort + lista (--shadow-card)",
+   "varde": "0 1rem 3rem rgba(9,11,50,.07)"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "CTA",
+   "varde": "0 1rem 2.4rem rgba(4,110,90,.32), inset 0 1px 0 rgba(255,255,255,.22); hover 0 1.4rem 3.2rem rgba(4,110,90,.40)"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "bar-krom",
+   "varde": "0 -4px 20px rgba(9,11,50,.10) + border-top 1px #e6ecf6"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "ring-pill",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.55), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,177,191,.55) · active inset 0 2px 6px rgba(9,11,50,.18)"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "ikonchip + ampyRing",
+   "varde": "0 1px 3px rgba(9,11,50,.14) + pulserande 0 0 0 0→9px rgba(255,255,255,.65→0)"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "hörnkort",
+   "varde": "0 10px 30px rgba(9,11,50,.07), 0 16px 40px rgba(9,11,50,.16)"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "grön fork",
+   "varde": "0 10px 24px rgba(4,110,90,.32), inset 0 1px 0 rgba(255,255,255,.22); hover 0 14px 32px .40"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "--shadow-sm / --shadow-md / --shadow-lg",
+   "varde": "0 1px 2px rgba(11,13,42,.04) / 0 6px 18px .06 / 0 14px 32px .1"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "kortet i hero-läge (light)",
+   "varde": "0 2px 4px rgba(11,13,42,.04), 0 18px 40px rgba(11,13,42,.09)"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "--focus-ring",
+   "varde": "0 0 0 3px rgba(0,169,145,.25) — svag (Elcentral höjde sin till .9 av samma skäl)"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "roomtile hover",
+   "varde": "kant teal + translateY(-1px) + shadow-md"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "verdict-board (hero-läge)",
+   "varde": "1px tonad kant (green rgba(27,132,71,.45) / red rgba(150,40,50,.4) / yellow rgba(135,101,7,.4)) + bg (green rgba(54,178,92,.10) / red rgba(214,64,64,.06) / yellow rgba(245,175,25,.08)); 6px sidostapel i verdict-accent (:"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "hero__btn",
+   "varde": "0 0 16px rgba(241,241,241,.25) (.23 sekundär); hover 0 6px 20px rgba(94,177,191,.28) + translateY(-1px) + saturate(1.05); fokus outline 3px #00a991 offset 3"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "tab focus-visible",
+   "varde": "0 -2px 0 --border-focus inset"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--shadow-1 (hp-card hover)",
+   "varde": "0 1px 2px rgba(9,11,50,.06), 0 1px 1px rgba(9,11,50,.04)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--shadow-2 (inputkort)",
+   "varde": "0 .6rem 1.6rem -.4rem rgba(9,11,50,.12), 0 .2rem .6rem rgba(9,11,50,.07)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--shadow-3 (resultatkort, trust, share-pop)",
+   "varde": "0 2.4rem 5rem -1rem rgba(9,11,50,.20), 0 .8rem 1.6rem -.6rem rgba(9,11,50,.10)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--shadow-teal (cta hover)",
+   "varde": "0 1.2rem 3rem -.8rem rgba(0,169,145,.42)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--ring-light / --ring-dark",
+   "varde": "0 0 0 .3rem rgba(0,169,145,.28) / 0 0 0 .3rem rgba(85,255,154,.30)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--aurora (resultatkortets ::before)",
+   "varde": "radial-gradient(120% 90% at 78% -8%, rgba(0,196,167,.22), transparent 56%), radial-gradient(90% 70% at 8% 4%, rgba(85,255,154,.10), transparent 60%), radial-gradient(100% 120% at 60% 110%, rgba(9,11,50,.40), transparent "
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "resultatkortets ::after",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.08) (topp-highlight)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "trust-veil",
+   "varde": "linear-gradient(103deg, rgba(9,11,50,.94) 0%, .82 38%, .50 68%, .28 100%) + linear-gradient(to top, rgba(9,11,50,.66) 0%, 0 52%) över foto (object-position 64% 50%)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "trust::after",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.10), inset 0 0 0 1px rgba(255,255,255,.05)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "sp-item.is-rec",
+   "varde": "kant rgba(85,255,154,.55), bg rgba(0,196,167,.06), ring 0 0 0 3px rgba(85,255,154,.10)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "range-thumb (från CSS)",
+   "varde": "0 1px 3px rgba(9,11,50,.18); active 0 2px 8px .28; fokus --ring-light"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "jump-pill",
+   "varde": "0 1.2rem 3rem -1rem rgba(9,11,50,.55); jp-chip 0 .2rem .8rem rgba(0,0,0,.25)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "--shadow-sm (kort, aktiv pill)",
+   "varde": "0 1px 2px rgba(15,18,60,.06)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "--shadow-md (thumb, primär knapp)",
+   "varde": "0 4px 12px rgba(15,18,60,.08)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "--shadow-lg (resultatkort, lista)",
+   "varde": "0 16px 40px rgba(15,18,60,.14)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "popover",
+   "varde": "0 4px 12px rgba(15,18,60,.18)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "aktiv segment",
+   "varde": "shadow-sm + inset 0 0 0 1px rgba(15,18,60,.12) (P2-4 'solljusring')"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "resultatkortets ytgradient",
+   "varde": "identisk med LED: radial teal .28 / emerald .16 på midnatt"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "stapelfyllningar (::before)",
+   "varde": "publik: linear-gradient(90deg, rgb(240,175,56), rgb(214,150,40)); hemma: linear-gradient(90deg, rgb(0,125,107), rgb(57,194,129)); spår (::after): 10px, rgba(255,255,255,.08) + inset 0 0 0 1px rgba(255,255,255,.14)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "slider-fill",
+   "varde": "linear-gradient(90deg, rgb(0,125,107), rgb(57,194,129))"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "fokusringar",
+   "varde": "3px rgba(0,125,107,.25/.3/.2) / 4px .35 / btn-link 3px .4 / consent-fel outline 2px röd"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "footer topp",
+   "varde": "inset 0 8px 8px #010033"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "ram (--ampyfe-skugga-kort)",
+   "varde": "0 1px 2px rgba(9,11,50,.04), 0 8px 20px rgba(9,11,50,.06), 0 24px 48px rgba(9,11,50,.05) + inset hårlinje .07"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "sömlinje",
+   "varde": "0 0 0 1px rgba(9,11,50,.18), 0 0 22px rgba(9,11,50,.28)"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "handtag",
+   "varde": "0 3px 16px rgba(9,11,50,.32) · fokus + 0 0 0 4px teal"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "chip",
+   "varde": "0 2px 10px rgba(9,11,50,.18)"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "reglagets tumme",
+   "varde": "0 2px 6px rgba(9,11,50,.3)"
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "0 1px 2px rgba(9,11,50,.04), 0 10px 30px rgba(9,11,50,.07), 0 24px 56px -20px rgba(9,11,50,.10)"
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "submit (blockets ENDA på en kontroll)",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45); hover .5/.07/.55 + translateY(-1.5px)"
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "fält",
+   "varde": "ingen (1 px kant #5f6480 bär formen)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "CTA",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.10), 0 14px 32px -8px rgba(9,11,50,.40)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "CTA hover",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.5), 0 3px 6px rgba(9,11,50,.12), 0 18px 38px -8px rgba(9,11,50,.46)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header bar",
+   "varde": "0 4px 14px -10px rgba(15,18,60,.14) + border-bottom 1px #dbe4f0"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header CTA",
+   "varde": "0 .4rem 1.2rem -.5rem rgba(0,169,145,.5) (teal-glow)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "mega-meny",
+   "varde": "0 22px 36px -28px rgba(15,18,60,.20)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "lösnings-kort",
+   "varde": "0 .8rem 2.4rem -1rem rgba(15,18,60,.25); hover 0 1.6rem 3.6rem -1.2rem .35"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "A-variant kort (--shadow-card)",
+   "varde": "0 24px 64px rgba(9,11,50,.10), 0 4px 16px rgba(9,11,50,.06)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "text-shadow lead/proof",
+   "varde": "0 1px 12px rgba(9,11,50,.35) / 0 1px 8px rgba(9,11,50,.45)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "Z formkort",
+   "varde": "0 28px 60px -28px rgba(0,0,0,.65) + border 1px rgba(255,255,255,.14)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "E foto",
+   "varde": "0 0 0 1px rgba(255,255,255,.12) + rgba(0,0,0,.6…)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "E sekundär vit",
+   "varde": "0 1px 2px rgba(9,11,50,.05), … rgba(15,18,60,.12)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "nödknapp",
+   "varde": "0 10px 24px rgba(4,110,90,.32) + inset 0 1px 0 rgba(255,255,255,.22); hover 0 14px 32px .40"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "CTA:er",
+   "varde": "= CTA-website"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "scrim",
+   "varde": "tokeniserad (--ampy-scrim-bastant/-latt) — enda tokeniserade 'skuggan' i biblioteket"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "0 0 38px rgba(181,181,181,.14) + backdrop-filter blur(30px)"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "input focus",
+   "varde": "0 0 0 3px rgba(0,169,145,.5)"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "input error",
+   "varde": "0 0 0 2px #00a991 (teal, inte rött)"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "consent focus",
+   "varde": "0 0 0 3px rgba(0,169,145,.45)"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "segment focus",
+   "varde": "outline 2px teal offset 2"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--shadow-sm: inputkort, aktiv segment",
+   "varde": "0 1px 2px rgba(15,18,60,.06)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--shadow-md: slider-thumb, primär knapp",
+   "varde": "0 0.4rem 1.2rem rgba(15,18,60,.08) = 0 4px 12px"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--shadow-lg: resultatkort, selector-lista, tooltip",
+   "varde": "0 1.6rem 4rem rgba(15,18,60,.14) = 0 16px 40px"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "resultatkortets ytgradient",
+   "varde": "radial-gradient(120% 60% at 90% -10%, rgba(0,169,145,.28), transparent 60%), radial-gradient(80% 50% at -10% 110%, rgba(57,194,129,.16), transparent 60%) ovanpå rgb(9,11,50)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "slider-fill gradient",
+   "varde": "linear-gradient(90deg, rgb(0,169,145), rgb(57,194,129))"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "fokusringar",
+   "varde": "selector 0 0 0 3px rgba(0,169,145,.25); segmented/toggle 3px .3; input 3px .2; knapp 4px .35; slider-thumb 4px .25 (+shadow-md); lead-input 3px rgba(28,196,175,.35); samtycke 3px rgba(28,196,175,.4); option inset 2px tea"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "kort (dominant idiom)",
+   "varde": "0 0 16px 0 rgb(190 190 190 / .19)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "kort variant",
+   "varde": "0 0 16px 0 rgba(190,190,190,.4) / .36 / .14"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "kort ljus variant",
+   "varde": "0 0 16px 0 rgb(241 241 241 / .23–.25); 0 4px 16px 0 #f1f1f1"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "live hero-CTA",
+   "varde": "inset 0 1px 0 rgb(255 255 255 / .45), 0 2px 4px rgb(9 11 50 / .10), 0 14px 32px -8px rgb(9 11 50 / .40)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "hero-produktknapp (teal-glow)",
+   "varde": "inset 0 1px 0 rgb(255 255 255 / .55), 0 2px 4px rgb(9 11 50 / .06), 0 10px 26px -6px rgb(94 177 191 / .55) !important"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "tema-tokens --apshadow-xs..xl",
+   "varde": "0 1px 2px / 0 1.5px 3px / 0 2px 6px / 0 3px 12px / 0 6px 48px var(--shadow-primary)"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "0 0 16px rgba(190,190,190,.4)"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "foto",
+   "varde": "0 18px 40px -20px rgba(9,11,50,.26) + border 1px rgba(255,255,255,.55)"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "knapp",
+   "varde": "= CTA-website ring (inset .55 / 0 2px 4px .06 / 0 10px 26px -6px rgba(94,177,191,.55))"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "chip",
+   "varde": "0 1px 3px rgba(9,11,50,.14)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "0 1rem 3rem -1.8rem rgba(15,18,60,0.12)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "primärknapp",
+   "varde": "0 1rem 2.4rem -0.8rem rgba(0,169,145,0.45)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "fokusring (input)",
+   "varde": "0 0 0 3px rgba(0,169,145,0.30) + border-color #00a991"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "adresslista",
+   "varde": "0 2rem 4rem -1rem rgba(15,18,60,0.2)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "text på foto",
+   "varde": "text-shadow 0 2px 16px rgba(0,0,0,.35) (citat); 0 1px 6px rgba(0,0,0,.45) (betyg/volym)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "logo/stjärnor/ikoner på foto",
+   "varde": "filter: drop-shadow(0 1px 4px rgba(0,0,0,.5)) / (0 1px 2px .4) / (0 1px 3px .4)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "--apshadow-*",
+   "varde": "används inte"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "--shadow-card: 0 16px 40px −12px rgba(9,11,50,.28), 0 4px 10px −4px rgba(9,11,50,.18)"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "kort hover",
+   "varde": "0 30px 60px −14px rgba(9,11,50,.38), 0 10px 20px −6px .22"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "CTA",
+   "varde": "--shadow-blue 0 10px 24px −6px rgba(94,177,191,.55); hover 0 14px 30px −6px .6"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "fokus",
+   "varde": "--ring 0 0 0 3px rgba(0,169,145,.9) + hover-skugga"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "overlay",
+   "varde": "radial 125%/105% rgba(9,11,50,.30→.56); hover .34→.62; body-scrim ellipse 82%/56% .60→.30→0"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "glas-prototyp",
+   "varde": "0 6px 16px −4px rgba(15,18,60,.1) …; hover 0 24px 50px −10px .18; glyph inset 0 0 0 1px rgba(0,169,145,.16)"
+  },
+  {
+   "kalla": "picasso",
+   "auk": 3,
+   "roll": "ampy-btn",
+   "varde": "0 0 16px rgba(241,241,241,.25) (phone .23); hover 0 6px 20px rgba(94,177,191,.28)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "ROT-kort",
+   "varde": "0 0 16px 0 rgba(190,190,190,.19)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "block (--av-shadow-3)",
+   "varde": "0 24px 50px -10px rgba(15,18,60,.18), 0 8px 16px -6px rgba(15,18,60,.10)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "panel (--av-shadow-2)",
+   "varde": "0 6px 16px -4px rgba(15,18,60,.10), 0 2px 6px rgba(15,18,60,.06)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "CTA",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45) · hover: 0 3px 6px .08 + 0 14px 32px -6px .6"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "fokusring (--av-ring)",
+   "varde": "0 0 0 3px #fff, 0 0 0 6px #090b32 · CTA: outline 3px solid #fff offset 3px"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kort",
+   "varde": "0 0 16px 0 rgba(190,190,190,.14)"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "badge-stjärna",
+   "varde": "filter: drop-shadow(0 0 .5px rgba(9,11,50,.55))"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "vitt bakgrundskort",
+   "varde": "0 0 16px 0 rgba(190,190,190,.19)"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "kort",
+   "varde": "0 0 16px 0 rgba(190,190,190,.14)"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "kort (glas)",
+   "varde": "0 3rem 7rem rgba(9,11,50,.12), inset 0 1px 0 rgba(255,255,255,.6); backdrop-filter blur(16px) saturate(1.1)"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "primärknapp",
+   "varde": "0 1rem 2.4rem rgba(0,169,145,.3); hover 0 1.6rem 3rem rgba(0,169,145,.38)"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "--shadow-primary",
+   "varde": "satt lokalt till rgba(9,11,50,.10) så --apshadow-* skulle fungera – men --apshadow-* används aldrig"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "fokus",
+   "varde": "outline 3px solid #00a991, offset 3px (a:focus-visible)"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "kort + medaljong",
+   "varde": "0 0 16px 0 rgba(190,190,190,.19) — husets (MainCTA/testimonials/ROT-kort)"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "medaljong ring",
+   "varde": "inset 0 0 0 1px rgba(9,11,50,.14); steg 1: inset 0 0 0 2px #00a991"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "B-kort",
+   "varde": "inset 3px 0 0 #00a991 + 0 2px 6px rgba(9,11,50,.08), ram 1px rgba(9,11,50,.07)"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "0 1.2rem 4rem rgba(9,11,50,.18) (--vda-shadow, egen)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "header-bar",
+   "varde": "0 4px 14px -10px rgba(15,18,60,.14) + 1px #dbe4f0 border-bottom"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "CTA",
+   "varde": "0 .4rem 1.2rem -.5rem rgba(0,169,145,.5)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "pulse-dot",
+   "varde": "box-shadow-ring keyframes 0→3px 6px→6px 9px rgba(85,255,154,.4/.55/0)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "mega",
+   "varde": "0 22px 36px -28px rgba(15,18,60,.20)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "produkt-bild",
+   "varde": "0 .4rem 1.2rem -.6rem rgba(15,18,60,.14) + 1px --line-soft"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "lösnings-kort",
+   "varde": "0 .8rem 2.4rem -1rem rgba(15,18,60,.25); hover 0 1.6rem 3.6rem -1.2rem .35"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "dim",
+   "varde": "rgba(9,11,50,.20) fullskärm"
+  }
+ ],
+ "skuggfarg_tripletter": [
+  {
+   "rgb": "9,11,50",
+   "antal_forekomster": 78,
+   "kallor": [
+    "article-template",
+    "booking-confirmation",
+    "certificates",
+    "cta-website",
+    "eljour-block",
+    "eljour-sticky-bar",
+    "energycalc",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "led-kalkylator",
+    "live-ampy-se",
+    "main-cta",
+    "mini-menu",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "var-process-cro",
+    "visste-du-att",
+    "website-blocks"
+   ]
+  },
+  {
+   "rgb": "15,18,60",
+   "antal_forekomster": 25,
+   "kallor": [
+    "battery-calculator",
+    "booking-confirmation",
+    "ev-kalkylator",
+    "hero-1",
+    "hero-2-alternatives",
+    "led-kalkylator",
+    "main-form",
+    "mini-menu",
+    "rot-gt-cro",
+    "website-blocks"
+   ]
+  },
+  {
+   "rgb": "255,255,255",
+   "antal_forekomster": 25,
+   "kallor": [
+    "battery-calculator",
+    "booking-confirmation",
+    "cta-website",
+    "eljour-block",
+    "eljour-sticky-bar",
+    "energycalc",
+    "ev-kalkylator",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "live-ampy-se",
+    "main-cta",
+    "rot-gt-cro",
+    "thank-you"
+   ]
+  },
+  {
+   "rgb": "0,169,145",
+   "antal_forekomster": 17,
+   "kallor": [
+    "booking-confirmation",
+    "elkollen",
+    "energycalc",
+    "hero-1",
+    "hero-2-form",
+    "led-kalkylator",
+    "main-form",
+    "mini-menu",
+    "thank-you",
+    "website-blocks"
+   ]
+  },
+  {
+   "rgb": "94,177,191",
+   "antal_forekomster": 9,
+   "kallor": [
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-sticky-bar",
+    "elkollen",
+    "live-ampy-se",
+    "main-cta",
+    "mini-menu",
+    "picasso"
+   ]
+  },
+  {
+   "rgb": "190,190,190",
+   "antal_forekomster": 8,
+   "kallor": [
+    "live-ampy-se",
+    "main-cta",
+    "rot-gt-cro",
+    "testimonials-block",
+    "var-process-cro"
+   ]
+  },
+  {
+   "rgb": "0,0,0",
+   "antal_forekomster": 7,
+   "kallor": [
+    "article-template",
+    "energycalc",
+    "hero-2-alternatives",
+    "main-form"
+   ]
+  },
+  {
+   "rgb": "11,13,42",
+   "antal_forekomster": 7,
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ]
+  },
+  {
+   "rgb": "85,255,154",
+   "antal_forekomster": 6,
+   "kallor": [
+    "article-template",
+    "energycalc",
+    "website-blocks"
+   ]
+  },
+  {
+   "rgb": "94,199,160",
+   "antal_forekomster": 4,
+   "kallor": [
+    "cta-website",
+    "fotobedomningen",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "rgb": "241,241,241",
+   "antal_forekomster": 4,
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen",
+    "live-ampy-se",
+    "picasso"
+   ]
+  },
+  {
+   "rgb": "4,110,90",
+   "antal_forekomster": 4,
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ]
+  },
+  {
+   "rgb": "57,194,129",
+   "antal_forekomster": 4,
+   "kallor": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ]
+  },
+  {
+   "rgb": "0,125,107",
+   "antal_forekomster": 3,
+   "kallor": [
+    "ev-kalkylator"
+   ]
+  },
+  {
+   "rgb": "0,196,167",
+   "antal_forekomster": 2,
+   "kallor": [
+    "energycalc"
+   ]
+  },
+  {
+   "rgb": "28,196,175",
+   "antal_forekomster": 2,
+   "kallor": [
+    "led-kalkylator"
+   ]
+  },
+  {
+   "rgb": "50,106,253",
+   "antal_forekomster": 1,
+   "kallor": [
+    "article-template"
+   ]
+  },
+  {
+   "rgb": "0,122,105",
+   "antal_forekomster": 1,
+   "kallor": [
+    "elcentral-kollen"
+   ]
+  },
+  {
+   "rgb": "27,132,71",
+   "antal_forekomster": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "rgb": "150,40,50",
+   "antal_forekomster": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "rgb": "135,101,7",
+   "antal_forekomster": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "rgb": "54,178,92",
+   "antal_forekomster": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "rgb": "214,64,64",
+   "antal_forekomster": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "rgb": "245,175,25",
+   "antal_forekomster": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "rgb": "240,175,56",
+   "antal_forekomster": 1,
+   "kallor": [
+    "ev-kalkylator"
+   ]
+  },
+  {
+   "rgb": "214,150,40",
+   "antal_forekomster": 1,
+   "kallor": [
+    "ev-kalkylator"
+   ]
+  },
+  {
+   "rgb": "181,181,181",
+   "antal_forekomster": 1,
+   "kallor": [
+    "hero-2-form"
+   ]
+  }
+ ],
+ "delade_strangar": [
+  {
+   "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45)",
+   "kallor": [
+    "cta-website",
+    "fotobedomningen",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "varde": "inset 0 1px 0 rgba(255,255,255,.55), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,177,191,.55)",
+   "kallor": [
+    "cta-website",
+    "eljour-sticky-bar"
+   ]
+  },
+  {
+   "varde": "0 1px 3px rgba(9,11,50,.14)",
+   "kallor": [
+    "cta-website",
+    "main-cta"
+   ]
+  },
+  {
+   "varde": "0 1px 2px rgba(11,13,42,.04)",
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ]
+  },
+  {
+   "varde": "hover 0 6px 20px rgba(94,177,191,.28) + translateY(-1px) + saturate(1.05)",
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ]
+  },
+  {
+   "varde": "0 1px 2px rgba(15,18,60,.06)",
+   "kallor": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ]
+  },
+  {
+   "varde": "0 22px 36px -28px rgba(15,18,60,.20)",
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "varde": "0 0 16px 0 rgba(190,190,190,.19)",
+   "kallor": [
+    "rot-gt-cro",
+    "testimonials-block"
+   ]
+  }
+ ]
+}

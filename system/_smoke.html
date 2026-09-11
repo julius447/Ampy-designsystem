@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ampy designsystem, röktest (tokens.css + base.css)</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<style>
+  /* endast layout för röktestet; alla värden kommer från tokens.css */
+  .strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: var(--ampy-space-inline-sm); }
+  .sw { height: 64px; border-radius: var(--ampy-radius-small); display: flex; align-items: flex-end; padding: 6px; font-size: 11px; line-height: 1.2; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.5); border: 1px solid var(--ampy-line); }
+  .rows > * + * { margin-top: var(--ampy-space-stack); }
+  .card { background: var(--ampy-bg-surface); border-radius: var(--ampy-radius-card); box-shadow: var(--ampy-shadow-card); padding: var(--ampy-space-card); }
+  .card--dark { background: var(--ampy-bg-dark); background-image: var(--ampy-bg-dark-glow); color: var(--ampy-on-dark); box-shadow: var(--ampy-shadow-raised); }
+  .btn { display: inline-flex; align-items: center; gap: var(--ampy-space-inline); min-height: 58px; padding: 11px 24px; border-radius: var(--ampy-radius-button); background: var(--ampy-action-gradient); color: var(--ampy-action-gradient-on); box-shadow: var(--ampy-shadow-button); text-decoration: none; transition: transform var(--ampy-dur-fast) ease, box-shadow var(--ampy-dur-fast) ease, filter var(--ampy-dur-fast) ease; }
+  .btn:hover { transform: translateY(var(--ampy-lift)); filter: var(--ampy-hover-filter); box-shadow: var(--ampy-shadow-button-hover); }
+  .btn--solid { background: var(--ampy-action-strong); color: var(--ampy-action-on); box-shadow: var(--ampy-shadow-glow-action); }
+  .btn--ring { background: var(--ampy-action-gradient-ring); box-shadow: var(--ampy-shadow-button-ring); }
+  .field { height: 48px; border: 1px solid var(--ampy-line-strong); border-radius: var(--ampy-radius-field); padding: 0 14px; width: 100%; max-width: 360px; background: #fff; }
+  .field:focus-visible { outline: 0; border-color: var(--ampy-action-strong); box-shadow: var(--ampy-focus-ring); }
+  .meta { font-size: 11px; color: var(--ampy-ink-faint); }
+  .two { display: grid; gap: var(--ampy-space-gap); grid-template-columns: 1fr; }
+  @media (min-width: 768px) { .two { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body class="ampy">
+<main class="ampy-container ampy-section rows">
+  <p class="ampy-eyebrow" data-role="eyebrow">Eyebrow: 12px 600 .14em</p>
+  <h1 class="ampy-display" data-role="display">Display: Elinstallationer i hemmet, gjort ordentligt.</h1>
+  <h1 data-role="h1">H1: Elektriker i Stockholm som berättar sanningen</h1>
+  <h2 data-role="h2">H2: Sänk kostnaden för byte av din elcentral genom 30 % rot-avdrag</h2>
+  <h3 data-role="h3">H3: Projektledning med expert</h3>
+  <p class="ampy-lead" data-role="lead">Lead: Våra egna behöriga elektriker hjälper dig i hela Sverige, med allt från elfel och elcentraler till laddbox och batterilagring.</p>
+  <p data-role="body">Body: Vår experter går igenom ditt projekt och räknar ut hur mycket du kan spara i ROT. En av våra certifierade elektriker utför installationen. Vi samlar ihop all dokumentation och skickar in ROT-ansökan till Skatteverket åt dig.</p>
+  <p class="ampy-small" data-role="small">Small: Källa: Elsäkerhetsverket och Elsäkerhetslagen (2016:732). Vägledning, inte juridisk rådgivning.</p>
+  <p class="ampy-label" data-role="label">Label: Ditt namn</p>
+  <div class="two">
+    <div class="card rows">
+      <p class="ampy-eyebrow">Ljust kort</p>
+      <p class="ampy-number" data-role="number">27 752 <span class="ampy-small">kr/år</span></p>
+      <input class="field" placeholder="Fält (radie field, line-strong)" aria-label="fält">
+      <p><a class="btn ampy-button-text" href="#" data-role="button">Kostnadsfri rådgivning ↗</a> <a class="btn btn--ring ampy-button-text" href="#">Ring 010-265 79 79</a></p>
+      <p><a class="btn btn--solid ampy-button-text" href="#">Solid (teal-deep)</a> <a href="#" class="ampy-small">Textlänk</a></p>
+    </div>
+    <div class="card card--dark rows">
+      <p class="ampy-eyebrow" style="color:var(--ampy-on-dark-muted)">Mörkt resultatkort</p>
+      <p class="ampy-number" style="color:var(--ampy-on-dark)">17 276 <span class="ampy-small" style="color:var(--ampy-on-dark-muted)">kr/år</span></p>
+      <p style="color:var(--ampy-on-dark-soft)">Text på mörkt (.92), <span style="color:var(--ampy-on-dark-muted)">dämpad (.66)</span>, <span style="color:var(--ampy-on-dark-faint)">svag (.55)</span></p>
+      <hr style="border-top-color:var(--ampy-on-dark-line)">
+      <p class="ampy-small" style="color:var(--ampy-on-dark-muted)">Glöd: --ampy-bg-dark-glow (LED-receptet)</p>
+    </div>
+  </div>
+  <div class="strip" data-role="strip">
+    <div class="sw" style="background:var(--apmidnight-blue)">midnight</div>
+    <div class="sw" style="background:var(--apteal-core)">teal-core</div>
+    <div class="sw" style="background:var(--apteal-deep)">teal-deep</div>
+    <div class="sw" style="background:var(--apsecondary-teal)">secondary-teal</div>
+    <div class="sw" style="background:var(--apneon-mint);color:#090b32;text-shadow:none">neon-mint</div>
+    <div class="sw" style="background:var(--apemerald-flow)">emerald</div>
+    <div class="sw" style="background:var(--apcrystal-blue);color:#090b32;text-shadow:none">crystal-blue</div>
+    <div class="sw" style="background:var(--apsky-mist);color:#090b32;text-shadow:none">sky-mist</div>
+    <div class="sw" style="background:var(--apindigo)">indigo (CTA-text)</div>
+    <div class="sw" style="background:var(--apnavy-ink)">navy-ink</div>
+    <div class="sw" style="background:var(--apnavy-muted)">navy-muted</div>
+    <div class="sw" style="background:var(--apnavy-faint)">navy-faint</div>
+    <div class="sw" style="background:var(--apamber);color:#090b32;text-shadow:none">amber</div>
+    <div class="sw" style="background:var(--apsignal-red)">signal-red</div>
+    <div class="sw" style="background:var(--apverdict-green)">verdict-green</div>
+    <div class="sw" style="background:var(--apverdict-amber)">verdict-amber</div>
+    <div class="sw" style="background:var(--apverdict-red)">verdict-red</div>
+    <div class="sw" style="background:var(--apverdict-blue)">verdict-blue</div>
+    <div class="sw" style="background:var(--apgoogle-gold);color:#090b32;text-shadow:none">google-gold</div>
+    <div class="sw" style="background:var(--ampy-action-gradient);color:var(--apindigo);text-shadow:none">handlingsgradient</div>
+    <div class="sw" style="background:var(--ampy-aurora-light);color:#090b32;text-shadow:none">ljus aurora</div>
+    <div class="sw" style="background:var(--apdarkest-black)">darkest-black</div>
+    <div class="sw" style="background:var(--apcharcoal-gray)">charcoal</div>
+    <div class="sw" style="background:var(--apmilk-white);color:#090b32;text-shadow:none">milk-white</div>
+  </div>
+  <p class="meta">Röktest: bara tokens.css + base.css. Mätning: konsolidering/_probes/06-smoke-matt.mjs → out/smoke-matt.json</p>
+</main>
+</body>
+</html>

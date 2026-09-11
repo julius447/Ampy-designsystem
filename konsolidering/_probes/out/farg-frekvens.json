@@ -1,0 +1,5357 @@
+{
+ "metod": "regex över farger[].hex i 30 JSON + offer_accepted; hex/rgb/hsl → #rrggbb; alfa separat; frekvens = antal KÄLLOR (inte förekomster)",
+ "antal_rader": 682,
+ "antal_unika": 257,
+ "auktoritet": {
+  "live-ampy-se": 1,
+  "hero-1": 1,
+  "website-blocks": 1,
+  "cta-website": 1,
+  "led-kalkylator": 1,
+  "ev-kalkylator": 1,
+  "energycalc": 1,
+  "elcentral-kollen": 1,
+  "elkollen": 1,
+  "eljour-block": 1,
+  "testimonials-block": 1,
+  "brandbook": 1,
+  "footer-cro": 1,
+  "rot-gt-cro": 1,
+  "main-cta": 2,
+  "hero-2-alternatives": 2,
+  "hero-2-form": 2,
+  "mini-menu": 2,
+  "certificates": 2,
+  "eljour-sticky-bar": 2,
+  "fore-efter-cro": 2,
+  "fotobedomningen": 2,
+  "main-form": 2,
+  "thank-you": 2,
+  "booking-confirmation": 2,
+  "article-template": 2,
+  "visste-du-att": 2,
+  "var-process-cro": 3,
+  "battery-calculator": 3,
+  "picasso": 3,
+  "offer-accepted": 3
+ },
+ "farger": [
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "antal_kallor": 29,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "footer-cro",
+    "hero-1",
+    "led-kalkylator",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "auk2": [
+    "article-template",
+    "booking-confirmation",
+    "certificates",
+    "eljour-sticky-bar",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "main-form",
+    "mini-menu",
+    "thank-you",
+    "visste-du-att"
+   ],
+   "auk3": [
+    "battery-calculator",
+    "offer-accepted",
+    "var-process-cro"
+   ],
+   "kallor": [
+    "article-template",
+    "battery-calculator",
+    "booking-confirmation",
+    "brandbook",
+    "certificates",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "eljour-sticky-bar",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "footer-cro",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "led-kalkylator",
+    "live-ampy-se",
+    "main-form",
+    "mini-menu",
+    "offer-accepted",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "var-process-cro",
+    "visste-du-att",
+    "website-blocks"
+   ],
+   "alfa_varianter": [
+    0.06,
+    0.07,
+    0.09,
+    0.1,
+    0.14,
+    0.16,
+    0.18,
+    0.22,
+    0.28,
+    0.32,
+    0.68,
+    0.72,
+    0.78,
+    0.82
+   ],
+   "roller": [
+    "article-template: Tailwind navy-900/DEFAULT: rubriker, hero-bakgrund, footer, mörka ytor",
+    "article-template: .ampy-gradient / .ampy-gradient-dark (utilities)",
+    "battery-calculator: --bg-surface (resultatkort, e-postinput-bg)",
+    "booking-confirmation: --navy: skicka-knappens bg, fokusring (outline 3px), totalbeloppet, av",
+    "offer-accepted: fokusring (outline 3px) + kortskugga rgba(9,11,50,.12)",
+    "brandbook: bakgrunder, nyckelytor, rubrik-/highlight-typografi, logons kärna"
+   ]
+  },
+  {
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "antal_kallor": 26,
+   "auk1": [
+    "brandbook",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "footer-cro",
+    "hero-1",
+    "led-kalkylator",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "auk2": [
+    "article-template",
+    "booking-confirmation",
+    "certificates",
+    "eljour-sticky-bar",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "main-cta",
+    "main-form",
+    "mini-menu",
+    "thank-you",
+    "visste-du-att"
+   ],
+   "auk3": [
+    "battery-calculator",
+    "var-process-cro"
+   ],
+   "kallor": [
+    "article-template",
+    "battery-calculator",
+    "booking-confirmation",
+    "brandbook",
+    "certificates",
+    "elcentral-kollen",
+    "eljour-block",
+    "eljour-sticky-bar",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "footer-cro",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-1",
+    "led-kalkylator",
+    "live-ampy-se",
+    "main-cta",
+    "main-form",
+    "mini-menu",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "var-process-cro",
+    "visste-du-att",
+    "website-blocks"
+   ],
+   "alfa_varianter": [
+    0.05,
+    0.06,
+    0.08,
+    0.14,
+    0.28,
+    0.32,
+    0.34,
+    0.4,
+    0.42,
+    0.45,
+    0.55,
+    0.66,
+    0.82,
+    0.92,
+    0.94,
+    0.96
+   ],
+   "roller": [
+    "article-template: kort, header, TOC, tabell",
+    "battery-calculator: --on-surface-text-faint (ORIGINAL — LED/EV höjde till .55 efter WCAG-a",
+    "battery-calculator: SVG nollinjen i payback-kurvan",
+    "battery-calculator: be-line (streckad vertikal från break-even-pricken)",
+    "booking-confirmation: fält-bg, knapptext, avatar-ring 3px, öppen knapp-bg; kort rgba(255,255",
+    "brandbook: enfärgsapplikationer"
+   ]
+  },
+  {
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "antal_kallor": 25,
+   "auk1": [
+    "brandbook",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "hero-1",
+    "led-kalkylator",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "auk2": [
+    "booking-confirmation",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "main-form",
+    "mini-menu",
+    "thank-you",
+    "visste-du-att"
+   ],
+   "auk3": [
+    "battery-calculator",
+    "offer-accepted",
+    "picasso",
+    "var-process-cro"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "booking-confirmation",
+    "brandbook",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "led-kalkylator",
+    "live-ampy-se",
+    "main-form",
+    "mini-menu",
+    "offer-accepted",
+    "picasso",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "var-process-cro",
+    "visste-du-att",
+    "website-blocks"
+   ],
+   "alfa_varianter": [
+    0.16,
+    0.28,
+    0.42
+   ],
+   "roller": [
+    "battery-calculator: --action-primary + --chart-stream-1 (Stödtjänster) + --chart-line-prof",
+    "battery-calculator: --chart-zone-profit (kurv-fyllning över noll)",
+    "booking-confirmation: --teal: bara i alfa: faktabrickans kant @.24, avatar-ringen @.35, pill",
+    "offer-accepted: bock-streck, aurora-SVG-stop, pill @.08/.16, nod-skugga @.34, koppling",
+    "brandbook: produktionens primära åtgärdsfärg (--apteal-core) – förekommer inte på",
+    "elcentral-kollen: --action-primary: bullet-ikoner, option hover/vald kant, check-bg, rai"
+   ]
+  },
+  {
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "antal_kallor": 22,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "hero-1",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "auk2": [
+    "article-template",
+    "booking-confirmation",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "main-form",
+    "thank-you",
+    "visste-du-att"
+   ],
+   "auk3": [
+    "offer-accepted",
+    "picasso"
+   ],
+   "kallor": [
+    "article-template",
+    "booking-confirmation",
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "live-ampy-se",
+    "main-form",
+    "offer-accepted",
+    "picasso",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "visste-du-att",
+    "website-blocks"
+   ],
+   "alfa_varianter": [
+    0.18
+   ],
+   "roller": [
+    "article-template: ampy-300: primärknapp 'Få offert', TOC-aktiv-kant, verifierad-badge, f",
+    "article-template: .ampy-gradient / .ampy-gradient-dark (utilities)",
+    "booking-confirmation: offertmallens primärknapp .of-btn-primary (120deg) – INTE använd på bo",
+    "offer-accepted: aurora-SVG:er (samma filer som tack-sidan) + bockens disk .2 och halo ",
+    "brandbook: ljus accent: wordmark på midnight/cobalt, ytor, ikoner på midnight",
+    "cta-website: grön gradientstart (rådgivning/offert) 120deg"
+   ]
+  },
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "antal_kallor": 21,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "energycalc",
+    "hero-1",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "auk2": [
+    "article-template",
+    "booking-confirmation",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-2-alternatives",
+    "main-cta",
+    "mini-menu",
+    "thank-you",
+    "visste-du-att"
+   ],
+   "auk3": [
+    "offer-accepted",
+    "var-process-cro"
+   ],
+   "kallor": [
+    "article-template",
+    "booking-confirmation",
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "energycalc",
+    "fore-efter-cro",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "live-ampy-se",
+    "main-cta",
+    "mini-menu",
+    "offer-accepted",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "var-process-cro",
+    "visste-du-att",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: cloud-100: sidbakgrund",
+    "booking-confirmation: --offwhite: sidbakgrund under aurora-radialerna; theme-color",
+    "offer-accepted: bakgrund + aurora-SVG:ernas ljusa stop",
+    "brandbook: ljus bakgrund (brandbokens egna sidor), wordmark på mörkt",
+    "cta-website: galleri-bakgrund (demo)",
+    "elcentral-kollen: blockläge: sektionsbandet (tonat mot /elservice/elcentral/)"
+   ]
+  },
+  {
+   "hex": "#5eb1bf",
+   "token": null,
+   "antal_kallor": 17,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "elkollen",
+    "hero-1",
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "auk2": [
+    "article-template",
+    "booking-confirmation",
+    "certificates",
+    "eljour-sticky-bar",
+    "fotobedomningen",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "main-cta",
+    "mini-menu"
+   ],
+   "auk3": [
+    "picasso"
+   ],
+   "kallor": [
+    "article-template",
+    "booking-confirmation",
+    "brandbook",
+    "certificates",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-sticky-bar",
+    "elkollen",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "live-ampy-se",
+    "main-cta",
+    "mini-menu",
+    "picasso",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [
+    0.28,
+    0.55
+   ],
+   "roller": [
+    "article-template: teal-500 'Secondary teal' (samma blågröna som ROT-GT/certificates) — i",
+    "booking-confirmation: offertmallens primärknapp .of-btn-primary (120deg) – INTE använd på bo",
+    "brandbook: stödfärg: alternativa bakgrunder, grafiska element, ikoner, diagram, e",
+    "certificates: sektionsbakgrund (identisk i båda; v2 mobil: 180deg navy 0–34 % → #5eb",
+    "cta-website: gradientslut för ALLA tre (\"stål\"); glow rgba(94,177,191,.55/.65) på r",
+    "elcentral-kollen: --ampy-cta-gradient: 'Kontakta oss' (1:1 med live .hero__btn / Picasso"
+   ]
+  },
+  {
+   "hex": "#b6f2ff",
+   "token": "--apcrystal-blue",
+   "antal_kallor": 15,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "elkollen",
+    "footer-cro"
+   ],
+   "auk2": [
+    "booking-confirmation",
+    "certificates",
+    "eljour-sticky-bar",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "main-cta",
+    "thank-you",
+    "visste-du-att"
+   ],
+   "auk3": [
+    "offer-accepted",
+    "picasso"
+   ],
+   "kallor": [
+    "booking-confirmation",
+    "brandbook",
+    "certificates",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-sticky-bar",
+    "elkollen",
+    "footer-cro",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "main-cta",
+    "offer-accepted",
+    "picasso",
+    "thank-you",
+    "visste-du-att"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: aurora-radial @.48",
+    "offer-accepted: aurora-SVG:er (samma filer som tack-sidan) + bockens disk .2 och halo ",
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd",
+    "certificates: våg 1 (SVG-gradient, 'Strömfält')",
+    "cta-website: blå gradientstart (ring)",
+    "elcentral-kollen: --ampy-cta-gradient-blue: telefonknappen"
+   ]
+  },
+  {
+   "hex": "#1e1e1e",
+   "token": "--apdarkest-black",
+   "antal_kallor": 9,
+   "auk1": [
+    "brandbook",
+    "energycalc",
+    "footer-cro",
+    "hero-1",
+    "rot-gt-cro"
+   ],
+   "auk2": [
+    "booking-confirmation",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "mini-menu"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation",
+    "brandbook",
+    "energycalc",
+    "footer-cro",
+    "hero-1",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "mini-menu",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --heading-ink definierad ('d2 rubrikkanon') – används INTE i bokningen",
+    "brandbook: enfärgsapplikationer",
+    "energycalc: --ink: all mörk text på ljust kort",
+    "energycalc: --ink: all mörk text på ljust kort",
+    "footer-cro: prefooter h3",
+    "hero-1: lead-färg A-variant rgba(30,30,30,.82); proof .72/.78"
+   ]
+  },
+  {
+   "hex": "#39c281",
+   "token": "--apemerald-flow",
+   "antal_kallor": 9,
+   "auk1": [
+    "brandbook",
+    "elcentral-kollen",
+    "ev-kalkylator",
+    "led-kalkylator",
+    "website-blocks"
+   ],
+   "auk2": [
+    "hero-2-alternatives",
+    "main-form",
+    "mini-menu"
+   ],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "brandbook",
+    "elcentral-kollen",
+    "ev-kalkylator",
+    "hero-2-alternatives",
+    "led-kalkylator",
+    "main-form",
+    "mini-menu",
+    "website-blocks"
+   ],
+   "alfa_varianter": [
+    0.16
+   ],
+   "roller": [
+    "battery-calculator: --state-success + --chart-stream-2 (Spotpris-arbitrage)",
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd",
+    "elcentral-kollen: --state-success/warning/error (deklarerade; success-token ej sedd i co",
+    "ev-kalkylator: --state-success: 'Smart laddning'-värde, 'Du sparar'-delta, slider-fil",
+    "hero-2-alternatives: --ap-emerald (definierad, 0 användningar)",
+    "led-kalkylator: --state-success: slider-fill slut, 'Med LED'-stapel + nyckel, ok-medde"
+   ]
+  },
+  {
+   "hex": "#565e82",
+   "token": null,
+   "antal_kallor": 8,
+   "auk1": [
+    "ev-kalkylator",
+    "hero-1",
+    "led-kalkylator",
+    "rot-gt-cro",
+    "website-blocks"
+   ],
+   "auk2": [
+    "booking-confirmation",
+    "mini-menu"
+   ],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "booking-confirmation",
+    "ev-kalkylator",
+    "hero-1",
+    "led-kalkylator",
+    "mini-menu",
+    "rot-gt-cro",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "battery-calculator: samma near-miss-set som LED/EV",
+    "booking-confirmation: --muted: offertreferens i huvudet, panel-hint, bokarens text, sidfotsl",
+    "ev-kalkylator: --text-secondary",
+    "hero-1: --ink-muted / --ink-faint (mega-menyns länkar)",
+    "led-kalkylator: --text-secondary: etiketter, hint, tier-label, enheter, chevron",
+    "mini-menu: --ink-muted: lead"
+   ]
+  },
+  {
+   "hex": "#0f123c",
+   "token": null,
+   "antal_kallor": 7,
+   "auk1": [
+    "ev-kalkylator",
+    "hero-1",
+    "led-kalkylator",
+    "rot-gt-cro",
+    "website-blocks"
+   ],
+   "auk2": [
+    "mini-menu"
+   ],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "hero-1",
+    "led-kalkylator",
+    "mini-menu",
+    "rot-gt-cro",
+    "website-blocks"
+   ],
+   "alfa_varianter": [
+    0.1,
+    0.12
+   ],
+   "roller": [
+    "battery-calculator: samma near-miss-set som LED/EV",
+    "battery-calculator: samma near-miss-set som LED/EV",
+    "ev-kalkylator: --text-primary",
+    "hero-1: --ink: body-textfärg + header-text (uppmätt body color rgb(15,18,60))",
+    "led-kalkylator: --text-primary: all mörk text (nära --apmidnight-blue rgb(9,11,50) men",
+    "led-kalkylator: --border-default: kortkant, selector, select, tier-avdelare, tip-kant"
+   ]
+  },
+  {
+   "hex": "#282a53",
+   "token": null,
+   "antal_kallor": 6,
+   "auk1": [
+    "cta-website",
+    "hero-1",
+    "rot-gt-cro"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "fotobedomningen",
+    "main-cta"
+   ],
+   "auk3": [],
+   "kallor": [
+    "cta-website",
+    "eljour-sticky-bar",
+    "fotobedomningen",
+    "hero-1",
+    "main-cta",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "cta-website: knapptext 'mjuk navy' (uppmätt rgb(40,42,83)) + chip-ikon",
+    "cta-website: knapptext 'mjuk navy' (uppmätt rgb(40,42,83)) + chip-ikon",
+    "eljour-sticky-bar: ring-knappens text/ikon-ink (5,51:1 mot #5eb1bf; vit vore 1,23:1)",
+    "eljour-sticky-bar: ring-knappens text/ikon-ink (5,51:1 mot #5eb1bf; vit vore 1,23:1)",
+    "fotobedomningen: --afk-cta-ink: submit-text (5,51:1 mot gradientens mörkaste)",
+    "hero-1: CTA-textfärg (mjuk navy) — uppmätt rgb(40,42,83)"
+   ]
+  },
+  {
+   "hex": "#333333",
+   "token": "--apcharcoal-gray",
+   "antal_kallor": 6,
+   "auk1": [
+    "brandbook",
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "auk2": [
+    "booking-confirmation",
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation",
+    "brandbook",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --body-ink: arbetsbeskrivning, prisrader (lbl), intro-text, villkorste",
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd",
+    "hero-2-alternatives: Z-kortets .aof-arv: submit-ink, input-text, placeholder-grå, lightblue",
+    "hero-2-form: --charcoal: input-text + select-pil",
+    "live-ampy-se: --color-20 (Bricks-palett) brödtext mobil i ROT/GT (uppmätt rgb(51,51,",
+    "rot-gt-cro: stegparagraf på mobil (≤767)"
+   ]
+  },
+  {
+   "hex": "#363636",
+   "token": null,
+   "antal_kallor": 6,
+   "auk1": [
+    "cta-website",
+    "footer-cro",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block"
+   ],
+   "auk2": [
+    "main-cta"
+   ],
+   "auk3": [],
+   "kallor": [
+    "cta-website",
+    "footer-cro",
+    "live-ampy-se",
+    "main-cta",
+    "rot-gt-cro",
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "cta-website: galleri body-text / sub (demo)",
+    "footer-cro: prefooter h4 + länkar (Bricks body-default)",
+    "live-ampy-se: body-textfärg (Bricks default, frontend.css body{color:#363636}) = upp",
+    "main-cta: --ink: body + brödtext (Bricks-default)",
+    "rot-gt-cro: brödtext/H3/knapptext (Bricks frontend.css body{color:#363636}) — utan",
+    "testimonials-block: H2-bas (Bricks body-färg)"
+   ]
+  },
+  {
+   "hex": "#bebebe",
+   "token": null,
+   "antal_kallor": 5,
+   "auk1": [
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block"
+   ],
+   "auk2": [
+    "main-cta"
+   ],
+   "auk3": [
+    "var-process-cro"
+   ],
+   "kallor": [
+    "live-ampy-se",
+    "main-cta",
+    "rot-gt-cro",
+    "testimonials-block",
+    "var-process-cro"
+   ],
+   "alfa_varianter": [
+    0.14,
+    0.19,
+    0.4
+   ],
+   "roller": [
+    "live-ampy-se: kortskugga: 0 0 16px 0 rgb(190 190 190 / .19) ×14 (dominant), /.4 ×8, ",
+    "main-cta: kortskugga 0 0 16px (live-idiomet)",
+    "main-cta: kortskugga 0 0 16px (live-idiomet)",
+    "rot-gt-cro: kortskugga 0 0 16px 0 (utanför tokens; --apshadow-* är trasiga, se def",
+    "testimonials-block: kortskugga 0 0 16px 0",
+    "var-process-cro: --apr-shadow: 'EN skugga, husets — samma som MainCTA och testimonials'"
+   ]
+  },
+  {
+   "hex": "#212121",
+   "token": null,
+   "antal_kallor": 4,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen",
+    "live-ampy-se"
+   ],
+   "auk2": [],
+   "auk3": [
+    "picasso"
+   ],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen",
+    "live-ampy-se",
+    "picasso"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: gradient-CTA:ernas text/ikon (1:1 från live)",
+    "elkollen: hero__btn--primary / --secondary (Picasso-receptet)",
+    "live-ampy-se: ROT-knappens svg-stroke",
+    "picasso: knapptext / telefonikonens stroke"
+   ]
+  },
+  {
+   "hex": "#a0fbc9",
+   "token": "--apsublime-green",
+   "antal_kallor": 4,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [
+    "booking-confirmation",
+    "thank-you"
+   ],
+   "auk3": [
+    "offer-accepted"
+   ],
+   "kallor": [
+    "booking-confirmation",
+    "brandbook",
+    "offer-accepted",
+    "thank-you"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: aurora-radial @.28",
+    "offer-accepted: aurora-SVG:er (samma filer som tack-sidan) + bockens disk .2 och halo ",
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd",
+    "thank-you: aurora-radial nere höger @.28 + aurora-bottom.svg stop"
+   ]
+  },
+  {
+   "hex": "#00a88f",
+   "token": "--apteal-core",
+   "antal_kallor": 3,
+   "auk1": [
+    "footer-cro"
+   ],
+   "auk2": [
+    "main-cta"
+   ],
+   "auk3": [
+    "picasso"
+   ],
+   "kallor": [
+    "footer-cro",
+    "main-cta",
+    "picasso"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "footer-cro: --ap-teal-live: Google-betyg + stjärnor",
+    "footer-cro: --ap-teal-live: Google-betyg + stjärnor",
+    "main-cta: --teal (definierad, 0 användningar)",
+    "main-cta: --teal (definierad, 0 användningar)",
+    "picasso: --color-15: fokus-outline, rating-stjärnor i main-cta"
+   ]
+  },
+  {
+   "hex": "#018271",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation",
+    "thank-you"
+   ],
+   "auk3": [
+    "offer-accepted"
+   ],
+   "kallor": [
+    "booking-confirmation",
+    "offer-accepted",
+    "thank-you"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --teal-deep definierad (4,48:1 underkänd på sky-mist) – används inte i",
+    "offer-accepted: stegnodernas gradient (145deg) – mörkare än tack-sidans #00b89c→#01827",
+    "thank-you: --teal-deep: knappgradientens mörka stop, ghost-hover text, cta-eyebro"
+   ]
+  },
+  {
+   "hex": "#055a4b",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --cta-grad: den gröna Ring-knappen (mörk teal, INTE --apteal-core) — u",
+    "eljour-sticky-bar: --acb-grad: grön fork (§3, byte-identisk med symptomblockets .eb__cta)",
+    "hero-2-alternatives: eljour-nödknappens mörkgröna gradient (live-värdet) + skugga rgba(4,11"
+   ]
+  },
+  {
+   "hex": "#08735f",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --cta-grad: den gröna Ring-knappen (mörk teal, INTE --apteal-core) — u",
+    "eljour-sticky-bar: --acb-grad: grön fork (§3, byte-identisk med symptomblockets .eb__cta)",
+    "hero-2-alternatives: eljour-nödknappens mörkgröna gradient (live-värdet) + skugga rgba(4,11"
+   ]
+  },
+  {
+   "hex": "#0a6e58",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --teal-pill: 'Jour öppen just nu'-text + 'Se fler tecken' — utanför to",
+    "eljour-sticky-bar: --acb-ghost-ink (6,2:1 på vitt; teal #00a991 2,97:1 förbjuden här)",
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#0a8169",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --cta-grad: den gröna Ring-knappen (mörk teal, INTE --apteal-core) — u",
+    "eljour-sticky-bar: --acb-grad: grön fork (§3, byte-identisk med symptomblockets .eb__cta)",
+    "hero-2-alternatives: eljour-nödknappens mörkgröna gradient (live-värdet) + skugga rgba(4,11"
+   ]
+  },
+  {
+   "hex": "#0a8f7c",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --teal-dark: CTA focus-outline — utanför tokens",
+    "eljour-sticky-bar: --acb-focus (4,01:1) — fokusring på gröna/dark-forken + hörnkort",
+    "fotobedomningen: --afk-teal-dark: meningsbärande glyf (eyebrow-kamera, foto-chip, kvitt"
+   ]
+  },
+  {
+   "hex": "#0b1030",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation",
+    "thank-you"
+   ],
+   "auk3": [
+    "offer-accepted"
+   ],
+   "kallor": [
+    "booking-confirmation",
+    "offer-accepted",
+    "thank-you"
+   ],
+   "alfa_varianter": [
+    0.09,
+    0.16,
+    0.44,
+    0.48,
+    0.62
+   ],
+   "roller": [
+    "booking-confirmation: --ink: rubriker (h1 datum, h2, h3, namn), beloppen, fältetiketter – ut",
+    "booking-confirmation: --ink-soft: adressrad 2, elektrikerns roll",
+    "booking-confirmation: --line: avdelare (facts, lead), prickade prisrader, villkors-kant",
+    "booking-confirmation: --line-soft: materialkortets kant, dashed kant på bokarens text",
+    "booking-confirmation: --line-strong: sekundärknappar, panelkant, fältkanter 1.5px (WCAG 1.4.",
+    "offer-accepted: ink / ink-soft / linje mellan sektioner"
+   ]
+  },
+  {
+   "hex": "#0d0d0d",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [
+    "picasso"
+   ],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen",
+    "picasso"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: gradient-CTA:ernas text/ikon (1:1 från live)",
+    "elkollen: hero__btn--primary / --secondary (Picasso-receptet)",
+    "picasso: knapptext / telefonikonens stroke"
+   ]
+  },
+  {
+   "hex": "#3b3f59",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --ink-body: brödtext (body, lead, trust, risk) — utanför tokens",
+    "eljour-sticky-bar: hörnkortets ledtext (10,30:1)",
+    "fotobedomningen: --afk-ink-body: brödtext, H2-fråga, etiketter (10,29:1) — utanför toke"
+   ]
+  },
+  {
+   "hex": "#5cc5b6",
+   "token": "--apseafoam-mint",
+   "antal_kallor": 3,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [
+    "thank-you"
+   ],
+   "auk3": [
+    "offer-accepted"
+   ],
+   "kallor": [
+    "brandbook",
+    "offer-accepted",
+    "thank-you"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "offer-accepted: aurora-SVG:er (samma filer som tack-sidan) + bockens disk .2 och halo ",
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd",
+    "thank-you: aurora-SVG:ernas tealstop (5cc5b6 → 00a991 → 5cc5b6)"
+   ]
+  },
+  {
+   "hex": "#5f6480",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --ink-soft: chevron, Elsäkerhetsverket-noten — utanför tokens",
+    "eljour-sticky-bar: --acb-x-ink (dismiss-kryss, dark-fork)",
+    "fotobedomningen: --afk-ink-soft: ansvar/candour/GDPR/akut-rad (5,80:1) OCH --afk-kant: "
+   ]
+  },
+  {
+   "hex": "#7ad0c6",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "battery-calculator: --chart-stream-3 (Effekttoppskapning) 'desaturated pale teal'",
+    "ev-kalkylator: --chart-stream-3/4 (oanvända)",
+    "led-kalkylator: --chart-stream-3/4 (ärvda från batterikalkylatorn, oanvända i LED)"
+   ]
+  },
+  {
+   "hex": "#a0b8c4",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "battery-calculator: --chart-stream-4 (Ökad egenanvändning) 'cool neutral'",
+    "ev-kalkylator: --chart-stream-3/4 (oanvända)",
+    "led-kalkylator: --chart-stream-3/4 (ärvda från batterikalkylatorn, oanvända i LED)"
+   ]
+  },
+  {
+   "hex": "#b3261e",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "fotobedomningen",
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "fotobedomningen",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: Akut-nivån: tagg-bg / tagg-text + säkerhetsrutans text / prick / säker",
+    "fotobedomningen: --afk-fel: felmeddelande + invalid-kant (6,54:1); akut-varningsikon",
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#e3f6f1",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "fotobedomningen",
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "fotobedomningen",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --teal-tint: statuspillens bakgrund — utanför tokens",
+    "fotobedomningen: --afk-teal-tint: foto-chip 36 px, kvitto-bock 40 px, router-rad vald",
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#e6ecf6",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "fotobedomningen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: --line: kortramar + radavdelare — utanför tokens",
+    "eljour-sticky-bar: --acb-line: barens topphairline + kortets ram (samplad ur symptomblock",
+    "fotobedomningen: --afk-linje: kortram + dekorativa avdelare (1,19:1 — aldrig kontrollgr"
+   ]
+  },
+  {
+   "hex": "#eaeff3",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "battery-calculator: samma near-miss-set som LED/EV",
+    "ev-kalkylator: --bg-subtle (spår, ikonrutor utan foto, vald option)",
+    "led-kalkylator: --bg-subtle: segmented-spår, slider-spår, selector-ikonruta, kodrad-bg"
+   ]
+  },
+  {
+   "hex": "#f0af38",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "battery-calculator: --state-warning + --chart-line-loss (kurvan under noll, startprick); -",
+    "ev-kalkylator: --state-warning: 'Offentlig laddning'-värde, publik stapel (gradient t",
+    "led-kalkylator: --state-warning / --chart-line-loss: 'I dag'-stapel + nyckel (amber)"
+   ]
+  },
+  {
+   "hex": "#f1f1f1",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "elcentral-kollen",
+    "live-ampy-se"
+   ],
+   "auk2": [],
+   "auk3": [
+    "picasso"
+   ],
+   "kallor": [
+    "elcentral-kollen",
+    "live-ampy-se",
+    "picasso"
+   ],
+   "alfa_varianter": [
+    0.25
+   ],
+   "roller": [
+    "elcentral-kollen: --ampy-cta-shadow (1:1 från live)",
+    "live-ampy-se: alternativ kortskugga 0 0 16px 0 rgb(241 241 241 / .23–.25) ×16; 0 4px",
+    "picasso: knappglöd / hover-skugga"
+   ]
+  },
+  {
+   "hex": "#f6b53d",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation",
+    "thank-you"
+   ],
+   "auk3": [
+    "offer-accepted"
+   ],
+   "kallor": [
+    "booking-confirmation",
+    "offer-accepted",
+    "thank-you"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --gold definierad (stjärnor) – används bara på offer-accepted",
+    "offer-accepted: stjärnor 14px",
+    "thank-you: stjärnguld (--gold) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#f7f9fb",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [
+    "battery-calculator"
+   ],
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "battery-calculator: samma near-miss-set som LED/EV",
+    "ev-kalkylator: --bg-primary (kort, aktiv segment, thumb)",
+    "led-kalkylator: --bg-primary: sidbakgrund, inputkort, aktiv segment-bg, slider-thumb ("
+   ]
+  },
+  {
+   "hex": "#fdeceb",
+   "token": null,
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "fotobedomningen",
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "fotobedomningen",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: Akut-nivån: tagg-bg / tagg-text + säkerhetsrutans text / prick / säker",
+    "fotobedomningen: --afk-fel: felmeddelande + invalid-kant (6,54:1); akut-varningsikon",
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#000000",
+   "token": "--appure-black",
+   "antal_kallor": 2,
+   "auk1": [
+    "website-blocks"
+   ],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form",
+    "website-blocks"
+   ],
+   "alfa_varianter": [
+    0.2
+   ],
+   "roller": [
+    "main-form: obligatorisk-asterisk (ägarbeslut: svart)",
+    "website-blocks: drawer sub-hårlinjer"
+   ]
+  },
+  {
+   "hex": "#007a69",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --action-primary-strong: solid CTA-bg + kant, aktiv/done stegprick, te",
+    "elkollen: --action-primary-strong: solid CTA ('Boka kostnadsfri rådgivning'), he"
+   ]
+  },
+  {
+   "hex": "#008d79",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: --ap-teal-hover (header-CTA hover)",
+    "website-blocks: --ap-teal-hover (CTA hover/active)"
+   ]
+  },
+  {
+   "hex": "#00ffda",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: Z-kortets .aof-arv: submit-ink, input-text, placeholder-grå, lightblue",
+    "hero-2-form: --neon2: submit-gradientslut (86 %) — 'finns inte i Ampys tokenlista' "
+   ]
+  },
+  {
+   "hex": "#016a5d",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation"
+   ],
+   "auk3": [
+    "offer-accepted"
+   ],
+   "kallor": [
+    "booking-confirmation",
+    "offer-accepted"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --teal-ink: bock-/ikonstreck, pill-text, TILLÄGG/ÖVERENSKOMMET PRIS-et",
+    "offer-accepted: stegnodernas gradient (145deg) – mörkare än tack-sidans #00b89c→#01827"
+   ]
+  },
+  {
+   "hex": "#046e5a",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "eljour-sticky-bar"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar"
+   ],
+   "alfa_varianter": [
+    0.32
+   ],
+   "roller": [
+    "eljour-block: --cta-shadow 0 1rem 2.4rem + inset 0 1px 0 rgba(255,255,255,.22) + ram",
+    "eljour-sticky-bar: --acb-shadow / hover (grön fork)"
+   ]
+  },
+  {
+   "hex": "#090c34",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "cta-website"
+   ],
+   "auk2": [
+    "main-cta"
+   ],
+   "auk3": [],
+   "kallor": [
+    "cta-website",
+    "main-cta"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "cta-website: galleri-rubriker (demo) = Bricks --color-3",
+    "cta-website: galleri-rubriker (demo) = Bricks --color-3",
+    "main-cta: --midnight: h2-färg (uppmätt rgb(9,12,52)), focus-outline",
+    "main-cta: --midnight: h2-färg (uppmätt rgb(9,12,52)), focus-outline"
+   ]
+  },
+  {
+   "hex": "#0d568c",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --accent-success/warning/error/info: 4px accentstapel i dualstatus, fi",
+    "elkollen: --text-info / info-ikon"
+   ]
+  },
+  {
+   "hex": "#0f6e56",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --accent-success/warning/error/info: 4px accentstapel i dualstatus, fi",
+    "elcentral-kollen: --text-success: finding--ok-ikon, share-nudge, lead-success-ikon",
+    "elkollen: --text-success / judgment--green accent / row-icon ✓ / tip-icon"
+   ]
+  },
+  {
+   "hex": "#14151a",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: mobil-drawer (Evify-klon): text, hårlinjer, eyebrow, pil, burger-X-pla",
+    "website-blocks: drawer text (Evify-klon) uppmätt rgb(20,21,26)"
+   ]
+  },
+  {
+   "hex": "#1b1d4b",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: HERO-Z hjälteyta (uppmätt rgb(27,29,75)) — 'Z-navy'",
+    "rot-gt-cro: mörka panelens bakgrund = 'exakt hero-recept' (Bricks --color-18, inte",
+    "rot-gt-cro: mörka panelens bakgrund = 'exakt hero-recept' (Bricks --color-18, inte"
+   ]
+  },
+  {
+   "hex": "#1bd365",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "live-ampy-se",
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se",
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: --brightgreen (Bricks-palett) + cookie-consent toggle/focus",
+    "testimonials-block: prickens fyllning (--att-fill-a = var(--brightgreen) Bricks-palett, --",
+    "testimonials-block: H2-ordet 'Ampy?' i gradient (background-clip)"
+   ]
+  },
+  {
+   "hex": "#1cc4af",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "led-kalkylator"
+   ],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "led-kalkylator",
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "led-kalkylator: --action-secondary: lead-input fokus, samtyckesbock, länk i samtycke",
+    "main-form: --ap-teal-bright, definierad, aldrig använd (utanför tokens)"
+   ]
+  },
+  {
+   "hex": "#1f1f1f",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: --color-8 (Bricks-palett) ROT-rubrikfärg",
+    "rot-gt-cro: H2-bas (ROT) och GT-gradientens start — utanför tokens, 1 steg från --",
+    "rot-gt-cro: H2-bas (ROT) och GT-gradientens start — utanför tokens, 1 steg från --"
+   ]
+  },
+  {
+   "hex": "#326afd",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template",
+    "brandbook"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: electric-500 'Primary blue — links, secondary CTAs, accents' — FINNS I",
+    "article-template: .ampy-gradient / .ampy-gradient-dark (utilities)",
+    "brandbook: primär accent i brandboken: ikoner, blixt-former, hjälm, bil, skyltar,"
+   ]
+  },
+  {
+   "hex": "#33995c",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "rot-gt-cro",
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "rot-gt-cro",
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "rot-gt-cro: GT-H2 gradientens slut — utanför tokens",
+    "rot-gt-cro: GT-H2 gradientens slut — utanför tokens",
+    "testimonials-block: H2-ordet 'Ampy?' i gradient (background-clip)"
+   ]
+  },
+  {
+   "hex": "#3c4260",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: mobil-drawer (Evify-klon): text, hårlinjer, eyebrow, pil, burger-X-pla",
+    "website-blocks: burger-X-platta / X-ikon / produkt-pil"
+   ]
+  },
+  {
+   "hex": "#5a5d7a",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --text-secondary: rail-lead, bullets, hint, eyebrow, axis, clarifier, ",
+    "elcentral-kollen: --text-secondary: rail-lead, bullets, hint, eyebrow, axis, clarifier, ",
+    "elkollen: --text-secondary / --pg-ink-2: hero__sub, trust, list-subtitle, option",
+    "elkollen: --text-secondary / --pg-ink-2: hero__sub, trust, list-subtitle, option"
+   ]
+  },
+  {
+   "hex": "#5ec7a0",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "cta-website"
+   ],
+   "auk2": [
+    "fotobedomningen"
+   ],
+   "auk3": [],
+   "kallor": [
+    "cta-website",
+    "fotobedomningen"
+   ],
+   "alfa_varianter": [
+    0.45
+   ],
+   "roller": [
+    "cta-website: grön glow-skugga (rådgivning/offert)",
+    "fotobedomningen: --afk-skugga-handling: submitens skugga (hover .5/.07/.55)"
+   ]
+  },
+  {
+   "hex": "#5fb1bf",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [
+    "main-cta"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-cta",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-cta: --blue: gradientslut i rubriken; ring-gradientens slut",
+    "rot-gt-cro: ROT-H2:ns markerade tre sista ord (gradient 90deg color-7→color-7 via ",
+    "rot-gt-cro: ROT-H2:ns markerade tre sista ord (gradient 90deg color-7→color-7 via "
+   ]
+  },
+  {
+   "hex": "#6a7190",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: --ink-muted / --ink-faint (mega-menyns länkar)",
+    "website-blocks: --ink-faint: undertexter, eyebrow GUIDER & VERKTYG (uppmätt rgb(106,11"
+   ]
+  },
+  {
+   "hex": "#73757d",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: mobil-drawer (Evify-klon): text, hårlinjer, eyebrow, pil, burger-X-pla",
+    "website-blocks: drawer eyebrow MENY (uppmätt rgb(115,117,125))"
+   ]
+  },
+  {
+   "hex": "#7a1623",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [
+    0.38
+   ],
+   "roller": [
+    "elcentral-kollen: --accent-success/warning/error/info: 4px accentstapel i dualstatus, fi",
+    "elcentral-kollen: akut-rutan bg + kant",
+    "elkollen: --verdict-accent red: 6px sidostapel, ⊘-ikon, tab-indikator; board-kan"
+   ]
+  },
+  {
+   "hex": "#876507",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [
+    0.05
+   ],
+   "roller": [
+    "elcentral-kollen: --accent-success/warning/error/info: 4px accentstapel i dualstatus, fi",
+    "elcentral-kollen: factnote bg / kant (enda amber-accenten)",
+    "elkollen: --verdict-accent yellow / badge-bg / badge-fg"
+   ]
+  },
+  {
+   "hex": "#8a5800",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: Varning-nivån: tagg-bg / tagg-text / prick — utanför tokens (amber)",
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#9a9aa0",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: mobil-drawer (Evify-klon): text, hårlinjer, eyebrow, pil, burger-X-pla",
+    "website-blocks: burger-X-platta / X-ikon / produkt-pil"
+   ]
+  },
+  {
+   "hex": "#b2b2b2",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: Z-kortets .aof-arv: submit-ink, input-text, placeholder-grå, lightblue",
+    "hero-2-form: --gray (placeholder)"
+   ]
+  },
+  {
+   "hex": "#bfe9fb",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: Z-kortets .aof-arv: submit-ink, input-text, placeholder-grå, lightblue",
+    "hero-2-form: --lightblue: vald segment-knapp (uppmätt rgb(191,233,251))"
+   ]
+  },
+  {
+   "hex": "#bff3e6",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: chip-ink / Z-hjälptext / feltext / fel-kant (två olika röda)",
+    "hero-2-form: hjälp-/feltext"
+   ]
+  },
+  {
+   "hex": "#c7f5ff",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: --color-13 hsl(191 100% 89%): ROT-knappens bg (uppmätt rgb(199,245,255",
+    "rot-gt-cro: ROT-knappens bakgrund — utanför tokens (nära --apcrystal-blue #b6f2ff ",
+    "rot-gt-cro: ROT-knappens bakgrund — utanför tokens (nära --apcrystal-blue #b6f2ff ",
+    "rot-gt-cro: ROT-knappens hover-gradient"
+   ]
+  },
+  {
+   "hex": "#d5d5dc",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: mobil-drawer (Evify-klon): text, hårlinjer, eyebrow, pil, burger-X-pla",
+    "website-blocks: drawer hårlinjer"
+   ]
+  },
+  {
+   "hex": "#d64c4c",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "ev-kalkylator: --state-error: inline-fel, error-box",
+    "led-kalkylator: --state-error: ogiltigt fält, felmeddelande"
+   ]
+  },
+  {
+   "hex": "#dbe4f0",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: --hairline: headerns underkant",
+    "website-blocks: --hairline: bar/mega border-bottom"
+   ]
+  },
+  {
+   "hex": "#e0f5f2",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [
+    "booking-confirmation"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --teal-soft: faktabrickornas och bockarnas platta, totalplattan – utan",
+    "rot-gt-cro: --av-teal-soft: avdragschipets bakgrund (−30 % / −50 %) — utanför toke"
+   ]
+  },
+  {
+   "hex": "#e0faeb",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: --color-23 hsl(146 71% 93%): GT-knappens bg (uppmätt rgb(224,250,235))",
+    "rot-gt-cro: GT-knappens bakgrund — utanför tokens",
+    "rot-gt-cro: GT-knappens bakgrund — utanför tokens"
+   ]
+  },
+  {
+   "hex": "#e24b4a",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: Akut-nivån: tagg-bg / tagg-text + säkerhetsrutans text / prick / säker",
+    "hero-2-alternatives: chip-ink / Z-hjälptext / feltext / fel-kant (två olika röda)"
+   ]
+  },
+  {
+   "hex": "#e3a008",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: Varning-nivån: tagg-bg / tagg-text / prick — utanför tokens (amber)",
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#e3e5ed",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --border-default: options, check, inputs, todo-stegprick, sticky-bar t",
+    "elcentral-kollen: --border-default: options, check, inputs, todo-stegprick, sticky-bar t",
+    "elkollen: --border-default (tiles, options, CTA-kanter, inputs) / --border-terti"
+   ]
+  },
+  {
+   "hex": "#e7ecf4",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: mobil-drawer (Evify-klon): text, hårlinjer, eyebrow, pil, burger-X-pla",
+    "website-blocks: burger-X-platta / X-ikon / produkt-pil"
+   ]
+  },
+  {
+   "hex": "#ebedf3",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --border-tertiary: kortkant, info-kant",
+    "elcentral-kollen: --border-tertiary: kortkant, info-kant",
+    "elkollen: --border-default (tiles, options, CTA-kanter, inputs) / --border-terti"
+   ]
+  },
+  {
+   "hex": "#f4f5fb",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --bg-secondary: neutral pill-bg",
+    "elcentral-kollen: --bg-secondary: neutral pill-bg",
+    "elkollen: --bg-secondary / --pg-bg: sidbakgrund (light-tema), job-row hover, inf",
+    "elkollen: --bg-secondary / --pg-bg: sidbakgrund (light-tema), job-row hover, inf"
+   ]
+  },
+  {
+   "hex": "#f5af19",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --state-success/warning/error (deklarerade; success-token ej sedd i co",
+    "elkollen: --state-warning: yellow board bg .08 / wash .09 (CSS finns, ingen data"
+   ]
+  },
+  {
+   "hex": "#fafcff",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template",
+    "eljour-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: Bricks-tabellens linjer + huvudbakgrund",
+    "eljour-block: rad hover / öppen rad — utanför tokens"
+   ]
+  },
+  {
+   "hex": "#fbbc04",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives",
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: Google-stjärnor guld (V7 alla ytor)",
+    "testimonials-block: Google-badgens 5 stjärnor (Googles gula) + drop-shadow rgba(9,11,50,.5"
+   ]
+  },
+  {
+   "hex": "#fff4e0",
+   "token": null,
+   "antal_kallor": 2,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "eljour-block",
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: Varning-nivån: tagg-bg / tagg-text / prick — utanför tokens (amber)",
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#00011e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "footer-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "footer-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "footer-cro: footer-gradient −17deg (live) + inset-skugga #010033"
+   ]
+  },
+  {
+   "hex": "#006c5d",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --action-primary-strong-hover: CTA hover, submit disabled"
+   ]
+  },
+  {
+   "hex": "#006e5e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --action-primary-text: job-row-label i hover/teal textlänkar"
+   ]
+  },
+  {
+   "hex": "#007d6b",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "ev-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "ev-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "ev-kalkylator: --action-primary + --border-focus (MÖRKAD teal för AA: CTA-bg, aktiv t"
+   ]
+  },
+  {
+   "hex": "#00806e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: seg-pill (glidande vald pill) — 'a11y-DERIVED shade of brand teal (whi",
+    "energycalc: seg-pill (glidande vald pill) — 'a11y-DERIVED shade of brand teal (whi"
+   ]
+  },
+  {
+   "hex": "#009682",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "ev-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "ev-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "ev-kalkylator: --action-secondary (deklarerad, ej sedd i beräknade stilar)"
+   ]
+  },
+  {
+   "hex": "#009e88",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: primärknappens gradient (100deg, stop 0/52/100 %) – passerar runt #00a"
+   ]
+  },
+  {
+   "hex": "#00ad48",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "testimonials-block: prickens fyllning (--att-fill-a = var(--brightgreen) Bricks-palett, --",
+    "testimonials-block: Splide-paginering (aktiv prick 70×10)"
+   ]
+  },
+  {
+   "hex": "#00b597",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: primärknappens gradient (100deg, stop 0/52/100 %) – passerar runt #00a"
+   ]
+  },
+  {
+   "hex": "#00b89c",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "thank-you"
+   ],
+   "auk3": [],
+   "kallor": [
+    "thank-you"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "thank-you: knappgradientens ljusa stop (135deg #00b89c→#018271) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#00b89e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: CTA hover-bg"
+   ]
+  },
+  {
+   "hex": "#00c4a7",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --teal-on-dark: storybar heat, sp-fill, sp-val, trust-mark (WCAG-teal ",
+    "energycalc: --teal-on-dark: storybar heat, sp-fill, sp-val, trust-mark (WCAG-teal "
+   ]
+  },
+  {
+   "hex": "#00fe4a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "live-ampy-se"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: "
+   ]
+  },
+  {
+   "hex": "#010033",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "footer-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "footer-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "footer-cro: inset-skugga 0 8px 8px"
+   ]
+  },
+  {
+   "hex": "#01021f",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "footer-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "footer-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "footer-cro: footer-bar bg (uppmätt rgb(1,2,31))"
+   ]
+  },
+  {
+   "hex": "#010328",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "rot-gt-cro: panelens tre organiska blobbar (ur heron)"
+   ]
+  },
+  {
+   "hex": "#017666",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --teal-link: länkar (tel, villkor), ok-status – utanför tokens (5,41:1"
+   ]
+  },
+  {
+   "hex": "#042b24",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-form: bock-färg i checked consent + done-ikon"
+   ]
+  },
+  {
+   "hex": "#04342c",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --verdict-badge-bg/fg green (inbäddat läge: pill)"
+   ]
+  },
+  {
+   "hex": "#05061f",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "mini-menu"
+   ],
+   "auk3": [],
+   "kallor": [
+    "mini-menu"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "mini-menu: per-kort aurora-fallback-gradienter (fem navy-nyanser)"
+   ]
+  },
+  {
+   "hex": "#05cbaf",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-cta"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-cta"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-cta: --teal-bright: gradientstart i rubriken (uppmätt fallback rgb(5,204,17"
+   ]
+  },
+  {
+   "hex": "#05ccae",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-cta"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-cta"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-cta: --teal-bright: gradientstart i rubriken (uppmätt fallback rgb(5,204,17"
+   ]
+  },
+  {
+   "hex": "#06070f",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: dark-tema (A/B-arm B, ej vald): scene-ink + radialer"
+   ]
+  },
+  {
+   "hex": "#06081a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [
+    0.55
+   ],
+   "roller": [
+    "main-form: platt mörk overlay över fotot (Svea) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#06082a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "mini-menu"
+   ],
+   "auk3": [],
+   "kallor": [
+    "mini-menu"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "mini-menu: per-kort aurora-fallback-gradienter (fem navy-nyanser)"
+   ]
+  },
+  {
+   "hex": "#064737",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-success bg/fg ('Låg risk')"
+   ]
+  },
+  {
+   "hex": "#070813",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: dark-tema (A/B-arm B, ej vald): scene-ink + radialer"
+   ]
+  },
+  {
+   "hex": "#090b26",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: dark-tema (A/B-arm B, ej vald): scene-ink + radialer"
+   ]
+  },
+  {
+   "hex": "#0a0c1e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-form: PREVIEW-host-bakgrund (radial) — ej produkt"
+   ]
+  },
+  {
+   "hex": "#0a7abf",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --text-info / info-ikon"
+   ]
+  },
+  {
+   "hex": "#0a9e48",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: ampy-50/600/400/500: verifierad-badge bg/text, hover på knapp, gradien"
+   ]
+  },
+  {
+   "hex": "#0b0d2a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "rot-gt-cro: panelens tre organiska blobbar (ur heron)"
+   ]
+  },
+  {
+   "hex": "#0b0e38",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "mini-menu"
+   ],
+   "auk3": [],
+   "kallor": [
+    "mini-menu"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "mini-menu: per-kort aurora-fallback-gradienter (fem navy-nyanser)"
+   ]
+  },
+  {
+   "hex": "#0b0f30",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "testimonials-block: kortets gradient (verbatim från live) — utanför tokens",
+    "testimonials-block: kortgradient −27deg"
+   ]
+  },
+  {
+   "hex": "#0c0f36",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: dark-tema (A/B-arm B, ej vald): scene-ink + radialer"
+   ]
+  },
+  {
+   "hex": "#0c1040",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --inset (sp-track) / --chip (lead-inline-body, share-pop, sp-pay)"
+   ]
+  },
+  {
+   "hex": "#0d1145",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "mini-menu"
+   ],
+   "auk3": [],
+   "kallor": [
+    "mini-menu"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "mini-menu: per-kort aurora-fallback-gradienter (fem navy-nyanser)"
+   ]
+  },
+  {
+   "hex": "#0d1350",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "mini-menu"
+   ],
+   "auk3": [],
+   "kallor": [
+    "mini-menu"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "mini-menu: per-kort aurora-fallback-gradienter (fem navy-nyanser)"
+   ]
+  },
+  {
+   "hex": "#0f7a3d",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [],
+   "auk3": [
+    "var-process-cro"
+   ],
+   "kallor": [
+    "var-process-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "var-process-cro: --jour-varianten: steg 1-ringen i jourgrön"
+   ]
+  },
+  {
+   "hex": "#11163f",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --inset (sp-track) / --chip (lead-inline-body, share-pop, sp-pay)"
+   ]
+  },
+  {
+   "hex": "#115287",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-info bg/fg ('Med lastbalansering', 'Oklart')"
+   ]
+  },
+  {
+   "hex": "#12174a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: skicka-knappens hover-bg"
+   ]
+  },
+  {
+   "hex": "#12b09a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: gradient på rubrikens sista ord 'rådgivning' (92deg); solid fallback #"
+   ]
+  },
+  {
+   "hex": "#141a47",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: navy-700/500/300/200/100/50: sekundär text, TOC-länkar (#2a3268), byli"
+   ]
+  },
+  {
+   "hex": "#153236",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "live-ampy-se"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: "
+   ]
+  },
+  {
+   "hex": "#15c45c",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: ampy-50/600/400/500: verifierad-badge bg/text, hover på knapp, gradien",
+    "article-template: .ampy-gradient / .ampy-gradient-dark (utilities)"
+   ]
+  },
+  {
+   "hex": "#16183f",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: HERO-Z formkortets yta (+160deg vit .07→.02 dager, 1px vit .14 kant)"
+   ]
+  },
+  {
+   "hex": "#16203f",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-form: PREVIEW-host-bakgrund (radial) — ej produkt"
+   ]
+  },
+  {
+   "hex": "#171717",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: inskriven text / body (Svea) – utanför tokens (≈ --apdarkest-black #1e"
+   ]
+  },
+  {
+   "hex": "#17204a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: --ap-navy-soft (glasyta, definierad i primitiverna)"
+   ]
+  },
+  {
+   "hex": "#17c6a0",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: primärknappens gradient (100deg, stop 0/52/100 %) – passerar runt #00a"
+   ]
+  },
+  {
+   "hex": "#1842c2",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: .ampy-gradient / .ampy-gradient-dark (utilities)"
+   ]
+  },
+  {
+   "hex": "#1976d2",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "hero-1"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: Google-ikonens fyra färger (inline svg)"
+   ]
+  },
+  {
+   "hex": "#19c39e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --teal-bright: eyebrow-strecket (::before)",
+    "energycalc: --teal-bright: eyebrow-strecket (::before)"
+   ]
+  },
+  {
+   "hex": "#1a1d2e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: brödtext i artikel (p, li, tabellceller) — utanför tokens (nära --apde"
+   ]
+  },
+  {
+   "hex": "#1b2050",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: avatar-gradientens slutstop (150deg #090b32→#1b2050)"
+   ]
+  },
+  {
+   "hex": "#1b8447",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --verdict-accent green (hero-läge): 6px sidostapel, badge-ikon, tab-in"
+   ]
+  },
+  {
+   "hex": "#1d234e",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "rot-gt-cro: streckade connector-linjerna mellan stegringarna (JS-injicerade, mask "
+   ]
+  },
+  {
+   "hex": "#1f9d6b",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: ok-grön (adress bekräftad, giltig fältkant @.5) – utanför tokens (≠ em"
+   ]
+  },
+  {
+   "hex": "#2a3268",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: navy-700/500/300/200/100/50: sekundär text, TOC-länkar (#2a3268), byli"
+   ]
+  },
+  {
+   "hex": "#2d516d",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "testimonials-block: kortets gradient (verbatim från live) — utanför tokens",
+    "testimonials-block: kortgradient −27deg"
+   ]
+  },
+  {
+   "hex": "#2ee378",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: ampy-50/600/400/500: verifierad-badge bg/text, hover på knapp, gradien"
+   ]
+  },
+  {
+   "hex": "#339959",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "live-ampy-se"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: --color-22 hsl(144 50% 40%): GT-rubrikens gradientslut"
+   ]
+  },
+  {
+   "hex": "#33c48c",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: gradient på rubrikens sista ord 'rådgivning' (92deg); solid fallback #"
+   ]
+  },
+  {
+   "hex": "#36b25c",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --state-success: 'lövigare' grön som skiljs från teal — green board bg"
+   ]
+  },
+  {
+   "hex": "#3d2a00",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --verdict-accent yellow / badge-bg / badge-fg"
+   ]
+  },
+  {
+   "hex": "#40506a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: --pa-ljus lead-färg (E ljus yta)"
+   ]
+  },
+  {
+   "hex": "#4a5068",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#4b85fd",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "live-ampy-se"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: --blue (Bricks-palett)"
+   ]
+  },
+  {
+   "hex": "#4caf50",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "hero-1"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: Google-ikonens fyra färger (inline svg)"
+   ]
+  },
+  {
+   "hex": "#4d4d4d",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: rubrik, ingress, etiketter, success-rubrik (Svea) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#501313",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --verdict-badge-bg/fg red (inbäddat läge)"
+   ]
+  },
+  {
+   "hex": "#51607a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --muted: gearhead, gearcopy, seg-text, hint",
+    "energycalc: --muted: gearhead, gearcopy, seg-text, hint"
+   ]
+  },
+  {
+   "hex": "#545454",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: länken 'Ange adress manuellt' – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#55d199",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: gradient på rubrikens sista ord 'rådgivning' (92deg); solid fallback #"
+   ]
+  },
+  {
+   "hex": "#57ff9a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "rot-gt-cro: GT-H2 hel-gradient mittsteg 60 % — utanför tokens (nära --apneon-mint ",
+    "rot-gt-cro: GT-H2 hel-gradient mittsteg 60 % — utanför tokens (nära --apneon-mint "
+   ]
+  },
+  {
+   "hex": "#57ff9b",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "live-ampy-se"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "live-ampy-se"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "live-ampy-se: --color-21 hsl(144 100% 67%): GT-rubrikens gradientmitt (≈ --apneon-mi"
+   ]
+  },
+  {
+   "hex": "#5c4005",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-warning bg/fg ('Förhöjd risk')"
+   ]
+  },
+  {
+   "hex": "#5dcaa5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --eyebrow: eyebrow-text",
+    "energycalc: --eyebrow: eyebrow-text"
+   ]
+  },
+  {
+   "hex": "#646b88",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --faint: VI KOMMER-etikett, placeholder, pilar, sidfot (uppmätt ≥4,97:"
+   ]
+  },
+  {
+   "hex": "#686b80",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --text-tertiary: source-line, crumb-sep, roomtile-sub, job-row-arrow, "
+   ]
+  },
+  {
+   "hex": "#6a6a6a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: samtyckesrad, placeholder, success-brödtext, adressträffens ort – utan"
+   ]
+  },
+  {
+   "hex": "#6b78a3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: navy-700/500/300/200/100/50: sekundär text, TOC-länkar (#2a3268), byli"
+   ]
+  },
+  {
+   "hex": "#70becb",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "footer-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "footer-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "footer-cro: prefooter-gradient −51deg (live)",
+    "footer-cro: prefooter-gradient −51deg (live)"
+   ]
+  },
+  {
+   "hex": "#70eaff",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "testimonials-block"
+   ],
+   "alfa_varianter": [
+    0.47
+   ],
+   "roller": [
+    "testimonials-block: kortets background-color under gradienten (osynlig, gradienten täcker)"
+   ]
+  },
+  {
+   "hex": "#74c2ce",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "mini-menu"
+   ],
+   "auk3": [],
+   "kallor": [
+    "mini-menu"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "mini-menu: --ap-blue-bright: CTA hover"
+   ]
+  },
+  {
+   "hex": "#74c88a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --verdict-badge-bg/fg green (inbäddat läge: pill)"
+   ]
+  },
+  {
+   "hex": "#79b3a8",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "visste-du-att"
+   ],
+   "auk3": [],
+   "kallor": [
+    "visste-du-att"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "visste-du-att: prototypens inline-lampa (produktion: Group-1592-1.png / Group-1592.pn"
+   ]
+  },
+  {
+   "hex": "#7c2020",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-error bg/fg (ej sedd i de tre testade cellerna)"
+   ]
+  },
+  {
+   "hex": "#7c86b0",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --slate: lbl-soft, ikoner i lbl, sp-caret, --bar-house (.38)",
+    "energycalc: --slate: lbl-soft, ikoner i lbl, sp-caret, --bar-house (.38)"
+   ]
+  },
+  {
+   "hex": "#7fe9d3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-form: länkfärg (integritetspolicy), req-markering, chip-ikon, done-länk — lj"
+   ]
+  },
+  {
+   "hex": "#7fe9d4",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: chip-ink / Z-hjälptext / feltext / fel-kant (två olika röda)"
+   ]
+  },
+  {
+   "hex": "#8a6116",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "booking-confirmation"
+   ],
+   "auk3": [],
+   "kallor": [
+    "booking-confirmation"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "booking-confirmation: --bk-warn: ogiltigt fält + blockerande status (5,5:1) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#8a8da5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --text-tertiary: neutral pill-kant, finding-chevron, accent-neutral",
+    "elcentral-kollen: --text-tertiary: neutral pill-kant, finding-chevron, accent-neutral"
+   ]
+  },
+  {
+   "hex": "#8a8fa3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "cta-website"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "cta-website"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "cta-website: galleri body-text / sub (demo)"
+   ]
+  },
+  {
+   "hex": "#8a90ac",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: --ink-faint definierad, aldrig använd"
+   ]
+  },
+  {
+   "hex": "#8a93b5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --footnote: antag, sp-note, sp-statrow-k, method-body, lead-consent",
+    "energycalc: --footnote: antag, sp-note, sp-statrow-k, method-body, lead-consent"
+   ]
+  },
+  {
+   "hex": "#8a97a6",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: ink-skala på navy (ink / soft / quiet / placeholder) — uppmätt crumbs "
+   ]
+  },
+  {
+   "hex": "#8fc4ba",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "visste-du-att"
+   ],
+   "auk3": [],
+   "kallor": [
+    "visste-du-att"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "visste-du-att: prototypens inline-lampa (produktion: Group-1592-1.png / Group-1592.pn"
+   ]
+  },
+  {
+   "hex": "#8fd4e0",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "certificates"
+   ],
+   "auk3": [],
+   "kallor": [
+    "certificates"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "certificates: våg 3 — utanför tokens"
+   ]
+  },
+  {
+   "hex": "#92ec47",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "brandbook"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "brandbook: stödfärg (samma text som ovan); avdelare s.19, gradient 2"
+   ]
+  },
+  {
+   "hex": "#999999",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: adressikon (pin) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#9de1ec",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "brandbook"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd"
+   ]
+  },
+  {
+   "hex": "#9fe1cb",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --mint: storybar varmvatten, sp-flag bg, sp-tag, sp-band .34, share-ik",
+    "energycalc: --mint: storybar varmvatten, sp-flag bg, sp-tag, sp-band .34, share-ik"
+   ]
+  },
+  {
+   "hex": "#a4adc9",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: navy-700/500/300/200/100/50: sekundär text, TOC-länkar (#2a3268), byli"
+   ]
+  },
+  {
+   "hex": "#a9d6cd",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "visste-du-att"
+   ],
+   "auk3": [],
+   "kallor": [
+    "visste-du-att"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "visste-du-att: prototypens inline-lampa (produktion: Group-1592-1.png / Group-1592.pn"
+   ]
+  },
+  {
+   "hex": "#aeb8d4",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --subtext: anchor-per, sb-legend, sp-name, share-btn, method summary, ",
+    "energycalc: --subtext: anchor-per, sb-legend, sp-name, share-btn, method summary, "
+   ]
+  },
+  {
+   "hex": "#aeb9c6",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: ink-skala på navy (ink / soft / quiet / placeholder) — uppmätt crumbs "
+   ]
+  },
+  {
+   "hex": "#b5b5b5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-form"
+   ],
+   "alfa_varianter": [
+    0.14
+   ],
+   "roller": [
+    "hero-2-form: kortskugga 0 0 38px (≈ #b5b5b5, kusin till #bebebe-idiomet)"
+   ]
+  },
+  {
+   "hex": "#ba7517",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: caveat-rutans 3px vänsterkant (grön verdict)"
+   ]
+  },
+  {
+   "hex": "#bbf5ff",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "footer-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "footer-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "footer-cro: prefooter-gradient −51deg (live)"
+   ]
+  },
+  {
+   "hex": "#c7d3eb",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "testimonials-block: inaktiv prick — utanför tokens"
+   ]
+  },
+  {
+   "hex": "#c9d4e0",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: ink-skala på navy (ink / soft / quiet / placeholder) — uppmätt crumbs "
+   ]
+  },
+  {
+   "hex": "#cfe9d9",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "testimonials-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "testimonials-block: aktiv pricks bakgrund — utanför tokens"
+   ]
+  },
+  {
+   "hex": "#cfe9e3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "visste-du-att"
+   ],
+   "auk3": [],
+   "kallor": [
+    "visste-du-att"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "visste-du-att: prototypens inline-lampa (produktion: Group-1592-1.png / Group-1592.pn"
+   ]
+  },
+  {
+   "hex": "#d2d6e8",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: navy-700/500/300/200/100/50: sekundär text, TOC-länkar (#2a3268), byli"
+   ]
+  },
+  {
+   "hex": "#d5d9e4",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [],
+   "auk3": [
+    "offer-accepted"
+   ],
+   "kallor": [
+    "offer-accepted"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "offer-accepted: kortkant vid utskrift"
+   ]
+  },
+  {
+   "hex": "#d64040",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --state-error: red board bg .06 / wash .07, lead-error-text"
+   ]
+  },
+  {
+   "hex": "#d69628",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "ev-kalkylator"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "ev-kalkylator"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "ev-kalkylator: publika stapelns mörkare ände"
+   ]
+  },
+  {
+   "hex": "#d6f0e5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-success bg/fg ('Låg risk')"
+   ]
+  },
+  {
+   "hex": "#d7deeb",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --line / --line2 (seg-kant, stepper-kant, hp-card-kant) / --bd-light ("
+   ]
+  },
+  {
+   "hex": "#d7e0ef",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: Bricks-tabellens linjer + huvudbakgrund"
+   ]
+  },
+  {
+   "hex": "#d9d9d9",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "brandbook"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd"
+   ]
+  },
+  {
+   "hex": "#dbe3ec",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: ink-skala på navy (ink / soft / quiet / placeholder) — uppmätt crumbs "
+   ]
+  },
+  {
+   "hex": "#dbe4f2",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --line / --line2 (seg-kant, stepper-kant, hp-card-kant) / --bd-light ("
+   ]
+  },
+  {
+   "hex": "#dbe4f3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: ::selection"
+   ]
+  },
+  {
+   "hex": "#dc3545",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --state-success/warning/error (deklarerade; success-token ej sedd i co"
+   ]
+  },
+  {
+   "hex": "#dde5f4",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: cloud-200/300: kortramar, bildplatshållare (15×), takeaways-bg"
+   ]
+  },
+  {
+   "hex": "#ddf9fd",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "brandbook"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd"
+   ]
+  },
+  {
+   "hex": "#e00000",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: felfärg: ogiltig fältkant, feedbacktext, felbanner (Svea) – utanför to"
+   ]
+  },
+  {
+   "hex": "#e0ecf8",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-info bg/fg ('Med lastbalansering', 'Oklart')"
+   ]
+  },
+  {
+   "hex": "#e1e8f4",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --line / --line2 (seg-kant, stepper-kant, hp-card-kant) / --bd-light ("
+   ]
+  },
+  {
+   "hex": "#e3e9f5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --line / --line2 (seg-kant, stepper-kant, hp-card-kant) / --bd-light ("
+   ]
+  },
+  {
+   "hex": "#e5484d",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: chip-ink / Z-hjälptext / feltext / fel-kant (två olika röda)"
+   ]
+  },
+  {
+   "hex": "#e6e6ea",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: HERO-G sekundär-pill kant?"
+   ]
+  },
+  {
+   "hex": "#e6ecf4",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#e6eff9",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "rot-gt-cro: blockets tre ljusa vågor (hero_2:s former, ljusöversatta)"
+   ]
+  },
+  {
+   "hex": "#e7edf7",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: Bricks-tabellens linjer + huvudbakgrund"
+   ]
+  },
+  {
+   "hex": "#e9eff8",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --pagebg: sidbakgrund",
+    "energycalc: --pagebg: sidbakgrund"
+   ]
+  },
+  {
+   "hex": "#eaeef5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "fore-efter-cro"
+   ],
+   "auk3": [],
+   "kallor": [
+    "fore-efter-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "fore-efter-cro: ramens bakgrund under bilderna — utanför tokens"
+   ]
+  },
+  {
+   "hex": "#eaf0fb",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: cloud-200/300: kortramar, bildplatshållare (15×), takeaways-bg"
+   ]
+  },
+  {
+   "hex": "#ebfff3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: ampy-50/600/400/500: verifierad-badge bg/text, hover på knapp, gradien"
+   ]
+  },
+  {
+   "hex": "#eef0f8",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "article-template"
+   ],
+   "auk3": [],
+   "kallor": [
+    "article-template"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "article-template: navy-700/500/300/200/100/50: sekundär text, TOC-länkar (#2a3268), byli"
+   ]
+  },
+  {
+   "hex": "#eef1f6",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-"
+   ]
+  },
+  {
+   "hex": "#eef2f9",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --line / --line2 (seg-kant, stepper-kant, hp-card-kant) / --bd-light ("
+   ]
+  },
+  {
+   "hex": "#eef4fc",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "rot-gt-cro"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "rot-gt-cro"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "rot-gt-cro: blockets tre ljusa vågor (hero_2:s former, ljusöversatta)"
+   ]
+  },
+  {
+   "hex": "#f09595",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --verdict-badge-bg/fg red (inbäddat läge)"
+   ]
+  },
+  {
+   "hex": "#f0b429",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: --amber: trust-stjärnor, sp-val--amber, sp-statrow-v--weak",
+    "energycalc: --amber: trust-stjärnor, sp-val--amber, sp-statrow-v--weak"
+   ]
+  },
+  {
+   "hex": "#f0b9b3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "eljour-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: Akut-nivån: tagg-bg / tagg-text + säkerhetsrutans text / prick / säker"
+   ]
+  },
+  {
+   "hex": "#f0f9f5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --tint-success/warning/error/info/neutral: dualstatus-zonens bakgrund "
+   ]
+  },
+  {
+   "hex": "#f0faf8",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --action-tint: vald option-bg, option active"
+   ]
+  },
+  {
+   "hex": "#f2f7fb",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --tint-success/warning/error/info/neutral: dualstatus-zonens bakgrund "
+   ]
+  },
+  {
+   "hex": "#f2fbf8",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: hp-card vald bg",
+    "energycalc: hp-card vald bg"
+   ]
+  },
+  {
+   "hex": "#f4f4f5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: adress-combobox bakgrund + border (Svea) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#f4f5f7",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: sidbakgrund (--ap-offwhite) – utanför tokens, ≠ --apsky-mist #f5f9ff"
+   ]
+  },
+  {
+   "hex": "#f5c97a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elkollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elkollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elkollen: --verdict-accent yellow / badge-bg / badge-fg"
+   ]
+  },
+  {
+   "hex": "#f5f5f5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "brandbook"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "brandbook: hela produktionens stödpalett saknar brandboksstöd"
+   ]
+  },
+  {
+   "hex": "#f7f7f7",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: fältbakgrund (Svea) – utanför tokens"
+   ]
+  },
+  {
+   "hex": "#f7f8fc",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --bg-subtle: info-ruta, option hover",
+    "elcentral-kollen: --bg-subtle: info-ruta, option hover"
+   ]
+  },
+  {
+   "hex": "#f7fafd",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: blockläge: sektionsbandet (tonat mot /elservice/elcentral/)"
+   ]
+  },
+  {
+   "hex": "#f8f9fc",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --tint-success/warning/error/info/neutral: dualstatus-zonens bakgrund "
+   ]
+  },
+  {
+   "hex": "#fae0de",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-error bg/fg (ej sedd i de tre testade cellerna)"
+   ]
+  },
+  {
+   "hex": "#fae9c5",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --pill-warning bg/fg ('Förhöjd risk')"
+   ]
+  },
+  {
+   "hex": "#fbfdff",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "eljour-block"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "eljour-block"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "eljour-block: rad hover / öppen rad — utanför tokens"
+   ]
+  },
+  {
+   "hex": "#fcedee",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: akut-rutan bg + kant"
+   ]
+  },
+  {
+   "hex": "#fcf3f3",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --tint-success/warning/error/info/neutral: dualstatus-zonens bakgrund "
+   ]
+  },
+  {
+   "hex": "#fcf7ea",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "elcentral-kollen"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "elcentral-kollen"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "elcentral-kollen: --tint-success/warning/error/info/neutral: dualstatus-zonens bakgrund "
+   ]
+  },
+  {
+   "hex": "#ff3d00",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "hero-1"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: Google-ikonens fyra färger (inline svg)"
+   ]
+  },
+  {
+   "hex": "#ff8a8a",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "energycalc"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "energycalc"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "energycalc: lead-req (*), lead-field invalid, lead-err",
+    "energycalc: lead-req (*), lead-field invalid, lead-err"
+   ]
+  },
+  {
+   "hex": "#ffb4b6",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "hero-2-alternatives"
+   ],
+   "auk3": [],
+   "kallor": [
+    "hero-2-alternatives"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-2-alternatives: chip-ink / Z-hjälptext / feltext / fel-kant (två olika röda)"
+   ]
+  },
+  {
+   "hex": "#ffc107",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [
+    "hero-1"
+   ],
+   "auk2": [],
+   "auk3": [],
+   "kallor": [
+    "hero-1"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "hero-1: Google-ikonens fyra färger (inline svg)"
+   ]
+  },
+  {
+   "hex": "#ffc24b",
+   "token": null,
+   "antal_kallor": 1,
+   "auk1": [],
+   "auk2": [
+    "main-form"
+   ],
+   "auk3": [],
+   "kallor": [
+    "main-form"
+   ],
+   "alfa_varianter": [],
+   "roller": [
+    "main-form: Google-stjärnor – utanför tokens (thank-you använder #f6b53d: två olik"
+   ]
+  }
+ ]
+}

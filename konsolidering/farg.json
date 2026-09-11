@@ -1,0 +1,1030 @@
+{
+ "metod": "farg-frekvens.json (01) + kontrast (04) + kanonmappning; kontrast = WCAG mot vit/midnight/sky-mist",
+ "primitiva": [
+  {
+   "namn": "--apmidnight-blue",
+   "hex": "#090b32",
+   "lager": "1",
+   "roll": "mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa)",
+   "antal_kallor": 29,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "footer-cro",
+    "hero-1",
+    "led-kalkylator",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "kontrast_vit": 19.0,
+   "kontrast_midnight": 1.0,
+   "kontrast_skymist": 17.98,
+   "semantik": "--ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus, --ampy-line (alfa)"
+  },
+  {
+   "namn": "--apteal-core",
+   "hex": "#00a991",
+   "lager": "1",
+   "roll": "accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA",
+   "antal_kallor": 25,
+   "auk1": [
+    "brandbook",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "hero-1",
+    "led-kalkylator",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "kontrast_vit": 2.96,
+   "kontrast_midnight": 6.41,
+   "kontrast_skymist": 2.81,
+   "semantik": "--ampy-action, --ampy-bg-tint-action (alfa)"
+  },
+  {
+   "namn": "--apemerald-flow",
+   "hex": "#39c281",
+   "lager": "1",
+   "roll": "success, \"efter\"-stapel, slider-fyllning",
+   "antal_kallor": 9,
+   "auk1": [
+    "brandbook",
+    "elcentral-kollen",
+    "ev-kalkylator",
+    "led-kalkylator",
+    "website-blocks"
+   ],
+   "kontrast_vit": 2.28,
+   "kontrast_midnight": 8.33,
+   "kontrast_skymist": 2.16,
+   "semantik": "--ampy-success"
+  },
+  {
+   "namn": "--apseafoam-mint",
+   "hex": "#5cc5b6",
+   "lager": "1",
+   "roll": "aurora-SVG-stopp (thank-you/offer)",
+   "antal_kallor": 3,
+   "auk1": [
+    "brandbook"
+   ],
+   "kontrast_vit": 2.08,
+   "kontrast_midnight": 9.15,
+   "kontrast_skymist": 1.96,
+   "semantik": "(dekor)"
+  },
+  {
+   "namn": "--apneon-mint",
+   "hex": "#55ff9a",
+   "lager": "1",
+   "roll": "handlingsgradientens start, pulsprick, EFTER-chip, fokus på mörkt, stjärnor (testimonials-kort)",
+   "antal_kallor": 22,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "hero-1",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "kontrast_vit": 1.3,
+   "kontrast_midnight": 14.61,
+   "kontrast_skymist": 1.23,
+   "semantik": "--ampy-action-gradient, --ampy-focus-on-dark"
+  },
+  {
+   "namn": "--apsublime-green",
+   "hex": "#a0fbc9",
+   "lager": "1",
+   "roll": "ljus aurora (radial .28)",
+   "antal_kallor": 4,
+   "auk1": [
+    "brandbook"
+   ],
+   "kontrast_vit": 1.23,
+   "kontrast_midnight": 15.5,
+   "kontrast_skymist": 1.16,
+   "semantik": "--ampy-aurora-light"
+  },
+  {
+   "namn": "--apcrystal-blue",
+   "hex": "#b6f2ff",
+   "lager": "1",
+   "roll": "ring-gradientens start, ljus aurora (.48), footer-gradient, certificates-våg",
+   "antal_kallor": 15,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "elkollen",
+    "footer-cro"
+   ],
+   "kontrast_vit": 1.23,
+   "kontrast_midnight": 15.5,
+   "kontrast_skymist": 1.16,
+   "semantik": "--ampy-action-gradient-ring, --ampy-aurora-light"
+  },
+  {
+   "namn": "--apaqua-frost",
+   "hex": "#ddf9fd",
+   "lager": "1",
+   "roll": "definierad, 0 användningar (live --color-29 #e5faff är en annan)",
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "kontrast_vit": 1.1,
+   "kontrast_midnight": 17.23,
+   "kontrast_skymist": 1.04,
+   "semantik": "(oanvänd)"
+  },
+  {
+   "namn": "--appure-white",
+   "hex": "#ffffff",
+   "lager": "1",
+   "roll": "kort, text på mörkt, alfa-serie på mörkt",
+   "antal_kallor": 26,
+   "auk1": [
+    "brandbook",
+    "elcentral-kollen",
+    "eljour-block",
+    "elkollen",
+    "energycalc",
+    "ev-kalkylator",
+    "footer-cro",
+    "hero-1",
+    "led-kalkylator",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "kontrast_vit": 1.0,
+   "kontrast_midnight": 19.0,
+   "kontrast_skymist": 1.06,
+   "semantik": "--ampy-bg-surface, --ampy-on-dark*"
+  },
+  {
+   "namn": "--apsky-mist",
+   "hex": "#f5f9ff",
+   "lager": "1",
+   "roll": "sidbakgrund, subtil yta, ljus aurora-bas",
+   "antal_kallor": 21,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "eljour-block",
+    "energycalc",
+    "hero-1",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block",
+    "website-blocks"
+   ],
+   "kontrast_vit": 1.06,
+   "kontrast_midnight": 17.98,
+   "kontrast_skymist": 1.0,
+   "semantik": "--ampy-bg-page, --ampy-bg-subtle"
+  },
+  {
+   "namn": "--apmilk-white",
+   "hex": "#f5f5f5",
+   "lager": "1",
+   "roll": "definierad + alfa-serie; 0 användningar i blocken",
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "kontrast_vit": 1.09,
+   "kontrast_midnight": 17.42,
+   "kontrast_skymist": 1.03,
+   "semantik": "(oanvänd)"
+  },
+  {
+   "namn": "--apmilk-white-5",
+   "hex": "#f5f5f5 @ .05",
+   "lager": "1",
+   "roll": "alfa 5 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-10",
+   "hex": "#f5f5f5 @ .10",
+   "lager": "1",
+   "roll": "alfa 10 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-20",
+   "hex": "#f5f5f5 @ .20",
+   "lager": "1",
+   "roll": "alfa 20 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-30",
+   "hex": "#f5f5f5 @ .30",
+   "lager": "1",
+   "roll": "alfa 30 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-40",
+   "hex": "#f5f5f5 @ .40",
+   "lager": "1",
+   "roll": "alfa 40 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-50",
+   "hex": "#f5f5f5 @ .50",
+   "lager": "1",
+   "roll": "alfa 50 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-60",
+   "hex": "#f5f5f5 @ .60",
+   "lager": "1",
+   "roll": "alfa 60 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-70",
+   "hex": "#f5f5f5 @ .70",
+   "lager": "1",
+   "roll": "alfa 70 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-80",
+   "hex": "#f5f5f5 @ .80",
+   "lager": "1",
+   "roll": "alfa 80 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apmilk-white-90",
+   "hex": "#f5f5f5 @ .90",
+   "lager": "1",
+   "roll": "alfa 90 % av --apmilk-white",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apgray-white",
+   "hex": "#d9d9d9",
+   "lager": "1",
+   "roll": "definierad; 0 användningar",
+   "antal_kallor": 1,
+   "auk1": [
+    "brandbook"
+   ],
+   "kontrast_vit": 1.41,
+   "kontrast_midnight": 13.46,
+   "kontrast_skymist": 1.34,
+   "semantik": "(oanvänd)"
+  },
+  {
+   "namn": "--apcharcoal-gray",
+   "hex": "#333333",
+   "lager": "1",
+   "roll": "live --color-20: brödtext mobil ROT/GT, rot-gt-familjens p, booking body-ink, hero-2 input-text",
+   "antal_kallor": 6,
+   "auk1": [
+    "brandbook",
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "kontrast_vit": 12.63,
+   "kontrast_midnight": 1.5,
+   "kontrast_skymist": 11.96,
+   "semantik": "drift → --ampy-ink-body"
+  },
+  {
+   "namn": "--apdarkest-black",
+   "hex": "#1e1e1e",
+   "lager": "1",
+   "roll": "energycalc ink, rot-gt rubrik-ink, footer h3, mini-menu pill-text, hero-2 Z submit-text",
+   "antal_kallor": 9,
+   "auk1": [
+    "brandbook",
+    "energycalc",
+    "footer-cro",
+    "hero-1",
+    "rot-gt-cro"
+   ],
+   "kontrast_vit": 16.67,
+   "kontrast_midnight": 1.14,
+   "kontrast_skymist": 15.78,
+   "semantik": "drift → --ampy-ink"
+  },
+  {
+   "namn": "--apdarkest-black-5",
+   "hex": "#1e1e1e @ .05",
+   "lager": "1",
+   "roll": "alfa 5 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-10",
+   "hex": "#1e1e1e @ .10",
+   "lager": "1",
+   "roll": "alfa 10 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-20",
+   "hex": "#1e1e1e @ .20",
+   "lager": "1",
+   "roll": "alfa 20 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-30",
+   "hex": "#1e1e1e @ .30",
+   "lager": "1",
+   "roll": "alfa 30 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-40",
+   "hex": "#1e1e1e @ .40",
+   "lager": "1",
+   "roll": "alfa 40 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-50",
+   "hex": "#1e1e1e @ .50",
+   "lager": "1",
+   "roll": "alfa 50 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-60",
+   "hex": "#1e1e1e @ .60",
+   "lager": "1",
+   "roll": "alfa 60 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-70",
+   "hex": "#1e1e1e @ .70",
+   "lager": "1",
+   "roll": "alfa 70 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-80",
+   "hex": "#1e1e1e @ .80",
+   "lager": "1",
+   "roll": "alfa 80 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdarkest-black-90",
+   "hex": "#1e1e1e @ .90",
+   "lager": "1",
+   "roll": "alfa 90 % av --apdarkest-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apdeepest-blue",
+   "hex": "#0e0f15",
+   "lager": "1",
+   "roll": "definierad; 0 användningar",
+   "antal_kallor": 0,
+   "auk1": [],
+   "kontrast_vit": 19.13,
+   "kontrast_midnight": 1.01,
+   "kontrast_skymist": 18.11,
+   "semantik": "(oanvänd)"
+  },
+  {
+   "namn": "--appure-black",
+   "hex": "#000000",
+   "lager": "1",
+   "roll": "main-form asterisk; logo-PNG:er (#000)",
+   "antal_kallor": 2,
+   "auk1": [
+    "website-blocks"
+   ],
+   "kontrast_vit": 21.0,
+   "kontrast_midnight": 1.11,
+   "kontrast_skymist": 19.88,
+   "semantik": "(punkt)"
+  },
+  {
+   "namn": "--appure-black-5",
+   "hex": "#000000 @ .05",
+   "lager": "1",
+   "roll": "alfa 5 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-10",
+   "hex": "#000000 @ .10",
+   "lager": "1",
+   "roll": "alfa 10 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-20",
+   "hex": "#000000 @ .20",
+   "lager": "1",
+   "roll": "alfa 20 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-30",
+   "hex": "#000000 @ .30",
+   "lager": "1",
+   "roll": "alfa 30 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-40",
+   "hex": "#000000 @ .40",
+   "lager": "1",
+   "roll": "alfa 40 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-50",
+   "hex": "#000000 @ .50",
+   "lager": "1",
+   "roll": "alfa 50 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-60",
+   "hex": "#000000 @ .60",
+   "lager": "1",
+   "roll": "alfa 60 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-70",
+   "hex": "#000000 @ .70",
+   "lager": "1",
+   "roll": "alfa 70 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-80",
+   "hex": "#000000 @ .80",
+   "lager": "1",
+   "roll": "alfa 80 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--appure-black-90",
+   "hex": "#000000 @ .90",
+   "lager": "1",
+   "roll": "alfa 90 % av --appure-black",
+   "antal_kallor": null,
+   "auk1": null,
+   "kontrast_vit": null,
+   "kontrast_midnight": null,
+   "kontrast_skymist": null,
+   "semantik": "(alfa)"
+  },
+  {
+   "namn": "--apsecondary-teal",
+   "hex": "#5eb1bf",
+   "lager": "1c",
+   "roll": "handlingsgradientens slut, ring-gradientens slut, live fokus/highlight (--color-7), mini-menu pill, certificates gradient",
+   "antal_kallor": 17,
+   "auk1": [
+    "brandbook",
+    "cta-website",
+    "elcentral-kollen",
+    "elkollen",
+    "hero-1",
+    "live-ampy-se",
+    "rot-gt-cro"
+   ],
+   "kontrast_vit": 2.47,
+   "kontrast_midnight": 7.7,
+   "kontrast_skymist": 2.33,
+   "semantik": "--ampy-action-gradient(-ring)"
+  },
+  {
+   "namn": "--apteal-deep",
+   "hex": "#007a69",
+   "lager": "1c",
+   "roll": "solid knapp med vit text, textlänk, sista H1-rad (diagnostik)",
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "kontrast_vit": 5.27,
+   "kontrast_midnight": 3.61,
+   "kontrast_skymist": 4.98,
+   "semantik": "--ampy-action-strong"
+  },
+  {
+   "namn": "--apteal-tint",
+   "hex": "#e3f6f1",
+   "lager": "1c",
+   "roll": "pill/chip-yta (eljour-familjen)",
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "kontrast_vit": 1.12,
+   "kontrast_midnight": 16.93,
+   "kontrast_skymist": 1.06,
+   "semantik": "(pill)"
+  },
+  {
+   "namn": "--apindigo",
+   "hex": "#282a53",
+   "lager": "1c",
+   "roll": "knapptext på gradient",
+   "antal_kallor": 6,
+   "auk1": [
+    "cta-website",
+    "hero-1",
+    "rot-gt-cro"
+   ],
+   "kontrast_vit": 13.58,
+   "kontrast_midnight": 1.4,
+   "kontrast_skymist": 12.85,
+   "semantik": "--ampy-ink-on-action, --ampy-action-gradient-on"
+  },
+  {
+   "namn": "--apnavy-ink",
+   "hex": "#3b3f59",
+   "lager": "1c",
+   "roll": "brödtext i eljour-familjen",
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "kontrast_vit": 10.29,
+   "kontrast_midnight": 1.85,
+   "kontrast_skymist": 9.74,
+   "semantik": "drift → --ampy-ink-body (B3)"
+  },
+  {
+   "namn": "--apnavy-muted",
+   "hex": "#565e82",
+   "lager": "1c",
+   "roll": "dämpad text",
+   "antal_kallor": 8,
+   "auk1": [
+    "ev-kalkylator",
+    "hero-1",
+    "led-kalkylator",
+    "rot-gt-cro",
+    "website-blocks"
+   ],
+   "kontrast_vit": 6.33,
+   "kontrast_midnight": 3.0,
+   "kontrast_skymist": 5.99,
+   "semantik": "--ampy-ink-muted"
+  },
+  {
+   "namn": "--apnavy-faint",
+   "hex": "#6a7190",
+   "lager": "1c",
+   "roll": "svag text",
+   "antal_kallor": 2,
+   "auk1": [
+    "hero-1",
+    "website-blocks"
+   ],
+   "kontrast_vit": 4.8,
+   "kontrast_midnight": 3.96,
+   "kontrast_skymist": 4.54,
+   "semantik": "--ampy-ink-faint"
+  },
+  {
+   "namn": "--apamber",
+   "hex": "#f0af38",
+   "lager": "1c",
+   "roll": "\"före\"-stapel, varning i diagram",
+   "antal_kallor": 3,
+   "auk1": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ],
+   "kontrast_vit": 1.93,
+   "kontrast_midnight": 9.85,
+   "kontrast_skymist": 1.82,
+   "semantik": "--ampy-warn"
+  },
+  {
+   "namn": "--apsignal-red",
+   "hex": "#b3261e",
+   "lager": "1c",
+   "roll": "fel, akut",
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "kontrast_vit": 6.54,
+   "kontrast_midnight": 2.91,
+   "kontrast_skymist": 6.19,
+   "semantik": "--ampy-error"
+  },
+  {
+   "namn": "--apsignal-red-tint",
+   "hex": "#fdeceb",
+   "lager": "1c",
+   "roll": "fel-/akut-bakgrund",
+   "antal_kallor": 3,
+   "auk1": [
+    "eljour-block"
+   ],
+   "kontrast_vit": 1.14,
+   "kontrast_midnight": 16.62,
+   "kontrast_skymist": 1.08,
+   "semantik": "--ampy-error-tint"
+  },
+  {
+   "namn": "--apamber-tint",
+   "hex": "#fff4e0",
+   "lager": "1c",
+   "roll": "varnings-bakgrund",
+   "antal_kallor": 2,
+   "auk1": [
+    "eljour-block"
+   ],
+   "kontrast_vit": 1.09,
+   "kontrast_midnight": 17.43,
+   "kontrast_skymist": 1.03,
+   "semantik": "--ampy-warn-tint"
+  },
+  {
+   "namn": "--apverdict-green",
+   "hex": "#0f6e56",
+   "lager": "1c",
+   "roll": "besked-accent + success-text",
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "kontrast_vit": 6.2,
+   "kontrast_midnight": 3.06,
+   "kontrast_skymist": 5.87,
+   "semantik": "--ampy-success-ink"
+  },
+  {
+   "namn": "--apverdict-amber",
+   "hex": "#876507",
+   "lager": "1c",
+   "roll": "besked-accent + varningstext",
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "kontrast_vit": 5.39,
+   "kontrast_midnight": 3.52,
+   "kontrast_skymist": 5.1,
+   "semantik": "--ampy-warn-ink"
+  },
+  {
+   "namn": "--apverdict-red",
+   "hex": "#7a1623",
+   "lager": "1c",
+   "roll": "besked-accent + akut-text",
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "kontrast_vit": 10.68,
+   "kontrast_midnight": 1.78,
+   "kontrast_skymist": 10.11,
+   "semantik": "--ampy-error-ink"
+  },
+  {
+   "namn": "--apverdict-blue",
+   "hex": "#0d568c",
+   "lager": "1c",
+   "roll": "besked-accent info",
+   "antal_kallor": 2,
+   "auk1": [
+    "elcentral-kollen",
+    "elkollen"
+   ],
+   "kontrast_vit": 7.7,
+   "kontrast_midnight": 2.47,
+   "kontrast_skymist": 7.29,
+   "semantik": "--ampy-info-ink"
+  },
+  {
+   "namn": "--apgoogle-gold",
+   "hex": "#fbbc04",
+   "lager": "1c",
+   "roll": "Google-stjärnor",
+   "antal_kallor": 2,
+   "auk1": [
+    "testimonials-block"
+   ],
+   "kontrast_vit": 1.71,
+   "kontrast_midnight": 11.12,
+   "kontrast_skymist": 1.62,
+   "semantik": "(stjärnor, B12)"
+  }
+ ],
+ "drift": [
+  {
+   "grupp": "Navy i sju värden",
+   "varden": [
+    "#090b32 (--apmidnight-blue, 29 källor)",
+    "#0f123c (hero-1/website-blocks/LED/EV/mini-menu/rot-gt, 7)",
+    "#0b1030 (thank-you/booking/offer, 3)",
+    "#090c34 (main-cta, Bricks --color-3)",
+    "#1b1d4b (rot-gt-panel/hero-2 Z, Bricks --color-18)",
+    "#16183f, #17204a (hero-2 Z-kort/navy-soft)",
+    "#00011e/#01021f/#010033 (footer), #0b0f30→#2d516d (testimonials), #0d1350…#05061f (mini-menu aurora)"
+   ],
+   "kanon": "--apmidnight-blue #090b32 för ALLA mörka ytor och allt bläck",
+   "byts_ut": "#0f123c → midnight (near-miss, 6 enheter); #0b1030 → midnight; #090c34 → midnight; rot-gt/hero-2 Z-panel #1b1d4b → midnight (eller --ampy-bg-dark-glow); testimonials-gradient → midnight + glöd (B9); footer-gradient → midnight (B-lista: footer riktning)"
+  },
+  {
+   "grupp": "Fem tealer (plus fem till)",
+   "varden": [
+    "#00a991 teal-core (25)",
+    "#5eb1bf brandbokens sekundärteal (17)",
+    "#007a69 elcentral/elkollen \"strong\" (2 auk 1)",
+    "#007d6b EV",
+    "#00806e/#00b89e/#00c4a7/#19c39e energycalc",
+    "#0a8f7c/#0a6e58 eljour-familjen (4/3)",
+    "#016a5d/#017666/#018271 CRM-flödet",
+    "#1cc4af LED/main-form (oanvänd)",
+    "#008d79 header hover",
+    "#00a88f Bricks --color-15 (footer 5.0)"
+   ],
+   "kanon": "TVÅ tealer: --apteal-core (accent, aldrig text) + --apteal-deep #007a69 (text, länk, solid knapp med vit text). --apsecondary-teal #5eb1bf bara som gradientslut/ring (aldrig text, 2,47:1).",
+   "byts_ut": "alla mörka tealer → --apteal-deep; #00c4a7 (teal på mörkt) → --apteal-core (6,41:1 på midnight räcker); #1cc4af → bort; #00a88f → --apteal-core; hover → --ampy-action-hover #008d79"
+  },
+  {
+   "grupp": "#0b1030-bläcket och de andra bläcken",
+   "varden": [
+    "#0b1030 + rgba(11,16,48,.62/.44) (thank-you, booking, offer)",
+    "#0f123c (7)",
+    "#1f1f1f live ROT h2 (--color-8)",
+    "#1e1e1e (energycalc, rot-gt rubrik, footer h3)",
+    "#363636 live body (Bricks-default)",
+    "#333 (rot-gt p, booking, hero-2 input)",
+    "#3b3f59 eljour-familjen",
+    "#171717/#4d4d4d/#6a6a6a main-form (Svea)",
+    "#1a1d2e article"
+   ],
+   "kanon": "--ampy-ink = midnight; --ampy-ink-body = midnight (B3); --ampy-ink-muted = #565e82; --ampy-ink-faint = #6a7190",
+   "byts_ut": "#0b1030/#0f123c/#1f1f1f/#1e1e1e/#171717 → --ampy-ink; #363636/#333/#3b3f59/#4d4d4d/#1a1d2e → --ampy-ink-body (B3); rgba(11,16,48,.62)/#5f6480/#5a5d7a/#51607a/#6a6a6a → --ampy-ink-muted; #646b88/#686b80/#8a8da5 → --ampy-ink-faint"
+  },
+  {
+   "grupp": "Dämpad text (muted) i sex värden",
+   "varden": [
+    "#565e82 (8: header, LED, EV, mini-menu, rot-gt, booking)",
+    "#5f6480 (3: eljour, foto, sticky)",
+    "#5a5d7a (2: elkollen, elcentral)",
+    "#51607a energycalc",
+    "rgba(11,16,48,.62) thank-you",
+    "rgba(9,11,50,.72) var-process"
+   ],
+   "kanon": "--apnavy-muted #565e82 (6,33:1)",
+   "byts_ut": "de andra fem → --ampy-ink-muted"
+  },
+  {
+   "grupp": "Hairlines i nio värden",
+   "varden": [
+    "#e6ecf6 (eljour-familjen)",
+    "#dbe4f0 (header)",
+    "#e3e5ed/#ebedf3 (elkollen/elcentral)",
+    "rgba(15,18,60,.12) (LED-kitet)",
+    "rgba(9,11,50,.14) (var-process)",
+    "rgba(11,16,48,.09/.16/.48) (booking)",
+    "#eaeef5 (fore-efter)",
+    "#e1e8f4/#d7deeb/#dbe4f2/#eef2f9/#e3e9f5 (energycalc)",
+    "#d5d5dc (drawer)"
+   ],
+   "kanon": "--ampy-line rgba(9,11,50,.14) (dekorativ) + --ampy-line-strong rgba(9,11,50,.48) (kontrollkant ≥3:1)",
+   "byts_ut": "alla solida hairlines → --ampy-line; fältkanter #e3e5ed (1,26:1) → --ampy-line-strong"
+  },
+  {
+   "grupp": "Fel/varning: sex röda, tre amber, tre gröna",
+   "varden": [
+    "röd: #b3261e (3), rgb(214,76,76) LED/EV (2, 4,2:1), rgb(214,64,64) elkollen, #e00000 main-form, #e5484d/#e24b4a hero-2, #ff8a8a energycalc, teal (hero-2-form)",
+    "amber: #f0af38 LED/EV, #f0b429 energycalc, #f5af19 elkollen/elcentral, #e3a008 eljour-prick, #8a6116 booking",
+    "grön: #39c281 emerald (9), #1f9d6b main-form, rgb(54,178,92)/rgb(27,132,71) elkollen, #1bd365/#00ad48 testimonials, #0f6e56 elcentral/elkollen text"
+   ],
+   "kanon": "--ampy-error #b3261e (6,54:1), --ampy-error-ink #7a1623; --ampy-warn #f0af38 (diagram/mörkt), --ampy-warn-ink #876507; --ampy-success #39c281 (fyllning), --ampy-success-ink #0f6e56",
+   "byts_ut": "LED/EV rgb(214,76,76) → #b3261e (4,2:1 underkänd som text); hero-2-form fel-i-teal → #b3261e; testimonials #1bd365/#00ad48 → --apemerald-flow; energycalc #f0b429 → --apamber"
+  },
+  {
+   "grupp": "Kortskuggor i fem familjer",
+   "varden": [
+    "rgba(190,190,190,.19/.14/.4) \"husets\" (live, testimonials, main-cta, var-process)",
+    "rgba(15,18,60,.06/.08/.14) LED-kitet",
+    "rgba(9,11,50,…) eljour-familjen, fore-efter, certificates, thank-you, visste, mini-menu",
+    "rgba(11,13,42,.04/.07/.10) elkollen/elcentral",
+    "rgba(11,16,48,…) booking; rgba(181,181,181,.14) hero-2-form; rgba(241,241,241,.25) picasso-glöd"
+   ],
+   "kanon": "EN skuggfärg: midnight-alfa. --ampy-shadow-card 0 10px 30px rgba(9,11,50,.07); -raised 0 16px 40px .14; -subtle 0 1px 2px .06",
+   "byts_ut": "alla gråa (190/181/241) och near-miss-navyer (15,18,60 / 11,13,42 / 11,16,48) → rgba(9,11,50,x). Beslut B10 om husets grå skugga."
+  },
+  {
+   "grupp": "Gradienter: 14 → 2",
+   "varden": [
+    "120° #55ff9a→#5eb1bf (handling, 10+)",
+    "120° #b6f2ff→#5eb1bf (ring)",
+    "ljus aurora (thank-you/booking/offer)",
+    "282.84° #55ff9a→#00ffda (hero-2-form)",
+    "135° #00b89c→#018271 (thank-you knapp)",
+    "100° #009e88→#17c6a0 (main-form knapp)",
+    "146° #055a4b→#0a8169 (eljour nödknapp)",
+    "145° #c7f5ff→#5eb1bf (live ROT hover)",
+    "90° #090b32→#5eb1bf (certificates)",
+    "−51° #70becb→#bbf5ff→#b6f2ff (prefooter)",
+    "−17° #00011e→#090b32 (footer)",
+    "−27° #0b0f30→#2d516d (testimonials-kort)",
+    "GT-rubrik #1f1f1f→#57ff9a→#33995c; main-cta text hsl(171 95% 41%)→#5eb1bf; main-form rubrik #12b09a→#55d199",
+    "92°/135° article (#326afd→#55ff9a)"
+   ],
+   "kanon": "--ampy-action-gradient (120° neon-mint → sekundärteal, med ring-varianten) + --ampy-aurora-light. Allt annat = drift.",
+   "byts_ut": "knapp-gradienterna i hero-2-form/thank-you/main-form → --ampy-action-gradient; textgradienter → bort (ägaren ogillar gradienttext); nödknappen → --apteal-deep solid (B6); certificates/footer/testimonials-ytor → midnight (+ glöd)"
+  },
+  {
+   "grupp": "Cobalt och lime (brandbok) vs teal (produktion)",
+   "varden": [
+    "#326afd cobalt: 0 i live, 73 i artikelmallen (Tailwind electric)",
+    "#92ec47 lime: 0 överallt",
+    "#00a991 teal-core: saknas i brandboken"
+   ],
+   "kanon": "teal (ägarbeslut 2026-07) — se B1",
+   "byts_ut": "artikelmallens electric #326afd → --apteal-deep (länkar) / --apteal-core (accent)"
+  }
+ ]
+}

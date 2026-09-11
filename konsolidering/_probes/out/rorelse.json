@@ -1,0 +1,1296 @@
+{
+ "rader": [
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "fadeUp",
+   "varde": "0.4s ease-out (opacity 0→1, translateY 8→0)"
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "länkar/knappar",
+   "varde": "transition-colors 150ms, transition-all 200ms; hover bg-ampy-400 / electric-600"
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "reading progress",
+   "varde": "top-bar 3 px gradient (blå→grön) som följer scroll"
+  },
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "scroll-behavior",
+   "varde": "smooth (html) — ingen reduced-motion-regel"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "streams-segment",
+   "varde": "width 300ms cubic-bezier(.2,0,.2,1)"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "reveal",
+   "varde": "hero15 / trio / streams / chart-block (220ms) / cta-stack stagger"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "toggle/segmented/btn",
+   "varde": "150ms som LED/EV"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "tokens",
+   "varde": "--ease cubic-bezier(.16,.84,.44,1); --ease-soft cubic-bezier(.33,1,.68,1)"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "panel öppnas",
+   "varde": "of-fade .22s: opacity 0→1 + translateY(-4px→0)"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "details-pil",
+   "varde": "rotate 180° .18s"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "sekundärknapp",
+   "varde": "border-color/background .15s; hover border navy + bg vit"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "skicka-knapp",
+   "varde": "transform/box-shadow/background .16s; hover -1px + pil +3px; active 0"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "* animation/transition none; scroll-behavior auto"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "kort hover",
+   "varde": "transition transform .25s ease, box-shadow .25s ease (bara @media hover:hover + pointer:fine)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "transition none, transform none"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "enterView",
+   "varde": "Bricks fadeIn-interaktioner på container/block/bg-image"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "hover",
+   "varde": "transform .16s ease, box-shadow .16s ease, filter .16s ease → translateY(-1.5px) + saturate(1.06|1.08) brightness(1.02)"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "pil",
+   "varde": "scale(1.18) .16s vid hover (glider aldrig)"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "puls-ring (ring)",
+   "varde": "ampyRing 2.8s cubic-bezier(.4,0,.4,1) infinite: box-shadow 0 0 0 0 → 0 0 0 9px rgba(255,255,255,.65→0) vid 55%"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "active",
+   "varde": "translateY(0) (ring: saturate(1.05))"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "transition/transform none, puls av"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "--dur-fast / --dur-base / --dur-reveal / --ease-out",
+   "varde": "120 / 220 / 300 ms / cubic-bezier(0.2,0.6,0.2,1)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "stegbyte",
+   "varde": "@keyframes ec-in-fwd/back: opacity 0→1 + translateX(±10px)→0, 220ms, data-dir styr riktning"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "besked",
+   "varde": "dualstatus ec-rise (translateY(6px)) 300ms; findings ec-rise 220ms med --i·45ms stagger"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "stegprickar",
+   "varde": "background + width 220ms (aktiv 18→28px)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "option hover",
+   "varde": "kant teal + bg subtle + translateY(-1px) + shadow-sm, 120ms; active scale .99 + tint"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "finding-chevron",
+   "varde": "rotate 180° 220ms"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "sticky-cta",
+   "varde": "translateY(110%)→0 260ms, opacity 200ms; ut 220/180ms"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "share-menu",
+   "varde": "@keyframes ec-pop"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "nav-scroll",
+   "varde": "scroll-margin-top = --ec-scroll-offset så nästa steg landar under den fixa headern"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "animation none på block/dualstatus/finding/share-menu; transition none på steps/option/cta/stickycta"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "--m",
+   "varde": ".3s ease på panel (grid-template-rows 0fr→1fr), chevron rotate 180, radbakgrund, CTA transform/box-shadow; CTA hover translateY(-1px)"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "statuspuls",
+   "varde": "eb-pulse 2s ease-out infinite (scale 1→2, opacity .55→0)"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "CTA-puls (mobil)",
+   "varde": "eb-cta-pulse 2s ease-out infinite (scale 1→2.6, opacity .6→0), neonmint-prick 1rem på knappens nederkant"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "transition none på panel/chevron/CTA/more-svg; pulser display:none"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "bar-inträde",
+   "varde": "utan JS synlig direkt; .acb-js → translateY(110 %) + visibility hidden → .is-in translateY(0); transition transform .18s ease-out, visibility 0s .18s; failsafe 6 s; 400 ms kall period (.is-cold pointe"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "ampyRing (acb-ring)",
+   "varde": "keyframes: box-shadow-ring 0 → 9 px vit .65 → 0 vid 55 % → 0 (sajtens @keyframes ampyRing, eget namn)"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "pill hover/active",
+   "varde": "ring: saturate(1.08) brightness(1.02) + skuggbyte; grön: brightness(1.06), ALDRIG translateY på bottenfäst remsa; active brightness(.94) + inset"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "hörnkort",
+   "varde": "transition transform .18s ease-out, opacity .18s; .is-out translateY(100 % + 24) (finns men ägardirektiv: alltid synligt); CTA hover translateY(-1px) (grön) / skuggbyte (ring)"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "§11: transition none på bar/kort/CTA, ampyRing av"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "kort",
+   "varde": "@keyframes ampy-bk-block: opacity 0→1 + translateY(2px), 240ms ease"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "drawer/joblista",
+   "varde": "@keyframes ampy-bk-fade translateY(4px), 200ms"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "judgment",
+   "varde": "@keyframes ampy-bk-judgment translateY(4px), 280ms cubic-bezier(.2,.6,.2,1)"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "roomtile / option / job-row / cta",
+   "varde": "150ms ease på border-color, transform, box-shadow, background, color; tile active scale .98"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "tab",
+   "varde": "color + border-color 150ms; vikt 500 i båda states (ingen breddskuttning)"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": ".ampy-bk--hero",
+   "varde": "min-height 200ms ease (kortet växer mjukt mellan slides)"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "hero__btn",
+   "varde": "transform/box-shadow/filter 150ms"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "dark-tema (ej vald)",
+   "varde": "elk-aurora 24s ease-in-out infinite alternate på ::before"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "animation none + transition none på kort/tiles/optioner (rad 171)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--t-fast / --t-mid / --t-slow / --t-stagger",
+   "varde": "140 / 220 / 300 / 45 ms"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--ease / --ease-out",
+   "varde": "cubic-bezier(0.2,0.6,0.2,1) / cubic-bezier(0.16,1,0.3,1)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "entrance (result.enter)",
+   "varde": "@keyframes ampyRise translateY(12px)→0, 300ms ease-out, stagger ×1 anchor / ×2 storybar / ×3 legend / ×4 spark / ×6 ctablock (45 ms-steg); inputkortet ampyRise 220ms"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "storybar",
+   "varde": "scaleX(0)→1 per segment, 300ms, delay 0/45/90 ms; width 300ms vid omräkning"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "spark-list",
+   "varde": "is-drawing → is-drawn: sp-fill scaleX 220ms, sp-band opacity 140ms +140ms, sp-pay opacity +200ms"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "seg-pill",
+   "varde": "glidande pill: transform/width/height 140ms"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "gear-collapsed",
+   "varde": "grid-template-rows 0fr→1fr + opacity, 220ms ease-out (reveal utan height-mätning)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "stepval.bump / anchor-num.flash",
+   "varde": "ampyBump translateY(−2px)+opacity .55 140ms / ampyFlash opacity .4→1 220ms"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "hp-card hover (pointer:fine)",
+   "varde": "kant teal, translateY(−1px), shadow-1; active scale .995; hp-check opacity+scale .6→1"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "cta hover",
+   "varde": "translateY(−2px), bg #00b89e, --shadow-teal; active scale .99; is-close = ghost"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "range-thumb",
+   "varde": "hover scale 1.06 (pointer:fine), active scale 1.12"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "jump-pill",
+   "varde": "opacity/transform 220ms; jpNudge 2.6s infinite på chip-pilen"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": ":root nollställer --t-*; plus * { animation/transition 0s !important }; jpNudge none"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "--motion-fast / --motion-normal / --easing",
+   "varde": "150ms / 300ms / cubic-bezier(0.2, 0, 0.2, 1)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "slider",
+   "varde": "fill = scaleX på kompositorn, transform 150ms; thumb left 150ms (P11d: fill + thumb landar ihop); .is-dragging none; thumb::before 44px osynlig träffyta"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "value-prominent.is-snap",
+   "varde": "@keyframes ampy-snap-highlight: färg teal + scale 1.04 → normal, 150ms"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "reveal",
+   "varde": "opacity 0 + translateY(0.6rem) → animation ampy-reveal 300ms forwards, stagger hero 40 / trio 100 / monthly 160 / evidence 220 / cta 280 ms"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "stapelbredd",
+   "varde": "width 300ms (::before via --bar-frac)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "popover",
+   "varde": "opacity/transform(2px)/visibility 150ms; caret 9px roterad kvadrat"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "btn-spinner",
+   "varde": "16px, 2px currentColor, ampy-spin 0.8s linear infinite"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "0.001ms + iteration-count 1 på allt; popover transform none"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "inga (baslinje)",
+   "varde": "—; tokens.css definierar --ease cubic-bezier(.2,.6,.2,1) för riktningarna"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "sömmen",
+   "varde": "--ampyfe-pos som @property <percentage>; .ar-mjuk: transition --ampyfe-pos 260ms cubic-bezier(.22,.61,.36,1) (tangentbord/klick) — ALDRIG under drag"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "ledtråd",
+   "varde": "opacity .25s ease → 0 när .ar-vidrord"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "transition none på .ar-mjuk och ledtråd"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "interaktion (JS)",
+   "varde": "pointer-drag på ramen (touch-action pan-y pinch-zoom, cursor ew-resize), range-input som tillgänglig grund, 44 px tryckyta"
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "tak",
+   "varde": "300 ms totalt, 160 ms på handlingsytor: fält border/bg .16s, submit transform/box-shadow/filter .16s (hover −1.5 px, saturate 1.06, pil scale 1.18), router-glyf rotate .16s, progress width 200ms linea"
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "hover-guard",
+   "varde": "@media (hover:hover) för fält/submit/ikonknapp"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "CTA hover",
+   "varde": "transform .16s ease, box-shadow .16s ease, filter .16s ease → translateY(-1.5px) saturate(1.06) brightness(1.02); pil scale(1.18); active translateY(0)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header --t",
+   "varde": ".2s ease-out (26 användningar)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header CTA pulse-dot",
+   "varde": "::after 1rem mint-prick, cta_dot 1.6s ease-in-out infinite (box-shadow-ring 0→6px 9px)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "mega-meny",
+   "varde": "opacity var(--t), visibility 0s .2s"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "lösnings-kort",
+   "varde": "transform/box-shadow .25s ease-out, bild scale(1.05) .45s"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "drawer",
+   "varde": "translateX(100%)→0, .2s; accordion max-height .28s ease-out"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "*{animation:none!important;transition:none!important}"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "--ap-motion",
+   "varde": ".18s (tak 300 ms enligt designsystem §4)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "CTA:er",
+   "varde": ".16s ease (bibliotekets)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "input focus",
+   "varde": "box-shadow .15s (Z) / border+shadow .18s (ampy-field)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "puls-ring",
+   "varde": "ampyRing 2.8s"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "CTA-transition/transform none, puls av"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "input",
+   "varde": "box-shadow .15s"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "segment",
+   "varde": ".15s"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "submit",
+   "varde": ".18s"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "@media (prefers-reduced-motion) finns (trunkerad i läsningen)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--motion-fast",
+   "varde": "150ms (border, färg, bg, opacity, transform, chevron)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--motion-normal",
+   "varde": "300ms (slider width/left, stapelbredd)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "--easing",
+   "varde": "cubic-bezier(0.2, 0, 0.2, 1)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "reveal vid första målning",
+   "varde": "@keyframes ampy-reveal: opacity 0→1, translateY(0.6rem)→0, 300ms, stagger hero 40 / trio 120 / compare 180 / cta 260 ms"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "knapp hover / active",
+   "varde": "opacity .92 / opacity .82 + translateY(1px)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "slider thumb active",
+   "varde": "scale(1.08), cursor grabbing; .is-dragging tar bort transitions (1:1 följning)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "tip hover",
+   "varde": "bg teal + vit text, ingen transition deklarerad"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "animation-/transition-duration 0.001ms !important på allt under .ampy-calc"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "tab-knapp",
+   "varde": "all 0.3s ease; hover translateY(-2px)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "live hero-CTA",
+   "varde": "transform .16s ease, box-shadow .16s ease, filter .16s ease; hover translateY(-1.5px) saturate(1.06) brightness(1.02)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "mini-menu kort",
+   "varde": "transform 280ms var(--ease), box-shadow 280ms var(--ease) med --ease cubic-bezier(.2,.6,.2,1)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "ROT-knapp hover",
+   "varde": "background-image linear-gradient(145deg,#c7f5ff 50%,#5eb1bf 100%) (ingen transition deklarerad)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "block-inträde",
+   "varde": "Bricks interaction enterView -> fadeIn (GT: 0.3s), runOnce, hidden-on-load"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "knapp hover",
+   "varde": ".16s ease lyft −1.5 / saturate 1.08"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "puls-ring",
+   "varde": "mctaRing 2.8s infinite (samma som ampyRing)"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "puls av, transition none"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "block-inträde",
+   "varde": "ingen (JS-fritt block)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "tokens",
+   "varde": "--fast 200ms, --normal 280ms, --ease cubic-bezier(.2,.6,.2,1), --ease-out cubic-bezier(.16,1,.3,1)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "kort in",
+   "varde": "opacity 0→1 0.5s ease-out (mf-fade), enbart opacity (transform flashar hörn i Safari)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "input fokus",
+   "varde": "border-color 200ms"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "knapp hover",
+   "varde": "filter brightness(1.06) + translateY(-1px), 200ms; pil translateX(4px); active translateY(0)"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "laddspinner",
+   "varde": "2rem ring, 2.5px, rotate 0.7s linear infinite; text/ikon visibility hidden"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "success in",
+   "varde": "mf-fade 280ms ease-out"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "alla animation/transition → 0.001ms; kortet opacity 1"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "kort hover",
+   "varde": "translateY(−4px) 280ms cubic-bezier(.2,.6,.2,1) (--normal/--ease); foto scale(1.08) 640ms --ease-out; overlay 420ms; titel −2px 220ms; CTA −2px + pil +3px 200ms, bg → #74c2ce"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "inträde",
+   "varde": "amp3-rise 520ms (opacity 0→1, 16px→0) med stagger .05/.12/.20/.28/.36"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "*{animation:none;transition:none} !important"
+  },
+  {
+   "kalla": "picasso",
+   "auk": 3,
+   "roll": "ampy-btn hover",
+   "varde": "transform .15s ease, box-shadow .15s ease, filter .15s ease; translateY(-1px) + saturate(1.05)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "block enter",
+   "varde": "Bricks interaction enterView → fadeIn (GT: 0.3 s), runOnce; klonen visar slutläget statiskt"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "knapp hover",
+   "varde": "background-image gradient 145deg #c7f5ff 50%→#5eb1bf (ROT); transition Bricks-default"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "block enter",
+   "varde": "av-fade 400ms cubic-bezier(.16,1,.3,1) opacity-only; vänster +60 ms, panel +120 ms"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "CTA hover",
+   "varde": "transform .16s ease, box-shadow .16s ease, filter .16s ease → translateY(-1.5px) saturate(1.06) brightness(1.02), pil scale(1.18)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "animation:none / transition:none !important på wrapper + * + ::before/::after"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "Splide",
+   "varde": "v4.1.4 self-hostad; type loop om antal > perPage; perPage 3 (2 ≤1024, 1 ≤759); perMove 1; gap 24; autoplay interval 4000 ms, speed 500 ms; pauseOnHover + pauseOnFocus; arrows/pagination av; touch-paus"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "prick-tillväxt",
+   "varde": "transition width .35s ease, background-color .35s ease; aktiv fylls via scaleX(rate) från Splides autoplay:playing (watchdog rAF >900 ms)"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "badge hover",
+   "varde": "text-decoration underline, underline-offset 4px"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "JS: ingen autoplay, markören statisk full; CSS: prick transition none"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "Splide (Bricks nested slider)",
+   "varde": "type slide, height 50vh, gap 25, perPage 3 (2 ≤1024/767, 1 ≤478), speed 400, interval 3000, autoplay, pauseOnHover, pagination, rewind"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "prick",
+   "varde": "transition transform .2s linear (Splide default)"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "död kod",
+   "varde": "inline-skript som ska dölja prickar ≥3 riktar .testimonial-carousel — matchar inget, dött på live"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "tokens",
+   "varde": "--ease cubic-bezier(.16,.84,.44,1); --ease-soft cubic-bezier(.33,1,.68,1)"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "disk in (disc-in)",
+   "varde": "640ms --ease both: scale .62→1.05 (62%)→1, opacity 0→1"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "bock ritas (tick)",
+   "varde": "stroke-dasharray 120 → dashoffset 120→0, 560ms --ease, delay 300ms"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "halo",
+   "varde": "4s --ease-soft infinite: scale .8→1.4, opacity 0→.8→0 (pulserar för evigt)"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "knapp hover",
+   "varde": "translateY(-2px) + skugga, 200ms; pil translateX(3px)"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "ghost hover",
+   "varde": "color/background 180ms"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "disk/bock/halo animation none, bock synlig (dashoffset 0), halo statisk opacity .5 scale 1.1; knapp/ghost utan transition"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "implementation extra",
+   "varde": "script.js: IntersectionObserver (35 %) klonar SVG:n så bocken ritas om när blocket scrollas in; hoppar över vid reduced-motion"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "ingen",
+   "varde": "'Noll rörelse i default'; hover = teal-understrykning på överlämning/ROT-länk; reduced-motion: animation/transition none; renderingskontrakt opacity/visibility/transform !important (enterView-skydd)"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "enter-view (prototyp/JS)",
+   "varde": "kort opacity 0 + translateY(1.6rem) → .is-visible, .3s ease (IntersectionObserver threshold .25, runOnce); lampa +.08s delay scale .98→1; produktion: Bricks enterView fade"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "reduced-motion",
+   "varde": "animation none, opacity 1, transform none !important"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "--t",
+   "varde": ".2s ease-out (26 användningar: bg, border, opacity, transform)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "pulse-dot",
+   "varde": "cta_dot 1.6s ease-in-out infinite"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "mega öppna/stäng",
+   "varde": "opacity .2s + visibility-fördröjning; hover-timers per item i JS"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "lösnings-kort hover",
+   "varde": "translateY(-.4rem) .25s, bild scale(1.05) .45s, go bg→teal + translateX(.3rem)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "produkt-tile hover",
+   "varde": "bg rgba(0,169,145,.06), go opacity .35→1 + translateX(.3rem)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "drawer",
+   "varde": "translateX(100%)→0 .2s; accordion max-height .28s ease-out; burger-X scale_in .3s"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "reduced-motion",
+   "varde": "*{animation:none;transition:none} !important"
+  }
+ ],
+ "durations": [
+  {
+   "ms": 300,
+   "antal": 13,
+   "kallor": [
+    "battery-calculator",
+    "elcentral-kollen",
+    "eljour-block",
+    "energycalc",
+    "ev-kalkylator",
+    "fotobedomningen",
+    "hero-2-alternatives",
+    "led-kalkylator",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "thank-you",
+    "visste-du-att",
+    "website-blocks"
+   ]
+  },
+  {
+   "ms": 200,
+   "antal": 11,
+   "kallor": [
+    "article-template",
+    "elcentral-kollen",
+    "elkollen",
+    "energycalc",
+    "fotobedomningen",
+    "hero-1",
+    "main-form",
+    "mini-menu",
+    "testimonials-block",
+    "thank-you",
+    "website-blocks"
+   ]
+  },
+  {
+   "ms": 150,
+   "antal": 9,
+   "kallor": [
+    "article-template",
+    "battery-calculator",
+    "booking-confirmation",
+    "elkollen",
+    "ev-kalkylator",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "led-kalkylator",
+    "picasso"
+   ]
+  },
+  {
+   "ms": 160,
+   "antal": 8,
+   "kallor": [
+    "booking-confirmation",
+    "cta-website",
+    "fotobedomningen",
+    "hero-1",
+    "hero-2-alternatives",
+    "live-ampy-se",
+    "main-cta",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "ms": 280,
+   "antal": 7,
+   "kallor": [
+    "elkollen",
+    "ev-kalkylator",
+    "hero-1",
+    "live-ampy-se",
+    "main-form",
+    "mini-menu",
+    "website-blocks"
+   ]
+  },
+  {
+   "ms": 180,
+   "antal": 6,
+   "kallor": [
+    "booking-confirmation",
+    "elcentral-kollen",
+    "eljour-sticky-bar",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "thank-you"
+   ]
+  },
+  {
+   "ms": 220,
+   "antal": 5,
+   "kallor": [
+    "battery-calculator",
+    "booking-confirmation",
+    "elcentral-kollen",
+    "energycalc",
+    "mini-menu"
+   ]
+  },
+  {
+   "ms": 250,
+   "antal": 4,
+   "kallor": [
+    "certificates",
+    "fore-efter-cro",
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "ms": 400,
+   "antal": 3,
+   "kallor": [
+    "article-template",
+    "eljour-sticky-bar",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "ms": 260,
+   "antal": 3,
+   "kallor": [
+    "elcentral-kollen",
+    "fore-efter-cro",
+    "led-kalkylator"
+   ]
+  },
+  {
+   "ms": 120,
+   "antal": 2,
+   "kallor": [
+    "elcentral-kollen",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "ms": 450,
+   "antal": 2,
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "ms": 500,
+   "antal": 2,
+   "kallor": [
+    "main-form",
+    "testimonials-block"
+   ]
+  },
+  {
+   "ms": 640,
+   "antal": 2,
+   "kallor": [
+    "mini-menu",
+    "thank-you"
+   ]
+  },
+  {
+   "ms": 240,
+   "antal": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "ms": 90,
+   "antal": 1,
+   "kallor": [
+    "energycalc"
+   ]
+  },
+  {
+   "ms": 140,
+   "antal": 1,
+   "kallor": [
+    "energycalc"
+   ]
+  },
+  {
+   "ms": 800,
+   "antal": 1,
+   "kallor": [
+    "ev-kalkylator"
+   ]
+  },
+  {
+   "ms": 700,
+   "antal": 1,
+   "kallor": [
+    "main-form"
+   ]
+  },
+  {
+   "ms": 420,
+   "antal": 1,
+   "kallor": [
+    "mini-menu"
+   ]
+  },
+  {
+   "ms": 520,
+   "antal": 1,
+   "kallor": [
+    "mini-menu"
+   ]
+  },
+  {
+   "ms": 60,
+   "antal": 1,
+   "kallor": [
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "ms": 350,
+   "antal": 1,
+   "kallor": [
+    "testimonials-block"
+   ]
+  },
+  {
+   "ms": 900,
+   "antal": 1,
+   "kallor": [
+    "testimonials-block"
+   ]
+  },
+  {
+   "ms": 560,
+   "antal": 1,
+   "kallor": [
+    "thank-you"
+   ]
+  },
+  {
+   "ms": 80,
+   "antal": 1,
+   "kallor": [
+    "visste-du-att"
+   ]
+  }
+ ],
+ "easings": [
+  {
+   "easing": "ease",
+   "antal": 18,
+   "kallor": [
+    "booking-confirmation",
+    "certificates",
+    "cta-website",
+    "eljour-block",
+    "elkollen",
+    "footer-cro",
+    "fore-efter-cro",
+    "hero-1",
+    "hero-2-alternatives",
+    "live-ampy-se",
+    "main-cta",
+    "main-form",
+    "mini-menu",
+    "picasso",
+    "rot-gt-cro",
+    "testimonials-block",
+    "thank-you",
+    "visste-du-att"
+   ]
+  },
+  {
+   "easing": "ease-out",
+   "antal": 8,
+   "kallor": [
+    "article-template",
+    "eljour-block",
+    "eljour-sticky-bar",
+    "energycalc",
+    "hero-1",
+    "main-form",
+    "mini-menu",
+    "website-blocks"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(.2,.6,.2,1)",
+   "antal": 5,
+   "kallor": [
+    "elkollen",
+    "footer-cro",
+    "live-ampy-se",
+    "main-form",
+    "mini-menu"
+   ]
+  },
+  {
+   "easing": "linear",
+   "antal": 5,
+   "kallor": [
+    "ev-kalkylator",
+    "fotobedomningen",
+    "live-ampy-se",
+    "main-form",
+    "testimonials-block"
+   ]
+  },
+  {
+   "easing": "ease-in-out",
+   "antal": 3,
+   "kallor": [
+    "elkollen",
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(.16,.84,.44,1)",
+   "antal": 2,
+   "kallor": [
+    "booking-confirmation",
+    "thank-you"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(.33,1,.68,1)",
+   "antal": 2,
+   "kallor": [
+    "booking-confirmation",
+    "thank-you"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(0.2,0.6,0.2,1)",
+   "antal": 2,
+   "kallor": [
+    "elcentral-kollen",
+    "energycalc"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(0.2,0,0.2,1)",
+   "antal": 2,
+   "kallor": [
+    "ev-kalkylator",
+    "led-kalkylator"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(.16,1,.3,1)",
+   "antal": 2,
+   "kallor": [
+    "main-form",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(.2,0,.2,1)",
+   "antal": 1,
+   "kallor": [
+    "battery-calculator"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(.4,0,.4,1)",
+   "antal": 1,
+   "kallor": [
+    "cta-website"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(0.16,1,0.3,1)",
+   "antal": 1,
+   "kallor": [
+    "energycalc"
+   ]
+  },
+  {
+   "easing": "cubic-bezier(.22,.61,.36,1)",
+   "antal": 1,
+   "kallor": [
+    "fore-efter-cro"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,487 @@
+{
+ "metod": "WCAG 2.x relativ luminans, sRGB; alfa-värden blandade mot underlaget först",
+ "solida": [
+  {
+   "namn": "midnight #090b32",
+   "hex": "#090b32",
+   "mot_vit": 19.0,
+   "mot_sky-mist": 17.98,
+   "mot_midnight": 1.0,
+   "mot_teal-core": 6.41,
+   "mot_secondary-teal": 7.7,
+   "mot_teal-deep": 3.61
+  },
+  {
+   "namn": "teal-core #00a991",
+   "hex": "#00a991",
+   "mot_vit": 2.96,
+   "mot_sky-mist": 2.81,
+   "mot_midnight": 6.41,
+   "mot_teal-core": 1.0,
+   "mot_secondary-teal": 1.2,
+   "mot_teal-deep": 1.78
+  },
+  {
+   "namn": "teal-deep #007a69 (elcentral/elkollen)",
+   "hex": "#007a69",
+   "mot_vit": 5.27,
+   "mot_sky-mist": 4.98,
+   "mot_midnight": 3.61,
+   "mot_teal-core": 1.78,
+   "mot_secondary-teal": 2.14,
+   "mot_teal-deep": 1.0
+  },
+  {
+   "namn": "teal #007d6b (EV)",
+   "hex": "#007d6b",
+   "mot_vit": 5.07,
+   "mot_sky-mist": 4.79,
+   "mot_midnight": 3.75,
+   "mot_teal-core": 1.71,
+   "mot_secondary-teal": 2.05,
+   "mot_teal-deep": 1.04
+  },
+  {
+   "namn": "teal #00806e (energycalc)",
+   "hex": "#00806e",
+   "mot_vit": 4.87,
+   "mot_sky-mist": 4.61,
+   "mot_midnight": 3.9,
+   "mot_teal-core": 1.64,
+   "mot_secondary-teal": 1.97,
+   "mot_teal-deep": 1.08
+  },
+  {
+   "namn": "teal #0a8f7c (hero-2/eljour focus)",
+   "hex": "#0a8f7c",
+   "mot_vit": 4.01,
+   "mot_sky-mist": 3.8,
+   "mot_midnight": 4.73,
+   "mot_teal-core": 1.35,
+   "mot_secondary-teal": 1.63,
+   "mot_teal-deep": 1.31
+  },
+  {
+   "namn": "teal #0a6e58 (eljour pill)",
+   "hex": "#0a6e58",
+   "mot_vit": 6.21,
+   "mot_sky-mist": 5.87,
+   "mot_midnight": 3.06,
+   "mot_teal-core": 2.09,
+   "mot_secondary-teal": 2.52,
+   "mot_teal-deep": 1.18
+  },
+  {
+   "namn": "teal #016a5d (booking)",
+   "hex": "#016a5d",
+   "mot_vit": 6.52,
+   "mot_sky-mist": 6.17,
+   "mot_midnight": 2.91,
+   "mot_teal-core": 2.2,
+   "mot_secondary-teal": 2.64,
+   "mot_teal-deep": 1.24
+  },
+  {
+   "namn": "teal #018271 (thank-you)",
+   "hex": "#018271",
+   "mot_vit": 4.74,
+   "mot_sky-mist": 4.48,
+   "mot_midnight": 4.01,
+   "mot_teal-core": 1.6,
+   "mot_secondary-teal": 1.92,
+   "mot_teal-deep": 1.11
+  },
+  {
+   "namn": "teal-hover #008d79 (header)",
+   "hex": "#008d79",
+   "mot_vit": 4.13,
+   "mot_sky-mist": 3.91,
+   "mot_midnight": 4.6,
+   "mot_teal-core": 1.39,
+   "mot_secondary-teal": 1.67,
+   "mot_teal-deep": 1.28
+  },
+  {
+   "namn": "secondary-teal #5eb1bf",
+   "hex": "#5eb1bf",
+   "mot_vit": 2.47,
+   "mot_sky-mist": 2.33,
+   "mot_midnight": 7.7,
+   "mot_teal-core": 1.2,
+   "mot_secondary-teal": 1.0,
+   "mot_teal-deep": 2.14
+  },
+  {
+   "namn": "emerald #39c281",
+   "hex": "#39c281",
+   "mot_vit": 2.28,
+   "mot_sky-mist": 2.16,
+   "mot_midnight": 8.33,
+   "mot_teal-core": 1.3,
+   "mot_secondary-teal": 1.08,
+   "mot_teal-deep": 2.31
+  },
+  {
+   "namn": "neon-mint #55ff9a",
+   "hex": "#55ff9a",
+   "mot_vit": 1.3,
+   "mot_sky-mist": 1.23,
+   "mot_midnight": 14.61,
+   "mot_teal-core": 2.28,
+   "mot_secondary-teal": 1.9,
+   "mot_teal-deep": 4.05
+  },
+  {
+   "namn": "indigo #282a53 (CTA-text)",
+   "hex": "#282a53",
+   "mot_vit": 13.58,
+   "mot_sky-mist": 12.85,
+   "mot_midnight": 1.4,
+   "mot_teal-core": 4.58,
+   "mot_secondary-teal": 5.51,
+   "mot_teal-deep": 2.58
+  },
+  {
+   "namn": "ink #0d0d0d (elkollen CTA-text)",
+   "hex": "#0d0d0d",
+   "mot_vit": 19.44,
+   "mot_sky-mist": 18.4,
+   "mot_midnight": 1.02,
+   "mot_teal-core": 6.56,
+   "mot_secondary-teal": 7.88,
+   "mot_teal-deep": 3.69
+  },
+  {
+   "namn": "navy-ink #3b3f59 (eljour body)",
+   "hex": "#3b3f59",
+   "mot_vit": 10.29,
+   "mot_sky-mist": 9.74,
+   "mot_midnight": 1.85,
+   "mot_teal-core": 3.47,
+   "mot_secondary-teal": 4.17,
+   "mot_teal-deep": 1.95
+  },
+  {
+   "namn": "navy-muted #565e82 (header/LED muted)",
+   "hex": "#565e82",
+   "mot_vit": 6.33,
+   "mot_sky-mist": 5.99,
+   "mot_midnight": 3.0,
+   "mot_teal-core": 2.13,
+   "mot_secondary-teal": 2.57,
+   "mot_teal-deep": 1.2
+  },
+  {
+   "namn": "navy-muted #5f6480 (eljour soft)",
+   "hex": "#5f6480",
+   "mot_vit": 5.8,
+   "mot_sky-mist": 5.49,
+   "mot_midnight": 3.28,
+   "mot_teal-core": 1.96,
+   "mot_secondary-teal": 2.35,
+   "mot_teal-deep": 1.1
+  },
+  {
+   "namn": "#5a5d7a (elkollen secondary)",
+   "hex": "#5a5d7a",
+   "mot_vit": 6.4,
+   "mot_sky-mist": 6.06,
+   "mot_midnight": 2.97,
+   "mot_teal-core": 2.16,
+   "mot_secondary-teal": 2.6,
+   "mot_teal-deep": 1.22
+  },
+  {
+   "namn": "faint #6a7190 (header)",
+   "hex": "#6a7190",
+   "mot_vit": 4.8,
+   "mot_sky-mist": 4.54,
+   "mot_midnight": 3.96,
+   "mot_teal-core": 1.62,
+   "mot_secondary-teal": 1.95,
+   "mot_teal-deep": 1.1
+  },
+  {
+   "namn": "faint #646b88 (booking)",
+   "hex": "#646b88",
+   "mot_vit": 5.25,
+   "mot_sky-mist": 4.97,
+   "mot_midnight": 3.62,
+   "mot_teal-core": 1.77,
+   "mot_secondary-teal": 2.13,
+   "mot_teal-deep": 1.0
+  },
+  {
+   "namn": "faint #686b80 (elkollen tertiary)",
+   "hex": "#686b80",
+   "mot_vit": 5.25,
+   "mot_sky-mist": 4.96,
+   "mot_midnight": 3.62,
+   "mot_teal-core": 1.77,
+   "mot_secondary-teal": 2.13,
+   "mot_teal-deep": 1.0
+  },
+  {
+   "namn": "faint #8a8da5 (elcentral tertiary)",
+   "hex": "#8a8da5",
+   "mot_vit": 3.26,
+   "mot_sky-mist": 3.09,
+   "mot_midnight": 5.82,
+   "mot_teal-core": 1.1,
+   "mot_secondary-teal": 1.32,
+   "mot_teal-deep": 1.61
+  },
+  {
+   "namn": "body #363636 (live Bricks)",
+   "hex": "#363636",
+   "mot_vit": 12.08,
+   "mot_sky-mist": 11.44,
+   "mot_midnight": 1.57,
+   "mot_teal-core": 4.08,
+   "mot_secondary-teal": 4.9,
+   "mot_teal-deep": 2.29
+  },
+  {
+   "namn": "body #333333 charcoal",
+   "hex": "#333333",
+   "mot_vit": 12.63,
+   "mot_sky-mist": 11.96,
+   "mot_midnight": 1.5,
+   "mot_teal-core": 4.26,
+   "mot_secondary-teal": 5.12,
+   "mot_teal-deep": 2.4
+  },
+  {
+   "namn": "darkest-black #1e1e1e",
+   "hex": "#1e1e1e",
+   "mot_vit": 16.67,
+   "mot_sky-mist": 15.78,
+   "mot_midnight": 1.14,
+   "mot_teal-core": 5.62,
+   "mot_secondary-teal": 6.76,
+   "mot_teal-deep": 3.17
+  },
+  {
+   "namn": "#0f123c (near-miss midnight)",
+   "hex": "#0f123c",
+   "mot_vit": 17.92,
+   "mot_sky-mist": 16.96,
+   "mot_midnight": 1.06,
+   "mot_teal-core": 6.04,
+   "mot_secondary-teal": 7.27,
+   "mot_teal-deep": 3.4
+  },
+  {
+   "namn": "error #d64c4c (LED/EV)",
+   "hex": "#d64c4c",
+   "mot_vit": 4.2,
+   "mot_sky-mist": 3.98,
+   "mot_midnight": 4.52,
+   "mot_teal-core": 1.42,
+   "mot_secondary-teal": 1.7,
+   "mot_teal-deep": 1.25
+  },
+  {
+   "namn": "error #d64040 (elkollen)",
+   "hex": "#d64040",
+   "mot_vit": 4.5,
+   "mot_sky-mist": 4.26,
+   "mot_midnight": 4.22,
+   "mot_teal-core": 1.52,
+   "mot_secondary-teal": 1.83,
+   "mot_teal-deep": 1.17
+  },
+  {
+   "namn": "error #b3261e (eljour/foto)",
+   "hex": "#b3261e",
+   "mot_vit": 6.54,
+   "mot_sky-mist": 6.19,
+   "mot_midnight": 2.91,
+   "mot_teal-core": 2.2,
+   "mot_secondary-teal": 2.65,
+   "mot_teal-deep": 1.24
+  },
+  {
+   "namn": "verdict-red #7a1623",
+   "hex": "#7a1623",
+   "mot_vit": 10.68,
+   "mot_sky-mist": 10.11,
+   "mot_midnight": 1.78,
+   "mot_teal-core": 3.6,
+   "mot_secondary-teal": 4.33,
+   "mot_teal-deep": 2.03
+  },
+  {
+   "namn": "error #e5484d (hero-2)",
+   "hex": "#e5484d",
+   "mot_vit": 3.91,
+   "mot_sky-mist": 3.7,
+   "mot_midnight": 4.85,
+   "mot_teal-core": 1.32,
+   "mot_secondary-teal": 1.59,
+   "mot_teal-deep": 1.35
+  },
+  {
+   "namn": "error #e00000 (main-form)",
+   "hex": "#e00000",
+   "mot_vit": 5.04,
+   "mot_sky-mist": 4.77,
+   "mot_midnight": 3.77,
+   "mot_teal-core": 1.7,
+   "mot_secondary-teal": 2.04,
+   "mot_teal-deep": 1.05
+  },
+  {
+   "namn": "amber #f0af38 (LED)",
+   "hex": "#f0af38",
+   "mot_vit": 1.93,
+   "mot_sky-mist": 1.82,
+   "mot_midnight": 9.85,
+   "mot_teal-core": 1.54,
+   "mot_secondary-teal": 1.28,
+   "mot_teal-deep": 2.73
+  },
+  {
+   "namn": "amber #f0b429 (energycalc)",
+   "hex": "#f0b429",
+   "mot_vit": 1.86,
+   "mot_sky-mist": 1.76,
+   "mot_midnight": 10.19,
+   "mot_teal-core": 1.59,
+   "mot_secondary-teal": 1.32,
+   "mot_teal-deep": 2.83
+  },
+  {
+   "namn": "verdict-amber #876507",
+   "hex": "#876507",
+   "mot_vit": 5.39,
+   "mot_sky-mist": 5.1,
+   "mot_midnight": 3.52,
+   "mot_teal-core": 1.82,
+   "mot_secondary-teal": 2.19,
+   "mot_teal-deep": 1.02
+  },
+  {
+   "namn": "verdict-green #0f6e56",
+   "hex": "#0f6e56",
+   "mot_vit": 6.2,
+   "mot_sky-mist": 5.87,
+   "mot_midnight": 3.06,
+   "mot_teal-core": 2.09,
+   "mot_secondary-teal": 2.52,
+   "mot_teal-deep": 1.18
+  },
+  {
+   "namn": "verdict-blue #0d568c",
+   "hex": "#0d568c",
+   "mot_vit": 7.7,
+   "mot_sky-mist": 7.29,
+   "mot_midnight": 2.47,
+   "mot_teal-core": 2.6,
+   "mot_secondary-teal": 3.12,
+   "mot_teal-deep": 1.46
+  },
+  {
+   "namn": "google-gold #fbbc04",
+   "hex": "#fbbc04",
+   "mot_vit": 1.71,
+   "mot_sky-mist": 1.62,
+   "mot_midnight": 11.12,
+   "mot_teal-core": 1.74,
+   "mot_secondary-teal": 1.44,
+   "mot_teal-deep": 3.08
+  },
+  {
+   "namn": "gold #f6b53d (thank-you)",
+   "hex": "#f6b53d",
+   "mot_vit": 1.81,
+   "mot_sky-mist": 1.71,
+   "mot_midnight": 10.49,
+   "mot_teal-core": 1.64,
+   "mot_secondary-teal": 1.36,
+   "mot_teal-deep": 2.91
+  },
+  {
+   "namn": "line #e6ecf6",
+   "hex": "#e6ecf6",
+   "mot_vit": 1.19,
+   "mot_sky-mist": 1.12,
+   "mot_midnight": 16.0,
+   "mot_teal-core": 2.5,
+   "mot_secondary-teal": 2.08,
+   "mot_teal-deep": 4.44
+  },
+  {
+   "namn": "line #dbe4f0",
+   "hex": "#dbe4f0",
+   "mot_vit": 1.28,
+   "mot_sky-mist": 1.21,
+   "mot_midnight": 14.81,
+   "mot_teal-core": 2.31,
+   "mot_secondary-teal": 1.92,
+   "mot_teal-deep": 4.1
+  },
+  {
+   "namn": "line #e3e5ed",
+   "hex": "#e3e5ed",
+   "mot_vit": 1.26,
+   "mot_sky-mist": 1.19,
+   "mot_midnight": 15.1,
+   "mot_teal-core": 2.36,
+   "mot_secondary-teal": 1.96,
+   "mot_teal-deep": 4.19
+  }
+ ],
+ "alfa": [
+  {
+   "namn": "midnight .72 på vit",
+   "blandad": "#4e4f6b",
+   "kontrast": 7.91
+  },
+  {
+   "namn": "midnight .62 på vit",
+   "blandad": "#666880",
+   "kontrast": 5.44
+  },
+  {
+   "namn": "midnight .48 på vit (kant)",
+   "blandad": "#898a9d",
+   "kontrast": 3.39
+  },
+  {
+   "namn": "midnight .14 på vit (hairline)",
+   "blandad": "#dddde2",
+   "kontrast": 1.35
+  },
+  {
+   "namn": "midnight .12 på vit (hairline)",
+   "blandad": "#e1e2e6",
+   "kontrast": 1.29
+  },
+  {
+   "namn": "vit .92 på midnight",
+   "blandad": "#ebebef",
+   "kontrast": 15.98
+  },
+  {
+   "namn": "vit .82 på midnight",
+   "blandad": "#d3d3da",
+   "kontrast": 12.75
+  },
+  {
+   "namn": "vit .66 på midnight",
+   "blandad": "#abacb9",
+   "kontrast": 8.44
+  },
+  {
+   "namn": "vit .55 på midnight",
+   "blandad": "#9091a3",
+   "kontrast": 6.12
+  },
+  {
+   "namn": "vit .42 på midnight",
+   "blandad": "#707188",
+   "kontrast": 3.99
+  }
+ ]
+}

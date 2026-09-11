@@ -1,0 +1,10 @@
+/* Ampy designsystem: samlingsfil. Ordningen är bindande: tokens -> base -> komponenter. */
+@import url("tokens.css");
+@import url("base.css");
+@import url("components/knappar.css");
+@import url("components/text.css");
+@import url("components/ytor.css");
+@import url("components/falt.css");
+@import url("components/verktyg.css");
+@import url("components/diagnostik.css");
+@import url("components/block.css");

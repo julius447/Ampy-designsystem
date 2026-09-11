@@ -1,0 +1,960 @@
+{
+ "container": [
+  {
+   "kalla": "article-template",
+   "auk": 2,
+   "roll": "sidcontainer",
+   "varde": "1088 px (Tailwind max-w + px), artikel 704 + TOC 320 (gap 64)"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "max-width",
+   "varde": "128rem"
+  },
+  {
+   "kalla": "battery-calculator",
+   "auk": 3,
+   "roll": "mobil-overflow",
+   "varde": "DEFEKT: inputkortet 394.9px brett i 390px viewport → scrollWidth 413 (overflowX true); orsak: kortet"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "sidans max-width",
+   "varde": "780px (bk-shell), centrerad – uppmätt 724px innehåll @1440 (780 − 2×28)"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "kortens innehållsbredd",
+   "varde": "658px @1440 (724 − 2×32 − 2px kant); 325px @390"
+  },
+  {
+   "kalla": "booking-confirmation",
+   "auk": 2,
+   "roll": "offer-accepted kort",
+   "varde": "max-width 540px; sektion padding clamp(24px,3vw,34px) clamp(24px,4vw,48px)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "inner max-width",
+   "varde": "var(--container-width, 1280px)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "text/kort-kolumner",
+   "varde": "flex 1 1 0 vardera, kort max 492 → text får överskottet (760 px @1440)"
+  },
+  {
+   "kalla": "certificates",
+   "auk": 2,
+   "roll": "container",
+   "varde": "1280 (Bricks), textblock 626, grid 370,8"
+  },
+  {
+   "kalla": "cta-website",
+   "auk": 1,
+   "roll": "galleri",
+   "varde": "max-width 1000px, kort 20px radie, slots 1fr/350px"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "shell max-width",
+   "varde": "128rem (1280px)"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "blockläge shell",
+   "varde": "76rem (760px) centrerad; ≥1280 128rem tvåkolumn med kortet pinnat till 56rem kvadrat"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "blockläge stage",
+   "varde": "max-width 63.6rem"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "start-cta max-width",
+   "varde": "32rem; mobil/tablet CTA:er cap 44rem centrerade"
+  },
+  {
+   "kalla": "elcentral-kollen",
+   "auk": 1,
+   "roll": "scroll-offset",
+   "varde": "--ec-scroll-offset 7.8rem (66px header + 12) / ≥993: 8.8rem"
+  },
+  {
+   "kalla": "eljour-block",
+   "auk": 1,
+   "roll": "wrap max-width",
+   "varde": "--eb-max 128rem = 1280 px (= Hero-2)"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "bar",
+   "varde": "position:fixed left 0 right 0 bottom 0, z-index 900 (under Bricks offcanvas 1001); ≤992 px"
+  },
+  {
+   "kalla": "eljour-sticky-bar",
+   "auk": 2,
+   "roll": "hörnkort",
+   "varde": "position:fixed right 24 bottom 24 (variant .acb-card--left), z 900; ≥993 px"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "hero .wrap",
+   "varde": "118rem (1180px) — smalare än sajtens 1280"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "inbäddat kort",
+   "varde": "--block-max-width 60rem (600px) 'calm line length'"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "hero-läge kort",
+   "varde": "max-width none, fyller högerkolumnen (625px @1440)"
+  },
+  {
+   "kalla": "elkollen",
+   "auk": 1,
+   "roll": "--ampy-header-h",
+   "varde": "scroll-anchor-offset satt av värden (preview 44px)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "--shell-max",
+   "varde": "136rem = 1360px ('premium shell') — bredare än sajtens 1280"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "inputkort",
+   "varde": "42rem fast (420px), sticky top 24px"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "resultatkolumn",
+   "varde": "flex 1 (852px @1440)"
+  },
+  {
+   "kalla": "energycalc",
+   "auk": 1,
+   "roll": "måttcap",
+   "varde": "sp-verdict 62ch, method-body 70ch, trust-quote 30ch, lead-field 48rem"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "max-width",
+   "varde": "128rem (1280px)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "container-query-kontext",
+   "varde": ".ampy-calc-outer { container-type: inline-size; container-name: ampy } — alla brytpunkter i cqi"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "selector-list max-height",
+   "varde": "min(50rem, 60vh) (16 laddboxar)"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "popover max-width",
+   "varde": "min(280px, calc(100vw - 24px))"
+  },
+  {
+   "kalla": "ev-kalkylator",
+   "auk": 1,
+   "roll": "body",
+   "varde": "standalone saknar body{margin:0} → 8px vit ram runt verktyget"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "container",
+   "varde": "1280px"
+  },
+  {
+   "kalla": "footer-cro",
+   "auk": 1,
+   "roll": "brand-text",
+   "varde": "max-width 85 %"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "inner max-width",
+   "varde": "1280px, margin auto"
+  },
+  {
+   "kalla": "fore-efter-cro",
+   "auk": 2,
+   "roll": "container queries",
+   "varde": "wrapper container 'ampyfe' (≤680 staplar), varje figur container 'ampyfefig' (≤420 krymper handtag/l"
+  },
+  {
+   "kalla": "fotobedomningen",
+   "auk": 2,
+   "roll": "kort max-width",
+   "varde": "358 mobil · 1280 desktop (≥900 cqi); container-type inline-size på .afk"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "hero frame max-width",
+   "varde": "1700px (bredare än sajtens 1280)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "hero frame höjd",
+   "varde": "calc(100svh − var(--header-h) − 48px), min 620 max 950; ≤992: min 520, −26px"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "content max-width",
+   "varde": "880px (993–1200: 720; 561–992: 640; ≤560: none)"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "header container",
+   "varde": "--container 128rem = 1280px"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "mega-meny bredd ≥1700",
+   "varde": "min(100vw,148rem) centrerad, radie 0 0 2rem 2rem"
+  },
+  {
+   "kalla": "hero-1",
+   "auk": 1,
+   "roll": "mobil-drawer",
+   "varde": "min(100%,44rem)"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "hjälteytan",
+   "varde": "fullbredd minus 8px per sida (1424 @1440) — bredare än 1280"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "G inner",
+   "varde": "1280"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "Z formkort",
+   "varde": "max-width 450, min-height 600"
+  },
+  {
+   "kalla": "hero-2-alternatives",
+   "auk": 2,
+   "roll": "@container-brytpunkter",
+   "varde": "prim 560/768/1200 · S 767/768/1200 · G 560/561/767/768/992/1200 · Z 600/601/991/992/1200 · E 371/768"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "formkort",
+   "varde": "max-width 470px"
+  },
+  {
+   "kalla": "hero-2-form",
+   "auk": 2,
+   "roll": "harness iframe",
+   "varde": "max 1000px / mobil 390px"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "max-width",
+   "varde": "128rem = 1280px (= live --container-width / --apmax-screen-width)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "h1 max-width",
+   "varde": "80rem"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "selector-list max-height",
+   "varde": "min(44rem, 60vh)"
+  },
+  {
+   "kalla": "led-kalkylator",
+   "auk": 1,
+   "roll": "lead-grid",
+   "varde": "1 kolumn, ≥600px 1fr 1fr"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "max-width (Core Framework)",
+   "varde": "1280px"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "Bricks default container",
+   "varde": "1100px"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "innehållsbredder",
+   "varde": "--max-width 980px / --max-width-m 840px / --max-width-s 640px"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "min-width",
+   "varde": "--container-min-width 380px; --apmin-screen-width 320px"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "rubrik max-width i ROT/GT",
+   "varde": "70% (@480 100%)"
+  },
+  {
+   "kalla": "live-ampy-se",
+   "auk": 1,
+   "roll": "steg max-width",
+   "varde": "80% (@1024 100%)"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "kort",
+   "varde": "min(1280px,100%)"
+  },
+  {
+   "kalla": "main-cta",
+   "auk": 2,
+   "roll": "brödtext",
+   "varde": "max-width 52ch"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "kortets max-width",
+   "varde": "122rem (Svea LayoutContainer 1220px) – uppmätt 1220×750 @1440"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "kolumner",
+   "varde": "grid 1fr 1fr (610/610 @1440); flex-column ≤768px"
+  },
+  {
+   "kalla": "main-form",
+   "auk": 2,
+   "roll": "delivery-container",
+   "varde": "@container ampy (inline-size) i stället för viewport-media"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "block",
+   "varde": "1320px (≠ sajtens 1280)"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "rubrik/lead",
+   "varde": "600px"
+  },
+  {
+   "kalla": "mini-menu",
+   "auk": 2,
+   "roll": "mobil-grid",
+   "varde": "max 440px"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "kortets max-width",
+   "varde": "1280px (Bricks container, --container-width)"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "sektion",
+   "varde": "fullbredd 1440, bakgrund #f5f9ff"
+  },
+  {
+   "kalla": "rot-gt-cro",
+   "auk": 1,
+   "roll": "block",
+   "varde": "width:100 % (fullbreddsregeln, ägardirektiv 2026-08-14) · innerlayout cappas 1560 px ≥1497cqi · wrap"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "inner max-width",
+   "varde": "1200px, margin auto; sektionen fullbredd med padding"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "rubrik max-width",
+   "varde": "72rem = 720 px"
+  },
+  {
+   "kalla": "testimonials-block",
+   "auk": 1,
+   "roll": "container",
+   "varde": "1100px (Bricks default .brxe-container width) · vitt bakgrundskort 900 px absolut bakom · slider min"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "kortets max-width",
+   "varde": "52rem (520px) – uppmätt 520×534 @1440, 356×419 @390"
+  },
+  {
+   "kalla": "thank-you",
+   "auk": 2,
+   "roll": "sidan",
+   "varde": "min-height 100vh/100dvh, flex-centrerad kolumn (kort + ghost som en grupp)"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "kort max-width",
+   "varde": "1280px ('delar vänsterkant med MainCTA/MainContact')"
+  },
+  {
+   "kalla": "var-process-cro",
+   "auk": 3,
+   "roll": "kort ≤479",
+   "varde": "kant i kant (radie 0, sektionens sidopadding 0)"
+  },
+  {
+   "kalla": "visste-du-att",
+   "auk": 2,
+   "roll": "kort max-width",
+   "varde": "var(--apmax-screen-width, 128rem) = 1280"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "header container",
+   "varde": "--container 128rem = 1280px"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "produkter-mega",
+   "varde": "max-width 104rem = 1040px (centrerat kluster)"
+  },
+  {
+   "kalla": "website-blocks",
+   "auk": 1,
+   "roll": "mega ≥1700",
+   "varde": "min(100vw,148rem) centrerad med radie 0 0 2rem 2rem"
+  }
+ ],
+ "breakpoints": [
+  {
+   "px": 767,
+   "antal": 10,
+   "kallor": [
+    "certificates",
+    "elcentral-kollen",
+    "elkollen",
+    "footer-cro",
+    "hero-2-alternatives",
+    "live-ampy-se",
+    "main-cta",
+    "mini-menu",
+    "rot-gt-cro",
+    "testimonials-block"
+   ]
+  },
+  {
+   "px": 768,
+   "antal": 9,
+   "kallor": [
+    "battery-calculator",
+    "elkollen",
+    "ev-kalkylator",
+    "hero-2-alternatives",
+    "led-kalkylator",
+    "live-ampy-se",
+    "main-cta",
+    "main-form",
+    "var-process-cro"
+   ]
+  },
+  {
+   "px": 480,
+   "antal": 9,
+   "kallor": [
+    "booking-confirmation",
+    "eljour-block",
+    "eljour-sticky-bar",
+    "energycalc",
+    "ev-kalkylator",
+    "hero-2-form",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "visste-du-att"
+   ]
+  },
+  {
+   "px": 992,
+   "antal": 9,
+   "kallor": [
+    "eljour-block",
+    "eljour-sticky-bar",
+    "energycalc",
+    "hero-1",
+    "hero-2-alternatives",
+    "live-ampy-se",
+    "var-process-cro",
+    "visste-du-att",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 560,
+   "antal": 8,
+   "kallor": [
+    "battery-calculator",
+    "booking-confirmation",
+    "ev-kalkylator",
+    "hero-1",
+    "hero-2-alternatives",
+    "led-kalkylator",
+    "live-ampy-se",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 1024,
+   "antal": 7,
+   "kallor": [
+    "article-template",
+    "elcentral-kollen",
+    "elkollen",
+    "live-ampy-se",
+    "main-cta",
+    "rot-gt-cro",
+    "testimonials-block"
+   ]
+  },
+  {
+   "px": 991,
+   "antal": 7,
+   "kallor": [
+    "certificates",
+    "energycalc",
+    "footer-cro",
+    "hero-2-alternatives",
+    "live-ampy-se",
+    "rot-gt-cro",
+    "testimonials-block"
+   ]
+  },
+  {
+   "px": 600,
+   "antal": 5,
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "hero-2-alternatives",
+    "hero-2-form",
+    "led-kalkylator"
+   ]
+  },
+  {
+   "px": 478,
+   "antal": 4,
+   "kallor": [
+    "certificates",
+    "footer-cro",
+    "live-ampy-se",
+    "testimonials-block"
+   ]
+  },
+  {
+   "px": 993,
+   "antal": 4,
+   "kallor": [
+    "elcentral-kollen",
+    "eljour-sticky-bar",
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 1200,
+   "antal": 4,
+   "kallor": [
+    "energycalc",
+    "hero-1",
+    "hero-2-alternatives",
+    "live-ampy-se"
+   ]
+  },
+  {
+   "px": 960,
+   "antal": 3,
+   "kallor": [
+    "battery-calculator",
+    "ev-kalkylator",
+    "led-kalkylator"
+   ]
+  },
+  {
+   "px": 900,
+   "antal": 3,
+   "kallor": [
+    "certificates",
+    "fotobedomningen",
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "px": 520,
+   "antal": 3,
+   "kallor": [
+    "elcentral-kollen",
+    "fore-efter-cro",
+    "thank-you"
+   ]
+  },
+  {
+   "px": 561,
+   "antal": 3,
+   "kallor": [
+    "hero-1",
+    "hero-2-alternatives",
+    "live-ampy-se"
+   ]
+  },
+  {
+   "px": 400,
+   "antal": 3,
+   "kallor": [
+    "hero-1",
+    "rot-gt-cro",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 640,
+   "antal": 2,
+   "kallor": [
+    "article-template",
+    "picasso"
+   ]
+  },
+  {
+   "px": 680,
+   "antal": 2,
+   "kallor": [
+    "booking-confirmation",
+    "fore-efter-cro"
+   ]
+  },
+  {
+   "px": 780,
+   "antal": 2,
+   "kallor": [
+    "certificates",
+    "live-ampy-se"
+   ]
+  },
+  {
+   "px": 1023,
+   "antal": 2,
+   "kallor": [
+    "elcentral-kollen",
+    "elkollen"
+   ]
+  },
+  {
+   "px": 360,
+   "antal": 2,
+   "kallor": [
+    "elcentral-kollen",
+    "main-cta"
+   ]
+  },
+  {
+   "px": 1279,
+   "antal": 2,
+   "kallor": [
+    "elcentral-kollen",
+    "testimonials-block"
+   ]
+  },
+  {
+   "px": 320,
+   "antal": 2,
+   "kallor": [
+    "eljour-sticky-bar",
+    "live-ampy-se"
+   ]
+  },
+  {
+   "px": 420,
+   "antal": 2,
+   "kallor": [
+    "ev-kalkylator",
+    "fore-efter-cro"
+   ]
+  },
+  {
+   "px": 1700,
+   "antal": 2,
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 1080,
+   "antal": 2,
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 374,
+   "antal": 2,
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 339,
+   "antal": 2,
+   "kallor": [
+    "hero-1",
+    "website-blocks"
+   ]
+  },
+  {
+   "px": 601,
+   "antal": 2,
+   "kallor": [
+    "hero-2-alternatives",
+    "hero-2-form"
+   ]
+  },
+  {
+   "px": 759,
+   "antal": 2,
+   "kallor": [
+    "live-ampy-se",
+    "testimonials-block"
+   ]
+  },
+  {
+   "px": 340,
+   "antal": 1,
+   "kallor": [
+    "battery-calculator"
+   ]
+  },
+  {
+   "px": 359,
+   "antal": 1,
+   "kallor": [
+    "booking-confirmation"
+   ]
+  },
+  {
+   "px": 620,
+   "antal": 1,
+   "kallor": [
+    "booking-confirmation"
+   ]
+  },
+  {
+   "px": 1099,
+   "antal": 1,
+   "kallor": [
+    "certificates"
+   ]
+  },
+  {
+   "px": 901,
+   "antal": 1,
+   "kallor": [
+    "certificates"
+   ]
+  },
+  {
+   "px": 389,
+   "antal": 1,
+   "kallor": [
+    "certificates"
+   ]
+  },
+  {
+   "px": 820,
+   "antal": 1,
+   "kallor": [
+    "cta-website"
+   ]
+  },
+  {
+   "px": 1280,
+   "antal": 1,
+   "kallor": [
+    "elcentral-kollen"
+   ]
+  },
+  {
+   "px": 314,
+   "antal": 1,
+   "kallor": [
+    "eljour-sticky-bar"
+   ]
+  },
+  {
+   "px": 1081,
+   "antal": 1,
+   "kallor": [
+    "elkollen"
+   ]
+  },
+  {
+   "px": 500,
+   "antal": 1,
+   "kallor": [
+    "ev-kalkylator"
+   ]
+  },
+  {
+   "px": 720,
+   "antal": 1,
+   "kallor": [
+    "fore-efter-cro"
+   ]
+  },
+  {
+   "px": 371,
+   "antal": 1,
+   "kallor": [
+    "hero-2-alternatives"
+   ]
+  },
+  {
+   "px": 380,
+   "antal": 1,
+   "kallor": [
+    "led-kalkylator"
+   ]
+  },
+  {
+   "px": 1320,
+   "antal": 1,
+   "kallor": [
+    "live-ampy-se"
+   ]
+  },
+  {
+   "px": 769,
+   "antal": 1,
+   "kallor": [
+    "live-ampy-se"
+   ]
+  },
+  {
+   "px": 760,
+   "antal": 1,
+   "kallor": [
+    "live-ampy-se"
+   ]
+  },
+  {
+   "px": 1300,
+   "antal": 1,
+   "kallor": [
+    "main-cta"
+   ]
+  },
+  {
+   "px": 460,
+   "antal": 1,
+   "kallor": [
+    "main-form"
+   ]
+  },
+  {
+   "px": 461,
+   "antal": 1,
+   "kallor": [
+    "main-form"
+   ]
+  },
+  {
+   "px": 1497,
+   "antal": 1,
+   "kallor": [
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "px": 1560,
+   "antal": 1,
+   "kallor": [
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "px": 430,
+   "antal": 1,
+   "kallor": [
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "px": 1210,
+   "antal": 1,
+   "kallor": [
+    "rot-gt-cro"
+   ]
+  },
+  {
+   "px": 479,
+   "antal": 1,
+   "kallor": [
+    "var-process-cro"
+   ]
+  }
+ ]
+}

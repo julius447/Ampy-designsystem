@@ -1,0 +1,4480 @@
+{
+ "metod": "typografi[].roll klassad med regex → 11 roller; frekvens = antal källor (auk 1–2) som delar värdet; första raden per roll/källa i matrisen",
+ "roller": [
+  "display",
+  "h1",
+  "h2",
+  "h3",
+  "lead",
+  "body",
+  "small",
+  "eyebrow",
+  "number",
+  "label",
+  "button"
+ ],
+ "frekvens": {
+  "display": {
+   "vikt": [
+    [
+     "700",
+     4
+    ],
+    [
+     "800",
+     1
+    ],
+    [
+     "600",
+     1
+    ],
+    [
+     "900",
+     1
+    ],
+    [
+     "500",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1.07",
+     3
+    ],
+    [
+     "1.08",
+     2
+    ],
+    [
+     "1.0 (48 px) / 1.08",
+     1
+    ],
+    [
+     "1.18 / 1.15",
+     1
+    ],
+    [
+     "1.14",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "40",
+     2
+    ],
+    [
+     "48",
+     1
+    ],
+    [
+     "44",
+     1
+    ],
+    [
+     "52",
+     1
+    ],
+    [
+     "60.0",
+     1
+    ],
+    [
+     "48.0",
+     1
+    ],
+    [
+     "60",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     7
+    ],
+    [
+     "Plus",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "-0.02em",
+     2
+    ],
+    [
+     "-0.018em",
+     2
+    ],
+    [
+     "-0.025em (−1,2 px)",
+     1
+    ],
+    [
+     "-0.015em / -0.012em",
+     1
+    ],
+    [
+     "-1.08px",
+     1
+    ],
+    [
+     "-0.008em (uppmätt −0.384px @48)",
+     1
+    ]
+   ]
+  },
+  "h1": {
+   "vikt": [
+    [
+     "600",
+     3
+    ],
+    [
+     "700",
+     2
+    ],
+    [
+     "None",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1.2",
+     2
+    ],
+    [
+     "1.05",
+     1
+    ],
+    [
+     "normal",
+     1
+    ],
+    [
+     "1.15",
+     1
+    ],
+    [
+     "1.4",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "46",
+     1
+    ],
+    [
+     "28",
+     1
+    ],
+    [
+     "40",
+     1
+    ],
+    [
+     "23.22",
+     1
+    ],
+    [
+     "34",
+     1
+    ],
+    [
+     "None",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     4
+    ],
+    [
+     "Plus",
+     2
+    ]
+   ],
+   "ls": [
+    [
+     "-0.015em",
+     3
+    ],
+    [
+     "None",
+     2
+    ],
+    [
+     "-0.025em",
+     1
+    ]
+   ]
+  },
+  "h2": {
+   "vikt": [
+    [
+     "500",
+     6
+    ],
+    [
+     "400",
+     5
+    ],
+    [
+     "600",
+     3
+    ],
+    [
+     "700",
+     2
+    ],
+    [
+     "fråga 300 (#3b3f59) · svar 500 (#090b32)",
+     1
+    ],
+    [
+     "450",
+     1
+    ],
+    [
+     "550",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1.2",
+     7
+    ],
+    [
+     "1.15",
+     3
+    ],
+    [
+     "1.2 / 1.333",
+     1
+    ],
+    [
+     "1.11",
+     1
+    ],
+    [
+     "1.25",
+     1
+    ],
+    [
+     "1.12",
+     1
+    ],
+    [
+     "normal",
+     1
+    ],
+    [
+     "1.18 / 1.15 desktop",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "36",
+     7
+    ],
+    [
+     "32",
+     4
+    ],
+    [
+     "32.0",
+     2
+    ],
+    [
+     "30",
+     1
+    ],
+    [
+     "24",
+     1
+    ],
+    [
+     "40",
+     1
+    ],
+    [
+     "40.0",
+     1
+    ],
+    [
+     "26",
+     1
+    ],
+    [
+     "38.0",
+     1
+    ],
+    [
+     "36.0",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     14
+    ],
+    [
+     "Plus",
+     1
+    ],
+    [
+     "AvdragOutfit",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "normal",
+     6
+    ],
+    [
+     "-0.015em",
+     4
+    ],
+    [
+     "-0.01em",
+     4
+    ],
+    [
+     "-0.025em",
+     1
+    ],
+    [
+     "-0.02em",
+     1
+    ],
+    [
+     "None",
+     1
+    ]
+   ]
+  },
+  "h3": {
+   "vikt": [
+    [
+     "600",
+     5
+    ],
+    [
+     "400",
+     2
+    ],
+    [
+     "500",
+     2
+    ],
+    [
+     "700 / 600 / 600",
+     1
+    ],
+    [
+     "700",
+     1
+    ],
+    [
+     "600 / 400 / 600 / 400 / 500 / 400",
+     1
+    ],
+    [
+     "400 (ROT) / 500 (GT mobil)",
+     1
+    ],
+    [
+     "450",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1.3",
+     4
+    ],
+    [
+     "1.25",
+     2
+    ],
+    [
+     "None",
+     2
+    ],
+    [
+     "normal",
+     2
+    ],
+    [
+     "1.4",
+     1
+    ],
+    [
+     "1.3 / 1.5",
+     1
+    ],
+    [
+     "1.2",
+     1
+    ],
+    [
+     "1.15",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "20",
+     3
+    ],
+    [
+     "22",
+     3
+    ],
+    [
+     "22.0",
+     2
+    ],
+    [
+     "32.0",
+     1
+    ],
+    [
+     "16.5",
+     1
+    ],
+    [
+     "32",
+     1
+    ],
+    [
+     "12.23",
+     1
+    ],
+    [
+     "20.0",
+     1
+    ],
+    [
+     "24.0",
+     1
+    ],
+    [
+     "23",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     9
+    ],
+    [
+     "Plus",
+     2
+    ],
+    [
+     "AvdragOutfit",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "normal",
+     5
+    ],
+    [
+     "None",
+     4
+    ],
+    [
+     "-0.01em",
+     3
+    ],
+    [
+     "-0.015em",
+     1
+    ],
+    [
+     "-0.025em",
+     1
+    ]
+   ]
+  },
+  "lead": {
+   "vikt": [
+    [
+     "400",
+     9
+    ],
+    [
+     "300",
+     4
+    ],
+    [
+     "600",
+     1
+    ],
+    [
+     "500 / 400",
+     1
+    ],
+    [
+     "600 / 400 / 400 / 400",
+     1
+    ],
+    [
+     "500 / 400 / 400 / 400",
+     1
+    ],
+    [
+     "200",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "None",
+     4
+    ],
+    [
+     "1.55",
+     3
+    ],
+    [
+     "1.58",
+     2
+    ],
+    [
+     "1.5",
+     2
+    ],
+    [
+     "1.4 / 1.625",
+     1
+    ],
+    [
+     "1.6 (mobil 1.55)",
+     1
+    ],
+    [
+     "1.6 / 1.5",
+     1
+    ],
+    [
+     "1.45",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "18",
+     5
+    ],
+    [
+     "20",
+     3
+    ],
+    [
+     "16",
+     2
+    ],
+    [
+     "13.0",
+     2
+    ],
+    [
+     "15",
+     1
+    ],
+    [
+     "13",
+     1
+    ],
+    [
+     "15.5",
+     1
+    ],
+    [
+     "12",
+     1
+    ],
+    [
+     "13.5",
+     1
+    ],
+    [
+     "12.23",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     14
+    ],
+    [
+     "Plus",
+     1
+    ],
+    [
+     "PJS",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "normal",
+     9
+    ],
+    [
+     "None",
+     6
+    ]
+   ]
+  },
+  "body": {
+   "vikt": [
+    [
+     "400",
+     11
+    ],
+    [
+     "300",
+     8
+    ],
+    [
+     "500",
+     4
+    ],
+    [
+     "600",
+     4
+    ],
+    [
+     "400, b 600",
+     1
+    ],
+    [
+     "600 / 400",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1.5",
+     11
+    ],
+    [
+     "None",
+     5
+    ],
+    [
+     "1.7",
+     3
+    ],
+    [
+     "normal",
+     3
+    ],
+    [
+     "1.6",
+     3
+    ],
+    [
+     "1.45",
+     2
+    ],
+    [
+     "1.4",
+     2
+    ],
+    [
+     "1.65",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "16",
+     9
+    ],
+    [
+     "18",
+     5
+    ],
+    [
+     "17",
+     4
+    ],
+    [
+     "19",
+     4
+    ],
+    [
+     "18.0",
+     3
+    ],
+    [
+     "15",
+     2
+    ],
+    [
+     "16.0",
+     2
+    ],
+    [
+     "10",
+     2
+    ],
+    [
+     "16.5",
+     1
+    ],
+    [
+     "15.5",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     20
+    ],
+    [
+     "Plus",
+     3
+    ],
+    [
+     "AvdragOutfit",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "normal",
+     11
+    ],
+    [
+     "None",
+     10
+    ],
+    [
+     "-0.005em",
+     1
+    ]
+   ]
+  },
+  "small": {
+   "vikt": [
+    [
+     "400",
+     10
+    ],
+    [
+     "500",
+     3
+    ],
+    [
+     "300",
+     3
+    ],
+    [
+     "600",
+     2
+    ],
+    [
+     "400, namn 600",
+     1
+    ],
+    [
+     "600 / 300",
+     1
+    ],
+    [
+     "450",
+     1
+    ],
+    [
+     "500 / 400 / 600",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "None",
+     5
+    ],
+    [
+     "1.5",
+     4
+    ],
+    [
+     "1.45",
+     3
+    ],
+    [
+     "normal",
+     3
+    ],
+    [
+     "1.2",
+     2
+    ],
+    [
+     "1",
+     2
+    ],
+    [
+     "1.3",
+     2
+    ],
+    [
+     "tight",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "13",
+     4
+    ],
+    [
+     "14",
+     4
+    ],
+    [
+     "12",
+     3
+    ],
+    [
+     "22",
+     2
+    ],
+    [
+     "13.5",
+     2
+    ],
+    [
+     "12.0",
+     2
+    ],
+    [
+     "14.0",
+     2
+    ],
+    [
+     "14.5",
+     2
+    ],
+    [
+     "16.5",
+     1
+    ],
+    [
+     "12.5",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     14
+    ],
+    [
+     "PJS",
+     1
+    ],
+    [
+     "AvdragOutfit",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "None",
+     7
+    ],
+    [
+     "normal",
+     6
+    ],
+    [
+     "-0.01em",
+     1
+    ],
+    [
+     "-0.008em",
+     1
+    ],
+    [
+     "0.02em",
+     1
+    ],
+    [
+     "0.12em (0.08em ≤420 cqi)",
+     1
+    ]
+   ]
+  },
+  "eyebrow": {
+   "vikt": [
+    [
+     "600",
+     6
+    ],
+    [
+     "500",
+     3
+    ],
+    [
+     "700",
+     2
+    ],
+    [
+     "700–800",
+     1
+    ],
+    [
+     "400",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1.5",
+     4
+    ],
+    [
+     "None",
+     4
+    ],
+    [
+     "normal",
+     2
+    ],
+    [
+     "1.2",
+     2
+    ],
+    [
+     "20px",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "12",
+     4
+    ],
+    [
+     "11.0",
+     2
+    ],
+    [
+     "15",
+     2
+    ],
+    [
+     "13",
+     2
+    ],
+    [
+     "11",
+     1
+    ],
+    [
+     "10.23",
+     1
+    ],
+    [
+     "12.23",
+     1
+    ],
+    [
+     "24.0",
+     1
+    ],
+    [
+     "12.5",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     9
+    ],
+    [
+     "Plus",
+     3
+    ],
+    [
+     "AvdragOutfit",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "0.06em",
+     3
+    ],
+    [
+     "0.04em",
+     2
+    ],
+    [
+     "0.02em",
+     2
+    ],
+    [
+     "0.2–0.25em versal",
+     1
+    ],
+    [
+     "0.12em uppercase",
+     1
+    ],
+    [
+     "0.1em uppercase",
+     1
+    ]
+   ]
+  },
+  "number": {
+   "vikt": [
+    [
+     "700",
+     3
+    ],
+    [
+     "400",
+     1
+    ],
+    [
+     "700 / 500 / 700",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1.3",
+     2
+    ],
+    [
+     "1.0",
+     2
+    ],
+    [
+     "1.5",
+     1
+    ],
+    [
+     "1.1",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "15",
+     1
+    ],
+    [
+     "12.0",
+     1
+    ],
+    [
+     "20.07",
+     1
+    ],
+    [
+     "38.72",
+     1
+    ],
+    [
+     "28",
+     1
+    ],
+    [
+     "56",
+     1
+    ],
+    [
+     "23.04",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "JetBrains",
+     2
+    ],
+    [
+     "Plus",
+     2
+    ],
+    [
+     "Outfit",
+     1
+    ],
+    [
+     "AvdragOutfit",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "-0.01em",
+     2
+    ],
+    [
+     "-0.03em",
+     2
+    ],
+    [
+     "normal",
+     1
+    ],
+    [
+     "0.1em uppercase / normal / -0.02em",
+     1
+    ],
+    [
+     "-0.012em",
+     1
+    ]
+   ]
+  },
+  "label": {
+   "vikt": [
+    [
+     "500",
+     6
+    ],
+    [
+     "600",
+     3
+    ],
+    [
+     "400",
+     2
+    ],
+    [
+     "500 / 400",
+     1
+    ],
+    [
+     "700 / 400",
+     1
+    ],
+    [
+     "600 / 400",
+     1
+    ],
+    [
+     "300",
+     1
+    ],
+    [
+     "600 / 700",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "None",
+     4
+    ],
+    [
+     "1.5",
+     3
+    ],
+    [
+     "1.35",
+     2
+    ],
+    [
+     "1.5 / 1.6",
+     1
+    ],
+    [
+     "1.25 / 1.35",
+     1
+    ],
+    [
+     "1.4",
+     1
+    ],
+    [
+     "1.15",
+     1
+    ],
+    [
+     "20px",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "13.5",
+     2
+    ],
+    [
+     "13.0",
+     2
+    ],
+    [
+     "16",
+     2
+    ],
+    [
+     "15",
+     2
+    ],
+    [
+     "13",
+     2
+    ],
+    [
+     "18",
+     1
+    ],
+    [
+     "17.0",
+     1
+    ],
+    [
+     "10.23",
+     1
+    ],
+    [
+     "12.23",
+     1
+    ],
+    [
+     "14",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     10
+    ],
+    [
+     "Plus",
+     2
+    ],
+    [
+     "PJS",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "None",
+     6
+    ],
+    [
+     "normal",
+     3
+    ],
+    [
+     "0.02em",
+     2
+    ],
+    [
+     "0.01em",
+     2
+    ],
+    [
+     "-0.005em / 0",
+     1
+    ]
+   ]
+  },
+  "button": {
+   "vikt": [
+    [
+     "500",
+     13
+    ],
+    [
+     "600",
+     10
+    ],
+    [
+     "400",
+     3
+    ],
+    [
+     "300",
+     1
+    ],
+    [
+     "700",
+     1
+    ]
+   ],
+   "lh": [
+    [
+     "1",
+     6
+    ],
+    [
+     "None",
+     6
+    ],
+    [
+     "normal",
+     4
+    ],
+    [
+     "1.3",
+     2
+    ],
+    [
+     "1.1",
+     2
+    ],
+    [
+     "1.0",
+     2
+    ],
+    [
+     "1.5",
+     2
+    ],
+    [
+     "1.2",
+     1
+    ]
+   ],
+   "px1440": [
+    [
+     "16",
+     10
+    ],
+    [
+     "16.0",
+     5
+    ],
+    [
+     "15",
+     4
+    ],
+    [
+     "18",
+     2
+    ],
+    [
+     "18.0",
+     2
+    ],
+    [
+     "15.5",
+     1
+    ],
+    [
+     "17.5",
+     1
+    ],
+    [
+     "13",
+     1
+    ],
+    [
+     "13.5",
+     1
+    ],
+    [
+     "17.12",
+     1
+    ]
+   ],
+   "font": [
+    [
+     "Outfit",
+     17
+    ],
+    [
+     "Plus",
+     2
+    ],
+    [
+     "ÄRVD",
+     1
+    ],
+    [
+     "AvdragOutfit",
+     1
+    ]
+   ],
+   "ls": [
+    [
+     "normal",
+     10
+    ],
+    [
+     "None",
+     9
+    ],
+    [
+     "0.5px",
+     2
+    ],
+    [
+     "0.08px",
+     1
+    ],
+    [
+     "0.16px",
+     1
+    ],
+    [
+     "0.14em uppercase",
+     1
+    ]
+   ]
+  }
+ },
+ "matris": {
+  "article-template": {
+   "display": [
+    {
+     "px_desktop": 48,
+     "px_mobil": 36,
+     "weight": 800,
+     "lh": "1.0 (48 px) / 1.08",
+     "ls": "-0.025em (−1,2 px)",
+     "font": "Outfit",
+     "roll": "h1 (hero, på navy)",
+     "size": "text-4xl lg:text-5xl"
+    }
+   ],
+   "h2": [
+    {
+     "px_desktop": 30,
+     "px_mobil": 24,
+     "weight": 700,
+     "lh": "1.2 / 1.333",
+     "ls": "-0.015em",
+     "font": "Outfit",
+     "roll": "h2 (artikel)",
+     "size": "text-2xl lg:text-3xl"
+    },
+    {
+     "px_desktop": 36,
+     "px_mobil": 30,
+     "weight": 700,
+     "lh": 1.11,
+     "ls": "-0.025em",
+     "font": "Outfit",
+     "roll": "h2 'Populära artiklar'",
+     "size": "text-3xl lg:text-4xl"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 20,
+     "px_mobil": 20,
+     "weight": 600,
+     "lh": 1.4,
+     "ls": "-0.015em",
+     "font": "Outfit",
+     "roll": "h3 (artikel)",
+     "size": "text-xl"
+    },
+    {
+     "px_desktop": 32.0,
+     "px_mobil": 26.0,
+     "weight": "700 / 600 / 600",
+     "lh": "1.4",
+     "ls": "-0.025em",
+     "font": "Outfit",
+     "roll": "h3 i kort (CTA-review 26/32, sektion 22/24, relaterade 17/17,5)",
+     "size": "literaler"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 20,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": "1.4 / 1.625",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "hero-intro",
+     "size": "20px / 16px"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": 1.65,
+     "ls": "normal",
+     "font": "Outfit (Google Fonts 300–900)",
+     "roll": "body",
+     "size": "16px"
+    },
+    {
+     "px_desktop": 18,
+     "px_mobil": 18,
+     "weight": 400,
+     "lh": 1.7,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "brödtext p",
+     "size": "1.125rem"
+    },
+    {
+     "px_desktop": 17,
+     "px_mobil": 17,
+     "weight": 400,
+     "lh": 1.625,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "listor ul/ol",
+     "size": "1.0625rem"
+    },
+    {
+     "px_desktop": 18,
+     "px_mobil": 18,
+     "weight": 400,
+     "lh": 1.7,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "länk i brödtext",
+     "size": "ärvd"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 13,
+     "px_mobil": 13,
+     "weight": "400, namn 600",
+     "lh": "tight",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "byline",
+     "size": "13px"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 11.0,
+     "px_mobil": null,
+     "weight": "700–800",
+     "lh": "normal",
+     "ls": "0.2–0.25em versal",
+     "font": "Outfit",
+     "roll": "eyebrows (SNABBT SVAR, KEY TAKEAWAYS, PRO TIP, tabellrubrik, footer-H4)",
+     "size": "11–15px"
+    }
+   ]
+  },
+  "battery-calculator": {
+   "h1": [
+    {
+     "px_desktop": 25.03,
+     "px_mobil": 22.19,
+     "weight": 700,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "h1",
+     "size": "var(--fs-2xl) (samma px-bugg som EV, vw-baserad)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 500,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "streams-summary (Se fördelningen)",
+     "size": "var(--fs-sm)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 14.0,
+     "px_mobil": 13.39,
+     "weight": "500 / 700",
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "be-caption (Återbetald) / be-time (2,4 år)",
+     "size": "clamp(1.3rem, +0.1vw, 1.4rem) / clamp(1.3rem, +0.15vw, 1.5rem)"
+    }
+   ],
+   "number": [
+    {
+     "px_desktop": 44.08,
+     "px_mobil": 40.26,
+     "weight": 700,
+     "lh": 1.0,
+     "ls": "-0.03em",
+     "font": "Plus Jakarta Sans",
+     "roll": "hero15-number",
+     "size": "var(--fs-4xl) clamp(4rem, 4rem + 3.5·((100vw−320px)/960), 7.5rem)"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 17.12,
+     "px_mobil": 17.01,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "btn--primary (Få en exakt offert)",
+     "size": "var(--fs-md)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": "600 / 500",
+     "lh": null,
+     "ls": null,
+     "font": "PJS / Outfit",
+     "roll": "btn--outline (Maila kalkylen) / btn-link",
+     "size": "--fs-sm"
+    }
+   ]
+  },
+  "booking-confirmation": {
+   "h1": [
+    {
+     "px_desktop": 46,
+     "px_mobil": 30,
+     "weight": 600,
+     "lh": 1.05,
+     "ls": "-0.025em",
+     "font": "Outfit",
+     "roll": "h1 datum (bk-when__day)",
+     "size": "clamp(30px, 5.5vw, 46px)"
+    }
+   ],
+   "h2": [
+    {
+     "px_desktop": 24,
+     "px_mobil": 20.12,
+     "weight": 600,
+     "lh": 1.2,
+     "ls": "-0.01em",
+     "font": "Outfit",
+     "roll": "h2 kortrubrik (of-h2)",
+     "size": "clamp(20px, .8vw + 17px, 24px)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 16.5,
+     "px_mobil": 16.5,
+     "weight": 600,
+     "lh": "1.3 / 1.5",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "arbetsmoment h3 / beskrivning p",
+     "size": "16.5px / 15px"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "body",
+     "size": "16px (UA)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "statusrad (bk-state)",
+     "size": "15px"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1.45,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "faktatext (tid/adress)",
+     "size": "16px"
+    },
+    {
+     "px_desktop": 16.5,
+     "px_mobil": 16.5,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "details-summary (Material som ingår / Villkor)",
+     "size": "16.5px"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 16.5,
+     "px_mobil": 16.5,
+     "weight": "600 / 300",
+     "lh": "1.5 / 1.55",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "panel h3 / hint (p-hint)",
+     "size": "16.5px / 13.5px"
+    },
+    {
+     "px_desktop": 12.5,
+     "px_mobil": 12.5,
+     "weight": 400,
+     "lh": 1.7,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "sidfot (of-foot)",
+     "size": "12.5px"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 700,
+     "lh": 1.5,
+     "ls": "0.12em uppercase",
+     "font": "Outfit",
+     "roll": "eyebrow 'VI KOMMER' (w-cap)",
+     "size": "12px"
+    },
+    {
+     "px_desktop": 11,
+     "px_mobil": 11,
+     "weight": 700,
+     "lh": 1.5,
+     "ls": "0.1em uppercase",
+     "font": "Outfit",
+     "roll": "TILLÄGG-tagg (r-tag)",
+     "size": "11px"
+    }
+   ],
+   "number": [
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "prisrad etikett / belopp",
+     "size": "15px / 15px"
+    },
+    {
+     "px_desktop": 12.0,
+     "px_mobil": 12.0,
+     "weight": "700 / 500 / 700",
+     "lh": 1.5,
+     "ls": "0.1em uppercase / normal / -0.02em",
+     "font": "Outfit",
+     "roll": "totalplatta: etikett / not / belopp",
+     "size": "12px / 13px / clamp(26px, 3.4vw, 30px)"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "fältetikett (bk-field label)",
+     "size": "13.5px"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "sekundärknapp (of-btn-secondary)",
+     "size": "15px"
+    },
+    {
+     "px_desktop": 15.5,
+     "px_mobil": 15.5,
+     "weight": 600,
+     "lh": 1.2,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "skicka-knapp (of-btn-send)",
+     "size": "15.5px"
+    }
+   ]
+  },
+  "offer-accepted": {
+   "h1": [
+    {
+     "px_desktop": 36,
+     "px_mobil": 27,
+     "weight": 600,
+     "lh": 1.16,
+     "ls": "-0.02em",
+     "font": null,
+     "roll": "h1",
+     "size": "clamp(26px, 1.1vw + 23px, 36px); ≤560 clamp(27px, 6.5vw, 31px)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 17,
+     "px_mobil": 17,
+     "weight": "600 / 400",
+     "lh": "1.35 / 1.4",
+     "ls": null,
+     "font": null,
+     "roll": "steg-rubrik / steg-beskrivning (small)",
+     "size": "17px / 14px"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.14em uppercase",
+     "font": null,
+     "roll": "eyebrow 'SÅ HÄR GÅR VI VIDARE' (h2)",
+     "size": "12px"
+    }
+   ]
+  },
+  "certificates": {
+   "h2": [
+    {
+     "px_desktop": 36,
+     "px_mobil": 26.76,
+     "weight": 400,
+     "lh": 1.2,
+     "ls": "-0.01em",
+     "font": "Outfit",
+     "roll": "h2",
+     "size": "var(--aptext-2xl, 36px)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 32,
+     "px_mobil": 24.54,
+     "weight": 400,
+     "lh": 1.3,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h3 'Certifikat och partners'",
+     "size": "var(--aptext-xl)"
+    }
+   ]
+  },
+  "cta-website": {
+   "h1": [
+    {
+     "px_desktop": 28,
+     "px_mobil": 28,
+     "weight": 600,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "galleri h1 (demo)",
+     "size": "28px"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 300,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "galleri body (demo)",
+     "size": "16px"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "knapptext (alla tre)",
+     "size": "16px"
+    }
+   ]
+  },
+  "elcentral-kollen": {
+   "display": [
+    {
+     "px_desktop": 44,
+     "px_mobil": 32,
+     "weight": 700,
+     "lh": 1.08,
+     "ls": "-0.02em",
+     "font": "Plus Jakarta Sans",
+     "roll": "rail-heading (H1: Är din elcentral säker?)",
+     "size": "clamp(3.2rem, 4vw, 4.4rem)"
+    }
+   ],
+   "h2": [
+    {
+     "px_desktop": 36,
+     "px_mobil": 20.9,
+     "weight": 700,
+     "lh": 1.15,
+     "ls": "-0.02em",
+     "font": "Plus Jakarta Sans",
+     "roll": "start-heading (Då sätter vi igång)",
+     "size": "--fs-display = clamp(2rem, 1.7rem + 1vw, 2.8rem); ≥1024: clamp(2.8rem, 1.4rem + 2vw, 3.6rem)"
+    },
+    {
+     "px_desktop": 32,
+     "px_mobil": 20,
+     "weight": 600,
+     "lh": 1.25,
+     "ls": "-0.015em",
+     "font": "Plus Jakarta Sans",
+     "roll": "q-title (frågerubrik)",
+     "size": "--fs-title = clamp(2rem, 1.8rem + .5vw, 2.4rem); ≥1024: clamp(2.6rem, 1.2rem + 1.8vw, 3.2rem)"
+    },
+    {
+     "px_desktop": 32,
+     "px_mobil": 28,
+     "weight": 700,
+     "lh": 1.12,
+     "ls": "-0.02em",
+     "font": "Plus Jakarta Sans",
+     "roll": "blockhead-title (blockläge: Behöver din elcentral bytas?)",
+     "size": "clamp(2.8rem, 1.6rem + 2.2vw, 4rem); ≥1024: clamp(2.4rem, calc(0.83vw + 2.13rem), 3.2rem) (= --aptext-xl)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 20,
+     "px_mobil": 22,
+     "weight": 700,
+     "lh": 1.2,
+     "ls": "-0.01em",
+     "font": "Plus Jakarta Sans",
+     "roll": "lead-title",
+     "size": "var(--fs-20) (≤767: --fs-22? mätt 22 på mobil)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 20,
+     "px_mobil": 18,
+     "weight": 400,
+     "lh": "1.6 (mobil 1.55)",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "rail-lead",
+     "size": "1.8rem (≥1024: 2rem)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 400,
+     "lh": 1.55,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-intro",
+     "size": "var(--fs-15)"
+    },
+    {
+     "px_desktop": 13,
+     "px_mobil": 13,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "lead-label",
+     "size": "var(--fs-13)"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-input",
+     "size": "var(--fs-16)"
+    },
+    {
+     "px_desktop": 13.0,
+     "px_mobil": 13.0,
+     "weight": "500 / 400",
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-error / lead-consent-note",
+     "size": "--fs-13 / --fs-12"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 18,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": 1.4,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "option-title (svarsalternativ)",
+     "size": "--fs-15 (≥1024: --fs-18)"
+    },
+    {
+     "px_desktop": 18,
+     "px_mobil": 14,
+     "weight": 600,
+     "lh": 1.2,
+     "ls": "-0.005em",
+     "font": "Plus Jakarta Sans",
+     "roll": "pill (Låg risk / Förhöjd risk / Med lastbalansering / Oklart / Inget planerat)",
+     "size": "clamp(1.4rem, 1.3rem + .4vw, 1.6rem) (≥1024: --fs-18)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 14,
+     "px_mobil": 14,
+     "weight": 450,
+     "lh": 1.6,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "rail-stat (Elsäkerhetsverket registrerade 298…)",
+     "size": "var(--fs-14)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 13,
+     "weight": 400,
+     "lh": 1.45,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "q-subtitle",
+     "size": "--fs-13 (≥1024: --fs-15)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 13,
+     "weight": 400,
+     "lh": 1.45,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "option-clarifier",
+     "size": "--fs-13 (≥1024: --fs-15)"
+    },
+    {
+     "px_desktop": 13.0,
+     "px_mobil": 13.0,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "crumb-back (Tillbaka) / crumb-restart (Börja om)",
+     "size": "--fs-13 / --fs-12"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.06em",
+     "font": "Plus Jakarta Sans",
+     "roll": "result-eyebrow (DITT BESKED)",
+     "size": "var(--fs-12)"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 18,
+     "px_mobil": 15,
+     "weight": "500 / 400",
+     "lh": "1.5 / 1.6",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "finding-label / finding-detail p",
+     "size": "--fs-15 (≥1024: --fs-18)"
+    },
+    {
+     "px_desktop": 13.0,
+     "px_mobil": 13.0,
+     "weight": "700 / 400",
+     "lh": null,
+     "ls": null,
+     "font": "PJS / Outfit",
+     "roll": "akut-label / akut-text",
+     "size": "--fs-13 / --fs-13 (≥1024: --fs-15)"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 14.12,
+     "weight": 400,
+     "lh": 1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "rail-contact / rail-phone (gradient-CTA)",
+     "size": "--ampy-cta-fs = clamp(1.4rem, calc(0.21vw + 1.33rem), 1.6rem) (= --aptext-sm)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 600,
+     "lh": 1.3,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "cta-primary (Starta testet / Få kostnadsfri rådgivning / Ring oss / Fortsätt)",
+     "size": "var(--fs-15)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": null,
+     "ls": null,
+     "font": "ÄRVD = Arial (font-family saknas, ingen font:inherit)",
+     "roll": "cta-secondary",
+     "size": "var(--fs-15)"
+    }
+   ]
+  },
+  "eljour-block": {
+   "h2": [
+    {
+     "px_desktop": 36,
+     "px_mobil": 26,
+     "weight": 500,
+     "lh": 1.15,
+     "ls": "-0.015em",
+     "font": "Outfit (Google Fonts i preview; self-hostad i produktion enligt README)",
+     "roll": "h2 (delad: fråga + instruktion)",
+     "size": "clamp(2.6rem, 3.3vw, 3.6rem)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 19,
+     "px_mobil": 17,
+     "weight": 500,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "symptomrad (knapp)",
+     "size": "clamp(1.7rem, 1.9vw, 1.9rem)"
+    },
+    {
+     "px_desktop": 17,
+     "px_mobil": 17,
+     "weight": 400,
+     "lh": 1.6,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "risktext (panel)",
+     "size": "1.7rem"
+    },
+    {
+     "px_desktop": 15.5,
+     "px_mobil": 15.5,
+     "weight": "400, b 600",
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "samtalskortets lead",
+     "size": "1.55rem"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 400,
+     "lh": 1.4,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "trust-punkter",
+     "size": "1.5rem"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 600,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "nivåtagg (Akut/Varning)",
+     "size": "1.2rem"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 17.5,
+     "px_mobil": 15,
+     "weight": 600,
+     "lh": 1.1,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "CTA 'Ring eljouren 010-265 79 79'",
+     "size": "clamp(1.5rem, 1.4vw, 1.75rem) · ≤480 1.5rem"
+    }
+   ]
+  },
+  "elkollen": {
+   "display": [
+    {
+     "px_desktop": 40,
+     "px_mobil": 28,
+     "weight": 600,
+     "lh": "1.18 / 1.15",
+     "ls": "-0.015em / -0.012em",
+     "font": "Outfit",
+     "roll": "hero__h1 (Får du göra eljobbet själv?)",
+     "size": "clamp(3.4rem, 3.2vw, 4rem); ≤767: clamp(2.4rem, 7.4vw, 2.8rem); 768-1023: clamp(2.8rem, 3.4vw, 3.4rem)"
+    }
+   ],
+   "h1": [
+    {
+     "px_desktop": 40,
+     "px_mobil": 29.75,
+     "weight": 600,
+     "lh": 1.15,
+     "ls": "-0.015em",
+     "font": "Outfit",
+     "roll": "page-heading (inbäddat läge, utanför verktyget)",
+     "size": "clamp(2.8rem, 2rem + 2.5vw, 4rem)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 22,
+     "px_mobil": 20,
+     "weight": 600,
+     "lh": 1.25,
+     "ls": "-0.01em",
+     "font": "Outfit",
+     "roll": "entry-title (Var i hemmet gäller det?)",
+     "size": "--fs-22 (≤767: --fs-20)"
+    },
+    {
+     "px_desktop": 22,
+     "px_mobil": 20,
+     "weight": 600,
+     "lh": 1.3,
+     "ls": "-0.01em",
+     "font": "Outfit",
+     "roll": "q-title (Vad gäller för lampan?)",
+     "size": "--fs-22 (≤767: --fs-20)"
+    },
+    {
+     "px_desktop": 22.0,
+     "px_mobil": 20.0,
+     "weight": "600 / 400 / 600 / 400 / 500 / 400",
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-title / lead-intro / lead-label / lead-input / lead-error / lead-fineprint",
+     "size": "--fs-22 (≤767: 20) / --fs-15 / --fs-14 / --fs-16 / --fs-14 / --fs-13"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 20,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": "1.6 / 1.5",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "hero__sub",
+     "size": "1.8rem (≥1024: 2rem; ≤767: 1.6rem)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 15.0,
+     "weight": "600 / 400",
+     "lh": "1.35 / 1.45",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "option-title / option-clarifier",
+     "size": "--fs-16 / --fs-14 (≤767: 15 / 13)"
+    },
+    {
+     "px_desktop": 17,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "summary (Golvvärme är en del av…)",
+     "size": "--fs-17 (≤767: --fs-16)"
+    },
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 15.0,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "row-text (✓/✗-rader) / tip-text",
+     "size": "--fs-16 (≤767: --fs-15) / --fs-15"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 17,
+     "px_mobil": null,
+     "weight": 500,
+     "lh": 1.45,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "hero__trust li",
+     "size": "1.5rem (≥1024: 1.7rem)"
+    },
+    {
+     "px_desktop": 13,
+     "px_mobil": 11,
+     "weight": 400,
+     "lh": 1.45,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "source-line (Källa: Elsäkerhetsverket…)",
+     "size": "--fs-13 (≤767: --fs-11)"
+    },
+    {
+     "px_desktop": 14,
+     "px_mobil": 14,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "list-subtitle (Välj jobbet…)",
+     "size": "--fs-14"
+    },
+    {
+     "px_desktop": 14,
+     "px_mobil": 14,
+     "weight": "500 / 400 / 600",
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "crumb-back / crumb-sep / crumb-job",
+     "size": "--fs-14"
+    },
+    {
+     "px_desktop": 22,
+     "px_mobil": 18,
+     "weight": 700,
+     "lh": 1.2,
+     "ls": "-0.01em",
+     "font": "Outfit",
+     "roll": "badge (hero-läge: verdict-board 'Det här kräver elektriker' / 'Det här får du göra själv')",
+     "size": "--fs-22 (≤767: --fs-18)"
+    },
+    {
+     "px_desktop": 20,
+     "px_mobil": 15,
+     "weight": 700,
+     "lh": 1.2,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "badge (inbäddat läge: pill)",
+     "size": "--fs-20 (≤767: --fs-15)"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 17.0,
+     "px_mobil": 16.0,
+     "weight": "600 / 400",
+     "lh": "1.25 / 1.35",
+     "ls": "-0.005em / 0",
+     "font": "Outfit",
+     "roll": "roomtile-label / roomtile-sub",
+     "size": "--fs-17 / --fs-14 (≤767: --fs-16 / --fs-13)"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": 1.4,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "job-row-label",
+     "size": "--fs-16 (≤767: --fs-15)"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 14.12,
+     "weight": 400,
+     "lh": 1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "hero__btn",
+     "size": "clamp(1.4rem, calc(0.21vw + 1.33rem), 1.6rem) (= --aptext-sm)"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 600,
+     "lh": 1.3,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "cta-primary--solid (Boka kostnadsfri rådgivning)",
+     "size": "--fs-16"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": 1.3,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "cta-secondary (Läs mer om golvvärme)",
+     "size": "--fs-15"
+    },
+    {
+     "px_desktop": 13,
+     "px_mobil": 13,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "cta-note",
+     "size": "--fs-13"
+    }
+   ]
+  },
+  "energycalc": {
+   "display": [
+    {
+     "px_desktop": 52,
+     "px_mobil": 35.7,
+     "weight": 900,
+     "lh": 1.08,
+     "ls": "-0.02em",
+     "font": "Outfit",
+     "roll": "anchor-num (38 000-48 000)",
+     "size": "var(--ty-display) = clamp(3.2rem, 2.4rem + 3vw, 5.2rem)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 20,
+     "px_mobil": 20,
+     "weight": 500,
+     "lh": 1.15,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "spark-h (Så mycket kan du spara per år)",
+     "size": "var(--ty-h) 2rem"
+    },
+    {
+     "px_desktop": 20,
+     "px_mobil": 20,
+     "weight": 500,
+     "lh": 1.15,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-title (En elektriker räknar på ditt hus)",
+     "size": "var(--ty-h)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 15.5,
+     "px_mobil": 15.5,
+     "weight": 300,
+     "lh": 1.55,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-sub",
+     "size": "var(--ty-sub) 1.55rem"
+    },
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-lbl (Ditt namn *)",
+     "size": "var(--ty-eyebrow)"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 300,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-field",
+     "size": "var(--ty-body)"
+    },
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 300,
+     "lh": 1.55,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-consent",
+     "size": "var(--ty-label)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "body",
+     "size": "1.6rem"
+    },
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 15,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "method summary (Så har vi räknat)",
+     "size": "var(--ty-label) (≤480: 1.5rem)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 300,
+     "lh": 1.55,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "gearcopy / hp-hint / capnote",
+     "size": "var(--ty-label)"
+    },
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 300,
+     "lh": 1.55,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "method-body / method-legal",
+     "size": "--ty-label / --ty-micro"
+    },
+    {
+     "px_desktop": 22,
+     "px_mobil": 18.12,
+     "weight": 500,
+     "lh": 1.36,
+     "ls": "-0.008em",
+     "font": "Outfit",
+     "roll": "trust-quote p",
+     "size": "var(--ty-lead) = clamp(1.8rem, 1.5rem + 0.8vw, 2.2rem)"
+    },
+    {
+     "px_desktop": 72,
+     "px_mobil": 64,
+     "weight": 500,
+     "lh": 0.62,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "trust-mark (”)",
+     "size": "7.2rem (≤480: 6.4rem)"
+    },
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 300,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "trust-cite / trust-rating-txt",
+     "size": "var(--ty-label)"
+    },
+    {
+     "px_desktop": 15.5,
+     "px_mobil": 15.5,
+     "weight": 500,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "trust-stat (3 000+ …)",
+     "size": "var(--ty-sub)"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 500,
+     "lh": null,
+     "ls": "0.14em",
+     "font": "Outfit",
+     "roll": "gearhead (DITT HUS / DIN EL)",
+     "size": "var(--ty-eyebrow) 1.2rem"
+    },
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 500,
+     "lh": 1.2,
+     "ls": "0.14em",
+     "font": "Outfit",
+     "roll": "eyebrow (SÅ FÖRBRUKAR DITT HUS ENERGI IDAG)",
+     "size": "var(--ty-eyebrow)"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1.35,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "hp-legend / lbl (frågan)",
+     "size": "var(--ty-body) 1.6rem"
+    },
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 300,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lbl-soft / hp-legend-soft (hjälpare)",
+     "size": "var(--ty-label) 1.35rem"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lbl-val (150 m²)",
+     "size": "var(--ty-body)"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1.15,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "hp-lbl (Direktel)",
+     "size": "var(--ty-body)"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 18,
+     "px_mobil": 16.17,
+     "weight": 500,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "cta (Få kostnadsfri rådgivning)",
+     "size": "clamp(1.6rem, 1.5rem + 0.3vw, 1.8rem)"
+    },
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 300,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "share-btn (Dela din kalkyl)",
+     "size": "var(--ty-label)"
+    }
+   ]
+  },
+  "ev-kalkylator": {
+   "h1": [
+    {
+     "px_desktop": 23.22,
+     "px_mobil": 23.94,
+     "weight": 700,
+     "lh": 1.2,
+     "ls": "-0.015em",
+     "font": "Plus Jakarta Sans",
+     "roll": "h1 (.ampy-calc__t-2xl)",
+     "size": "var(--fs-2xl) = clamp(2rem, calc(2rem + 2.8 * ((100cqi - 320px) / 960)), 4.8rem)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "selector-name (i listan)",
+     "size": "var(--fs-sm)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.0,
+     "weight": "600 / 400 / 400 / 400",
+     "lh": null,
+     "ls": null,
+     "font": "PJS / Outfit / Outfit / Outfit",
+     "roll": "lead label / input / inline-fel / consent-text",
+     "size": "--fs-sm / --fs-md / --fs-xs / --fs-xs"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 18.27,
+     "px_mobil": 17.06,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "disclosure-summary (.ampy-calc__t-subheading)",
+     "size": "var(--fs-lg)"
+    },
+    {
+     "px_desktop": 17.12,
+     "px_mobil": 17.01,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "body (.ampy-calc)",
+     "size": "var(--fs-md)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 10.23,
+     "px_mobil": 10.01,
+     "weight": 600,
+     "lh": 1.2,
+     "ls": "0.02em",
+     "font": "Outfit",
+     "roll": "badge (Bästsäljare / Prisvärd / Rekommenderas)",
+     "size": "var(--fs-xs)"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 10.23,
+     "px_mobil": 10.01,
+     "weight": 500,
+     "lh": null,
+     "ls": "0.04em",
+     "font": "Outfit",
+     "roll": "header-label (LADDBOX-KALKYLATOR)",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.06em",
+     "font": "Outfit",
+     "roll": "tier-label",
+     "size": "var(--fs-sm)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.06em",
+     "font": "Plus Jakarta Sans",
+     "roll": "hero15-eyebrow (DU SPARAR PER ÅR)",
+     "size": "var(--fs-sm)"
+    },
+    {
+     "px_desktop": 10.23,
+     "px_mobil": 10.01,
+     "weight": 500,
+     "lh": null,
+     "ls": "0.02em",
+     "font": "Outfit",
+     "roll": "trio-label",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.06em",
+     "font": "Plus Jakarta Sans",
+     "roll": "evidence-label (DIN MÅNADSKOSTNAD…)",
+     "size": "var(--fs-sm)"
+    },
+    {
+     "px_desktop": 10.23,
+     "px_mobil": 10.01,
+     "weight": 500,
+     "lh": null,
+     "ls": "0.02em",
+     "font": "Outfit",
+     "roll": "monthly-col-label (OFFENTLIG LADDNING)",
+     "size": "var(--fs-xs)"
+    }
+   ],
+   "number": [
+    {
+     "px_desktop": 20.07,
+     "px_mobil": 18.1,
+     "weight": 700,
+     "lh": 1.3,
+     "ls": "-0.01em",
+     "font": "JetBrains Mono",
+     "roll": "value-prominent (20 000)",
+     "size": "var(--fs-xl)"
+    },
+    {
+     "px_desktop": 38.72,
+     "px_mobil": 26.19,
+     "weight": 700,
+     "lh": 1.0,
+     "ls": "-0.03em",
+     "font": "Plus Jakarta Sans",
+     "roll": "hero15-number (≈ 17 276)",
+     "size": "var(--fs-4xl) (≤480cqi: --fs-3xl)"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 10.23,
+     "px_mobil": 10.01,
+     "weight": 500,
+     "lh": null,
+     "ls": "0.02em",
+     "font": "Outfit",
+     "roll": "field-label-tiny",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.01em",
+     "font": "Plus Jakarta Sans",
+     "roll": "field-label",
+     "size": "var(--fs-sm)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.0,
+     "weight": "600 / 700",
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "monthly-delta-label (Du sparar) / delta-value (1 440)",
+     "size": "--fs-sm / --fs-xl"
+    },
+    {
+     "px_desktop": 10.23,
+     "px_mobil": 10.0,
+     "weight": "400 / 600-700",
+     "lh": null,
+     "ls": null,
+     "font": "Outfit / JetBrains Mono",
+     "roll": "breakdown-label / breakdown-value (JS-inline)",
+     "size": "--fs-xs / --fs-sm"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 17.12,
+     "px_mobil": 17.01,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "btn--lg (Få en laddbox-offert)",
+     "size": "var(--fs-md)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "btn (Skicka offertförfrågan)",
+     "size": "var(--fs-sm)"
+    },
+    {
+     "px_desktop": 12.23,
+     "px_mobil": 12.01,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "btn-link--bordered (Läs mer om Zaptec Go)",
+     "size": "var(--fs-sm)"
+    }
+   ]
+  },
+  "footer-cro": {
+   "h2": [
+    {
+     "px_desktop": 32.0,
+     "px_mobil": 24.54,
+     "weight": 600,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "prefooter sektionsrubrik (h3)",
+     "size": "var(--aptext-xl) = 32→24.5 (mobil weight 500)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 20.0,
+     "px_mobil": 20.12,
+     "weight": 500,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "prefooter kolumnrubrik (h4)",
+     "size": "var(--aptext-mm) = 20→18.1; @478 --aptext-ml"
+    },
+    {
+     "px_desktop": 24.0,
+     "px_mobil": 22.12,
+     "weight": 500,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "footer kolumnrubrik",
+     "size": "var(--aptext-l) = 24→22.1"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 12.0,
+     "px_mobil": 10.12,
+     "weight": 400,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "footer-bar copyright",
+     "size": "var(--aptext-xs) = 12→10.1"
+    },
+    {
+     "px_desktop": 14.0,
+     "px_mobil": 14.0,
+     "weight": 400,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "footer-bar policy-länkar",
+     "size": "14px fast"
+    }
+   ]
+  },
+  "fore-efter-cro": {
+   "h2": [
+    {
+     "px_desktop": 32,
+     "px_mobil": 24.54,
+     "weight": 400,
+     "lh": 1.2,
+     "ls": "normal",
+     "font": "Outfit (Google Fonts i preview)",
+     "roll": "h2",
+     "size": "--ampyfe-text-rubrik = clamp(24px, calc(0.83vw + 21.3px), 32px) (= --aptext-xl i px)"
+    },
+    {
+     "px_desktop": 32,
+     "px_mobil": 24.54,
+     "weight": 400,
+     "lh": 1.2,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2-accent",
+     "size": "ärvd"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 18,
+     "px_mobil": 16.12,
+     "weight": 400,
+     "lh": 1.45,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "tagline",
+     "size": "--ampyfe-text-m = clamp(16px, 0.21vw + 15.3px, 18px) (= --aptext-m)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 14,
+     "px_mobil": 12.12,
+     "weight": 600,
+     "lh": 1,
+     "ls": "0.12em (0.08em ≤420 cqi)",
+     "font": "Outfit",
+     "roll": "chip FÖRE/EFTER",
+     "size": "--ampyfe-text-s = clamp(12px, 0.21vw + 11.3px, 14px)"
+    }
+   ]
+  },
+  "fotobedomningen": {
+   "h2": [
+    {
+     "px_desktop": 36,
+     "px_mobil": 28,
+     "weight": "fråga 300 (#3b3f59) · svar 500 (#090b32)",
+     "lh": "1.18 / 1.15 desktop",
+     "ls": "-0.015em",
+     "font": "Outfit",
+     "roll": "h2 (fråga + svar)",
+     "size": "28px · ≥900 cqi 36px"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 18,
+     "px_mobil": null,
+     "weight": 300,
+     "lh": 1.55,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "lead (endast desktop)",
+     "size": "18px"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 17,
+     "px_mobil": 17,
+     "weight": 400,
+     "lh": 1.45,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "info-rad (löften)",
+     "size": "17px"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 600,
+     "lh": "20px",
+     "ls": "0.02em",
+     "font": "Outfit (Google Fonts i preview; dist bär ingen @font-face)",
+     "roll": "eyebrow 'Fotobedömning'",
+     "size": "15px"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": "20px",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "fältetikett",
+     "size": "15px"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "submit 'Skicka och bli uppringd'",
+     "size": "16px"
+    }
+   ]
+  },
+  "hero-1": {
+   "display": [
+    {
+     "px_desktop": 60.0,
+     "px_mobil": 36.0,
+     "weight": 700,
+     "lh": 1.07,
+     "ls": "-1.08px",
+     "font": "Outfit",
+     "roll": "h1 (.hero__h1)",
+     "size": "clamp(36px, 4.6vw, 60px); 993–1200: clamp(38px,4.4vw,46px); 561–992: clamp(38px,6.2vw,50px); ≤560: 36px"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 22.0,
+     "px_mobil": 15.5,
+     "weight": 400,
+     "lh": 1.58,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "lead (.hero__sub, B-variant)",
+     "size": "clamp(17px, 1.55vw, 22px); 561–992: clamp(16px,2.3vw,19px); ≤560: 15.5px lh 1.55"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "body (header.css)",
+     "size": "1.6rem"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 14.5,
+     "px_mobil": 13.5,
+     "weight": 400,
+     "lh": 1.0,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "proof-rad (.vb2__proof)",
+     "size": "14.5px; ≤560: 13.5px"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 15.0,
+     "weight": 500,
+     "lh": 1.0,
+     "ls": "0.08px",
+     "font": "Outfit",
+     "roll": "CTA (.btn-cta)",
+     "size": "16px; ≤992: 15.5px; ≤560: 15px"
+    },
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 13.5,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "header CTA (.cta)",
+     "size": "1.6rem = 16px; ≤992: 1.5rem; ≤400: 1.35rem"
+    }
+   ]
+  },
+  "hero-2-alternatives": {
+   "display": [
+    {
+     "px_desktop": 48.0,
+     "px_mobil": 34.0,
+     "weight": 700,
+     "lh": 1.07,
+     "ls": "-0.008em (uppmätt −0.384px @48)",
+     "font": "Outfit",
+     "roll": "h1 (.ampy-h1) — identisk S/G/Z/E",
+     "size": "34 / 40 / 48px per @container 768/1200"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 20.0,
+     "px_mobil": 16.0,
+     "weight": 400,
+     "lh": 1.6,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "lead (.ampy-lead)",
+     "size": "16/25 · 17/27 · 20/32"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 13,
+     "px_mobil": 13,
+     "weight": 500,
+     "lh": 1.38,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "breadcrumb (.ampy-crumbs)",
+     "size": "13px"
+    },
+    {
+     "px_desktop": 14.5,
+     "px_mobil": 13.5,
+     "weight": 400,
+     "lh": 1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "proof-rad (.ampy-grow)",
+     "size": "14.5px / ≤560 13.5px"
+    },
+    {
+     "px_desktop": 14,
+     "px_mobil": 15,
+     "weight": 400,
+     "lh": 1.3,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "Z formkort subtitle",
+     "size": "15px / ≤991 14px"
+    },
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "Z consent-rad",
+     "size": "12px"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 13,
+     "px_mobil": 14,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "Z label",
+     "size": "14px lh 18 / ≤991 13/16"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "CTA rådgivning (S, G)",
+     "size": "16px"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "CTA ring (Z, E)",
+     "size": "16px"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1.1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "E sekundär vit knapp 'Jag vill bli kontaktad'",
+     "size": "16px"
+    },
+    {
+     "px_desktop": 18,
+     "px_mobil": 19,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "Z submit",
+     "size": "19px, h 52 (uppmätt 48 desktop / 54 mobil)"
+    }
+   ]
+  },
+  "hero-2-form": {
+   "small": [
+    {
+     "px_desktop": 14.0,
+     "px_mobil": 15.0,
+     "weight": 300,
+     "lh": 1.3,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "subtitle",
+     "size": "15px / ≥601 14px"
+    },
+    {
+     "px_desktop": 14.0,
+     "px_mobil": 15.0,
+     "weight": 400,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "låst tjänst-chip (.gchip)",
+     "size": "15px / ≥601 14px"
+    },
+    {
+     "px_desktop": 12.0,
+     "px_mobil": 12.5,
+     "weight": 400,
+     "lh": 1.45,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "consent-text",
+     "size": "12.5px / ≥601 12px"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 13.0,
+     "px_mobil": 14.0,
+     "weight": 400,
+     "lh": 1.23,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "label",
+     "size": "14px lh 18 / ≥601 13px lh 16"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 17.0,
+     "weight": 500,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "segment-knapp (Privat/BRF/Företag)",
+     "size": "17px / ≥601 16px"
+    },
+    {
+     "px_desktop": 14.0,
+     "px_mobil": 15.0,
+     "weight": 400,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "disclosure-knapp 'Fler detaljer (valfritt)'",
+     "size": "15px / ≥601 14px"
+    },
+    {
+     "px_desktop": 18.0,
+     "px_mobil": 19.0,
+     "weight": 500,
+     "lh": "normal",
+     "ls": null,
+     "font": "Outfit",
+     "roll": "submit (.btn-primary)",
+     "size": "19px / ≥601 18px; h 52 → 54 ≤600 → 46 ≥601"
+    }
+   ]
+  },
+  "led-kalkylator": {
+   "h1": [
+    {
+     "px_desktop": 34,
+     "px_mobil": 24.17,
+     "weight": 700,
+     "lh": 1.2,
+     "ls": "-0.015em",
+     "font": "Plus Jakarta Sans",
+     "roll": "h1",
+     "size": "var(--fs-2xl) = clamp(2.4rem, calc(1.986rem + 1.105vw), 3.4rem)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 13.0,
+     "px_mobil": 12.0,
+     "weight": "500 / 400 / 400 / 400",
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead-label / lead-input / lead-consent / lead-fine",
+     "size": "--fs-xs / --fs-sm / --fs-xs / --fs-xs"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 19,
+     "px_mobil": 16.05,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "disclosure-summary (Så har vi räknat)",
+     "size": "inherit = var(--fs-md)"
+    },
+    {
+     "px_desktop": 19,
+     "px_mobil": 16.05,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "body (.ampy-calc)",
+     "size": "var(--fs-md) = clamp(1.6rem, calc(1.476rem + 0.331vw), 1.9rem)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 13,
+     "px_mobil": 12.02,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "field-hint",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 13,
+     "px_mobil": 12.02,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit / JetBrains Mono",
+     "roll": "selector-best / option meta",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 13,
+     "px_mobil": 12.02,
+     "weight": 400,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "evidence-caption",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 15.0,
+     "px_mobil": 13.0,
+     "weight": null,
+     "lh": null,
+     "ls": null,
+     "font": "PJS 600 / Outfit 400 / JetBrains Mono 600",
+     "roll": "methodology h3 / p / code",
+     "size": "--fs-sm / --fs-xs / --fs-xs"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 15,
+     "px_mobil": 13.03,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": "0.08em",
+     "font": "Outfit",
+     "roll": "tier-label (VAD DU BYTER)",
+     "size": "var(--fs-sm)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 13.03,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.06em",
+     "font": "Plus Jakarta Sans",
+     "roll": "hero-eyebrow (ÅRLIG BESPARING)",
+     "size": "var(--fs-sm)"
+    },
+    {
+     "px_desktop": 13,
+     "px_mobil": 12.02,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.04em",
+     "font": "Outfit",
+     "roll": "trio-label (ENERGI DU KAPAR)",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 13.03,
+     "weight": 600,
+     "lh": null,
+     "ls": "0.06em",
+     "font": "Plus Jakarta Sans",
+     "roll": "evidence-label (VAD BELYSNINGEN KOSTAR PER ÅR)",
+     "size": "var(--fs-sm)"
+    }
+   ],
+   "number": [
+    {
+     "px_desktop": 28,
+     "px_mobil": 21.11,
+     "weight": 700,
+     "lh": 1.3,
+     "ls": "-0.01em",
+     "font": "JetBrains Mono",
+     "roll": "value-prominent (80)",
+     "size": "var(--fs-xl)"
+    },
+    {
+     "px_desktop": 56,
+     "px_mobil": 38.3,
+     "weight": 700,
+     "lh": 1.0,
+     "ls": "-0.03em",
+     "font": "Plus Jakarta Sans",
+     "roll": "hero-number (27 752)",
+     "size": "var(--fs-4xl) = clamp(3.8rem, calc(3.054rem + 1.989vw), 5.6rem)"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 13,
+     "px_mobil": 12.02,
+     "weight": 500,
+     "lh": 1.5,
+     "ls": "0.02em",
+     "font": "Outfit",
+     "roll": "field-label-tiny",
+     "size": "var(--fs-xs)"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 13.03,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": "0.01em",
+     "font": "Plus Jakarta Sans",
+     "roll": "field-label",
+     "size": "var(--fs-sm)"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 15,
+     "px_mobil": 13.03,
+     "weight": 600,
+     "lh": null,
+     "ls": null,
+     "font": "Plus Jakarta Sans",
+     "roll": "btn (CTA)",
+     "size": "var(--fs-sm)"
+    }
+   ]
+  },
+  "live-ampy-se": {
+   "display": [
+    {
+     "px_desktop": 60,
+     "px_mobil": 36,
+     "weight": 700,
+     "lh": 1.07,
+     "ls": "-0.018em",
+     "font": "Outfit",
+     "roll": "h1 live-startsida (.home-hero__heading)",
+     "size": "clamp(36px,4.6vw,60px)"
+    }
+   ],
+   "h1": [
+    {
+     "px_desktop": null,
+     "px_mobil": null,
+     "weight": null,
+     "lh": 1.4,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "h1 (tema-default, ingen egen regel)",
+     "size": "2.4em (Bricks frontend.css)"
+    }
+   ],
+   "h2": [
+    {
+     "px_desktop": 40,
+     "px_mobil": 28.88,
+     "weight": 500,
+     "lh": 1.4,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2 (tema-default)",
+     "size": "var(--aptext-2-5xl)"
+    },
+    {
+     "px_desktop": 32.0,
+     "px_mobil": 22.46,
+     "weight": 400,
+     "lh": 1.3,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2 ROT-block (.rot__main-heading)",
+     "size": "var(--aptext-xl) / @480 var(--aptext-lm)"
+    },
+    {
+     "px_desktop": 32.0,
+     "px_mobil": 22.46,
+     "weight": 400,
+     "lh": 1.3,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2 GT-block (.gron-teknik__gt-heading)",
+     "size": "var(--aptext-xl) / @480 var(--aptext-lm)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 22.0,
+     "px_mobil": 18.12,
+     "weight": 400,
+     "lh": 1.3,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h3 process-steg (.rot__heading / .brxe-34d975)",
+     "size": "var(--aptext-mmm) / @480 var(--aptext-mm)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 22,
+     "px_mobil": 17,
+     "weight": 400,
+     "lh": 1.58,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "lead live-startsida (.home-hero__text)",
+     "size": "clamp(17px,1.55vw,22px)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 14.12,
+     "weight": 300,
+     "lh": 1.7,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "body",
+     "size": "var(--aptext-sm)"
+    },
+    {
+     "px_desktop": 18.0,
+     "px_mobil": 14.12,
+     "weight": 300,
+     "lh": 1.7,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "p ROT-steg (.rot__text-basic)",
+     "size": "var(--aptext-m) / @480 var(--aptext-sm)"
+    },
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 14.12,
+     "weight": 300,
+     "lh": 1.7,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "p GT-steg (.gron-teknik__text-basic)",
+     "size": "var(--aptext-sm)"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 14.12,
+     "weight": 500,
+     "lh": 1.7,
+     "ls": "0.5px",
+     "font": "Outfit",
+     "roll": "knapp ROT (.bricks-button)",
+     "size": "var(--aptext-sm)"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": 1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "CTA live-startsida (.home-hero__cta)",
+     "size": "16px"
+    }
+   ]
+  },
+  "main-cta": {
+   "h2": [
+    {
+     "px_desktop": 40.0,
+     "px_mobil": 24.0,
+     "weight": 500,
+     "lh": 1.1,
+     "ls": "-0.4px",
+     "font": "Outfit",
+     "roll": "h2 (.mcta__h)",
+     "size": "clamp(2.8rem, 1.25vw + 2.4rem, 4rem) = 28–40px; 768–1024: clamp(2.6rem,2.2vw+1.2rem,3.2rem); ≤767: clamp(2.4rem,5.5vw,3rem) lh 1.16 centrerad; ≤360: 2.2rem"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 18.0,
+     "px_mobil": 16.12,
+     "weight": 300,
+     "lh": 1.6,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "brödtext (.mcta__p)",
+     "size": "clamp(1.6rem, .21vw + 1.53rem, 1.8rem) = 16–18px (= --aptext-m-formeln!)"
+    },
+    {
+     "px_desktop": 10,
+     "px_mobil": 10,
+     "weight": 300,
+     "lh": null,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "body",
+     "size": "(ärvd) 10px-rem, weight 300"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 16.0,
+     "weight": 500,
+     "lh": 1.0,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "ring-CTA",
+     "size": "1.6rem = 16px"
+    }
+   ]
+  },
+  "main-form": {
+   "h2": [
+    {
+     "px_desktop": 26,
+     "px_mobil": 21.9,
+     "weight": 500,
+     "lh": 1.35,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2 formulärrubrik",
+     "size": "clamp(2.3rem, 2rem + 0.6vw, 2.6rem); mobil clamp(2rem, 1.8rem + 1vw, 2.3rem)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 18,
+     "px_mobil": 16.17,
+     "weight": 200,
+     "lh": 1.3,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "ingress under rubrik",
+     "size": "clamp(1.6rem, 1.5rem + 0.3vw, 1.8rem)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "body",
+     "size": "1.6rem"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "success-brödtext / meta",
+     "size": "1.6rem / 1.4rem"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 12,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "samtyckesrad",
+     "size": "1.2rem"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 14,
+     "px_mobil": 15,
+     "weight": 500,
+     "lh": 1.35,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "stegetikett ('Vad händer sen')",
+     "size": "1.4rem desktop / 1.5rem mobil"
+    },
+    {
+     "px_desktop": 14,
+     "px_mobil": 14,
+     "weight": 500,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "fältetikett",
+     "size": "1.4rem"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "primärknapp",
+     "size": "1.6rem"
+    }
+   ]
+  },
+  "mini-menu": {
+   "h2": [
+    {
+     "px_desktop": 38.0,
+     "px_mobil": 28.0,
+     "weight": 500,
+     "lh": 1.2,
+     "ls": "-0.38px",
+     "font": "Outfit",
+     "roll": "h2 (.amp3__title)",
+     "size": "--fs-h2 clamp(2.8rem,2.3rem+1.1vw,3.8rem) = 28–38px"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 18.5,
+     "px_mobil": 17.18,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "lead (.amp3__lead)",
+     "size": "--fs-lead clamp(1.7rem,1.62rem+.25vw,1.85rem) = 17–18.5px ('style guide --aptext-m')"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 19,
+     "px_mobil": 16.56,
+     "weight": 400,
+     "lh": 1.6,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "body (index)",
+     "size": "--fs-body clamp(1.6rem,1.5rem+.4vw,1.9rem) = 16–19px"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16.0,
+     "px_mobil": 14.17,
+     "weight": 700,
+     "lh": 1.6,
+     "ls": "0.16px",
+     "font": "Outfit",
+     "roll": "CTA-pill 'Läs mer'",
+     "size": "--fs-sm clamp(1.4rem,1.3rem+.3vw,1.6rem) = 14–16px"
+    }
+   ]
+  },
+  "picasso": {
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 14.12,
+     "weight": 400,
+     "lh": 1,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "ampy-btn (kanonisk CTA)",
+     "size": "var(--aptext-sm) = clamp(1.4rem, calc(0.21vw + 1.33rem), 1.6rem)"
+    }
+   ]
+  },
+  "rot-gt-cro": {
+   "h2": [
+    {
+     "px_desktop": 32,
+     "px_mobil": 22.46,
+     "weight": 400,
+     "lh": "1.3 desktop / 1.2 mobil",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2 (ROT/GT)",
+     "size": "var(--aptext-xl) desktop · var(--aptext-lm) ≤767"
+    },
+    {
+     "px_desktop": 36,
+     "px_mobil": 26.76,
+     "weight": 450,
+     "lh": 1.2,
+     "ls": "-0.01em",
+     "font": "AvdragOutfit (= Outfit variable, laddad från ampy.se/wp-content/uploads/fonts/)",
+     "roll": "h2",
+     "size": "clamp(26px, calc(1.04vw + 22.7px), 36px) = --aptext-2xl i px"
+    },
+    {
+     "px_desktop": 36,
+     "px_mobil": 26.76,
+     "weight": 550,
+     "lh": 1.2,
+     "ls": "-0.01em",
+     "font": "AvdragOutfit",
+     "roll": "h2-accent",
+     "size": "ärvd"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 22,
+     "px_mobil": 18.12,
+     "weight": "400 (ROT) / 500 (GT mobil)",
+     "lh": "1.3 desktop / 1 mobil",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h3 (steg)",
+     "size": "var(--aptext-ml) desktop · var(--aptext-mm) ≤767"
+    },
+    {
+     "px_desktop": 23,
+     "px_mobil": 19.03,
+     "weight": 450,
+     "lh": 1.25,
+     "ls": "-0.01em",
+     "font": "AvdragOutfit",
+     "roll": "h3 (steg)",
+     "size": "clamp(19px, calc(0.52vw + 17px), 23px)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 14.12,
+     "weight": 300,
+     "lh": "1.7 (Bricks frontend body)",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "body",
+     "size": "var(--aptext-sm)"
+    },
+    {
+     "px_desktop": 18.0,
+     "px_mobil": 14.12,
+     "weight": 300,
+     "lh": "1.7 desktop / 1.4 mobil",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "p (steg)",
+     "size": "ROT var(--aptext-m) · GT var(--aptext-sm) desktop · båda --aptext-sm ≤767"
+    },
+    {
+     "px_desktop": 18,
+     "px_mobil": 16.12,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "AvdragOutfit",
+     "roll": "p (steg)",
+     "size": "clamp(16px, calc(0.21vw + 15.3px), 18px) = --aptext-m i px"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 13.5,
+     "px_mobil": 13.5,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "AvdragOutfit",
+     "roll": "not / finstilt",
+     "size": "13.5px"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 13,
+     "px_mobil": 13,
+     "weight": 700,
+     "lh": 1.5,
+     "ls": "0.12em (radetiketter .09em)",
+     "font": "AvdragOutfit",
+     "roll": "eyebrow/caps ('Steg för steg', 'Så räknas ROT', 'Ditt pris efter ROT', mobila radetiketter)",
+     "size": "13px"
+    }
+   ],
+   "number": [
+    {
+     "px_desktop": 23.04,
+     "px_mobil": 20,
+     "weight": 700,
+     "lh": 1.1,
+     "ls": "-0.012em",
+     "font": "AvdragOutfit",
+     "roll": "totalbelopp",
+     "size": "clamp(20px, 1.6vw, 24px)"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 14.12,
+     "weight": 500,
+     "lh": "1.7 (ärvd) → 59,2 px hög",
+     "ls": "0.5px",
+     "font": "Outfit",
+     "roll": "knapp",
+     "size": "var(--aptext-sm)"
+    },
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 500,
+     "lh": "1 (1.25 ≤430 när etiketten bryter)",
+     "ls": "normal",
+     "font": "AvdragOutfit",
+     "roll": "CTA",
+     "size": "16px"
+    }
+   ]
+  },
+  "testimonials-block": {
+   "h2": [
+    {
+     "px_desktop": 36,
+     "px_mobil": 24.96,
+     "weight": 400,
+     "lh": 1.15,
+     "ls": "-0.01em",
+     "font": "Outfit",
+     "roll": "h2",
+     "size": "var(--aptext-2xl) · ≤759 clamp(2.3rem, 6.4vw, 2.7rem)"
+    },
+    {
+     "px_desktop": 32,
+     "px_mobil": 24.54,
+     "weight": 400,
+     "lh": 1.2,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2",
+     "size": "var(--aptext-xl)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 22,
+     "px_mobil": 20.12,
+     "weight": 600,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "namn",
+     "size": "var(--aptext-ml)"
+    },
+    {
+     "px_desktop": 24,
+     "px_mobil": 22.12,
+     "weight": 600,
+     "lh": 1.3,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "namn",
+     "size": "var(--aptext-l)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 18,
+     "px_mobil": null,
+     "weight": 300,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "subline",
+     "size": "var(--aptext-m)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 19,
+     "px_mobil": 17.12,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "korttext (citat)",
+     "size": "--att-card-text = clamp(1.7rem, calc(0.21vw + 1.63rem), 1.9rem)"
+    },
+    {
+     "px_desktop": 18,
+     "px_mobil": 16.12,
+     "weight": 300,
+     "lh": 1.7,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "korttext",
+     "size": "var(--aptext-m)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 10.12,
+     "weight": 400,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "datum",
+     "size": "var(--aptext-xs)"
+    },
+    {
+     "px_desktop": 18,
+     "px_mobil": 14.12,
+     "weight": "300, strong 600",
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "badge-text '5 av 5 Betyg på Google'",
+     "size": "var(--aptext-m) · ≤759 var(--aptext-sm)"
+    }
+   ]
+  },
+  "thank-you": {
+   "display": [
+    {
+     "px_desktop": 40,
+     "px_mobil": 24.54,
+     "weight": 500,
+     "lh": 1.14,
+     "ls": "-0.018em",
+     "font": "Outfit",
+     "roll": "h1 (hero__title)",
+     "size": "var(--aptext-2-5xl); ≤520px var(--aptext-xl)"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 18,
+     "px_mobil": 16.12,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "ingress (hero__sub)",
+     "size": "var(--aptext-m)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 10,
+     "px_mobil": 10,
+     "weight": 400,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "body (v1)",
+     "size": "ärver html 10px – ingen body-storlek satt"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 14.12,
+     "weight": 600,
+     "lh": "normal",
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "primärknapp",
+     "size": "var(--aptext-sm)"
+    },
+    {
+     "px_desktop": 12,
+     "px_mobil": 10.11,
+     "weight": 600,
+     "lh": "normal",
+     "ls": "0.14em uppercase",
+     "font": "Outfit",
+     "roll": "cta-eyebrow (CSS finns, används inte i markupen)",
+     "size": "var(--aptext-xs)"
+    }
+   ]
+  },
+  "var-process-cro": {
+   "h2": [
+    {
+     "px_desktop": 40,
+     "px_mobil": 28,
+     "weight": 500,
+     "lh": "1.05 desktop / 1.1 mobil",
+     "ls": "-0.018em desktop / -0.012em mobil",
+     "font": "Outfit (självhostad)",
+     "roll": "h2 'Vad som händer sen'",
+     "size": "--apr-h2 28px · ≥992 40px"
+    },
+    {
+     "px_desktop": 40,
+     "px_mobil": 28,
+     "weight": 500,
+     "lh": 1.15,
+     "ls": "-0.01em",
+     "font": "Outfit",
+     "roll": "h2 'Så funkar det'",
+     "size": "28px · desktop min(--aptext-2xl, 40px)"
+    }
+   ],
+   "h3": [
+    {
+     "px_desktop": 22,
+     "px_mobil": 19,
+     "weight": 500,
+     "lh": 1.2,
+     "ls": "-0.006em desktop",
+     "font": "Outfit",
+     "roll": "stegrubrik h3 __label",
+     "size": "--apr-label 19px · ≥992 22px"
+    }
+   ],
+   "lead": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 15,
+     "weight": 400,
+     "lh": 1.45,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "ingress __sub",
+     "size": "15px · 16px desktop"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 17,
+     "px_mobil": 17,
+     "weight": 500,
+     "lh": "1.5 (ärvd)",
+     "ls": "0",
+     "font": "Outfit",
+     "roll": "löfteschip __chip (inline i brödtexten)",
+     "size": "17px"
+    },
+    {
+     "px_desktop": 17,
+     "px_mobil": 17,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": "0",
+     "font": "Outfit",
+     "roll": "brödtext __body",
+     "size": "--apr-body 17px (ändras ALDRIG över brytpunkten — 'HemSols verifierade lag')"
+    },
+    {
+     "px_desktop": 17.87,
+     "px_mobil": 17.0,
+     "weight": 300,
+     "lh": 1.45,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "brödtext",
+     "size": "17px · desktop 17,87 (A) / 16 (B, C)"
+    }
+   ],
+   "small": [
+    {
+     "px_desktop": 14,
+     "px_mobil": null,
+     "weight": 400,
+     "lh": 1,
+     "ls": "0",
+     "font": "Outfit",
+     "roll": "bevisrad __trust",
+     "size": "14.5px · ≥992 14px"
+    },
+    {
+     "px_desktop": 15,
+     "px_mobil": 15,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": "0",
+     "font": "Outfit",
+     "roll": "not / lanes",
+     "size": "15px"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 12,
+     "px_mobil": 11,
+     "weight": 500,
+     "lh": 1.45,
+     "ls": "+0.09em / +0.08em desktop",
+     "font": "Outfit",
+     "roll": "tidsstämpel __time (C)",
+     "size": "11px · ≥992 12px"
+    }
+   ],
+   "label": [
+    {
+     "px_desktop": 20.0,
+     "px_mobil": 19.0,
+     "weight": "600 på alla fyra (v2: 'fem roller på 600 gör H2:ans 500 till blockets lättaste feta')",
+     "lh": "1.25 / 1.25 / 1 / 1.3",
+     "ls": "normal (time .04em)",
+     "font": "Outfit",
+     "roll": "label / chip / num / time",
+     "size": "19–20 / 13 / 17 (B 28–36) / 13–14"
+    }
+   ]
+  },
+  "visste-du-att": {
+   "h2": [
+    {
+     "px_desktop": 36.0,
+     "px_mobil": 26.8,
+     "weight": 500,
+     "lh": 1.2,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "h2",
+     "size": "var(--aptext-2xl)"
+    }
+   ],
+   "body": [
+    {
+     "px_desktop": 18,
+     "px_mobil": 16.1,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "brödtext",
+     "size": "var(--aptext-m)"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 24.0,
+     "px_mobil": 16.1,
+     "weight": 500,
+     "lh": 1.2,
+     "ls": "0.005em (bara i index.html)",
+     "font": "Outfit (INTE laddad i prototypen — systemfont renderas)",
+     "roll": "kicker 'Visste du att…'",
+     "size": "var(--aptext-l) · ≤480 var(--aptext-m)"
+    }
+   ]
+  },
+  "website-blocks": {
+   "body": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 16,
+     "weight": 300,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "body",
+     "size": "1.6rem"
+    }
+   ],
+   "eyebrow": [
+    {
+     "px_desktop": 12.5,
+     "px_mobil": null,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": "1.75px",
+     "font": "Outfit",
+     "roll": "eyebrow GUIDER & VERKTYG (.gzone__label)",
+     "size": "1.25rem"
+    },
+    {
+     "px_desktop": 11.0,
+     "px_mobil": null,
+     "weight": 400,
+     "lh": 1.5,
+     "ls": "1.1px",
+     "font": "Outfit",
+     "roll": "drawer eyebrow MENY",
+     "size": "1.1rem"
+    }
+   ],
+   "button": [
+    {
+     "px_desktop": 16,
+     "px_mobil": 13.5,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": null,
+     "font": "Outfit",
+     "roll": "header CTA (.cta)",
+     "size": "1.6rem / ≤992 1.5rem / ≤400 1.35rem / ≤374 1.3rem / ≤339 1.2rem"
+    },
+    {
+     "px_desktop": 18.0,
+     "px_mobil": null,
+     "weight": 600,
+     "lh": 1.5,
+     "ls": "normal",
+     "font": "Outfit",
+     "roll": "drawer CTA 'Ring en expert'",
+     "size": "1.8rem"
+    }
+   ]
+  }
+ }
+}
