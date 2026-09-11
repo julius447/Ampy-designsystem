@@ -261,6 +261,7 @@
 .ampy-testimonial__date { margin-left: auto; font-size: var(--ampy-text-eyebrow); font-weight: var(--ampy-w-ui); color: rgba(255,255,255,.72); }   /* delivery css:68 --aptext-xs 12 (10.1 @390 = defekt) -> eyebrow 12 fast */
 
 .ampy-slider { font-family: var(--ampy-font); color: var(--ampy-ink); }
+.ampy-slider__track, .ampy-slider__nav, .ampy-slider__rating { max-width: 1200px; margin-inline: auto; }   /* delivery css:26 __inner 1200 -> kort 384 (3-upp, gap 24) */
 .ampy-slider__head { text-align: center; max-width: 720px; margin: 0 auto var(--ampy-space-l); }   /* delivery css:29 72rem / l */
 .ampy-slider__heading { margin: 0 0 var(--ampy-space-2xs); font-size: var(--ampy-text-h2); font-weight: var(--ampy-w-heading); letter-spacing: var(--ampy-ls-heading); line-height: 1.15; color: var(--ampy-ink); }   /* delivery css:31-35 36/400 lh 1.15 -> vikt 500 (B17) */
 .ampy-slider__sub { margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-body); color: rgba(9,11,50,.68); }   /* delivery css:36 */
@@ -538,6 +539,7 @@
   .ampy-ctaband__bgwave { right: 32px; bottom: 28px; width: 38%; }
   .ampy-ctaband__media { min-height: 0; }
 }
+@container ampyctaband (max-width: 360px) { .ampy-ctaband__h { font-size: 22px; } }   /* mcta:271 */
 @container ampyctaband (max-width: 767px) {
   .ampy-ctaband__card { grid-template-columns: 1fr; gap: 20px; padding: 20px 20px 28px; }
   .ampy-ctaband__bgwave { display: none; }
@@ -549,6 +551,7 @@
   .ampy-ctaband__p { text-align: center; }
   .ampy-ctaband__action { align-items: center; width: 100%; }
   .ampy-ctaband__action .ampy-btn { width: 100%; }
+  .ampy-ctaband__action .ampy-btn--ring { flex-direction: row-reverse; justify-content: space-between; padding: 11px 12px 11px 22px; }   /* mcta:268 mobil: text vänster, chip höger (= S2:s --block-läge) */
 }
 
 /* =========================================================================

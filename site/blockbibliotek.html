@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blockbiblioteket: Ampy designsystem</title>
+<!-- Sökvägarna nedan gäller för en sida i site/. Ligger sidan i site/<mapp>/ blir prefixet ../ -->
+<link rel="stylesheet" href="../system/ampy.css">
+<link rel="stylesheet" href="doc.css">
+<link rel="icon" href="brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för blockbiblioteket (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-toc { columns: 3; column-gap: var(--ampy-space-m); margin: 0 0 var(--ampy-space-l); padding: 0; list-style: none; font-size: var(--ampy-text-small); line-height: 1.6; }
+  .ds-toc a { color: var(--ampy-ink-muted); text-decoration: none; }
+  .ds-toc a:hover { color: var(--ampy-action-strong); text-decoration: underline; }
+  .ds-key { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; align-items: center; margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  .ds-key .ds-status { margin-bottom: 0; }
+  .ds-status--2 { border-color: var(--ampy-ink-faint); color: var(--ampy-ink-muted); }
+  .ds-status--3 { border-color: var(--ampy-warn-ink); color: var(--ampy-warn-ink); }
+  .ds-cards--bib { grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr)); }
+  .ds-bib { display: flex; flex-direction: column; }
+  .ds-bib__imgs { display: grid; grid-template-columns: 1fr 9rem; gap: 0; aspect-ratio: 16 / 8.5; overflow: hidden; background: var(--ampy-bg-subtle); border-bottom: 1px solid var(--ampy-line); }
+  .ds-bib__imgs .ds-card__img { border-bottom: 0; aspect-ratio: auto; height: 100%; }
+  .ds-bib__imgs .ds-card__img--m { aspect-ratio: auto; height: 100%; border-left: 1px solid var(--ampy-line); }
+  .ds-bib__imgs--none { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 8.5; font-size: var(--ampy-text-small); color: var(--ampy-ink-faint); }
+  .ds-bib .ds-card__body { display: flex; flex-direction: column; gap: 0.6rem; }
+  .ds-bib .ds-card__body .ds-status { align-self: flex-start; margin-bottom: 0.2rem; }
+  .ds-bib .ds-card__meta b { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); }
+  .ds-bib__links { margin: auto 0 0; padding-top: 0.6rem; font-size: var(--ampy-text-small); display: flex; gap: var(--ampy-space-s); }
+  .ds-bib__nolive { color: var(--ampy-ink-faint); }
+  .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
+  .ds-blk .ds-h2 { margin-top: 0; }
+  @media (max-width: 991px) { .ds-toc { columns: 2; } .ds-cards--bib { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="index.html">Översikt</a>
+        <a href="beslut.html">Beslut som väntar</a>
+        <a href="kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="grunder/farg.html">Färg</a>
+        <a href="grunder/typografi.html">Typografi</a>
+        <a href="grunder/spacing.html">Spacing och layout</a>
+        <a href="grunder/form-djup.html">Form och djup</a>
+        <a href="grunder/rorelse.html">Rörelse</a>
+        <a href="grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="komponenter/index.html">Alla komponenter</a>
+        <a href="komponenter/knappar.html">Knappar och länkar</a>
+        <a href="komponenter/text.html">Textelement</a>
+        <a href="komponenter/ytor.html">Ytor och kort</a>
+        <a href="komponenter/falt.html">Fält och reglage</a>
+        <a href="komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="monster/mobil.html">Mobil 390</a>
+        <a href="monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="regler/candour.html">Candour-grinden</a>
+        <a href="regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="blockbibliotek.html" aria-current="page">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Bibliotek</span>
+      <h1 class="ds-h1">Blockbiblioteket</h1>
+      <p class="ds-lead">De 30 källorna som designsystemet är mätt ur, plus brandboken och den tidigare dokumentationen. Ett kort per källa: vad det är, status och auktoritet, live-adress, vilka komponenter som bor där och länken till inventeringen.</p>
+      <p class="ds-source"><code>INVENTERINGSBRIEF.md</code> (källtabellen, auktoritet 1 till 3), <code>inventering/&lt;slug&gt;.md</code> + <code>.json</code> (mätningarna), <code>konsolidering/komponenter-karta.md</code> (komponenter per källa), <code>~/Desktop/Personal-OS/80-Repon/_blockbiblioteket.md</code> (live-URL:er, verifierade 2026-09-08, läst men aldrig skrivet). Bilderna är inventeringens skärmdumpar nedskalade.</p>
+      <div class="ds-key"><span class="ds-status ds-status--1">Auktoritet 1</span> ägargodkänd, live eller låst: kanon <span class="ds-status ds-status--2">Auktoritet 2</span> levererad eller produktionsklar: stark <span class="ds-status ds-status--3">Auktoritet 3</span> riktningar och prototyp: bara belägg</div>
+      <ul class="ds-toc"><li><a href="#skelett">Skelett</a></li><li><a href="#block">Block</a></li><li><a href="#verktyg">Verktyg</a></li><li><a href="#sidor">Sidor</a></li><li><a href="#varumarke">Varumärke och referens</a></li><li><a href="#motexempel">Motexempel</a></li></ul>
+      <section class="ds-blk" id="skelett">
+        <h2 class="ds-h2">Skelett</h2>
+        <p class="ds-p">Sajtens ram: tokens, header, hero, footer och knappbiblioteket. Auktoritet 1 rakt igenom.</p>
+        <div class="ds-cards ds-cards--bib">
+          <article class="ds-card ds-bib" id="live-ampy-se">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/live-ampy-se-rot-desktop.jpg" alt="Live ampy.se (CSS + två block) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/live-ampy-se-rot-mobile.jpg" alt="Live ampy.se (CSS + två block) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Live ampy.se (CSS + två block)</h3>
+              <p class="ds-card__meta">Sajtens riktiga stylesheets: de 101 ap-tokens, theme-style, frontend, site-css, och ROT/GT-blocken som markup. Token-sanningen.</p>
+              <p class="ds-card__meta"><b>Status:</b> live</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> ap*-tokens, processblock tre steg, pastellknapp, gradient-rubrik, hero .home-hero, produktväljare .ampy-elfirma</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://ampy.se" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/live-ampy-se.md">Inventering</a> <a class="ds-a" href="../inventering/live-ampy-se.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="website-blocks">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/website-blocks-desktop-mega-tjanster.jpg" alt="Header v5 (Website-blocks) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/website-blocks-mobile-drawer-open.jpg" alt="Header v5 (Website-blocks) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Header v5 (Website-blocks)</h3>
+              <p class="ds-card__meta">Sky-mist-bar 76 px, tre mega-menyer, solid teal-CTA med pulsprick, Evify-drawer. Header godkänd.</p>
+              <p class="ds-card__meta"><b>Status:</b> header godkänd, 3 ägarbeslut</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> header + mega-meny, header-CTA (solid, B5), drawer, burger</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Website-blocks/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/website-blocks.md">Inventering</a> <a class="ds-a" href="../inventering/website-blocks.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="hero-1">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/hero-1-desktop.jpg" alt="Hero-1 (startsidan, riktning B) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/hero-1-mobile.jpg" alt="Hero-1 (startsidan, riktning B) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Hero-1 (startsidan, riktning B)</h3>
+              <p class="ds-card__meta">Inramad foto-hero med veil, H1 60/700, gradient-CTA, proof-rad. Ägargodkänd och installerad live.</p>
+              <p class="ds-card__meta"><b>Status:</b> ägargodkänd, färdig</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> navy-ram (.ampy-frame), display, lead, gradient-CTA, proof-rad, header v5</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Hero-1/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/hero-1.md">Inventering</a> <a class="ds-a" href="../inventering/hero-1.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="footer-cro">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/footer-cro-baseline-desktop.jpg" alt="Footer (baslinje + tre riktningar) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/footer-cro-baseline-mobile.jpg" alt="Footer (baslinje + tre riktningar) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Footer (baslinje + tre riktningar)</h3>
+              <p class="ds-card__meta">Prefooter på cyan-gradient, mörk footer, bar. Baslinjen är 1:1 med live (42 av 42 värden); B rekommenderad.</p>
+              <p class="ds-card__meta"><b>Status:</b> väntar riktningsval (B rek.)</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> footer (prefooter, brand, Google-rad, länkkolumner, bar)</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Footer-CRO-/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/footer-cro.md">Inventering</a> <a class="ds-a" href="../inventering/footer-cro.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="cta-website">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/cta-website-desktop.jpg" alt="Knappbiblioteket (CTA-website) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/cta-website-mobile.jpg" alt="Knappbiblioteket (CTA-website) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Knappbiblioteket (CTA-website)</h3>
+              <p class="ds-card__meta">Tre kanoniska CTA:er: rådgivning och offert (gradient) och ring (blå gradient med chip). Katalog-JSON.</p>
+              <p class="ds-card__meta"><b>Status:</b> levererat som bibliotek</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> knapp primär gradient, tel-ring, --block, focus 3 px navy, reduced-motion</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/CTA-website/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/cta-website.md">Inventering</a> <a class="ds-a" href="../inventering/cta-website.json">JSON</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="ds-blk" id="block">
+        <h2 class="ds-h2">Block</h2>
+        <p class="ds-p">Innehållsblocken på tjänste-, orts- och startsidor.</p>
+        <div class="ds-cards ds-cards--bib">
+          <article class="ds-card ds-bib" id="main-cta">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/main-cta-desktop.jpg" alt="CTA-bandet (Main CTA, version B) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/main-cta-mobile.jpg" alt="CTA-bandet (Main CTA, version B) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">CTA-bandet (Main CTA, version B)</h3>
+              <p class="ds-card__meta">Vitt kort på sky-mist: rubrik, brödtext, EN ring-CTA, Edvins porträtt med våg.</p>
+              <p class="ds-card__meta"><b>Status:</b> produktionsklar, experiment stängt</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> CTA-band, ring-CTA, porträtt-figur, (gradient-span = drift)</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Main_CTA/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/main-cta.md">Inventering</a> <a class="ds-a" href="../inventering/main-cta.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="rot-gt-cro">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/rot-gt-cro-d2-rot-desktop.jpg" alt="Avdragsblocken (ROT / GT / hemförsäkring) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/rot-gt-cro-d2-rot-mobile.jpg" alt="Avdragsblocken (ROT / GT / hemförsäkring) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Avdragsblocken (ROT / GT / hemförsäkring)</h3>
+              <p class="ds-card__meta">Familjen D2 &#x27;Kvittot först&#x27;: H2-mall, processteg med ringar, kvittopanel, CTA. 278 sidor mappade. Klonen av live är auktoritet 1.</p>
+              <p class="ds-card__meta"><b>Status:</b> levererat till Chris, 7 ägargrindar</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> processteg med ringar, kvittopanel (ljus/mörk), avdragsblock, offert-pill, avdragschip, prisrad</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/ROT-GT-CRO-/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/rot-gt-cro.md">Inventering</a> <a class="ds-a" href="../inventering/rot-gt-cro.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="testimonials-block">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/testimonials-block-desktop.jpg" alt="Omdömesslidern (Testimonials V1) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/testimonials-block-mobile.jpg" alt="Omdömesslidern (Testimonials V1) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Omdömesslidern (Testimonials V1)</h3>
+              <p class="ds-card__meta">Mörka omdömeskort i Splide, fyra prickar som fylls i takt med autoplayen, Google-badge som enda CTA.</p>
+              <p class="ds-card__meta"><b>Status:</b> V1 låst, 3 candour-grindar</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> testimonial-kort, slider-skal, prick-navigering, Google-badge, citat</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Testimonials-block/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/testimonials-block.md">Inventering</a> <a class="ds-a" href="../inventering/testimonials-block.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="certificates">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/certificates-desktop.jpg" alt="Certifikat-bandet (v2) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/certificates-mobile.jpg" alt="Certifikat-bandet (v2) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Certifikat-bandet (v2)</h3>
+              <p class="ds-card__meta">Gradientband med tre vågor och fyra märkeskort normaliserade på bläckmassa. Paritet 24 av 24 bredder.</p>
+              <p class="ds-card__meta"><b>Status:</b> levererat, paritet</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> certifikat-band, märkeskort, tvåtonsring, (gradient navy till #5eb1bf = B16)</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Certificates/redesign/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/certificates.md">Inventering</a> <a class="ds-a" href="../inventering/certificates.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="eljour-block">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/eljour-block-desktop.jpg" alt="Eljour-blocket (symptom + samtal) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/eljour-block-mobile.jpg" alt="Eljour-blocket (symptom + samtal) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Eljour-blocket (symptom + samtal)</h3>
+              <p class="ds-card__meta">13 symptom i två nivåer, samtalskort med status, trust-lista och nödknapp. &#x27;Sajtens bästa block 23/25&#x27;.</p>
+              <p class="ds-card__meta"><b>Status:</b> v3 produktionsblock, ägargrindad</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> delad rubrik, samtalskort, statuspill, symptomlista (ackordeon), nivåtagg, nödknapp (B6), källrad</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Eljour-block/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/eljour-block.md">Inventering</a> <a class="ds-a" href="../inventering/eljour-block.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="eljour-sticky-bar">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/eljour-sticky-bar-hornkort-viewport.jpg" alt="Sticky call-bar + hörnkort vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/eljour-sticky-bar-mobile-viewport.jpg" alt="Sticky call-bar + hörnkort vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Sticky call-bar + hörnkort</h3>
+              <p class="ds-card__meta">Fixed ring-bar 83 px på mobil, 216 x 128-hörnkort på desktop. Pillen samplad ur ring-knappen.</p>
+              <p class="ds-card__meta"><b>Status:</b> väntar ägargrind (hörnval)</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> sticky call-bar, hörnkort, ring-knapp --block, sticky samtalskort</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Eljour-sticky-bar/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/eljour-sticky-bar.md">Inventering</a> <a class="ds-a" href="../inventering/eljour-sticky-bar.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="fore-efter-cro">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/fore-efter-cro-desktop.jpg" alt="Före/efter (riktning A &#x27;Reglaget&#x27;) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/fore-efter-cro-mobile.jpg" alt="Före/efter (riktning A &#x27;Reglaget&#x27;) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Före/efter (riktning A &#x27;Reglaget&#x27;)</h3>
+              <p class="ds-card__meta">Två kvadratiska ramar med söm, chip, handtag och range 44. 0 asks, en H2, en tagline.</p>
+              <p class="ds-card__meta"><b>Status:</b> klart, väntar fotobibliotek</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> före/efter-ram, chip FÖRE/EFTER, söm + handtag, ledtråd, reglage, H2 med understruken accent</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/f-re-efter-CRO-/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/fore-efter-cro.md">Inventering</a> <a class="ds-a" href="../inventering/fore-efter-cro.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="var-process-cro">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/var-process-cro-desktop.jpg" alt="Vår process (3 riktningar + v2) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/var-process-cro-mobile.jpg" alt="Vår process (3 riktningar + v2) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--3">Auktoritet 3</span>
+              <h3 class="ds-card__title">Vår process (3 riktningar + v2)</h3>
+              <p class="ds-card__meta">&#x27;Vad som händer sen&#x27;: räls-steg med medaljonger, bevisrad, överlämning som länk. v2 A rekommenderad.</p>
+              <p class="ds-card__meta"><b>Status:</b> väntar riktningsval + 5 GAP</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> processkort, räls-steg, löfteschip, bevisrad, överlämningslänk</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/V-r-process-CRO-/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/var-process-cro.md">Inventering</a> <a class="ds-a" href="../inventering/var-process-cro.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="fotobedomningen">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/fotobedomningen-desktopvy-desktop.jpg" alt="Fotobedömningen v2 &#x27;Avslutskortet&#x27; vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/fotobedomningen-mobile.jpg" alt="Fotobedömningen v2 &#x27;Avslutskortet&#x27; vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Fotobedömningen v2 &#x27;Avslutskortet&#x27;</h3>
+              <p class="ds-card__meta">Bild + namn + telefon + adress + submit + kvitto i samma kort. &#x27;Fem staplar, en tänd.&#x27;</p>
+              <p class="ds-card__meta"><b>Status:</b> v2 byggd, go/no-go = dubbel uppladdning</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> band + kort, eyebrow, tvåfärgad H2, info-rader, fem staplar, kvitto, candour + GDPR</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Fotobed-mning-CRO-/preview/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/fotobedomningen.md">Inventering</a> <a class="ds-a" href="../inventering/fotobedomningen.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="visste-du-att">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/visste-du-att-prodtokens-desktop.jpg" alt="Visste du att vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/visste-du-att-mobile.jpg" alt="Visste du att vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Visste du att</h3>
+              <p class="ds-card__meta">Midnight-kort med teal-kicker och blixt, H2, kort text och glödlampa. Lätt register. Binder direkt till ap-tokens.</p>
+              <p class="ds-card__meta"><b>Status:</b> slutaudit GO, ägar-items kvar</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> mörkt kort, kicker med blixt, H2 + text, lampa</p>
+              <p class="ds-bib__links"><span class="ds-bib__nolive">Ingen Pages</span> <a class="ds-a" href="../inventering/visste-du-att.md">Inventering</a> <a class="ds-a" href="../inventering/visste-du-att.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="mini-menu">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/mini-menu-desktop.jpg" alt="Mini-menu (produktväljaren) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/mini-menu-mobile.jpg" alt="Mini-menu (produktväljaren) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Mini-menu (produktväljaren)</h3>
+              <p class="ds-card__meta">Tre fotokort 404 x 404 i navy med overlay, vit titel och himmelsblå pill. Installerad live.</p>
+              <p class="ds-card__meta"><b>Status:</b> levererat, 2 GAP</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> fotokort, overlay, titel + pill, hover-koreografi, (ljus glas-trio = variant)</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/mini-menu/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/mini-menu.md">Inventering</a> <a class="ds-a" href="../inventering/mini-menu.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="hero-2-alternatives">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/hero-2-alternatives-s-desktop.jpg" alt="Hero-2 S/G/Z/E (v18) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/hero-2-alternatives-z-mobile.jpg" alt="Hero-2 S/G/Z/E (v18) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Hero-2 S/G/Z/E (v18)</h3>
+              <p class="ds-card__meta">En hjälte per intent för 260 sidor: navy ram 22, H1 48/700, scrim-primitiver, CTA-kloner, proof.</p>
+              <p class="ds-card__meta"><b>Status:</b> slutversion, lanseringsgrindar kvar</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> hero-2-skal, primitiver (h1, lead, btn, field, chip, trustrow, grow, crumbs, scrim), formkort (Z)</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Hero_2-alternatives/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/hero-2-alternatives.md">Inventering</a> <a class="ds-a" href="../inventering/hero-2-alternatives.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="hero-2-form">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/hero-2-form-desktop.jpg" alt="Hero-2:s offertformulär (V1/V2) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/hero-2-form-mobile.jpg" alt="Hero-2:s offertformulär (V1/V2) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Hero-2:s offertformulär (V1/V2)</h3>
+              <p class="ds-card__meta">Formkortets föregångare: glas .76 + blur 30 (underkänt), fem fält, gradient-submit 282deg.</p>
+              <p class="ds-card__meta"><b>Status:</b> BLOCKER: ingen lead-endpoint</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> formkort (glas, drift), fält radie 14, submit (drift), segment i glas</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Hero-2-form/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/hero-2-form.md">Inventering</a> <a class="ds-a" href="../inventering/hero-2-form.json">JSON</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="ds-blk" id="verktyg">
+        <h2 class="ds-h2">Verktyg</h2>
+        <p class="ds-p">Kalkylatorerna (tvåpanel) och diagnostikerna (rail och scen).</p>
+        <div class="ds-cards ds-cards--bib">
+          <article class="ds-card ds-bib" id="led-kalkylator">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/led-kalkylator-desktop.jpg" alt="LED-kalkylatorn vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/led-kalkylator-mobile.jpg" alt="LED-kalkylatorn vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">LED-kalkylatorn</h3>
+              <p class="ds-card__meta">Tvåpanel: vitt inputkort, mörkt resultatkort med hero-siffra, stat-trio, staplar, &#x27;Så har vi räknat&#x27;. Kanon för verktygskitet.</p>
+              <p class="ds-card__meta"><b>Status:</b> live, en signering kvar</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> tvåpanel-skal, hero-readout, stat-trio, staplar amber/teal, methodology, inline lead-form, tips-chip, selector, segment, slider</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Led-kalkylator/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/led-kalkylator.md">Inventering</a> <a class="ds-a" href="../inventering/led-kalkylator.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="ev-kalkylator">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/ev-kalkylator-desktop.jpg" alt="Laddboxkalkylatorn (EV) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/ev-kalkylator-mobile.jpg" alt="Laddboxkalkylatorn (EV) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Laddboxkalkylatorn (EV)</h3>
+              <p class="ds-card__meta">Samma kit med @container, 16 laddboxar i selector, popover i stället för tooltip, månadsstaplar med delta.</p>
+              <p class="ds-card__meta"><b>Status:</b> live, datasignering</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> tvåpanel (cqi), selector med foto, popover, toggle AC/DC, monthly compare, badge</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/EV-Caluclator/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/ev-kalkylator.md">Inventering</a> <a class="ds-a" href="../inventering/ev-kalkylator.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="energycalc">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/energycalc-desktop.jpg" alt="Energikalkylatorn vB v36 vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/energycalc-mobile.jpg" alt="Energikalkylatorn vB v36 vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Energikalkylatorn vB v36</h3>
+              <p class="ds-card__meta">Egen familj: sticky inputkort 420, resultat med tre radialer, anchor-siffra 52/900, stepper, byggårssegment, share-popover.</p>
+              <p class="ds-card__meta"><b>Status:</b> live, webhook = stub</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> eyebrow med streck (kanon), stepper (kanon), seg-wrap, share-popover, anchor-num (drift), storybar</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Energycalc/vB/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/energycalc.md">Inventering</a> <a class="ds-a" href="../inventering/energycalc.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="elcentral-kollen">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/elcentral-kollen-desktop.jpg" alt="Elcentral-kollen vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/elcentral-kollen-mobile-state-besked.jpg" alt="Elcentral-kollen vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Elcentral-kollen</h3>
+              <p class="ds-card__meta">Rail + scen: sju frågor, dualstatus 2x2, fem-nivå-pill, lead som steg i kortet, sticky-CTA på mobil. Kanon för diagnostiken.</p>
+              <p class="ds-card__meta"><b>Status:</b> v2.26, webhook-fällan öppen</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> rail, frågekort, radio-chips, dualstatus, tag/pill (kanon), input (kanon), solid knapp (kanon), dela, sticky-CTA</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Elcentral-lead-magnet/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/elcentral-kollen.md">Inventering</a> <a class="ds-a" href="../inventering/elcentral-kollen.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="elkollen">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/elkollen-desktop.jpg" alt="Behörighetskollen (Elkollen) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/elkollen-mobile-state-gron.jpg" alt="Behörighetskollen (Elkollen) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Behörighetskollen (Elkollen)</h3>
+              <p class="ds-card__meta">26 eljobb, trafikljus-board med tabbar, källrad, roomtiles. Kanon för besked som board och källrad.</p>
+              <p class="ds-card__meta"><b>Status:</b> v7.3.8, elektrikersignering kvar</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> trafikljus-board, källrad (kanon), sekundärknapp (kanon), options 72 h, roomtile, textlänk</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Elkollen/preview/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/elkollen.md">Inventering</a> <a class="ds-a" href="../inventering/elkollen.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="battery-calculator">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/battery-calculator-desktop.jpg" alt="Batterikalkylatorn vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/battery-calculator-mobile.jpg" alt="Batterikalkylatorn vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--3">Auktoritet 3</span>
+              <h3 class="ds-card__title">Batterikalkylatorn</h3>
+              <p class="ds-card__meta">Prototyp med streams-bar och break-even-kurva: enda belägget för de två enheterna.</p>
+              <p class="ds-card__meta"><b>Status:</b> prototyp, koefficienter osignerade</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> streams-bar, break-even-kurva, stat-trio (3 tiles), stepper pill</p>
+              <p class="ds-bib__links"><span class="ds-bib__nolive">Ingen Pages</span> <a class="ds-a" href="../inventering/battery-calculator.md">Inventering</a> <a class="ds-a" href="../inventering/battery-calculator.json">JSON</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="ds-blk" id="sidor">
+        <h2 class="ds-h2">Sidor</h2>
+        <p class="ds-p">Formulär- och CRM-sidor: offert, tack, accepterad, bokning, artikelmall.</p>
+        <div class="ds-cards ds-cards--bib">
+          <article class="ds-card ds-bib" id="main-form">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/main-form-desktop.jpg" alt="/offert-formuläret (redesign) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/main-form-mobile.jpg" alt="/offert-formuläret (redesign) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">/offert-formuläret (redesign)</h3>
+              <p class="ds-card__meta">Trust vänster, formulär höger i glaskort, chips i stället för fritext, adress-combobox. Design GO, produktion inte än.</p>
+              <p class="ds-card__meta"><b>Status:</b> design GO, produktion NOT YET (7 GAP)</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> sökfält/combobox (enda belägget), textarea (kanon), input 55 h (drift), pill-knapp (drift), success-ikon</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Ampy-main-form/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/main-form.md">Inventering</a> <a class="ds-a" href="../inventering/main-form.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="thank-you">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/thank-you-desktop.jpg" alt="Tack-sidan v1 FINAL vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/thank-you-mobile.jpg" alt="Tack-sidan v1 FINAL vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Tack-sidan v1 FINAL</h3>
+              <p class="ds-card__meta">Glaskort på aurora: animerad bock, H1, ingress, betygsrad, pill-knapp, ghost-länk. Saknar stegen briefen kräver.</p>
+              <p class="ds-card__meta"><b>Status:</b> v1 FINAL, överlämnad</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> glaskort (kanon B15), bekräftelse-bock (kanon), ghost-länk (kanon), aurora (kanon B11), eyebrow --action</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Thank-you-Offer-accepted/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/thank-you.md">Inventering</a> <a class="ds-a" href="../inventering/thank-you.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="thank-you-implementation">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/thank-you-implementation-desktop.jpg" alt="Tack-sidans implementationspaket vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/thank-you-implementation-mobile.jpg" alt="Tack-sidans implementationspaket vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Tack-sidans implementationspaket</h3>
+              <p class="ds-card__meta">Samma design i px scopad under .ampy-tack; byte-identisk med v1:s deliver-mapp utom två punkter.</p>
+              <p class="ds-card__meta"><b>Status:</b> levererat, ingen analytics</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> = tack-sidan, px-konverterad</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Thank-you-implementation/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/thank-you-implementation.md">Inventering</a> <a class="ds-a" href="../inventering/thank-you-implementation.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="offer-accepted">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/offer-accepted-desktop.jpg" alt="Offert accepterad (spegel) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/offer-accepted-mobile.jpg" alt="Offert accepterad (spegel) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--3">Auktoritet 3</span>
+              <h3 class="ds-card__title">Offert accepterad (spegel)</h3>
+              <p class="ds-card__meta">CRM-sidans publika spegel: bock 86, tidslinjen &#x27;Så här går vi vidare&#x27; (enda belägget), trust-rad, kontakt.</p>
+              <p class="ds-card__meta"><b>Status:</b> spegel, ligger före källrepot</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> tidslinje (3-stegsstege), bekräftelse-bock 86, ref-pill, glaskort .74</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Offer-accepted-preview/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/offer-accepted.md">Inventering</a> <a class="ds-a" href="../inventering/offer-accepted.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="booking-confirmation">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/booking-confirmation-desktop.jpg" alt="Bokningsbekräftelsen (riktning B &#x27;Dagen&#x27;) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/booking-confirmation-mobile.jpg" alt="Bokningsbekräftelsen (riktning B &#x27;Dagen&#x27;) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Bokningsbekräftelsen (riktning B &#x27;Dagen&#x27;)</h3>
+              <p class="ds-card__meta">780-dokument på aurora: datumet som H1, faktabrickor, elektriker, arbetslista, kvitto med totalplatta, tre sekundärknappar med paneler.</p>
+              <p class="ds-card__meta"><b>Status:</b> levererad till Yassine</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> sammanfattningskort, faktarad, arbetslista, kvittorader, totalplatta, sekundärknapp 52 h, expander (details), fokus navy</p>
+              <p class="ds-bib__links"><a class="ds-a" href="https://julius447.github.io/Booking-confirmation/riktning-b-dagen/" target="_blank" rel="noopener noreferrer">Live</a> <a class="ds-a" href="../inventering/booking-confirmation.md">Inventering</a> <a class="ds-a" href="../inventering/booking-confirmation.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="article-template">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/article-template-desktop-topp.jpg" alt="Artikelmallen (21 komponenter) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/article-template-mobile.jpg" alt="Artikelmallen (21 komponenter) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--2">Auktoritet 2</span>
+              <h3 class="ds-card__title">Artikelmallen (21 komponenter)</h3>
+              <p class="ds-card__meta">React + Tailwind: hero, byline, sticky TOC, snabbt svar, sektioner, tabell, FAQ med JSON-LD, lead magnet, delning. Egen palett (#326afd = drift).</p>
+              <p class="ds-card__meta"><b>Status:</b> 187 filer okommitterade lokalt</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> snabbfakta, FAQ, tabell (.ampy-table), byline, TOC, callout, (hero, lead magnet, share = ej klonade)</p>
+              <p class="ds-bib__links"><span class="ds-bib__nolive">Ingen Pages</span> <a class="ds-a" href="../inventering/article-template.md">Inventering</a> <a class="ds-a" href="../inventering/article-template.json">JSON</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="ds-blk" id="varumarke">
+        <h2 class="ds-h2">Varumärke och referens</h2>
+        <p class="ds-p">Grunden och jämförelseunderlaget: brandboken, Picasso och den tidigare dokumentationen.</p>
+        <div class="ds-cards ds-cards--bib">
+          <article class="ds-card ds-bib" id="brandbook">
+            <div class="ds-bib__imgs ds-bib__imgs--none"><span>Ingen skärmdump (PDF)</span></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--1">Auktoritet 1</span>
+              <h3 class="ds-card__title">Ampy Brandbook (PDF) + logotyper</h3>
+              <p class="ds-card__meta">Logotypsystem, palettnamn, Outfit som enda typsnitt, vikttabell. Kanon för logo och palettnamn; cobalt och lime finns inte i produktion (B1).</p>
+              <p class="ds-card__meta"><b>Status:</b> varumärkets grund</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> logo (glyph, mark, wordmark), palettnamn, typsnittsregler, gradienter s.11 (drift)</p>
+              <p class="ds-bib__links"><span class="ds-bib__nolive">Ingen Pages</span> <a class="ds-a" href="../inventering/brandbook.md">Inventering</a> <a class="ds-a" href="../inventering/brandbook.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="picasso">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/picasso-desktop.jpg" alt="Picasso (referensbiblioteket) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/picasso-mobile.jpg" alt="Picasso (referensbiblioteket) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status ds-status--3">Auktoritet 3</span>
+              <h3 class="ds-card__title">Picasso (referensbiblioteket)</h3>
+              <p class="ds-card__meta">Verbatim referenskomponenter och fem byggen (bl.a. main-form-prototypen). Inspiration, aldrig kanon.</p>
+              <p class="ds-card__meta"><b>Status:</b> inspiration, ej kanon</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> referens: hero/ampy, main-cta-klon, testimonials, main-form-prototyp, 38 px-knapp (utgår)</p>
+              <p class="ds-bib__links"><span class="ds-bib__nolive">Ingen Pages</span> <a class="ds-a" href="../inventering/picasso.md">Inventering</a> <a class="ds-a" href="../inventering/picasso.json">JSON</a></p>
+            </div>
+          </article>
+          <article class="ds-card ds-bib" id="tidigare-dokumentation">
+            <div class="ds-bib__imgs"><img class="ds-card__img" src="bilder/skill-reference-desktop.jpg" alt="Tidigare dokumentation (designsystem-skillen) vid 1440"><img class="ds-card__img ds-card__img--m" src="bilder/skill-reference-mobile.jpg" alt="Tidigare dokumentation (designsystem-skillen) vid 390"></div>
+            <div class="ds-card__body">
+              <span class="ds-status">Jämförelseunderlag</span>
+              <h3 class="ds-card__title">Tidigare dokumentation (designsystem-skillen)</h3>
+              <p class="ds-card__meta">SKILL.md, tokens.md, components.md och ampy-foretagsdata §9 och §11: beskrivning, inte sanning. Jämförelseunderlag för konsolideringen.</p>
+              <p class="ds-card__meta"><b>Status:</b> jämförelseunderlag</p>
+              <p class="ds-card__meta"><b>Komponenter:</b> skillens referens (mörkt kort + glöd + centrerad rubrik = AI-slop-defaulten, B9)</p>
+              <p class="ds-bib__links"><span class="ds-bib__nolive">Ingen Pages</span> <a class="ds-a" href="../inventering/tidigare-dokumentation.md">Inventering</a> <a class="ds-a" href="../inventering/tidigare-dokumentation.json">JSON</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="ds-blk" id="motexempel">
+        <h2 class="ds-h2">Motexempel</h2>
+        <p class="ds-p">Uteslutet ur kanon: <code>rot-gt-calculator/wireframes/</code>, fem kalkylator-wireframes byggda på en dag och underkända av ägaren ("extremt svag design"). De renderas inte här med flit. Det de gjorde fel är det designsystemet är byggt för att aldrig göra igen.</p>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Vad de gjorde</th><th>Vad kanon gör</th></tr></thead>
+          <tbody>
+            <tr><td>Fem alternativ utan en signaturenhet: villkorstavla, stegvis wizard, sliderpanel, jämförelsetabell och kort, alla lika lite motiverade.</td><td>EN signaturenhet per verktyg (kvittot, staplarna, dualstatusen), vald i marknadsanalysen före bygget.</td></tr>
+            <tr><td>Generiska ytor: mörka kort med glöd och centrerade vita rubriker, teal som text, gradientknappar av tre slag i samma vy.</td><td>Platt midnight, vänsterställd rubrik med kicker, teal-deep som text, en primär CTA per yta.</td></tr>
+            <tr><td>Wizard före värdet: frågor och fält innan ett enda resultat visades.</td><td>Värdet först, alltid gratis, lead-formen förtjänar sina fält i det heta ögonblicket.</td></tr>
+            <tr><td>Egna tokennamnrum och literaler, ingen koppling till sajtens ap-tokens.</td><td>Allt via <code>--ampy-*</code>; en avvikelse står i "Avvikelser" med skäl.</td></tr>
+            <tr><td>"Spara upp till 50 000 kr" som rubrik, "inom 60 sekunder" som löfte.</td><td>Candour-grinden: "avdrag", regeln och taket, ett räkneexempel som kan kontrolleras.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+    </div>
+    </main>
+</div>
+<script src="doc.js"></script>
+</body>
+</html>

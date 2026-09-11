@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S4-harness: blocken i full bredd</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<style>
+  body { margin: 0; background: var(--ampy-bg-page); }
+  .h-label { font: 500 12px/1 var(--ampy-font); letter-spacing: .14em; text-transform: uppercase; color: var(--ampy-ink-faint); padding: 24px 24px 8px; }
+  .h-band { padding: 24px; }
+  @media (max-width: 480px) { .h-band { padding: 12px; } }
+</style>
+</head>
+<body class="ampy">
+<!-- Harness för site/_probes/s4-parity.mjs och för att se blocken i full bredd (utan dokumentationens skal). Markupen är identisk med site/komponenter/block.html. -->
+<p class="h-label">Header + mega-meny</p>
+<div id="h-header">
+          <header class="ampy-header ampy-header--demo is-open">
+            <div class="ampy-header__in">
+              <a class="ampy-header__logo" href="#" aria-label="Ampy, hem"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="Ampy" width="130" height="37"></a>
+              <nav class="ampy-header__nav" aria-label="Huvudmeny">
+                <div class="ampy-header__item is-open"><button class="ampy-header__link" type="button" aria-expanded="true" aria-controls="mega-tj">Tjänster <svg class="ampy-header__chev" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button></div>
+                <div class="ampy-header__item"><button class="ampy-header__link" type="button" aria-expanded="false">Produkter <svg class="ampy-header__chev" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button></div>
+                <div class="ampy-header__item"><button class="ampy-header__link" type="button" aria-expanded="false">Lösningar <svg class="ampy-header__chev" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button></div>
+              </nav>
+              <div class="ampy-header__right">
+                <a class="ampy-btn ampy-btn--secondary ampy-btn--compact ampy-header__cta" href="#">Gratis rådgivning</a>
+                <button class="ampy-header__burger" type="button" aria-label="Öppna meny" aria-expanded="false"><span></span><span></span><span></span></button>
+              </div>
+            </div>
+          </header>
+          <div class="ampy-mega ampy-mega--demo" id="mega-tj">
+            <div class="ampy-mega__in">
+              <div class="ampy-mega__col">
+                <a class="ampy-mega__title" href="#"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-bolt"/></svg>Elinstallationer</a>
+                <a class="ampy-mega__item" href="#">Byte av elcentral</a><a class="ampy-mega__item" href="#">Elbesiktning</a><a class="ampy-mega__item" href="#">Felsökning av el</a><a class="ampy-mega__item" href="#">Jordfelsbrytare</a><a class="ampy-mega__item" href="#">Lastbalansering</a><a class="ampy-mega__item" href="#">Smarta hem</a>
+              </div>
+              <div class="ampy-mega__col">
+                <a class="ampy-mega__title" href="#"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-info"/></svg>Belysning</a>
+                <a class="ampy-mega__item" href="#">Inomhusbelysning</a><a class="ampy-mega__item" href="#">Utomhusbelysning</a><a class="ampy-mega__item" href="#">Installation av spotlights</a><a class="ampy-mega__item" href="#">Byte av strömbrytare</a><a class="ampy-mega__item" href="#">Byte av ljuskällor</a>
+              </div>
+              <div class="ampy-mega__col">
+                <a class="ampy-mega__title" href="#"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg>Kök och badrum</a>
+                <a class="ampy-mega__item" href="#">Installation av vitvaror</a><a class="ampy-mega__item" href="#">Ugn och spis</a><a class="ampy-mega__item" href="#">Golvvärme</a><a class="ampy-mega__item" href="#">Handdukstork</a>
+              </div>
+              <div class="ampy-mega__col">
+                <a class="ampy-mega__title" href="#"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-clock"/></svg>Akut och service</a>
+                <a class="ampy-mega__item" href="#">Eljour dygnet runt</a><a class="ampy-mega__item" href="#">Elservice</a><a class="ampy-mega__item" href="#">Elrenovering</a><a class="ampy-mega__item" href="#">Elektriker nära dig</a>
+              </div>
+            </div>
+          </div>
+        </div>
+<p class="h-label">Hero-1</p>
+<div id="h-hero1">
+          <section class="ampy-hero1">
+            <div class="ampy-frame ampy-frame--short ampy-on-dark">
+              <img class="ampy-frame__media" src="../bilder/block/hero1-bg.jpg" alt="" width="1400" height="1157">
+              <div class="ampy-frame__veil" aria-hidden="true"></div>
+              <div class="ampy-frame__content ampy-hero1__stack">
+                <h1 class="ampy-display">Elektrikern som gör<br>ditt hem redo för framtiden</h1>
+                <p class="ampy-lead">Elservice, laddbox och batterilagring, utfört av behöriga elektriker med fast pris och ROT eller grön teknik inräknat.</p>
+                <a class="ampy-btn ampy-btn--primary" href="#">Kostnadsfri rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-up-right"/></svg></a>
+              </div>
+              <div class="ampy-frame__foot">
+                <div class="ampy-proof">
+                  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google</span><span class="ampy-proof__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span></a>
+                  <span class="ampy-proof__sep" aria-hidden="true"></span>
+                  <span class="ampy-proof__vol">Över 3 000 installationer per år</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Hero-2 S</p>
+<div id="h-hero2">
+          <section class="ampy-hero2 ampy-hero2--s">
+            <div class="ampy-hero2__card ampy-on-dark">
+              <img class="ampy-hero2__bg" src="../bilder/block/hero2-bg.webp" alt="" aria-hidden="true" width="1200" height="613">
+              <nav class="ampy-hero2__crumbs" aria-label="Du är här"><a href="#">Hem</a><span aria-hidden="true">&#8250;</span><a href="#">Elservice</a><span aria-hidden="true">&#8250;</span><span>Byta elcentral</span></nav>
+              <div class="ampy-hero2__body">
+                <h1 class="ampy-hero2__h1">Byta elcentral med fast pris och ROT-avdrag</h1>
+                <p class="ampy-hero2__lead">En behörig elektriker byter din elcentral, märker upp grupperna och sätter jordfelsbrytare. Du får priset innan du bestämmer dig.</p>
+                <div class="ampy-hero2__actions"><a class="ampy-btn ampy-btn--primary" href="#">Kostnadsfri rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-up-right"/></svg></a></div>
+                <div class="ampy-proof">
+                  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google</span><span class="ampy-proof__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span></a>
+                  <span class="ampy-proof__sep" aria-hidden="true"></span>
+                  <span class="ampy-proof__vol">Över 3 000 installationer per år</span>
+                </div>
+              </div>
+              <div class="ampy-hero2__media"><img src="../bilder/block/hero2-foto.jpg" alt="Ny elcentral med märkta grupper" width="1000" height="666"></div>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Mini-menu</p>
+<div id="h-picker">
+          <section class="ampy-picker ampy-band" aria-labelledby="pk-title">
+            <div class="ampy-picker__wrap">
+              <header class="ampy-picker__head">
+                <h2 class="ampy-picker__title" id="pk-title">Din elektriker för hela hemmet</h2>
+                <p class="ampy-picker__lead">Från felsökning och elcentral till laddbox och batteri. Behöriga elektriker, fast pris och avdraget inräknat.</p>
+              </header>
+              <div class="ampy-picker__grid">
+                <a class="ampy-picker__card ampy-on-dark" href="#"><span class="ampy-picker__media" style="background-image:url('../bilder/block/elservice.webp')"></span><span class="ampy-picker__overlay" aria-hidden="true"></span><span class="ampy-picker__body"><span class="ampy-picker__cardtitle">Elservice</span><span class="ampy-picker__cta">Läs mer <svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></span></span></a>
+                <a class="ampy-picker__card ampy-on-dark" href="#"><span class="ampy-picker__media" style="background-image:url('../bilder/block/laddbox.webp')"></span><span class="ampy-picker__overlay" aria-hidden="true"></span><span class="ampy-picker__body"><span class="ampy-picker__cardtitle">Laddbox</span><span class="ampy-picker__cta">Läs mer <svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></span></span></a>
+                <a class="ampy-picker__card ampy-on-dark" href="#"><span class="ampy-picker__media" style="background-image:url('../bilder/block/batterilagring.webp')"></span><span class="ampy-picker__overlay" aria-hidden="true"></span><span class="ampy-picker__body"><span class="ampy-picker__cardtitle">Batterilagring</span><span class="ampy-picker__cta">Läs mer <svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></span></span></a>
+              </div>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Avdragsblocket (steg + kvitto)</p>
+<div id="h-avdrag" class="h-band">
+          <section class="ampy-avdrag ampy-avdrag--wave" aria-labelledby="av-h2">
+            <svg class="ampy-avdrag__wave ampy-avdrag__wave--1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="984" height="687" viewBox="0 0 984 687" fill="none"><path d="M0.101004 20.0619C0.600584 8.84058 9.84347 1.17382e-07 21.076 2.51328e-07L961.412 1.14647e-05C974.498 1.16208e-05 985.418 10.5972 982.854 23.4296C977.67 49.3741 963.295 73.6508 941.937 90.4135C880.337 138.634 779.032 119.487 722.751 173.262C689.848 204.7 682.055 252.683 681.19 297.121C680.447 341.56 679.548 400.042 664.087 442.116C634.895 521.42 616.787 565.147 537.627 609.796C458.468 654.446 363.331 653.812 293.761 628.364C224.191 602.917 192.614 599.726 146.503 638.806C100.393 677.886 116.456 684.221 85.1146 683.693C53.7734 683.165 -2.71524 700.588 0.101498 660.353C2.91823 620.118 0.101004 20.0619 0.101004 20.0619Z" fill="#eef4fc" fill-opacity="0.67"/></svg>
+            <svg class="ampy-avdrag__wave ampy-avdrag__wave--2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="665" height="431" viewBox="0 0 665 431" fill="none"><path d="M0.0683953 12.5861C0.40702 5.53937 6.21896 7.41603e-08 13.2739 1.58289e-07L643.451 7.67308e-06C656.524 7.82897e-06 667.543 10.7797 663.153 23.093C658.5 36.1404 649.782 48.0384 637.839 56.7222C596.127 86.974 527.527 74.962 489.416 108.699C467.136 128.422 461.859 158.525 461.272 186.404C460.77 214.283 460.161 250.972 449.691 277.368C429.924 327.121 417.662 354.553 364.058 382.565C310.455 410.577 246.032 410.179 198.922 394.214C151.813 378.249 130.43 376.247 99.2059 400.765C67.9818 425.282 78.859 429.256 57.636 428.925C36.413 428.594 -1.83864 439.524 0.0687298 414.283C1.9761 389.041 0.0683953 12.5861 0.0683953 12.5861Z" fill="#e6eff9"/></svg>
+            <svg class="ampy-avdrag__wave ampy-avdrag__wave--3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="742" height="487" viewBox="0 0 742 487" fill="none"><path d="M741.369 472.779C740.991 480.74 734.427 487 726.457 487L21.0013 487C7.92631 487 -3.07046 476.287 0.783671 463.793C5.67881 447.924 15.7866 433.357 29.9721 422.908C76.5003 388.725 153.019 402.298 195.53 364.178C220.382 341.892 226.268 307.878 226.922 276.377C227.483 244.875 228.162 203.419 239.841 173.593C261.89 117.376 275.568 86.3793 335.359 54.7281C395.151 23.0768 467.011 23.5263 519.559 41.5655C572.107 59.6047 595.958 61.8668 630.787 34.1639C665.615 6.46096 653.483 1.97007 677.156 2.34433C700.829 2.7186 743.496 -9.63196 741.369 18.8895C739.241 47.411 741.369 472.779 741.369 472.779Z" fill="#eef4fc" fill-opacity="0.39"/></svg>
+            <div class="ampy-avdrag__grid">
+              <div>
+                <h2 class="ampy-avdrag__h2" id="av-h2">Byta elcentral med <span class="ampy-avdrag__accent">30&nbsp;% ROT-avdrag</span></h2>
+                <p class="ampy-steps__cap">Steg för steg</p>
+                <ol class="ampy-steps" role="list">
+                  <li class="ampy-step" role="listitem"><span class="ampy-step__n" aria-hidden="true"><svg class="ampy-step__ring" viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="22"/><circle class="arc" cx="24" cy="24" r="22" stroke-dasharray="46.08 92.15"/></svg><span>1</span></span><h3 class="ampy-step__title">Få offert inklusive ROT-avdrag</h3><p class="ampy-step__text">En elektriker räknar på ditt projekt. Offerten visar vad du betalar och vad som ingår, innan du bestämmer dig.</p></li>
+                  <li class="ampy-step" role="listitem"><span class="ampy-step__n" aria-hidden="true"><svg class="ampy-step__ring" viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="22"/><circle class="arc" cx="24" cy="24" r="22" stroke-dasharray="92.15 46.08"/></svg><span>2</span></span><h3 class="ampy-step__title">En auktoriserad elektriker gör jobbet</h3><p class="ampy-step__text">En av våra elektriker kommer hem till dig och utför installationen metodiskt, med högsta kvalitet.</p></li>
+                  <li class="ampy-step" role="listitem"><span class="ampy-step__n" aria-hidden="true"><svg class="ampy-step__ring" viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="22"/><circle class="arc" cx="24" cy="24" r="22" stroke-dasharray="138.23 0"/></svg><span>3</span></span><h3 class="ampy-step__title">Du slipper pappersarbetet</h3><p class="ampy-step__text">Avdraget dras på fakturan. Ansökan till Skatteverket skickar vi in åt dig.</p></li>
+                </ol>
+              </div>
+              <section class="ampy-receipt ampy-receipt--dark ampy-on-dark" aria-labelledby="av-cap">
+                <h3 class="ampy-receipt__cap" id="av-cap">Så räknas ROT</h3>
+                <div class="ampy-receipt__row"><span class="ampy-receipt__lbl">Elcentral + installation</span><span class="ampy-receipt__dots" aria-hidden="true"></span><span class="ampy-receipt__amt"><span class="ampy-receipt__pill">Skräddarsydd offert</span></span></div>
+                <div class="ampy-receipt__row ampy-receipt__row--deduct"><span class="ampy-receipt__lbl">ROT-avdrag på arbetet</span><span class="ampy-receipt__dots" aria-hidden="true"></span><span class="ampy-receipt__amt">&minus;30&nbsp;%</span></div>
+                <div class="ampy-receipt__total"><span class="ampy-receipt__tlabel">Ditt pris efter ROT</span><span class="ampy-receipt__amt">70&nbsp;% av arbetet</span><span class="ampy-receipt__tnote">Materialet omfattas inte av ROT.</span></div>
+                <p class="ampy-receipt__fine">Taket är 50&nbsp;000&nbsp;kr per person och år. Du får avdraget som privatperson om du äger bostaden och betalar skatt.</p>
+                <div class="ampy-receipt__cta"><a class="ampy-btn ampy-btn--primary" href="#">Begär offert med ROT inräknat <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></a></div>
+              </section>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Processteg (ensamma)</p>
+<div id="h-steg" class="h-band">
+          <div class="ampy-section--demo" style="max-width:72rem">
+            <p class="ampy-steps__cap">Steg för steg</p>
+            <ol class="ampy-steps" role="list">
+              <li class="ampy-step" role="listitem">
+                <span class="ampy-step__n" aria-hidden="true"><svg class="ampy-step__ring" viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="22"/><circle class="arc" cx="24" cy="24" r="22" stroke-dasharray="46.08 92.15"/></svg><span>1</span></span>
+                <h3 class="ampy-step__title">Få offert inklusive ROT-avdrag</h3>
+                <p class="ampy-step__text">En elektriker räknar på ditt projekt. Offerten visar vad du betalar och vad som ingår, innan du bestämmer dig.</p>
+              </li>
+              <li class="ampy-step" role="listitem">
+                <span class="ampy-step__n" aria-hidden="true"><svg class="ampy-step__ring" viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="22"/><circle class="arc" cx="24" cy="24" r="22" stroke-dasharray="92.15 46.08"/></svg><span>2</span></span>
+                <h3 class="ampy-step__title">En auktoriserad elektriker gör jobbet</h3>
+                <p class="ampy-step__text">En av våra elektriker kommer hem till dig och utför installationen metodiskt, med högsta kvalitet.</p>
+              </li>
+              <li class="ampy-step" role="listitem">
+                <span class="ampy-step__n" aria-hidden="true"><svg class="ampy-step__ring" viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="22"/><circle class="arc" cx="24" cy="24" r="22" stroke-dasharray="138.23 0"/></svg><span>3</span></span>
+                <h3 class="ampy-step__title">Du slipper pappersarbetet</h3>
+                <p class="ampy-step__text">Avdraget dras på fakturan. Ansökan till Skatteverket skickar vi in åt dig.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+<p class="h-label">Eljour</p>
+<div id="h-eljour">
+          <section class="ampy-eljour ampy-band" aria-labelledby="ej-title">
+            <header class="ampy-eljour__head">
+              <h2 class="ampy-eljour__title" id="ej-title"><span>Är något fel med elen?</span><span>Tryck på det du upplever.</span></h2>
+            </header>
+            <div class="ampy-eljour__grid">
+              <aside class="ampy-eljour__aside">
+                <div class="ampy-callcard">
+                  <span class="ampy-tag ampy-tag--live" style="align-self:flex-start"><span class="ampy-tag__pulse" aria-hidden="true"></span> Jour öppen just nu</span>
+                  <p class="ampy-callcard__lead"><b>Akut elfel? Ring oss direkt.</b> Då slipper du felsöka själv, och vi gör elen trygg att använda igen.</p>
+                  <ul class="ampy-list ampy-list--check ampy-list--compact">
+                    <li><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-clock"/></svg> Jour dygnet runt, året om.</li>
+                    <li><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg> Målsättning att vara på plats inom en timme.</li>
+                    <li><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-check-circle"/></svg> Prata med en av våra behöriga elektriker, inte en växel.</li>
+                    <li><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-lock"/></svg> Tydligt pris innan vi rycker ut, inga dolda avgifter.</li>
+                  </ul>
+                  <a class="ampy-btn ampy-btn--emergency" href="tel:+46102657979"><span class="ampy-btn__txt">Ring eljouren <b>010-265 79 79</b></span><span class="ampy-btn__dot" aria-hidden="true"></span><svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-phone"/></svg></a>
+                </div>
+                <p class="ampy-eljour__ground ampy-eljour__ground--d">Varje år rycker räddningstjänsten ut till omkring <b>1 800 elrelaterade bränder</b> i svenska bostäder. En vanlig orsak är en glappkontakt som hettas upp. Källa: Elsäkerhetsverket.</p>
+              </aside>
+              <ul class="ampy-symptoms" id="ej-list">
+                <li class="ampy-symptoms__item">
+                  <button class="ampy-symptoms__row" type="button" aria-expanded="true" aria-controls="ej-p1"><span class="ampy-symptoms__dot ampy-symptoms__dot--akut" aria-hidden="true"></span><span class="ampy-symptoms__label">Det luktar bränt</span><span class="ampy-tag ampy-tag--sm ampy-tag--error">Akut</span><svg class="ampy-symptoms__chev" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button>
+                  <div class="ampy-symptoms__panel" id="ej-p1"><div class="ampy-symptoms__panel-in"><div class="ampy-symptoms__panel-pad">
+                    <p class="ampy-symptoms__risk">Bränd lukt från ett uttag, en dosa eller elcentralen betyder oftast att något <b>värms upp av ett glapp</b>. Värmen kan tända plasten runt kabeln långt innan säkringen reagerar.</p>
+                    <p class="ampy-symptoms__safety"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg><span>Ser du rök eller lågor: ring <a href="tel:112">112</a> först. Bryt strömmen i elcentralen om du kan göra det säkert.</span></p>
+                    <div class="ampy-symptoms__act"><a class="ampy-btn ampy-btn--emergency" href="tel:+46102657979"><span class="ampy-btn__txt">Ring eljouren <b>010-265 79 79</b></span><svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-phone"/></svg></a></div>
+                  </div></div></div>
+                </li>
+                <li class="ampy-symptoms__item">
+                  <button class="ampy-symptoms__row" type="button" aria-expanded="false" aria-controls="ej-p2"><span class="ampy-symptoms__dot ampy-symptoms__dot--varn" aria-hidden="true"></span><span class="ampy-symptoms__label">Säkring löser ut</span><span class="ampy-tag ampy-tag--sm ampy-tag--warning">Varning</span><svg class="ampy-symptoms__chev" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button>
+                  <div class="ampy-symptoms__panel" id="ej-p2" inert><div class="ampy-symptoms__panel-in"><div class="ampy-symptoms__panel-pad"><p class="ampy-symptoms__risk">Löser en säkring ut en enstaka gång är det oftast bara överbelastning. Löser samma säkring ut gång på gång är det en <b>kortslutning eller ett glapp</b>.</p></div></div></div>
+                </li>
+                <li class="ampy-symptoms__item">
+                  <button class="ampy-symptoms__row" type="button" aria-expanded="false" aria-controls="ej-p3"><span class="ampy-symptoms__dot ampy-symptoms__dot--varn" aria-hidden="true"></span><span class="ampy-symptoms__label">Jordfelsbrytare löser ut</span><span class="ampy-tag ampy-tag--sm ampy-tag--warning">Varning</span><svg class="ampy-symptoms__chev" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button>
+                  <div class="ampy-symptoms__panel" id="ej-p3" inert><div class="ampy-symptoms__panel-in"><div class="ampy-symptoms__panel-pad"><p class="ampy-symptoms__risk">Jordfelsbrytaren bryter så fort den känner <b>läckström</b>. Den bryter för att skydda dig, så strunta inte i den.</p></div></div></div>
+                </li>
+                <li class="ampy-symptoms__item">
+                  <button class="ampy-symptoms__row" type="button" aria-expanded="false" aria-controls="ej-p4"><span class="ampy-symptoms__dot ampy-symptoms__dot--akut" aria-hidden="true"></span><span class="ampy-symptoms__label">Laddboxen blir varm</span><span class="ampy-tag ampy-tag--sm ampy-tag--error">Akut</span><svg class="ampy-symptoms__chev" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button>
+                  <div class="ampy-symptoms__panel" id="ej-p4" inert><div class="ampy-symptoms__panel-in"><div class="ampy-symptoms__panel-pad"><p class="ampy-symptoms__risk">En laddbox som blir varm att ta på drar mer ström än anslutningen är byggd för.</p></div></div></div>
+                </li>
+                <li class="ampy-symptoms__more-li"><button class="ampy-symptoms__more" type="button" aria-expanded="false">Se fler tecken (6) <svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button></li>
+              </ul>
+              <p class="ampy-eljour__ground ampy-eljour__ground--m">Varje år rycker räddningstjänsten ut till omkring <b>1 800 elrelaterade bränder</b> i svenska bostäder. Källa: Elsäkerhetsverket.</p>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Före/efter</p>
+<div id="h-ba">
+          <section class="ampy-ba" aria-labelledby="ba-h2">
+            <div class="ampy-ba__inner">
+              <h2 class="ampy-ba__h2" id="ba-h2">Så ser det ut när vi har <span class="ampy-ba__accent">bytt en elcentral</span></h2>
+              <div class="ampy-ba__pair">
+                <figure class="ampy-ba__fig" data-ampy-ba>
+                  <div class="ampy-ba__frame">
+                    <div class="ampy-ba__layer ampy-ba__layer--efter"><img src="../bilder/block/fe-efter.svg" width="1000" height="1000" alt="Byte av elcentral, efter, utfört av Ampy"></div>
+                    <div class="ampy-ba__layer ampy-ba__layer--fore"><img src="../bilder/block/fe-fore.svg" width="1000" height="1000" alt="Byte av elcentral, före"><span class="ampy-ba__chip ampy-ba__chip--fore">Före</span></div>
+                    <div class="ampy-ba__chips"><span class="ampy-ba__chip ampy-ba__chip--efter">Efter</span></div>
+                    <div class="ampy-ba__seam" aria-hidden="true"></div>
+                    <div class="ampy-ba__handle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></div>
+                    <p class="ampy-ba__hint" aria-hidden="true">Dra för att jämföra</p>
+                  </div>
+                  <input class="ampy-ba__range" type="range" min="0" max="100" step="1" value="35" aria-label="Jämför före och efter: från proppskåp till ny central med jordfelsbrytare">
+                </figure>
+                <figure class="ampy-ba__fig" data-ampy-ba style="--ampy-ba-pos:55%">
+                  <div class="ampy-ba__frame">
+                    <div class="ampy-ba__layer ampy-ba__layer--efter"><img src="../bilder/block/fe-efter.svg" width="1000" height="1000" alt="Byte av elcentral, efter"></div>
+                    <div class="ampy-ba__layer ampy-ba__layer--fore"><img src="../bilder/block/fe-fore.svg" width="1000" height="1000" alt="Byte av elcentral, före"><span class="ampy-ba__chip ampy-ba__chip--fore">Före</span></div>
+                    <div class="ampy-ba__chips"><span class="ampy-ba__chip ampy-ba__chip--efter">Efter</span></div>
+                    <div class="ampy-ba__seam" aria-hidden="true"></div>
+                    <div class="ampy-ba__handle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></div>
+                    <p class="ampy-ba__hint" aria-hidden="true">Dra för att jämföra</p>
+                  </div>
+                  <input class="ampy-ba__range" type="range" min="0" max="100" step="1" value="55" aria-label="Jämför före och efter: femton grupper samlade i en central med jordfelsbrytare">
+                </figure>
+              </div>
+              <p class="ampy-ba__tagline">Ny elcentral, jordfelsbrytare och märkta grupper. Samma jobb oavsett hur det såg ut innan.</p>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Vår process</p>
+<div id="h-process">
+          <section class="ampy-process" aria-labelledby="pr-title">
+            <div class="ampy-process__inner">
+              <div class="ampy-process__head"><h2 class="ampy-process__title" id="pr-title">Vad som händer sen</h2></div>
+              <ol class="ampy-process__steps">
+                <li class="ampy-process__step"><span class="ampy-process__num" aria-hidden="true">1</span><h3 class="ampy-process__label">Elektriker, inte säljare</h3><p class="ampy-process__body"><span class="ampy-process__chip">Oftast inom en arbetsdag.</span> En av våra egna ringer upp dig.</p></li>
+                <li class="ampy-process__step"><span class="ampy-process__num" aria-hidden="true">2</span><h3 class="ampy-process__label">Fast pris</h3><p class="ampy-process__body"><span class="ampy-process__chip">Kostnadsfri offert.</span> Skriftligt, materialet inräknat, ingenting som hänger på slumpen.</p></li>
+                <li class="ampy-process__step"><span class="ampy-process__num" aria-hidden="true">3</span><h3 class="ampy-process__label">Du får säga nej</h3><p class="ampy-process__body"><span class="ampy-process__chip">Ingen bindning.</span> Du slipper förklara varför.</p></li>
+                <li class="ampy-process__step"><span class="ampy-process__num" aria-hidden="true">4</span><h3 class="ampy-process__label">Betala efteråt</h3><p class="ampy-process__body"><span class="ampy-process__chip">Avdraget redan gjort.</span> Faktura när jobbet är klart, med <a href="#">ROT</a> eller grön teknik avdraget.</p></li>
+              </ol>
+              <div class="ampy-process__aside">
+                <ul class="ampy-process__trust"><li>Registrerat elinstallationsföretag</li><li>Ansvarsförsäkrad</li></ul>
+                <a class="ampy-process__handoff" href="#"><span class="ampy-process__handoff-label">Berätta vad som behöver göras</span><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></a>
+              </div>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Testimonials</p>
+<div id="h-testimonial">
+          <section class="ampy-slider ampy-band" aria-label="Kundomdömen">
+            <header class="ampy-slider__head">
+              <h2 class="ampy-slider__heading">Vad säger dina grannar om Ampy?</h2>
+              <p class="ampy-slider__sub">Riktiga omdömen från riktiga jobb.</p>
+            </header>
+            <ul class="ampy-slider__track">
+              <li><figure class="ampy-testimonial ampy-on-dark">
+                <div class="ampy-testimonial__top"><span class="ampy-testimonial__quote" aria-hidden="true">&rdquo;</span><svg class="ampy-testimonial__google" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg></div>
+                <div class="ampy-testimonial__body"><blockquote class="ampy-testimonial__text">Blev rekommenderad av en granne att gå via Ampy. Är otroligt nöjd med det valet.</blockquote></div>
+                <figcaption class="ampy-testimonial__foot"><div class="ampy-testimonial__name">Filip Eriksson</div><hr class="ampy-testimonial__divider"><div class="ampy-testimonial__meta"><span class="ampy-testimonial__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span><span class="ampy-testimonial__date">mars 2026</span></div></figcaption>
+              </figure></li>
+              <li><figure class="ampy-testimonial ampy-on-dark">
+                <div class="ampy-testimonial__top"><span class="ampy-testimonial__quote" aria-hidden="true">&rdquo;</span><svg class="ampy-testimonial__google" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg></div>
+                <div class="ampy-testimonial__body"><blockquote class="ampy-testimonial__text">Professionell firma! Oskar gjorde ett kanonjobb på uppfarten, var en annan firma här tidigare men dem klarade inte av det.</blockquote></div>
+                <figcaption class="ampy-testimonial__foot"><div class="ampy-testimonial__name">Daniel Hellström</div><hr class="ampy-testimonial__divider"><div class="ampy-testimonial__meta"><span class="ampy-testimonial__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span><span class="ampy-testimonial__date">mars 2026</span></div></figcaption>
+              </figure></li>
+              <li><figure class="ampy-testimonial ampy-on-dark">
+                <div class="ampy-testimonial__top"><span class="ampy-testimonial__quote" aria-hidden="true">&rdquo;</span><svg class="ampy-testimonial__google" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg></div>
+                <div class="ampy-testimonial__body"><blockquote class="ampy-testimonial__text">Snabb hjälp när elcentralen strulade. Ampy dök upp direkt och löste allt med högsta precision. Rekommenderas!</blockquote></div>
+                <figcaption class="ampy-testimonial__foot"><div class="ampy-testimonial__name">Moa Olaussen</div><hr class="ampy-testimonial__divider"><div class="ampy-testimonial__meta"><span class="ampy-testimonial__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span><span class="ampy-testimonial__date">mars 2026</span></div></figcaption>
+              </figure></li>
+            </ul>
+            <div class="ampy-slider__nav" role="group" aria-label="Bläddra bland omdömen">
+              <button class="ampy-slider__dot is-active" type="button" aria-label="Omdöme 1"><span class="ampy-slider__dot-fill"></span></button>
+              <button class="ampy-slider__dot" type="button" aria-label="Omdöme 2"></button>
+              <button class="ampy-slider__dot" type="button" aria-label="Omdöme 3"></button>
+              <button class="ampy-slider__dot" type="button" aria-label="Omdöme 4"></button>
+            </div>
+            <div class="ampy-slider__rating">
+              <a class="ampy-slider__badge" href="#"><span class="ampy-slider__badge-stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span><span class="ampy-slider__badge-text"><strong>5 av 5</strong>Betyg på Google</span></a>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Visste du att</p>
+<div id="h-vda">
+          <section class="ampy-vda" aria-labelledby="vda-h">
+            <div class="ampy-vda__card ampy-on-dark">
+              <div class="ampy-vda__content">
+                <p class="ampy-vda__kicker"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-bolt"/></svg>Visste du att</p>
+                <h2 class="ampy-vda__heading" id="vda-h">En jordfelsbrytare bryter strömmen på under 30 millisekunder</h2>
+                <div class="ampy-vda__text"><p>Det är snabbare än hjärtat hinner reagera. Därför är den det billigaste skyddet i hela elcentralen, och det första vi kollar när vi kommer hem till dig.</p></div>
+              </div>
+              <div class="ampy-vda__media">
+                <svg class="ampy-vda__bulb" viewBox="0 0 200 240" role="img" aria-label="Glödlampa"><defs><linearGradient id="vda-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b6f2ff"/><stop offset=".55" stop-color="#55ff9a"/><stop offset="1" stop-color="#00a991"/></linearGradient></defs><circle cx="100" cy="96" r="88" fill="rgba(0,169,145,.14)"/><path d="M100 18a70 70 0 0 0-42 126c8 6 12 14 12 24v6h60v-6c0-10 4-18 12-24a70 70 0 0 0-42-126Z" fill="url(#vda-g)" opacity=".95"/><path d="M104 74 84 112h18l-6 34 22-42H100l4-30Z" fill="#090b32"/><rect x="70" y="178" width="60" height="12" rx="6" fill="rgba(255,255,255,.55)"/><rect x="74" y="196" width="52" height="12" rx="6" fill="rgba(255,255,255,.4)"/><rect x="82" y="214" width="36" height="12" rx="6" fill="rgba(255,255,255,.3)"/></svg>
+              </div>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Certifikat</p>
+<div id="h-cert">
+          <section class="ampy-cert ampy-on-dark" aria-labelledby="cert-h">
+            <div class="ampy-cert__bg" aria-hidden="true">
+              <svg viewBox="0 0 1440 356" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                <defs>
+                  <linearGradient id="cert-g1" x1="1440" y1="60" x2="120" y2="360" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#b6f2ff" stop-opacity=".30"/><stop offset="1" stop-color="#b6f2ff" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="cert-g2" x1="1440" y1="120" x2="180" y2="410" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff" stop-opacity=".26"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="cert-g3" x1="1440" y1="210" x2="260" y2="450" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8fd4e0" stop-opacity=".44"/><stop offset="1" stop-color="#8fd4e0" stop-opacity="0"/></linearGradient>
+                </defs>
+                <path d="M0,356 L0,224 C268,190 452,258 712,226 C972,194 1196,132 1440,100 L1440,356 Z" fill="url(#cert-g1)"/>
+                <path d="M0,356 L0,286 C288,256 492,322 748,286 C1004,250 1216,196 1440,166 L1440,356 Z" fill="url(#cert-g2)"/>
+                <path d="M0,356 L0,338 C308,318 528,362 788,330 C1048,298 1236,266 1440,244 L1440,356 Z" fill="url(#cert-g3)"/>
+              </svg>
+            </div>
+            <div class="ampy-cert__glow" aria-hidden="true"></div>
+            <div class="ampy-cert__inner">
+              <div class="ampy-cert__intro">
+                <h2 class="ampy-cert__heading" id="cert-h">Behörigheten bakom varje jobb</h2>
+                <p class="ampy-cert__text">Varje gång en av våra elektriker ringer på en dörr är det med legitimation och försäkring i ryggen.</p>
+              </div>
+              <ul class="ampy-cert__marks" role="list">
+                <li><a class="ampy-cert__mark ampy-cert__mark--in" href="#" aria-label="Installatörsföretagen. Ampy är medlem."><img src="../bilder/block/cert-in.svg" alt="" width="719" height="188"></a></li>
+                <li><a class="ampy-cert__mark ampy-cert__mark--esv" href="#" aria-label="Elsäkerhetsverket. Ampy är registrerat elinstallationsföretag."><img src="../bilder/block/cert-esv.svg" alt="" width="105" height="93"></a></li>
+                <li><a class="ampy-cert__mark ampy-cert__mark--id06" href="#" aria-label="ID06."><img src="../bilder/block/cert-id06.svg" alt="" width="300" height="112"></a></li>
+                <li><a class="ampy-cert__mark ampy-cert__mark--th" href="#" aria-label="Trygg-Hansa. Ansvarsförsäkring."><img src="../bilder/block/cert-th.svg" alt="" width="1000" height="194"></a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+<p class="h-label">CTA-band</p>
+<div id="h-ctaband">
+          <section class="ampy-ctaband">
+            <div class="ampy-ctaband__card">
+              <img class="ampy-ctaband__bgwave" src="../bilder/block/cta-bgwave.svg" alt="" aria-hidden="true" width="652" height="273">
+              <div class="ampy-ctaband__text">
+                <h2 class="ampy-ctaband__h">Prata med en elektriker <span class="ampy-ctaband__accent">direkt på telefon</span></h2>
+                <p class="ampy-ctaband__p">Känn dig trygg med kunnig hjälp, precis när du behöver den. Prata direkt med en erfaren elektriker som lyssnar på ditt behov och guidar dig till en säker, smidig lösning.</p>
+                <div class="ampy-ctaband__action">
+                  <a class="ampy-btn ampy-btn--ring" href="tel:+46102657979"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="../../system/ikoner.svg#ik-phone"/></svg></span>Ring 010-265 79 79</a>
+                </div>
+              </div>
+              <figure class="ampy-ctaband__media">
+                <img class="ampy-ctaband__photo" src="../bilder/block/edvin.webp" alt="Edvin, elektriker på Ampy" width="933" height="1400">
+                <img class="ampy-ctaband__wave" src="../bilder/block/cta-overlay.svg" alt="" aria-hidden="true" width="277" height="100">
+              </figure>
+            </div>
+          </section>
+        </div>
+<p class="h-label">Footer</p>
+<div id="h-footer">
+          <footer class="ampy-footer">
+            <section class="ampy-footer__pre">
+              <div class="ampy-footer__inner">
+                <h3 class="ampy-footer__pre-heading">Populära kategorier</h3>
+                <div class="ampy-footer__pre-grid">
+                  <div class="ampy-footer__pre-block"><h4 class="ampy-footer__pre-h">Elinstallation</h4><ul class="ampy-footer__list"><li><a href="#">Eljour</a></li><li><a href="#">Elektriker</a></li><li><a href="#">Belysning</a></li></ul></div>
+                  <div class="ampy-footer__pre-block"><h4 class="ampy-footer__pre-h">Laddboxar</h4><ul class="ampy-footer__list"><li><a href="#">Zaptec Go</a></li><li><a href="#">Zaptec Go 2</a></li><li><a href="#">Easee Charge up</a></li></ul></div>
+                  <div class="ampy-footer__pre-block"><h4 class="ampy-footer__pre-h">Batterilagring</h4><ul class="ampy-footer__list"><li><a href="#">SAJ HS3</a></li><li><a href="#">SigenStor</a></li><li><a href="#">Dyness Stack100</a></li></ul></div>
+                  <div class="ampy-footer__pre-block"><h4 class="ampy-footer__pre-h">Områden</h4><ul class="ampy-footer__list"><li><a href="#">Stockholm</a></li><li><a href="#">Sollentuna</a></li><li><a href="#">Haninge</a></li></ul></div>
+                  <div class="ampy-footer__pre-block"><h4 class="ampy-footer__pre-h">Lösningar</h4><ul class="ampy-footer__list"><li><a href="#">Elektriker för företag</a></li><li><a href="#">Elektriker för restaurang</a></li><li><a href="#">Elektriker för bostadsrättsförening</a></li></ul></div>
+                </div>
+              </div>
+            </section>
+            <section class="ampy-footer__main ampy-on-dark">
+              <div class="ampy-footer__inner">
+                <div class="ampy-footer__brand">
+                  <div class="ampy-footer__logo"><img src="../brand/ampy-wordmark-white-2917x834.png" width="130" height="37" alt="Ampy"></div>
+                  <p class="ampy-footer__text">Framtidens elfirma för privatpersoner som värderar kvalitet, transparens och en elektriker som går extra milen för ditt hem.</p>
+                  <div class="ampy-footer__social">
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5h-3V21h3V8.5ZM5 3.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5ZM21 13.4c0-3.4-1.8-5.2-4.4-5.2-1.9 0-2.9 1-3.4 1.8V8.5H10V21h3.2v-6.2c0-1.6.6-2.7 2-2.7 1.3 0 1.7 1 1.7 2.6V21H21v-7.6Z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c2.4 0 2.7 0 3.7.1 2.6.1 4.1 1.6 4.2 4.2.1 1 .1 1.3.1 3.7s0 2.7-.1 3.7c-.1 2.6-1.6 4.1-4.2 4.2-1 .1-1.3.1-3.7.1s-2.7 0-3.7-.1c-2.6-.1-4.1-1.6-4.2-4.2C4 14.7 4 14.4 4 12s0-2.7.1-3.7C4.2 5.7 5.7 4.2 8.3 4.1 9.3 4 9.6 4 12 4Zm0 2c-2.4 0-2.6 0-3.6.1-1.6.1-2.3.8-2.4 2.4C6 8.4 6 8.6 6 11v2c0 2.4 0 2.6.1 3.6.1 1.6.8 2.3 2.4 2.4 1 .1 1.2.1 3.6.1s2.6 0 3.6-.1c1.6-.1 2.3-.8 2.4-2.4.1-1 .1-1.2.1-3.6v-2c0-2.4 0-2.6-.1-3.6-.1-1.6-.8-2.3-2.4-2.4C14.6 5 14.4 5 12 5Zm0 3.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6Zm0 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6Zm4-3.1a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8Z"/></svg></a>
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.4 1.5-1.4h1.4V5.1c-.3 0-1.1-.1-2.1-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.6v7h2.9Z"/></svg></a>
+                  </div>
+                </div>
+                <div class="ampy-footer__google">
+                  <svg class="g" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg>
+                  <span class="ampy-footer__rating">5,0</span>
+                  <span class="ampy-footer__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span>
+                </div>
+                <div class="ampy-footer__cols">
+                  <div class="ampy-footer__col"><h4 class="ampy-footer__h">Mer om Ampy</h4><ul class="ampy-footer__list"><li><a href="#">Om oss</a></li><li><a href="#">Jobba hos oss</a></li><li><a href="#">Nyheter och artiklar</a></li></ul></div>
+                  <div class="ampy-footer__col"><h4 class="ampy-footer__h">Kundtjänst</h4><ul class="ampy-footer__list"><li><a href="#">Support</a></li><li><a href="#">ROT-avdrag 2026</a></li><li><a href="#">Grön teknik 2026</a></li></ul></div>
+                  <div class="ampy-footer__col ampy-footer__col--contact"><h4 class="ampy-footer__h">Få en kostnadsfri konsultation</h4>
+                    <div class="ampy-footer__contact">
+                      <div class="ampy-footer__row"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg><p>Västbergavägen 25, 126 30 Hägersten</p></div>
+                      <div class="ampy-footer__row"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-mail"/></svg><p><a href="mailto:bokning@ampy.se">bokning@ampy.se</a></p></div>
+                      <div class="ampy-footer__row"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-phone"/></svg><p><a href="tel:+46102657979">010-265 79 79</a></p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="ampy-footer__bar ampy-on-dark">
+              <div class="ampy-footer__inner">
+                <span class="ampy-footer__copy">&copy; 2026 Ampy Nordic AB</span>
+                <nav class="ampy-footer__policy" aria-label="Policy"><a href="#">Tillgänglighetsredogörelse</a><a href="#">Cookiepolicy</a><a href="#">Integritetspolicy</a></nav>
+              </div>
+            </section>
+          </footer>
+        </div>
+<script>
+  document.querySelectorAll('[data-ampy-ba]').forEach(function (fig) { var r = fig.querySelector('.ampy-ba__range'); if (!r) return; r.addEventListener('input', function () { fig.style.setProperty('--ampy-ba-pos', r.value + '%'); fig.classList.add('is-touched'); }); });
+</script>
+</body>
+</html>
