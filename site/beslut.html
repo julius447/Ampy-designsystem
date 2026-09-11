@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beslut som väntar: Ampy designsystem</title>
+<link rel="stylesheet" href="../system/ampy.css">
+<link rel="stylesheet" href="doc.css">
+<style>
+/* Lokala ds-klasser för beslutssidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-nowrap { white-space: nowrap; }
+  .ds-list { margin: 0; padding-left: 1.6rem; } .ds-list li { margin-bottom: 0.4rem; }
+  .ds-decision { scroll-margin-top: var(--ampy-space-m); }
+  .ds-decision__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ampy-space-m); margin: var(--ampy-space-2xs) 0 var(--ampy-space-xs); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-decision__grid p { margin: 0; max-width: none; }
+  .ds-decision__k { display: block; font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); margin-bottom: 0.4rem; }
+  .ds-alts { margin: 0; padding: 0; list-style: none; }
+  .ds-alts li { display: grid; grid-template-columns: 2rem 1fr; gap: 0.6rem; margin-bottom: 0.5rem; }
+  .ds-alt { display: inline-grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; border: 1px solid var(--ampy-line-strong); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.1rem; color: var(--ampy-ink); line-height: 1; }
+  .ds-decision__cons { font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); margin: var(--ampy-space-xs) 0 0; max-width: none; }
+  .ds-decision__answer { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; margin: var(--ampy-space-xs) 0 0; padding-top: var(--ampy-space-xs); border-top: 1px dashed var(--ampy-line); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); }
+  .ds-decision__answer .ds-decision__k { display: inline; margin: 0 0.4rem 0 0; }
+  .ds-answer-slot { display: inline-flex; gap: 0.5rem; }
+  .ds-box { display: inline-grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: var(--ampy-radius-small); border: 1px solid var(--ampy-line-strong); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; color: var(--ampy-ink-muted); }
+  .ds-box--rec { border-color: var(--ampy-action-strong); color: var(--ampy-action-strong); background: var(--ampy-bg-tint-action); }
+  .ds-decision code, .ds-table code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; }
+  .ds-toc { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-toc a { font-size: var(--ampy-text-small); color: var(--ampy-ink); text-decoration: none; border: 1px solid var(--ampy-line-strong); border-radius: var(--ampy-radius-pill); padding: 0.4rem 1.1rem; }
+  .ds-toc a:hover { border-color: var(--ampy-ink); }
+  .ds-heavy { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); }
+  @media (max-width: 991px) { .ds-decision__grid { grid-template-columns: 1fr; } }
+</style>
+<link rel="icon" href="brand/ampy-glyph-black-201-favicon.png">
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="index.html">Översikt</a>
+        <a href="beslut.html" aria-current="page">Beslut som väntar</a>
+        <a href="kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="grunder/farg.html">Färg</a>
+        <a href="grunder/typografi.html">Typografi</a>
+        <a href="grunder/spacing.html">Spacing och layout</a>
+        <a href="grunder/form-djup.html">Form och djup</a>
+        <a href="grunder/rorelse.html">Rörelse</a>
+        <a href="grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="komponenter/index.html">Alla komponenter</a>
+        <a href="komponenter/knappar.html">Knappar och länkar</a>
+        <a href="komponenter/text.html">Textelement</a>
+        <a href="komponenter/ytor.html">Ytor och kort</a>
+        <a href="komponenter/falt.html">Fält och reglage</a>
+        <a href="komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="monster/mobil.html">Mobil 390</a>
+        <a href="monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="regler/candour.html">Candour-grinden</a>
+        <a href="regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Start</span>
+      <h1 class="ds-h1">Beslut som väntar på dig</h1>
+      <p class="ds-lead">Tjugo frågor som inte kan avgöras genom att räkna källor. Varje kort har alternativen, vad källorna gör i dag, en rekommendation med skäl och konsekvensen. Kanon i tokens.css bär rekommendationen tills du säger något annat.</p>
+      <p class="ds-source"><code>konsolidering/beslut.md</code> (B1 till B20, ordagrant), <code>konsolidering/BEVIS.md</code> (punkt 4: talen som inte gick att avgöra), <code>system/tokens.css</code> (allt märkt "Beslut B<em>n</em>" pekar hit). Siffror ur <code>konsolidering/_probes/out/</code> (frekvens, kontrast, mätning); "källor" = antal inventeringskällor som bär värdet.</p>
+
+      <div class="ds-decision" style="background:var(--ampy-bg-subtle)">
+        <span class="ds-decision__n">Så svarar du</span>
+        <h3>Svara med numren</h3>
+        <p class="ds-p" style="margin:0 0 var(--ampy-space-2xs)">Skriv numret och bokstaven, till exempel <span class="ds-heavy">"B4 a, B17 b, B9 b"</span>. Skriver du bara "B4" gäller rekommendationen (den teal-markerade rutan på kortet). Vill du något som inte finns bland alternativen: skriv det i klartext efter numret. De tyngsta enligt sammanfattningen: B3 brödtextens färg och vikt, B4 knappradie, B5 teal-kontrast, B6 gradient eller solid primär, B7 kapa Plus Jakarta Sans och mono, B9 glöd eller platt, B10 grå eller navy skugga, B12 stjärnfärg, B17 H2-storlek.</p>
+      </div>
+
+      <div class="ds-toc"><a href="#identitet">Identitet (3)</a><a href="#typografi">Typografi (5)</a><a href="#knappar">Knappar (3)</a><a href="#teknik">Teknik (2)</a><a href="#ytor">Ytor (4)</a><a href="#tillstand">Tillstånd (3)</a><a href="#avgjort">Redan avgjort</a></div>
+
+      <h2 class="ds-h2" id="oversikt" style="margin-top:var(--ampy-space-l)">Alla tjugo på en sida</h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Nr</th><th>Fråga</th><th>Grupp</th><th>Rekommenderat</th></tr></thead>
+        <tbody>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b1">B1</a></td><td>Accentfärg: teal (produktion) eller cobalt (brandbok)?</td><td>Identitet</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b2">B2</a></td><td>Rubrikvikt: 700 display + 500 H2 (som i dag) eller Black 900 (boken)?</td><td>Identitet</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b16">B16</a></td><td><code>#5eb1bf</code> som token (brandbokens sekundärteal)?</td><td>Identitet</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b3">B3</a></td><td>Brödtext: vilken färg och vikt?</td><td>Typografi</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b17">B17</a></td><td>H2-storlek: 36 (--aptext-2xl) eller 32 (--aptext-xl) eller 40 (temats default)?</td><td>Typografi</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b18">B18</a></td><td>Lead: Hero-1:s clamp(17,1.55vw,22) eller diagnostikens 20/400/1.6?</td><td>Typografi</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b19">B19</a></td><td>Eyebrow-storlek: 12 px eller 15 px-golvet?</td><td>Typografi</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b20">B20</a></td><td>Body-elementets storlek: 16 (live <code>--aptext-sm</code>) eller 18 (<code>--aptext-m</code>)?</td><td>Typografi</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b4">B4</a></td><td>Knappradie: 16 (CTA-biblioteket) eller live Bricks 12/20?</td><td>Knappar</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b5">B5</a></td><td>Teal-kontrast: teal-core som knappyta/text (2,96:1)?</td><td>Knappar</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b6">B6</a></td><td>Två primära knappar (gradient vs solid) + nödknappen</td><td>Knappar</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b7">B7</a></td><td>Plus Jakarta Sans och JetBrains Mono: kapa?</td><td>Teknik</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b8">B8</a></td><td>Rotstorlek: 62,5 % (10 px) eller 16 px?</td><td>Teknik</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b9">B9</a></td><td>Mörkt resultatkort: med radialglöd eller platt?</td><td>Ytor</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b10">B10</a></td><td>"Husets" gråa kortskugga eller navy-alfa?</td><td>Ytor</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b11">B11</a></td><td>Den ljusa auroran</td><td>Ytor</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b15">B15</a></td><td>Glasets värden</td><td>Ytor</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b12">B12</a></td><td>Google-stjärnornas färg</td><td>Tillstånd</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b13">B13</a></td><td>Felfärg</td><td>Tillstånd</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+<tr><td class="ds-nowrap"><a class="ds-a" href="#b14">B14</a></td><td>Fokusfärg: navy eller teal?</td><td>Tillstånd</td><td class="ds-nowrap"><span class="ds-box ds-box--rec">a</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+
+<h2 class="ds-h2" id="identitet">Identitet</h2>
+<article class="ds-decision" id="b1">
+  <span class="ds-decision__n">Beslut 1</span>
+  <h3>Accentfärg: teal (produktion) eller cobalt (brandbok)?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>teal <code>#00a991</code> som ensam accent, brandboken uppdateras (v2)</span></li><li><span class="ds-alt">b</span><span>cobalt <code>#326afd</code> återinförs enligt boken</span></li><li><span class="ds-alt">c</span><span>båda</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>teal-core i 25 av 30 källor (12 auk 1); cobalt 0 gånger i live-CSS och 0 i alla byggda block utom artikelmallen (73 användningar som Tailwind "electric"). Brandboken (s.7) har cobalt som primär accent och saknar teal helt. Lime <code>#92ec47</code> 0 överallt.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Ägarbeslutet från djupanalysen 2026-07 ("teal görs officiell ensam accent") är redan taget; det som återstår är att brandboken skrivs om så den slutar motsäga sajten (teal in, cobalt/lime ut eller nedgraderade till "kampanj/tryck").</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>artikelmallens <code>electric</code> byts till <code>--apteal-deep</code> (länkar) / <code>--apteal-core</code> (accent). Brandbok v2 = ett eget uppdrag (paletten, gradienterna s.11, ikonfärg s.16).</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B1 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b2">
+  <span class="ds-decision__n">Beslut 2</span>
+  <h3>Rubrikvikt: 700 display + 500 H2 (som i dag) eller Black 900 (boken)?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>display/h1 700, h2 500, h3 600 (uppmätt praxis)</span></li><li><span class="ds-alt">b</span><span>Black 900 på titlar enligt brandbok s.14</span></li><li><span class="ds-alt">c</span><span>900 bara på hero-siffror (energycalc-modellen)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>display 700 i hero-1 (ägargodkänd), hero-2, elcentral, LED-siffra; 500 på H2 i 6 källor (400 i 5, 600 i 3); 900 finns bara på energycalcs anchor-siffra; 800 i artikelmallen och mini-menu-prototypen. Brandbokens egna sidrubriker är satta i Light, inte Black.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) med (c) som tillåten variant för hero-siffror. Ingen ägargodkänd yta använder 900; hero-1 är "PERFEKTION" med 700.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span><code>--ampy-w-display: 700</code>, <code>--ampy-w-heading: 500</code>. Brandbokens vikt-tabell s.14 uppdateras (B1). Rot-gt-familjens 450/550 (variabelfont-mellanlägen) utgår.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B2 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b16">
+  <span class="ds-decision__n">Beslut 16</span>
+  <h3><code>#5eb1bf</code> som token (brandbokens sekundärteal)?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span><code>--apsecondary-teal</code> som primitiv (min kanon), tillåten bara som gradientslut, ring-yta och dekor: aldrig text/kant (2,47:1 mot vit)</span></li><li><span class="ds-alt">b</span><span>ersätt gradientslutet med teal-core (hero-2-alternatives har det som utkommenterat alternativ <code>120deg #55ff9a→#00a991</code>)</span></li><li><span class="ds-alt">c</span><span>mini-menus sky-blue pill (<code>#5eb1bf</code> → <code>#74c2ce</code>) och certificates-gradienten behålls</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>17 källor (7 auk 1); live Bricks <code>--color-7</code>; brandbok s.8. Tidigare dokumentation kallade den "frånvarande i produktion" (fel). Certificates-gradienten mäter 2,10 till 2,47:1 mot vit text; mini-menus pill 5,51:1 med mörk text.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Den ÄR sajtens knapp; att byta gradientslut till teal-core ändrar den ägargodkända heron. Regel: <code>#5eb1bf</code> bär aldrig vit text.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>certificates-bandet (vit text på gradienten) behöver mörkare slut eller midnight-yta.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B16 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<h2 class="ds-h2" id="typografi">Typografi</h2>
+<article class="ds-decision" id="b3">
+  <span class="ds-decision__n">Beslut 3</span>
+  <h3>Brödtext: vilken färg och vikt?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>midnight <code>#090b32</code> / 300 (min kanon)</span></li><li><span class="ds-alt">b</span><span><code>#363636</code> / 300 (live Bricks-default, ingen token)</span></li><li><span class="ds-alt">c</span><span><code>#3b3f59</code> / 400 (eljour-familjen, 10,3:1)</span></li><li><span class="ds-alt">d</span><span><code>#0f123c</code> / 400 (header, LED-kitet, mini-menu: "nya block")</span></li><li><span class="ds-alt">e</span><span>midnight-alfa .72 / 300 (var-process)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>navy-familjen i full styrka som brödtext i 11 källor efter konsolidering av near-miss <code>#0f123c</code> → midnight (hero-1, website-blocks, LED, EV, elkollen, elcentral, testimonials V1, mini-menu, fore-efter, rot-gt-wrapper, booking <code>#0b1030</code>); <code>#363636</code> i 3 (live, footer, main-cta); <code>#3b3f59</code> i 3 (eljour, fotobedomningen, sticky-bar); <code>#333</code> i 2. Vikt 300 på löpande text i 10 källor + brandbokens "Light = lång text"; 400 i 9 (verktyg/diagnostik/CRM).</p></div>
+  </div>
+  <div class="ds-decision__rec">(a): ett bläck (midnight) för både rubrik och brödtext, hierarki genom vikt (300 brödtext, 500/600/700 rubriker): brandbokens modell och energycalcs "single font, hierarchy by weight". Dämpad text får <code>#565e82</code>. Alternativet (c) är det bäst dokumenterade (kontrastsiffror i koden) men skapar en tredje navy.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span><code>--ampy-ink-body: var(--apmidnight-blue)</code>, <code>--ampy-w-body: 300</code>, UI-text 400 (<code>--ampy-w-ui</code>). Live body-färgen <code>#363636</code> (Bricks-default) skrivs över i temat. Kalkylatorernas <code>rgb(15,18,60)</code> byts till midnight (6 enheters skillnad, osynligt).</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B3 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span> <span class="ds-box">d</span> <span class="ds-box">e</span></span></p>
+</article>
+<article class="ds-decision" id="b17">
+  <span class="ds-decision__n">Beslut 17</span>
+  <h3>H2-storlek: 36 (--aptext-2xl) eller 32 (--aptext-xl) eller 40 (temats default)?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>36/500/1.2/−.01em (kanon)</span></li><li><span class="ds-alt">b</span><span>32/400/1.2 ("8 av 16 live-H2:or", fore-efter, live ROT/GT, footer, elcentral-block)</span></li><li><span class="ds-alt">c</span><span>40/500 (theme-style h2-default, main-cta, var-process, thank-you h1)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>36 i 7 källor (eljour, testimonials V1, certificates v2, rot-gt, visste, foto, mini-menu 38); 32 i 6; 40 i 5. Rot-gt-familjen valde 36 som median av mini-menu 38 / content 32 / testimonials 36, samma vecka som fore-efter valde 32 av live-mätning. Certificates README dokumenterar fem H2-storlekar på startsidan (40/500, 40/600, 38/500, 36/400, 32/400).</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Tokenbunden (<code>--aptext-2xl</code>), flest källor, och ligger mellan de två ytterligheterna så både 32- och 40-block rör sig lika mycket. Vikt 500 (eljour + tema): 400-varianten (testimonials/certificates) ser tunn ut mot 700-display.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>live ROT/GT, fore-efter, footer-h3, elcentral-block växer 32→36; main-cta/var-process/tema krymper 40→36. Sektions-H2 med "kicker" ovanför bär nu hierarkin via eyebrow, inte via storlek.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B17 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b18">
+  <span class="ds-decision__n">Beslut 18</span>
+  <h3>Lead: Hero-1:s clamp(17,1.55vw,22) eller diagnostikens 20/400/1.6?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>hero-1 (kanon: 22 desktop → 17 mobil, lh 1.58)</span></li><li><span class="ds-alt">b</span><span>20/400/1.6 (hero-2, elcentral, elkollen: tre auk 1 till 2-källor)</span></li><li><span class="ds-alt">c</span><span><code>--aptext-mm</code> (20→18.1) som tokenbunden kompromiss</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>hero-1 är ägargodkänd och regel 2 ger den display-nivån; men hero-2-systemet för 260 sidor + båda diagnostikerna kör 20/16 till 18.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) behålls som kanon (regeln), men jag flaggar att mobilvärdet 17 är lägre än alla andra leads (18 till 20) och att kurvan ligger platt på 17 ända till 1097 px. Om du vill ha en tokenbunden lead: (c).</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>ingen ändring i hero-1; hero-2/elcentral/elkollen skulle krympa 20→17 på mobil om de följer kanon: kanske fel håll.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B18 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b19">
+  <span class="ds-decision__n">Beslut 19</span>
+  <h3>Eyebrow-storlek: 12 px eller 15 px-golvet?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>12 px/600/.14em versal (6 källor)</span></li><li><span class="ds-alt">b</span><span>fotobedomningens "noll deklarationer under 15 px" (15/600) + LED tier-label 15</span></li><li><span class="ds-alt">c</span><span>13/700 (rot-gt-panelens caps)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>12 i energycalc, thank-you, offer, booking, elcentral, hero-2 trustrow; 15 i fotobedomningen och LED; 13 i rot-gt; 12.5 i header.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) med regeln "eyebrow är aldrig ensam bärare av information". 12 px versal med .14em läser bra i Outfit; 15 px versal blir en rubrik.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>fotobedomningen/LED krymper eyebrows till 12.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B19 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b20">
+  <span class="ds-decision__n">Beslut 20</span>
+  <h3>Body-elementets storlek: 16 (live <code>--aptext-sm</code>) eller 18 (<code>--aptext-m</code>)?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>body-element = <code>--aptext-m</code> 18→16.1 (kanon i base.css)</span></li><li><span class="ds-alt">b</span><span>live: body = <code>--aptext-sm</code> 16→14.1 och innehåll sätter <code>--aptext-m</code> per block</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>live theme-style body = <code>--aptext-sm</code> (14,1 px på mobil, under iOS-golvet 16 och under alla blockens egna värden); alla innehållsblock sätter <code>--aptext-m</code> själva (live ROT-steg, post-content, testimonials, certificates, main-cta, rot-gt, visste). Certificates live-mobil visar vad som händer när ett block missar: 14,12 px brödtext.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Ingen ägargodkänd yta har 14 px brödtext med avsikt; 16 → 18 är den kurva alla nya block ändå skriver in.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>temats <code>body{font-size:var(--aptext-sm)}</code> ändras till <code>--aptext-m</code>; footer-/knapptext som vill ha 16 pekar på <code>--ampy-text-small</code>.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B20 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span></span></p>
+</article>
+<h2 class="ds-h2" id="knappar">Knappar</h2>
+<article class="ds-decision" id="b4">
+  <span class="ds-decision__n">Beslut 4</span>
+  <h3>Knappradie: 16 (CTA-biblioteket) eller live Bricks 12/20?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>16 px (CTA-website + 16 källor = legacy <code>--radius</code>/<code>--radius-m</code> i global-variables)</span></li><li><span class="ds-alt">b</span><span><code>--apradius-m</code> 12→10 (LED/EV/energycalc, GT-knappen)</span></li><li><span class="ds-alt">c</span><span><code>--apradius-l</code> 20→16 (live ROT-knappen, = kortradien)</span></li><li><span class="ds-alt">d</span><span>14 (hero-2 primitiver, hero-2-form, header 15)</span></li><li><span class="ds-alt">e</span><span>pill 999 (thank-you, main-form, mini-menu)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>16 i 17 källor (auk 1: cta-website, hero-1, live legacy, testimonials, elkollen, elcentral, energycalc); 20 i 17 (men som KORT-radie); 14 i 11; 12 i 9; pill i 6.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Knappbiblioteket är auktoritet 1 för knappar, 16 är redan ett live-tokenvärde (legacy <code>--radius: 16px</code>) och det mest spridda; en radie mellan fält (12) och kort (20) läser som en egen roll.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span><code>--ampy-radius-button: 16px</code> fast (inte clamp). Live ROT-knapp (20) och GT-knapp (12), header-CTA (15), verktygens 12 och hero-2:s 14 ändras. Pill-knappar (thank-you, main-form) = beslut om de ska finnas alls (jag säger nej: en knappform).</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B4 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span> <span class="ds-box">d</span> <span class="ds-box">e</span></span></p>
+</article>
+<article class="ds-decision" id="b5">
+  <span class="ds-decision__n">Beslut 5</span>
+  <h3>Teal-kontrast: teal-core som knappyta/text (2,96:1)?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>solid knapp = <code>--apteal-deep #007a69</code> med vit text (5,27:1), teal-core bara som accent (ikoner, ringar, fyllningar utan text)</span></li><li><span class="ds-alt">b</span><span>behåll header-CTA:n teal-core + vit 600 (2,96:1, ägargodkänd header)</span></li><li><span class="ds-alt">c</span><span>teal-core-yta med indigo-text <code>#282a53</code> (4,58:1 = AA)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>teal-core + vit text: header (auk 1), LED, energycalc, main-form (gradient runt teal). Mörkad teal + vit: EV <code>#007d6b</code>, elcentral/elkollen <code>#007a69</code> ("strong, AA"), energycalc seg-pill <code>#00806e</code> ("a11y-DERIVED, NOT a new token"). Teal-core som text förbjuds uttryckligen i var-process (2,80:1), fotobedomningen (2,96:1), sticky-bar (2,97:1) och elkollen ("teal aldrig text").</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Tre auk 1-verktyg har redan löst det med <code>#007a69</code>; det är den enda mörka tealen som finns i två auk 1-källor. Header-CTA:n får antingen teal-deep-yta eller (c) indigo-text: jag föreslår teal-deep så att solid knapp = en färg överallt.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>header-CTA, LED-CTA, energycalc-CTA, main-form-knappen byter yta till teal-deep (synbar men liten förändring). <code>--ampy-action</code> (accent) och <code>--ampy-action-strong</code> (text/solid) är två tokens med två regler.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B5 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b6">
+  <span class="ds-decision__n">Beslut 6</span>
+  <h3>Två primära knappar (gradient vs solid) + nödknappen</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>gradient-CTA i block/hero + solid teal-deep i verktyg/diagnostik/formulär (dagens praxis, två primärer)</span></li><li><span class="ds-alt">b</span><span>gradient överallt</span></li><li><span class="ds-alt">c</span><span>solid överallt (gradienten pensioneras)</span></li><li><span class="ds-alt">d</span><span>eljourens mörkgröna nödknapp (146° #055a4b→#0a8169) behålls som tredje språk eller blir solid teal-deep</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>gradient i 10+ källor (auk 1: cta-website, hero-1, elkollen, elcentral rail); solid i 7 (auk 1: header, LED, energycalc, elcentral, elkollen); nödknappen i eljour-block (auk 1), sticky-bar fork, hero-2 E. Picasso, elkollen och elcentral kallar samma gradientknapp "1:1 med live" i tre höjder (38/58/58). Fotobedomningen kör regeln "EN handlingsgradient per block, kvitto-Ring solid navy".</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) med regeln "gradient = sidans EN konverterings-CTA, solid teal-deep = alla knappar inne i verktyg/formulär/kort; aldrig två gradienter i samma vy". Nödknappen → solid <code>--apteal-deep</code> (4,8:1 vit) så eljour-sidan inte har tre CTA-språk; puls/chip får bära "jour öppen".</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>eljour-block, sticky-bar och hero-2 E ändras; Picassos 38 px-variant utgår (58 px = kanon).</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B6 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span> <span class="ds-box">d</span></span></p>
+</article>
+<h2 class="ds-h2" id="teknik">Teknik</h2>
+<article class="ds-decision" id="b7">
+  <span class="ds-decision__n">Beslut 7</span>
+  <h3>Plus Jakarta Sans och JetBrains Mono: kapa?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>Outfit ensamt, siffror i Outfit med <code>tabular-nums</code> (energycalc, rot-gt, booking, hero-2 gör så)</span></li><li><span class="ds-alt">b</span><span>behåll PJS för rubriker/UI i kalkylatorkitet + mono för inputsiffror</span></li><li><span class="ds-alt">c</span><span>Outfit + mono bara för inputvärden</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>Outfit-only i 24 källor inkl. brandboken ("enda typsnittet"), live, energycalc ("single font, hierarchy by weight"), elkollen v7 ("PJS is removed"). PJS i LED, EV, battery, elcentral (rubriker) och footer "5.0" (Bricks-arv). JetBrains Mono i LED/EV/battery inputsiffror. LED laddar Google Fonts två gånger (GDPR-defekt).</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Brandbok + live + det renaste verktyget (energycalc) + Elkollens egen v7-lärdom pekar åt samma håll; tabular-nums löser siffrorna.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>LED/EV/battery/elcentral byter rubriktypsnitt (elcentral skiljer sig från syskonet elkollen i dag); Google-Fonts-anropen försvinner. <code>--ampy-font-mono</code> finns bara som kommenterat förslag i tokens.css.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B7 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b8">
+  <span class="ds-decision__n">Beslut 8</span>
+  <h3>Rotstorlek: 62,5 % (10 px) eller 16 px?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>sajten behåller <code>html{62.5%}</code> och lager 1 (<code>--ap*</code>, rem) lever kvar för Bricks; lager 2 (<code>--ampy-*</code>) är px-clamp och fungerar i båda rötterna (så är tokens.css byggd)</span></li><li><span class="ds-alt">b</span><span>byt sajten till 16 px-rot och konvertera de 101 ap*-tokens</span></li><li><span class="ds-alt">c</span><span>allt i px</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>62,5 % på live (theme-style, frontend, core-framework), hero-1-prototyp, testimonials, footer, main-form, thank-you v1. 16 px + px-CSS i CTA-website ("portabel"), hero-2-alternatives ("html{62.5%} är en värdsideregel som inte kan levereras"), hero-2-form, booking/offer, fore-efter, fotobedomningen, sticky-bar ("aldrig rem: en rem-bar med 16 px-antagande blir 37,5 % för liten"), artikelmallen (Tailwind).</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) nu: tokens.css är redan rem-oberoende i lager 2, så inget block behöver veta roten. (b) är det renare slutläget men kräver att Bricks-temats 101 tokens och alla <code>rem</code>-block skrivs om samtidigt.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>base.css bär <code>html{62.5%}</code> som dokumenterad host-regel; FluentSnippets/CRM använder bara <code>--ampy-*</code>.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B8 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<h2 class="ds-h2" id="ytor">Ytor</h2>
+<article class="ds-decision" id="b9">
+  <span class="ds-decision__n">Beslut 9</span>
+  <h3>Mörkt resultatkort: med radialglöd eller platt?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>LED-receptet (två radialer teal .28 / emerald .16) som tokeniserad ytbehandling <code>--ampy-bg-dark-glow</code></span></li><li><span class="ds-alt">b</span><span>platt midnight</span></li><li><span class="ds-alt">c</span><span>energycalcs tre radialer + inset-highlight</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>glöd i LED, EV, battery (identiskt), energycalc (tre radialer), visste-du-att (en radial). Platt midnight: hero-2 S/E, testimonials (gradient, inte glöd), footer. Du har sagt att du ogillar "mörkt kort + radial glow + centrerad vit rubrik" som default (AI-slop), och skillens egen referens gör exakt det.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) men som *tillval* för verktygens resultatkort (där siffran, inte rubriken, står i mitten) och platt (b) som default för alla andra mörka ytor. Visste-du-att (slutaudit GO) behåller sin ena radial.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span><code>--ampy-bg-dark</code> = platt; <code>--ampy-bg-dark-glow</code> finns men används bara av kalkylatorkitet + visste-du-att. Testimonials-kortets egen gradient (#0b0f30→#2d516d) → midnight.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B9 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b10">
+  <span class="ds-decision__n">Beslut 10</span>
+  <h3>"Husets" gråa kortskugga eller navy-alfa?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>navy-alfa: <code>0 10px 30px rgba(9,11,50,.07)</code> (eljour-familjen) för kort, <code>0 16px 40px .14</code> för lyfta ytor</span></li><li><span class="ds-alt">b</span><span>live-idiomet <code>0 0 16px 0 rgba(190,190,190,.19)</code> (14 förekomster på live, testimonials, main-cta, var-process v2 "husets skugga")</span></li><li><span class="ds-alt">c</span><span>LED-kitets <code>rgba(15,18,60,.06/.08/.14)</code></span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>midnight-alfa som skuggfärg i 21 källor (78 förekomster); grå 190 i 5 källor; near-miss-navyer (15,18,60 / 11,13,42 / 11,16,48) i 12. Rot-gt-familjen och fore-efter avvisar uttryckligen den gråa ("ärver inte sajtens #bebebe-defekt"); var-process adopterar den medvetet. <code>--apshadow-*</code> på live är trasiga (odefinierad <code>--shadow-primary</code>) och fixas nu med rgba(9,11,50,.10).</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). En skuggfärg (midnight) i tre styrkor; grå skugga på blå-tonade ytor ser smutsig ut mot sky-mist.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>live-korten, testimonials, main-cta och var-process byter skugga (mjuk visuell förändring). <code>--apshadow-xs…xl</code> blir användbara igen.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B10 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b11">
+  <span class="ds-decision__n">Beslut 11</span>
+  <h3>Den ljusa auroran</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>behåll som bakgrund bara i kundflödet (tack-sida, offert-accepterad, bokning): tokeniserad <code>--ampy-aurora-light</code></span></li><li><span class="ds-alt">b</span><span>lyft in den på sajten (sektionsbakgrunder)</span></li><li><span class="ds-alt">c</span><span>skrota, sky-mist platt överallt</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>identisk i thank-you, booking, offer-accepted (aurora-SVG-hörn + fyra radialer på sky-mist). Brandbokens mesh-omslag (midnight+cobalt+neon+lime) är förlagan. Ingen sajtyta använder den; mini-menu har en *mörk* aurora-fallback.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a). Den är fin som "bekräftelse-scen" men blir dekor utan funktion på tjänstesidorna (och konkurrerar med foto-heros).</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>ingen ändring; tokenen finns för CRM-flödet.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B11 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<article class="ds-decision" id="b15">
+  <span class="ds-decision__n">Beslut 15</span>
+  <h3>Glasets värden</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>thank-you: <code>rgba(255,255,255,.72)</code> + 1 px vit .9 + <code>blur(16px) saturate(1.1)</code> + inset-highlight</span></li><li><span class="ds-alt">b</span><span>booking: <code>.85</code> utan blur (renderar utan backdrop-filter, snabbare)</span></li><li><span class="ds-alt">c</span><span>hero-2-forms mörka glas (midnight + 156.51° → #5eb1bf .76 + blur 30: dömt ut av hero-2-alternatives, kant 1,2:1)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>tre kortrecept i samma kundflöde (tack .72+blur, offert-accepterad .74+blur, bokning .85 utan blur). Mörkt glas bara i fore-efter (chip) och hero-2-form.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) som ljust glas; mörkt glas = fore-efters <code>rgba(9,11,50,.82) + blur(8px)</code>. (c) utgår.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>bokningen får blur (eller accepterad avvikelse av prestandaskäl); hero-2 Z-kortet är redan platt navy.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B15 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+<h2 class="ds-h2" id="tillstand">Tillstånd</h2>
+<article class="ds-decision" id="b12">
+  <span class="ds-decision__n">Beslut 12</span>
+  <h3>Google-stjärnornas färg</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>Googles gult <code>#fbbc04</code> överallt (V7-direktiv 2026-08-06, hero-2-alternatives, testimonials-badge)</span></li><li><span class="ds-alt">b</span><span>vita på foto (hero-1, ägargodkänd 07-19)</span></li><li><span class="ds-alt">c</span><span><code>#f6b53d</code> (thank-you/offer), <code>#ffc24b</code> (main-form), <code>#f0b429</code> (energycalc) = tre "guld"</span></li><li><span class="ds-alt">d</span><span>teal (footer live, <code>--color-15</code>), neonmint (testimonials-kortens stjärnor)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>två ägargodkända ytor säger olika (Hero-1 vit vs V7 guld). Senaste direktivet (08-06) är guld.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) <code>--apgoogle-gold #fbbc04</code> överallt inkl. Hero-1 (direktivet är senare än godkännandet). Testimonials-kortens neonmint-stjärnor (på mörkt) får bli guld också, för igenkänning.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>hero-1, footer, thank-you/offer, main-form, energycalc byter stjärnfärg. <code>"5,0"</code>/<code>"5 av 5"</code>/<code>"3 000+"</code> är fortfarande [GAP] mot ampy-foretagsdata (candour-gate), det här beslutet gäller bara färgen.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B12 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span> <span class="ds-box">d</span></span></p>
+</article>
+<article class="ds-decision" id="b13">
+  <span class="ds-decision__n">Beslut 13</span>
+  <h3>Felfärg</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span><code>#b3261e</code> (eljour/fotobedomningen/hero-2 eljour; 6,54:1)</span></li><li><span class="ds-alt">b</span><span>LED/EV <code>rgb(214,76,76)</code> (4,20:1: under AA för normal text)</span></li><li><span class="ds-alt">c</span><span>elcentral/elkollens <code>rgb(122,22,35)</code> (10,7:1, burgundy)</span></li><li><span class="ds-alt">d</span><span>skillens gamla regel "fel ritas med teal" (hero-2-form gör så: fel = samma färg som fokus)</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>sex olika röda i auk 1 till 2, plus teal-fel. Tre kandidater har vardera 2 till 3 källor.</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) som fält-/meddelandefärg, (c) som besked-accent (<code>--ampy-error-ink</code>). (d) utgår: ett formulär måste kunna skilja fel från fokus.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>LED/EV/elkollen/main-form/hero-2-form byter felfärg; skill-doktrinen "teal för fel" stryks.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B13 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span> <span class="ds-box">d</span></span></p>
+</article>
+<article class="ds-decision" id="b14">
+  <span class="ds-decision__n">Beslut 14</span>
+  <h3>Fokusfärg: navy eller teal?</h3>
+  <div class="ds-decision__grid">
+    <div><span class="ds-decision__k">Alternativ</span><ol class="ds-alts"><li><span class="ds-alt">a</span><span>navy <code>#090b32</code> 3 px outline offset 3 (CTA-website, booking/offer, fotobedomningen, mini-menu, website-blocks) + neonmint på mörkt</span></li><li><span class="ds-alt">b</span><span>teal 3 px (hero-1 CTA, thank-you, picasso)</span></li><li><span class="ds-alt">c</span><span>teal-deep-ring <code>0 0 0 3px rgba(0,122,105,.9)</code> på fält (elcentral, "mätt mot WCAG 2.4.11")</span></li></ol></div>
+    <div><span class="ds-decision__k">Vad källorna gör</span><p>navy i 6, teal i 3, teal-ringar i alfa (LED sju varianter, elkollen .25 = 1,3:1 underkänd, main-form .30, live Bricks <code>#5eb1bf</code> + .2). Booking/offer bytte från teal till navy efter mätning (2,91:1).</p></div>
+  </div>
+  <div class="ds-decision__rec">(a) för knappar/länkar/kort, (c) för formulärfält (kant teal-deep + ring). Teal-core som fokus faller på kontrast.</div>
+  <p class="ds-decision__cons"><span class="ds-decision__k">Konsekvens</span>hero-1, thank-you, LED/EV, elkollen byter fokusstil; live Bricks-formulärens <code>#5eb1bf</code>-fokus (fluent_snippet_14) byts.</p>
+  <p class="ds-decision__answer"><span class="ds-decision__k">Svar</span>B14 <span class="ds-answer-slot"><span class="ds-box ds-box--rec">a</span> <span class="ds-box">b</span> <span class="ds-box">c</span></span></p>
+</article>
+
+      <h2 class="ds-h2" id="avgjort">Redan avgjort av ägardirektiv</h2>
+      <p class="ds-p">Ingår inte i listan, men tokens.css följer dem:</p>
+<ul class="ds-list"><li>Outfit stays (B7 följer det).</li><li>Teal ensam accent (B1 följer).</li><li>Spacing på befintliga apspace-värden (lager 2 speglar dem, inga nya).</li><li>Fullbreddsblock tillåtna (<code>--ampy-container</code> är inte ett tak).</li><li>Inga midnattsblå gradient-scrims som yta (scrim-tokens finns bara för foto-veil).</li><li>Inga tankstreck eller punktavskiljare i UI-strängar (base.css/smoke använder inga).</li><li>Gradienttext ogillas (alla textgradienter = drift, ingen token).</li><li>"AI-slop-defaulten" (mörkt kort + glöd + centrerad vit rubrik) = B9 gör glöden till tillval.</li></ul>
+
+      <p class="ds-source">Öppna tal som inte är beslut utan noteringar (BEVIS.md punkt 4): fast duration 150 mot 160 ms (omärkbart, satt 160); H2-radavstånd 1.15 mot 1.2 (frekvens); label 14 mot 15/13; sektion-padding 2xl mot xl (avgjort på auktoritet 1); <code>--apspace-4xs</code>:s avsikt (ändpunkter eller lutning); lager 2 via px eller <code>var()</code>; elcentrals verdict-tinter och elkollens ramper (en källa vardera, inte tokeniserade); fontfilens axel (fvar ej läst, vikterna renderar).</p>
+    </div>
+  </main>
+</div>
+<script src="doc.js"></script>
+</body>
+</html>

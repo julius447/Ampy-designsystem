@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form och djup: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<style>
+/* Lokala ds-klasser för form- och djupsidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; } /* brist i doc.css: 1fr-spåret ärver tabellernas min-content på mobil; rapporterad i _bygglogg/S1.md */
+  .ds-nowrap { white-space: nowrap; }
+  .ds-list { margin: 0; padding-left: 1.6rem; }
+  .ds-list li { margin-bottom: 0.3rem; }
+  .ds-beslut-tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-decoration: none; border: 1px solid currentColor; border-radius: var(--ampy-radius-pill); padding: 0.1rem 0.6rem; margin-left: 0.4rem; white-space: nowrap; }
+  .ds-table__group th { padding-top: var(--ampy-space-s); color: var(--ampy-ink); font-size: var(--ampy-text-small); letter-spacing: 0; text-transform: none; font-weight: var(--ampy-w-strong); border-bottom: 1px solid var(--ampy-line-strong); }
+  /* Radier */
+  .ds-radii { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-radius { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-xs); }
+  .ds-radius__shape { height: 9rem; background: var(--ampy-bg-subtle); border: 2px solid var(--ampy-action-strong); display: grid; place-items: center; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.3rem; color: var(--ampy-action-strong); }
+  .ds-radius__name { display: block; margin-top: var(--ampy-space-2xs); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); }
+  .ds-radius__meta { display: block; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  .ds-radius__meta code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; }
+  .ds-radius--pill .ds-radius__shape { height: 5.8rem; }
+  .ds-freq { display: grid; grid-template-columns: 5rem 1fr 3rem; gap: 1rem; align-items: center; padding: 0.3rem 0; font-size: var(--ampy-text-small); }
+  .ds-freq__bar { height: 1.2rem; background: var(--ampy-ink-faint); border-radius: 0.2rem; }
+  .ds-freq--kanon .ds-freq__bar { background: var(--ampy-action); }
+  .ds-freq__n { text-align: right; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--ampy-ink-muted); }
+  .ds-freq__roles { grid-column: 2 / 4; font-size: var(--ampy-text-eyebrow); color: var(--ampy-ink-faint); margin-top: -0.3rem; letter-spacing: 0; }
+  /* Linjer */
+  .ds-lines { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); align-items: start; margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-lines > div { border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); border: 1px solid var(--ampy-line); background: var(--ampy-bg-surface); }
+  .ds-lines .is-dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark); border-color: transparent; }
+  .ds-lines__label { display: block; font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); margin-bottom: var(--ampy-space-2xs); }
+  .is-dark .ds-lines__label { color: var(--ampy-on-dark-faint); }
+  .ds-field { display: block; height: 4.8rem; border: 1px solid var(--ampy-line-strong); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); padding: 0 1.2rem; line-height: 4.6rem; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  .ds-field--weak { border-color: #e3e5ed; }
+  /* Skuggor */
+  .ds-shadows { display: grid; gap: var(--ampy-space-m); grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); padding: var(--ampy-space-m); background: var(--ampy-bg-page); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); }
+  .ds-shadow__card { height: 11rem; border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); display: grid; place-items: center; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; color: var(--ampy-ink-muted); }
+  .ds-shadow__card--btn { height: 5.8rem; border-radius: var(--ampy-radius-button); background: var(--ampy-action-gradient); color: var(--ampy-action-gradient-on); font-family: var(--ampy-font); font-size: var(--ampy-text-button); font-weight: var(--ampy-w-medium); }
+  .ds-shadow__card--ring { background: var(--ampy-action-gradient-ring); }
+  .ds-shadow__card--solid { height: 4.8rem; border-radius: var(--ampy-radius-button); background: var(--ampy-action-strong); color: #fff; font-family: var(--ampy-font); font-size: var(--ampy-text-button); font-weight: var(--ampy-w-strong); }
+  .ds-shadow__card--photo { background: url("../bilder/block/hero2-foto.jpg") center/cover; color: #fff; }
+  .ds-shadow__name { display: block; margin-top: var(--ampy-space-xs); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-small); }
+  .ds-shadow__meta { display: block; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  .ds-shadow__meta code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; overflow-wrap: anywhere; }
+  .ds-shadows--ap .ds-shadow__card { height: 7rem; }
+  /* Glas */
+  .ds-glass-stage { border-radius: var(--ampy-radius-card); padding: var(--ampy-space-xl) var(--ampy-space-m); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); border: 1px solid var(--ampy-line); display: grid; gap: var(--ampy-space-m); grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); }
+  .ds-glass-stage--aurora { background: var(--ampy-aurora-light); }
+  .ds-glass-stage--photo { background: url("../bilder/block/hero1-bg.jpg") center 40%/cover; border-color: transparent; }
+  .ds-glass-stage .ampy-card--glass { padding: var(--ampy-space-m); border-radius: var(--ampy-radius-card); }
+  .ds-glass-stage .ampy-card--glass-dark { padding: var(--ampy-space-m); border-radius: var(--ampy-radius-card); }
+  .ds-glass-drift { background: rgba(255,255,255,.85); border: 1px solid rgba(255,255,255,.9); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); box-shadow: 0 18px 44px rgba(11,16,48,.09); }
+  .ds-glass-drift2 { background: linear-gradient(156.51deg, rgba(9,11,50,.76), rgba(94,177,191,.76)); border: 1px solid rgba(255,255,255,.14); color: #fff; border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px); }
+  .ds-glass-stage h3 { margin: 0 0 var(--ampy-space-2xs); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-strong); }
+  .ds-glass-stage .ampy-card--glass-dark h3, .ds-glass-drift2 h3, .ds-glass-drift2 p { color: var(--ampy-on-dark); }
+  .ds-glass-stage p { margin: 0; font-size: var(--ampy-text-small); line-height: 1.5; }
+  /* Scrim-rutor */
+  .ds-scrims { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(2, minmax(0, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
+  .ds-scrim { position: relative; aspect-ratio: 16 / 10; border-radius: var(--ampy-radius-card); overflow: hidden; background: url("../bilder/block/hero2-foto.jpg") center/cover; isolation: isolate; }
+  .ds-scrim::before { content: ""; position: absolute; inset: 0; background: var(--_scrim, none); }
+  .ds-scrim__text { position: absolute; left: var(--ampy-space-s); bottom: var(--ampy-space-s); right: var(--ampy-space-s); color: #fff; z-index: 1; }
+  .ds-scrim__text strong { display: block; color: #fff; font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-display); line-height: 1.1; margin-bottom: 0.4rem; }
+  .ds-scrim__text span { display: block; color: #fff; font-size: var(--ampy-text-small); opacity: .92; max-width: 40ch; }
+  .ds-frame-note { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin: var(--ampy-space-2xs) 0 var(--ampy-space-s); }
+  .ds-table td.is-aa { color: var(--ampy-success-ink); } .ds-table td.is-no { color: var(--ampy-ink-faint); }
+  @media (max-width: 991px) { .ds-shadows { padding: var(--ampy-space-xs); } .ds-scrims { grid-template-columns: 1fr; } }
+</style>
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="farg.html">Färg</a>
+        <a href="typografi.html">Typografi</a>
+        <a href="spacing.html">Spacing och layout</a>
+        <a href="form-djup.html" aria-current="page">Form och djup</a>
+        <a href="rorelse.html">Rörelse</a>
+        <a href="ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Grunder</span>
+      <h1 class="ds-h1">Form och djup</h1>
+      <p class="ds-lead">Sex radier, en skuggfärg i tre styrkor, en hairline och en kontrollkant, ett ljust och ett mörkt glas, en navy-ram och tre scrims på foto. Allt annat som ligger i blocken är drift och listas längst ned.</p>
+      <p class="ds-source"><code>konsolidering/form-djup-rorelse.md</code> + <code>form-djup-rorelse.json</code> (radier.json, skuggor.json ur 30 inventerings-JSON: 16 radievärden, 27 skuggfärger, 8 delade skuggsträngar), <code>system/tokens.css</code> (varje token bär källa och drift). Px vid 390 och 1440 ur <code>konsolidering/_probes/out/tokens-px.json</code>. Allt nedan renderas med de riktiga tokens och komponentklasserna i <code>system/</code>.</p>
+
+      <h2 class="ds-h2" id="radier">Radier</h2>
+      <p class="ds-p">Fem radier med roll, plus pill. Fyra av dem är lager 1-tokens rakt av (<code>--apradius-s/m/l/xl</code>, fluida 320 till 1280); knappradien är fast 16 px enligt CTA-biblioteket (beslut B4). Rutorna ritas med tokenen och siffran i rutan är radien uppmätt på den här sidan, så på mobil är de mindre.</p>
+      <div class="ds-radii">
+        <div class="ds-radius"><div class="ds-radius__shape" style="border-radius:var(--ampy-radius-small)" data-radius></div><span class="ds-radius__name">Small</span><span class="ds-radius__meta"><code>--ampy-radius-small</code> = <code>--apradius-s</code><br>8 px vid 1440, 6,1 vid 390<br>Källa: LED, EV, energycalc, elkollen, elcentral 6 (tooltip, tick, option, chip)<br>Drift: 4 LED-checkbox, 8 main-form input, 9 energycalc</span></div>
+        <div class="ds-radius"><div class="ds-radius__shape" style="border-radius:var(--ampy-radius-field)" data-radius></div><span class="ds-radius__name">Field</span><span class="ds-radius__meta"><code>--ampy-radius-field</code> = <code>--apradius-m</code><br>12 px vid 1440, 10,1 vid 390<br>Källa: LED (styles.css --radius-md 12: select, input, knapp), EV, hero-2-alternatives (--ap-r-field 12), fotobedömningen (--afk-r-in 12)<br>Drift: 10 elkollen, elcentral, hero-2 Z; 14 booking, hero-2-form; 8 main-form; 9 energycalc</span></div>
+        <div class="ds-radius"><div class="ds-radius__shape" style="border-radius:var(--ampy-radius-button)" data-radius></div><span class="ds-radius__name">Button <a class="ds-a ds-beslut-tag" href="../beslut.html#b4">B4</a></span><span class="ds-radius__meta"><code>--ampy-radius-button</code> = 16 px fast<br>16 px vid 1440 och 390<br>Källa: cta-website (*.css:11 "radie 16", alla tre) = hero-1, main-cta, rot-gt, fotobedömningen, elkollen och elcentral rail-CTA, sticky-bar, picasso (legacy --radius 16) = 17 källor<br>Drift: live ROT 20 / GT 12, header-CTA 15, LED, EV, energycalc 12, elkollen, elcentral solid 10, hero-2 14, pill i thank-you, main-form, mini-menu</span></div>
+        <div class="ds-radius"><div class="ds-radius__shape" style="border-radius:var(--ampy-radius-card)" data-radius></div><span class="ds-radius__name">Card</span><span class="ds-radius__meta"><code>--ampy-radius-card</code> = <code>--apradius-l</code><br>20 px vid 1440, 16,3 vid 390<br>Källa: live .rot__container (--apradius-l) + LED, EV, energycalc, eljour, certificates, visste-du-att, fore-efter, fotobedömningen, mini-menu, main-cta, website-blocks = 17 källor<br>Drift: 14 elkollen, elcentral; 22 hero-1-ram, booking, rot-gt-panel; 27 hero-2-form; 15 main-form; 16 testimonials</span></div>
+        <div class="ds-radius"><div class="ds-radius__shape" style="border-radius:var(--ampy-radius-card-lg)" data-radius></div><span class="ds-radius__name">Card large</span><span class="ds-radius__meta"><code>--ampy-radius-card-lg</code> = <code>--apradius-xl</code><br>32 px vid 1440, 24,5 vid 390<br>Källa: thank-you (v1/styles.css:42 --apradius-xl), rot-gt-cro (--av-r-xl 32), offer-accepted<br>Drift: hero-1 A-variant 32/28</span></div>
+        <div class="ds-radius ds-radius--pill"><div class="ds-radius__shape" style="border-radius:var(--ampy-radius-pill)" data-radius></div><span class="ds-radius__name">Pill</span><span class="ds-radius__meta"><code>--ampy-radius-pill</code> = 999px (<code>--apradius-full</code> 999rem)<br>Källa: live, testimonials prickar, thank-you knapp, mini-menu pill, hero-2 (--ap-r-pill), fotobedömningen chip<br>Drift: 99rem eljour, 9999px legacy och article</span></div>
+      </div>
+      <h3 class="ds-h3" id="radie-frekvens">Radievärden i källorna</h3>
+      <p class="ds-caption">Antal källor per px-värde ur <code>radier.json</code>. Teal = ett kanonvärde vid 1440. Under stapeln: vad värdet används till i källorna.</p>
+      <div class="ds-freq ds-freq--kanon"><span>16</span><div class="ds-freq__bar" style="width:100%"></div><span class="ds-freq__n">17</span><span class="ds-freq__roles">knapp (cta-website, hero-1, live legacy --radius, testimonials, elkollen, elcentral, energycalc, rot-gt) och testimonials-kortet</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>20</span><div class="ds-freq__bar" style="width:100%"></div><span class="ds-freq__n">17</span><span class="ds-freq__roles">kort (live, LED, EV, energycalc, eljour, certificates, mini-menu, main-cta, visste-du-att, fore-efter) och live ROT-knappen</span></div>
+      <div class="ds-freq"><span>14</span><div class="ds-freq__bar" style="width:65%"></div><span class="ds-freq__n">11</span><span class="ds-freq__roles">elkollen och elcentral kort, hero-2 knappar och fält, booking faktabricka, mini-menu tiles, eljour nödknapp</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>12</span><div class="ds-freq__bar" style="width:53%"></div><span class="ds-freq__n">9</span><span class="ds-freq__roles">fält (LED, EV, hero-2), energycalc --r-md, live GT-knappen, thank-you, rot-gt</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>6</span><div class="ds-freq__bar" style="width:47%"></div><span class="ds-freq__n">8</span><span class="ds-freq__roles">small: tooltip, tick, option, chip, crumb (LED, EV, energycalc, elkollen, elcentral)</span></div>
+      <div class="ds-freq"><span>10</span><div class="ds-freq__bar" style="width:41%"></div><span class="ds-freq__n">7</span><span class="ds-freq__roles">elkollen och elcentral options, CTA:er och lead-input; eljour säkerhetsruta; hero-2 Z</span></div>
+      <div class="ds-freq"><span>22</span><div class="ds-freq__bar" style="width:41%"></div><span class="ds-freq__n">7</span><span class="ds-freq__roles">hero-1 ram, hero-2 hjälteram, booking kort, live floating banner, rot-gt panel, mini-menu glasprototyp</span></div>
+      <div class="ds-freq"><span>8</span><div class="ds-freq__bar" style="width:35%"></div><span class="ds-freq__n">6</span><span class="ds-freq__roles">main-form input, energycalc prickar, sticky-bar fokus, testimonials, header, article</span></div>
+      <div class="ds-freq"><span>15</span><div class="ds-freq__bar" style="width:24%"></div><span class="ds-freq__n">4</span><span class="ds-freq__roles">header-CTA, main-form kort, fore-efter ram, website-blocks CTA</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>32</span><div class="ds-freq__bar" style="width:24%"></div><span class="ds-freq__n">4</span><span class="ds-freq__roles">card-lg: thank-you kort, rot-gt block, booking --r-xl, hero-1 A-variant</span></div>
+      <p class="ds-caption">Under 4 källor: 3 (3: elkollen accent, energycalc prickar, burger-streck), 9 (2), 18 (2), 24 (2), 28 (2), 4 (1: LED samtyckesbock). 3 och 4 px är detaljradier utan egen roll; 18/24/28 är hero-1 A-varianten och hero-2 E, som är drift.</p>
+
+      <h2 class="ds-h2" id="linjer">Linjer</h2>
+      <p class="ds-p">Två linjer på ljust och en på mörkt, alla alfa på midnight respektive vitt så att de fungerar på både vit och sky mist. Hairlinen är dekor (1,36:1 blandad mot vit); kontrollkanten är den som får bära ett fält (3,40:1, WCAG 1.4.11). Solida hairlines i nio värden (#e6ecf6, #dbe4f0, #e3e5ed, #ebedf3, #eaeef5, energycalcs fem) byts ut.</p>
+      <div class="ds-lines">
+        <div><span class="ds-lines__label">--ampy-line, hairline</span><hr class="ampy-divider ampy-divider--tight"><p class="ds-small" style="margin:0.8rem 0 0">rgba(9,11,50,.14). Källa: var-process (v2/ampy-process.css:16 "blockets ENDA hairline"), LED --border-default .12 (15,18,60 till midnight), fore-efter och certificates inset .07. Avdelare: <code>.ampy-divider</code>.</p></div>
+        <div><span class="ds-lines__label">--ampy-line-strong, kontrollkant</span><span class="ds-field">Postnummer</span><p class="ds-small" style="margin:0.8rem 0 0">rgba(9,11,50,.48), 3,40:1. Källa: booking-confirmation (shared.css:42 --line-strong, "kontrollkanter WCAG 1.4.11"). Drift: #5f6480 fotobedömningen (5,80:1), #e3e5ed elkollen och elcentral inputs (1,26:1, underkänd), 2 px transparent main-form.</p></div>
+        <div><span class="ds-lines__label">Drift: #e3e5ed som fältkant</span><span class="ds-field ds-field--weak">Postnummer</span><p class="ds-small" style="margin:0.8rem 0 0">Elkollens och elcentrals inputkant mäter 1,26:1 mot vit. Kanten syns knappt på sky mist och faller på WCAG 1.4.11. Byts till <code>--ampy-line-strong</code>.</p></div>
+        <div class="is-dark"><span class="ds-lines__label">--ampy-on-dark-line, på mörkt</span><hr class="ampy-divider ampy-divider--tight"><p class="ds-small" style="margin:0.8rem 0 0;color:var(--ampy-on-dark-muted)">rgba(255,255,255,.14). Källa: LED (styles.css:33 --on-surface-border hr), hero-2-alternatives (--ap-hairline .14), EV. Drift: .12 energycalc, .16 och .18 rot-gt.</p></div>
+      </div>
+
+      <h2 class="ds-h2" id="skuggor">Skuggor</h2>
+      <p class="ds-p">En skuggfärg: midnight-alfa. Tre styrkor för ytor (subtle .06, card .07, raised .14) och tre ordagranna knappskuggor ur CTA-biblioteket. rgb(9,11,50) förekommer 78 gånger i 21 källor; near-miss-tripletterna rgb(15,18,60) (25 i 10 källor) och rgb(11,13,42) (7 i 2) är samma avsikt och konsolideras hit. Den gråa rgba(190,190,190,.19) från live är drift, beslut B10. Alla rutor nedan ligger på sky mist, som blocken gör.</p>
+      <div class="ds-shadows">
+        <div><div class="ds-shadow__card" style="box-shadow:var(--ampy-shadow-subtle)">subtle</div><span class="ds-shadow__name">--ampy-shadow-subtle</span><span class="ds-shadow__meta"><code>0 1px 2px rgba(9,11,50,.06)</code><br>Källa: LED, EV --shadow-sm (15,18,60 till midnight). Drift: .04 elcentral, elkollen, fotobedömningen, article.</span></div>
+        <div><div class="ds-shadow__card" style="box-shadow:var(--ampy-shadow-card)">card</div><span class="ds-shadow__name">--ampy-shadow-card <a class="ds-a ds-beslut-tag" href="../beslut.html#b10">B10</a></span><span class="ds-shadow__meta"><code>0 10px 30px rgba(9,11,50,.07)</code><br>Källa: eljour-block (index.html:21 --shadow-card 0 1rem 3rem), fotobedömningen mittlager, sticky-bar hörnkort. Drift: se tabellen nedan.</span></div>
+        <div><div class="ds-shadow__card" style="box-shadow:var(--ampy-shadow-raised)">raised</div><span class="ds-shadow__name">--ampy-shadow-raised</span><span class="ds-shadow__meta"><code>0 16px 40px rgba(9,11,50,.14)</code><br>Källa: LED, EV, battery --shadow-lg (resultatkort, lista, tooltip), sticky-bar 0 16px 40px .16. Drift: rot-gt 0 24px 50px -10px .18, thank-you 0 3rem 7rem .12, mini-menu -12px .28.</span></div>
+        <div><div class="ds-shadow__card" style="box-shadow:0 0 16px 0 rgba(190,190,190,.19)">drift: husets grå</div><span class="ds-shadow__name">Live-idiomet, byts ut</span><span class="ds-shadow__meta"><code>0 0 16px 0 rgba(190,190,190,.19)</code><br>14 förekomster på live, testimonials .14, main-cta .4, var-process v2 ("husets skugga"). Grå på blåtonad sky mist ser smutsig ut; rot-gt och fore-efter avvisar den uttryckligen.</span></div>
+        <div><div class="ds-shadow__card ds-shadow__card--btn" style="box-shadow:var(--ampy-shadow-button)">Boka rådgivning</div><span class="ds-shadow__name">--ampy-shadow-button</span><span class="ds-shadow__meta"><code>inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45)</code><br>Källa: cta-website (radgivning-cta.css:17-20) = rot-gt, fotobedömningen, hero-2. Drift: hero-1:s kopia (navy .40 i stället för grön glöd).</span></div>
+        <div><div class="ds-shadow__card ds-shadow__card--btn" style="box-shadow:var(--ampy-shadow-button-hover);transform:translateY(var(--ampy-lift))">Boka rådgivning (hover)</div><span class="ds-shadow__name">--ampy-shadow-button-hover</span><span class="ds-shadow__meta"><code>inset 0 1px 0 rgba(255,255,255,.5), 0 3px 6px rgba(9,11,50,.07), 0 16px 34px -8px rgba(94,199,160,.55)</code><br>Källa: cta-website (radgivning-cta.css:27-30). Visas här med lyftet -1,5 px.</span></div>
+        <div><div class="ds-shadow__card ds-shadow__card--btn ds-shadow__card--ring" style="box-shadow:var(--ampy-shadow-button-ring)">Ring 010-265 79 79</div><span class="ds-shadow__name">--ampy-shadow-button-ring</span><span class="ds-shadow__meta"><code>inset 0 1px 0 rgba(255,255,255,.55), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,177,191,.55)</code><br>Källa: cta-website (ring-cta.css:17-20) = main-cta, sticky-bar. Drift: 0 0 16px rgba(241,241,241,.25) i picasso, elkollen, elcentral.</span></div>
+        <div><div class="ds-shadow__card ds-shadow__card--solid" style="box-shadow:var(--ampy-shadow-glow-action)">Kostnadsfri rådgivning</div><span class="ds-shadow__name">--ampy-shadow-glow-action</span><span class="ds-shadow__meta"><code>0 4px 12px -5px rgba(0,169,145,.5)</code><br>Källa: header-CTA (hero-1 och website-blocks header.css:73). Drift: thank-you 0 1rem 2.4rem .3, energycalc hover -.8rem .42, main-form .45. Headern lägger skuggan på teal core med vit text (2,96:1); här ligger den på teal deep (5,27:1) enligt beslut B5.</span></div>
+        <div><div class="ds-shadow__card ds-shadow__card--photo" style="box-shadow:var(--ampy-shadow-photo)"></div><span class="ds-shadow__name">--ampy-shadow-photo</span><span class="ds-shadow__meta"><code>0 18px 40px -20px rgba(9,11,50,.26)</code><br>Källa: main-cta (index.html porträtt). Drift: hero-2 Z 0 28px 60px -28px rgba(0,0,0,.65).</span></div>
+      </div>
+      <h3 class="ds-h3" id="apshadow">Lager 1: <code>--apshadow-xs</code> till <code>xl</code>, lagade</h3>
+      <p class="ds-p">Bricks fem skuggtokens refererar <code>--shadow-primary</code> som aldrig definieras på live (30 referenser, 0 definitioner), så alla fem beräknas till <code>none</code>. tokens.css lager 1b sätter <code>--shadow-primary: rgba(9,11,50,.10)</code>, det enda värdet någon källa definierar (thank-you v1/styles.css:7). Därmed blir de användbara igen.</p>
+      <div class="ds-shadows ds-shadows--ap">
+        <div><div class="ds-shadow__card" style="box-shadow:var(--apshadow-xs)">xs</div><span class="ds-shadow__meta"><code>0 1px 2px</code></span></div>
+        <div><div class="ds-shadow__card" style="box-shadow:var(--apshadow-s)">s</div><span class="ds-shadow__meta"><code>0 1.5px 3px</code></span></div>
+        <div><div class="ds-shadow__card" style="box-shadow:var(--apshadow-m)">m</div><span class="ds-shadow__meta"><code>0 2px 6px</code></span></div>
+        <div><div class="ds-shadow__card" style="box-shadow:var(--apshadow-l)">l</div><span class="ds-shadow__meta"><code>0 3px 12px</code></span></div>
+        <div><div class="ds-shadow__card" style="box-shadow:var(--apshadow-xl)">xl</div><span class="ds-shadow__meta"><code>0 6px 48px</code></span></div>
+      </div>
+
+      <h2 class="ds-h2" id="glas">Glas</h2>
+      <p class="ds-p">Ljust glas är tack-sidans kort: vit .72, 1 px vit .9, <code>blur(16px) saturate(1.1)</code> och en inset-highlight, renderat på den ljusa auroran (som bara finns i kundflödet, beslut B11). Mörkt glas är fore-efters chip: midnight .82 med blur(8 till 10 px). Bokningens .85 utan blur och hero-2-forms 156,51° navy-till-sekundärteal med blur 30 är drift, beslut B15.</p>
+      <div class="ds-glass-stage ds-glass-stage--aurora">
+        <div class="ampy-card ampy-card--glass"><h3>Tack, vi har fått din förfrågan</h3><p><code>.ampy-card--glass</code>: <code>--ampy-bg-glass</code> rgba(255,255,255,.72) + <code>--ampy-glass-border</code> 1 px vit .9 + <code>--ampy-glass-blur</code> blur(16px) saturate(1.1). Källa: thank-you v1/styles.css:36-46. Offer-accepted kör .74, samma blur.</p></div>
+        <div class="ds-glass-drift"><h3>Drift: bokningen, .85 utan blur</h3><p>Renderar utan backdrop-filter (snabbare) men läser som en vanlig vit yta. Booking-confirmation assets/bokning.css. Beslut B15: får blur eller accepterad avvikelse av prestandaskäl.</p></div>
+      </div>
+      <div class="ds-glass-stage ds-glass-stage--photo">
+        <div class="ampy-card ampy-card--glass-dark"><h3>Efter</h3><p><code>.ampy-card--glass-dark</code>: <code>--ampy-bg-glass-dark</code> rgba(9,11,50,.82) + blur(10px) saturate(150%) + 1 px vit .16. Källa: fore-efter-cro dist/01-fore-efter.css:281-290 (chip och ledtråd). 11,44:1 blandad mot vit, så vit text är trygg.</p></div>
+        <div class="ds-glass-drift2"><h3>Drift: hero-2-forms mörka glas</h3><p>midnight + 156,51° till #5eb1bf .76 + blur 30. Kanten mäter 1,2:1 och hero-2-alternatives dömde ut kortet; hero-2 Z är i dag platt navy.</p></div>
+      </div>
+
+      <h2 class="ds-h2" id="navy-ram">Navy-ramen</h2>
+      <p class="ds-p">Hero-1:s hjälteram (<code>assets/style.css:190-235</code>, ägargodkänd): max 1700 px, midnight som bakgrund under fotot, höjd 100svh minus header och 48 px (min 620, max 950), foto <code>object-position: 62 % 60 %</code>, veil <code>--ampy-scrim-hero</code>, innehåll max 880 vänster. <code>.ampy-frame</code> i <code>ytor.css</code> är klonen; här i den korta varianten <code>--short</code> (360 till 520 px). Källans radie är 22 (18 mobil), klonen använder kortradien 20/16,3; hero-2 använder samma ram i 1424 bredd med h1 48 i stället för 60.</p>
+      <div class="ampy-frame ampy-frame--short">
+        <img class="ampy-frame__media" src="../bilder/block/hero1-bg.jpg" alt="">
+        <div class="ampy-frame__veil"></div>
+        <div class="ampy-frame__content">
+          <p class="ampy-eyebrow" style="color:var(--ampy-on-dark-muted);margin-bottom:var(--ampy-space-stack-xs)">Navy-ram med foto och veil</p>
+          <h2 class="ampy-h1" style="margin:0 0 var(--ampy-space-stack-sm)">Elinstallationer i hemmet, gjort ordentligt.</h2>
+          <p class="ampy-lead" style="margin:0">Fotot ligger under en veil på 98° från .68 till .02 plus en bottentoning .38 till 0, så texten klarar kontrasten var som helst i ramen.</p>
+        </div>
+      </div>
+      <p class="ds-frame-note">Avvikelser i klonen mot hero-1: radie 20 i stället för 22 (kortradien, beslut B4-logiken: en radie per roll); höjden i <code>--short</code> är dokumentationens egen. Mobilveilen (under 560) är hero-1:s egen och saknar token.</p>
+
+      <h2 class="ds-h2" id="scrim">Scrims på foto</h2>
+      <p class="ds-p">Tre kontrastmätta toningar för text på foto. Ägardirektiv: inga midnattsblå gradient-scrims som yta; de finns bara som foto-veil. Samma foto i alla fyra rutor, vit text i alla.</p>
+      <div class="ds-scrims">
+        <div class="ds-scrim"><div class="ds-scrim__text"><strong>Utan scrim</strong><span>Vit text direkt på fotot. Kontrasten beror på bilden.</span></div></div>
+        <div class="ds-scrim" style="--_scrim:var(--ampy-scrim-hero)"><div class="ds-scrim__text"><strong>--ampy-scrim-hero</strong><span>98° från .68 till .02, plus bottentoning .38 till 0. Hero-1 och live startsidan.</span></div></div>
+        <div class="ds-scrim" style="--_scrim:var(--ampy-scrim-strong)"><div class="ds-scrim__text"><strong>--ampy-scrim-strong</strong><span>180° .58 till .82, plus 98° .28 till .05. Minst 4,75:1 för vit text även på helvit bild.</span></div></div>
+        <div class="ds-scrim" style="--_scrim:var(--ampy-scrim-light)"><div class="ds-scrim__text"><strong>--ampy-scrim-light</strong><span>180° .06 till .22. Fotot som objekt, inte som textunderlag.</span></div></div>
+      </div>
+      <p class="ds-caption">Källor: hero-1 (assets/style.css:212-217 .vb2__veil) = live site-css .home-hero (scrim-hero); hero-2-alternatives (primitives.css:110-112 --ampy-scrim-bastant, kontrastmätt; 113-114 --ampy-scrim-latt). Drift: main-form platt rgba(6,8,26,.55); energycalc trust 103° .94 till .28; mini-menu radial .30 till .56 plus body-scrim; hero-1 mobilveil under 560 (fyra stopp .30/.24/.28/.64).</p>
+
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>En radie per roll: small 6 till 8, field 10 till 12, button 16, card 16 till 20, card-lg 24 till 32, pill. Inre element får aldrig större radie än sin behållare.</li>
+          <li>Skugga i midnight-alfa, aldrig grå eller svart; card på vita kort på sky mist, raised på mörka resultatkort och popovers, subtle på inputkort.</li>
+          <li>Fältkanter minst 3:1 (<code>--ampy-line-strong</code>); hairline bara som avdelare.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Egna radier (14, 15, 22, 27) eller pill på primärknappen (thank-you, main-form, mini-menu): en knappform.</li>
+          <li>Glas utan blur som "glas", eller mörkt glas med gradient och 1,2:1-kant (hero-2-form).</li>
+          <li>Skuggor med svart (rgba(0,0,0,.65) i hero-2 Z) eller vita glödskuggor på knappar (rgba(241,241,241,.25) i picasso, elkollen, elcentral).</li>
+        </ul></div>
+      </div>
+
+      <h2 class="ds-h2" id="drift">Det här byts ut</h2>
+      <h3 class="ds-h3">Radier per källa</h3>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Roll</th><th>Kanon</th><th>Drift (källa: värde)</th><th>Byts ut till</th></tr></thead>
+        <tbody>
+          <tr><td>Knapp</td><td>16 (17 källor)</td><td>live ROT 20, live GT 12, header-CTA 15, LED 12, EV 12, energycalc 12, elkollen 10, elcentral 10, hero-2 14, hero-2-form 14, thank-you pill, main-form pill, mini-menu pill, picasso 16 men 38 px hög</td><td><code>--ampy-radius-button</code> 16 (B4)</td></tr>
+          <tr><td>Kort</td><td>20 till 16,3 (17 källor)</td><td>elkollen 14, elcentral 14, hero-1-ram 22, booking 22, rot-gt-panel 22, hero-2-form 27, main-form 15, testimonials 16 (legacy --radius)</td><td><code>--ampy-radius-card</code></td></tr>
+          <tr><td>Fält</td><td>12 till 10,1</td><td>elkollen 10, elcentral 10, hero-2 Z 10, booking 14, hero-2-form 14, main-form 8, energycalc 9</td><td><code>--ampy-radius-field</code></td></tr>
+          <tr><td>Small</td><td>8 till 6,1</td><td>LED checkbox 4, main-form input 8 (är ett fält), energycalc 9</td><td><code>--ampy-radius-small</code></td></tr>
+          <tr><td>Stort kort</td><td>32 till 24,5</td><td>hero-1 A-variant 32/28 (bortvald), rot-gt block 32</td><td><code>--ampy-radius-card-lg</code></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <h3 class="ds-h3">Skuggor per källa</h3>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Familj</th><th>Var</th><th>Värde</th><th>Byts ut till</th></tr></thead>
+        <tbody>
+          <tr><td>Husets grå</td><td>live (14 förekomster), testimonials, main-cta, var-process, rot-gt live-klon</td><td><code>0 0 16px 0 rgba(190,190,190,.19)</code>, .14, .4</td><td><code>--ampy-shadow-card</code> (B10)</td></tr>
+          <tr><td>LED-kitets near-miss</td><td>LED, EV, battery, hero-1, website-blocks, mini-menu, booking, main-form (rgb(15,18,60), 25 förekomster)</td><td><code>0 1px 2px .06</code>, <code>0 4px 12px .08</code>, <code>0 16px 40px .14</code>, <code>0 22px 36px -28px .20</code></td><td>samma geometri, färg rgba(9,11,50,x): subtle / card / raised</td></tr>
+          <tr><td>Diagnostikens near-miss</td><td>elkollen, elcentral (rgb(11,13,42), 7 förekomster)</td><td><code>0 1px 2px .04</code>, <code>0 6px 18px .06</code> (elkollen), <code>0 8px 28px .07</code> (elcentral kortet), <code>0 14px 32px .10</code> (--shadow-lg, deklarerad)</td><td>subtle / card / raised</td></tr>
+          <tr><td>Bokningens near-miss</td><td>booking-confirmation (rgb(11,16,48))</td><td><code>0 18px 44px .09</code> + inset</td><td>card</td></tr>
+          <tr><td>Tredelade kortskuggor</td><td>fore-efter (.04/.06/.05), certificates (.10/.10/.07), fotobedömningen (.04/.07/.10), mini-menu</td><td>tre lager midnight-alfa</td><td>card (en skugga räcker; tre lager syns inte på sky mist)</td></tr>
+          <tr><td>Svart och vitt</td><td>hero-2 Z <code>0 28px 60px -28px rgba(0,0,0,.65)</code>; picasso, elkollen, elcentral, live knappglöd <code>0 0 16px rgba(241,241,241,.25)</code>; hero-2-form rgba(181,181,181,.14)</td><td>svart, vit, grå</td><td>photo / button (CTA-bibliotekets tre lager)</td></tr>
+          <tr><td>Teal-glöd i fem styrkor</td><td>header (.5), thank-you (.3), energycalc (.42), main-form (.45), mini-menu, booking, hero-2-form, elkollen, LED (17 förekomster)</td><td><code>0 4px 12px -5px rgba(0,169,145,.5)</code> och varianter</td><td><code>--ampy-shadow-glow-action</code> (bara solid knapp)</td></tr>
+          <tr><td>Bricks --apshadow-*</td><td>live global-variables.css (odefinierad --shadow-primary)</td><td>beräknas till none</td><td>lagade i lager 1b med rgba(9,11,50,.10)</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+<script>
+(function () {
+  document.querySelectorAll('[data-radius]').forEach(function (el) {
+    var r = parseFloat(getComputedStyle(el).borderTopLeftRadius);
+    el.textContent = (r > 500 ? 'pill' : (Math.round(r * 10) / 10).toString().replace('.', ',') + ' px');
+  });
+})();
+</script>
+      <p class="ds-source">Beslut som rör form och djup: <a class="ds-a" href="../beslut.html#b4">B4 knappradie</a>, <a class="ds-a" href="../beslut.html#b9">B9 glöd på mörka kort</a>, <a class="ds-a" href="../beslut.html#b10">B10 grå eller navy skugga</a>, <a class="ds-a" href="../beslut.html#b11">B11 auroran</a>, <a class="ds-a" href="../beslut.html#b15">B15 glasets värden</a>.</p>
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

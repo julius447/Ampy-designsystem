@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Översikt: Ampy designsystem</title>
+<link rel="stylesheet" href="../system/ampy.css">
+<link rel="stylesheet" href="doc.css">
+<style>
+/* Lokala ds-klasser för startsidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-nowrap { white-space: nowrap; }
+  .ds-hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--ampy-space-l); align-items: center; margin: var(--ampy-space-s) 0 var(--ampy-space-xl); }
+  .ds-hero .ampy-card--dark { padding: var(--ampy-space-l); }
+  .ds-hero__logo { width: 16rem; height: auto; display: block; margin-bottom: var(--ampy-space-m); }
+  .ds-hero__mark { display: flex; align-items: center; gap: var(--ampy-space-s); margin-top: var(--ampy-space-m); padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-on-dark-line); font-size: var(--ampy-text-small); color: var(--ampy-on-dark-muted); }
+  .ds-hero__mark img { height: 4.4rem; width: auto; }
+  .ds-tio { margin: var(--ampy-space-xs) 0 var(--ampy-space-s); padding: 0; list-style: none; counter-reset: rad; display: grid; gap: var(--ampy-space-2xs); }
+  .ds-tio li { position: relative; padding: var(--ampy-space-xs) var(--ampy-space-s) var(--ampy-space-xs) 5.2rem; background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-tio li::before { counter-increment: rad; content: counter(rad); position: absolute; left: 1.4rem; top: 1.1rem; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: var(--ampy-bg-subtle); border: 1px solid var(--ampy-line-strong); display: grid; place-items: center; font-size: var(--ampy-text-eyebrow); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); }
+  .ds-tio strong { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); }
+  .ds-tio code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; }
+  .ds-tio a { color: var(--ampy-action-strong); }
+  .ds-cards--start { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ds-card--dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark); border-color: transparent; }
+  .ds-card--dark .ds-card__title { color: var(--ampy-on-dark); } .ds-card--dark .ds-card__meta { color: var(--ampy-on-dark-muted); }
+  .ds-card__badge { display: inline-block; margin: var(--ampy-space-xs) var(--ampy-space-s) 0; }
+  .ds-card__count { display: block; font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); margin-bottom: 0.4rem; }
+  .ds-card--dark .ds-card__count { color: var(--ampy-on-dark-faint); }
+  .ds-read { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ampy-space-xs); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-read > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-s); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-muted); }
+  .ds-read strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); margin-bottom: 0.4rem; }
+  .ds-read code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+  .ds-build { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ampy-space-xs); margin: var(--ampy-space-xs) 0 var(--ampy-space-xs); }
+  .ds-build > div { position: relative; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-s); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-muted); }
+  .ds-build > div + div::before { content: ""; position: absolute; left: -1.4rem; top: 2.6rem; width: 1.4rem; border-top: 2px solid var(--ampy-action-strong); }
+  .ds-build strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); margin-bottom: 0.4rem; }
+  .ds-build code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+  .ds-sources { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: var(--ampy-space-2xs) 0 var(--ampy-space-s); }
+  .ds-sources span { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; line-height: 1; padding: 0.5rem 0.8rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); color: var(--ampy-ink-muted); background: var(--ampy-bg-surface); }
+  .ds-sources--1 span { border-color: var(--ampy-action-strong); color: var(--ampy-action-strong); }
+  .ds-sources__k { font-size: var(--ampy-text-small); color: var(--ampy-ink); font-weight: var(--ampy-w-medium); margin: var(--ampy-space-xs) 0 0; }
+  @media (max-width: 991px) { .ds-hero, .ds-cards--start, .ds-read, .ds-build { grid-template-columns: 1fr; } .ds-build > div + div::before { display: none; } }
+</style>
+<link rel="icon" href="brand/ampy-glyph-black-201-favicon.png">
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="index.html" aria-current="page">Översikt</a>
+        <a href="beslut.html">Beslut som väntar</a>
+        <a href="kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="grunder/farg.html">Färg</a>
+        <a href="grunder/typografi.html">Typografi</a>
+        <a href="grunder/spacing.html">Spacing och layout</a>
+        <a href="grunder/form-djup.html">Form och djup</a>
+        <a href="grunder/rorelse.html">Rörelse</a>
+        <a href="grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="komponenter/index.html">Alla komponenter</a>
+        <a href="komponenter/knappar.html">Knappar och länkar</a>
+        <a href="komponenter/text.html">Textelement</a>
+        <a href="komponenter/ytor.html">Ytor och kort</a>
+        <a href="komponenter/falt.html">Fält och reglage</a>
+        <a href="komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="monster/mobil.html">Mobil 390</a>
+        <a href="monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="regler/candour.html">Candour-grinden</a>
+        <a href="regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Start</span>
+      <h1 class="ds-h1">Ampys designsystem, mätt</h1>
+      <p class="ds-lead">Det här är inte ett förslag. Det är vad Ampy faktiskt designar med, uppmätt i 31 källor den 11 september 2026, konsoliderat till ett tokensystem och renderat på sina egna tokens. Där källorna säger olika står det, och där bara du kan avgöra står det som ett beslut.</p>
+      <p class="ds-source"><code>konsolidering/kanon-sammanfattning.md</code> (de tio raderna), <code>INVENTERINGSBRIEF.md</code> (källorna och auktoriteten), <code>konsolidering/BEVIS.md</code> (hur det räknades), <code>system/tokens.css</code>, <code>konsolidering/komponenter-karta.md</code>, <code>konsolidering/beslut.md</code>.</p>
+
+      <div class="ds-hero">
+        <div class="ampy-card ampy-card--dark">
+          <img class="ds-hero__logo" src="brand/ampy-wordmark-white-2917x834.png" alt="Ampy" width="2917" height="834">
+          <ul class="ampy-stat-trio">
+            <li class="ampy-stat"><span class="ampy-stat__label">Källor</span><span class="ampy-stat__value">31</span><span class="ampy-stat__sub">30 inventerings-JSON + tidigare dokumentation</span></li>
+            <li class="ampy-stat"><span class="ampy-stat__label">Tokens</span><span class="ampy-stat__value">101<span class="ampy-stat__unit">+ 16 + 134</span></span><span class="ampy-stat__sub">live ap*, nya primitiva, semantiska ampy-*</span></li>
+            <li class="ampy-stat"><span class="ampy-stat__label">Beslut</span><span class="ampy-stat__value">20</span><span class="ampy-stat__sub">som väntar på Julius</span></li>
+          </ul>
+          <div class="ds-hero__mark"><img src="brand/ampy-glyph-white-834.png" alt="" width="834" height="834"><span>Klon-först: ingenting är påhittat, ingenting är "förbättrat". Varje värde bär sin källa som slug och fil:rad; det som saknar belägg står som [GAP].</span></div>
+        </div>
+        <div>
+          <p class="ds-p"><strong>Uppdraget</strong> (Julius, 2026-09-11): återskapa Ampys designsystem från start ur allt som byggts i blockbiblioteket, så att det går att se vad vi designar utifrån och därifrån fixa det fundamentalt.</p>
+          <p class="ds-p"><strong>Metoden</strong>: tre faser. Inventering mätte varje källa med grep och getComputedStyle och renderade den på 1440 och 390. Konsolideringen räknade frekvens per källa, viktade med auktoritet (1 = ägargodkänd eller live, 2 = levererad, 3 = prototyp) och skrev ut allt annat som drift. Sajten bygger på resultatet: <code>system/tokens.css</code> är den enda tokenfilen, och varje komponent är en klon av sin kanoniska källa.</p>
+          <p class="ds-p"><strong>Precedensen</strong> när källor säger olika: auktoritet 1 slår 2 slår 3; inom 1 gäller ansvarsområde (live = primitiver, hero-1 = display, cta-website = knappar, website-blocks = header, LED = verktyg, elcentral och elkollen = diagnostik, eljour = innehållsblock, testimonials = omdömen, brandbook = logo, palettnamn och vikter); frekvens bryter lika.</p>
+        </div>
+      </div>
+
+      <h2 class="ds-h2" id="tio-rader">Systemet i tio rader</h2>
+      <p class="ds-caption">Ur <code>konsolidering/kanon-sammanfattning.md</code>, ordagrant i sak. Allt är uppmätt, inte gissat.</p>
+      <ol class="ds-tio">
+        <li><strong>Sajten har redan ett komplett fluid-tokensystem</strong>: 101 <code>--ap*</code>-tokens i <code>global-variables.css</code> (47 färg, 11 spacing, 15 text, 6 radie, 5 skugga, 8 kolumner, 7 alias, 2 skärm) på 10 px-rot, men bara footer, testimonials, visste-du-att, live-blocken och tack-sidan använder det. Alla kalkylatorer, diagnostiker, heros, formulär och CRM-sidor bygger egna tokennamnrum med samma färger under nya namn (sju namnrum räknade). Två buggar (<code>--shadow-primary</code> odefinierad så alla <code>--apshadow-*</code> blir none; <code>--apspace-4xs</code> med min större än max) är rättade i tokens.css.</li>
+        <li><strong><a href="grunder/farg.html">Färg</a>:</strong> midnight #090b32 (29 källor), vit, teal #00a991 (25), neon mint #55ff9a (22), sky mist #f5f9ff (21) är kärnan. Brandbokens sekundärteal #5eb1bf finns i 17 källor (handlingsgradientens slut) men var inget token; nu <code>--apsecondary-teal</code>. Sex navyer, tio tealer och nio bläck blev ett bläck (midnight), en dämpad (#565e82), en svag (#6a7190), en accent-teal och en text-teal (#007a69, 5,3:1). Cobalt #326afd och lime finns inte i produktion.</li>
+        <li><strong><a href="grunder/typografi.html">Typografi</a>:</strong> Outfit ensamt (brandbok + 24 källor). Roller i px: display 60/36, h1 48/31, h2 36/27, h3 22/20, lead 22/17, body 18/16, small 16/14, eyebrow 12, siffra 56/38, label 14, knapp 16. Vikter 700 display, 500 H2, 600 H3 och etikett, 300 brödtext. H2 var det stora bråket (32, 36, 38 och 40 samma vecka); 36 (<code>--aptext-2xl</code>) vinner på antal källor och tokenbindning.</li>
+        <li><strong><a href="grunder/spacing.html">Spacing</a>:</strong> apspace-skalan behålls värde för värde (4,9 till 158 px) och speglas i px (rem-oberoende). Sektion = 2xl 79/35, gutter = l 40/21, kort = m 28/17, stack = s 20/13, rutnät = m. Container 1280 (fullbredd tillåten). Brytpunkter 992/768/480, helst <code>@container</code>.</li>
+        <li><strong><a href="grunder/form-djup.html">Form</a>:</strong> kort radie 20 till 16 (17 källor), knapp 16 (17 källor, = legacy <code>--radius</code>), fält 12 till 10, chip 8 till 6, pill 999. Elkollen och elcentral (14), booking (22), thank-you (32) och main-form (15) är drift.</li>
+        <li><strong>Djup:</strong> en skuggfärg (midnight-alfa) i tre styrkor; "husets" gråa rgba(190,190,190,.19) från live är drift (B10). Knappen bär CTA-bibliotekets tre-lagers skugga ordagrant. Glas = tack-sidans .72 + blur(16px).</li>
+        <li><strong>Gradienter 14 till 2:</strong> handlingsgradienten 120° #55ff9a till #5eb1bf (plus ringvarianten från crystal blue) och den ljusa auroran (tack och CRM). Textgradienter, ytgradienter (certificates, footer, testimonials) och avvikande knappgradienter (hero-2-form, thank-you, main-form, eljours nödknapp) är drift.</li>
+        <li><strong><a href="grunder/rorelse.html">Rörelse</a>:</strong> 160 ms knappar, 200 ms UI, 300 ms tak, <code>cubic-bezier(.2,.6,.2,1)</code> (live site-css), lyft -1,5 px + saturate(1.06), reduced-motion nollställer allt (alla auktoritet 1-källor gör det).</li>
+        <li><strong><a href="komponenter/index.html">Komponenter</a>:</strong> cirka 45 rader i kartan. Kanon utan drift: ring-CTA, rail, frågekort, dualstatus, trafikljus, stat-trio, segment, selector, slider, hero-1, hero-2, mini-menu, testimonials, certifikat, eljour-block, före/efter, fotobedömning, visste-du-att, CTA-band, header. Kanon med drift: gradient-CTA (fyra höjder), solid knapp (fyra tealer), input (nio recept), kort (fem radier), eyebrow (tre system). Saknas i auktoritet 1 till 2: sekundär och tertiär knapp i biblioteket, streams-bar och break-even (bara battery, auktoritet 3), processteg, tack-sidans tidslinje.</li>
+        <li><strong><a href="beslut.html">Tjugo beslut ligger hos dig</a>:</strong> de tyngsta är B3 brödtextens färg och vikt, B4 knappradie 16 mot live 12/20, B5 teal-kontrasten (2,96:1 på solid knapp), B6 gradient mot solid primär plus nödknappen, B7 kapa Plus Jakarta Sans och JetBrains Mono, B9 glöd mot platt på mörka kort, B10 grå mot navy skugga, B12 stjärnfärg, B17 H2 36/32/40. Tokens.css bär rekommendationerna tills du säger annat.</li>
+      </ol>
+
+      <h2 class="ds-h2" id="sajten">Sajten</h2>
+      <div class="ds-cards ds-cards--start">
+        <a class="ds-card" href="grunder/farg.html"><img class="ds-card__img" src="bilder/live-ampy-se-desktop.jpg" alt="" width="1440" height="900"><div class="ds-card__body"><span class="ds-card__count">6 sidor</span><p class="ds-card__title">Grunder</p><p class="ds-card__meta">Färg, typografi, spacing och layout, form och djup, rörelse, ornament och ikoner. Varje värde renderat med sin token, källa och drift.</p></div></a>
+        <a class="ds-card" href="komponenter/index.html"><img class="ds-card__img" src="bilder/cta-website-desktop.jpg" alt="" width="1440" height="900"><div class="ds-card__body"><span class="ds-card__count">8 sidor</span><p class="ds-card__title">Komponenter</p><p class="ds-card__meta">Knappar, textelement, ytor, fält, kalkylator-kitet, diagnostik-kitet och blocken, i alla tillstånd med kod och källa.</p></div></a>
+        <a class="ds-card" href="monster/layoutfamiljer.html"><img class="ds-card__img" src="bilder/elcentral-kollen-desktop.jpg" alt="" width="1440" height="900"><div class="ds-card__body"><span class="ds-card__count">4 sidor</span><p class="ds-card__title">Mönster</p><p class="ds-card__meta">Layoutfamiljerna, tjänstesidans rytm, mobil 390, register och ton.</p></div></a>
+        <a class="ds-card" href="regler/rost-i-ui.html"><img class="ds-card__img" src="bilder/eljour-block-desktop.jpg" alt="" width="1440" height="900"><div class="ds-card__body"><span class="ds-card__count">4 sidor</span><p class="ds-card__title">Regler</p><p class="ds-card__meta">Röst i gränssnittet, candour-grinden, AI-tecken som inte får finnas, tillgänglighet.</p></div></a>
+        <a class="ds-card" href="blockbibliotek.html"><img class="ds-card__img" src="bilder/hero-1-desktop.jpg" alt="" width="1440" height="900"><div class="ds-card__body"><span class="ds-card__count">30 källor</span><p class="ds-card__title">Blockbiblioteket</p><p class="ds-card__meta">Galleriet: varje inventerad källa med skärmdump, auktoritet och vad den är kanon för.</p></div></a>
+        <a class="ds-card ds-card--dark" href="beslut.html"><div class="ds-card__body" style="padding-top:var(--ampy-space-s)"><span class="ds-card__count">B1 till B20</span><p class="ds-card__title">Beslut som väntar</p><p class="ds-card__meta">Tjugo frågor som inte kan avgöras genom att räkna källor. Svara med numren: "B4 a, B17 b".</p></div><span class="ds-card__badge"><span class="ampy-tag ampy-tag--live"><span class="ampy-tag__pulse"></span>väntar på dig</span></span><div style="height:var(--ampy-space-s)"></div></a>
+      </div>
+
+      <h2 class="ds-h2" id="lasa">Så läser du sidorna</h2>
+      <div class="ds-read">
+        <div><strong>Samma anatomi överallt</strong>Eyebrow, rubrik, en ingress som säger vad som gäller, och en källrad som säger var siffrorna kommer ifrån. Sedan avsnitt med renderade exempel, tabeller och till sist "Det här byts ut": driften i blocken.</div>
+        <div><strong>Kanon, drift, beslut</strong>Kanon är det värde tokens.css bär. Drift är allt annat som finns i källorna, alltid utskrivet med källa. En etikett som <code>B4</code> betyder att värdet ligger i ett beslut hos Julius; tills det är taget gäller rekommendationen.</div>
+        <div><strong>Mätt på den här sidan</strong>Flera sidor mäter sig själva i din webbläsare (getComputedStyle) och visar px vid din viewport. Komponentsidorna visar hover som en statisk variant med klassen <code>.is-hover</code> så att skärmdumpar kan visa alla lägen.</div>
+      </div>
+
+      <h2 class="ds-h2" id="byggt">Så här är det byggt</h2>
+      <div class="ds-build">
+        <div><strong>1. <code>system/tokens.css</code></strong>Den enda tokenfilen. Lager 1: de 101 <code>--ap*</code> Bricks kör live, verbatim, rem-clamp på 10 px-rot. Lager 1b: två rättade buggar. Lager 1c: 16 primitiva som saknades. Lager 2: 134 semantiska <code>--ampy-*</code> i px-clamp, rem-oberoende, med källa och drift på varje rad.</div>
+        <div><strong>2. <code>system/base.css</code></strong>Reset, självhostad Outfit 100 till 900, body i 300, rubrikroller som klasser och som element-standard inne i <code>:where(.ampy)</code>, fokus (3 px navy, neon mint på mörkt), reduced-motion, <code>.ampy-container</code> 1280 och <code>.ampy-section</code> 2xl. Bär <code>html { font-size: 62.5% }</code> som dokumenterad värdregel (B8).</div>
+        <div><strong>3. <code>system/components/</code></strong>Sju filer, en per kit: knappar, text, ytor, fält, verktyg, diagnostik, block. Varje komponent är en klon av komponentkartans kanon, bunden till lager 2. <code>system/ampy.css</code> importerar allt i bindande ordning. Ikonerna ligger i <code>system/ikoner.svg</code>, 22 symboler med 1,75 px streck.</div>
+      </div>
+      <p class="ds-p">Hur man laddar, skopet <code>.ampy</code>, klasskonventionen, FluentSnippets och Bricks, klon-regeln och verktygen: <a class="ds-a" href="kod.html">Använda systemet</a>.</p>
+
+      <h2 class="ds-h2" id="kallor">De 31 källorna</h2>
+      <p class="ds-p">Grunt klonade från julius447 den 11 september 2026 till <code>kallor/</code>, mätta i <code>inventering/</code>. Auktoritet 1 är ägargodkänt, live eller låst och sätter kanon; 2 är levererat och produktionsklart; 3 är riktningar och prototyper som bara får belägga mönster. <code>rot-gt-calculator/wireframes</code> är uteslutet (underkänt av ägaren).</p>
+      <p class="ds-sources__k">Auktoritet 1 (14)</p>
+      <div class="ds-sources ds-sources--1"><span>live-ampy-se</span><span>hero-1</span><span>website-blocks</span><span>cta-website</span><span>footer-cro (baslinjen)</span><span>rot-gt-cro (klonen av live)</span><span>testimonials-block</span><span>eljour-block</span><span>led-kalkylator</span><span>ev-kalkylator</span><span>energycalc</span><span>elcentral-kollen</span><span>elkollen</span><span>brandbook (logo, palett, vikter)</span></div>
+      <p class="ds-sources__k">Auktoritet 2 (13)</p>
+      <div class="ds-sources"><span>main-cta</span><span>hero-2-alternatives</span><span>hero-2-form</span><span>mini-menu</span><span>rot-gt-cro (familjen)</span><span>certificates</span><span>eljour-sticky-bar</span><span>fore-efter-cro</span><span>fotobedomningen</span><span>main-form</span><span>thank-you</span><span>booking-confirmation</span><span>article-template</span></div>
+      <p class="ds-sources__k">Auktoritet 3 (4) och jämförelseunderlag</p>
+      <div class="ds-sources"><span>var-process-cro</span><span>battery-calculator</span><span>offer-accepted</span><span>picasso</span><span>tidigare dokumentation (skillen, ampy-foretagsdata §9 och §11)</span></div>
+      <p class="ds-caption">Footer-cro räknas 1 för baslinjen och 3 för riktningarna; rot-gt-cro 1 för klonen av live och 2 för den levererade familjen. Thank-you-implementation och offer-accepted-preview är speglar av thank-you respektive offer-accepted och räknas in i dem.</p>
+
+      <p class="ds-source">Sajten byggs av fyra agenter (S1: start, grunder, beslut, kod; S2: knappar, text, ytor, fält; S3: kalkylator- och diagnostik-kitet; S4: block, mönster, regler, blockbiblioteket). Bygglogg per agent med paritetsmått, avvikelser och token-brister: <code>site/_bygglogg/</code>.</p>
+    </div>
+  </main>
+</div>
+<script src="doc.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rörelse: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<style>
+/* Lokala ds-klasser för rörelsesidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; } /* brist i doc.css: 1fr-spåret ärver tabellernas min-content på mobil; rapporterad i _bygglogg/S1.md */
+  .ds-nowrap { white-space: nowrap; }
+  .ds-beslut-tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-decoration: none; border: 1px solid currentColor; border-radius: var(--ampy-radius-pill); padding: 0.1rem 0.6rem; margin-left: 0.4rem; white-space: nowrap; }
+  .ds-table__group th { padding-top: var(--ampy-space-s); color: var(--ampy-ink); font-size: var(--ampy-text-small); letter-spacing: 0; text-transform: none; font-weight: var(--ampy-w-strong); border-bottom: 1px solid var(--ampy-line-strong); }
+  .ds-play { font: inherit; font-family: var(--ampy-font); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); min-height: 4rem; padding: 0 1.4rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line-strong); background: var(--ampy-bg-surface); color: var(--ampy-ink); cursor: pointer; }
+  .ds-play:hover { border-color: var(--ampy-ink); }
+  .ds-play:focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+  /* Durations: tre löpare */
+  .ds-run { display: grid; grid-template-columns: 12rem 1fr; gap: 1rem var(--ampy-space-s); align-items: center; }
+  .ds-run__label { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-run__track { position: relative; height: 2.4rem; background: var(--ampy-bg-subtle); border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); }
+  .ds-run__dot { position: absolute; top: 0.2rem; left: 0.2rem; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--ampy-action-strong); transition: transform var(--_d) var(--_e); will-change: transform; }
+  .ds-run.is-go .ds-run__dot { transform: translateX(calc(var(--_w) - 2.2rem)); }
+  /* Easing-kurvor */
+  .ds-curves { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-curve { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-s); }
+  .ds-curve svg { width: 100%; max-width: 12rem; height: auto; display: block; }
+  .ds-curve__name { display: block; margin-top: var(--ampy-space-2xs); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-small); }
+  .ds-curve__meta { display: block; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  .ds-curve__meta code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+  .ds-curve--drift { border-style: dashed; }
+  /* Demo-rutnät */
+  .ds-demos { display: grid; gap: var(--ampy-space-s); grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-demo-box__actions { display: flex; flex-wrap: wrap; gap: var(--ampy-space-2xs); margin-top: var(--ampy-space-xs); }
+  .ds-demo-box { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-page); padding: var(--ampy-space-m); position: relative; }
+  .ds-demo-box__label { display: block; font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); margin-bottom: var(--ampy-space-xs); }
+  .ds-demo-box__row { display: flex; flex-wrap: wrap; gap: var(--ampy-space-s); align-items: flex-start; }
+  .ds-demo-box .ampy-card { max-width: 24rem; }
+  .ds-demo-box__meta { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; margin: var(--ampy-space-xs) 0 0; }
+  .ds-demo-box__meta code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+  /* Stapel som fylls vid laddning */
+  .ds-fill { height: 2.4rem; border-radius: var(--ampy-radius-pill); background: var(--ampy-on-dark-subtle); overflow: hidden; }
+  .ds-fill__bar { height: 100%; width: 72%; border-radius: inherit; background: linear-gradient(90deg, var(--ampy-action), var(--ampy-success)); transform-origin: left; animation: dsFill var(--ampy-dur-slow) var(--ampy-ease) both; }
+  @keyframes dsFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .ds-dark-box { background: var(--ampy-bg-dark); color: var(--ampy-on-dark); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); }
+  .ds-dark-box .ds-demo-box__label { color: var(--ampy-on-dark-faint); }
+  .ds-dark-box .ds-demo-box__meta { color: var(--ampy-on-dark-muted); }
+  /* Readout: bara vid ändring */
+  .ds-readout { display: flex; align-items: baseline; gap: 1.2rem; }
+  .ds-readout__unit { font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-medium); color: var(--ampy-on-dark-muted); line-height: 1; }
+  .ds-readout .ampy-number { color: var(--ampy-on-dark); }
+  .ds-readout .ampy-number.is-flash { animation: dsFlash 220ms var(--ampy-ease-out); }
+  @keyframes dsFlash { 0% { opacity: .4; } 100% { opacity: 1; } }
+  .ds-readout .ampy-number.is-snap { animation: dsSnap 150ms var(--ampy-ease); }
+  @keyframes dsSnap { 0% { color: var(--ampy-action); transform: scale(1.04); } 100% { color: var(--ampy-on-dark); transform: none; } }
+  .ds-counter { font-variant-numeric: tabular-nums; }
+  /* Details */
+  .ds-details { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
+  .ds-details__sum { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.8rem; padding: 0 var(--ampy-space-xs); font: inherit; font-family: var(--ampy-font); font-size: var(--ampy-text-body); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); background: transparent; border: 0; border-radius: var(--ampy-radius-field); text-align: left; cursor: pointer; }
+  .ds-details__sum:focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 2px; }
+  .ds-details__sum svg { width: 1.8rem; height: 1.8rem; transition: transform var(--ampy-dur-base) var(--ampy-ease); }
+  .ds-details.is-open .ds-details__sum svg { transform: rotate(180deg); }
+  .ds-details__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--ampy-dur-base) var(--ampy-ease); }
+  .ds-details__panel > div { overflow: hidden; }
+  .ds-details.is-open .ds-details__panel { grid-template-rows: 1fr; }
+  .ds-details__body { padding: 0 var(--ampy-space-xs) var(--ampy-space-xs); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  /* Reveal med stagger */
+  .ds-reveal { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--ampy-space-xs); }
+  .ds-reveal > div { height: 6rem; border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); opacity: 0; transform: translateY(6px); }
+  .ds-reveal.is-go > div { animation: dsReveal var(--ampy-dur-slow) var(--ampy-ease) forwards; }
+  .ds-reveal.is-go > div:nth-child(2) { animation-delay: 60ms; } .ds-reveal.is-go > div:nth-child(3) { animation-delay: 120ms; } .ds-reveal.is-go > div:nth-child(4) { animation-delay: 180ms; }
+  @keyframes dsReveal { to { opacity: 1; transform: none; } }
+  /* Reduced-motion-simulering */
+  .ds-rm-toggle { display: inline-flex; align-items: center; gap: 0.8rem; font-size: var(--ampy-text-small); color: var(--ampy-ink); padding: 0.6rem 1.2rem; border: 1px solid var(--ampy-line-strong); border-radius: var(--ampy-radius-pill); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0; }
+  .ds-rm-toggle input { width: 1.8rem; height: 1.8rem; accent-color: var(--ampy-action-strong); margin: 0; }
+  .ds-rm * , .ds-rm *::before, .ds-rm *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  .ds-freq { display: grid; grid-template-columns: 7rem 1fr 3rem; gap: 1rem; align-items: center; padding: 0.3rem 0; font-size: var(--ampy-text-small); }
+  .ds-freq__bar { height: 1.2rem; background: var(--ampy-ink-faint); border-radius: 0.2rem; }
+  .ds-freq--kanon .ds-freq__bar { background: var(--ampy-action); }
+  .ds-freq__n { text-align: right; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--ampy-ink-muted); }
+  .ds-two { display: grid; gap: var(--ampy-space-m); grid-template-columns: 1fr 1fr; align-items: start; }
+  @media (max-width: 991px) { .ds-two { grid-template-columns: 1fr; } .ds-demos { grid-template-columns: 1fr; } .ds-run { grid-template-columns: 1fr; } .ds-reveal { grid-template-columns: repeat(2, 1fr); } }
+  @media (prefers-reduced-motion: reduce) { .ds-run__dot, .ds-details__panel, .ds-details__sum svg { transition: none; } .ds-fill__bar, .ds-reveal.is-go > div, .ds-readout .ampy-number { animation: none; } .ds-reveal > div { opacity: 1; transform: none; } }
+</style>
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="farg.html">Färg</a>
+        <a href="typografi.html">Typografi</a>
+        <a href="spacing.html">Spacing och layout</a>
+        <a href="form-djup.html">Form och djup</a>
+        <a href="rorelse.html" aria-current="page">Rörelse</a>
+        <a href="ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Grunder</span>
+      <h1 class="ds-h1">Rörelse</h1>
+      <p class="ds-lead">Tre längder, två kurvor, ett lyft. Knappar rör sig på 160 ms, gränssnittet på 200, ingenting tar längre än 300. Allt nollställs under reduced-motion, och siffror animeras bara när de ändras, aldrig när de laddas.</p>
+      <p class="ds-source"><code>konsolidering/form-djup-rorelse.md</code> + <code>form-djup-rorelse.json</code> (rorelse.json ur 30 inventerings-JSON: 26 durationsvärden, 14 easings), <code>system/tokens.css</code> (rörelsetokens med källa och drift), <code>inventering/&lt;slug&gt;.json</code> rorelse[] för listan över vad som rör sig i auktoritet 1-källorna. Demonstrationerna nedan använder tokens rakt av; knapp och kort är komponentklasserna i <code>system/components/</code>.</p>
+
+      <label class="ds-rm-toggle"><input type="checkbox" data-rm> Simulera prefers-reduced-motion på demonstrationerna (0,001 ms på allt)</label>
+
+      <h2 class="ds-h2" id="langder">Längderna</h2>
+      <p class="ds-p">Tre tokens. <code>--ampy-dur-fast</code> 160 ms är CTA-bibliotekets hover (8 källor); verktygen kör 150 (9 källor) och skillnaden syns inte. <code>--ampy-dur-base</code> 200 ms är headerns <code>--t</code> (26 användningar) och 11 källor. <code>--ampy-dur-slow</code> 300 ms är sliders, staplar, reveal och Bricks fadeIn (13 källor) och samtidigt taket: hero-2-alternatives och fotobedömningen skriver "tak 300 ms". Tryck Spela så springer tre prickar samma sträcka med varsin token.</p>
+      <div class="ds-demo-box">
+        <div class="ds-run" data-run style="--_w:100%">
+          <span class="ds-run__label">fast 160 ms</span><div class="ds-run__track" data-track><div class="ds-run__dot" style="--_d:var(--ampy-dur-fast);--_e:var(--ampy-ease)"></div></div>
+          <span class="ds-run__label">base 200 ms</span><div class="ds-run__track" data-track><div class="ds-run__dot" style="--_d:var(--ampy-dur-base);--_e:var(--ampy-ease)"></div></div>
+          <span class="ds-run__label">slow 300 ms</span><div class="ds-run__track" data-track><div class="ds-run__dot" style="--_d:var(--ampy-dur-slow);--_e:var(--ampy-ease)"></div></div>
+          <span class="ds-run__label">drift 640 ms</span><div class="ds-run__track" data-track><div class="ds-run__dot" style="--_d:640ms;--_e:var(--ampy-ease);background:var(--ampy-ink-faint)"></div></div>
+        </div>
+        <div class="ds-demo-box__actions"><button class="ds-play" type="button" data-play-run>Spela</button></div>
+        <p class="ds-demo-box__meta">Den gråa är mini-menyns 640 ms (foto-zoom) och thank-you-bockens 640 ms, båda över taket. Kurvan är <code>--ampy-ease</code> på alla fyra.</p>
+      </div>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Token</th><th>Värde</th><th>Används till</th><th>Källa</th><th>Drift</th></tr></thead>
+        <tbody>
+          <tr><td class="ds-nowrap"><code>--ampy-dur-fast</code></td><td>160 ms</td><td>knappars hover, pil, färgbyten på kontroller</td><td>cta-website (*.css:21 ".16s ease") = hero-1, main-cta, rot-gt, fotobedömningen, live site-css hero-CTA (8 källor)</td><td>150 LED, EV, elkollen, booking (9 källor, verktygskontroller); 120 elcentral; 140 energycalc; 180 hero-2 (--ap-motion)</td></tr>
+          <tr><td class="ds-nowrap"><code>--ampy-dur-base</code></td><td>200 ms</td><td>UI: meny, drawer, chevron, details, stegprickar, popover</td><td>website-blocks + hero-1 (header.css:20 --t .2s ease-out, 26 användningar) + thank-you, main-form, mini-menu, elkollen, elcentral (11 källor)</td><td>220 energycalc, elcentral, booking; 280 mini-menu, main-form; 240 elkollen kort</td></tr>
+          <tr><td class="ds-nowrap"><code>--ampy-dur-slow</code></td><td>300 ms</td><td>slider, stapelbredd, reveal vid första målning, sektionens fadeIn; taket</td><td>led-kalkylator (styles.css --motion-normal 300) + eljour (--m .3s) + energycalc --t-slow + live Bricks fadeIn 0.3s (13 källor); "tak 300 ms" hero-2-alternatives, fotobedömningen</td><td>350 testimonials prickar; 400 rot-gt fade; 520 och 640 mini-menu; 560 och 640 thank-you bock; 800 EV; 900 testimonials</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="kurvor">Kurvorna</h2>
+      <p class="ds-p"><code>--ampy-ease</code> är live-sajtens egen <code>--ease</code> i site-css (7 källor med samma bezier) och används på allt som rör sig av sig självt. <code>--ampy-ease-out</code> är energycalcs och mini-menyns utrullning, för det som ska landa mjukt (reveal, popover). Nyckelordet <code>ease</code> (18 källor) kommer från CTA-bibliotekets shorthand och är okej på 160 ms, men ingen ny kurva ritas för hand: en studs på en kronsiffra ser ut som ett spel.</p>
+      <div class="ds-curves">
+        <div class="ds-curve"><svg viewBox="-6 -6 112 112" aria-hidden="true"><path d="M0 100 L100 0" stroke="rgba(9,11,50,.14)" stroke-width="1" fill="none"/><path d="M0 100 C20 40, 20 0, 100 0" stroke="#007a69" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span class="ds-curve__name">--ampy-ease</span><span class="ds-curve__meta"><code>cubic-bezier(.2,.6,.2,1)</code><br>live-ampy-se site-css --ease + mini-menu, energycalc, elcentral, elkollen, main-form, footer (7 källor)</span></div>
+        <div class="ds-curve"><svg viewBox="-6 -6 112 112" aria-hidden="true"><path d="M0 100 L100 0" stroke="rgba(9,11,50,.14)" stroke-width="1" fill="none"/><path d="M0 100 C16 0, 30 0, 100 0" stroke="#007a69" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span class="ds-curve__name">--ampy-ease-out</span><span class="ds-curve__meta"><code>cubic-bezier(.16,1,.3,1)</code><br>energycalc (tool.css --ease-out), mini-menu (foto-zoom), main-form, rot-gt</span></div>
+        <div class="ds-curve"><svg viewBox="-6 -6 112 112" aria-hidden="true"><path d="M0 100 L100 0" stroke="rgba(9,11,50,.14)" stroke-width="1" fill="none"/><path d="M0 100 C25 90, 25 0, 100 0" stroke="#565e82" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span class="ds-curve__name">ease (nyckelord)</span><span class="ds-curve__meta"><code>cubic-bezier(.25,.1,.25,1)</code><br>18 källor, CTA-bibliotekets transition-shorthand. Tillåten på 160 ms-hover, inte som ny kanon.</span></div>
+        <div class="ds-curve ds-curve--drift"><svg viewBox="-6 -6 112 112" aria-hidden="true"><path d="M0 100 L100 0" stroke="rgba(9,11,50,.14)" stroke-width="1" fill="none"/><path d="M0 100 C20 100, 20 0, 100 0" stroke="#6a7190" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="4 3"/></svg><span class="ds-curve__name">Drift: LED-kitets kurva</span><span class="ds-curve__meta"><code>cubic-bezier(.2,0,.2,1)</code><br>LED, EV, battery --easing. Byts till --ampy-ease.</span></div>
+        <div class="ds-curve ds-curve--drift"><svg viewBox="-6 -6 112 112" aria-hidden="true"><path d="M0 100 L100 0" stroke="rgba(9,11,50,.14)" stroke-width="1" fill="none"/><path d="M0 100 C16 16, 44 0, 100 0" stroke="#6a7190" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="4 3"/></svg><span class="ds-curve__name">Drift: kundflödets kurva</span><span class="ds-curve__meta"><code>cubic-bezier(.16,.84,.44,1)</code><br>thank-you, booking. Byts till --ampy-ease-out.</span></div>
+      </div>
+
+      <h2 class="ds-h2" id="demos">Så rör sig delarna</h2>
+      <p class="ds-p">Fyra rörelser som finns i systemet, med de riktiga klasserna. Håll muspekaren över knappen och kortet; de statiska varianterna bredvid har klassen <code>.is-hover</code> så att hover-läget syns i skärmdumpar.</p>
+      <div class="ds-demos">
+        <div class="ds-demo-box"><span class="ds-demo-box__label">Knapplyft: -1,5 px + saturate(1.06) brightness(1.02), 160 ms</span>
+          <div class="ds-demo-box__row"><a class="ampy-btn" href="#demos">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></a><a class="ampy-btn is-hover" href="#demos">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></a></div>
+          <p class="ds-demo-box__meta"><code>--ampy-lift</code> -1,5 px och <code>--ampy-hover-filter</code>, pilen skalar 1.18 och glider aldrig. Källa: cta-website (*.css:21-26, offert-cta.css:36-37) = hero-1, rot-gt, fotobedömningen, main-cta. Drift: -1 px picasso, elcentral, EV; -2 px energycalc, certificates, thank-you; -4 px mini-menu kort; 0 på sticky-bar (aldrig lyft på en bottenfäst remsa); opacity .92 i stället för lyft i LED och EV.</p>
+        </div>
+        <div class="ds-demo-box"><span class="ds-demo-box__label">Kortlyft: -2 px + raised-skugga, 160 ms</span>
+          <div class="ds-demo-box__row"><div class="ampy-card ampy-card--hover"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-stack-xs)">Certifikat</p><p class="ampy-body" style="margin:0">Håll över kortet.</p></div><div class="ampy-card ampy-card--hover is-hover"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-stack-xs)">Certifikat</p><p class="ampy-body" style="margin:0">Hover-läget, statiskt.</p></div></div>
+          <p class="ds-demo-box__meta"><code>.ampy-card--hover</code>: transform och box-shadow på <code>--ampy-dur-fast</code> <code>--ampy-ease</code>. Källa: certificates v2 (hover -2, tvåtonsring), website-blocks lösningskort (-.4rem .25s, bild scale 1.05 .45s), energycalc hp-card (-1 px, kant teal). Kortet lyfter 2 px i källorna, knappen 1,5; det är två olika lyft.</p>
+        </div>
+        <div class="ds-demo-box ds-dark-box"><span class="ds-demo-box__label">Stapel som fylls vid första målning, 300 ms</span>
+          <div class="ds-fill" data-fill><div class="ds-fill__bar"></div></div>
+          <div class="ds-demo-box__actions"><button class="ds-play" type="button" data-play-fill>Spela igen</button></div>
+          <p class="ds-demo-box__meta">scaleX(0) till 1 på <code>--ampy-dur-slow</code> <code>--ampy-ease</code>, på kompositorn (ingen breddanimation). Källa: energycalc storybar (scaleX 300 ms, delay 0/45/90), EV slider-fyllning (scaleX 150 ms), LED stapelbredd 300 ms (animerar width, byts till transform).</p>
+        </div>
+        <div class="ds-demo-box"><span class="ds-demo-box__label">Details: grid-template-rows 0fr till 1fr, 200 ms</span>
+          <div class="ds-details" data-details>
+            <button class="ds-details__sum" type="button" aria-expanded="false">Så har vi räknat <svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button>
+            <div class="ds-details__panel"><div><div class="ds-details__body">Panelen öppnas utan att höjden mäts i JS: raden går från 0fr till 1fr och innehållet har overflow hidden. Chevronen roterar 180°. Eljour-blockets symptompanel (--m .3s), energycalcs gear-collapsed (220 ms ease-out) och elcentrals finding-chevron (220 ms) gör exakt så.</div></div></div>
+          </div>
+          <p class="ds-demo-box__meta">Aldrig <code>max-height</code>-trick (headerns accordion .28s är drift) och aldrig animerad <code>height</code>: det är en layoutförskjutning.</p>
+        </div>
+      </div>
+
+      <h2 class="ds-h2" id="siffror">Siffror: bara vid ändring, aldrig vid laddning</h2>
+      <p class="ds-p">Hjältesiffran står färdig när sidan visas. Den räknas inte upp från 0 (det fördröjer värdet och animerar en textnod som påverkar layouten). När värdet ändras av en kontroll får siffran en kort markering: energycalcs <code>anchor-num.flash</code> (opacity .4 till 1, 220 ms) eller EV:s <code>value-prominent.is-snap</code> (teal + scale 1.04 tillbaka, 150 ms). Ingen av dem tar längre än ett hover.</p>
+      <div class="ds-two">
+        <div class="ds-demo-box ds-dark-box"><span class="ds-demo-box__label">Gör: färdig siffra, markering vid ändring</span>
+          <div class="ds-readout"><span class="ampy-number" data-readout>17 276</span><span class="ds-readout__unit">kr/år</span></div>
+          <div class="ds-demo-box__actions"><button class="ds-play" type="button" data-change="flash">Ändra värde (flash 220 ms)</button><button class="ds-play" type="button" data-change="snap">Ändra värde (snap 150 ms)</button></div>
+          <p class="ds-demo-box__meta"><code>tabular-nums</code> så att kolumnen inte hoppar när siffrorna byts. Källa: energycalc (tool.css ampyFlash 220 ms), ev-kalkylator (ampy-snap-highlight 150 ms), led-kalkylator (readouten byts direkt, reveal bara vid första målning).</p>
+        </div>
+        <div class="ds-demo-box ds-dark-box"><span class="ds-demo-box__label">Gör inte: räkna upp från noll vid laddning</span>
+          <div class="ds-readout"><span class="ampy-number ds-counter" data-counter>0</span><span class="ds-readout__unit">kr/år</span></div>
+          <div class="ds-demo-box__actions"><button class="ds-play" type="button" data-play-counter>Visa vad som händer</button></div>
+          <p class="ds-demo-box__meta">Under 1,2 sekunder visar siffran fel värde, layouten ändras när talet växer från ett tecken till sex, och användaren väntar på det som är verktygets hela poäng. Ingen auktoritet 1-källa gör så; regeln kommer ur ampy-ux-polish §1 ("DON'T animate the hero number counting up from 0").</p>
+        </div>
+      </div>
+
+      <h2 class="ds-h2" id="reveal">Reveal med stagger (mönster, ingen token)</h2>
+      <p class="ds-p">Kalkylatorerna visar resultatkortets delar i följd vid första målning: opacity 0 till 1 plus 6 till 12 px translateY, 300 ms, med 40 till 60 ms mellan delarna. LED: hero 40, trio 120, compare 180, cta 260 ms. EV: 40/100/160/220/280. Energycalc: 45 ms-steg. Elcentral: findings 45 ms-steg. Mini-menu 50 till 360 ms. Mönstret är kanon, stegets längd är inte tokeniserat; demonstrationen kör 60 ms.</p>
+      <div class="ds-demo-box">
+        <div class="ds-reveal" data-reveal><div></div><div></div><div></div><div></div></div>
+        <div class="ds-demo-box__actions"><button class="ds-play" type="button" data-play-reveal>Spela igen</button></div>
+        <p class="ds-demo-box__meta">En gång per sektion, aldrig igen vid scroll upp (Bricks fadeIn runOnce på live). Animera bara opacity och transform.</p>
+      </div>
+
+      <h2 class="ds-h2" id="reduced-motion">Reduced-motion</h2>
+      <p class="ds-p">Alla auktoritet 1-källor nollställer rörelsen under <code>prefers-reduced-motion: reduce</code>: hero-1 och website-blocks (<code>*{animation:none;transition:none} !important</code>), cta-website (transition none, puls av), LED och EV (0,001 ms på allt), energycalc (nollställer --t-*), elcentral (animation none på block, dualstatus, finding, share-menu), elkollen, eljour (pulser display none), testimonials (ingen autoplay, markören statisk). Artikelmallen saknar regeln (defekt). <code>base.css</code> bär regeln för hela <code>.ampy</code>-skopet:</p>
+      <div class="ds-code"><pre><code>@media (prefers-reduced-motion: reduce) {
+  .ampy *, .ampy *::before, .ampy *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}</code></pre></div>
+      <p class="ds-caption">Kryssrutan högst upp på sidan lägger samma regel på demonstrationerna med en klass, eftersom en sida inte kan slå på mediefrågan själv. Oändliga animationer (pulser, halo, spinner) är de som märks mest; de ska stanna helt, inte bara gå långsammare.</p>
+
+      <h2 class="ds-h2" id="vad-rors">Det som rör sig i auktoritet 1-källorna</h2>
+      <p class="ds-caption">Ur <code>rorelse[]</code> i respektive inventerings-JSON. Det här är hela rörelseordförrådet i produktion; allt utanför listan är nytt och ska motiveras.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Källa</th><th>Vad</th><th>Hur</th></tr></thead>
+        <tbody>
+          <tr><td class="ds-nowrap">cta-website</td><td>knapphover, pil, ring-puls, active</td><td>transform, box-shadow, filter .16s ease till translateY(-1.5px) saturate(1.06 eller 1.08) brightness(1.02); pil scale(1.18); ampyRing 2.8 s cubic-bezier(.4,0,.4,1) infinite (box-shadow 0 till 9 px vit .65 till 0 vid 55 %); active translateY(0); reduced-motion: allt av</td></tr>
+          <tr><td class="ds-nowrap">hero-1</td><td>CTA-hover, header, pulsprick, mega-meny, lösningskort, drawer</td><td>CTA som cta-website; header --t .2s ease-out (26 användningar); pulsprick 1 rem mint cta_dot 1.6 s ease-in-out infinite; mega-meny opacity var(--t) + visibility 0s .2s; lösningskort transform och box-shadow .25s ease-out, bild scale(1.05) .45s; drawer translateX(100 %) till 0 .2s, accordion max-height .28s ease-out</td></tr>
+          <tr><td class="ds-nowrap">website-blocks</td><td>samma header som hero-1 + produkt-tile</td><td>--t .2s ease-out; produkt-tile hover bg rgba(0,169,145,.06), go opacity .35 till 1 + translateX(.3rem); burger-X scale_in .3s</td></tr>
+          <tr><td class="ds-nowrap">live-ampy-se</td><td>tab-knapp, hero-CTA, mini-menu-kort, ROT-knapp, blockinträde</td><td>all 0.3s ease + hover translateY(-2px) (fluent_snippet_14); hero-CTA .16s som cta-website; mini-menu-kort 280 ms var(--ease); ROT-knapp hover byter gradient utan transition; Bricks enterView fadeIn 0.3 s runOnce, hidden-on-load</td></tr>
+          <tr><td class="ds-nowrap">led-kalkylator</td><td>kontroller, slider, staplar, reveal, knapp, thumb</td><td>--motion-fast 150 ms (border, färg, bg, opacity, transform, chevron); --motion-normal 300 ms (slider width/left, stapelbredd); --easing cubic-bezier(0.2,0,0.2,1); ampy-reveal opacity 0 till 1 + translateY(0.6rem) 300 ms, stagger 40/120/180/260; knapp hover opacity .92, active .82 + 1 px; thumb active scale(1.08), .is-dragging utan transitions</td></tr>
+          <tr><td class="ds-nowrap">ev-kalkylator</td><td>slider, snap, reveal, staplar, popover, spinner</td><td>150 / 300 ms, samma kurva som LED; slider-fyllning scaleX 150 ms, thumb left 150 ms; ampy-snap-highlight teal + scale 1.04 150 ms; reveal 300 ms stagger 40/100/160/220/280; stapel width 300 ms; popover opacity, transform 2 px, visibility 150 ms; spinner 0.8 s linear infinite</td></tr>
+          <tr><td class="ds-nowrap">energycalc</td><td>inträde, storybar, spark-list, seg-pill, gear, bump, flash, hover, thumb, jump-pill</td><td>--t-fast 140 / --t-mid 220 / --t-slow 300 / --t-stagger 45 ms; --ease cubic-bezier(0.2,0.6,0.2,1), --ease-out cubic-bezier(0.16,1,0.3,1); ampyRise translateY(12px) till 0 300 ms ease-out staggat ×1 till ×6; storybar scaleX 300 ms delay 0/45/90; spark-list scaleX 220 + opacity 140; seg-pill 140 ms; gear-collapsed 0fr till 1fr 220 ms; ampyBump 140 ms, ampyFlash 220 ms; hp-card hover -1 px; cta hover -2 px; thumb hover 1.06, active 1.12; jpNudge 2.6 s infinite</td></tr>
+          <tr><td class="ds-nowrap">elcentral-kollen</td><td>stegbyte, besked, stegprickar, option, chevron, sticky-CTA, share</td><td>--dur-fast 120 / --dur-base 220 / --dur-reveal 300, ease-out cubic-bezier(0.2,0.6,0.2,1); ec-in-fwd/back opacity + translateX(±10px) 220 ms; dualstatus ec-rise 300 ms, findings 220 ms med 45 ms stagger; stegprickar bg + width 220 ms (18 till 28 px); option hover kant teal + -1 px 120 ms; chevron rotate 180° 220 ms; sticky-CTA translateY(110 %) till 0 260 ms; ec-pop på share-menyn</td></tr>
+          <tr><td class="ds-nowrap">elkollen</td><td>kort, drawer, judgment, tiles, tabb, hero-kort</td><td>ampy-bk-block opacity + translateY(2px) 240 ms; ampy-bk-fade 200 ms; ampy-bk-judgment 280 ms cubic-bezier(.2,.6,.2,1); tiles, options, job-row, cta 150 ms ease, tile active scale .98; tabb color + border 150 ms (vikt 500 i båda lägen så bredden inte hoppar); hero-kort min-height 200 ms; ett dark-tema (ej valt) med elk-aurora 24 s infinite</td></tr>
+          <tr><td class="ds-nowrap">eljour-block</td><td>panel, chevron, CTA, statuspuls, mobil-CTA-puls</td><td>--m .3s ease på panel (grid-template-rows 0fr till 1fr), chevron rotate 180, CTA hover translateY(-1px); eb-pulse 2 s ease-out infinite (scale 1 till 2, opacity .55 till 0); eb-cta-pulse 2 s (scale 1 till 2.6); reduced-motion: pulser display none</td></tr>
+          <tr><td class="ds-nowrap">testimonials-block</td><td>Splide, prickar, badge</td><td>autoplay 4000 ms, speed 500 ms, pauseOnHover och pauseOnFocus; prick width och bg .35s ease, aktiv fylls via scaleX i takt med autoplay; badge hover understrykning; reduced-motion: ingen autoplay, markören statisk. Live: speed 400, interval 3000</td></tr>
+          <tr><td class="ds-nowrap">rot-gt-cro</td><td>blockinträde, CTA</td><td>live: Bricks fadeIn 0.3 s runOnce; familjen: av-fade 400 ms cubic-bezier(.16,1,.3,1) opacity-only, vänster +60, panel +120 ms; CTA som cta-website</td></tr>
+          <tr><td class="ds-nowrap">footer-cro</td><td>inga (baslinje)</td><td>tokens.css i repot definierar --ease cubic-bezier(.2,.6,.2,1) för riktningarna</td></tr>
+          <tr><td class="ds-nowrap">brandbook</td><td>inga</td><td>boken innehåller inga rörelseregler</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="drift">Det här byts ut</h2>
+      <h3 class="ds-h3">Durations i källorna</h3>
+      <p class="ds-caption">Antal källor per värde ur <code>rorelse.json</code>. Teal = token. Allt över 300 ms är drift utom oändliga pulser (som är egna beslut, se ornament).</p>
+      <div class="ds-freq ds-freq--kanon"><span>300 ms</span><div class="ds-freq__bar" style="width:100%"></div><span class="ds-freq__n">13</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>200 ms</span><div class="ds-freq__bar" style="width:85%"></div><span class="ds-freq__n">11</span></div>
+      <div class="ds-freq"><span>150 ms</span><div class="ds-freq__bar" style="width:69%"></div><span class="ds-freq__n">9</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>160 ms</span><div class="ds-freq__bar" style="width:62%"></div><span class="ds-freq__n">8</span></div>
+      <div class="ds-freq"><span>280 ms</span><div class="ds-freq__bar" style="width:54%"></div><span class="ds-freq__n">7</span></div>
+      <div class="ds-freq"><span>180 ms</span><div class="ds-freq__bar" style="width:46%"></div><span class="ds-freq__n">6</span></div>
+      <div class="ds-freq"><span>220 ms</span><div class="ds-freq__bar" style="width:38%"></div><span class="ds-freq__n">5</span></div>
+      <div class="ds-freq"><span>250 ms</span><div class="ds-freq__bar" style="width:31%"></div><span class="ds-freq__n">4</span></div>
+      <div class="ds-freq"><span>400 ms</span><div class="ds-freq__bar" style="width:23%"></div><span class="ds-freq__n">3</span></div>
+      <div class="ds-freq"><span>260 ms</span><div class="ds-freq__bar" style="width:23%"></div><span class="ds-freq__n">3</span></div>
+      <p class="ds-caption">Två källor vardera: 120, 450, 500, 640 ms. En källa: 60, 80, 90, 140, 240, 350, 420, 520, 560, 700, 800, 900 ms.</p>
+      <h3 class="ds-h3">Easings i källorna</h3>
+      <div class="ds-freq"><span>ease</span><div class="ds-freq__bar" style="width:100%"></div><span class="ds-freq__n">18</span></div>
+      <div class="ds-freq"><span>ease-out</span><div class="ds-freq__bar" style="width:44%"></div><span class="ds-freq__n">8</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>.2,.6,.2,1</span><div class="ds-freq__bar" style="width:39%"></div><span class="ds-freq__n">7</span></div>
+      <div class="ds-freq"><span>linear</span><div class="ds-freq__bar" style="width:28%"></div><span class="ds-freq__n">5</span></div>
+      <div class="ds-freq"><span>ease-in-out</span><div class="ds-freq__bar" style="width:17%"></div><span class="ds-freq__n">3</span></div>
+      <div class="ds-freq ds-freq--kanon"><span>.16,1,.3,1</span><div class="ds-freq__bar" style="width:17%"></div><span class="ds-freq__n">3</span></div>
+      <div class="ds-freq"><span>.2,0,.2,1</span><div class="ds-freq__bar" style="width:17%"></div><span class="ds-freq__n">3</span></div>
+      <div class="ds-freq"><span>.16,.84,.44,1</span><div class="ds-freq__bar" style="width:11%"></div><span class="ds-freq__n">2</span></div>
+      <div class="ds-freq"><span>.33,1,.68,1</span><div class="ds-freq__bar" style="width:11%"></div><span class="ds-freq__n">2</span></div>
+      <p class="ds-caption">Kanonkurvan räknas med båda skrivsätten (.2,.6,.2,1 i 5 källor + 0.2,0.6,0.2,1 i 2); ease-out-kurvan likaså (2 + 1). En källa vardera: cubic-bezier(.4,0,.4,1) (ring-pulsen), cubic-bezier(.22,.61,.36,1) (fore-efter).</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Roll</th><th>Kanon</th><th>Drift (källa: värde)</th><th>Byts ut till</th></tr></thead>
+        <tbody>
+          <tr><td>Lyft</td><td>translateY(-1.5px) på knapp</td><td>picasso, elcentral, EV -1 px; energycalc, certificates, thank-you -2 px; mini-menu kort -4 px; live tab-knapp -2 px</td><td><code>--ampy-lift</code> på knappar; kort får -2 px (<code>.ampy-card--hover</code>); sticky-bar 0</td></tr>
+          <tr><td>Hover-filter</td><td>saturate(1.06) brightness(1.02)</td><td>ring-knappen saturate(1.08) (behålls i klonen som avvikelse); picasso, elkollen 1.05; main-form brightness(1.06); LED, EV opacity .92</td><td><code>--ampy-hover-filter</code></td></tr>
+          <tr><td>Snabb</td><td>160 ms</td><td>150 (LED, EV, elkollen, booking, picasso, hero-2-form, article, battery), 120 (elcentral, rot-gt), 140 (energycalc), 180 (hero-2, booking, sticky-bar, thank-you)</td><td><code>--ampy-dur-fast</code></td></tr>
+          <tr><td>Bas</td><td>200 ms</td><td>220 (energycalc, elcentral, booking, battery, mini-menu), 240 (elkollen), 250 (certificates, fore-efter, hero-1, website-blocks), 260, 280 (mini-menu, main-form, EV, elkollen, hero-1, live, website-blocks)</td><td><code>--ampy-dur-base</code></td></tr>
+          <tr><td>Långsam</td><td>300 ms (tak)</td><td>350 testimonials, 400 rot-gt fade, sticky-bar, article; 420/520/640 mini-menu; 450 hero-1, website-blocks bild-zoom; 500 main-form, testimonials; 560/640 thank-you bock; 700 main-form; 800 EV; 900 testimonials</td><td><code>--ampy-dur-slow</code>; bocken i tack-flödet är ett eget beslut (bekräftelse-scen, komponentkartan)</td></tr>
+          <tr><td>Kurva</td><td>cubic-bezier(.2,.6,.2,1) / ease-out-kurvan</td><td>LED-kitets (.2,0,.2,1); kundflödets (.16,.84,.44,1) och (.33,1,.68,1); fore-efter (.22,.61,.36,1); ease-in-out (elkollen, hero-1, website-blocks); linear (5 källor, mest spinners och Splide)</td><td><code>--ampy-ease</code> / <code>--ampy-ease-out</code>; linear bara på spinner</td></tr>
+          <tr><td>Animerad egenskap</td><td>opacity, transform</td><td>LED slider width/left och stapelbredd; EV stapel width; hero-1 accordion max-height; elkollen hero-kort min-height; elcentral stegprickar width</td><td>transform (scaleX) och grid-template-rows</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+<script>
+/* Demonstrationerna: inga nätverksanrop, inga beroenden. */
+(function () {
+  var rm = document.querySelector('[data-rm]');
+  if (rm) rm.addEventListener('change', function () { document.querySelector('.ds-main').classList.toggle('ds-rm', rm.checked); });
+  var run = document.querySelector('[data-run]');
+  var playRun = document.querySelector('[data-play-run]');
+  if (run && playRun) playRun.addEventListener('click', function () {
+    run.querySelectorAll('[data-track]').forEach(function (t) { t.style.setProperty('--_w', t.getBoundingClientRect().width + 'px'); });
+    run.classList.remove('is-go'); void run.offsetWidth; run.classList.add('is-go');
+    setTimeout(function () { run.classList.remove('is-go'); }, 1400);
+  });
+  var fill = document.querySelector('[data-fill]');
+  var playFill = document.querySelector('[data-play-fill]');
+  if (fill && playFill) playFill.addEventListener('click', function () { var b = fill.firstElementChild; b.style.animation = 'none'; void b.offsetWidth; b.style.animation = ''; });
+  document.querySelectorAll('[data-details]').forEach(function (d) {
+    var btn = d.querySelector('.ds-details__sum');
+    btn.addEventListener('click', function () { var open = d.classList.toggle('is-open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+  });
+  var readout = document.querySelector('[data-readout]');
+  var values = ['17 276', '21 940', '9 812', '27 752', '14 105'];
+  var vi = 0;
+  document.querySelectorAll('[data-change]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      vi = (vi + 1) % values.length; readout.textContent = values[vi];
+      var cls = b.dataset.change === 'snap' ? 'is-snap' : 'is-flash';
+      readout.classList.remove('is-flash', 'is-snap'); void readout.offsetWidth; readout.classList.add(cls);
+    });
+  });
+  var counter = document.querySelector('[data-counter]');
+  var playCounter = document.querySelector('[data-play-counter]');
+  if (counter && playCounter) playCounter.addEventListener('click', function () {
+    var t0 = performance.now(), dur = 1200, target = 17276;
+    function step(t) { var p = Math.min(1, (t - t0) / dur); var v = Math.round(target * p); counter.textContent = v.toLocaleString('sv-SE'); if (p < 1) requestAnimationFrame(step); }
+    counter.textContent = '0'; requestAnimationFrame(step);
+  });
+  var reveal = document.querySelector('[data-reveal]');
+  var playReveal = document.querySelector('[data-play-reveal]');
+  function goReveal() { reveal.classList.remove('is-go'); void reveal.offsetWidth; reveal.classList.add('is-go'); }
+  if (reveal && playReveal) { playReveal.addEventListener('click', goReveal); goReveal(); }
+})();
+</script>
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

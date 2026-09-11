@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spacing och layout: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<style>
+/* Lokala ds-klasser för spacing-sidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; } /* brist i doc.css: 1fr-spåret ärver tabellernas min-content på mobil; rapporterad i _bygglogg/S1.md */
+  .ds-space-row { grid-template-columns: 24rem 1fr 30rem; }
+  .ds-space-row__label { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  .ds-space-row__label strong { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); margin-right: 0.6rem; }
+  .ds-space-row__label code, .ds-space-row__meta code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; }
+  .ds-space-row__meta { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  .ds-space-row__meta small { display: block; color: var(--ampy-ink-faint); margin-top: 0.3rem; }
+  .ds-space-row__bar { min-width: 2px; }
+  .ds-space-row__track { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+  .ds-space-row__px { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; color: var(--ampy-ink-faint); white-space: nowrap; }
+  .ds-space-row--drift .ds-space-row__bar { background: var(--ampy-ink-faint); }
+  .ds-nowrap { white-space: nowrap; }
+  .ds-list { margin: 0; padding-left: 1.6rem; }
+  .ds-list li { margin-bottom: 0.3rem; }
+  .ds-beslut-tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-decoration: none; border: 1px solid currentColor; border-radius: var(--ampy-radius-pill); padding: 0.1rem 0.6rem; margin-left: 0.4rem; white-space: nowrap; }
+  /* Sektionsrytm: tre staplade sektioner med de riktiga paddingarna och en linjal */
+  .ds-rhythm { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); overflow: hidden; margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
+  .ds-rhythm section { position: relative; }
+  .ds-rhythm__ruler { position: absolute; right: var(--ampy-gutter); top: 0; height: var(--ampy-space-section-y); border-left: 2px solid var(--ampy-action-strong); }
+  .ds-rhythm__ruler::before, .ds-rhythm__ruler::after { content: ""; position: absolute; left: -5px; width: 8px; border-top: 2px solid var(--ampy-action-strong); }
+  .ds-rhythm__ruler::before { top: 0; } .ds-rhythm__ruler::after { bottom: 0; }
+  .ds-rhythm__ruler span { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; color: var(--ampy-action-strong); white-space: nowrap; }
+  .ds-rhythm__gutter { position: absolute; left: 0; top: calc(var(--ampy-space-section-y) / 2); width: var(--ampy-gutter); border-top: 2px solid var(--ampy-action-strong); }
+  .ds-rhythm__gutter::before, .ds-rhythm__gutter::after { content: ""; position: absolute; top: -5px; height: 8px; border-left: 2px solid var(--ampy-action-strong); }
+  .ds-rhythm__gutter::before { left: 0; } .ds-rhythm__gutter::after { right: 0; }
+  .ds-rhythm__gutter span { position: absolute; left: calc(100% + 0.6rem); top: -0.8em; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; color: var(--ampy-action-strong); white-space: nowrap; }
+  .ds-rhythm .ampy-section--dark .ds-rhythm__ruler, .ds-rhythm .ampy-section--dark .ds-rhythm__gutter { border-color: var(--apneon-mint); }
+  .ds-rhythm .ampy-section--dark .ds-rhythm__ruler::before, .ds-rhythm .ampy-section--dark .ds-rhythm__ruler::after, .ds-rhythm .ampy-section--dark .ds-rhythm__gutter::before, .ds-rhythm .ampy-section--dark .ds-rhythm__gutter::after { border-color: var(--apneon-mint); }
+  .ds-rhythm .ampy-section--dark .ds-rhythm__ruler span, .ds-rhythm .ampy-section--dark .ds-rhythm__gutter span { color: var(--apneon-mint); }
+  .ds-rhythm--white { background: var(--ampy-bg-surface); }
+  /* Stack-demo: ett kort där avstånden är märkta */
+  .ds-stack { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ampy-space-xs); align-items: start; }
+  .ds-stack__card { background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-card); box-shadow: var(--ampy-shadow-card); }
+  .ds-gap { display: block; position: relative; background: repeating-linear-gradient(135deg, rgba(0,169,145,.22) 0 4px, transparent 4px 8px); }
+  .ds-gap::after { content: attr(data-n); position: absolute; left: -2.3rem; top: 50%; transform: translateY(-50%); width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--ampy-action-strong); color: #fff; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.1rem; font-weight: 600; display: grid; place-items: center; line-height: 1; }
+  .ds-n { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--ampy-action-strong); color: #fff; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.1rem; font-weight: 600; line-height: 1; margin-right: 0.6rem; vertical-align: 0.1em; }
+  /* Container-diagram i skala */
+  .ds-scale { position: relative; background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s) 0; margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); overflow: hidden; }
+  .ds-scale__row { position: relative; height: 3.4rem; margin: 0.6rem 0; }
+  .ds-scale__box { position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); border-radius: 0.4rem; display: flex; align-items: center; justify-content: center; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; white-space: nowrap; }
+  .ds-scale__box--vp { background: var(--ampy-bg-subtle); border: 1px dashed var(--ampy-line-strong); color: var(--ampy-ink-muted); }
+  .ds-scale__box--full { background: var(--ampy-bg-dark); color: var(--ampy-on-dark); }
+  .ds-scale__box--c { background: rgba(0,169,145,.16); border: 1px solid var(--ampy-action-strong); color: var(--ampy-ink); }
+  .ds-scale__box--t { background: rgba(0,169,145,.30); border: 1px solid var(--ampy-action-strong); color: var(--ampy-ink); }
+  .ds-scale__box--drift { background: transparent; border: 1px dashed var(--ampy-ink-faint); color: var(--ampy-ink-faint); }
+  /* Rutnätsdemo */
+  .ds-cols { display: grid; gap: var(--ampy-space-gap); margin-bottom: var(--ampy-space-xs); }
+  .ds-cols > div { background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; color: var(--ampy-ink-muted); text-align: center; }
+  /* Brytpunktsstaplar */
+  .ds-bp { display: grid; grid-template-columns: 6rem 1fr 3rem; gap: 1rem; align-items: center; padding: 0.4rem 0; font-size: var(--ampy-text-small); }
+  .ds-bp__bar { height: 1.2rem; background: var(--ampy-ink-faint); border-radius: 0.2rem; }
+  .ds-bp--kanon .ds-bp__bar { background: var(--ampy-action); }
+  .ds-bp__n { text-align: right; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--ampy-ink-muted); }
+  .ds-table__group th { padding-top: var(--ampy-space-s); color: var(--ampy-ink); font-size: var(--ampy-text-small); letter-spacing: 0; text-transform: none; font-weight: var(--ampy-w-strong); border-bottom: 1px solid var(--ampy-line-strong); }
+  .ds-table td.is-hit { color: var(--ampy-success-ink); font-weight: var(--ampy-w-medium); }
+  @media (max-width: 991px) { .ds-stack { grid-template-columns: 1fr; } .ds-space-row { grid-template-columns: 1fr; } .ds-rhythm__ruler span { top: auto; bottom: 0.2rem; transform: none; } }
+</style>
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="farg.html">Färg</a>
+        <a href="typografi.html">Typografi</a>
+        <a href="spacing.html" aria-current="page">Spacing och layout</a>
+        <a href="form-djup.html">Form och djup</a>
+        <a href="rorelse.html">Rörelse</a>
+        <a href="ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Grunder</span>
+      <h1 class="ds-h1">Spacing och layout</h1>
+      <p class="ds-lead">Elva steg som Bricks redan kör live, behållna värde för värde och speglade i px så att de är oberoende av rotstorleken. Sektion är 2xl, kort är m, stack är s. Container 1280, men fullbredd är tillåten.</p>
+      <p class="ds-source"><code>konsolidering/spacing.md</code> + <code>spacing.json</code> (apspace-referenser i 30 inventerings-JSON, 17 uppmätta sektionspaddingar i 13 källor, 80 containerrader, 55 brytpunktsvärden), <code>system/tokens.css</code> (varje roll bär källa och drift). Px vid 390 / 768 / 1440 är mätta i Chromium av <code>konsolidering/_probes/06-smoke-matt.mjs</code>; "på den här sidan" räknas av sidans eget skript.</p>
+
+      <h2 class="ds-h2" id="skalan">Skalan</h2>
+      <p class="ds-p">Lager 1 är <code>--apspace-4xs</code> till <code>--apspace-4xl</code> ur <code>global-variables.css</code>, rem-clamp mellan 320 och 1280 px. Lager 2 (<code>--ampy-space-*</code>) har samma värden som px-clamp. Stapeln är tokenens värde i din viewport just nu; siffran till höger om stapeln mäts på sidan. Meta visar px vid 390 / 768 / 1440 och hur många källor som refererar steget (grå stapel = definierad men utan användning).</p>
+
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>4xs</strong><code>--apspace-4xs</code><br><code>--ampy-space-4xs</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-4xs)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">4,9 / 5,0 / 5,2 px<br>1 källa: footer-cro (bar-padding)<small>var trasig live (min &gt; max, låst på 5,19 px); rättad i tokens.css lager 1b till 4,9 till 5,2</small></div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>3xs</strong><code>--apspace-3xs</code><br><code>--ampy-space-3xs</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-3xs)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">6,6 / 6,8 / 7 px<br>2 källor: footer-cro (li-padding), testimonials-block</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>2xs</strong><code>--apspace-2xs</code><br><code>--ampy-space-2xs</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-2xs)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">8,3 / 9,0 / 9,9 px<br>7 källor: footer-cro, fore-efter-cro, main-form, picasso, testimonials-block, thank-you, var-process-cro</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>xs</strong><code>--apspace-xs</code><br><code>--ampy-space-xs</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-xs)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">10,5 / 12,0 / 14 px<br>5 källor: certificates, footer-cro, fore-efter-cro, picasso, testimonials-block</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>s</strong><code>--apspace-s</code><br><code>--ampy-space-s</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-s)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">13,3 / 16,1 / 19,8 px<br>9 källor: certificates, footer-cro, fore-efter-cro, live-ampy-se, picasso, rot-gt-cro, testimonials-block, thank-you, visste-du-att</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>m</strong><code>--apspace-m</code><br><code>--ampy-space-m</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-m)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">16,9 / 21,6 / 28 px<br>9 källor: certificates, footer-cro, fore-efter-cro, live-ampy-se, picasso, rot-gt-cro, testimonials-block, thank-you, visste-du-att</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>l</strong><code>--apspace-l</code><br><code>--ampy-space-l</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-l)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">21,5 / 29,2 / 39,6 px<br>7 källor: footer-cro, fore-efter-cro, live-ampy-se (.brxe-section), picasso, rot-gt-cro, testimonials-block, visste-du-att</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>xl</strong><code>--apspace-xl</code><br><code>--ampy-space-xl</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-xl)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">27,3 / 39,5 / 56 px<br>6 källor: certificates, footer-cro, live-ampy-se, rot-gt-cro, testimonials-block, visste-du-att</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>2xl</strong><code>--apspace-2xl</code><br><code>--ampy-space-2xl</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-2xl)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">34,8 / 53,6 / 79,2 px<br>6 källor: certificates, footer-cro, fore-efter-cro, testimonials-block, var-process-cro, visste-du-att</div>
+      </div>
+      <div class="ds-space-row">
+        <div class="ds-space-row__label"><strong>3xl</strong><code>--apspace-3xl</code><br><code>--ampy-space-3xl</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-3xl)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">44,4 / 73,1 / 111,9 px<br>2 källor: live-ampy-se (ROT-kortets padding), rot-gt-cro</div>
+      </div>
+      <div class="ds-space-row ds-space-row--drift">
+        <div class="ds-space-row__label"><strong>4xl</strong><code>--apspace-4xl</code><br><code>--ampy-space-4xl</code></div>
+        <div class="ds-space-row__track"><div class="ds-space-row__bar" style="width:var(--ampy-space-4xl)" data-px-width></div><span class="ds-space-row__px" data-px-out></span></div>
+        <div class="ds-space-row__meta">56,8 / 99,8 / 158,3 px<br>0 källor: definierad i global-variables.css, refereras inte av något block<small>behålls för skalans skull</small></div>
+      </div>
+
+      <h2 class="ds-h2" id="roller">Rollerna</h2>
+      <p class="ds-p">Lager 2 ger stegen namn efter vad de gör. Ingen roll har ett eget värde: alla pekar tillbaka på ett steg i skalan. Sektion = 2xl vann över xl på antal källor av auktoritet 1 (3 mot 2, <code>BEVIS.md</code> punkt 7).</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Roll</th><th>Token</th><th>Steg (px 1440 / 390)</th><th>Källa</th><th>Drift</th></tr></thead>
+        <tbody>
+          <tr class="ds-table__group"><th colspan="5">Sektion och container</th></tr>
+          <tr><td>Sektion vertikalt</td><td class="ds-nowrap"><code>--ampy-space-section-y</code></td><td class="ds-nowrap">2xl (79,2 / 34,8)</td><td>testimonials, visste-du-att, fore-efter, footer, certificates live (5; 3 auk 1)</td><td>xl 56 (certificates v2, prefooter, main-cta, elcentral, var-process); l 39,6 (theme .brxe-section); 64/28 eljour; 110/64 mini-menu; 60/0 main-form; 40/48 fotobedomningen</td></tr>
+          <tr><td>Sektion horisontellt (gutter)</td><td class="ds-nowrap"><code>--ampy-space-section-x</code><br><code>= --ampy-gutter</code></td><td class="ds-nowrap">l (39,6 / 21,5)</td><td>theme-style .brxe-section, visste-du-att, footer</td><td>m 28 testimonials; 40/16 eljour, main-cta, elcentral; 28/16 header; 24 mini-menu, energycalc; 15/10 LED</td></tr>
+          <tr class="ds-table__group"><th colspan="5">Kort</th></tr>
+          <tr><td>Kortpadding</td><td class="ds-nowrap"><code>--ampy-space-card</code></td><td class="ds-nowrap">m (28 / 16,9)</td><td>testimonials kort, eljour (28/20), live testimonials, certificates inner</td><td>20 LED inputkort, EV; 32 elcentral, elkollen, energycalc; 40 LED resultat; 24 mini-menu, booking; 79 visste-du-att</td></tr>
+          <tr><td>Kortpadding stort</td><td class="ds-nowrap"><code>--ampy-space-card-lg</code></td><td class="ds-nowrap">l (39,6 / 21,5)</td><td>LED resultatkort 40, energycalc 40 vid 1200 och uppåt, var-process 40</td><td>56 GT-kort (xl); 112 ROT-kort (3xl); 52/56 thank-you</td></tr>
+          <tr class="ds-table__group"><th colspan="5">Stack (vertikalt mellan syskon)</th></tr>
+          <tr><td>Stack xs</td><td class="ds-nowrap"><code>--ampy-space-stack-xs</code></td><td class="ds-nowrap">2xs (9,9 / 8,3)</td><td>testimonials h2 till subline, thank-you ghost, var-process 10 "inom grupp", energycalc label till kontroll 8</td><td></td></tr>
+          <tr><td>Stack sm</td><td class="ds-nowrap"><code>--ampy-space-stack-sm</code></td><td class="ds-nowrap">xs (14 / 10,5)</td><td>certificates h2 till p, energycalc head till innehåll 16, hero-1 h1 till lead 18</td><td></td></tr>
+          <tr><td>Stack</td><td class="ds-nowrap"><code>--ampy-space-stack</code></td><td class="ds-nowrap">s (19,8 / 13,3)</td><td>thank-you rubrik till ingress, visste-du-att innehållsgap, testimonials kortkropp, eljour inre gap 16</td><td>24 thank-you kort-gap; 20 var-process syskon</td></tr>
+          <tr><td>Stack lg</td><td class="ds-nowrap"><code>--ampy-space-stack-lg</code></td><td class="ds-nowrap">l (39,6 / 21,5)</td><td>testimonials rubrikblock-mb, fore-efter h2-mb, eljour rubrik-mb 36, hero-1 lead till CTA 32</td><td>44 rot-gt H2-mb</td></tr>
+          <tr><td>Stack xl</td><td class="ds-nowrap"><code>--ampy-space-stack-xl</code></td><td class="ds-nowrap">xl (56 / 27,3)</td><td>var-process "zon" 56</td><td>64 mini-menu head till grid; 79 visste-du-att grid-gap</td></tr>
+          <tr class="ds-table__group"><th colspan="5">Inline (horisontellt mellan syskon)</th></tr>
+          <tr><td>Inline xs</td><td class="ds-nowrap"><code>--ampy-space-inline-xs</code></td><td class="ds-nowrap">3xs (7 / 6,6)</td><td>footer li 7, testimonials meta 8, hero-1 proof g-row 9</td><td></td></tr>
+          <tr><td>Inline sm</td><td class="ds-nowrap"><code>--ampy-space-inline-sm</code></td><td class="ds-nowrap">2xs (9,9 / 8,3)</td><td>header nav-gap 10, main-form etikett till fält 8, LED gap 7,5 till 10</td><td></td></tr>
+          <tr><td>Inline</td><td class="ds-nowrap"><code>--ampy-space-inline</code></td><td class="ds-nowrap">xs (14 / 10,5)</td><td>cta-website gap 16 (pil) och 14 (chip), hero-1 proof-gap 14, footer row-gap 14</td><td></td></tr>
+          <tr><td>Inline lg</td><td class="ds-nowrap"><code>--ampy-space-inline-lg</code></td><td class="ds-nowrap">s (19,8 / 13,3)</td><td>live steg-grid gap, certificates kolumngap "minst radien"</td><td></td></tr>
+          <tr class="ds-table__group"><th colspan="5">Rutnät</th></tr>
+          <tr><td>Rutnätsgap</td><td class="ds-nowrap"><code>--ampy-space-gap</code></td><td class="ds-nowrap">m (28 / 16,9)</td><td>fore-efter par-gap, live GT-grid, certificates 28, testimonials 24, mini-menu 30</td><td></td></tr>
+          <tr><td>Rutnätsgap stort</td><td class="ds-nowrap"><code>--ampy-space-gap-lg</code></td><td class="ds-nowrap">l (39,6 / 21,5)</td><td>main-cta 43, eljour 40, fotobedomningen 43,7</td><td>64 elcentral, elkollen shell; 56 var-process; 79 rot-gt, visste-du-att</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3 class="ds-h3" id="stack-demo">Rollerna i ett kort</h3>
+      <p class="ds-caption">Ett vitt kort med de riktiga tokens: kortpadding m (1), stack-xs mellan eyebrow och rubrik (2), stack-sm mellan rubrik och text (3), stack-lg före knappen (4). De skrafferade fälten är avstånden i sin verkliga storlek; tabellen mäter dem på den här sidan.</p>
+      <div class="ds-stack">
+        <div class="ds-stack__card" style="position:relative">
+          <span class="ds-n" style="position:absolute;left:0.5rem;top:0.5rem;margin:0">1</span>
+          <p class="ampy-eyebrow" style="margin:0">Så räknas ROT</p>
+          <span class="ds-gap" style="height:var(--ampy-space-stack-xs)" data-n="2"></span>
+          <h3 class="ampy-h3" style="margin:0">30 procent på arbetet, inte på materialet</h3>
+          <span class="ds-gap" style="height:var(--ampy-space-stack-sm)" data-n="3"></span>
+          <p class="ampy-body" style="margin:0">Skatteverket drar avdraget direkt på fakturan. Vi skickar in ansökan åt dig när jobbet är klart.</p>
+          <span class="ds-gap" style="height:var(--ampy-space-stack-lg)" data-n="4"></span>
+          <a class="ampy-btn ampy-btn--compact" href="#stack-demo">Räkna på ditt jobb <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></a>
+        </div>
+        <div>
+          <div class="ds-table-wrap">
+          <table class="ds-table" style="margin-top:0">
+            <thead><tr><th>Avstånd</th><th>Token</th><th>Här</th></tr></thead>
+            <tbody>
+              <tr><td><span class="ds-n">1</span>Kortets padding</td><td><code>--ampy-space-card</code></td><td data-px-of=".ds-stack__card" data-px-prop="paddingTop" class="ds-nowrap"></td></tr>
+              <tr><td><span class="ds-n">2</span>Eyebrow till rubrik</td><td><code>--ampy-space-stack-xs</code></td><td data-px-token="--ampy-space-stack-xs" class="ds-nowrap"></td></tr>
+              <tr><td><span class="ds-n">3</span>Rubrik till text</td><td><code>--ampy-space-stack-sm</code></td><td data-px-token="--ampy-space-stack-sm" class="ds-nowrap"></td></tr>
+              <tr><td><span class="ds-n">4</span>Text till knapp</td><td><code>--ampy-space-stack-lg</code></td><td data-px-token="--ampy-space-stack-lg" class="ds-nowrap"></td></tr>
+              <tr><td>Gutter</td><td><code>--ampy-gutter</code></td><td data-px-token="--ampy-gutter" class="ds-nowrap"></td></tr>
+              <tr><td>Sektion vertikalt</td><td><code>--ampy-space-section-y</code></td><td data-px-token="--ampy-space-section-y" class="ds-nowrap"></td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="ds-caption" style="margin:0">Kolumnen "Här" är getComputedStyle i din viewport. Ändra fönsterbredden och ladda om så följer siffrorna clamp-kurvan.</p>
+        </div>
+      </div>
+
+      <h2 class="ds-h2" id="sektionsrytm">Sektionsrytmen</h2>
+      <p class="ds-p">Tre sektioner staplade med <code>.ampy-section</code> ur <code>base.css</code>: padding-block <code>--ampy-space-section-y</code> (2xl, 79,2 px vid 1440 och 34,8 vid 390) och padding-inline <code>--ampy-gutter</code> (l, 39,6 / 21,5). Linjalen mäter paddingen live. Ljus, vit och mörk sektion i följd är tjänstesidans vanligaste rytm (live: sky-mist-sektion med vitt kort; testimonials och footer mörka).</p>
+      <div class="ds-rhythm">
+        <section class="ampy-section"><div class="ds-rhythm__ruler" data-px-of-parent="paddingTop"><span></span></div><div class="ds-rhythm__gutter" data-px-of-parent="paddingLeft"><span></span></div>
+          <div class="ampy-container"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-stack-xs)">Sektion 1, sky mist</p><h2 class="ampy-h2" style="margin:0 0 var(--ampy-space-stack-sm)">Sektion på sidbakgrunden</h2><p class="ampy-body" style="margin:0">Sky mist som sektion, vitt kort inuti. Live-sajtens ROT- och GT-block är byggda så.</p></div>
+        </section>
+        <section class="ampy-section ds-rhythm--white"><div class="ds-rhythm__ruler" data-px-of-parent="paddingTop"><span></span></div><div class="ds-rhythm__gutter" data-px-of-parent="paddingLeft"><span></span></div>
+          <div class="ampy-container"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-stack-xs)">Sektion 2, vit</p><h2 class="ampy-h2" style="margin:0 0 var(--ampy-space-stack-sm)">Vit sektion</h2><p class="ampy-body" style="margin:0">Samma padding. Certificates v2 och main-cta kör xl (56) här; kanon är 2xl.</p></div>
+        </section>
+        <section class="ampy-section ampy-section--dark"><div class="ds-rhythm__ruler" data-px-of-parent="paddingTop"><span></span></div><div class="ds-rhythm__gutter" data-px-of-parent="paddingLeft"><span></span></div>
+          <div class="ampy-container"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-stack-xs);color:var(--ampy-on-dark-muted)">Sektion 3, midnight</p><h2 class="ampy-h2" style="margin:0 0 var(--ampy-space-stack-sm)">Mörk sektion</h2><p style="margin:0">Platt midnight, ingen glöd (beslut B9). Footerns mörka zon är 2xl på samma sätt.</p></div>
+        </section>
+      </div>
+      <p class="ds-caption">Uppmätt sektionspadding i källorna (desktop / mobil): testimonials 79,2 / 27,3 (2xl, xl på mobil), visste-du-att 79,2 / 21,5, fore-efter 79,2 / 34,8, certificates v2 56 / 34,8, main-cta 56 / 28, eljour 64 / 28, mini-menu 110 / 64, live .brxe-section 39,6 / 21,5, main-form 60 / 0. Hela tabellen längst ned.</p>
+
+      <h2 class="ds-h2" id="container">Container och fullbredd</h2>
+      <p class="ds-p">Kanon är <strong>1280 px</strong> (<code>--container-width</code>, <code>--apmax-screen-width</code>, theme <code>.brxe-container</code>; 14 källor) och textmåttet <strong>980 px</strong> (<code>--max-width</code>, legacy Core Framework). 1280 är inte ett tak: ägardirektivet 2026-08-14 tillåter fullbreddsblock, och hero-1 ramar 1700 px, hero-2 1424. Diagrammet är i skala mot en 1440 px bred viewport.</p>
+      <div class="ds-scale">
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--vp" style="width:100%">viewport 1440</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--full" style="width:100%">fullbredd: hero-1 1700 max (fyller viewporten), hero-2 1424</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--c" style="width:88.9%">--ampy-container 1280 (.ampy-container, gutter 39,6 på var sida)</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--t" style="width:68.1%">--ampy-container-text 980 (.ampy-container--text)</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--drift" style="width:94.4%">drift: energycalc 1360</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--drift" style="width:91.7%">drift: mini-menu 1320</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--drift" style="width:81.9%">drift: elkollen hero 1180</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--drift" style="width:76.4%">drift: live testimonials 1100 (Bricks-default)</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--drift" style="width:75.6%">drift: article 1088</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--drift" style="width:54.2%">booking 780 (dokument)</div></div>
+        <div class="ds-scale__row"><div class="ds-scale__box ds-scale__box--drift" style="width:36.1%">thank-you 520</div></div>
+      </div>
+      <p class="ds-caption">Källor per rad ur <code>spacing.json</code> container-tabellen: hero-1 "hero frame max-width 1700"; hero-2-alternatives 1424; certificates, eljour, LED, EV, elcentral, main-cta, var-process, visste-du-att, fore-efter, footer 1280; energycalc "--shell-max 136rem, premium shell"; mini-menu 1320; elkollen "hero .wrap 118rem, smalare än sajtens 1280"; article 1088 (704 artikel + 320 TOC); booking "bk-shell 780"; thank-you 520.</p>
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>Innehåll i <code>.ampy-container</code> (1280) med gutter <code>--ampy-gutter</code>; löpande text i <code>.ampy-container--text</code> (980) eller med <code>--ampy-measure</code> 62ch.</li>
+          <li>Fullbreddsblock när blocket är en scen (hero, foto, mörk sektion): <code>.ampy-section--full</code>, innehållet fortfarande i containern.</li>
+          <li>Mobil: samma tokens, inga egna px. Gutter blir 21,5 vid 390 av sig själv.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Egna containerbredder (1320, 1360, 1180, 1100) för att ett block "känns trångt"; bredda med fullbredd i stället.</li>
+          <li>Sidopadding 0 på mobil så att kortet går kant i kant (var-process under 480, main-form under 768): kanten behövs för radien och skuggan.</li>
+          <li>Kortpadding 79 på mobil (visste-du-att) eller 15/10 (LED): kort är m, stora kort l.</li>
+        </ul></div>
+      </div>
+
+      <h2 class="ds-h2" id="brytpunkter">Brytpunkter</h2>
+      <p class="ds-p">Kanon <strong>992 / 768 / 480</strong>, skrivna som max-width 991 / 767 / 479 (Bricks skriver 991 / 767 / 478). Räknat över alla 30 källor är 767 och 768 vanligast (10 och 9 källor), 992 och 480 finns i 9 vardera. 560 (8 källor: hero-1, header, LED, EV, booking) och 1200 (4) är fintrimningssteg, inte brytpunkter. Brytpunkter kan inte läsa <code>var()</code>, så <code>--ampy-bp-*</code> i tokens.css är dokumentation.</p>
+      <div class="ds-bp ds-bp--kanon"><span>992</span><div class="ds-bp__bar" style="width:90%"></div><span class="ds-bp__n">9</span></div>
+      <div class="ds-bp"><span>993</span><div class="ds-bp__bar" style="width:40%"></div><span class="ds-bp__n">4</span></div>
+      <div class="ds-bp"><span>991</span><div class="ds-bp__bar" style="width:70%"></div><span class="ds-bp__n">7</span></div>
+      <div class="ds-bp ds-bp--kanon"><span>768</span><div class="ds-bp__bar" style="width:90%"></div><span class="ds-bp__n">9</span></div>
+      <div class="ds-bp"><span>767</span><div class="ds-bp__bar" style="width:100%"></div><span class="ds-bp__n">10</span></div>
+      <div class="ds-bp ds-bp--kanon"><span>480</span><div class="ds-bp__bar" style="width:90%"></div><span class="ds-bp__n">9</span></div>
+      <div class="ds-bp"><span>478</span><div class="ds-bp__bar" style="width:40%"></div><span class="ds-bp__n">4</span></div>
+      <div class="ds-bp"><span>1200</span><div class="ds-bp__bar" style="width:40%"></div><span class="ds-bp__n">4</span></div>
+      <div class="ds-bp"><span>1024</span><div class="ds-bp__bar" style="width:70%"></div><span class="ds-bp__n">7</span></div>
+      <div class="ds-bp"><span>960</span><div class="ds-bp__bar" style="width:30%"></div><span class="ds-bp__n">3</span></div>
+      <div class="ds-bp"><span>600</span><div class="ds-bp__bar" style="width:50%"></div><span class="ds-bp__n">5</span></div>
+      <div class="ds-bp"><span>560</span><div class="ds-bp__bar" style="width:80%"></div><span class="ds-bp__n">8</span></div>
+      <p class="ds-caption">Antal källor per max-width-värde ur <code>spacing.json</code> (55 värden totalt; de tolv vanligaste visas, sedan följer 900, 520, 561 och 400 med 3 källor vardera). Teal = kanon.</p>
+      <p class="ds-p">Föredra <code>@container</code> mot blockets egen bredd när blocket kan hamna i en smalare kolumn: hero-2-alternatives, EV-kalkylatorn (<code>.ampy-calc-outer { container-type: inline-size }</code>, alla brytpunkter i cqi), fore-efter (wrapper "ampyfe" staplar under 680, varje figur "ampyfefig" under 420), fotobedomningen (900 cqi) och main-cta-leveransen gör så. Kalkylatorkitet bryter tvåpanelen vid 960 cqi. En känd fälla: EV:s hero-siffra mäter 38,7 px i stället för avsedda 75 på grund av en cqi-bugg (<code>typografi.md</code>), så mät alltid resultatet.</p>
+
+      <h2 class="ds-h2" id="kolumner">Kolumntokens</h2>
+      <p class="ds-p"><code>--apcolumns-1</code> till <code>--apcolumns-8</code> är <code>repeat(n, minmax(0, 1fr))</code> ur global-variables.css. <code>minmax(0, 1fr)</code> är poängen: kolumner får inte växa av sitt innehåll, så en lång sträng spiller inte ut rutnätet. Gap = <code>--ampy-space-gap</code> (m, 28 px). På mobil byter man till <code>--apcolumns-1</code>.</p>
+      <div class="ds-cols" style="grid-template-columns:var(--apcolumns-2)"><div>--apcolumns-2</div><div>1fr</div></div>
+      <div class="ds-cols" style="grid-template-columns:var(--apcolumns-3)"><div>--apcolumns-3</div><div>1fr</div><div>1fr</div></div>
+      <div class="ds-cols" style="grid-template-columns:var(--apcolumns-4)"><div>--apcolumns-4</div><div>1fr</div><div>1fr</div><div>1fr</div></div>
+      <p class="ds-caption">Blocken som delar sig i två ojämna paneler använder egna bråk, inte kolumntokens: kalkylatorkitet 5fr/7fr (LED), diagnostiken 44fr/56fr (elcentral), main-cta 1fr/400 px, var-process 32 %/1fr.</p>
+
+      <h2 class="ds-h2" id="drift">Det här byts ut</h2>
+      <p class="ds-p">Sektionspadding per källa ur <code>spacing.md</code>, desktop / mobil i px, mot kanonens 2xl / l (79,2 x 39,6 vid 1440 och 34,8 x 21,5 vid 390).</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Källa (auktoritet)</th><th>Uppmätt padding</th><th>px desktop</th><th>px mobil</th><th>Token i källan</th></tr></thead>
+        <tbody>
+          <tr><td class="ds-nowrap">live-ampy-se (1)</td><td>var(--apspace-l) alla sidor (.brxe-section)</td><td>39,6</td><td>21,5</td><td>--apspace-l</td></tr>
+          <tr><td class="ds-nowrap">live-ampy-se (1)</td><td>padding-inline var(--space-xs), legacy Core Framework-token</td><td></td><td>9,0</td><td>--space-xs (ej ap*)</td></tr>
+          <tr><td class="ds-nowrap">testimonials-block (1)</td><td>var(--apspace-2xl) var(--apspace-m); tablett xl/m; under 759 xl/s</td><td>79,2 / 28</td><td>27,3 / 13,3</td><td>--apspace-2xl, -m, -xl, -s</td></tr>
+          <tr><td class="ds-nowrap">testimonials-block (1)</td><td>var(--apspace-l) 0; mobil l/xl + 3xs</td><td>39,6 / 0</td><td>21,5 till 27,3 / 6,6</td><td>--apspace-l, -xl, -3xs</td></tr>
+          <tr><td class="ds-nowrap">hero-1 (1)</td><td>clamp(12px,1.6vw,20px) clamp(14px,2vw,26px) clamp(20px,2.6vw,30px); under 992: 10 10 16</td><td>20 / 26 / 30</td><td>10 / 10 / 16</td><td>egna clamp</td></tr>
+          <tr><td class="ds-nowrap">eljour-block (1)</td><td>clamp(2.8rem, 5vw, 6.4rem) clamp(1.6rem, 4vw, 4rem)</td><td>64 / 40</td><td>28 / 16</td><td>egna clamp</td></tr>
+          <tr><td class="ds-nowrap">rot-gt-cro (1)</td><td>var(--apspace-l) alla sidor; mobil vertikalt 27,3 = xl, sidor 9,0 = legacy --space-xs</td><td>39,6</td><td>27,3 / 9,0</td><td>--apspace-l, --space-xs</td></tr>
+          <tr><td class="ds-nowrap">certificates (2)</td><td>var(--apspace-xl) var(--apspace-xl); under 900 vertikalt 2xl; under 389 sidopadding 18px</td><td>56 / 56</td><td>34,8 / 27,3</td><td>--apspace-xl, -2xl</td></tr>
+          <tr><td class="ds-nowrap">certificates (2)</td><td>var(--apspace-2xl) var(--apspace-xl)</td><td>79,2 / 56</td><td>34,8 / 27,3</td><td>--apspace-2xl, -xl</td></tr>
+          <tr><td class="ds-nowrap">visste-du-att (2)</td><td>var(--apspace-2xl) var(--apspace-l); under 992 xl/m; under 480 l/s</td><td>79,2 / 39,6</td><td>21,5 / 13,3</td><td>--apspace-2xl, -l, -xl, -m, -s</td></tr>
+          <tr><td class="ds-nowrap">fore-efter-cro (2)</td><td>clamp(31.3px, 4.99vw + 15.3px, 79.2px) clamp(12.8px, ...) = 2xl / s i px</td><td>79,2 / 19,8</td><td>34,8 / 13,3</td><td>= --apspace-2xl, -s (px)</td></tr>
+          <tr><td class="ds-nowrap">main-cta (2)</td><td>clamp(28px,4vw,56px) clamp(16px,3vw,40px)</td><td>56 / 40</td><td>28 / 16</td><td>egna clamp</td></tr>
+          <tr><td class="ds-nowrap">main-form (2)</td><td>clamp(2.4rem, 1rem + 4vw, 6rem) clamp(1.2rem, 0.6rem + 2vw, 2.4rem); 0 under 768</td><td>60 / 24</td><td>0</td><td>egna clamp</td></tr>
+          <tr><td class="ds-nowrap">mini-menu (2)</td><td>clamp(6.4rem, 4rem + 6vw, 11rem)</td><td>110</td><td>64</td><td>egen clamp</td></tr>
+          <tr><td class="ds-nowrap">fotobedomningen (2)</td><td>40px 16px 48px (mobil och desktop)</td><td>40 / 16 / 48</td><td>40 / 16 / 48</td><td>fasta px</td></tr>
+          <tr><td class="ds-nowrap">var-process-cro (3)</td><td>24px 20px 28px; från 992: 56px 40px 80px; under 480 sidopadding 0</td><td>56 / 40 / 80</td><td>24 / 0 / 28</td><td>fasta px</td></tr>
+          <tr><td class="ds-nowrap">var-process-cro (3)</td><td>40px 20px + padding-bottom var(--apspace-2xl, 48px)</td><td>56 / 40 / 72,7</td><td>40 / 20 / 31,4</td><td>--apspace-2xl</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="ds-p">Sammanfattning: sektioner på xl (certificates v2, prefooter, main-cta, elcentral, var-process) växer till 2xl; eljour 64/28, mini-menu 110/64 och main-form 60/0 byter till 2xl; egna clamp-uttryck och fasta px byts till tokens; legacy <code>--space-xs</code> (Core Framework) byts till <code>--ampy-gutter</code>. Kortpadding 20 (LED, EV), 32 (elcentral, elkollen, energycalc) och 24 (mini-menu, booking) blir m; 40 (LED resultat) blir l; 79 (visste-du-att) blir l.</p>
+
+      <p class="ds-source">Beslut som rör spacing och layout: <a class="ds-a" href="../beslut.html#b8">B8 rotstorlek</a> (lager 2 är px-clamp så att blocken fungerar på både 62,5 % och 16 px). Öppet i <code>BEVIS.md</code>: punkt 9 (4xs-lutningen), punkt 10 (lager 2 via var() eller px).</p>
+
+<script>
+/* Mäter spacing-tokens live på sidan (inga nätverksanrop). */
+(function () {
+  var fmt = function (n) { return (Math.round(n * 10) / 10).toString().replace('.', ',') + ' px'; };
+  document.querySelectorAll('[data-px-width]').forEach(function (bar) {
+    var out = bar.parentElement.querySelector('[data-px-out]'); if (out) out.textContent = fmt(bar.getBoundingClientRect().width);
+  });
+  document.querySelectorAll('[data-px-of]').forEach(function (el) {
+    var t = document.querySelector(el.dataset.pxOf); if (t) el.textContent = fmt(parseFloat(getComputedStyle(t)[el.dataset.pxProp]));
+  });
+  document.querySelectorAll('[data-px-token]').forEach(function (el) {
+    var probe = document.createElement('div'); probe.style.cssText = 'position:absolute;visibility:hidden;width:var(' + el.dataset.pxToken + ')'; document.body.appendChild(probe);
+    el.textContent = fmt(probe.getBoundingClientRect().width); probe.remove();
+  });
+  document.querySelectorAll('[data-px-of-parent]').forEach(function (el) {
+    var isGutter = el.dataset.pxOfParent === 'paddingLeft';
+    var src = isGutter ? el.parentElement.querySelector('.ampy-container') : el.parentElement;
+    var v = parseFloat(getComputedStyle(src)[el.dataset.pxOfParent]); el.querySelector('span').textContent = (isGutter ? 'gutter ' : 'section-y ') + fmt(v);
+  });
+})();
+</script>
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

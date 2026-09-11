@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ornament och ikoner: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<style>
+/* Lokala ds-klasser för ornament- och ikonsidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; } /* brist i doc.css: 1fr-spåret ärver tabellernas min-content på mobil; rapporterad i _bygglogg/S1.md */
+  .ds-nowrap { white-space: nowrap; }
+  .ds-beslut-tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-decoration: none; border: 1px solid currentColor; border-radius: var(--ampy-radius-pill); padding: 0.1rem 0.6rem; margin-left: 0.4rem; white-space: nowrap; }
+  .ds-list { margin: 0; padding-left: 1.6rem; } .ds-list li { margin-bottom: 0.3rem; }
+  /* Logotyper */
+  .ds-logos { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-logo { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); overflow: hidden; }
+  .ds-logo__stage { height: 14rem; display: grid; place-items: center; padding: var(--ampy-space-m); background: var(--ampy-bg-surface); }
+  .ds-logo__stage--dark { background: var(--ampy-bg-dark); }
+  .ds-logo__stage--sky { background: var(--ampy-bg-page); }
+  .ds-logo__stage img { max-height: 100%; width: auto; }
+  .ds-logo__body { padding: var(--ampy-space-xs); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-muted); border-top: 1px solid var(--ampy-line); }
+  .ds-logo__body strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); }
+  .ds-logo__body code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+  /* Friyta */
+  .ds-clear { display: grid; grid-template-columns: auto 1fr; gap: var(--ampy-space-m); align-items: center; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-m); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-clear__box { --_w: 28rem; --_a: calc(var(--_w) * 126 / 701); position: relative; padding: var(--_a); border: 1px dashed var(--ampy-action-strong); border-radius: 0.4rem; width: max-content; max-width: 100%; }
+  .ds-clear__box img { width: var(--_w); max-width: 100%; display: block; }
+  .ds-clear__a { position: absolute; width: var(--_a); height: var(--_a); border: 1px dashed var(--ampy-ink-faint); background: rgba(0,169,145,.08); }
+  .ds-clear__a::after { content: "a"; position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.2rem; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--ampy-ink-faint); }
+  .ds-clear__a--tl { top: 0; left: 0; } .ds-clear__a--br { bottom: 0; right: 0; }
+  .ds-clear p { margin: 0; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  /* Misuse */
+  .ds-misuse { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(4, minmax(0, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-misuse__letters { position: relative; display: block; width: 12rem; height: 3.4rem; }
+  .ds-misuse__letters img { position: absolute; left: 0; top: 0; width: 12rem; height: auto; }
+  .ds-misuse > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); padding: var(--ampy-space-xs); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.4; }
+  .ds-misuse__stage { height: 6.4rem; display: grid; place-items: center; margin-bottom: var(--ampy-space-2xs); position: relative; overflow: hidden; border-radius: var(--ampy-radius-small); background: var(--ampy-bg-page); }
+  .ds-misuse__stage img { height: 3.4rem; width: auto; }
+  .ds-misuse__stage::after { content: ""; position: absolute; left: 8%; right: 8%; top: 50%; border-top: 2px solid var(--ampy-error); transform: rotate(-12deg); opacity: .8; }
+  .ds-misuse strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); }
+  /* Blixten */
+  .ds-bolt-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--ampy-space-xs); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
+  .ds-bolt-row > div { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; text-align: center; gap: var(--ampy-space-2xs); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.45; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-s); }
+  .ds-bolt-row img, .ds-bolt-row > div > svg { display: block; margin: 0 auto; }
+  .ds-kicker { display: inline-flex; align-items: center; gap: 0.8rem; color: var(--ampy-action-strong); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-medium); }
+  .ds-kicker svg { width: 18px; height: 18px; fill: currentColor; }
+  /* Vågor, blobbar, aurora */
+  .ds-waves { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-wave { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); overflow: hidden; }
+  .ds-wave__img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; border-bottom: 1px solid var(--ampy-line); }
+  .ds-wave__svg { height: 12rem; background: var(--ampy-bg-surface); display: grid; place-items: end end; padding: 0 var(--ampy-space-s); border-bottom: 1px solid var(--ampy-line); }
+  .ds-wave__svg img { height: 9rem; width: auto; }
+  .ds-wave__body { padding: var(--ampy-space-xs); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-muted); }
+  .ds-wave__body strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); }
+  .ds-status { margin-bottom: 0.5rem; }
+  .ds-status--no { border-color: var(--ampy-error); color: var(--ampy-error); }
+  .ds-status--flow { border-color: var(--ampy-info-ink); color: var(--ampy-info-ink); }
+  /* Gradienter kompakt */
+  .ds-grad { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-grad__chip { height: 9rem; border-radius: var(--ampy-radius-card); display: flex; align-items: flex-end; padding: var(--ampy-space-xs); font-size: var(--ampy-text-small); }
+  /* Ikoner */
+  .ds-icons { display: grid; gap: var(--ampy-space-2xs); grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-icon { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); padding: var(--ampy-space-s) var(--ampy-space-xs) var(--ampy-space-xs); text-align: center; color: var(--ampy-ink); }
+  .ds-icon svg { width: 24px; height: 24px; display: block; margin: 0 auto var(--ampy-space-2xs); }
+  .ds-icon code { display: block; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.1rem; color: var(--ampy-ink-muted); overflow-wrap: anywhere; }
+  .ds-icon-sizes { display: flex; flex-wrap: wrap; gap: var(--ampy-space-m); align-items: center; padding: var(--ampy-space-m); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-icon-sizes > span { display: inline-flex; align-items: center; gap: 0.8rem; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  .ds-icon-sizes svg { color: var(--ampy-ink); }
+  .ds-icon-sizes--dark { background: var(--ampy-bg-dark); border-color: transparent; }
+  .ds-icon-sizes--dark > span { color: var(--ampy-on-dark-muted); } .ds-icon-sizes--dark svg { color: var(--ampy-on-dark); }
+  .ds-icon-bad { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-icon-bad > div { border: 1px dashed var(--ampy-ink-faint); border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.45; }
+  .ds-icon-bad strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); margin-bottom: 0.4rem; }
+  .ds-icon-bad__stage { display: grid; place-items: center; height: 5.6rem; margin-bottom: var(--ampy-space-2xs); border-radius: var(--ampy-radius-small); background: var(--ampy-bg-page); }
+  .ds-icon-bad__grad { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(120deg, #55ff9a, #5eb1bf); }
+  .ds-icon-bad__emoji { font-size: 2.6rem; line-height: 1; }
+  .ds-icon-bad__thick { width: 28px; height: 28px; }
+  /* Pulser */
+  .ds-pulses { display: flex; flex-wrap: wrap; gap: var(--ampy-space-m); align-items: center; padding: var(--ampy-space-m); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-page); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
+  @media (max-width: 991px) { .ds-clear { grid-template-columns: 1fr; } .ds-clear__box { --_w: 22rem; } .ds-misuse { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ds-bolt-row { grid-template-columns: 1fr; } }
+</style>
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="farg.html">Färg</a>
+        <a href="typografi.html">Typografi</a>
+        <a href="spacing.html">Spacing och layout</a>
+        <a href="form-djup.html">Form och djup</a>
+        <a href="rorelse.html">Rörelse</a>
+        <a href="ornament.html" aria-current="page">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Grunder</span>
+      <h1 class="ds-h1">Ornament och ikoner</h1>
+      <p class="ds-lead">Logotypen i tre lockups, blixten som enda ornament, en ikonfamilj med 1,75 px streck. Vågor, blobbar och auroror finns i blocken men har ingen token; här står var de finns och vilka som byts ut.</p>
+      <p class="ds-source"><code>inventering/brandbook.md</code> + <code>brandbook.json</code> (Ampy Brandbook (6).pdf, 26 sidor, 2025-10-01: s.3 till 5 logo, s.11 gradienter, s.16 till 18 ikoner, foto, former), <code>site/brand/</code> (kanoniska exporter ur <code>inventering/brand/</code>), <code>konsolidering/form-djup-rorelse.md</code> (tabellen Ornament), <code>system/ikoner.svg</code> (S2:s sprite, 22 symboler), <code>inventering/tidigare-dokumentation.md</code> (skill-referensens bolt.svg och "banned default").</p>
+
+      <h2 class="ds-h2" id="logo">Logosystemet</h2>
+      <p class="ds-p">Tre lockups enligt brandboken s.3: <strong>Main version</strong> (wordmarken "ampy" med blixten skuren i a:t), <strong>Simple mark</strong> (a + blixt) och <strong>Glyph</strong> (blixten). Boken visar wordmarken i midnight; produktionens logofiler (main-form och booking <code>ampy-logo-dark.png</code> 1600×468, tack-sidans <code>Ampy-logo.png</code> 701×201) är rent svart #000000, och den midnight-färgade exporten AMPY-01 används inte av någon källa. Ingen vektorexport finns (bara .ai och PNG). Filerna nedan är de som systemet använder.</p>
+      <div class="ds-logos">
+        <div class="ds-logo"><div class="ds-logo__stage"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="Ampy wordmark i midnight" width="701" height="201" style="width:24rem"></div><div class="ds-logo__body"><strong>Main version, midnight</strong><code>ampy-wordmark-midnight-701x201.png</code><br>Ur LOGO/COLOURS/AMPY-01, uppmätt dominant färg #090b34 (boken säger #090b32). På ljus yta.</div></div>
+        <div class="ds-logo"><div class="ds-logo__stage ds-logo__stage--dark"><img src="../brand/ampy-wordmark-white-2917x834.png" alt="Ampy wordmark i vitt" width="2917" height="834" style="width:24rem"></div><div class="ds-logo__body"><strong>Main version, vit</strong><code>ampy-wordmark-white-2917x834.png</code><br>Ur B&amp;W/Ampy logotype, identisk med main-forms <code>ampy-logo-white.png</code>. På midnight och på foto med scrim.</div></div>
+        <div class="ds-logo"><div class="ds-logo__stage"><img src="../brand/ampy-mark-midnight-201.png" alt="Ampy simple mark i midnight" width="201" height="201" style="height:9rem"></div><div class="ds-logo__body"><strong>Simple mark, midnight</strong><code>ampy-mark-midnight-201.png</code><br>Ur AMPY-07. Profilbilder i sociala medier: bara simple mark eller main logo i godkänd färg (s.22).</div></div>
+        <div class="ds-logo"><div class="ds-logo__stage ds-logo__stage--dark"><img src="../brand/ampy-mark-white-834.png" alt="Ampy simple mark i vitt" width="834" height="834" style="height:9rem"></div><div class="ds-logo__body"><strong>Simple mark, vit</strong><code>ampy-mark-white-834.png</code><br>Ur B&amp;W/LOGOS-23.</div></div>
+        <div class="ds-logo"><div class="ds-logo__stage"><img src="../brand/ampy-glyph-midnight-201.png" alt="Ampy glyph i midnight" width="201" height="201" style="height:9rem"></div><div class="ds-logo__body"><strong>Glyph, midnight</strong><code>ampy-glyph-midnight-201.png</code><br>Ur AMPY-08. Blixten ensam; se nedan för var den får användas.</div></div>
+        <div class="ds-logo"><div class="ds-logo__stage ds-logo__stage--dark"><img src="../brand/ampy-glyph-white-834.png" alt="Ampy glyph i vitt" width="834" height="834" style="height:9rem"></div><div class="ds-logo__body"><strong>Glyph, vit</strong><code>ampy-glyph-white-834.png</code><br>Ur B&amp;W/LOGOS-24. Den här sajtens märke i navigationen är den, 14 px i en midnight-cirkel.</div></div>
+        <div class="ds-logo"><div class="ds-logo__stage ds-logo__stage--sky"><img src="../brand/ampy-glyph-black-201-favicon.png" alt="Ampy favicon" width="201" height="201" style="height:4.8rem"></div><div class="ds-logo__body"><strong>Favicon, svart</strong><code>ampy-glyph-black-201-favicon.png</code><br>Ur B&amp;W/Ampy-favicon. Rent #000000, den enda svarta filen som behålls (favicons renderas i svart av OS:et ändå).</div></div>
+      </div>
+      <p class="ds-caption">Exporterna i LOGO/COLOURS/ har andra hex än boken: cobalt-wordmark #136cff, neon #00ff8e, lime #70ee00, teal #37b2c0, midnight #090b34. De färgade varianterna (cobalt, neonmint, springgreen, sekundärteal) ligger i <code>inventering/brand/</code> som dokumentation och används inte (beslut B1: teal är ensam accent, cobalt och lime finns inte i produktion).</p>
+
+      <h3 class="ds-h3" id="friyta">Friyta och minsta storlek</h3>
+      <div class="ds-clear">
+        <div class="ds-clear__box"><span class="ds-clear__a ds-clear__a--tl"></span><span class="ds-clear__a ds-clear__a--br"></span><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="Wordmark med friyta markerad" width="701" height="201"></div>
+        <p>Friyta = bokstaven a:s höjd och bredd runt om (brandbok s.4). I filen 701×201 mäter a:t 126×122 px (uppmätt på pixelmasken), så friytan är 18 % av wordmarkens bredd på alla sidor; den streckade ramen här är ritad med det måttet. Bokstavsmellanrummet är 20 % av a:s bredd, vilket stämmer i filen: 24 px mellan a och m. <strong>Minsta storlek anges inte i boken</strong> och står som [GAP]. Minsta uppmätta användning i produktion är headerns och footerns logotyp på 130 px bredd (website-blocks, footer-cro); glyphen finns som favicon-export (201 px).</p>
+      </div>
+
+      <h3 class="ds-h3" id="misuse">Felaktig användning (brandbok s.5)</h3>
+      <p class="ds-caption">Åtta förbud, ordagrant ur boken. Rutorna visar wordmarken med felet påfört i CSS, överstruken.</p>
+      <div class="ds-misuse">
+        <div><div class="ds-misuse__stage"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="" style="filter:hue-rotate(120deg) saturate(3)"></div><strong>Färg per bokstav</strong>ingen bokstav får egen färg; hela märket i en godkänd färg</div>
+        <div><div class="ds-misuse__stage"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="" style="opacity:.55;background:linear-gradient(120deg,#55ff9a,#5eb1bf);border-radius:.4rem;padding:.4rem"></div><strong>Gradient eller textur</strong>märket bär aldrig gradient eller mönster (gäller även produktionens textgradienter)</div>
+        <div><div class="ds-misuse__stage"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="" style="transform:rotate(-14deg)"></div><strong>Rotation</strong>ingen vinkel; former ur blixten får inte heller roteras godtyckligt (s.18)</div>
+        <div><div class="ds-misuse__stage"><span style="font-family:Georgia,serif;font-size:3rem;font-weight:700;color:var(--ampy-ink)">ampy</span></div><strong>Annat typsnitt</strong>wordmarken sätts aldrig om i text, inte ens i Outfit</div>
+        <div><div class="ds-misuse__stage"><span class="ds-misuse__letters"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="" style="clip-path:inset(0 0 0 24%)"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="" style="clip-path:inset(0 77% 0 0);transform:scale(1.45);transform-origin:8% 100%"></span></div><strong>Enskild bokstavsstorlek</strong>bokstäverna behåller sin inbördes storlek</div>
+        <div><div class="ds-misuse__stage"><img src="../brand/ampy-mark-midnight-201.png" alt="" style="height:3rem"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="" style="height:2.4rem;margin-left:.6rem"></div><strong>Ändrad komposition</strong>inga egna lockups (mark + wordmark, staplat, i cirkel)</div>
+        <div><div class="ds-misuse__stage"><img src="../brand/ampy-wordmark-midnight-701x201.png" alt="" style="transform:scaleX(1.6)"></div><strong>Disproportionerlig skalning</strong>skalas alltid med bevarade proportioner</div>
+        <div><div class="ds-misuse__stage"><span style="font-family:var(--ampy-font);font-size:3.2rem;font-weight:700;letter-spacing:-.02em;color:var(--ampy-ink)">ampy</span></div><strong>Blixten borttagen eller ersatt</strong>blixten i a:t är märket; den byts inte mot annan glyf</div>
+      </div>
+
+      <h2 class="ds-h2" id="blixten">Blixten: det enda ornamentet</h2>
+      <p class="ds-p">Brandboken (s.16 och s.18) säger att ikoner och former ska härledas ur blixten eller a:t. I produktion bär bara ett block blixten som ornament: visste-du-att-kickern (18 px solid blixt-SVG framför "Visste du att", "sanktionerat motiv"). Skill-referensens <code>bolt.svg</code> och artikelmallens handritade <code>AmpyLogo.jsx</code> är egna teckningar, inte byråns, och utgår. Regeln: blixten är det enda ornamentet, i sin egen teckning, som glyf i midnight eller vitt, aldrig i gradient, aldrig som vattenstämpel bakom en centrerad vit rubrik (det är "AI-slop-defaulten", se B9).</p>
+      <div class="ds-bolt-row">
+        <div><img src="../brand/ampy-glyph-midnight-201.png" alt="" width="201" height="201" style="height:6.4rem"><span>Glyph 201, byråns teckning (fylld)</span></div>
+        <div><svg width="64" height="64" aria-hidden="true" style="color:var(--ampy-ink)"><use href="../../system/ikoner.svg#ik-bolt"/></svg><span><code>ik-bolt</code> i spriten: linjeversionen, 1,75 px, för ikonrader</span></div>
+        <div><span class="ds-kicker" style="margin-bottom:var(--ampy-space-2xs)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H13l1-8.5Z"/></svg>Visste du att</span><span>Kickern: 18 px fylld blixt + text i teal deep (visste-du-att, 24/500 i källan)</span></div>
+      </div>
+      <p class="ds-caption">Källa: visste-du-att.css + Bricks-JSON (kicker 24/500 teal + 18 px blixt); brandbook s.3 (glyph), s.16 (ikoner), s.18 (former "härledda ur blixten eller a:t; ramar och lyfter innehåll; inga godtyckliga rotationer"). Skill-referensen: <code>tidigare-dokumentation.md</code> rad 38 ("blixt-vattenstämpel, egen bolt.svg, inte brandbokens glyf").</p>
+
+      <h2 class="ds-h2" id="vagor">Vågor, blobbar, auroror och pulser</h2>
+      <p class="ds-p">Ingen av dessa har en token, och de är olika i varje block. Tabellen Ornament i <code>form-djup-rorelse.md</code> listar dem; här är de renderade ur källbilderna med status. Certificates-regeln "inline-SVG med preserveAspectRatio=none så den aldrig klipps" är den enda hållbara tekniken om en våg ska finnas alls.</p>
+      <div class="ds-waves">
+        <div class="ds-wave"><img class="ds-wave__img" src="../bilder/rot-gt-cro-d2-rot-desktop.jpg" alt="ROT-blocket i rot-gt-familjen med tre bleka vågor"><div class="ds-wave__body"><span class="ds-status ds-status--flow">finns, väntar val</span><strong>Vågor: rot-gt-familjen</strong>Tre hero-vågor #eef4fc och #e6eff9, masktonade, bakom det vita blocket (radie 32). Ersätter live-ROT:s <code>programmatic-bg-overlay-blue.svg</code> (80 % nere höger) och GT:s <code>Vector-2-2.svg</code> som ger 404.</div></div>
+        <div class="ds-wave"><img class="ds-wave__img" src="../bilder/certificates-desktop.jpg" alt="Certificates v2 med gradientband och vågor"><div class="ds-wave__body"><span class="ds-status ds-status--no">drift</span><strong>Vågor på gradient: certificates v2</strong>Tre inline-SVG-band (#b6f2ff .30, #fff .26, #8fd4e0 .44) på 90° navy till #5eb1bf. Bandet bär vit text på sekundärteal (2,10 till 2,47:1) och behöver mörkare slut eller midnight-yta (B16). Vågtekniken är rätt, ytan är inte.</div></div>
+        <div class="ds-wave"><img class="ds-wave__img" src="../bilder/hero-2-alternatives-z-desktop.jpg" alt="Hero-2 Z med vågor i navy-ramen"><div class="ds-wave__body"><span class="ds-status ds-status--flow">finns i hero-2</span><strong>Vågor i navy-ramen: hero-2 Z</strong>Tre vågor i ramen bakom formkortet. Samma ram som hero-1 men 1424 bred; formkortet är platt navy (mörka glaset dömdes ut, B15).</div></div>
+        <div class="ds-wave"><div class="ds-wave__svg"><img src="../bilder/block/cta-bgwave.svg" alt="Main CTA:s bakgrundsvåg" width="652" height="273"></div><div class="ds-wave__body"><span class="ds-status ds-status--flow">finns i main-cta</span><strong>Vågor: main-cta</strong><code>cta-bgwave.svg</code> (652×273, #5eb1bf till vit, 44 % av kortet) och <code>cta-overlay.svg</code> (277×100, .81, bakom porträttet 50 %). Filerna ligger i <code>site/bilder/block/</code>. Sekundärteal som dekor är tillåten (B16); vågen bär ingen text.</div></div>
+        <div class="ds-wave"><img class="ds-wave__img" src="../bilder/live-ampy-se-rot-desktop.jpg" alt="Live ROT-blocket med penseldragsringar"><div class="ds-wave__body"><span class="ds-status ds-status--no">byts ut</span><strong>Penseldragsringar och blobbar</strong>Live ROT och GT: handritade ring-SVG 95 och 55 px + JS-streckade connector-linjer #5eb1bf till #1d234e. Rot-gt-familjen ersätter dem med en förloppsbåge (teal stroke 3). Rot-gt-panelens tre blobbar #0b0d2a och #010328 utgår: #010328 är en livedefekt enligt hero-2 ("ALDRIG"). Article LeadMagnets glow-blob likaså.</div></div>
+        <div class="ds-wave"><img class="ds-wave__img" src="../bilder/thank-you-desktop.jpg" alt="Tack-sidan med aurora-hörn"><div class="ds-wave__body"><span class="ds-status ds-status--flow">bara kundflödet</span><strong>Aurora-hörn (SVG) och den ljusa auroran</strong>thank-you, offer-accepted och booking: <code>aurora-top/bottom.svg</code> (crystal blue och sublime green mot sky mist) ovanpå <code>--ampy-aurora-light</code>. Brandbokens mesh-omslag (midnight, cobalt, neon, lime; s.1, 22, 23, 26) är förlagan. Beslut B11: stannar i kundflödet, aldrig som sektionsbakgrund på sajten.</div></div>
+        <div class="ds-wave"><img class="ds-wave__img" src="../bilder/visste-du-att-desktop.jpg" alt="Visste du att med blixt-kicker och glöd"><div class="ds-wave__body"><span class="ds-status ds-status--1">kanon</span><strong>Blixt-kickern och glöden</strong>Det enda blocket med blixten. En radial teal .42 + neon .18 uppe höger, lampa 240 px. Glöden på mörka kort är ett tillval för resultatkort (<code>--ampy-bg-dark-glow</code>, B9); här behålls den (slutaudit GO).</div></div>
+        <div class="ds-wave"><img class="ds-wave__img" src="../bilder/footer-cro-desktop.jpg" alt="Footerns prefooter med cyan gradient"><div class="ds-wave__body"><span class="ds-status ds-status--no">drift</span><strong>Ytgradienter: prefooter och footer</strong>Prefooter -51° #70becb till #bbf5ff till #b6f2ff, mörk footer -17° #00011e till #090b32, shape-divider (död kod). Ytgradienter utgår: två ytor (sky mist och vit) plus midnight (farg.md "14 till 2").</div></div>
+      </div>
+
+      <h3 class="ds-h3" id="pulser">Pulser</h3>
+      <p class="ds-p">Fyra oändliga animationer i källorna, tre olika pulser: headerns CTA-prick (10 px mint, 1,6 s ease-in-out, hero-1 och website-blocks), ring-knappens chip (ampyRing 2,8 s, vit ring 0 till 9 px, cta-website), eljours statuspill (2 s ease-out, scale 1 till 2, plus mobil-CTA-puls scale 1 till 2,6) och tack-sidans halo (4 s, den enda oändliga animationen utanför chippen). Alla fyra stängs av under reduced-motion (eljour: <code>display: none</code> på pulserna).</p>
+      <div class="ds-pulses">
+        <span class="ampy-tag ampy-tag--live"><span class="ampy-tag__pulse"></span>Jour öppen just nu</span>
+        <a class="ampy-btn ampy-btn--ring" href="#pulser"><span class="ampy-btn__chip"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-phone"/></svg></span>Ring 010-265 79 79</a>
+        <span class="ds-small">statuspill 2 s (eljour-block index.html:65-68) och ampyRing 2,8 s (ring-cta.css:44-53), båda ur <code>system/components/</code></span>
+      </div>
+      <p class="ds-caption">En puls per vy. Pulsen sitter på det som är levande (jour öppen, ring nu), aldrig på dekor.</p>
+
+      <h2 class="ds-h2" id="gradienter">De två gradienterna och scrims</h2>
+      <p class="ds-p">Fjorton gradienter i källorna blev två tokens (<a class="ds-a" href="farg.html#gradienter">Färg</a>) och tre foto-scrims (<a class="ds-a" href="form-djup.html#scrim">Form och djup</a>). Brandbokens fyra referensgradienter (s.11: cobalt till midnight, lime till cobalt, sekundärteal till lime, neon mint till midnight) används inte av någon källa; produktionens handlingsgradient (neon mint till sekundärteal) är den enda som lever. Gradient i text finns inte.</p>
+      <div class="ds-grad">
+        <div><div class="ds-grad__chip" style="background:var(--ampy-action-gradient);color:var(--ampy-action-gradient-on)">--ampy-action-gradient</div><p class="ds-caption" style="margin-top:0.8rem">120° #55ff9a till #5eb1bf. Sajtens primärknapp, 10+ källor. Bara på knappar.</p></div>
+        <div><div class="ds-grad__chip" style="background:var(--ampy-action-gradient-ring);color:var(--ampy-action-gradient-on)">--ampy-action-gradient-ring</div><p class="ds-caption" style="margin-top:0.8rem">120° #b6f2ff till #5eb1bf. Ring-knappen.</p></div>
+        <div><div class="ds-grad__chip" style="background:var(--ampy-aurora-light);color:var(--ampy-ink);border:1px solid var(--ampy-line)">--ampy-aurora-light</div><p class="ds-caption" style="margin-top:0.8rem">Fyra radialer på sky mist. Bara tack, offert accepterad, bokning (B11).</p></div>
+        <div><div class="ds-grad__chip" style="background:url('../bilder/block/hero2-foto.jpg') center/cover;position:relative;isolation:isolate;color:#fff"><span style="position:absolute;inset:0;background:var(--ampy-scrim-hero);border-radius:inherit;z-index:-1"></span>--ampy-scrim-hero</div><p class="ds-caption" style="margin-top:0.8rem">Foto-veil, aldrig som yta. Två till: -strong och -light.</p></div>
+      </div>
+
+      <h2 class="ds-h2" id="ikoner">Ikonfamiljen</h2>
+      <p class="ds-p">En familj för alla exempel: <code>system/ikoner.svg</code>, 22 symboler på 24-rutnät, <strong>stroke 1,75</strong>, runda ändar och hörn, <code>fill: none</code>, <code>stroke: currentColor</code>. Undantag: <code>ik-star</code> (fylld, betygsstjärnor, källa hero-1 index.html:280) och <code>ik-google</code> (fasta färger, G-loggan i proof-raden). Pilen kommer från cta-website offert-cta.html (16-rutnät skalat 1,5), luren från ring-cta.html, bocken från elcentral-kollens <code>__check</code>, chevronen från eljour-blockets <code>__chev</code>, i-ikonen från elcentrals info-ruta, varningen från eljours <code>__safety</code>. Källorna kör streck 1,6 till 3; 1,75 är mitten av auktoritet 1-blocken.</p>
+      <p class="ds-p">Brandboken (s.16) vill ha <em>solida</em> ikoner i cobalt. Inget byggt block följer det: alla använder linjeikoner. Systemet följer det byggda och flaggar konflikten till brandbok v2 (B1). Ikoner ritas i bläck (midnight på ljust, vit på mörkt) eller i teal core som accent, aldrig i gradient.</p>
+      <div class="ds-icons">
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg><code>ik-arrow-right</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-up-right"/></svg><code>ik-arrow-up-right</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-phone"/></svg><code>ik-phone</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg><code>ik-check</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-check-circle"/></svg><code>ik-check-circle</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-close"/></svg><code>ik-close</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg><code>ik-chevron-down</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-info"/></svg><code>ik-info</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg><code>ik-warning</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-bolt"/></svg><code>ik-bolt</code></div>
+        <div class="ds-icon"><svg aria-hidden="true" style="color:var(--apgoogle-gold)"><use href="../../system/ikoner.svg#ik-star"/></svg><code>ik-star</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-copy"/></svg><code>ik-copy</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-print"/></svg><code>ik-print</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-share"/></svg><code>ik-share</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-plus"/></svg><code>ik-plus</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-minus"/></svg><code>ik-minus</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-search"/></svg><code>ik-search</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-lock"/></svg><code>ik-lock</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-clock"/></svg><code>ik-clock</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg><code>ik-map-pin</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-mail"/></svg><code>ik-mail</code></div>
+        <div class="ds-icon"><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><code>ik-google</code></div>
+      </div>
+      <h3 class="ds-h3">Storlekar</h3>
+      <p class="ds-caption">16 i knappar och pills (cta-website pil 16, elcentral pill-ikon 16, LED tips-chip 16), 17 i ring-chippen (ring-cta.css:43), 18 i popover-rader (energycalc share-pop), 20 i selector-chevron (LED), 24 som bas. Alltid <code>aria-hidden="true"</code> när texten bredvid säger samma sak.</p>
+      <div class="ds-icon-sizes">
+        <span><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg>16</span>
+        <span><svg width="17" height="17" aria-hidden="true"><use href="../../system/ikoner.svg#ik-phone"/></svg>17</span>
+        <span><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-share"/></svg>18</span>
+        <span><svg width="20" height="20" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg>20</span>
+        <span><svg width="24" height="24" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check-circle"/></svg>24</span>
+        <span><svg width="24" height="24" aria-hidden="true" style="color:var(--ampy-action)"><use href="../../system/ikoner.svg#ik-check-circle"/></svg>24, teal core som accent</span>
+      </div>
+      <div class="ds-icon-sizes ds-icon-sizes--dark">
+        <span><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg>16</span>
+        <span><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-info"/></svg>18</span>
+        <span><svg width="24" height="24" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg>24</span>
+        <span><svg width="24" height="24" aria-hidden="true" style="color:var(--apneon-mint)"><use href="../../system/ikoner.svg#ik-check"/></svg>24, neon mint på mörkt (energycalc, LED)</span>
+      </div>
+      <div class="ds-code"><pre><code>&lt;svg width="16" height="16" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-arrow-right"/&gt;&lt;/svg&gt;
+&lt;!-- kräver http (extern &lt;use&gt; blockeras på file:// i Chromium); i Bricks/FluentSnippets: inline:a symbolen eller ladda spriten en gång i sidfoten --&gt;</code></pre></div>
+
+      <h3 class="ds-h3">Det här får inte finnas</h3>
+      <div class="ds-icon-bad">
+        <div><div class="ds-icon-bad__stage"><span style="font-family:ui-monospace,Menlo,monospace;font-size:1.3rem;color:var(--ampy-ink-faint)">fa-bolt, lucide, heroicons</span></div><strong>Ikonbibliotek</strong>Inga externa bibliotek eller fonter (Font Awesome, Lucide, Material). Live laddar inga; ett bibliotek ger tre streckbredder på en sida och en nätverksbegäran till.</div>
+        <div><div class="ds-icon-bad__stage"><span class="ds-icon-bad__grad"></span></div><strong>Gradientikoner</strong>"Banned default: mörkt kort + radial glow + gradient-ikon + centrerad vit rubrik" (skillen, <code>tidigare-dokumentation.md</code>). Ikoner i bläck eller teal core, aldrig i handlingsgradienten.</div>
+        <div><div class="ds-icon-bad__stage"><span class="ds-icon-bad__emoji" aria-hidden="true">⚡✅🔧</span></div><strong>Emoji</strong>Aldrig i gränssnitt eller copy: renderas olika per OS, bär ingen ton och läses som AI-text. Elcentral-kollens share-meny visar ⚠ i Arial (defekt i komponentkartan).</div>
+        <div><div class="ds-icon-bad__stage"><svg class="ds-icon-bad__thick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:var(--ampy-ink)" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><strong>Blandade streckbredder</strong>Källorna kör 1,6 till 3 px. Ett streck: 1,75. Inga fyllda ikoner bredvid linjeikoner (utom stjärnan).</div>
+      </div>
+
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>Logotypen ur <code>site/brand/</code>, i midnight på ljust och vit på mörkt, med friyta = a:s höjd.</li>
+          <li>Blixten som enda ornament, i byråns teckning, och bara där den betyder något (kicker, märke).</li>
+          <li>Ikoner ur spriten, 1,75 px, i bläck eller teal core; storlek 16 i knappar, 24 som bas.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Svarta logofiler på sajten (produktionens #000000-exporter), egna blixtar, logotypen som vattenstämpel.</li>
+          <li>Vågor, blobbar och auroror som dekor på tjänstesidor; ytgradienter (prefooter, footer, certificates-bandet).</li>
+          <li>Ikonbibliotek, gradientikoner, emoji, fler än en puls per vy.</li>
+        </ul></div>
+      </div>
+
+      <p class="ds-source">Beslut som rör ornament och ikoner: <a class="ds-a" href="../beslut.html#b1">B1 accent och brandbok v2</a> (ikonfärg s.16, gradienter s.11), <a class="ds-a" href="../beslut.html#b9">B9 glöd</a>, <a class="ds-a" href="../beslut.html#b11">B11 aurora</a>, <a class="ds-a" href="../beslut.html#b12">B12 stjärnfärg</a>, <a class="ds-a" href="../beslut.html#b16">B16 sekundärteal som dekor</a>. [GAP]: minsta logostorlek (brandboken anger ingen).</p>
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

@@ -60,7 +60,9 @@
   padding: clamp(32px, 4.5vw, 52px) var(--ampy-space-xl);   /* thank-you: clamp(3.2rem,4.5vw,5.2rem) clamp(2.8rem,4vw,5.6rem) ; x = xl 56/27.3 */
   color: var(--ampy-ink-body);
 }
-@media (max-width: 520px) { .ampy-card--glass { border-radius: var(--ampy-radius-card); padding: 36px var(--ampy-space-m); } }   /* thank-you :97-98 */
+@media (max-width: 520px) { .ampy-card--glass { border-radius: var(--ampy-radius-card); padding: 36px var(--ampy-space-l); } }
+.ampy-card--center { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--ampy-space-s); }   /* thank-you .card: flex-kolumn centrerad, gap clamp(1.8rem,2.4vw,2.4rem) -> s 19.8/13.3 */
+.ampy-card--center > * { margin: 0; }   /* thank-you :97-98: 3.6rem 2.4rem -> 36 / l 21.5 (m gav 16.9 = 7 px för lite) */
 .ampy-card--glass-dark {
   background: var(--ampy-bg-glass-dark); color: var(--ampy-on-dark);
   border: 1px solid rgba(255,255,255,.16);               /* fore-efter dist/01:285 */

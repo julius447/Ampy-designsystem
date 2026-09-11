@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textelement: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  .ds-main { min-width: 0; }
+  .ds-demo { row-gap: var(--ampy-space-s); }
+  .ds-demo--stack > :not(.ds-demo__label) { width: 100%; }
+  .ds-demo__col { display: grid; gap: var(--ampy-space-xs); width: min(100%, 44rem); }
+  .ds-demo__col--wide { width: min(100%, 64rem); }
+  .ds-demo__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr)); gap: var(--ampy-space-s); width: 100%; align-items: start; }
+  .ds-demo__grid .ds-demo__item { align-items: stretch; }
+  .ds-demo__item { display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  .ds-demo__item > div, .ds-demo__item > fieldset { width: 100%; }
+  .ds-demo__tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); }
+  .ds-demo--dark .ds-demo__tag { color: var(--ampy-on-dark-faint); }
+  .ds-demo--dark { color: var(--ampy-on-dark); }
+  :where(.ds-demo--dark) :where(p, li) { color: var(--ampy-on-dark-soft); }
+  .ds-demo .is-focus:not(.ampy-input, .ampy-textarea, .ampy-select, .ampy-chip) { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+  .ds-demo--dark .is-focus { outline-color: var(--ampy-focus-on-dark); }
+  .ds-shot { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); overflow: hidden; background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
+  .ds-shot img { display: block; width: 100%; height: auto; }
+  .ds-anchor { color: inherit; text-decoration: none; }
+  .ds-anchor:hover::after { content: " #"; color: var(--ampy-ink-faint); font-weight: 300; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: 1.5; max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.5rem; }
+  .ds-list--small { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  .ds-toc { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 var(--ampy-space-l); padding: 0; list-style: none; }
+  .ds-toc a { display: inline-block; padding: 0.5rem 1.1rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); background: var(--ampy-bg-surface); color: var(--ampy-ink-muted); text-decoration: none; font-size: var(--ampy-text-small); }
+  .ds-toc a:hover { color: var(--ampy-ink); border-color: var(--ampy-line-strong); }
+  .ds-table td:first-child { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); white-space: nowrap; }
+  .ds-ok { color: var(--ampy-success-ink); font-weight: var(--ampy-w-medium); }
+  .ds-dev { color: var(--ampy-warn-ink); }
+  @media (max-width: 991px) { .ds-demo__col, .ds-demo__col--wide { width: 100%; } }
+</style>
+</head>
+<body class="ds-body ampy">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><!-- kopia av system/ikoner.svg (kanon) så att <use href="#ik-..."> fungerar även via file:// -->
+  
+  <symbol id="ik-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="ik-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M17 7H7M17 7v10"/></symbol>
+  <symbol id="ik-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.05 6A5 5 0 0 1 18 9.95M14.05 2a9 9 0 0 1 7.95 7.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="ik-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ik-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/></symbol>
+  <symbol id="ik-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="ik-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="ik-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="ik-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="ik-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H13l1-8.5Z"/></symbol>
+  <symbol id="ik-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></symbol>
+  <symbol id="ik-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ik-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></symbol>
+  <symbol id="ik-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></symbol>
+  <symbol id="ik-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="ik-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
+  <symbol id="ik-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.6-4.6"/></symbol>
+  <symbol id="ik-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="11" width="17" height="10" rx="2"/><path d="M7.5 11V7.5a4.5 4.5 0 0 1 9 0V11"/></symbol>
+  <symbol id="ik-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="ik-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="ik-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m21 8-8 5.2a1.9 1.9 0 0 1-2 0L3 8"/></symbol>
+  <symbol id="ik-google" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C41.4 34.8 44 29.9 44 24c0-1.3-.1-2.6-.4-3.9z"/></symbol>
+</svg>
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="index.html">Alla komponenter</a>
+        <a href="knappar.html">Knappar och länkar</a>
+        <a href="text.html" aria-current="page">Textelement</a>
+        <a href="ytor.html">Ytor och kort</a>
+        <a href="falt.html">Fält och reglage</a>
+        <a href="verktyg.html">Kalkylator-kitet</a>
+        <a href="diagnostik.html">Diagnostik-kitet</a>
+        <a href="block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Komponenter</span>
+      <h1 class="ds-h1">Textelement</h1>
+      <p class="ds-lead">De små textbitarna som återkommer i alla block: eyebrow, tagg, stat-trio, hero-siffra med enhet, källrad, proof-rad, citat, listor och prisrad. Samma bläck, hierarki genom vikt, siffror i tabular-nums.</p>
+      <p class="ds-source">Kanon: eyebrow <code>energycalc</code> (<code>vB/tool.css:317-319</code>) och <code>thank-you</code> (<code>v1/styles.css:77</code>); tagg <code>elcentral-kollen</code> (<code>assets/elcentralkollen.css:428-440</code>); stat-trio och readout <code>led-kalkylator</code> (<code>styles.css:293-311</code>); källrad <code>elkollen</code> (<code>assets/behorighetskollen.css:880-889</code>); proof-rad <code>hero-1</code> (<code>assets/style.css:236-265</code>); citat <code>testimonials-block</code> (<code>delivery/ampy-testimonials.css:46-66</code>); bocklista <code>elcentral-kollen</code> (:198-201); steg <code>rot-gt-cro</code> (<code>designs/d2-kvittot-forst.html:163-217</code>); prisrad <code>rot-gt-cro</code> (:279-299). Finns även i: eljour, EV, battery, hero-2, booking, thank-you, main-form, footer, article (avvikelser längst ned). Blockbiblioteket: <a class="ds-a" href="../blockbibliotek.html#led-kalkylator">LED-kalkylatorn</a>, <a class="ds-a" href="../blockbibliotek.html#testimonials-block">Testimonials</a>.</p>
+      <ul class="ds-toc">
+        <li><a href="#eyebrow">Eyebrow</a></li><li><a href="#tagg">Tagg och pill</a></li><li><a href="#stat">Stat-trio</a></li><li><a href="#readout">Hero-siffra</a></li><li><a href="#kallrad">Källrad</a></li><li><a href="#proof">Proof-rad</a></li><li><a href="#citat">Citat</a></li><li><a href="#listor">Listor</a></li><li><a href="#pris">Prisrad</a></li><li><a href="#anatomi">Anatomi</a></li><li><a href="#gor">Gör och gör inte</a></li><li><a href="#kod">Kod</a></li><li><a href="#avvikelser">Avvikelser</a></li>
+      </ul>
+
+      <h2 class="ds-h2" id="eyebrow"><a class="ds-anchor" href="#eyebrow">Eyebrow</a></h2>
+      <p class="ds-p">Grundrollen bor i <code>base.css</code>: 12 px, 600, spärrning .14em, versaler, dämpad. Tre varianter: med teal-streck (energycalc, resultatkortets rubrikrad), i text-teal (thank-you, ovanför CTA:n) och på mörkt. En eyebrow bär aldrig ensam informationen (beslut B19).</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><span class="ampy-eyebrow">Ditt besked</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Med streck (--dash)</span><span class="ampy-eyebrow ampy-eyebrow--dash" data-probe="eyebrow">Dagens kostnad</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Text-teal (--action)</span><span class="ampy-eyebrow ampy-eyebrow--action">Medan du väntar</span></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><span class="ampy-eyebrow">Årlig besparing</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Med streck</span><span class="ampy-eyebrow ampy-eyebrow--dash">Dagens kostnad</span></div>
+      </div>
+
+      <h2 class="ds-h2" id="tagg"><a class="ds-anchor" href="#tagg">Tagg, badge och pill</a></h2>
+      <p class="ds-p">Elcentrals beskedpill: fem nivåer med bakgrund- och textpar över 6,8:1, ikon 16, radie full. Åtta pillrecept i källorna blev ett: nivåerna, en neutral med kant, en teal för referenser (booking/offer) och statuspillen med puls ("Jour öppen just nu", eljour). Liten variant för nivåtaggar i listor.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Success</span><span data-probe="tag" class="ampy-tag ampy-tag--success"><svg width="16" height="16" aria-hidden="true"><use href="#ik-check-circle"/></svg>Låg risk</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Warning</span><span class="ampy-tag ampy-tag--warning"><svg width="16" height="16" aria-hidden="true"><use href="#ik-warning"/></svg>Bör ses över</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Error</span><span class="ampy-tag ampy-tag--error"><svg width="16" height="16" aria-hidden="true"><use href="#ik-warning"/></svg>Akut</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Info</span><span class="ampy-tag ampy-tag--info"><svg width="16" height="16" aria-hidden="true"><use href="#ik-info"/></svg>Inget planerat</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Neutral</span><span class="ampy-tag ampy-tag--neutral">Oklart</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Action (referens)</span><span class="ampy-tag ampy-tag--action">Bokning 4821</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Live med puls</span><span class="ampy-tag ampy-tag--live"><span class="ampy-tag__pulse" aria-hidden="true"></span>Jour öppen just nu</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Liten (--sm)</span><span style="display:flex;gap:.6rem"><span class="ampy-tag ampy-tag--sm ampy-tag--error">Akut</span><span class="ampy-tag ampy-tag--sm ampy-tag--warning">Varning</span></span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Stor (--lg)</span><span class="ampy-tag ampy-tag--lg ampy-tag--success"><svg width="16" height="16" aria-hidden="true"><use href="#ik-check-circle"/></svg>Redo för laddbox</span></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta (hero-2 chip)</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><span class="ampy-tag "><svg width="16" height="16" aria-hidden="true"><use href="#ik-bolt"/></svg>Laddbox</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Success</span><span class="ampy-tag ampy-tag--success"><svg width="16" height="16" aria-hidden="true"><use href="#ik-check-circle"/></svg>Låg risk</span></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Live</span><span class="ampy-tag ampy-tag--live"><span class="ampy-tag__pulse" aria-hidden="true"></span>Jour öppen just nu</span></div>
+      </div>
+
+      <h2 class="ds-h2" id="stat"><a class="ds-anchor" href="#stat">Stat-trio</a></h2>
+      <p class="ds-p">LED-kalkylatorns tre siffror under hero-siffran: etikett i versaler, värde 28 px med enhet, undertext. Tre kolumner med <code>grid-auto-flow: column</code> så att etiketter, värden och undertexter linjerar radvis. Under 560 px staplas de. Två kolumner med <code>--2</code> (EV). Typsnittet är Outfit med tabular-nums, inte Plus Jakarta Sans (B7).</p>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark ds-demo--stack">
+        <span class="ds-demo__label">Mörk yta (LED)</span>
+        <ul class="ampy-stat-trio">
+  <li class="ampy-stat"><span class="ampy-stat__label" data-probe="stat-label">Energi du kapar</span><span class="ampy-stat__value" data-probe="stat-value">16 819 <span class="ampy-stat__unit">kWh/år</span></span><span class="ampy-stat__sub">59 % lägre förbrukning</span></li>
+  <li class="ampy-stat"><span class="ampy-stat__label">CO₂ du sparar</span><span class="ampy-stat__value">7,8 <span class="ampy-stat__unit">ton/år</span></span><span class="ampy-stat__sub">jämfört med nordisk elmix</span></li>
+  <li class="ampy-stat"><span class="ampy-stat__label">Uppskattad kostnad</span><span class="ampy-stat__value">120 000 <span class="ampy-stat__unit">kr</span></span><span class="ampy-stat__sub">cirka 1 500 kr per armatur, inklusive installation</span></li>
+</ul>
+      </div>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Ljus yta, två kolumner</span>
+        <div class="ds-demo__col"><ul class="ampy-stat-trio ampy-stat-trio--2">
+  <li class="ampy-stat"><span class="ampy-stat__label">Att betala</span><span class="ampy-stat__value">14 950 <span class="ampy-stat__unit">kr</span></span><span class="ampy-stat__sub">efter grön teknik-avdrag</span></li>
+  <li class="ampy-stat"><span class="ampy-stat__label">Återbetald</span><span class="ampy-stat__value">4,2 <span class="ampy-stat__unit">år</span></span><span class="ampy-stat__sub">vid dagens elpris</span></li>
+</ul></div>
+      </div>
+      <p class="ds-caption">Siffrorna är exempelvärden ur kalkylatorerna, inte faktapåståenden.</p>
+
+      <h2 class="ds-h2" id="readout"><a class="ds-anchor" href="#readout">Hero-siffra med enhet</a></h2>
+      <p class="ds-p">Resultatkortets huvudtal: eyebrow, siffra 56 px (38 på mobil) i 700 med spärrning -.03em och tabular-nums, enheten 28 px i 500 på baslinjen med 12 px mellanrum, undertext. <code>.ampy-number</code> är rollen ur <code>base.css</code>; readouten sätter enheten och undertexten. Siffran, inte rubriken, står i mitten (B9).</p>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark ds-demo--stack">
+        <span class="ds-demo__label">Mörk yta (LED)</span>
+        <div class="ampy-readout">
+  <span class="ampy-eyebrow">Årlig besparing</span>
+  <span class="ampy-readout__value"><span class="ampy-number" data-probe="number">27 752</span><span class="ampy-readout__unit" data-probe="unit">kr/år</span></span>
+  <span class="ampy-readout__sub">Så mycket lägre kan elkostnaden bli, varje år så länge belysningen lyser.</span>
+</div>
+      </div>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ampy-readout">
+  <span class="ampy-eyebrow">Din kostnad i dag</span>
+  <span class="ampy-readout__value"><span class="ampy-number" data-probe="number">31 400</span><span class="ampy-readout__unit" data-probe="unit">kr/år</span></span>
+  <span class="ampy-readout__sub">Uppskattad elkostnad för uppvärmning per år, före åtgärd.</span>
+</div>
+      </div>
+
+      <h2 class="ds-h2" id="kallrad"><a class="ds-anchor" href="#kallrad">Källrad</a></h2>
+      <p class="ds-p">Elkollens källrad: 13 px, svag färg, hårlinje ovanför, pinnad sist i kortet. Färgen är <code>--ampy-ink-faint</code> (4,80:1) i stället för källans #8a8da5 (3,26:1). Med <code>--plain</code> utan linje. Länkar ärver färgen och stryks under.</p>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__col ds-demo__col--wide">
+          <p class="ampy-source" data-probe="source">Källa: Elsäkerhetsverket, <a href="#">Elsäkerhetslagen (2016:732)</a> och ELSÄK-FS 2022:1. Beskedet bygger på dina svar och ersätter inte en besiktning på plats. <svg width="13" height="13" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></p>
+          <p class="ampy-source ampy-source--plain">Utan linje: Elsäkerhetsverket registrerade 298 händelser 2018 till 2022 där elcentralen var orsaken.</p>
+        </div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark ds-demo--stack">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__col ds-demo__col--wide"><p class="ampy-source">Källa: Energimyndigheten, elpris SE3 2025. Räknat på 12 timmars brinntid per dygn.</p></div>
+      </div>
+
+      <h2 class="ds-h2" id="proof"><a class="ds-anchor" href="#proof">Proof-rad</a></h2>
+      <p class="ds-p">Hero-1:s bevisrad under CTA:n: G-ikon 16, "5,0 på Google" med fet siffra, fem stjärnor 13,5 px, en separator 1 gånger 15 och volymraden. Stjärnorna är guld på alla ytor (ägardirektiv 2026-08-06, beslut B12); hero-1 hade vita. Under 560 px blir raden en kolumn och separatorn göms. Faktapåståendena ("5,0", "3 000+") är [GAP] mot ampy-foretagsdata tills ägaren bekräftar dem.</p>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ampy-proof" data-probe="proof">
+  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google</span><span class="ampy-proof__stars" aria-hidden="true"><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg></span></a>
+  <span class="ampy-proof__sep" aria-hidden="true"></span>
+  <span class="ampy-proof__vol"><strong>3 000+</strong> installationer om året</span>
+</div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark ds-demo--stack">
+        <span class="ds-demo__label">På foto och mörkt (hero-1)</span>
+        <div class="ampy-proof" data-probe="proof">
+  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google</span><span class="ampy-proof__stars" aria-hidden="true"><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg></span></a>
+  <span class="ampy-proof__sep" aria-hidden="true"></span>
+  <span class="ampy-proof__vol"><strong>3 000+</strong> installationer om året</span>
+</div>
+      </div>
+
+      <h2 class="ds-h2" id="citat"><a class="ds-anchor" href="#citat">Citat</a></h2>
+      <p class="ds-p">Testimonial-kortets innehåll utan kortet: citattecken 56 px i teal (neon-mint på mörkt, opacitet .55), text i 300, namn 22/600, hårlinje, stjärnor och datum. Det stora tecknet är dekor (&amp;ldquo; som i källan) och bär citatet: texten får inga egna citattecken. Kortet självt är <a class="ds-a" href="ytor.html#morkt">ytor: mörkt kort</a>.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__col"><figure class="ampy-quote">
+  <div class="ampy-quote__top"><span class="ampy-quote__mark" aria-hidden="true">&ldquo;</span><svg class="ampy-quote__google" aria-label="Google-omdöme" role="img"><use href="#ik-google"/></svg></div>
+  <blockquote class="ampy-quote__text" data-probe="quote-text">Från start till mål levererades en service i världsklass. Elektrikern förklarade vad som behövde göras och varför, och lämnade en central som ser ut som ny.</blockquote>
+  <figcaption class="ampy-quote__foot">
+    <p class="ampy-quote__name" data-probe="quote-name">Anna, Huddinge</p>
+    <hr class="ampy-quote__divider">
+    <span class="ampy-quote__meta"><span class="ampy-quote__stars" aria-label="5 av 5"><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg></span><span class="ampy-quote__date">Augusti 2026</span></span>
+  </figcaption>
+</figure></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta (testimonials)</span>
+        <div class="ds-demo__col"><figure class="ampy-quote">
+  <div class="ampy-quote__top"><span class="ampy-quote__mark" aria-hidden="true">&ldquo;</span><svg class="ampy-quote__google" aria-label="Google-omdöme" role="img"><use href="#ik-google"/></svg></div>
+  <blockquote class="ampy-quote__text" data-probe="quote-text">Från start till mål levererades en service i världsklass. Elektrikern förklarade vad som behövde göras och varför, och lämnade en central som ser ut som ny.</blockquote>
+  <figcaption class="ampy-quote__foot">
+    <p class="ampy-quote__name" data-probe="quote-name">Anna, Huddinge</p>
+    <hr class="ampy-quote__divider">
+    <span class="ampy-quote__meta"><span class="ampy-quote__stars" aria-label="5 av 5"><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg><svg aria-hidden="true"><use href="#ik-star"/></svg></span><span class="ampy-quote__date">Augusti 2026</span></span>
+  </figcaption>
+</figure></div>
+      </div>
+
+      <h2 class="ds-h2" id="listor"><a class="ds-anchor" href="#listor">Listor</a></h2>
+      <p class="ds-p">Bocklistan ur elcentral-railen (17/500 dämpad, ikon 20 i teal, rader med 16 px luft), den kompakta ur eljour-kortet (15/400 mellan hårlinjer) och stegen ur ROT/GT-panelen (cirkel 46 med teal-ring, siffra 17/500, H3 och stycke, connector i ringens spår). Förloppsbågen 1/3, 2/3, hel hör till blocket (S4).</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Bocklista (--check)</span><ul class="ampy-list ampy-list--check">
+  <li data-probe="list-li"><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Byggt på Elsäkerhetslagen och Elsäkerhetsverket</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check-circle"/></svg>Registrerat elinstallationsföretag</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check-circle"/></svg>Ett ärligt besked, byggt på dina egna svar</li>
+</ul></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Kompakt (--compact)</span><div style="width:min(100%,32rem)"><ul class="ampy-list ampy-list--check ampy-list--compact">
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Behörig elektriker svarar</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Du får ett pris innan vi börjar</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Inga dolda avgifter</li>
+</ul></div></div>
+      </div>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Steg (--steps)</span>
+        <div class="ds-demo__col ds-demo__col--wide"><ol class="ampy-list ampy-list--steps">
+  <li class="is-done" data-probe="step"><h3 class="ampy-list__title" data-probe="step-h3">Du beskriver jobbet</h3><p>Formuläret tar en minut. Skriv gärna vad som redan finns på plats, så slipper vi fråga.</p></li>
+  <li><h3 class="ampy-list__title">Vi ringer och räknar</h3><p>En elektriker går igenom dina uppgifter och återkommer med ett fast pris.</p></li>
+  <li><h3 class="ampy-list__title">Jobbet görs och kvittot stämmer</h3><p>ROT dras direkt på fakturan. Du betalar det som stod i offerten.</p></li>
+</ol></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Bocklista</span><ul class="ampy-list ampy-list--check">
+  <li data-probe="list-li"><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Byggt på Elsäkerhetslagen och Elsäkerhetsverket</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check-circle"/></svg>Registrerat elinstallationsföretag</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check-circle"/></svg>Ett ärligt besked, byggt på dina egna svar</li>
+</ul></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Kompakt</span><div style="width:min(100%,32rem)"><ul class="ampy-list ampy-list--check ampy-list--compact">
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Behörig elektriker svarar</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Du får ett pris innan vi börjar</li>
+  <li><svg width="20" height="20" aria-hidden="true"><use href="#ik-check"/></svg>Inga dolda avgifter</li>
+</ul></div></div>
+      </div>
+
+      <h2 class="ds-h2" id="pris"><a class="ds-anchor" href="#pris">Prisrad</a></h2>
+      <p class="ds-p">Kvittots terminala rad ur ROT/GT-panelen: etikett i versaler, belopp 20 till 24 px i 700 med tabular-nums, noten där undantaget står. Kanon med förbehåll: produktsidornas prisrad är inte inventerad, så det här är den enda uppmätta. Inline-varianten för löptext.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__col"><div class="ampy-price">
+  <span class="ampy-price__label">Att betala</span>
+  <span class="ampy-price__amount" data-probe="price-amount">14 950 kr</span>
+  <span class="ampy-price__note">efter ROT-avdrag på arbetskostnaden. Materialet är inte avdragsgillt.</span>
+</div></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Inline</span><p class="ampy-price ampy-price--inline"><span class="ampy-price__amount">från 4 900 kr</span><span class="ampy-price__note">efter ROT</span></p></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Inline-kod</span><p style="margin:0">Formeln <code class="ampy-code">kWh × pris × 0,59</code> ger besparingen.</p></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta (kvittopanel)</span>
+        <div class="ds-demo__col"><div class="ampy-price">
+  <span class="ampy-price__label">Att betala</span>
+  <span class="ampy-price__amount" data-probe="price-amount">14 950 kr</span>
+  <span class="ampy-price__note">efter ROT-avdrag på arbetskostnaden. Materialet är inte avdragsgillt.</span>
+</div></div>
+      </div>
+
+      <h2 class="ds-h2" id="anatomi"><a class="ds-anchor" href="#anatomi">Anatomi</a></h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Element</th><th>Källa 1440 / 390</th><th>Typografi</th><th>Färg</th><th>Mått och avstånd</th></tr></thead>
+        <tbody>
+          <tr><td>Eyebrow</td><td>12 / 12 (thank-you, energycalc, elcentral)</td><td>Outfit 600, .14em, versaler</td><td>#565e82; --action #007a69; på mörkt vit .66</td><td>streck 24 x 2 teal, gap 8</td></tr>
+          <tr><td>Tagg</td><td>37,6 / 29 hög (elcentral "Låg risk")</td><td>Outfit 600 16 / 14 (källan PJS 18 / 14)</td><td>success #0f6e56 på rgba(57,194,129,.12); warning #876507 på #fff4e0; error #7a1623 på #fdeceb; info #0d568c på rgb(224,236,248)</td><td>padding 9,9 / 14 (8,3 / 10,5), ikon 16, radie 999</td></tr>
+          <tr><td>Stat-trio</td><td>3 kolumner, staplas under 560</td><td>etikett 12/600 versal; värde 28 / 21 i 700; enhet 16 / 14 i 500; undertext 13</td><td>etikett .66, värde vit, undertext .55 på mörkt</td><td>column-gap 19,8 / 13,3, row-gap 2</td></tr>
+          <tr><td>Hero-siffra</td><td>56 / 38,3 (LED --fs-4xl)</td><td>700, lh 1, -.03em, tabular; enhet 28 / 21 i 500</td><td>vit på mörkt, #090b32 på ljust</td><td>baslinjegap 12, stack-gap 9,9</td></tr>
+          <tr><td>Källrad</td><td>13 / 13 (elkollen fs-13)</td><td>Outfit 400, lh 1.45</td><td>#6a7190 (källan #8a8da5)</td><td>hårlinje 1 px, padding-top 14 / 10,5</td></tr>
+          <tr><td>Proof-rad</td><td>14,5 / 14,5 (hero-1)</td><td>Outfit 400, fet siffra 700</td><td>bläck; guld #fbbc04 stjärnor; separator rgba(9,11,50,.48)</td><td>gap 14, G-ikon 16, stjärna 13,5, separator 1 x 15</td></tr>
+          <tr><td>Citat</td><td>text 18 / 16,1; namn 22 / 20,1</td><td>text 300 lh 1.5; namn 600; citattecken 56/600; datum 12</td><td>citattecken teal .55 (neon-mint på mörkt); text .95 på mörkt</td><td>gap 19,8 / 13,3; stjärnor 15 gap 3</td></tr>
+          <tr><td>Bocklista</td><td>17 / 17 källa, 18 / 16,1 system</td><td>Outfit 500, lh 1.45</td><td>text #565e82, ikon teal</td><td>ikon 20, gap 14 / 10,5, rader 19,8 / 13,3</td></tr>
+          <tr><td>Steg</td><td>cirkel 46, gap 44 / 32</td><td>siffra 17/500; H3 22 / 20,1 i 600 (källan 23 / 19 i 450); p 18 / 16,1 i 300</td><td>ring rgba(0,169,145,.20) 1,5 px, connector 2 px</td><td>kolumngap 19,8, radgap 4</td></tr>
+          <tr><td>Prisrad</td><td>belopp 22 / 20,1 (källan 24 / 20)</td><td>etikett 12/600 versal (källan 13/700); belopp 700 tabular; not 13/400</td><td>bläck på teal .08 (källan .055); vit på vit .08 på mörkt</td><td>padding 19,8 / 28; radie 12 / 10,1 (källan 14)</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="gor"><a class="ds-anchor" href="#gor">Gör och gör inte</a></h2>
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>Siffror i <code>tabular-nums</code> där de jämförs eller byts, enheten i egen span på baslinjen.</li>
+          <li>Källrad under varje besked och varje kalkyl: vem säger det, vilket år. Faktapåståenden hämtas ur ampy-foretagsdata, annars [GAP].</li>
+          <li>En eyebrow ovanför rubriken, aldrig i stället för den. Taggens nivå bär även ikonen, inte bara färgen.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Teal som liten text (2,96:1). Text-teal är teal-deep, och bara som handling.</li>
+          <li>Gradienttext, "·" och tankstreck i etiketter och proof-rader; raka citattecken.</li>
+          <li>Eyebrow på 15 px (fotobedomningen, LED) eller i 700 (rot-gt): då blir den en rubrik. Stjärnor i vitt, neon-mint eller teal: guld (B12).</li>
+        </ul></div>
+      </div>
+
+      <h2 class="ds-h2" id="kod"><a class="ds-anchor" href="#kod">Kod</a></h2>
+      <div class="ds-code"><pre><code>&lt;span class="ampy-eyebrow ampy-eyebrow--dash"&gt;Dagens kostnad&lt;/span&gt;
+
+&lt;span class="ampy-tag ampy-tag--success"&gt;&lt;svg width="16" height="16" aria-hidden="true"&gt;&lt;use href="/system/ikoner.svg#ik-check-circle"/&gt;&lt;/svg&gt;Låg risk&lt;/span&gt;
+
+&lt;div class="ampy-readout"&gt;
+  &lt;span class="ampy-eyebrow"&gt;Årlig besparing&lt;/span&gt;
+  &lt;span class="ampy-readout__value"&gt;&lt;span class="ampy-number"&gt;27 752&lt;/span&gt;&lt;span class="ampy-readout__unit"&gt;kr/år&lt;/span&gt;&lt;/span&gt;
+  &lt;span class="ampy-readout__sub"&gt;Så mycket lägre kan elkostnaden bli.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;ul class="ampy-stat-trio"&gt;
+  &lt;li class="ampy-stat"&gt;
+    &lt;span class="ampy-stat__label"&gt;Energi du kapar&lt;/span&gt;
+    &lt;span class="ampy-stat__value"&gt;16 819 &lt;span class="ampy-stat__unit"&gt;kWh/år&lt;/span&gt;&lt;/span&gt;
+    &lt;span class="ampy-stat__sub"&gt;59 % lägre förbrukning&lt;/span&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;
+
+&lt;p class="ampy-source"&gt;Källa: Elsäkerhetsverket, Elsäkerhetslagen (2016:732).&lt;/p&gt;
+
+&lt;ul class="ampy-list ampy-list--check"&gt;
+  &lt;li&gt;&lt;svg width="20" height="20" aria-hidden="true"&gt;&lt;use href="/system/ikoner.svg#ik-check"/&gt;&lt;/svg&gt;Registrerat elinstallationsföretag&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol class="ampy-list ampy-list--steps"&gt;
+  &lt;li class="is-done"&gt;&lt;h3 class="ampy-list__title"&gt;Du beskriver jobbet&lt;/h3&gt;&lt;p&gt;Formuläret tar en minut.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;h3 class="ampy-list__title"&gt;Vi ringer och räknar&lt;/h3&gt;&lt;p&gt;Fast pris innan vi börjar.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class="ampy-price"&gt;
+  &lt;span class="ampy-price__label"&gt;Att betala&lt;/span&gt;
+  &lt;span class="ampy-price__amount"&gt;14 950 kr&lt;/span&gt;
+  &lt;span class="ampy-price__note"&gt;efter ROT-avdrag på arbetskostnaden.&lt;/span&gt;
+&lt;/div&gt;</code></pre></div>
+
+      <h2 class="ds-h2" id="avvikelser"><a class="ds-anchor" href="#avvikelser">Avvikelser i blocken</a></h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Block</th><th>Avvikelse mot kanon</th><th>Åtgärd</th></tr></thead>
+        <tbody>
+          <tr><td>rot-gt-cro</td><td>eyebrow 13/700 .12em; steg-H3 i vikt 450, stegcirkelns förloppsbåge</td><td>12/600 .14em; H3 600 (bågen är blockets, S4)</td></tr>
+          <tr><td>header (website-blocks)</td><td>"GUIDER &amp; VERKTYG" 12,5/600</td><td>12</td></tr>
+          <tr><td>elcentral-kollen</td><td>"DITT BESKED" i Plus Jakarta Sans 600 12; pill i PJS 18/14, neutral med kant #8a8da5</td><td>Outfit; pill 16/14, kant --ampy-line-strong</td></tr>
+          <tr><td>LED, EV, battery</td><td>tier-label 15/600 .08em; trio och siffra i PJS 700, enhet PJS 500; stat-sub .55 (battery .42 = 3,99:1)</td><td>eyebrow 12; Outfit (B7); .55</td></tr>
+          <tr><td>fotobedomningen</td><td>eyebrow 15/600 .02em med kamera-glyf</td><td>12/600 .14em</td></tr>
+          <tr><td>visste-du-att</td><td>kicker 24/500 teal med blixt (--aptext-l)</td><td>egen roll i blocket, ingen eyebrow</td></tr>
+          <tr><td>energycalc</td><td>anchor-siffra Outfit 900 52/35,7 lh 1.08; eyebrow #5dcaa5 på mörkt</td><td>700 56/38 (900 tillåten variant, B2); vit .66</td></tr>
+          <tr><td>hero-1, hero-2 E</td><td>stjärnor vita på foto (hero-1); hero-2 guld per V7</td><td>guld överallt (B12)</td></tr>
+          <tr><td>thank-you, offer, main-form, footer</td><td>"5 av 5 · Betyg på Google" 16/14 med "·"; footer "5.0" PJS 800 teal</td><td>proof-rad utan "·", Outfit, bläck; [GAP] på siffran</td></tr>
+          <tr><td>eljour-block</td><td>nivåtagg 12/600 (#fdeceb/#b3261e, #fff4e0/#8a5800); statuspill #0a6e58 på #e3f6f1; trust-lista 15/400 med hårlinjer</td><td>= --sm och --live (klonade); kompakt lista</td></tr>
+          <tr><td>booking, offer</td><td>ref-pill 13/600 teal-ink på teal .08; belopp 26 till 30/700</td><td>--action; prisrad 22</td></tr>
+          <tr><td>testimonials-block</td><td>stjärnor neon-mint på mörkt; datum .72</td><td>guld (B12); .72 behålls</td></tr>
+          <tr><td>article-template</td><td>eyebrows 10 till 15 px i 700 till 800 med .2 till .25em</td><td>12/600 .14em</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

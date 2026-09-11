@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knappar och länkar: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  .ds-main { min-width: 0; }
+  .ds-demo { row-gap: var(--ampy-space-s); }
+  .ds-demo--stack > :not(.ds-demo__label) { width: 100%; }
+  .ds-demo__col { display: grid; gap: var(--ampy-space-xs); width: min(100%, 44rem); }
+  .ds-demo__col--wide { width: min(100%, 64rem); }
+  .ds-demo__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr)); gap: var(--ampy-space-s); width: 100%; align-items: start; }
+  .ds-demo__grid .ds-demo__item { align-items: stretch; }
+  .ds-demo__item { display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  .ds-demo__item > div, .ds-demo__item > fieldset { width: 100%; }
+  .ds-demo__tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); }
+  .ds-demo--dark .ds-demo__tag { color: var(--ampy-on-dark-faint); }
+  .ds-demo--dark { color: var(--ampy-on-dark); }
+  :where(.ds-demo--dark) :where(p, li) { color: var(--ampy-on-dark-soft); }
+  .ds-demo .is-focus:not(.ampy-input, .ampy-textarea, .ampy-select, .ampy-chip) { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+  .ds-demo--dark .is-focus { outline-color: var(--ampy-focus-on-dark); }
+  .ds-shot { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); overflow: hidden; background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
+  .ds-shot img { display: block; width: 100%; height: auto; }
+  .ds-anchor { color: inherit; text-decoration: none; }
+  .ds-anchor:hover::after { content: " #"; color: var(--ampy-ink-faint); font-weight: 300; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: 1.5; max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.5rem; }
+  .ds-list--small { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  .ds-toc { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 var(--ampy-space-l); padding: 0; list-style: none; }
+  .ds-toc a { display: inline-block; padding: 0.5rem 1.1rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); background: var(--ampy-bg-surface); color: var(--ampy-ink-muted); text-decoration: none; font-size: var(--ampy-text-small); }
+  .ds-toc a:hover { color: var(--ampy-ink); border-color: var(--ampy-line-strong); }
+  .ds-table td:first-child { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); white-space: nowrap; }
+  .ds-ok { color: var(--ampy-success-ink); font-weight: var(--ampy-w-medium); }
+  .ds-dev { color: var(--ampy-warn-ink); }
+  @media (max-width: 991px) { .ds-demo__col, .ds-demo__col--wide { width: 100%; } }
+</style>
+</head>
+<body class="ds-body ampy">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><!-- kopia av system/ikoner.svg (kanon) så att <use href="#ik-..."> fungerar även via file:// -->
+  
+  <symbol id="ik-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="ik-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M17 7H7M17 7v10"/></symbol>
+  <symbol id="ik-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.05 6A5 5 0 0 1 18 9.95M14.05 2a9 9 0 0 1 7.95 7.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="ik-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ik-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/></symbol>
+  <symbol id="ik-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="ik-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="ik-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="ik-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="ik-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H13l1-8.5Z"/></symbol>
+  <symbol id="ik-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></symbol>
+  <symbol id="ik-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ik-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></symbol>
+  <symbol id="ik-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></symbol>
+  <symbol id="ik-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="ik-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
+  <symbol id="ik-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.6-4.6"/></symbol>
+  <symbol id="ik-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="11" width="17" height="10" rx="2"/><path d="M7.5 11V7.5a4.5 4.5 0 0 1 9 0V11"/></symbol>
+  <symbol id="ik-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="ik-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="ik-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m21 8-8 5.2a1.9 1.9 0 0 1-2 0L3 8"/></symbol>
+  <symbol id="ik-google" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C41.4 34.8 44 29.9 44 24c0-1.3-.1-2.6-.4-3.9z"/></symbol>
+</svg>
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="index.html">Alla komponenter</a>
+        <a href="knappar.html" aria-current="page">Knappar och länkar</a>
+        <a href="text.html">Textelement</a>
+        <a href="ytor.html">Ytor och kort</a>
+        <a href="falt.html">Fält och reglage</a>
+        <a href="verktyg.html">Kalkylator-kitet</a>
+        <a href="diagnostik.html">Diagnostik-kitet</a>
+        <a href="block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Komponenter</span>
+      <h1 class="ds-h1">Knappar och länkar</h1>
+      <p class="ds-lead">En knappform (58 px, radie 16, Outfit 500 16), tre ytor: gradient för sidans enda konverterings-CTA, tel-ring för samtalet, solid teal-deep inne i verktyg och formulär. Ghost för det som inte ska konkurrera. Textlänkar för resten.</p>
+      <p class="ds-source">Kanon: <code>cta-website</code> (<code>radgivning-cta/radgivning-cta.css:8-48</code>, <code>ring-cta/ring-cta.css:8-65</code>, auktoritet 1). Solid: <code>website-blocks</code> header-CTA (<code>Header/delivery/fluentsnippets/styles.css:66-77</code>) med ytan teal-deep enligt beslut B5. Ghost: <code>elcentral-kollen</code> (<code>assets/elcentralkollen.css:555-579</code>). Länkar: elcentral <code>cta-link</code> (:607-614), hero-2 <code>ampy-link-quiet</code>, thank-you <code>.ghost</code>. Finns även i: hero-1, rot-gt, fotobedomningen, hero-2 S/G/Z/E, elkollen, elcentral, picasso, main-cta, eljour-sticky-bar (avvikelser längst ned). Blockbiblioteket: <a class="ds-a" href="../blockbibliotek.html#cta-website">CTA-biblioteket</a>.</p>
+      <ul class="ds-toc">
+        <li><a href="#primar">Primär gradient</a></li><li><a href="#ring">Tel-ring</a></li><li><a href="#solid">Solid</a></li><li><a href="#ghost">Ghost</a></li><li><a href="#storlekar">Storlekar</a></li><li><a href="#lankar">Textlänkar</a></li><li><a href="#anatomi">Anatomi</a></li><li><a href="#gor">Gör och gör inte</a></li><li><a href="#kod">Kod</a></li><li><a href="#avvikelser">Avvikelser</a></li>
+      </ul>
+
+      <div class="ds-shot"><img src="../bilder/cta-website-desktop.jpg" alt="Källan: CTA-bibliotekets tre knappar i auto-bredd och fullbredd" loading="lazy"></div>
+      <p class="ds-caption">Så här ser källan ut: <code>kallor/CTA-website/index.html</code> vid 1440. Systemets knappar nedan är klonen, bundna till tokens.</p>
+
+      <h2 class="ds-h2" id="primar"><a class="ds-anchor" href="#primar">Primär: gradient-CTA</a></h2>
+      <p class="ds-p">Sidans EN konverterings-CTA. Handlingsgradienten 120° neon-mint till sekundärteal, indigo-text (5,51:1), tre-lagers skugga, lyft 1,5 px och pilen skalar 1,18 vid hover. Aldrig två gradienter i samma vy (beslut B6).</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><a class="ampy-btn ampy-btn--primary" href="#" data-probe="btn-primary">Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover (.is-hover)</span><a class="ampy-btn ampy-btn--primary is-hover" href="#">Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Focus-visible</span><a class="ampy-btn ampy-btn--primary is-focus" href="#">Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Utan ikon</span><a class="ampy-btn ampy-btn--primary" href="#">Kostnadsfri rådgivning</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Disabled</span><button class="ampy-btn ampy-btn--primary" type="button" disabled>Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></button></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Laddar (.is-loading)</span><button class="ampy-btn ampy-btn--primary is-loading" type="button" aria-busy="true">Skickar din förfrågan <span class="ampy-btn__spin" aria-hidden="true"></span></button></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><a class="ampy-btn ampy-btn--primary" href="#">Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-btn ampy-btn--primary is-hover" href="#">Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Focus-visible (neon-mint)</span><a class="ampy-btn ampy-btn--primary is-focus" href="#">Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a></div>
+      </div>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Fullbredd (.ampy-btn--block)</span>
+        <div class="ds-demo__col"><a class="ampy-btn ampy-btn--primary ampy-btn--block" href="#">Kostnadsfri offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a></div>
+      </div>
+      <p class="ds-caption">Fullbredd: text vänster, ikon höger, padding 11/22. Används staplad på mobil och i kort. Naturlig bredd är standard i alla fyra hjältar (ägarorder 2026-08-06).</p>
+
+      <h2 class="ds-h2" id="ring"><a class="ds-anchor" href="#ring">Tel-ring</a></h2>
+      <p class="ds-p">Samtalsknappen. Blå gradient crystal-blue till sekundärteal, vit chip 36 px med lur och en lugn puls-ring var 2,8 s ("linjen är öppen"). I fullbredd byter chipen sida. Numret sätts med <code>tabular-nums</code> så det inte hoppar när det byts.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><a class="ampy-btn ampy-btn--ring" href="tel:+46102657979" data-probe="btn-ring"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="#ik-phone"/></svg></span><span class="ampy-link--tel">Ring 010-265 79 79</span></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-btn ampy-btn--ring is-hover" href="tel:+46102657979"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="#ik-phone"/></svg></span><span class="ampy-link--tel">Ring 010-265 79 79</span></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Focus-visible</span><a class="ampy-btn ampy-btn--ring is-focus" href="tel:+46102657979"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="#ik-phone"/></svg></span><span class="ampy-link--tel">Ring 010-265 79 79</span></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Kompakt 48</span><a class="ampy-btn ampy-btn--ring ampy-btn--compact" href="tel:+46102657979"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="#ik-phone"/></svg></span><span class="ampy-link--tel">010-265 79 79</span></a></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><a class="ampy-btn ampy-btn--ring" href="tel:+46102657979"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="#ik-phone"/></svg></span><span class="ampy-link--tel">Ring 010-265 79 79</span></a></div>
+      </div>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Fullbredd: chipen till höger</span>
+        <div class="ds-demo__col"><a class="ampy-btn ampy-btn--ring ampy-btn--block" href="tel:+46102657979"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="#ik-phone"/></svg></span><span class="ampy-link--tel">Ring 010-265 79 79</span></a></div>
+      </div>
+
+      <h2 class="ds-h2" id="solid"><a class="ds-anchor" href="#solid">Solid: knappen inne i verktyg, formulär och kort</a></h2>
+      <p class="ds-p">Header-CTA:ns form (48 px, 16/600, vit text, teal-glöd) men ytan är <code>--ampy-action-strong</code> (teal-deep, 5,27:1) i stället för teal-core (2,96:1): beslut B5. Kanon med förbehåll: knappbiblioteket saknar en sekundär, så det här är sajtens mest spridda solida knapp (header, elcentral, elkollen, LED, energycalc) samlad till en. Hover byter bara färg, ingen lyft.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default 58</span><a class="ampy-btn ampy-btn--secondary" href="#">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Kompakt 48 (header)</span><a class="ampy-btn ampy-btn--secondary ampy-btn--compact" href="#" data-probe="btn-solid">Kontakta oss</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-btn ampy-btn--secondary is-hover" href="#">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Focus-visible</span><a class="ampy-btn ampy-btn--secondary is-focus" href="#">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Disabled</span><button class="ampy-btn ampy-btn--secondary" type="button" disabled>Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></button></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Laddar</span><button class="ampy-btn ampy-btn--secondary is-loading" type="button" aria-busy="true">Boka rådgivning <span class="ampy-btn__spin" aria-hidden="true"></span></button></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta (LED-kortets CTA)</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><a class="ampy-btn ampy-btn--secondary" href="#">Få en skräddarsydd offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-btn ampy-btn--secondary is-hover" href="#">Få en skräddarsydd offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark ds-demo--stack">
+        <span class="ds-demo__label">Mörk yta, fullbredd (LED)</span>
+        <div class="ds-demo__col ds-demo__col--wide"><a class="ampy-btn ampy-btn--secondary ampy-btn--block" href="#">Få en skräddarsydd offert <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+      </div>
+
+      <h2 class="ds-h2" id="ghost"><a class="ds-anchor" href="#ghost">Ghost: outline utan konkurrens</a></h2>
+      <p class="ds-p">Elcentrals <code>cta-primary--outline</code> och <code>cta-secondary</code>: transparent, 1 px kant, bläcktext, hover teal-kant på subtil yta. Kanten är <code>--ampy-line-strong</code> (3,39:1) i stället för källans #e3e5ed (1,26:1, underkänd som kontrollkant). På mörkt: hero-2:s ghost (vit .10, kant .40).</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default 58</span><a class="ampy-btn ampy-btn--ghost" href="#">Läs mer om elcentraler</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Kompakt 48</span><a class="ampy-btn ampy-btn--ghost ampy-btn--compact" href="#" data-probe="btn-ghost">Fortsätt <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-btn ampy-btn--ghost ampy-btn--compact is-hover" href="#">Fortsätt <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Focus-visible</span><a class="ampy-btn ampy-btn--ghost ampy-btn--compact is-focus" href="#">Fortsätt <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Disabled</span><button class="ampy-btn ampy-btn--ghost ampy-btn--compact" type="button" disabled>Fortsätt <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></button></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta (hero-2 "bli uppringd")</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><a class="ampy-btn ampy-btn--ghost" href="#">Bli uppringd i stället</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-btn ampy-btn--ghost is-hover" href="#">Bli uppringd i stället</a></div>
+      </div>
+
+      <h2 class="ds-h2" id="storlekar"><a class="ds-anchor" href="#storlekar">Storlekar: 58 och 48</a></h2>
+      <p class="ds-p">Två höjder. 58 px (biblioteket, hero-1, rail-CTA:erna) och 48 px kompakt (header, elcentral, elkollen, thank-you). Källorna hade fyra: 38, 46, 52 och 58; Picassos 38 och hero-2-forms 46 utgår. Under 480 px får <code>.ampy-btn--block-mobile</code> knappen att fylla raden som rail-CTA:erna gör.</p>
+      <div class="ampy ds-demo" style="align-items:center">
+        <a class="ampy-btn ampy-btn--primary" href="#">58 px <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a><a class="ampy-btn ampy-btn--primary ampy-btn--compact" href="#">48 px <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a><a class="ampy-btn ampy-btn--secondary" href="#">58 px <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a><a class="ampy-btn ampy-btn--secondary ampy-btn--compact" href="#">48 px <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></a><a class="ampy-btn ampy-btn--ghost" href="#">58 px</a><a class="ampy-btn ampy-btn--ghost ampy-btn--compact" href="#">48 px</a>
+      </div>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Två CTA:er i rad (elcentral-rail): fyller raden under 480</span>
+        <div class="ds-demo__col ds-demo__col--wide" style="display:flex;flex-wrap:wrap;gap:var(--ampy-space-s)"><a class="ampy-btn ampy-btn--primary ampy-btn--block-mobile" href="#">Kontakta oss <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-up-right"/></svg></a><a class="ampy-btn ampy-btn--ring ampy-btn--block-mobile" href="tel:+46102657979"><span class="ampy-btn__chip" aria-hidden="true"><svg><use href="#ik-phone"/></svg></span><span class="ampy-link--tel">010-265 79 79</span></a></div>
+      </div>
+
+      <h2 class="ds-h2" id="lankar"><a class="ds-anchor" href="#lankar">Textlänkar</a></h2>
+      <p class="ds-p">Fyra länkroller. <code>.ampy-link</code>: understruken handlingslänk i teal-deep (elcentral cta-link, 14/500, 44 px träffyta). <code>--quiet</code>: bläck utan understrykning, teal vid hover (hero-2, var-process). <code>--ghost</code>: pillformad lågemfas (thank-you "Till startsidan"). <code>--tel</code>: lur + nummer i tabular-nums. Teal-core är aldrig textfärg: text-teal är <code>--ampy-action-strong</code>.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Handlingslänk</span><a class="ampy-link" href="#" data-probe="link">Räkna ut din besparing <svg aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-link is-hover" href="#">Räkna ut din besparing <svg aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Tyst länk</span><a class="ampy-link ampy-link--quiet" href="#">Se alla laddboxar <svg aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Tyst länk, hover</span><a class="ampy-link ampy-link--quiet is-hover" href="#">Se alla laddboxar <svg aria-hidden="true"><use href="#ik-arrow-right"/></svg></a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Ghost-pill</span><a class="ampy-link ampy-link--ghost" href="#">Till startsidan</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Ghost, hover</span><a class="ampy-link ampy-link--ghost is-hover" href="#">Till startsidan</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Tel-länk</span><a class="ampy-link ampy-link--quiet ampy-link--tel" href="tel:+46102657979"><svg aria-hidden="true"><use href="#ik-phone"/></svg>010-265 79 79</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Focus-visible</span><a class="ampy-link is-focus" href="#">Räkna ut din besparing</a></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Handlingslänk</span><a class="ampy-link" href="#">Så har vi räknat</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Hover</span><a class="ampy-link is-hover" href="#">Så har vi räknat</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Ghost-pill</span><a class="ampy-link ampy-link--ghost" href="#">Avbryt</a></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Tel-länk</span><a class="ampy-link ampy-link--quiet ampy-link--tel" href="tel:+46102657979"><svg aria-hidden="true"><use href="#ik-phone"/></svg>010-265 79 79</a></div>
+      </div>
+
+      <h2 class="ds-h2" id="anatomi"><a class="ds-anchor" href="#anatomi">Anatomi</a></h2>
+      <p class="ds-p">Mått vid 1440 och 390, källan mot systemet. Källvärdena är CSS-värden ur <code>kallor/</code> och inventeringens mätningar; systemets värden mäts i Chromium av <code>site/_probes/s2-parity.mjs</code> (tabellen i <code>site/_bygglogg/S2.md</code>).</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Egenskap</th><th>Primär (cta-website)</th><th>Tel-ring (cta-website)</th><th>Solid 48 (header)</th><th>Ghost 48 (elcentral)</th><th>Länk (elcentral cta-link)</th></tr></thead>
+        <tbody>
+          <tr><td>Höjd 1440 / 390</td><td>58 / 58</td><td>58 / 58</td><td>48 / 48</td><td>48 / 48</td><td>44 träffyta</td></tr>
+          <tr><td>Padding</td><td>11 / 24 (block 11 / 22)</td><td>11 / 30 vänster 12 (block 12 / 22)</td><td>0 / 26</td><td>12 (fullbredd)</td><td>8 / 0</td></tr>
+          <tr><td>Radie</td><td>16 <code>--ampy-radius-button</code></td><td>16</td><td>16 (källan 15)</td><td>16 (källan 10)</td><td>6 vid fokus</td></tr>
+          <tr><td>Typografi</td><td>Outfit 500 16, lh 1</td><td>Outfit 500 16, lh 1</td><td>Outfit 600 16</td><td>Outfit 500 16 (källan 600 15)</td><td>Outfit 500 14, understruken offset 3</td></tr>
+          <tr><td>Ikon</td><td>pil 16, scale 1,18 vid hover</td><td>chip 36, lur 17, puls 2,8 s</td><td>pil 16, +3 px vid hover</td><td>16</td><td>15</td></tr>
+          <tr><td>Färg</td><td>text #282a53 på 120° #55ff9a till #5eb1bf</td><td>text #282a53 på 120° #b6f2ff till #5eb1bf</td><td>vit på #007a69 (källan #00a991, B5)</td><td>#090b32 på transparent, kant rgba(9,11,50,.48)</td><td>#007a69</td></tr>
+          <tr><td>Skugga</td><td>inset vit .45 + 0 2 4 .06 + 0 10 26 -6 grön .45</td><td>inset vit .55 + 0 2 4 .06 + 0 10 26 -6 blå .55</td><td>0 4 12 -5 teal .5</td><td>ingen</td><td>ingen</td></tr>
+          <tr><td>Hover</td><td>lyft -1,5, saturate 1,06, skugga upp</td><td>lyft -1,5, saturate 1,08</td><td>#008d79</td><td>kant teal, bg sky-mist</td><td>bläck, 2 px understrykning</td></tr>
+          <tr><td>Fokus</td><td colspan="4">3 px <code>--ampy-focus</code> (navy) offset 3; neon-mint på mörkt (B14)</td><td>2 px navy offset 3</td></tr>
+          <tr><td>Rörelse</td><td colspan="5">160 ms <code>--ampy-dur-fast</code>; reduced-motion nollställer lyft, pil och puls</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="gor"><a class="ds-anchor" href="#gor">Gör och gör inte</a></h2>
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>En gradient-CTA per yta. Solid teal-deep för alla knappar inne i verktyg, formulär och kort (B6).</li>
+          <li>Verb i imperativ, du-tilltal, utan utropstecken: "Kostnadsfri offert", "Boka rådgivning", "Ring 010-265 79 79".</li>
+          <li>Håll 58 px i block och hjältar, 48 px i header och inne i kort. Fullbredd bara med <code>--block</code> på mobil eller i kort.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Ingen egen gradient (thank-you 135°, main-form 100°, hero-2-form 282°, eljour 146°): tokenen är den enda handlingsgradienten.</li>
+          <li>Teal-core som yta under vit text (header i dag, 2,96:1) eller som textfärg i en länk. Text-teal är teal-deep.</li>
+          <li>Pillknappar (999), 38 px-höjd, tankstreck eller "·" i etiketten, versaler, ikon som glider i sidled vid hover (pilen skalar).</li>
+        </ul></div>
+      </div>
+
+      <h2 class="ds-h2" id="kod"><a class="ds-anchor" href="#kod">Kod</a></h2>
+      <p class="ds-p">Ikonerna hämtas ur spriten <code>system/ikoner.svg</code> (samma familj i alla exempel, 1,75 px stroke). Gradient-CTA:n är en länk till <code>/offert/</code> eller <code>/kontakt/</code>, ringknappen en <code>tel:</code>-länk, formulärknappar är <code>&lt;button&gt;</code>.</p>
+      <div class="ds-code"><pre><code>&lt;!-- Primär gradient-CTA --&gt;
+&lt;a class="ampy-btn ampy-btn--primary" href="https://ampy.se/offert/"&gt;
+  Kostnadsfri offert
+  &lt;svg class="ampy-btn__icon" aria-hidden="true"&gt;&lt;use href="/system/ikoner.svg#ik-arrow-up-right"/&gt;&lt;/svg&gt;
+&lt;/a&gt;
+
+&lt;!-- Tel-ring, fullbredd på mobil --&gt;
+&lt;a class="ampy-btn ampy-btn--ring ampy-btn--block" href="tel:+46102657979"&gt;
+  &lt;span class="ampy-btn__chip" aria-hidden="true"&gt;&lt;svg&gt;&lt;use href="/system/ikoner.svg#ik-phone"/&gt;&lt;/svg&gt;&lt;/span&gt;
+  &lt;span class="ampy-link--tel"&gt;Ring 010-265 79 79&lt;/span&gt;
+&lt;/a&gt;
+
+&lt;!-- Solid (verktyg/formulär), kompakt 48, laddar --&gt;
+&lt;button class="ampy-btn ampy-btn--secondary ampy-btn--compact is-loading" type="submit" aria-busy="true"&gt;
+  Boka rådgivning &lt;span class="ampy-btn__spin" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Ghost --&gt;
+&lt;button class="ampy-btn ampy-btn--ghost ampy-btn--compact" type="button"&gt;Fortsätt&lt;/button&gt;
+
+&lt;!-- Länkar --&gt;
+&lt;a class="ampy-link" href="/elservice/"&gt;Räkna ut din besparing&lt;/a&gt;
+&lt;a class="ampy-link ampy-link--quiet" href="/laddboxar/"&gt;Se alla laddboxar&lt;/a&gt;
+&lt;a class="ampy-link ampy-link--ghost" href="/"&gt;Till startsidan&lt;/a&gt;</code></pre></div>
+      <p class="ds-caption">Tillstånd i markup: <code>disabled</code> eller <code>aria-disabled="true"</code>, <code>.is-loading</code> + <code>aria-busy</code>. Dokumentationens <code>.is-hover</code> och <code>.is-focus</code> speglar bara hover- och fokusstilen i exemplen.</p>
+
+      <h2 class="ds-h2" id="avvikelser"><a class="ds-anchor" href="#avvikelser">Avvikelser i blocken</a></h2>
+      <p class="ds-p">Driften ur komponentkartan. Kanon vinner; blocken listas så att de kan rättas när de rör sig.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Block</th><th>Avvikelse mot kanon</th><th>Åtgärd</th></tr></thead>
+        <tbody>
+          <tr><td>hero-1 (live startsida)</td><td>samma gradient-CTA men navy-skugga .40 i stället för grön glöd; 15,5/15 px text på mobil</td><td>tokenskuggan; 16 px utan mobilskalning</td></tr>
+          <tr><td>rot-gt-cro</td><td>padding 32 i stället för 24</td><td>24</td></tr>
+          <tr><td>fotobedomningen</td><td>naken pil utan chip på ringknappen; kvitto-Ring i solid navy</td><td>chip 36; solid = teal-deep</td></tr>
+          <tr><td>elkollen, elcentral rail</td><td>58 h men Outfit 400, bläck #0d0d0d, glöd rgba(241,241,241,.25), space-between; ringen 141° utan chip</td><td>500, indigo, tokenskugga, 120° med chip</td></tr>
+          <tr><td>picasso</td><td>38 px hög, padding --apspace-2xs</td><td>utgår, 58 är kanon</td></tr>
+          <tr><td>hero-2-form</td><td>submit 282° till #00ffda, radie 14, 46 h</td><td>tokengradient, 16, 58</td></tr>
+          <tr><td>header (website-blocks)</td><td>solid teal-core + vit (2,96:1), radie 15, pulsprick under knappen</td><td>teal-deep (B5), 16; pulsprick är headerns egen (block.css)</td></tr>
+          <tr><td>LED, EV, energycalc, main-form, booking</td><td>solid i 50 / 56 / 52-57 / 52 pill / 48 navy; radier 12, 14, 999; PJS 600, Outfit 500 18</td><td>48 eller 58, radie 16, Outfit 500/600 16, teal-deep</td></tr>
+          <tr><td>eljour-block, sticky-bar, hero-2 E</td><td>nödknappen 146° #055a4b till #0a8169, radie 14 (tredje CTA-språket)</td><td>solid teal-deep; "jour öppen" bärs av statuspillen (B6)</td></tr>
+          <tr><td>booking, thank-you, main-form</td><td>sekundär 52 h radie 16 med 1,5 px kant; pillknappar 999</td><td>ghost 48/58; en knappform (B4)</td></tr>
+          <tr><td>elcentral cta-secondary</td><td>saknar font-family, faller till Arial</td><td>Outfit via <code>.ampy-btn</code></td></tr>
+          <tr><td>article-template</td><td>länkar i cobalt #326afd</td><td>teal-deep (B1)</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="ds-caption">Tokens som saknas för knappen (rapporterat i bygglogg): höjderna 58/48, padding 11/24, gap 16 och chipens 36 px står som komponentvärden i <code>knappar.css</code> med källrad.</p>
+
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

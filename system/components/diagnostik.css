@@ -1,1 +1,300 @@
-/* diagnostik: byggs i fas 3 */
+/* ============================================================================
+   AMPY DESIGNSYSTEM · system/components/diagnostik.css (S3)
+   Diagnostik-kitet (.ampy-diag*): rail + stage, frågekort med tap-chips, förlopp, besked som
+   dualstatus-matris (Säkerhet / Redo) och trafikljus-board (GRÖN/GUL/RÖD), källrad, fynd, akut,
+   dela, sticky-CTA (mobil), blockläge, no-JS-not.
+
+   Kanon (konsolidering/komponenter-karta.md, Diagnostik):
+   · Rail                    = elcentral-kollen assets/elcentralkollen.css:160-279 (auk 1, "1:1 med Elkollen hero__copy")
+   · Frågekort (stage)       = elcentralkollen.css:322-339 ; crumb + steg = :344-359 ; fråga = :364-399
+   · Chips / options         = falt.css .ampy-chips/.ampy-chip (S2, klon av elcentralkollen.css:373-395)
+   · Besked: dualstatus      = elcentralkollen.css:404-441 (signaturen) ; pill = text.css .ampy-tag
+   · Besked: trafikljus      = elkollen assets/behorighetskollen.css:1223-1290 (board), :417-470 (källrad, tabbar), :488-560 (rader, caveat)
+   · Fynd / akut / factnote  = elcentralkollen.css:447-502
+   · Dela                    = elcentralkollen.css:618-633
+   · Sticky-CTA (mobil)      = elcentralkollen.css:593-604
+   · Blockläge               = elcentralkollen.css:687-840 (preview/block.html)
+   · No-JS-not               = elkollen behorighetskollen.css .ampy-bk__noscript / energycalc .noscript-note
+
+   Primitiver som kitet komponerar med: .ampy-btn(--ring/--secondary/--ghost/--compact/--block) knappar.css,
+   .ampy-list--check/.ampy-eyebrow/.ampy-tag/.ampy-source/.ampy-link text.css, .ampy-card ytor.css.
+   Literaler som saknar token = komponent-egna --_* med källa. Avvikelser: site/komponenter/diagnostik.html + site/_bygglogg/S3.md.
+   ============================================================================ */
+
+/* ---------- Rot: shell 1280 (containern) + __inner: rail 44fr / stage 56fr, gap 64 (elcentralkollen.css:160-175) ----------
+   .ampy-diag är storlekscontainern och kan därför inte styras av sina egna @container-regler: gridet ligger på .ampy-diag__inner. */
+.ampy-diag {
+  --_gap: 64px;                                   /* källa: elcentralkollen.css:173 gap 6.4rem (= elkollen hero__grid) ; tokens: xl 56 / 2xl 79 */
+  --_minh: 560px;                                 /* källa: elcentralkollen.css:41 --ec-q-minh 56rem (mobil 60rem :338) */
+  --_q-fs: clamp(20px, 1.2vw + 14.7px, 32px);     /* källa: elcentralkollen.css:114 (--fs-title 20-24) + :856 (>= 1024: 26-32) ; tokens saknar kortrubrik mellan h3 22 och h2 36 */
+  --_fine: var(--ampy-fine, 13px);
+  --_illu: 120px;                                 /* källa: elcentralkollen.css:869 start-illu 12rem (mobil 11rem) */
+  --_ds-min: 420px;                               /* källa: elcentralkollen.css:875 dualstatus min-width 42rem (>= 1024) */
+  --_axis-w: 90px;                                /* källa: elcentralkollen.css:427 statusrow-axis min-width 9rem (<= 520: 7rem) */
+  /* Besked-zonens tint är ett steg LJUSARE än pillens (elcentral "whisper-wash"); tokens har bara ett tint-steg (= pillen), så zonen bär källans värden */
+  --_tint-success: rgb(240,249,245);              /* källa: elcentralkollen.css:92 --tint-success (pill = --ampy-success-tint) */
+  --_tint-warning: rgb(252,247,234);              /* källa: elcentralkollen.css:93 --tint-warning (pill = --ampy-warn-tint #fff4e0) */
+  --_tint-error: rgb(252,243,243);                /* källa: elcentralkollen.css:94 --tint-error (pill = --ampy-error-tint #fdeceb) */
+  --_tint-info: rgb(242,247,251);                 /* källa: elcentralkollen.css:95 --tint-info ; tokens har bara --ampy-info-ink */
+  --_tint-neutral: rgb(248,249,252);              /* källa: elcentralkollen.css:96 --tint-neutral */
+  --_sticky-shadow: 0 -8px 28px rgba(9,11,50,.10);/* källa: elcentralkollen.css:596 (11,13,42 -> midnight) */
+  --_block-max: 760px;                            /* källa: elcentralkollen.css:704 blockläge shell 76rem */
+  --_card-max: 636px;                             /* källa: elcentralkollen.css:723 stage 63.6rem i blockläge */
+  container-type: inline-size; container-name: ampy-diag;
+  display: block; width: 100%; max-width: var(--ampy-container); margin-inline: auto; min-width: 0;
+  padding: var(--ampy-space-xl) var(--ampy-gutter);   /* källa: clamp(2.4rem,4vw,5.6rem) / clamp(1.6rem,4vw,4rem) -> xl 56/27.3, gutter 39.6/21.5 */
+  font-family: var(--ampy-font); color: var(--ampy-ink); font-weight: var(--ampy-w-ui);
+  color-scheme: light;                            /* elcentralkollen.css:37: ljust-only, ingen auto-dark får invertera beskedet */
+}
+.ampy-diag--flush { padding: 0; }
+.ampy-diag__inner { display: grid; gap: var(--ampy-space-s); min-width: 0; }
+@container ampy-diag (min-width: 940px) {                                                          /* källan @media 1024 = ca 942 px innehållsbredd i 1280-skalet ; kanon --ampy-bp-lg 992 viewport = ca 936 innehåll */
+  .ampy-diag__inner { grid-template-columns: minmax(360px, 44fr) minmax(460px, 56fr); gap: var(--_gap); align-items: start; }
+  .ampy-diag__rail { align-self: start; min-height: var(--_minh); display: flex; flex-direction: column; justify-content: center; }
+}
+
+/* Bara kortet (dokumentation, inbäddat 600-läge i elkollen preview/index.html): ingen rail, kortets bredd = stage i skalet */
+.ampy-diag--solo { max-width: calc(var(--_card-max) + 2 * var(--ampy-gutter)); margin-inline: 0; }
+.ampy-diag--solo .ampy-diag__inner { display: block; }
+
+/* ---------- Rail: varumärkeskolumnen (elcentralkollen.css:185-237) ---------- */
+.ampy-diag__rail { min-width: 0; }
+.ampy-diag__rail-title { margin: 0 0 var(--ampy-space-s); font-family: var(--ampy-font); font-size: var(--ampy-text-h1); font-weight: var(--ampy-w-display); line-height: var(--ampy-lh-display); letter-spacing: -0.02em; color: var(--ampy-ink); text-wrap: balance; }   /* källa PJS 700 clamp(32,4vw,44) lh 1.08 mb 20 -> h1-rollen 48/31.3 (B7) */
+.ampy-diag__rail-title em { font-style: normal; color: var(--ampy-action-strong); }                                  /* elkollen: sista H1-raden i teal-deep */
+.ampy-diag__rail-lead { margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-lead); font-weight: var(--ampy-w-ui); line-height: var(--ampy-lh-lead); color: var(--ampy-ink-muted); max-width: var(--ampy-measure-lead); }   /* källa 20/18 lh 1.6 mb 28 max 46ch -> lead 22/17 (B18) */
+.ampy-diag__rail > .ampy-list { margin: 0 0 var(--ampy-space-m); }                                                  /* trust-bullets = .ampy-list--check (samma källa) */
+.ampy-diag__rail-actions { display: flex; flex-wrap: wrap; gap: var(--ampy-space-s); align-items: center; margin: 0; }   /* källa gap 20 */
+.ampy-diag__rail-actions > .ampy-btn { flex: 1 1 0; min-width: 0; }                                                 /* källa: två lika breda knappar, label vänster / ikon höger (--block) */
+.ampy-diag__rail-stat { margin: var(--ampy-space-xs) 0 0; font-size: var(--ampy-text-small); font-weight: var(--ampy-w-ui); line-height: 1.6; color: var(--ampy-ink-muted); max-width: var(--ampy-measure-lead); }   /* källa 14/450 -> small 16/14.1 400 */
+.ampy-diag__rail-stat a { color: inherit; text-decoration: none; }
+.ampy-diag__rail-stat a:hover { color: var(--ampy-ink); text-decoration: underline; text-underline-offset: 2px; }
+.ampy-diag__rail-ask { display: none; margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-medium); line-height: 1.4; color: var(--ampy-ink); }   /* "Hellre prata med en elektriker direkt?" 17/500, bara mobil */
+/* Mobil: railen packas upp (display: contents) och ordnas runt kortet: H1, lead, KORTET, ask, knappar, stat (elcentralkollen.css:243-270) */
+@container ampy-diag (max-width: 939.98px) {
+  .ampy-diag__inner { gap: var(--ampy-space-xs); }
+  .ampy-diag__rail { display: contents; }
+  .ampy-diag__rail-title { order: 1; margin: 0; text-align: center; }
+  .ampy-diag__rail-lead { order: 2; margin: 0 auto var(--ampy-space-2xs); text-align: center; }
+  .ampy-diag__stage { order: 3; }
+  .ampy-diag__rail-ask { order: 4; display: block; text-align: center; max-width: 420px; margin: var(--ampy-space-s) auto -4px; }
+  .ampy-diag__rail-actions { order: 5; flex-direction: column; align-items: stretch; gap: var(--ampy-space-xs); max-width: 420px; width: 100%; margin-inline: auto; }
+  .ampy-diag__rail-actions > .ampy-btn { flex: 0 0 auto; width: 100%; padding-top: 22px; padding-bottom: 22px; }   /* källa <= 1023: padding 2.2rem 2.4rem (60 h) */
+  .ampy-diag__rail-actions > .ampy-btn--ring { order: -1; }                                                     /* telefon först på mobil */
+  .ampy-diag__rail-stat { order: 6; margin: 0 auto; max-width: 420px; text-align: center; }
+  .ampy-diag__rail > .ampy-list { display: none; }
+}
+
+/* ---------- Stage + kortet (elcentralkollen.css:322-339, 849) ---------- */
+.ampy-diag__stage { min-width: 0; }
+.ampy-diag__card {
+  position: relative; display: flex; flex-direction: column; gap: 0; min-width: 0;
+  padding: var(--ampy-space-card);                                     /* källa 32 (>= 1024) / 20 -> card = m 28/16.9 */
+  background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card);   /* källa radie 14 = drift, kort-kanon 20/16.3 */
+  box-shadow: var(--ampy-shadow-card);                                 /* källa 0 8px 28px rgba(11,13,42,.07) -> 0 10px 30px .07 */
+  color: var(--ampy-ink);
+}
+.ampy-diag__card--start, .ampy-diag__card--q { min-height: var(--_minh); }     /* start + frågor delar höjd: inget hoppar mellan steg */
+@container ampy-diag (max-width: 767px) { .ampy-diag:not(.ampy-diag--solo) .ampy-diag__inner { --_minh: 600px; --_illu: 110px; } }   /* solo (bara kortet, 636 brett) behåller desktopvärdet */
+.ampy-diag__card[data-dir="fwd"] { animation: ampyDiagFwd var(--ampy-dur-base) var(--ampy-ease) both; }
+.ampy-diag__card[data-dir="back"] { animation: ampyDiagBack var(--ampy-dur-base) var(--ampy-ease) both; }
+@keyframes ampyDiagFwd { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: none; } }
+@keyframes ampyDiagBack { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Start (elcentralkollen.css:282-292, 864-871) ---------- */
+.ampy-diag__card--start { align-items: center; justify-content: center; text-align: center; padding-bottom: var(--ampy-space-l); }
+.ampy-diag__start-illu { width: var(--_illu); height: var(--_illu); margin: 0 auto var(--ampy-space-s); display: grid; place-items: center; border-radius: var(--ampy-radius-pill); background: var(--apteal-tint); color: var(--ampy-action-strong); }
+.ampy-diag__start-illu svg { width: 56%; height: 56%; }
+.ampy-diag__start-title { margin: 0 auto var(--ampy-space-s); font-family: var(--ampy-font); font-size: var(--ampy-text-h2); font-weight: var(--ampy-w-display); line-height: 1.15; letter-spacing: -0.02em; color: var(--ampy-ink); max-width: 20ch; }   /* källa PJS 700 clamp(28-36)/20.9 -> h2 36/26.8 */
+.ampy-diag__start-cta { max-width: 320px; width: 100%; margin: 0 auto var(--ampy-space-xs); justify-content: center; }   /* källa 320x48 */
+.ampy-diag__start-time { margin: 0; font-size: var(--_fine); color: var(--ampy-ink-muted); }
+
+/* ---------- Crumb + förlopp (elcentralkollen.css:344-359) ---------- */
+.ampy-diag__crumb { display: flex; align-items: center; justify-content: space-between; gap: var(--ampy-space-xs); min-height: 32px; margin: 0 0 var(--ampy-space-m); }
+.ampy-diag__crumb--result { justify-content: flex-start; gap: var(--ampy-space-s); }
+.ampy-diag__steps { display: inline-flex; align-items: center; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.ampy-diag__step { width: 18px; height: 4px; border-radius: var(--ampy-radius-pill); background: var(--ampy-line); transition: background-color var(--ampy-dur-base) var(--ampy-ease), width var(--ampy-dur-base) var(--ampy-ease); }
+.ampy-diag__step.is-done { background: color-mix(in srgb, var(--ampy-action-strong) 70%, #fff); }
+.ampy-diag__step.is-current { width: 28px; background: var(--ampy-action-strong); }
+.ampy-diag__back, .ampy-diag__restart { display: inline-flex; align-items: center; gap: var(--ampy-space-3xs); min-height: 44px; padding: var(--ampy-space-4xs) 0; margin: 0; border: 0; background: none; cursor: pointer; font-family: var(--ampy-font); font-size: var(--_fine); font-weight: var(--ampy-w-ui); color: var(--ampy-ink-muted); border-radius: var(--ampy-radius-small); transition: color var(--ampy-dur-fast) var(--ampy-ease); }
+.ampy-diag__back svg { width: 16px; height: 16px; transform: rotate(180deg); }   /* spritens pil pekar höger; "Tillbaka" pekar vänster */
+.ampy-diag__back:hover, .ampy-diag__restart:hover { color: var(--ampy-action-strong); }
+.ampy-diag__back:focus-visible, .ampy-diag__restart:focus-visible { outline: 2px solid var(--ampy-focus); outline-offset: 2px; }
+.ampy-diag__restart { font-size: var(--ampy-text-eyebrow); }                     /* källa: "Börja om" 12, nedtonad (aldrig en feltryck-magnet) */
+.ampy-diag__crumb-job { font-size: var(--ampy-text-label); font-weight: var(--ampy-w-strong); color: var(--ampy-ink); }   /* elkollen: crumb bär jobbtiteln på beskedet */
+.ampy-diag__crumb-sep { color: var(--ampy-ink-faint); }
+
+/* ---------- Fråga (elcentralkollen.css:364-370, 856-857) ---------- */
+.ampy-diag__q { margin: 0 0 var(--ampy-space-m); font-family: var(--ampy-font); font-size: var(--_q-fs); font-weight: var(--ampy-w-strong); line-height: 1.25; letter-spacing: -0.015em; color: var(--ampy-ink); max-width: 26ch; text-wrap: balance; }
+.ampy-diag__q:has(+ .ampy-diag__q-sub) { margin-bottom: var(--ampy-space-3xs); }
+.ampy-diag__q-sub { margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-small); line-height: 1.45; color: var(--ampy-ink-muted); }
+.ampy-diag__card--q > .ampy-chips { margin: 0 0 var(--ampy-space-m); }
+.ampy-diag__multi-foot { display: flex; flex-direction: column; gap: var(--ampy-space-3xs); margin: var(--ampy-space-3xs) 0 var(--ampy-space-m); }
+.ampy-diag__multi-foot > .ampy-btn { width: 100%; justify-content: center; }
+.ampy-diag__multi-hint { margin: 0 0 var(--ampy-space-4xs); font-size: var(--_fine); color: var(--ampy-ink-muted); }
+.ampy-diag__info { display: flex; align-items: flex-start; gap: var(--ampy-space-2xs); margin: 0; padding: var(--ampy-space-xs) var(--ampy-space-xs); background: var(--ampy-bg-subtle); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); }   /* källa padding 12 14, radie 10 */
+.ampy-diag__info svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 3px; color: var(--ampy-info-ink); }
+.ampy-diag__info p { margin: 0; font-size: var(--ampy-text-small); line-height: 1.55; color: var(--ampy-ink-muted); max-width: var(--ampy-measure); }   /* källa 15/13 -> small 16/14.1 */
+
+/* ---------- Besked: dualstatus 2x2 (elcentralkollen.css:404-441, signaturen) ---------- */
+.ampy-diag__card--result > .ampy-eyebrow { margin: 0 0 var(--ampy-space-3xs); }
+.ampy-diag__dual {
+  display: flex; gap: var(--ampy-space-xs); margin: 0 0 var(--ampy-space-m);
+  padding: 18px 18px 18px 16px;                                        /* källa --space-8/-7 (mobil 14 14 14 12) ; tokens: s 19.8 / xs 14 */
+  border-radius: var(--ampy-radius-field); background: var(--_tint-neutral);
+  animation: ampyDiagRise var(--ampy-dur-slow) var(--ampy-ease) both;
+}
+.ampy-diag__dual[data-level="success"] { background: var(--_tint-success); }
+.ampy-diag__dual[data-level="warning"] { background: var(--_tint-warning); }
+.ampy-diag__dual[data-level="error"]   { background: var(--_tint-error); }
+.ampy-diag__dual[data-level="info"]    { background: var(--_tint-info); }
+.ampy-diag__dual-accent { flex-shrink: 0; width: 4px; border-radius: var(--ampy-radius-pill); background: var(--ampy-ink-faint); }
+.ampy-diag__dual[data-level="success"] .ampy-diag__dual-accent { background: var(--ampy-success-ink); }
+.ampy-diag__dual[data-level="warning"] .ampy-diag__dual-accent { background: var(--ampy-warn-ink); }
+.ampy-diag__dual[data-level="error"]   .ampy-diag__dual-accent { background: var(--ampy-error-ink); }
+.ampy-diag__dual[data-level="info"]    .ampy-diag__dual-accent { background: var(--ampy-info-ink); }
+.ampy-diag__dual-rows { display: flex; flex-direction: column; gap: var(--ampy-space-xs); flex: 1; min-width: 0; }
+.ampy-diag__dual-row { display: flex; align-items: center; gap: var(--ampy-space-xs); min-width: 0; }
+.ampy-diag__dual-axis { flex-shrink: 0; min-width: var(--_axis-w); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); line-height: 1.3; color: var(--ampy-ink-muted); }
+@container ampy-diag (min-width: 600px) { .ampy-diag__dual { width: fit-content; min-width: var(--_ds-min); max-width: 100%; } }   /* källan >= 1024 viewport; kortet ensamt (solo/blockläge) är 636 brett, så gränsen sätts på kortets bredd */
+@container ampy-diag (max-width: 520px) {
+  .ampy-diag__dual { padding: 14px 14px 14px 12px; gap: var(--ampy-space-2xs); }
+  .ampy-diag__dual-rows { gap: var(--ampy-space-2xs); }
+  .ampy-diag__dual-axis { min-width: 70px; }
+  .ampy-diag__dual .ampy-tag { white-space: nowrap; font-size: var(--ampy-text-label); padding: 6px 12px; gap: 6px; }   /* elcentralkollen.css:665: smalare kort -> pill 14, 6 12, så "Kräver bedömning" alltid ryms på en rad */
+  .ampy-diag__dual .ampy-tag svg { width: 14px; height: 14px; }
+}
+@keyframes ampyDiagRise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.ampy-diag__lede { margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-body); font-weight: var(--ampy-w-ui); line-height: 1.55; color: var(--ampy-ink); max-width: 54ch; }   /* källa 18/16 max 54ch (desktop) */
+
+/* ---------- Fynd (elcentralkollen.css:447-488) ---------- */
+.ampy-diag__findings-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--ampy-space-xs); flex-wrap: wrap; margin: 0 0 var(--ampy-space-xs); }
+.ampy-diag__findings-head h3, .ampy-diag__findings-head h4 { margin: 0; font-family: var(--ampy-font); font-size: var(--ampy-text-label); font-weight: var(--ampy-w-strong); line-height: 1.3; letter-spacing: -0.01em; color: var(--ampy-ink); }
+.ampy-diag__findings { list-style: none; margin: 0 0 var(--ampy-space-m); padding: 0; display: flex; flex-direction: column; gap: var(--ampy-space-xs); }   /* källa gap 16/14 */
+.ampy-diag__finding { animation: ampyDiagRise var(--ampy-dur-base) var(--ampy-ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+.ampy-diag__finding-head { display: flex; align-items: flex-start; gap: var(--ampy-space-xs); width: 100%; min-height: 44px; margin: 0; padding: var(--ampy-space-3xs) 0; background: none; border: 0; font: inherit; text-align: left; cursor: pointer; color: var(--ampy-ink); }
+.ampy-diag__finding-icon { flex-shrink: 0; width: 20px; height: 1.6em; font-size: var(--ampy-text-body); display: inline-flex; align-items: center; justify-content: center; }
+.ampy-diag__finding-icon svg { width: 20px; height: 20px; }
+.ampy-diag__finding--ok .ampy-diag__finding-icon { color: var(--ampy-success-ink); }
+.ampy-diag__finding--warn .ampy-diag__finding-icon { color: var(--ampy-warn-ink); }
+.ampy-diag__finding--info .ampy-diag__finding-icon { color: var(--ampy-info-ink); }
+.ampy-diag__finding--error .ampy-diag__finding-icon { color: var(--ampy-error-ink); }
+.ampy-diag__finding-label { flex: 1 1 auto; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-medium); line-height: 1.5; }   /* källa 18/15 500 */
+.ampy-diag__finding-chevron { flex-shrink: 0; width: 18px; height: 18px; margin-top: 4px; color: var(--ampy-ink-faint); transition: transform var(--ampy-dur-base) var(--ampy-ease); }
+.ampy-diag__finding.is-open .ampy-diag__finding-chevron { transform: rotate(180deg); }
+.ampy-diag__finding-head:hover .ampy-diag__finding-chevron { color: var(--ampy-ink-muted); }
+.ampy-diag__finding-head:focus-visible { outline: 0; box-shadow: var(--ampy-focus-ring); border-radius: var(--ampy-radius-small); }
+.ampy-diag__finding-detail { padding-left: calc(20px + var(--ampy-space-xs)); padding-bottom: var(--ampy-space-2xs); }
+.ampy-diag__finding-detail[hidden] { display: none; }
+.ampy-diag__finding-detail p { margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-ui); line-height: 1.6; color: var(--ampy-ink-muted); max-width: var(--ampy-measure); }
+
+/* ---------- Akut + factnote (elcentralkollen.css:491-502) ---------- */
+.ampy-diag__akut { display: flex; align-items: flex-start; gap: var(--ampy-space-2xs); margin: 0 0 var(--ampy-space-m); padding: var(--ampy-space-xs) var(--ampy-space-s); border: 1px solid color-mix(in srgb, var(--ampy-error-ink) 38%, transparent); background: var(--ampy-error-tint); border-radius: var(--ampy-radius-small); }
+.ampy-diag__akut svg { flex-shrink: 0; width: 18px; height: 18px; margin-top: 2px; color: var(--ampy-error-ink); }
+.ampy-diag__akut-label { margin: 0 0 var(--ampy-space-4xs); font-size: var(--_fine); font-weight: var(--ampy-w-display); color: var(--ampy-error-ink); }
+.ampy-diag__akut p { margin: 0; font-size: var(--ampy-text-small); line-height: 1.55; color: var(--ampy-ink); max-width: var(--ampy-measure); }
+.ampy-diag__factnote { display: flex; align-items: flex-start; gap: var(--ampy-space-2xs); margin: 0 0 var(--ampy-space-m); padding: var(--ampy-space-2xs) var(--ampy-space-xs); background: color-mix(in srgb, var(--ampy-warn-ink) 5%, transparent); border: 1px solid color-mix(in srgb, var(--ampy-warn-ink) 22%, transparent); border-radius: var(--ampy-radius-small); }
+.ampy-diag__factnote svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 2px; color: var(--ampy-warn-ink); }
+.ampy-diag__factnote p { margin: 0; font-size: var(--_fine); line-height: 1.55; color: var(--ampy-ink-muted); max-width: var(--ampy-measure); }
+.ampy-diag__factnote p + p { margin-top: var(--ampy-space-3xs); }
+.ampy-diag__factnote a { color: var(--ampy-action-strong); text-decoration: underline; text-underline-offset: 2px; }
+.ampy-diag__factnote a:hover { color: var(--ampy-ink); }
+
+/* ---------- Besked: trafikljus-board (elkollen behorighetskollen.css:1223-1290) ----------
+   Kortet bär data-verdict: 6 px sidostapel längs hela kortet + topp-wash 200/120, board = ikon + ord, tonad hårlinje. */
+.ampy-diag__card[data-verdict] { overflow: hidden; }
+.ampy-diag__card[data-verdict]::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--_v-accent); z-index: 2; }
+.ampy-diag__card[data-verdict]::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 200px; background: linear-gradient(180deg, var(--_v-wash) 0%, transparent 100%); pointer-events: none; z-index: 0; }
+.ampy-diag__card[data-verdict] > * { position: relative; z-index: 1; }
+@container ampy-diag (max-width: 767px) { .ampy-diag:not(.ampy-diag--solo) .ampy-diag__card[data-verdict]::after { height: 120px; } }
+.ampy-diag__card[data-verdict="green"]  { --_v-accent: var(--ampy-success-ink); --_v-wash: color-mix(in srgb, var(--ampy-success) 8%, transparent); --_v-board: color-mix(in srgb, var(--ampy-success) 10%, transparent); --_v-line: color-mix(in srgb, var(--ampy-success-ink) 45%, transparent); }   /* källa: accent rgb(27,132,71) "lövigare" -> success-ink ; board rgba(54,178,92,.10) ; kant .45 ; wash .08 */
+.ampy-diag__card[data-verdict="yellow"] { --_v-accent: var(--ampy-warn-ink);    --_v-wash: color-mix(in srgb, var(--ampy-warn) 9%, transparent);    --_v-board: color-mix(in srgb, var(--ampy-warn) 8%, transparent);    --_v-line: color-mix(in srgb, var(--ampy-warn-ink) 40%, transparent); }
+.ampy-diag__card[data-verdict="red"]    { --_v-accent: var(--ampy-error-ink);   --_v-wash: color-mix(in srgb, var(--ampy-error) 7%, transparent);   --_v-board: color-mix(in srgb, var(--ampy-error) 6%, transparent);   --_v-line: color-mix(in srgb, var(--ampy-error-ink) 40%, transparent); }
+.ampy-diag__judgment { display: flex; flex-direction: column; align-items: flex-start; margin: 0 0 var(--ampy-space-s); animation: ampyDiagRise 280ms var(--ampy-ease) both; }
+.ampy-diag__board { display: inline-flex; align-items: center; gap: var(--ampy-space-3xs); margin: 0; padding: var(--ampy-space-xs) var(--ampy-space-s); max-width: 100%; border: 1px solid var(--_v-line, var(--ampy-line-strong)); border-radius: var(--ampy-radius-field); background: var(--_v-board, var(--ampy-bg-subtle)); font-family: var(--ampy-font); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-display); line-height: 1.2; letter-spacing: -0.01em; color: var(--ampy-ink); }   /* källa Outfit 700 22/18, padding 14 18 / 12 16, radie 10 */
+.ampy-diag__board svg { flex-shrink: 0; width: 20px; height: 20px; color: var(--_v-accent, var(--ampy-ink)); }
+.ampy-diag__src { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--ampy-space-4xs); padding: var(--ampy-space-4xs) 0; font-size: var(--ampy-text-eyebrow); font-weight: var(--ampy-w-ui); color: var(--ampy-ink-faint); text-decoration: none; transition: color var(--ampy-dur-fast) var(--ampy-ease); }   /* elkollen __verdict-src 12 tertiär + extern-ikon 13 ; bara GUL/RÖD */
+.ampy-diag__src svg { width: 13px; height: 13px; opacity: .75; flex-shrink: 0; }
+.ampy-diag__src:hover { color: var(--ampy-ink); }
+.ampy-diag__src:hover span { text-decoration: underline; text-underline-offset: 2px; }
+.ampy-diag__src:focus-visible { outline: 0; box-shadow: var(--ampy-focus-ring); border-radius: var(--ampy-radius-small); }
+/* Tabbar (behorighetskollen.css:438-473): tunn understrykning, vikt 500 i båda lägena (ingen breddskuttning) */
+.ampy-diag__tabs { display: flex; gap: var(--ampy-space-m); margin: 0 0 var(--ampy-space-s); border-bottom: 1px solid var(--ampy-line); }
+.ampy-diag__tab { min-height: 44px; margin: 0 0 -1px; padding: 0 0 var(--ampy-space-2xs); border: 0; border-bottom: 2px solid transparent; background: none; cursor: pointer; font-family: var(--ampy-font); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); color: var(--ampy-ink-muted); transition: color var(--ampy-dur-fast) var(--ampy-ease), border-color var(--ampy-dur-fast) var(--ampy-ease); }
+.ampy-diag__tab:hover { color: var(--ampy-ink); }
+.ampy-diag__tab[aria-selected="true"] { color: var(--ampy-ink); border-bottom-color: var(--_v-accent, var(--ampy-action)); }
+.ampy-diag__tab:focus-visible { outline: 0; box-shadow: 0 -2px 0 var(--ampy-action-strong) inset; }
+.ampy-diag__tab-body { padding-left: var(--ampy-space-2xs); margin-bottom: var(--ampy-space-s); }
+.ampy-diag__summary { margin: 0 0 var(--ampy-space-xs); font-size: var(--ampy-text-body); font-weight: var(--ampy-w-medium); line-height: 1.5; color: var(--ampy-ink); text-wrap: pretty; }   /* källa 17/500 -> body 18/16.1 */
+.ampy-diag__rows { list-style: none; margin: 0 0 var(--ampy-space-m); padding: 0; display: flex; flex-direction: column; gap: var(--ampy-space-2xs); }
+.ampy-diag__row { display: flex; align-items: flex-start; gap: var(--ampy-space-2xs); }
+.ampy-diag__row svg { flex-shrink: 0; width: 18px; height: 18px; margin-top: 3px; color: var(--ampy-ink-faint); }
+.ampy-diag__row--do svg { color: var(--ampy-success-ink); }
+.ampy-diag__row p { margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-ui); line-height: 1.5; color: var(--ampy-ink-muted); }   /* källa 16/15 -> body 18/16.1 */
+.ampy-diag__caveat { display: flex; align-items: center; gap: var(--ampy-space-2xs); margin: 0 0 var(--ampy-space-m); padding: 2px 0 2px var(--ampy-space-xs); border-left: 3px solid var(--ampy-warn-ink); border-radius: 0; }   /* källa rgb(186,117,23) -> warn-ink */
+.ampy-diag__caveat svg { flex-shrink: 0; width: 16px; height: 16px; color: var(--ampy-warn-ink); }
+.ampy-diag__caveat p { margin: 0; font-size: var(--ampy-text-small); line-height: 1.55; color: var(--ampy-ink-muted); }
+
+/* ---------- CTA-zon, läs mer, dela (elcentralkollen.css:555-633) ---------- */
+.ampy-diag__cta-zone { margin-top: auto; display: flex; flex-direction: column; gap: var(--ampy-space-xs); }   /* elkollen: pinnas till kortets golv */
+.ampy-diag__cta-zone > .ampy-btn { width: 100%; justify-content: center; }
+.ampy-diag__cta-lead { margin: 0 0 var(--ampy-space-3xs); font-size: var(--ampy-text-body); line-height: 1.5; color: var(--ampy-ink); max-width: var(--ampy-measure); }
+.ampy-diag__readmore { margin: var(--ampy-space-xs) 0 0; text-align: center; font-size: var(--ampy-text-label); font-weight: var(--ampy-w-ui); line-height: 1.5; color: var(--ampy-ink-muted); }
+.ampy-diag__readmore a { color: var(--ampy-action-strong); text-decoration: underline; text-underline-offset: 2px; }
+.ampy-diag__share-row { display: flex; align-items: center; justify-content: flex-end; gap: var(--ampy-space-2xs); margin: var(--ampy-space-xs) 0 0; padding-top: var(--ampy-space-3xs); }
+.ampy-diag__share-nudge { margin-right: auto; font-size: var(--ampy-text-eyebrow); font-weight: var(--ampy-w-medium); color: var(--ampy-success-ink); white-space: nowrap; }
+.ampy-diag__share-anchor { position: relative; display: inline-flex; align-items: center; }
+.ampy-diag__share { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; margin: 0; border: 0; background: none; cursor: pointer; color: var(--ampy-ink-muted); border-radius: var(--ampy-radius-small); transition: color var(--ampy-dur-fast) var(--ampy-ease), background-color var(--ampy-dur-fast) var(--ampy-ease); }
+.ampy-diag__share svg { width: 18px; height: 18px; }
+.ampy-diag__share:hover, .ampy-diag__share.is-hover { color: var(--ampy-ink); background: var(--ampy-bg-subtle); }
+.ampy-diag__share:focus-visible { outline: 2px solid var(--ampy-focus); outline-offset: 2px; }
+.ampy-diag__share-menu { position: absolute; right: 0; bottom: calc(100% + 6px); z-index: 20; min-width: 170px; margin: 0; padding: 6px; list-style: none; background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); box-shadow: var(--ampy-shadow-raised); display: flex; flex-direction: column; gap: 2px; animation: ampyDiagPop 140ms var(--ampy-ease) both; }
+.ampy-diag__share-menu[hidden] { display: none; }
+.ampy-diag__share-menu--static { position: static; display: inline-flex; }          /* dokumentation */
+@keyframes ampyDiagPop { from { opacity: 0; transform: translateY(4px) scale(.98); } to { opacity: 1; transform: none; } }
+.ampy-diag__share-item { display: flex; align-items: center; gap: var(--ampy-space-2xs); width: 100%; min-height: 44px; padding: var(--ampy-space-3xs) var(--ampy-space-2xs); border: 0; border-radius: var(--ampy-radius-small); background: none; font-family: var(--ampy-font); font-size: var(--ampy-text-label); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); text-decoration: none; text-align: left; cursor: pointer; transition: background-color var(--ampy-dur-fast) var(--ampy-ease); }
+.ampy-diag__share-item svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--ampy-ink-muted); }
+.ampy-diag__share-item:hover, .ampy-diag__share-item.is-hover { background: var(--ampy-bg-subtle); }
+.ampy-diag__share-item:focus-visible { outline: 2px solid var(--ampy-focus); outline-offset: -2px; }
+.ampy-diag__share-toast { position: absolute; right: calc(100% + 8px); top: 50%; transform: translateY(-50%); white-space: nowrap; padding: 2px 6px; border-radius: var(--ampy-radius-small); background: var(--ampy-bg-surface); font-size: var(--ampy-text-eyebrow); font-weight: var(--ampy-w-medium); color: var(--ampy-success-ink); opacity: 0; pointer-events: none; transition: opacity var(--ampy-dur-base) var(--ampy-ease); }
+.ampy-diag__share-toast[data-visible="true"] { opacity: 1; }
+
+/* ---------- Sticky-CTA (mobil, elcentralkollen.css:593-604): fixed vit hylla som speglar kortets primära CTA ---------- */
+.ampy-diag__sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: var(--ampy-space-xs) var(--ampy-gutter) calc(var(--ampy-space-xs) + env(safe-area-inset-bottom)); background: var(--ampy-bg-surface); border-top: 1px solid var(--ampy-line); box-shadow: var(--_sticky-shadow); visibility: hidden; opacity: 0; transform: translateY(110%); pointer-events: none; transition: transform 220ms var(--ampy-ease), opacity 180ms var(--ampy-ease), visibility 0s linear 220ms; }
+.ampy-diag__sticky.is-visible { visibility: visible; opacity: 1; transform: none; pointer-events: auto; transition: transform 260ms var(--ampy-ease), opacity 200ms var(--ampy-ease), visibility 0s; }
+.ampy-diag__sticky--static { position: static; visibility: visible; opacity: 1; transform: none; pointer-events: auto; }   /* dokumentation: hyllan renderad i flödet */
+.ampy-diag__sticky-inner { max-width: 440px; margin-inline: auto; }
+.ampy-diag__sticky .ampy-btn { width: 100%; margin: 0; justify-content: center; }
+@container ampy-diag (min-width: 940px) { .ampy-diag__sticky:not(.ampy-diag__sticky--static) { display: none; } }
+
+/* ---------- No-JS-not (elkollen __noscript / energycalc .noscript-note) ---------- */
+.ampy-diag__nojs { margin: 0; padding: var(--ampy-space-s) var(--ampy-space-m); background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-muted); max-width: var(--ampy-measure); }
+.ampy-diag__nojs strong { color: var(--ampy-ink); font-weight: var(--ampy-w-strong); }
+.ampy-diag[data-booted="true"] .ampy-diag__nojs { display: none; }
+
+/* ---------- Blockläge (elcentralkollen.css:687-840): tonat band, centrerad rubrik, kortet i en kolumn (max 760) ---------- */
+.ampy-diag--block { max-width: none; padding: var(--ampy-space-2xl) var(--ampy-gutter); background: linear-gradient(180deg, var(--ampy-bg-page) 0%, #f7fafd 34%, var(--ampy-bg-surface) 100%); }   /* källa #f5f9ff -> #f7fafd -> #fff ; sky-mist = --ampy-bg-page */
+.ampy-diag--block > .ampy-diag__inner { display: block; max-width: var(--_block-max); margin-inline: auto; }
+.ampy-diag__blockhead { text-align: center; max-width: 680px; margin: 0 auto clamp(28px, 3.2vw, 40px); }
+.ampy-diag__blockhead-title { margin: 0 0 var(--ampy-space-s); font-family: var(--ampy-font); font-size: var(--ampy-text-h2); font-weight: var(--ampy-w-display); line-height: 1.12; letter-spacing: -0.02em; color: var(--ampy-ink); text-wrap: balance; }   /* källa PJS 700 32 (--aptext-xl) / 28 -> h2 36/26.8 */
+.ampy-diag__blockhead-lead { margin: 0 auto; font-size: var(--ampy-text-lead); font-weight: var(--ampy-w-ui); line-height: 1.6; color: var(--ampy-ink-muted); max-width: 600px; }
+.ampy-diag--block .ampy-diag__stage { max-width: var(--_card-max); margin-inline: auto; }
+.ampy-diag__blockground { max-width: 520px; margin: var(--ampy-space-s) auto 0; text-align: center; font-size: var(--_fine); line-height: 1.55; color: var(--ampy-ink-muted); }
+.ampy-diag--block .ampy-diag__blockhead > .ampy-list { display: none; }
+@container ampy-diag (min-width: 1280px) {                                                          /* källa >= 1280: kortet 560-kvadrat, copyn tar resten */
+  .ampy-diag--block > .ampy-diag__inner { display: grid; grid-template-columns: minmax(0, 1fr) var(--_minh); gap: var(--_gap); align-items: start; max-width: var(--ampy-container); }
+  .ampy-diag__blockhead { text-align: left; max-width: none; margin: 0; min-height: var(--_minh); display: flex; flex-direction: column; justify-content: center; }
+  .ampy-diag__blockhead-title { text-wrap: wrap; }
+  .ampy-diag__blockhead-lead { max-width: none; margin: 0 0 var(--ampy-space-m); }
+  .ampy-diag--block .ampy-diag__blockhead > .ampy-list { display: flex; }
+  .ampy-diag--block .ampy-diag__stage { max-width: none; margin-inline: 0; }
+  .ampy-diag--block .ampy-diag__card { box-shadow: 0 2px 4px rgba(9,11,50,.03), 0 16px 40px -20px rgba(9,11,50,.10); }   /* källa :805 lättare kortvikt i blockläge */
+  .ampy-diag__blockground { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ampy-diag__card, .ampy-diag__dual, .ampy-diag__finding, .ampy-diag__judgment, .ampy-diag__share-menu { animation: none !important; }
+  .ampy-diag__step, .ampy-diag__sticky, .ampy-diag__tab { transition: none !important; }
+}
+@media (forced-colors: active) {
+  .ampy-diag__finding-head:focus-visible, .ampy-diag__share:focus-visible, .ampy-diag__tab:focus-visible, .ampy-diag__src:focus-visible { outline: 3px solid Highlight; outline-offset: 2px; }
+}

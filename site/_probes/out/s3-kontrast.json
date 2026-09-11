@@ -1,0 +1,566 @@
+{
+ "site/_probes/out/s3-harness-calc.html": {
+  "total": 30,
+  "fails": [],
+  "lowest": [
+   {
+    "sel": "span",
+    "text": "BRF",
+    "fs": 16,
+    "weight": "600",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-range__tick.is-active",
+    "text": "80",
+    "fs": 13,
+    "weight": "700",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-btn.ampy-btn--secondary",
+    "text": "Få en skräddarsydd offert",
+    "fs": 16,
+    "weight": "600",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgb(0,122,105)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "Företag",
+    "fs": 16,
+    "weight": "600",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(238,238,241)",
+    "ratio": 5.46,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-stat__sub",
+    "text": "59 % lägre förbrukning",
+    "fs": 13,
+    "weight": "400",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "bg": "rgb(9,11,50)",
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-eyebrow",
+    "text": "Vad du byter",
+    "fs": 12,
+    "weight": "600",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-calc__q",
+    "text": "Vem räknar vi för?",
+    "fs": 13,
+    "weight": "500",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-calc__tip",
+    "text": "i",
+    "fs": 10,
+    "weight": "700",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true
+   }
+  ]
+ },
+ "site/_probes/out/s3-harness-diag-entry.html": {
+  "total": 9,
+  "fails": [],
+  "lowest": [
+   {
+    "sel": ".ampy-btn.ampy-btn--secondary",
+    "text": "Starta testet",
+    "fs": 16,
+    "weight": "600",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgb(0,122,105)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-diag__rail-lead",
+    "text": "Ta reda på om din central är säker och a",
+    "fs": 22,
+    "weight": "400",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "Byggt på Elsäkerhetslagen och Elsäkerhet",
+    "fs": 18,
+    "weight": "500",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-diag__rail-stat",
+    "text": "Elsäkerhetsverket registrerade 298 hände",
+    "fs": 16,
+    "weight": "400",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-diag__start-time",
+    "text": "Beräknad tid: 2 minuter",
+    "fs": 13,
+    "weight": "400",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-btn.ampy-btn--block",
+    "text": "Kontakta oss",
+    "fs": 16,
+    "weight": "500",
+    "color": "rgb(40, 42, 83)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 12.85,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "010-265 79 79",
+    "fs": 16,
+    "weight": "500",
+    "color": "rgb(40, 42, 83)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 12.85,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-diag__rail-title",
+    "text": "Är din elcentral säker?",
+    "fs": 48,
+    "weight": "700",
+    "color": "rgb(9, 11, 50)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true
+   }
+  ]
+ },
+ "site/_probes/out/s3-harness-diag-q.html": {
+  "total": 13,
+  "fails": [],
+  "lowest": [
+   {
+    "sel": ".ampy-diag__rail-lead",
+    "text": "Ta reda på om din central är säker och a",
+    "fs": 22,
+    "weight": "400",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "Byggt på Elsäkerhetslagen och Elsäkerhet",
+    "fs": 18,
+    "weight": "500",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-diag__rail-stat",
+    "text": "Elsäkerhetsverket registrerade 298 hände",
+    "fs": 16,
+    "weight": "400",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-diag__back",
+    "text": "Tillbaka",
+    "fs": 13,
+    "weight": "400",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-chip__clarifier",
+    "text": "Vi räknar försiktigt",
+    "fs": 16,
+    "weight": "400",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-btn.ampy-btn--block",
+    "text": "Kontakta oss",
+    "fs": 16,
+    "weight": "500",
+    "color": "rgb(40, 42, 83)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 12.85,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "010-265 79 79",
+    "fs": 16,
+    "weight": "500",
+    "color": "rgb(40, 42, 83)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 12.85,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-chip__title",
+    "text": "Före 1970",
+    "fs": 18,
+    "weight": "500",
+    "color": "rgb(9, 11, 50)",
+    "bg": "rgb(235,248,246)",
+    "ratio": 17.45,
+    "need": 4.5,
+    "ok": true
+   }
+  ]
+ },
+ "site/_probes/out/s3-harness-diag-verdict.html": {
+  "total": 28,
+  "fails": [],
+  "lowest": [
+   {
+    "sel": ".ampy-diag__crumb-sep",
+    "text": "|",
+    "fs": 18,
+    "weight": "400",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 4.8,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "Elsäkerhetslagen (2016:732) 27 §",
+    "fs": 12,
+    "weight": "400",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 4.8,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-source",
+    "text": "Källa: Elsäkerhetsverkets föreskrifter (",
+    "fs": 13,
+    "weight": "400",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 4.8,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-tag.ampy-tag--lg",
+    "text": "Förhöjd risk",
+    "fs": 18,
+    "weight": "600",
+    "color": "rgb(135, 101, 7)",
+    "bg": "rgb(255,244,224)",
+    "ratio": 4.95,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-link",
+    "text": "Visa alla förklaringar",
+    "fs": 14,
+    "weight": "500",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-btn.ampy-btn--secondary",
+    "text": "Få kostnadsfri rådgivning",
+    "fs": 16,
+    "weight": "600",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgb(0,122,105)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "a",
+    "text": "Se mer om elcentraler",
+    "fs": 14,
+    "weight": "400",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-tag.ampy-tag--lg",
+    "text": "Låg risk",
+    "fs": 18,
+    "weight": "600",
+    "color": "rgb(15, 110, 86)",
+    "bg": "rgb(218,242,231)",
+    "ratio": 5.28,
+    "need": 4.5,
+    "ok": true
+   }
+  ]
+ },
+ "site/komponenter/verktyg.html": {
+  "total": 77,
+  "fails": [],
+  "lowest": [
+   {
+    "sel": ".ds-demo__label.ds-demo__label--over",
+    "text": "Default, 1440 = två kolumner, 390 = stap",
+    "fs": 12,
+    "weight": "300",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-tag.ampy-tag--sm",
+    "text": "Prisvärd",
+    "fs": 12,
+    "weight": "600",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(235,248,246)",
+    "ratio": 4.84,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ds-eyebrow",
+    "text": "Komponenter",
+    "fs": 12,
+    "weight": "500",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ds-a",
+    "text": "LED-kalkylatorn",
+    "fs": 16,
+    "weight": "300",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".is-miss",
+    "text": "15 /",
+    "fs": 16,
+    "weight": "300",
+    "color": "rgb(135, 101, 7)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.1,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "BRF",
+    "fs": 16,
+    "weight": "600",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-range__tick.is-active",
+    "text": "80",
+    "fs": 13,
+    "weight": "700",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-btn.ampy-btn--secondary",
+    "text": "Få en skräddarsydd offert",
+    "fs": 16,
+    "weight": "600",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgb(0,122,105)",
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true
+   }
+  ]
+ },
+ "site/komponenter/diagnostik.html": {
+  "total": 65,
+  "fails": [],
+  "lowest": [
+   {
+    "sel": ".ds-demo__label.ds-demo__label--over",
+    "text": "Start, 1440 = rail + stage, 390 = stapla",
+    "fs": 12,
+    "weight": "300",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-diag__crumb-sep",
+    "text": "|",
+    "fs": 18,
+    "weight": "400",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 4.8,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-source",
+    "text": "Källa: Elsäkerhetsverkets föreskrifter (",
+    "fs": 13,
+    "weight": "400",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 4.8,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": "span",
+    "text": "Elsäkerhetslagen (2016:732) 27 §",
+    "fs": 12,
+    "weight": "400",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 4.8,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ampy-tag.ampy-tag--lg",
+    "text": "Förhöjd risk",
+    "fs": 18,
+    "weight": "600",
+    "color": "rgb(135, 101, 7)",
+    "bg": "rgb(255,244,224)",
+    "ratio": 4.95,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ds-eyebrow",
+    "text": "Komponenter",
+    "fs": 12,
+    "weight": "500",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".ds-a",
+    "text": "Elcentral-kollen",
+    "fs": 16,
+    "weight": "300",
+    "color": "rgb(0, 122, 105)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true
+   },
+   {
+    "sel": ".is-miss",
+    "text": "358 /",
+    "fs": 16,
+    "weight": "300",
+    "color": "rgb(135, 101, 7)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 5.1,
+    "need": 4.5,
+    "ok": true
+   }
+  ]
+ }
+}

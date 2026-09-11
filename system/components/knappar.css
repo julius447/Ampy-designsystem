@@ -26,13 +26,14 @@
   --_py: 11px;
   --_gap: 16px;          /* källa: cta-website radgivning-cta.css:9 gap 16 (pil) ; --ampy-space-inline är 14 fluid, se bygglogg */
   --_icon: 16px;         /* källa: cta-website offert-cta.html svg 16x16 */
+  --_ink: var(--ampy-action-gradient-on);   /* knappens textfärg, läses av spinnern i laddningsläget */
   position: relative;
   display: inline-flex; align-items: center; justify-content: center; gap: var(--_gap);
   min-height: var(--_h); padding: var(--_py) var(--_px);
   border: 0; border-radius: var(--ampy-radius-button);
   font-family: var(--ampy-font); font-size: var(--ampy-text-button); font-weight: var(--ampy-w-medium);
   line-height: var(--ampy-lh-tight); letter-spacing: var(--ampy-ls-button); white-space: nowrap;
-  color: var(--ampy-action-gradient-on);
+  color: var(--_ink);
   background: var(--ampy-action-gradient);
   box-shadow: var(--ampy-shadow-button);
   text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
@@ -53,7 +54,7 @@
 .ampy-btn:hover .ampy-btn__icon, .ampy-btn.is-hover .ampy-btn__icon { transform: scale(1.18); }
 
 /* --primary = skelettet (gradient). Klassen finns för läsbarhet i markup. */
-.ampy-btn--primary { background: var(--ampy-action-gradient); color: var(--ampy-action-gradient-on); }
+.ampy-btn--primary { background: var(--ampy-action-gradient); --_ink: var(--ampy-action-gradient-on); }
 
 /* ---------- --block: fullbredd, text vänster / ikon höger (cta-website *.css:40-43) ---------- */
 .ampy-btn--block { width: 100%; justify-content: space-between; padding: var(--_py) 22px; white-space: normal; }
@@ -94,7 +95,7 @@
 
 /* ---------- --secondary: solid teal, vit text (header-CTA, B5 -> teal-deep) ---------- */
 .ampy-btn--secondary {
-  background: var(--ampy-action-strong); color: var(--ampy-action-on);
+  background: var(--ampy-action-strong); --_ink: var(--ampy-action-on);
   font-weight: var(--ampy-w-strong);                      /* header styles.css:67 16/600 */
   box-shadow: var(--ampy-shadow-glow-action);
 }
@@ -107,7 +108,7 @@
 
 /* ---------- --ghost: outline, transparent, ink-text (elcentral --outline / cta-secondary) ---------- */
 .ampy-btn--ghost {
-  background: transparent; color: var(--ampy-ink);
+  background: transparent; --_ink: var(--ampy-ink);
   border: 1px solid var(--ampy-line-strong);              /* källan #e3e5ed (1,26:1) -> kontrollkant >= 3:1 enligt tokens */
   box-shadow: none;
 }
@@ -120,7 +121,7 @@
 .ampy-btn--ghost:hover .ampy-btn__icon, .ampy-btn--ghost.is-hover .ampy-btn__icon { transform: none; }
 
 /* ---------- Storlekar ---------- */
-.ampy-btn--compact { --_h: 48px; --_px: 22px; --_py: 8px; }          /* header-CTA 48 (styles.css:66), elcentral 48, elkollen 48, thank-you 48 */
+.ampy-btn--compact { --_h: 48px; --_px: 26px; --_py: 8px; }          /* header-CTA 48 h, padding 0 26 (Website-blocks styles.css:66-67), elcentral 48, elkollen 48, thank-you 48 (14/28) */
 .ampy-btn--compact .ampy-btn__chip { --_chip: 30px; }
 .ampy-btn--compact.ampy-btn--ring { padding-right: 24px; padding-left: 9px; }
 /* Fullbredd på mobil (rail-CTA:erna i elcentral/elkollen fyller raden <= 480) */
@@ -134,12 +135,12 @@
   transform: none; filter: none; box-shadow: var(--ampy-shadow-subtle);
 }
 .ampy-btn:disabled .ampy-btn__icon, .ampy-btn[aria-disabled="true"] .ampy-btn__icon, .ampy-btn.is-disabled .ampy-btn__icon { transform: none; }
-/* Laddar: etikett och ikon göms, spinner 20 px (main-form css/styles.css:214-218) */
-.ampy-btn.is-loading { cursor: progress; }
+/* Laddar: etikett (även ren textnod) och ikon göms via transparent färg, spinner 20 px i knappens bläck (main-form css/styles.css:214-218) */
+.ampy-btn.is-loading { cursor: progress; color: transparent; }
 .ampy-btn.is-loading > :not(.ampy-btn__spin) { visibility: hidden; }
 .ampy-btn__spin {
   display: none; position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px;
-  border: 2.5px solid color-mix(in srgb, currentColor 28%, transparent); border-top-color: currentColor;
+  border: 2.5px solid color-mix(in srgb, var(--_ink) 28%, transparent); border-top-color: var(--_ink);
   border-radius: var(--ampy-radius-pill);
   animation: ampySpin .7s linear infinite;                /* main-form styles.css:218 */
 }
@@ -149,7 +150,7 @@
 /* ---------- På mörk yta ---------- */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-btn:focus-visible { outline-color: var(--ampy-focus-on-dark); }
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-btn--ghost {
-  color: var(--ampy-on-dark);
+  --_ink: var(--ampy-on-dark);
   background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.40);   /* hero-2-alternatives primitives.css:440-446 ampy-btn--ghost ; alfa-steg utan token */
 }
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-btn--ghost:hover,

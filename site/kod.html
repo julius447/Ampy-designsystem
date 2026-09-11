@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Använda systemet: Ampy designsystem</title>
+<link rel="stylesheet" href="../system/ampy.css">
+<link rel="stylesheet" href="doc.css">
+<style>
+/* Lokala ds-klasser för kodsidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-nowrap { white-space: nowrap; }
+  .ds-list { margin: 0; padding-left: 1.6rem; } .ds-list li { margin-bottom: 0.4rem; }
+  .ds-steps { margin: var(--ampy-space-xs) 0 var(--ampy-space-s); padding: 0; list-style: none; counter-reset: steg; }
+  .ds-steps li { position: relative; padding-left: 4rem; margin-bottom: var(--ampy-space-xs); font-size: var(--ampy-text-body); line-height: 1.5; color: var(--ampy-ink-body); max-width: 72ch; }
+  .ds-steps li::before { counter-increment: steg; content: counter(steg); position: absolute; left: 0; top: 0.1em; width: 2.8rem; height: 2.8rem; border-radius: 50%; border: 1px solid var(--ampy-line-strong); display: grid; place-items: center; font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); color: var(--ampy-ink); }
+  .ds-tree { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.3rem; line-height: 1.6; background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s) var(--ampy-space-m); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); overflow-x: auto; color: var(--ampy-ink); }
+  .ds-tree span { color: var(--ampy-ink-muted); }
+  .ds-tree b { font-weight: var(--ampy-w-medium); color: var(--ampy-action-strong); }
+  .ds-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--ampy-space-xs); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-flow > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-s); font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-muted); position: relative; }
+  .ds-flow > div + div::before { content: ""; position: absolute; left: -1.4rem; top: 2.4rem; width: 1.4rem; border-top: 2px solid var(--ampy-action-strong); }
+  .ds-flow strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); margin-bottom: 0.4rem; }
+  .ds-flow code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+  .ds-example { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--ampy-space-s); align-items: start; margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-example .ds-code { margin: 0; }
+  .ds-example .ds-demo { margin: 0; }
+  .ds-example .ampy-card { max-width: 40rem; }
+  .ds-table code, .ds-p code, .ds-steps code, .ds-list code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; }
+  @media (max-width: 991px) { .ds-flow { grid-template-columns: 1fr; } .ds-flow > div + div::before { display: none; } .ds-example { grid-template-columns: minmax(0, 1fr); } }
+</style>
+<link rel="icon" href="brand/ampy-glyph-black-201-favicon.png">
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="index.html">Översikt</a>
+        <a href="beslut.html">Beslut som väntar</a>
+        <a href="kod.html" aria-current="page">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="grunder/farg.html">Färg</a>
+        <a href="grunder/typografi.html">Typografi</a>
+        <a href="grunder/spacing.html">Spacing och layout</a>
+        <a href="grunder/form-djup.html">Form och djup</a>
+        <a href="grunder/rorelse.html">Rörelse</a>
+        <a href="grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="komponenter/index.html">Alla komponenter</a>
+        <a href="komponenter/knappar.html">Knappar och länkar</a>
+        <a href="komponenter/text.html">Textelement</a>
+        <a href="komponenter/ytor.html">Ytor och kort</a>
+        <a href="komponenter/falt.html">Fält och reglage</a>
+        <a href="komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="monster/mobil.html">Mobil 390</a>
+        <a href="monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="regler/candour.html">Candour-grinden</a>
+        <a href="regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Start</span>
+      <h1 class="ds-h1">Använda systemet</h1>
+      <p class="ds-lead">En CSS-fil att ladda, ett skop att stå i, en namnkonvention att följa och en regel för hur nya komponenter kommer in: som kloner av sin källa, aldrig som påhitt.</p>
+      <p class="ds-source"><code>system/ampy.css</code>, <code>system/tokens.css</code> (huvudkommentaren och lager 1 till 2), <code>system/base.css</code>, <code>BYGGBRIEF.md</code> (klon-regeln, sidmallen, render-loopen), <code>KONSOLIDERINGSBRIEF.md</code> (precedens), <code>INVENTERINGSBRIEF.md</code> (auktoritet 1 till 3), <code>konsolidering/BEVIS.md</code> (skripten), <code>tools/shot.mjs</code>.</p>
+
+      <h2 class="ds-h2" id="ladda">Ladda in</h2>
+      <p class="ds-p">Allt ligger i <code>system/</code>. <code>ampy.css</code> importerar i bindande ordning: tokens, base, sedan komponenterna. Fonten är självhostad (<code>system/fonts/Outfit-VariableFont_wght.woff2</code>, variabel 100 till 900) och base.css refererar den relativt, så mappen flyttas hel. Inga CDN:er, inga Google Fonts (LED laddar Google Fonts två gånger i dag, GDPR-defekt enligt B7).</p>
+      <div class="ds-code"><pre><code>&lt;link rel="stylesheet" href="system/ampy.css"&gt;
+&lt;!-- eller bara grunden, utan komponenter: --&gt;
+&lt;link rel="stylesheet" href="system/tokens.css"&gt;
+&lt;link rel="stylesheet" href="system/base.css"&gt;</code></pre></div>
+      <div class="ds-code"><pre><code>/* system/ampy.css: ordningen är bindande */
+@import url("tokens.css");
+@import url("base.css");
+@import url("components/knappar.css");
+@import url("components/text.css");
+@import url("components/ytor.css");
+@import url("components/falt.css");
+@import url("components/verktyg.css");
+@import url("components/diagnostik.css");
+@import url("components/block.css");</code></pre></div>
+
+      <h2 class="ds-h2" id="skopet">Skopet <code>.ampy</code></h2>
+      <p class="ds-p">Element-standarden i base.css (h1 till h4, p, small, strong, a, hr, fokus, selection) ligger inne i <code>:where(.ampy)</code>. <code>:where()</code> nollar specificiteten, så rollklasser (<code>.ampy-h2</code>) och komponentklasser (<code>.ampy-btn</code>) vinner alltid över standarden, och Bricks egna regler utanför skopet påverkas inte. På en fristående sida: <code>&lt;body class="ampy"&gt;</code>. I Bricks eller ett FluentSnippet: <code>&lt;div class="ampy"&gt;</code> runt blocket. Mörka ytor får <code>.ampy--dark</code> eller <code>.ampy-on-dark</code> så att fokusringen byter till neon mint (<code>--ampy-focus-on-dark</code>).</p>
+      <div class="ds-example">
+        <div class="ds-code"><pre><code>&lt;section class="ampy ampy-section"&gt;
+  &lt;div class="ampy-container"&gt;
+    &lt;div class="ampy-card"&gt;
+      &lt;p class="ampy-eyebrow"&gt;Så räknas ROT&lt;/p&gt;
+      &lt;h2 class="ampy-h2"&gt;30 procent på arbetet&lt;/h2&gt;
+      &lt;p class="ampy-body"&gt;Skatteverket drar avdraget direkt på fakturan.&lt;/p&gt;
+      &lt;a class="ampy-btn ampy-btn--compact" href="/offert/"&gt;Räkna på ditt jobb
+        &lt;svg class="ampy-btn__icon" aria-hidden="true"&gt;&lt;use href="system/ikoner.svg#ik-arrow-right"/&gt;&lt;/svg&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+        <div class="ds-demo"><span class="ds-demo__label">renderat</span>
+          <div class="ampy-card"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-stack-xs)">Så räknas ROT</p><h2 class="ampy-h2" style="margin:0 0 var(--ampy-space-stack-sm)">30 procent på arbetet</h2><p class="ampy-body" style="margin:0 0 var(--ampy-space-stack-lg)">Skatteverket drar avdraget direkt på fakturan.</p><a class="ampy-btn ampy-btn--compact" href="#skopet">Räkna på ditt jobb <svg class="ampy-btn__icon" aria-hidden="true"><use href="../system/ikoner.svg#ik-arrow-right"/></svg></a></div>
+        </div>
+      </div>
+
+      <h2 class="ds-h2" id="namn">Klasskonventionen</h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Mönster</th><th>Exempel</th><th>Betyder</th></tr></thead>
+        <tbody>
+          <tr><td><code>.ampy-&lt;komponent&gt;</code></td><td><code>.ampy-btn</code>, <code>.ampy-card</code>, <code>.ampy-input</code>, <code>.ampy-tag</code></td><td>komponentens rot; en komponent = en fil i <code>system/components/</code></td></tr>
+          <tr><td><code>.ampy-&lt;komponent&gt;__&lt;del&gt;</code></td><td><code>.ampy-btn__icon</code>, <code>.ampy-btn__chip</code>, <code>.ampy-stat__value</code></td><td>en del inuti komponenten (BEM, dubbla understreck)</td></tr>
+          <tr><td><code>.ampy-&lt;komponent&gt;--&lt;variant&gt;</code></td><td><code>.ampy-btn--ring</code>, <code>.ampy-card--dark</code>, <code>.ampy-card--glass</code>, <code>.ampy-tag--warning</code></td><td>variant på roten (dubbla bindestreck); kombineras fritt</td></tr>
+          <tr><td><code>.is-&lt;tillstånd&gt;</code></td><td><code>.is-hover</code>, <code>.is-open</code>, <code>.is-loading</code>, <code>.is-disabled</code>, <code>.is-invalid</code></td><td>tillstånd satt av JS eller för att visa ett läge statiskt (dokumentationen använder <code>.is-hover</code> för skärmdumpar); ARIA-attribut (<code>aria-invalid</code>, <code>aria-disabled</code>, <code>aria-expanded</code>) styr samma stil</td></tr>
+          <tr><td>rollklasser</td><td><code>.ampy-display</code>, <code>.ampy-h1</code> till <code>.ampy-h3</code>, <code>.ampy-lead</code>, <code>.ampy-body</code>, <code>.ampy-small</code>, <code>.ampy-eyebrow</code>, <code>.ampy-number</code>, <code>.ampy-label</code>, <code>.ampy-button-text</code></td><td>typografiroller ur base.css; fungerar utan skopet</td></tr>
+          <tr><td>layout</td><td><code>.ampy-container</code>, <code>.ampy-container--text</code>, <code>.ampy-section</code>, <code>.ampy-section--full</code>, <code>.ampy-section--dark</code></td><td>1280-container med gutter, sektion med 2xl-padding, fullbredd, mörk sektion</td></tr>
+          <tr><td><code>--_&lt;namn&gt;</code></td><td><code>--_h: 58px</code>, <code>--_chip: 36px</code> i knappar.css</td><td>komponentlokal custom property för ett värde ur källan som saknar token; källan står i kommentaren, bristen i bygglogg</td></tr>
+          <tr><td><code>.ds-*</code></td><td><code>.ds-h2</code>, <code>.ds-table</code>, <code>.ds-demo</code></td><td>bara den här dokumentationen (<code>site/doc.css</code>); aldrig i produktion</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="lager">Tokens i två lager</h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Lager</th><th>Prefix</th><th>Vad</th><th>Enhet</th><th>Används av</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><code>--ap*</code></td><td>de 101 primitiva tokens Bricks kör live, verbatim ur <code>global-variables.css</code> (47 färg, 11 spacing, 15 text, 6 radie, 5 skugga, 8 kolumner, 7 alias, 2 skärm)</td><td>rem-clamp på 10 px-rot</td><td>Bricks-temat, block som redan är tokenbundna (footer, testimonials, visste-du-att, tack-sidan)</td></tr>
+          <tr><td>1b</td><td><code>--ap*</code></td><td>två rättade buggar (<code>--shadow-primary</code> definierad, <code>--apspace-4xs</code> min och max i rätt ordning) + alias <code>--aptext-mmm</code></td><td>som lager 1</td><td>samma</td></tr>
+          <tr><td>1c</td><td><code>--ap*</code></td><td>16 primitiva som saknades men bär en roll i minst två källor av auktoritet 1 till 2 (sekundärteal, teal deep, teal tint, indigo, navy-serien, amber, signalröd, verdict-kvartetten, Google-gult)</td><td>hex</td><td>lager 2</td></tr>
+          <tr><td>2</td><td><code>--ampy-*</code></td><td>134 semantiska roller: ytor, bläck, handling, tillstånd, linjer, radier, skuggor, scrims, aurora, rörelse, typografi, container, spacing-roller. Färger pekar på lager 1 via <code>var()</code>; mått är px-clamp med samma värden</td><td>px (rem-oberoende)</td><td>alla komponenter i <code>system/components/</code>, FluentSnippets, CRM-sidor, artikelmallen</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="ds-p">Regeln: komponenter använder bara <code>--ampy-*</code>. <code>--ap*</code> finns för paritet med Bricks och ska inte spridas i ny kod. Varje token i tokens.css bär en radkommentar <code>källa: &lt;slug&gt; (&lt;fil:rad&gt;) ; drift: &lt;värden&gt;</code>; allt märkt "Beslut B<em>n</em>" ligger hos Julius på <a class="ds-a" href="beslut.html">beslutssidan</a>. Filen ändras inte av den som bygger en komponent: brister rapporteras i bygglogg (<code>site/_bygglogg/</code>), inte lappas.</p>
+
+      <h2 class="ds-h2" id="host">Rotstorlek, Bricks och FluentSnippets</h2>
+      <p class="ds-p">Live kör <code>html { font-size: 62.5% }</code> (1 rem = 10 px) i theme-style.css, frontend.css och core-framework-inline, och lager 1 räknar rätt bara där. Därför är lager 2 skrivet i px: samma pixlar på sajtens 10 px-rot som på en 16 px-rot. Hero-2-alternatives formulerade problemet ("html{62.5%} är en värdsideregel som inte kan levereras") och sticky-baren regeln ("aldrig rem: en rem-bar med 16 px-antagande blir 37,5 % för liten"). Beslut B8 avgör om sajten ska byta rot; till dess:</p>
+      <ul class="ds-list">
+        <li><strong>Bricks-block:</strong> använd <code>--ampy-*</code> i <code>_cssCustom</code> eller i blockets CSS; <code>--ap*</code> går bra där blocket redan är tokenbundet. Bricks brytpunkter skrivs 991 / 767 / 478 (kanon 992 / 768 / 480). Sektionspadding i temat är <code>--apspace-l</code> (39,6), kanon för sektioner är 2xl.</li>
+        <li><strong>FluentSnippets:</strong> leveransen är tre filer, CSS + PHP (shortcode, ev. ACF) + JS (fore-efter, mini-menu, testimonials, hero-2, website-blocks och main-form levererades så). CSS:en börjar med <code>.ampy</code>-skopet och lager 2, aldrig rem, aldrig <code>html</code>-regler. Fonten laddas inte igen: sajten har redan Outfit.</li>
+        <li><strong>CRM-sidor och artikelmallen (16 px-rot):</strong> ta bort <code>html { font-size: 62.5% }</code> ur base.css och använd bara <code>--ampy-*</code>; lager 1 blir då fel i skala och ska inte refereras.</li>
+        <li><strong>Ikoner:</strong> <code>&lt;use href="system/ikoner.svg#ik-…"&gt;</code> kräver http och samma origin; i Bricks: klistra in symbolen inline eller ladda spriten en gång i sidfoten (dold, <code>aria-hidden</code>).</li>
+      </ul>
+
+      <h2 class="ds-h2" id="klon">Klon-regeln: så kommer en komponent in</h2>
+      <p class="ds-p">Varje komponent i <code>system/components/*.css</code> är en klon av sin kanoniska källa, omskriven så att värdena kommer från tokens i stället för literaler. Kravet är pixelparitet mot källan vid 1440 och 390. Ingen ritar en ny knapp; man hittar den som redan är godkänd.</p>
+      <ol class="ds-steps">
+        <li>Slå upp komponenten i <code>konsolidering/komponenter-karta.md</code>. Kolumnen "kanonisk källa" ger slug och fil, till exempel <code>cta-website radgivning-cta/radgivning-cta.css:8-48</code>. Finns komponenten inte i kartan är den inte byggd med auktoritet 1 till 2, och då saknas belägg: rapportera, hitta inte på.</li>
+        <li>Öppna källkoden i <code>kallor/&lt;repo&gt;/</code> och skärmdumpen i <code>inventering/skarmdumpar/</code>. Kopiera CSS-värdena ordagrant först.</li>
+        <li>Bind varje värde till en <code>--ampy-*</code>-token. Ett värde som saknar token blir en komponentlokal <code>--_namn</code> med källan i kommentaren; bristen skrivs i <code>site/_bygglogg/&lt;S&gt;.md</code>. Tokens.css ändras aldrig i det här steget.</li>
+        <li>Rendera: <code>node tools/shot.mjs site/komponenter/&lt;sida&gt;.html _shots/&lt;namn&gt;</code>. Öppna PNG:erna, jämför mot källans skärmdump vid 1440 och 390: höjd, padding, radie, färg. Loopen är klar när utskriften säger <code>errors: []</code> och <code>overflowX: false</code>.</li>
+        <li>Dokumentera på komponentsidan i fast ordning: rubrik och en rad, källa (kanon + "finns även i" med avvikelser), live-exempel per tillstånd (default, <code>.is-hover</code>, focus-visible, disabled, laddar, storlekar, ljus och mörk yta), anatomi med mått vid 1440 och 390, gör och gör inte (tre + tre), kod med kopiera-knapp, avvikelser i blocken ur komponentkartan.</li>
+        <li>En avvikelse mot källan ska stå under "Avvikelser" med skäl, till exempel "källan använde #0b1030, tokenen är #090b32 enligt beslut B3". Drift i andra block listas, inte tystas.</li>
+      </ol>
+
+      <h2 class="ds-h2" id="verktyg">Verktygen</h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Verktyg</th><th>Gör</th><th>Kör</th></tr></thead>
+        <tbody>
+          <tr><td class="ds-nowrap"><code>tools/shot.mjs</code></td><td>startar en statisk server för repot, renderar sidan i Chromium (Playwright 1.62.1) på 1440×1000 och 390×844 med 2× skala, sparar helsides-PNG och skriver höjd, horisontell overflow och konsolfel per viewport. <code>--query</code> för sidor som behöver parametrar.</td><td><code>cd tools &amp;&amp; npm install</code> en gång, sedan <code>node tools/shot.mjs site/grunder/farg.html _shots/farg</code></td></tr>
+          <tr><td class="ds-nowrap"><code>site/_probes/overflow.mjs</code></td><td>listar de element vars högerkant sticker utanför viewporten (orsaken när shot.mjs säger overflowX: true)</td><td><code>node site/_probes/overflow.mjs site/grunder/farg.html 390</code></td></tr>
+          <tr><td class="ds-nowrap"><code>site/_probes/contrast.mjs</code></td><td>räknar WCAG-kontrast för alla färgpar på färgsidan och fyller rutnäten och tabellerna mellan <code>&lt;!--@…:start--&gt;</code> och <code>:end</code></td><td><code>node site/_probes/contrast.mjs</code> (idempotent)</td></tr>
+          <tr><td class="ds-nowrap"><code>site/_probes/typo-matt.mjs</code></td><td>mäter rollskalan på typografisidan med getComputedStyle vid 390, 768 och 1440 och fyller tabellen "Uppmätt på den här sidan"</td><td><code>node site/_probes/typo-matt.mjs</code></td></tr>
+          <tr><td class="ds-nowrap"><code>konsolidering/_probes/01</code> till <code>07</code></td><td>frekvens per färg (01), typmatris (02), radier, skuggor, rörelse, spacing (03), kontrast (04), lager 1 ur global-variables.css (05), röktest av tokens i Chromium (06), tabellerna (07). Utdata i <code>_probes/out/</code>.</td><td>Python 3 (01 till 05, 07), Node (06)</td></tr>
+          <tr><td class="ds-nowrap"><code>system/_smoke.html</code></td><td>röktest av tokens.css + base.css utan komponenter: alla 101 ap* resolvar, Outfit laddad, rollskalan i rätt ordning</td><td><code>node tools/shot.mjs system/_smoke.html _shots/smoke</code></td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="mappar">Mappkartan</h2>
+      <div class="ds-tree"><b>ampy-designsystem/</b>
+├── INVENTERINGSBRIEF.md   <span>fas 1: mät 31 källor, auktoritet 1 till 3</span>
+├── KONSOLIDERINGSBRIEF.md <span>fas 2: precedens, lager 1 och 2, beslut</span>
+├── BYGGBRIEF.md           <span>fas 3: sajten, klon-regeln, sidmallen</span>
+├── kallor/                <span>30 källrepon, grunt klonade 2026-09-11 (läs, ändra aldrig; gitignorerad)</span>
+├── inventering/           <span>&lt;slug&gt;.md + .json per källa (30), brandbook, tidigare-dokumentation, brand/ (logofiler), skarmdumpar/ (200 PNG), _probes/</span>
+├── konsolidering/         <span>kanon-sammanfattning, farg/typografi/spacing/form-djup-rorelse .md + .json, komponenter-karta, beslut (B1 till B20), BEVIS, _probes/ + out/</span>
+├── system/                <span>tokens.css, base.css, ampy.css, components/ (7 filer), fonts/, ikoner.svg, _smoke.html</span>
+├── site/                  <span>den här dokumentationen: index, beslut, kod, grunder/, komponenter/, monster/, regler/, blockbibliotek; doc.css, doc.js, _mall.html, bilder/, brand/, _probes/, _bygglogg/</span>
+├── tools/shot.mjs         <span>render-loopen</span>
+└── _shots/                <span>renderingar (gitignorerad)</span></div>
+
+      <h2 class="ds-h2" id="provenance">Proveniensregeln</h2>
+      <p class="ds-p">Ingen siffra, färg, radie eller regel i systemet saknar källa. Formen är slug plus fil och rad: <code>hero-1 (assets/style.css:40)</code>. Saknas belägg skrivs <code>[GAP]</code>, aldrig ett rimligt värde. Frekvens räknas som antal källfiler som bär ett värde, inte antal förekomster, viktat med auktoritet (BEVIS.md). När källor säger olika gäller: auktoritet 1 slår 2 slår 3; inom auktoritet 1 gäller ansvarsområde (live = primitiver, hero-1 = display, cta-website = knappar, website-blocks = header, LED = verktyg, elcentral och elkollen = diagnostik, eljour = innehållsblock, testimonials = omdömen, brandbook = logo, palettnamn, vikter); frekvens bryter lika; de andra värdena skrivs alltid ut som drift. Rot-gt-calculator/wireframes räknas aldrig (underkända); skill-referensen är dokumentation, inte källa. Sajten bygger själv på tokens (dogfooding): ser dokumentationen billig ut är systemet fel.</p>
+
+      <h2 class="ds-h2" id="kedjan">Så hänger filerna ihop</h2>
+      <div class="ds-flow">
+        <div><strong>1. Inventering</strong><code>inventering/&lt;slug&gt;.md + .json</code> per källa: vad det är, auktoritet, uppmätta färger, typografi, spacing, radier, skuggor, rörelse, komponenter, defekter; skärmdumpar 1440 och 390. Samma JSON-schema för alla 30 + brandbook + tidigare dokumentation.</div>
+        <div><strong>2. Konsolidering</strong><code>konsolidering/</code>: skripten 01 till 07 räknar frekvens och kontrast ur JSON:erna; tabellerna farg, typografi, spacing, form-djup-rorelse och komponentkartan (45 rader) sätter kanon och skriver ut drift; beslut.md samlar det som inte kan avgöras; BEVIS.md visar hur.</div>
+        <div><strong>3. Tokens och bas</strong><code>system/tokens.css</code> (lager 1 verbatim + 1b + 1c + lager 2 med källa per rad) och <code>base.css</code> (reset, Outfit, roller, skopet, fokus, reduced-motion, container). Röktestat i Chromium: 0 saknade tokens, samma px som live.</div>
+        <div><strong>4. Komponenter och sajt</strong><code>system/components/</code> som kloner av komponentkartans kanon, <code>site/</code> som renderar allt på de egna tokens. Bygglogg per agent i <code>site/_bygglogg/</code> med paritetsmått, avvikelser och token-brister.</div>
+      </div>
+      <p class="ds-source">Läsordning enligt BYGGBRIEF.md: kanon-sammanfattning och beslut, tokens.css och base.css, tabellerna, inventeringen för de källor du bygger på (öppna skärmdumparna), sidmallen, källkoden i kallor/ när du klonar.</p>
+    </div>
+  </main>
+</div>
+<script src="doc.js"></script>
+</body>
+</html>

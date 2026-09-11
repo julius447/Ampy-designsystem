@@ -1,0 +1,928 @@
+{
+ "when": "2026-09-11 22:46",
+ "tolerance": 1,
+ "calc": {
+  "sourceNote": "inventering/_probes/led-kalkylator.measure.json (Chromium 1440x1000 / 390x844, Google Fonts laddade)",
+  "harness": "site/_probes/out/s3-harness-calc.html: .ampy-calc utan --flush = 1280 + padding 19,8/14, som LED:s container",
+  "rows": [
+   {
+    "label": "Inputkort bredd",
+    "key": "input-w",
+    "tol": 2,
+    "note": "grid 5fr/7fr med gap 19,8 (LED 20)",
+    "source": {
+     "390": 370,
+     "1440": 512.5
+    },
+    "kit": {
+     "390": 369,
+     "1440": 513.4
+    }
+   },
+   {
+    "label": "Resultatkort bredd",
+    "key": "result-w",
+    "tol": 2,
+    "note": "",
+    "source": {
+     "390": 370,
+     "1440": 717.5
+    },
+    "kit": {
+     "390": 369,
+     "1440": 718.8
+    }
+   },
+   {
+    "label": "Inputkort höjd",
+    "key": "input-h",
+    "tol": 40,
+    "note": "Outfit i st.f. PJS/mono, eyebrows 12 i st.f. 15, ticks 32; innehållsberoende",
+    "source": {
+     "390": 806.1,
+     "1440": 848.1
+    },
+    "kit": {
+     "390": 766.2,
+     "1440": 822.8
+    }
+   },
+   {
+    "label": "Resultatkort höjd",
+    "key": "result-h",
+    "tol": 40,
+    "note": "CTA 58 i st.f. 50, padding 39,6/16,9 i st.f. 40/20",
+    "source": {
+     "390": 634.1,
+     "1440": 589.1
+    },
+    "kit": {
+     "390": 604.1,
+     "1440": 600.1
+    }
+   },
+   {
+    "label": "Inputkort padding",
+    "key": "input-pad",
+    "tol": 1,
+    "note": "--ampy-space-s (LED 20 / 15)",
+    "source": {
+     "390": 15,
+     "1440": 20
+    },
+    "kit": {
+     "390": 13.3,
+     "1440": 19.8
+    }
+   },
+   {
+    "label": "Inputkort radie",
+    "key": "input-radius",
+    "tol": 1,
+    "note": "--ampy-radius-card 20 -> 16,3 (LED 20 fast)",
+    "source": {
+     "390": 20,
+     "1440": 20
+    },
+    "kit": {
+     "390": 16.3,
+     "1440": 20
+    }
+   },
+   {
+    "label": "Resultatkort padding",
+    "key": "result-pad",
+    "tol": 1,
+    "note": "--ampy-space-l 39,6 / m 16,9 (LED 40 / 20)",
+    "source": {
+     "390": 20,
+     "1440": 40
+    },
+    "kit": {
+     "390": 16.9,
+     "1440": 39.6
+    }
+   },
+   {
+    "label": "Rubrik (px)",
+    "key": "title-fs",
+    "tol": 1,
+    "note": "h2-rollen 36/26,8 (LED PJS 34/24)",
+    "source": {
+     "390": 24.2,
+     "1440": 34
+    },
+    "kit": {
+     "390": 26.8,
+     "1440": 36
+    }
+   },
+   {
+    "label": "Hjältesiffra (px)",
+    "key": "hero-fs",
+    "tol": 0.5,
+    "note": "--ampy-text-number = LED:s clamp",
+    "source": {
+     "390": 38.3,
+     "1440": 56
+    },
+    "kit": {
+     "390": 38.3,
+     "1440": 56
+    }
+   },
+   {
+    "label": "Hjältesiffra radhöjd",
+    "key": "hero-lh",
+    "tol": 0.5,
+    "note": "",
+    "source": {
+     "390": 38.3,
+     "1440": 56
+    },
+    "kit": {
+     "390": 38.3,
+     "1440": 56
+    }
+   },
+   {
+    "label": "Enhet (px)",
+    "key": "unit-fs",
+    "tol": 0.5,
+    "note": "kit-egen --_mid = LED --fs-xl",
+    "source": {
+     "390": 21.1,
+     "1440": 28
+    },
+    "kit": {
+     "390": 21.1,
+     "1440": 28
+    }
+   },
+   {
+    "label": "Trio-värde (px)",
+    "key": "trio-fs",
+    "tol": 0.5,
+    "note": "text.css --_mid",
+    "source": {
+     "390": 21.1,
+     "1440": 28
+    },
+    "kit": {
+     "390": 21.1,
+     "1440": 28
+    }
+   },
+   {
+    "label": "Stapelspår höjd",
+    "key": "track-h",
+    "tol": 0.5,
+    "note": "signaturen: 24",
+    "source": {
+     "390": 24,
+     "1440": 24
+    },
+    "kit": {
+     "390": 24,
+     "1440": 24
+    }
+   },
+   {
+    "label": "Stapel höjd",
+    "key": "bar-h",
+    "tol": 0.5,
+    "note": "",
+    "source": {
+     "390": 24,
+     "1440": 24
+    },
+    "kit": {
+     "390": 24,
+     "1440": 24
+    }
+   },
+   {
+    "label": "Stapelnyckel bredd",
+    "key": "key-w",
+    "tol": 1,
+    "note": "60 / 50 (mobil: auto med min 50)",
+    "source": {
+     "390": 50,
+     "1440": 60
+    },
+    "kit": {
+     "390": 50,
+     "1440": 60
+    }
+   },
+   {
+    "label": "Segment spår höjd",
+    "key": "segment-h",
+    "tol": 0.5,
+    "note": "falt.css",
+    "source": {
+     "390": 48,
+     "1440": 48
+    },
+    "kit": {
+     "390": 48,
+     "1440": 48
+    }
+   },
+   {
+    "label": "Segment option höjd",
+    "key": "segopt-h",
+    "tol": 0.5,
+    "note": "falt.css",
+    "source": {
+     "390": 40,
+     "1440": 40
+    },
+    "kit": {
+     "390": 40,
+     "1440": 40
+    }
+   },
+   {
+    "label": "Reglage tumme",
+    "key": "thumb-w",
+    "tol": 0.5,
+    "note": "falt.css --_thumb (pseudo-elementet kan inte mätas via API, källan mättes som DOM-element)",
+    "source": {
+     "390": 24,
+     "1440": 24
+    },
+    "kit": {
+     "390": 24,
+     "1440": 24
+    }
+   },
+   {
+    "label": "Reglage spår höjd",
+    "key": "track-range-h",
+    "tol": 0.5,
+    "note": "falt.css --_track-h",
+    "source": {
+     "390": 6,
+     "1440": 6
+    },
+    "kit": {
+     "390": 6,
+     "1440": 6
+    }
+   },
+   {
+    "label": "Select höjd",
+    "key": "select-h",
+    "tol": 0.5,
+    "note": "falt.css",
+    "source": {
+     "390": 48,
+     "1440": 48
+    },
+    "kit": {
+     "390": 48,
+     "1440": 48
+    }
+   },
+   {
+    "label": "Väljare höjd",
+    "key": "selector-h",
+    "tol": 1,
+    "note": "",
+    "source": {
+     "390": 78,
+     "1440": 78
+    },
+    "kit": {
+     "390": 74.6,
+     "1440": 77.8
+    }
+   },
+   {
+    "label": "Väljare ikonruta",
+    "key": "selector-img",
+    "tol": 0.5,
+    "note": "",
+    "source": {
+     "390": 56,
+     "1440": 56
+    },
+    "kit": {
+     "390": 56,
+     "1440": 56
+    }
+   },
+   {
+    "label": "Tips-chip",
+    "key": "tip-w",
+    "tol": 0.5,
+    "note": "",
+    "source": {
+     "390": 16,
+     "1440": 16
+    },
+    "kit": {
+     "390": 16,
+     "1440": 16
+    }
+   },
+   {
+    "label": "Tick-etikett höjd",
+    "key": "tick-h",
+    "tol": 0.5,
+    "note": "falt.css",
+    "source": {
+     "390": 32,
+     "1440": 32
+    },
+    "kit": {
+     "390": 32,
+     "1440": 32
+    }
+   },
+   {
+    "label": "CTA höjd",
+    "key": "cta-h",
+    "tol": 0.5,
+    "note": ".ampy-btn 58 (LED 50): B4/B6, avsiktlig",
+    "source": {
+     "390": 50,
+     "1440": 50
+    },
+    "kit": {
+     "390": 58,
+     "1440": 58
+    }
+   },
+   {
+    "label": "CTA radie",
+    "key": "cta-radius",
+    "tol": 0.5,
+    "note": "16 (LED 12): B4, avsiktlig",
+    "source": {
+     "390": 12,
+     "1440": 12
+    },
+    "kit": {
+     "390": 16,
+     "1440": 16
+    }
+   },
+   {
+    "label": "Metodkort höjd (stängd)",
+    "key": "method-h",
+    "tol": 4,
+    "note": "summary 18/600 med 44 px träffyta (LED 19/600)",
+    "source": {
+     "390": 56.1,
+     "1440": 60.5
+    },
+    "kit": {
+     "390": 62.6,
+     "1440": 65.8
+    }
+   }
+  ],
+  "errors": {
+   "390": [],
+   "1440": []
+  },
+  "overflowX": {
+   "390": false,
+   "1440": false
+  }
+ },
+ "diag": {
+  "sourceNote": "inventering/_probes/elcentral-kollen / elcentral-verdict / elcentral-akut / elkollen-rod .measure.json (samma metod)",
+  "harness": "site/_probes/out/s3-harness-diag-*.html: .ampy-diag utan --flush = 1280 + padding 56/39,6, som elcentrals shell",
+  "rows": [
+   {
+    "label": "Rail bredd",
+    "key": "rail-w",
+    "tol": 2,
+    "note": "44fr/56fr gap 64 i 1280-skalet",
+    "source": {
+     "390": 0,
+     "1440": 499.8
+    },
+    "kit": {
+     "390": 0,
+     "1440": 500.2
+    }
+   },
+   {
+    "label": "Stage bredd",
+    "key": "stage-w",
+    "tol": 2,
+    "note": "",
+    "source": {
+     "390": 358,
+     "1440": 636.2
+    },
+    "kit": {
+     "390": 347.1,
+     "1440": 636.6
+    }
+   },
+   {
+    "label": "Startkort bredd",
+    "key": "card-w",
+    "tol": 2,
+    "note": "",
+    "source": {
+     "390": 358,
+     "1440": 636.2
+    },
+    "kit": {
+     "390": 347.1,
+     "1440": 636.6
+    }
+   },
+   {
+    "label": "Startkort höjd",
+    "key": "card-h",
+    "tol": 1,
+    "note": "min-höjd 560 / 600",
+    "source": {
+     "390": 600,
+     "1440": 560
+    },
+    "kit": {
+     "390": 600,
+     "1440": 560
+    }
+   },
+   {
+    "label": "Kort padding",
+    "key": "card-pad",
+    "tol": 1,
+    "note": "--ampy-space-card 28 / 16,9 (källan 32 / 20)",
+    "source": {
+     "390": 20,
+     "1440": 32
+    },
+    "kit": {
+     "390": 16.9,
+     "1440": 28
+    }
+   },
+   {
+    "label": "Kort radie",
+    "key": "card-radius",
+    "tol": 1,
+    "note": "--ampy-radius-card 20 / 16,3 (källan 14): avsiktlig",
+    "source": {
+     "390": 14,
+     "1440": 14
+    },
+    "kit": {
+     "390": 16.3,
+     "1440": 20
+    }
+   },
+   {
+    "label": "Rail-H1 (px)",
+    "key": "title-fs",
+    "tol": 1,
+    "note": "h1-rollen 48 / 31,3 (källan PJS 44 / 32)",
+    "source": {
+     "390": 32,
+     "1440": 44
+    },
+    "kit": {
+     "390": 31.3,
+     "1440": 48
+    }
+   },
+   {
+    "label": "Rail-lead (px)",
+    "key": "lead-fs",
+    "tol": 1,
+    "note": "lead-rollen 22 / 17 (källan 20 / 18)",
+    "source": {
+     "390": 18,
+     "1440": 20
+    },
+    "kit": {
+     "390": 17,
+     "1440": 22
+    }
+   },
+   {
+    "label": "Rail-CTA höjd",
+    "key": "railbtn-h",
+    "tol": 1,
+    "note": ".ampy-btn 58 (mobil 60)",
+    "source": {
+     "390": 60.1,
+     "1440": 58
+    },
+    "kit": {
+     "390": 60,
+     "1440": 58
+    }
+   },
+   {
+    "label": "Rail-CTA bredd",
+    "key": "railbtn-w",
+    "tol": 2,
+    "note": "två lika breda, gap 19,8 (källan 20)",
+    "source": {
+     "390": 358,
+     "1440": 239.9
+    },
+    "kit": {
+     "390": 347.1,
+     "1440": 245.2
+    }
+   },
+   {
+    "label": "Start-CTA höjd",
+    "key": "startcta-h",
+    "tol": 0.5,
+    "note": ".ampy-btn--compact 48",
+    "source": {
+     "390": 48,
+     "1440": 48
+    },
+    "kit": {
+     "390": 48,
+     "1440": 48
+    }
+   },
+   {
+    "label": "Start-CTA bredd",
+    "key": "startcta-w",
+    "tol": 1,
+    "note": "max 320",
+    "source": {
+     "390": 316,
+     "1440": 320
+    },
+    "kit": {
+     "390": 311.3,
+     "1440": 320
+    }
+   },
+   {
+    "label": "Startrubrik (px)",
+    "key": "starttitle-fs",
+    "tol": 1,
+    "note": "h2-rollen 36 / 26,8 (källan 36 / 20,9)",
+    "source": {
+     "390": 20.9,
+     "1440": 36
+    },
+    "kit": {
+     "390": 26.8,
+     "1440": 36
+    }
+   },
+   {
+    "label": "Illustration",
+    "key": "illu-w",
+    "tol": 0.5,
+    "note": "kit-egen --_illu 120 (källan 120 / 110)",
+    "source": {
+     "390": 110,
+     "1440": 120
+    },
+    "kit": {
+     "390": 110,
+     "1440": 120
+    }
+   },
+   {
+    "label": "Frågetitel (px)",
+    "key": "q-fs",
+    "tol": 0.5,
+    "note": "kit-egen clamp 32 -> 20",
+    "source": {
+     "390": 20,
+     "1440": 32
+    },
+    "kit": {
+     "390": 20,
+     "1440": 32
+    }
+   },
+   {
+    "label": "Chip höjd",
+    "key": "chip-h",
+    "tol": 0.5,
+    "note": "falt.css 64 / 56",
+    "source": {
+     "390": 56,
+     "1440": 64
+    },
+    "kit": {
+     "390": 56,
+     "1440": 64
+    }
+   },
+   {
+    "label": "Chip titel (px)",
+    "key": "chip-fs",
+    "tol": 1.5,
+    "note": "falt.css body 18 / small 14,1 (källan 18 / 15)",
+    "source": {
+     "390": 15,
+     "1440": 18
+    },
+    "kit": {
+     "390": 14.1,
+     "1440": 18
+    }
+   },
+   {
+    "label": "Chip radie",
+    "key": "chip-radius",
+    "tol": 1,
+    "note": "falt.css --ampy-radius-field 12 / 10,1 (källan 10)",
+    "source": {
+     "390": 10,
+     "1440": 10
+    },
+    "kit": {
+     "390": 10.1,
+     "1440": 12
+    }
+   },
+   {
+    "label": "Förloppsprick aktiv bredd",
+    "key": "step-cur-w",
+    "tol": 0.5,
+    "note": "",
+    "source": {
+     "390": 28,
+     "1440": 28
+    },
+    "kit": {
+     "390": 28,
+     "1440": 28
+    }
+   },
+   {
+    "label": "Förloppsprick höjd",
+    "key": "step-h",
+    "tol": 0.5,
+    "note": "",
+    "source": {
+     "390": 4,
+     "1440": 4
+    },
+    "kit": {
+     "390": 4,
+     "1440": 4
+    }
+   },
+   {
+    "label": "Dualstatus bredd (GRÖN)",
+    "key": "dual-w",
+    "tol": 2,
+    "note": "fit-content min 420 (>= 600 containerbredd) / full bredd",
+    "source": {
+     "390": 316,
+     "1440": 420
+    },
+    "kit": {
+     "390": 311.3,
+     "1440": 420
+    }
+   },
+   {
+    "label": "Dualstatus höjd (GRÖN)",
+    "key": "dual-h",
+    "tol": 3,
+    "note": "padding 18/16, pills 18 (mobil 14)",
+    "source": {
+     "390": 95.6,
+     "1440": 123.2
+    },
+    "kit": {
+     "390": 93.9,
+     "1440": 132.8
+    }
+   },
+   {
+    "label": "Accentstapel",
+    "key": "accent-w",
+    "tol": 0.5,
+    "note": "",
+    "source": {
+     "390": 4,
+     "1440": 4
+    },
+    "kit": {
+     "390": 4,
+     "1440": 4
+    }
+   },
+   {
+    "label": "Pill höjd",
+    "key": "pill-h",
+    "tol": 1.5,
+    "note": "text.css .ampy-tag--lg (källan 37,6 / 28,8)",
+    "source": {
+     "390": 28.8,
+     "1440": 37.6
+    },
+    "kit": {
+     "390": 28.8,
+     "1440": 41.4
+    }
+   },
+   {
+    "label": "Pill text (px)",
+    "key": "pill-fs",
+    "tol": 0.5,
+    "note": "text.css 18 / 14,1 (källan 18 / 14)",
+    "source": {
+     "390": 14,
+     "1440": 18
+    },
+    "kit": {
+     "390": 14,
+     "1440": 18
+    }
+   },
+   {
+    "label": "Lede (px)",
+    "key": "lede-fs",
+    "tol": 0.5,
+    "note": "body-rollen 18 / 16,1 (källan 18 / 16)",
+    "source": {
+     "390": 16,
+     "1440": 18
+    },
+    "kit": {
+     "390": 16.1,
+     "1440": 18
+    }
+   },
+   {
+    "label": "Fynd-etikett (px)",
+    "key": "finding-fs",
+    "tol": 1.5,
+    "note": "body 18 / 16,1 (källan 18 / 15)",
+    "source": {
+     "390": 15,
+     "1440": 18
+    },
+    "kit": {
+     "390": 16.1,
+     "1440": 18
+    }
+   },
+   {
+    "label": "Fynd-ikon",
+    "key": "finding-icon",
+    "tol": 0.5,
+    "note": "20 (källan 20 / 18)",
+    "source": {
+     "390": 18,
+     "1440": 20
+    },
+    "kit": {
+     "390": 20,
+     "1440": 20
+    }
+   },
+   {
+    "label": "Kortets CTA höjd",
+    "key": "cta-h",
+    "tol": 0.5,
+    "note": ".ampy-btn--compact 48",
+    "source": {
+     "390": 48,
+     "1440": 48
+    },
+    "kit": {
+     "390": 48,
+     "1440": 48
+    }
+   },
+   {
+    "label": "Akut-ruta höjd",
+    "key": "akut-h",
+    "tol": 8,
+    "note": "text 16 / 14,1 (källan 15 / 13); radbrytning",
+    "source": {
+     "390": 136.1,
+     "1440": 102
+    },
+    "kit": {
+     "390": 132.5,
+     "1440": 104.4
+    }
+   },
+   {
+    "label": "Dualstatus bredd (GUL)",
+    "key": "dual-w",
+    "tol": 2,
+    "note": "",
+    "source": {
+     "390": 316,
+     "1440": 420
+    },
+    "kit": {
+     "390": 311.3,
+     "1440": 420
+    }
+   },
+   {
+    "label": "Board höjd (RÖD, elkollen)",
+    "key": "board-h",
+    "tol": 1.5,
+    "note": "h3-rollen 22 / 20,1 (källan 22 / 18)",
+    "source": {
+     "390": 47.6,
+     "1440": 56.4
+    },
+    "kit": {
+     "390": 47.2,
+     "1440": 56.4
+    }
+   },
+   {
+    "label": "Board text (px)",
+    "key": "board-fs",
+    "tol": 0.5,
+    "note": "(källan 22 / 18)",
+    "source": {
+     "390": 18,
+     "1440": 22
+    },
+    "kit": {
+     "390": 20.1,
+     "1440": 22
+    }
+   },
+   {
+    "label": "Board bredd",
+    "key": "board-w",
+    "tol": 12,
+    "note": "Outfit i st.f. Outfit 700 (samma), padding 14/19,8 (källan 14 18 / 12 16)",
+    "source": {
+     "390": 262.7,
+     "1440": 311.3
+    },
+    "kit": {
+     "390": 279.5,
+     "1440": 313.9
+    }
+   },
+   {
+    "label": "Tabbar höjd",
+    "key": "tabs-h",
+    "tol": 0.5,
+    "note": "44",
+    "source": {
+     "390": 44,
+     "1440": 44
+    },
+    "kit": {
+     "390": 44,
+     "1440": 44
+    }
+   },
+   {
+    "label": "Sammanfattning (px)",
+    "key": "summary-fs",
+    "tol": 1.5,
+    "note": "body 18 / 16,1 (källan 17 / 16)",
+    "source": {
+     "390": 16,
+     "1440": 17
+    },
+    "kit": {
+     "390": 16.1,
+     "1440": 18
+    }
+   },
+   {
+    "label": "Rad ✓/✗ (px)",
+    "key": "row-fs",
+    "tol": 2,
+    "note": "body 18 / 16,1 (källan 16 / 15)",
+    "source": {
+     "390": 15,
+     "1440": 16
+    },
+    "kit": {
+     "390": 16.1,
+     "1440": 18
+    }
+   }
+  ],
+  "errors": {
+   "390": [],
+   "1440": []
+  },
+  "overflowX": {
+   "390": false,
+   "1440": false
+  }
+ }
+}

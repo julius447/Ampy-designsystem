@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fält och reglage: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  .ds-main { min-width: 0; }
+  .ds-demo { row-gap: var(--ampy-space-s); }
+  .ds-demo--stack > :not(.ds-demo__label) { width: 100%; }
+  .ds-demo__col { display: grid; gap: var(--ampy-space-xs); width: min(100%, 44rem); }
+  .ds-demo__col--wide { width: min(100%, 64rem); }
+  .ds-demo__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr)); gap: var(--ampy-space-s); width: 100%; align-items: start; }
+  .ds-demo__grid .ds-demo__item { align-items: stretch; }
+  .ds-demo__item { display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+  .ds-demo__item > div, .ds-demo__item > fieldset { width: 100%; }
+  .ds-demo__tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); }
+  .ds-demo--dark .ds-demo__tag { color: var(--ampy-on-dark-faint); }
+  .ds-demo--dark { color: var(--ampy-on-dark); }
+  :where(.ds-demo--dark) :where(p, li) { color: var(--ampy-on-dark-soft); }
+  .ds-demo .is-focus:not(.ampy-input, .ampy-textarea, .ampy-select, .ampy-chip) { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+  .ds-demo--dark .is-focus { outline-color: var(--ampy-focus-on-dark); }
+  .ds-shot { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); overflow: hidden; background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
+  .ds-shot img { display: block; width: 100%; height: auto; }
+  .ds-anchor { color: inherit; text-decoration: none; }
+  .ds-anchor:hover::after { content: " #"; color: var(--ampy-ink-faint); font-weight: 300; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: 1.5; max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.5rem; }
+  .ds-list--small { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  .ds-toc { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 var(--ampy-space-l); padding: 0; list-style: none; }
+  .ds-toc a { display: inline-block; padding: 0.5rem 1.1rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); background: var(--ampy-bg-surface); color: var(--ampy-ink-muted); text-decoration: none; font-size: var(--ampy-text-small); }
+  .ds-toc a:hover { color: var(--ampy-ink); border-color: var(--ampy-line-strong); }
+  .ds-table td:first-child { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); white-space: nowrap; }
+  .ds-ok { color: var(--ampy-success-ink); font-weight: var(--ampy-w-medium); }
+  .ds-dev { color: var(--ampy-warn-ink); }
+  @media (max-width: 991px) { .ds-demo__col, .ds-demo__col--wide { width: 100%; } }
+  .ds-demo__item .ampy-fields, .ds-demo__item .ampy-chips, .ds-demo__item .ampy-field, .ds-demo__item .ampy-search, .ds-demo__item .ampy-range-wrap { width: 100%; }
+  .ds-form { width: min(100%, 52rem); }
+  .ds-shot img { max-height: 46rem; object-fit: cover; object-position: top; }
+</style>
+</head>
+<body class="ds-body ampy">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><!-- kopia av system/ikoner.svg (kanon) så att <use href="#ik-..."> fungerar även via file:// -->
+  
+  <symbol id="ik-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="ik-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M17 7H7M17 7v10"/></symbol>
+  <symbol id="ik-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.05 6A5 5 0 0 1 18 9.95M14.05 2a9 9 0 0 1 7.95 7.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="ik-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ik-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/></symbol>
+  <symbol id="ik-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="ik-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="ik-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="ik-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="ik-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H13l1-8.5Z"/></symbol>
+  <symbol id="ik-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></symbol>
+  <symbol id="ik-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="ik-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></symbol>
+  <symbol id="ik-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></symbol>
+  <symbol id="ik-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="ik-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
+  <symbol id="ik-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.6-4.6"/></symbol>
+  <symbol id="ik-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="11" width="17" height="10" rx="2"/><path d="M7.5 11V7.5a4.5 4.5 0 0 1 9 0V11"/></symbol>
+  <symbol id="ik-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="ik-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="ik-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m21 8-8 5.2a1.9 1.9 0 0 1-2 0L3 8"/></symbol>
+  <symbol id="ik-google" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C41.4 34.8 44 29.9 44 24c0-1.3-.1-2.6-.4-3.9z"/></symbol>
+</svg>
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="index.html">Alla komponenter</a>
+        <a href="knappar.html">Knappar och länkar</a>
+        <a href="text.html">Textelement</a>
+        <a href="ytor.html">Ytor och kort</a>
+        <a href="falt.html" aria-current="page">Fält och reglage</a>
+        <a href="verktyg.html">Kalkylator-kitet</a>
+        <a href="diagnostik.html">Diagnostik-kitet</a>
+        <a href="block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Komponenter</span>
+      <h1 class="ds-h1">Fält och reglage</h1>
+      <p class="ds-lead">Nio inputrecept i källorna blev ett: 48 px högt, radie 12, en kontrollkant som klarar 3:1, en fokusring. Samma språk för sökfält, select, textarea, checkbox, radio-chips, segment, slider och stepper. Fel i rött, aldrig i teal.</p>
+      <p class="ds-source">Kanon: input <code>elcentral-kollen</code> (<code>assets/elcentralkollen.css:517-518</code>, konsoliderad till 48 h enligt komponentkartan); sökfält <code>elkollen</code> (<code>assets/behorighetskollen.css:716-770</code>) och adresslista <code>main-form</code> (<code>css/styles.css:174-196</code>); select <code>led-kalkylator</code> (<code>styles.css:285-290</code>) med pil ur <code>hero-2-form</code>; textarea <code>main-form</code> (:158-166); checkbox <code>led-kalkylator</code> (:365-393) och <code>elcentral-kollen</code> (:388-392); radio-chips <code>elcentral-kollen</code> (:372-392), rutnät <code>energycalc</code> (<code>vB/tool.css:220-243</code>); segment <code>led-kalkylator</code> (:249-259), toggle <code>ev-kalkylator</code> (<code>prototype/styles.css:439-456</code>); slider <code>led-kalkylator</code> (:216-236) som native range (<code>energycalc</code> :196-213); stepper <code>energycalc</code> (:234-246); hjälp och fel <code>hero-2-alternatives</code> (<code>dist/ampy-hero-primitives.css:525-526</code>) och elcentral (:522). Finns även i: elkollen, LED/EV/battery, energycalc, hero-2 Z, hero-2-form, main-form, booking, fotobedomningen (avvikelser längst ned). Blockbiblioteket: <a class="ds-a" href="../blockbibliotek.html#elcentral-kollen">Elcentral-kollen</a>, <a class="ds-a" href="../blockbibliotek.html#led-kalkylator">LED-kalkylatorn</a>, <a class="ds-a" href="../blockbibliotek.html#main-form">Huvudformuläret</a>.</p>
+      <ul class="ds-toc">
+        <li><a href="#input">Fält och input</a></li><li><a href="#sok">Sökfält</a></li><li><a href="#select">Select</a></li><li><a href="#textarea">Textarea</a></li><li><a href="#check">Checkbox och samtycke</a></li><li><a href="#chips">Radio-chips</a></li><li><a href="#segment">Segment</a></li><li><a href="#range">Slider</a></li><li><a href="#stepper">Stepper</a></li><li><a href="#hjalp">Hjälp och fel</a></li><li><a href="#anatomi">Anatomi</a></li><li><a href="#gor">Gör och gör inte</a></li><li><a href="#kod">Kod</a></li><li><a href="#avvikelser">Avvikelser</a></li>
+      </ul>
+
+      <div class="ds-shot"><img src="../bilder/elcentral-kollen-desktop-state-leadform.jpg" alt="Källan: Elcentral-kollens formulärsteg med fyra fält, fel och solid knapp" loading="lazy"></div>
+      <p class="ds-caption">Så här ser källan ut: Elcentral-kollens formulärsteg vid 1440 (fokus på fältet Namn, felraden "Fyll i alla fält", samtyckesnoten under knappen). Fälten nedan är klonen.</p>
+
+      <h2 class="ds-h2" id="input"><a class="ds-anchor" href="#input">Fältgrupp och input</a></h2>
+      <p class="ds-p">Etikett 14/600 ovanför, 7 px luft, fältet 48 px med 16 px text (iOS zoomar inte), padding 14, kant <code>--ampy-line-strong</code> (3,39:1; källornas #e3e5ed mäter 1,26:1), radie 12 (10 på mobil). Fokus: kant teal-deep och ringen <code>0 0 0 3px rgba(0,122,105,.9)</code>. Fel: kant i <code>--ampy-error</code> och en felrad i 13/500. Obligatoriskt markeras med asterisk i bläck, valfritt med "(valfritt)". Storlekar: 44 (<code>--sm</code>), 48, 52 (<code>--lg</code>, elcentral).</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Default</span><div class="ampy-field "><label data-probe="label" class="ampy-field__label" for="i1">E-post</label><input class="ampy-input " id="i1" type="email" placeholder="namn@exempel.se" data-probe="input"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible</span><div class="ampy-field "><label class="ampy-field__label" for="i2">E-post</label><input class="ampy-input is-focus" id="i2" type="email" placeholder="namn@exempel.se"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Ifyllt</span><div class="ampy-field "><label class="ampy-field__label" for="i3">Telefon</label><input class="ampy-input ampy-input--tabular" id="i3" type="tel" placeholder="" value="070-123 45 67"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><div class="ampy-field is-error"><label class="ampy-field__label" for="i4">Postnummer</label><input class="ampy-input " id="i4" type="text" placeholder="" value="12" aria-invalid="true" aria-describedby="i4-e"><p class="ampy-error" id="i4-e" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Postnumret har fem siffror.</p></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Med hjälptext</span><div class="ampy-field "><label class="ampy-field__label" for="i5">Postnummer <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input " id="i5" type="text" placeholder="123 45" inputmode="numeric"><p class="ampy-help" id="i5-h">Så vi vet vilken elektriker som är närmast.</p></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Valfritt</span><div class="ampy-field "><label class="ampy-field__label" for="i6">Meddelande <span class="ampy-field__opt">(valfritt)</span></label><input class="ampy-input " id="i6" type="text" placeholder="Något vi bör veta?"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><div class="ampy-field "><label class="ampy-field__label" for="i7">Kommun</label><input class="ampy-input " id="i7" type="text" placeholder="" value="Solna" disabled></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Storlekar 44 / 48 / 52</span><div style="display:grid;gap:1rem"><input class="ampy-input ampy-input--sm" id="i8" type="text" placeholder="44 px (--sm)"><input class="ampy-input " id="i9" type="text" placeholder="48 px (kanon)"><input class="ampy-input ampy-input--lg" id="i10" type="text" placeholder="52 px (--lg)"></div></div>
+      </div>
+      <div class="ampy ds-demo ds-demo--stack">
+        <span class="ds-demo__label">Fältgrid, två kolumner från 600 (elcentral-kollens formulärsteg)</span>
+        <div class="ds-form"><div class="ampy-fields">
+  <div class="ampy-field "><label class="ampy-field__label" for="g1">Namn <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input " id="g1" type="text" placeholder="Förnamn och efternamn" autocomplete="name"></div>
+  <div class="ampy-field "><label class="ampy-field__label" for="g2">E-post <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input " id="g2" type="email" placeholder="namn@exempel.se" autocomplete="email"></div>
+  <div class="ampy-field "><label class="ampy-field__label" for="g3">Telefon <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input ampy-input--tabular" id="g3" type="tel" placeholder="070-123 45 67" autocomplete="tel" inputmode="tel"></div>
+  <div class="ampy-field "><label class="ampy-field__label" for="g4">Postnummer <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input ampy-input--tabular" id="g4" type="text" placeholder="123 45" inputmode="numeric" autocomplete="postal-code"><p class="ampy-help" id="g4-h">Så vi vet vilken elektriker som är närmast.</p></div>
+  <div class="ampy-field ampy-field--full"><button class="ampy-btn ampy-btn--secondary ampy-btn--block" type="button">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></button><p class="ampy-consent">Genom att trycka på "Boka rådgivning" samtycker du till att Ampy behandlar dina personuppgifter enligt vår <a href="#">integritetspolicy</a>.</p></div>
+</div></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta (LED)</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Default</span><div class="ampy-field "><label class="ampy-field__label" for="d1">Namn</label><input class="ampy-input " id="d1" type="text" placeholder="Förnamn och efternamn"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible (neon-mint)</span><div class="ampy-field "><label class="ampy-field__label" for="d2">E-post</label><input class="ampy-input is-focus" id="d2" type="email" placeholder="namn@exempel.se"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><div class="ampy-field is-error"><label class="ampy-field__label" for="d3">Telefon</label><input class="ampy-input " id="d3" type="tel" placeholder="" value="07" aria-invalid="true"><p class="ampy-error" id="d3-e" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Skriv hela numret.</p></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><div class="ampy-field "><label class="ampy-field__label" for="d4">Kommun</label><input class="ampy-input " id="d4" type="text" placeholder="" value="Solna" disabled></div></div>
+      </div>
+
+      <h2 class="ds-h2" id="sok"><a class="ds-anchor" href="#sok">Sökfält och adresslista</a></h2>
+      <p class="ds-p">Elkollens sökfält: ikonen 16 px till vänster i svag färg, fältet får vänsterpadding 40. Listan är huvudformulärets adress-combobox: vit, radie 12, skuggan raised, max 260 px hög, träffar med teal-markerad matchning och postnummer till höger. I dokumentationen visas listan statisk (<code>--static</code>); i drift ligger den absolut under fältet.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Sökfält</span><div class="ampy-search"><svg class="ampy-search__icon" width="16" height="16" aria-hidden="true"><use href="#ik-search"/></svg><input class="ampy-input" id="s1" type="search" placeholder="Sök efter din adress" aria-label="Sök adress"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Med lista öppen</span><div class="ampy-search">
+  <svg class="ampy-search__icon" width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg>
+  <input class="ampy-input" id="s2" type="search" placeholder="Sök efter din adress" value="Storgatan 1" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="s2-list">
+  <ul class="ampy-search__list ampy-search__list--static" id="s2-list" role="listbox">
+    <li><button class="ampy-search__opt is-active" type="button" role="option" aria-selected="true"><svg width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>, Solna</span><small>171 52</small></button></li>
+    <li><button class="ampy-search__opt" type="button" role="option"><svg width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>2, Sundbyberg</span><small>172 31</small></button></li>
+    <li><button class="ampy-search__opt" type="button" role="option"><svg width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>4, Stockholm</span><small>114 51</small></button></li>
+  </ul>
+</div></div>
+      </div>
+
+      <h2 class="ds-h2" id="select"><a class="ds-anchor" href="#select">Select</a></h2>
+      <p class="ds-p">Native <code>&lt;select&gt;</code> med samma kropp som inputen och en chevron som data-URI (hero-2-forms grepp, färgen är midnight, vit på mörkt). Egen väljare med ikon och lista är kalkylator-kitets produktväljare (S3).</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Default</span><div class="ampy-field "><label class="ampy-field__label" for="sel1">Var sitter belysningen?</label><select data-probe="select" class="ampy-select" id="sel1">
+  <option>Snitt brinntid (12,0 h/dygn)</option>
+  <option>Kontor (10,0 h/dygn)</option>
+  <option>Garage och förråd (2,0 h/dygn)</option>
+  <option>Trapphus (24,0 h/dygn)</option>
+</select></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible</span><div class="ampy-field "><label class="ampy-field__label" for="sel2">Var sitter belysningen?</label><select class="ampy-select is-focus" id="sel2">
+  <option>Snitt brinntid (12,0 h/dygn)</option>
+  <option>Kontor (10,0 h/dygn)</option>
+  <option>Garage och förråd (2,0 h/dygn)</option>
+  <option>Trapphus (24,0 h/dygn)</option>
+</select></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><div class="ampy-field "><label class="ampy-field__label" for="sel3">Elprisområde</label><select class="ampy-select" disabled id="sel3">
+  <option>Snitt brinntid (12,0 h/dygn)</option>
+  <option>Kontor (10,0 h/dygn)</option>
+  <option>Garage och förråd (2,0 h/dygn)</option>
+  <option>Trapphus (24,0 h/dygn)</option>
+</select></div></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Default</span><div class="ampy-field "><label class="ampy-field__label" for="sel4">Var sitter belysningen?</label><select class="ampy-select" id="sel4">
+  <option>Snitt brinntid (12,0 h/dygn)</option>
+  <option>Kontor (10,0 h/dygn)</option>
+  <option>Garage och förråd (2,0 h/dygn)</option>
+  <option>Trapphus (24,0 h/dygn)</option>
+</select></div></div>
+      </div>
+
+      <h2 class="ds-h2" id="textarea"><a class="ds-anchor" href="#textarea">Textarea</a></h2>
+      <p class="ds-p">Huvudformulärets meddelandefält: minst 70 px, ingen resize-hake, samma kant, radie och fokus som inputen. <code>--resize</code> tillåter vertikal resize.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Default</span><div class="ampy-field "><label class="ampy-field__label" for="t1">Meddelande <span class="ampy-field__opt">(valfritt)</span></label><textarea class="ampy-textarea" data-probe="textarea" id="t1" rows="3" placeholder="Valfritt meddelande"></textarea></div></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Focus-visible</span><div class="ampy-field "><label class="ampy-field__label" for="t2">Meddelande <span class="ampy-field__opt">(valfritt)</span></label><textarea class="ampy-textarea is-focus" id="t2" rows="3">Elcentralen sitter i källaren, porslinssäkringar.</textarea></div></div>
+      </div>
+
+      <h2 class="ds-h2" id="check"><a class="ds-anchor" href="#check">Checkbox och samtycke</a></h2>
+      <p class="ds-p">Ritad ruta 20 px (källorna 18 till 22), radie 6, 1,5 px kant, bocken via clip-path ur LED, fylld teal när den är vald. Raden är 44 px hög som träffyta. Det vanligaste mönstret i källorna är dock inget kryss alls: samtycket står som textrad under knappen (elcentral, energycalc, main-form, fotobedomningen; ägarbeslut v2.17), <code>.ampy-consent</code>.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Default</span><label class="ampy-check"><input type="checkbox" data-probe="check"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Vald</span><label class="ampy-check"><input type="checkbox" checked><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Focus-visible</span><label class="ampy-check"><input type="checkbox" style="border-color:var(--ampy-action-strong);box-shadow:var(--ampy-focus-ring)"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Fel (samtycke saknas)</span><div class="ampy-check is-error"><input type="checkbox"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></div><p class="ampy-error"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Du behöver godkänna för att vi ska kunna ringa dig.</p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Som val (--strong)</span><label class="ampy-check ampy-check--strong ampy-check--center"><input type="checkbox" checked><span class="ampy-check__text">Jag vill ha offert på laddbox också</span></label></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Disabled</span><label class="ampy-check"><input type="checkbox" disabled checked><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Samtycke som textrad</span><button class="ampy-btn ampy-btn--secondary ampy-btn--block" type="button">Boka rådgivning</button><p class="ampy-consent">Genom att trycka på "Boka rådgivning" samtycker du till att Ampy behandlar dina personuppgifter enligt vår <a href="#">integritetspolicy</a>.</p></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta (LED)</span>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Default</span><label class="ampy-check"><input type="checkbox"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Vald</span><label class="ampy-check"><input type="checkbox" checked><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
+      </div>
+
+      <h2 class="ds-h2" id="chips"><a class="ds-anchor" href="#chips">Radio-chips och val</a></h2>
+      <p class="ds-p">Elcentral-kollens svarsalternativ: fullbreddskort 56 px (64 från 1024), radie 12, titel 500 med förtydligande rad under, hover med teal-kant och 1 px lyft, valt = teal-kant på teal-tint. Enkelval avancerar direkt; flerval får en ritad 22 px-ruta och en "Fortsätt"-knapp. Rutnätet med ikonrutor är energycalcs värmeväljare, radvarianten elkollens rumschips. Riktiga <code>&lt;input type=radio|checkbox&gt;</code> ligger i chipet, tillståndet läses med <code>:has(:checked)</code>.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Enkelval (auto-avancerar), ett valt</span>
+        <div class="ds-form"><fieldset class="ampy-chips"><legend>Hur gammal är elcentralen?</legend>
+  <label data-probe="chip" class="ampy-chip  "><input type="radio" name="q1"><span class="ampy-chip__body"><span class="ampy-chip__title" data-probe="chip-title">Nyare än 10 år</span><span class="ampy-chip__clarifier">Automatsäkringar och jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1" checked><span class="ampy-chip__body"><span class="ampy-chip__title">10 till 30 år</span><span class="ampy-chip__clarifier">Ofta automatsäkringar, ibland utan jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1"><span class="ampy-chip__body"><span class="ampy-chip__title">Äldre än 30 år eller vet inte</span><span class="ampy-chip__clarifier">Porslinssäkringar är ett säkert tecken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+</fieldset></div>
+      </div>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Flerval (--multi) med Fortsätt</span>
+        <div class="ds-form"><fieldset class="ampy-chips"><legend>Känner du igen något av det här hemma?</legend>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2" checked><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Säkringar som löser ut ofta</span></span></label>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag eller strömbrytare som blir varma</span></span></label>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Lampor som flimrar</span></span></label>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Inget av detta</span></span></label>
+</fieldset><div style="margin-top:var(--ampy-space-xs)"><button class="ampy-btn ampy-btn--ghost ampy-btn--compact ampy-btn--block" type="button">Fortsätt <svg class="ampy-btn__icon" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></button></div></div>
+      </div>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Tillstånd</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Hover</span><label class="ampy-chip  is-hover"><input type="radio" name="h1"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span><span class="ampy-chip__clarifier">Glappkontakt är den vanligaste orsaken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible</span><label class="ampy-chip  is-focus"><input type="radio" name="h2"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span><span class="ampy-chip__clarifier">Glappkontakt är den vanligaste orsaken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><label class="ampy-chip  "><input type="radio" disabled name="h3"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label></div>
+      </div>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Rutnät med ikonruta (--grid, energycalc)</span>
+        <div class="ds-form"><fieldset class="ampy-chips ampy-chips--grid"><legend>Hur värmer du huset?</legend>
+  <label class="ampy-chip"><input type="checkbox" name="q3" checked><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-bolt"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Direktverkande el</span></span></label>
+  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-warning"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Luft-luftvärmepump</span></span></label>
+  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-clock"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Fjärrvärme</span></span></label>
+  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-map-pin"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Bergvärme</span></span></label>
+  <label class="ampy-chip ampy-chip--quiet"><input type="checkbox" name="q3"><span class="ampy-chip__body"><span class="ampy-chip__title">Vet inte</span></span></label>
+</fieldset></div>
+      </div>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Rad (--row, rumschips)</span>
+        <div class="ds-form"><div class="ampy-chips ampy-chips--row" role="group" aria-label="Rum">
+  <label class="ampy-chip  "><input type="radio" name="q4" checked><span class="ampy-chip__body"><span class="ampy-chip__title">Kök</span></span></label>
+  <label class="ampy-chip  "><input type="radio" name="q4"><span class="ampy-chip__body"><span class="ampy-chip__title">Badrum</span></span></label>
+  <label class="ampy-chip  "><input type="radio" name="q4"><span class="ampy-chip__body"><span class="ampy-chip__title">Garage</span></span></label>
+  <label class="ampy-chip  "><input type="radio" name="q4"><span class="ampy-chip__body"><span class="ampy-chip__title">Utomhus</span></span></label>
+</div></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-form"><fieldset class="ampy-chips"><legend>Hur gammal är elcentralen?</legend>
+  <label data-probe="chip" class="ampy-chip  "><input type="radio" name="q1d"><span class="ampy-chip__body"><span class="ampy-chip__title" data-probe="chip-title">Nyare än 10 år</span><span class="ampy-chip__clarifier">Automatsäkringar och jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1d" checked><span class="ampy-chip__body"><span class="ampy-chip__title">10 till 30 år</span><span class="ampy-chip__clarifier">Ofta automatsäkringar, ibland utan jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1d"><span class="ampy-chip__body"><span class="ampy-chip__title">Äldre än 30 år eller vet inte</span><span class="ampy-chip__clarifier">Porslinssäkringar är ett säkert tecken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+</fieldset></div>
+      </div>
+
+      <h2 class="ds-h2" id="segment"><a class="ds-anchor" href="#segment">Segment</a></h2>
+      <p class="ds-p">LED-kalkylatorns "sunk track, raised pill": ett nedsänkt spår 48 px med 4 px padding, alternativen 40 px, den valda lyfts som vit pill med subtil skugga och text i teal-deep (källan teal-core, 2,96:1). Fyra kalkylatorer bygger samma sak på tre sätt: <code>--pill</code> är EV:s toggle (vald = solid), <code>--line</code> är energycalcs kantade knappar med glidande pill. Spårets färg är ett komponentvärde: sky-mist försvinner mot ett vitt kort.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Tre val (LED)</span><div data-probe="segment" class="ampy-segment " role="radiogroup"><label data-probe="segment-option"><input type="radio" name="s1" checked>BRF</label><label><input type="radio" name="s1">Företag</label><label><input type="radio" name="s1">Privat</label></div></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Fyra val (elprisområde)</span><div class="ampy-segment " role="radiogroup"><label><input type="radio" name="s2">SE1</label><label><input type="radio" name="s2">SE2</label><label><input type="radio" name="s2" checked>SE3</label><label><input type="radio" name="s2">SE4</label></div></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Toggle (--pill, EV)</span><div class="ampy-segment ampy-segment--pill" role="radiogroup"><label><input type="radio" name="s3" checked>AC</label><label><input type="radio" name="s3">DC</label></div></div>
+        <div class="ds-demo__item" style="width:min(100%,40rem)"><span class="ds-demo__tag">Kantad med solid vald (--line, energycalc)</span><div class="ampy-segment ampy-segment--line" role="radiogroup"><label><input type="radio" name="s4">Före 1940</label><label><input type="radio" name="s4" checked>1940 till 1975</label><label><input type="radio" name="s4">1976 till 2000</label><label><input type="radio" name="s4">Efter 2000</label><label><input type="radio" name="s4">Vet inte</label></div></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Disabled</span><div class="ampy-segment is-disabled" role="radiogroup"><label><input type="radio" disabled name="s5" checked>BRF</label><label><input type="radio" disabled name="s5">Företag</label><label><input type="radio" disabled name="s5">Privat</label></div></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Tre val</span><div class="ampy-segment " role="radiogroup"><label><input type="radio" name="s6">BRF</label><label><input type="radio" name="s6" checked>Företag</label><label><input type="radio" name="s6">Privat</label></div></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Toggle</span><div class="ampy-segment ampy-segment--pill" role="radiogroup"><label><input type="radio" name="s7" checked>Med</label><label><input type="radio" name="s7">Utan</label></div></div>
+      </div>
+
+      <h2 class="ds-h2" id="range"><a class="ds-anchor" href="#range">Slider</a></h2>
+      <p class="ds-p">LED-kalkylatorns reglage som native <code>&lt;input type=range&gt;</code>: 44 px träffyta, spår 6 px, fyllning teal till emerald upp till tummen, tumme 24 px vit med 3 px teal-kant, tick-knappar 32 px i tabular-nums under. Värdet ovanför i 22/700 med enheten i 500. Fyllningen sätts som <code>--_fill</code> (procent) av skriptet, i drift 1:1 med fingret utan transition.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,40rem)"><span class="ds-demo__tag">Antal armaturer</span><div class="ampy-range-wrap">
+  <span class="ampy-range-value"><span data-range-out data-probe="range-value">80</span><span class="ampy-range-value__unit">st</span></span>
+  <input class="ampy-range" type="range" min="40" max="400" step="10" value="80" aria-label="Antal armaturer" style="--_fill:11.1%" data-range data-probe="range">
+  <div class="ampy-range__ticks">
+    <button class="ampy-range__tick" type="button" data-tick="40" data-probe="tick">40</button><button class="ampy-range__tick is-active" type="button" data-tick="80">80</button><button class="ampy-range__tick" type="button" data-tick="160">160</button><button class="ampy-range__tick" type="button" data-tick="280">280</button><button class="ampy-range__tick" type="button" data-tick="400">400</button>
+  </div>
+</div></div>
+        <div class="ds-demo__item" style="width:min(100%,40rem)"><span class="ds-demo__tag">Disabled</span><div class="ampy-range-wrap">
+  <span class="ampy-range-value"><span disabled data-range-static-out data-probe="range-value">80</span><span class="ampy-range-value__unit">st</span></span>
+  <input class="ampy-range" type="range" min="40" max="400" step="10" value="80" aria-label="Antal armaturer" style="--_fill:11.1%" disabled data-range-static data-probe="range">
+  <div class="ampy-range__ticks">
+    <button class="ampy-range__tick" type="button" disabled data-tick="40" data-probe="tick">40</button><button class="ampy-range__tick " type="button" disabled data-tick="80">80</button><button class="ampy-range__tick" type="button" disabled data-tick="160">160</button><button class="ampy-range__tick" type="button" disabled data-tick="280">280</button><button class="ampy-range__tick" type="button" disabled data-tick="400">400</button>
+  </div>
+</div></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item" style="width:min(100%,40rem)"><span class="ds-demo__tag">Brinntid</span><div class="ampy-range-wrap">
+  <span class="ampy-range-value"><span data-range-out>12</span><span class="ampy-range-value__unit">h/dygn</span></span>
+  <input class="ampy-range" type="range" min="0" max="24" step="0.5" value="12" aria-label="Brinntid" style="--_fill:50%" data-range>
+  <div class="ampy-range__ticks"><button class="ampy-range__tick" type="button" data-tick="0">0,0 h</button><button class="ampy-range__tick" type="button" data-tick="6">6,0 h</button><button class="ampy-range__tick is-active" type="button" data-tick="12">12,0 h</button><button class="ampy-range__tick" type="button" data-tick="18">18,0 h</button><button class="ampy-range__tick" type="button" data-tick="24">24,0 h</button></div>
+</div></div>
+      </div>
+
+      <h2 class="ds-h2" id="stepper"><a class="ds-anchor" href="#stepper">Stepper</a></h2>
+      <p class="ds-p">Energycalcs stepper: 1 px kant, radie 6, två knappar 44 gånger 44 med värdet 20/500 emellan, knappen trycks ihop till 92 % och värdet studsar 2 px vid byte. Bunden ände = knappen tonas till 35 %. <code>--pill</code> är LED:s och batterikalkylatorns runda variant (spår, knappar 36).</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><div class="ampy-stepper" data-stepper>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <span class="ampy-stepper__value" aria-live="polite" data-probe="stepper-value">2</span>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+</div></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Bunden ände (min)</span><div class="ampy-stepper" data-stepper>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <span class="ampy-stepper__value" aria-live="polite" data-probe="stepper-value">0</span>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+</div></div>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Pill (--pill)</span><div class="ampy-stepper ampy-stepper--pill" data-stepper>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <span class="ampy-stepper__value" aria-live="polite">3</span>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+</div></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><div class="ampy-stepper" data-stepper>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <span class="ampy-stepper__value" aria-live="polite" data-probe="stepper-value">2</span>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+</div></div>
+      </div>
+
+      <h2 class="ds-h2" id="hjalp"><a class="ds-anchor" href="#hjalp">Hjälp, fel och meddelanden</a></h2>
+      <p class="ds-p">Hjälptexten säger varför vi frågar (13 px, dämpad). Felraden är 13/500 i <code>--ampy-error-ink</code> med varningsikon och <code>role="alert"</code>; på mörkt #ffb4b6 (hero-2). Meddelanderutan (LED:s lead-msg) för resultat av inskick: ok, fel, info.</p>
+      <div class="ampy ds-demo">
+        <span class="ds-demo__label">Ljus yta</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Hjälp</span><p class="ampy-help" data-probe="help">Så vi vet vilken elektriker som är närmast.</p></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><p class="ampy-error" role="alert" data-probe="error"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Fyll i alla fält.</p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande ok</span><p class="ampy-msg ampy-msg--ok ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-check-circle"/></svg><span>Tack. Vi ringer dig inom 24 timmar på vardagar.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande fel</span><p class="ampy-msg ampy-msg--err ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-warning"/></svg><span>Det gick inte att skicka. Ring oss på 010-265 79 79 så hjälper vi dig.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Info</span><p class="ampy-msg ampy-msg--info ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-info"/></svg><span>Värme och missfärgning är klassiska tecken på glappkontakt. Inget av detta? Det är ett bra svar.</span></p></div>
+      </div>
+      <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
+        <span class="ds-demo__label">Mörk yta</span>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><p class="ampy-error" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Fyll i alla fält.</p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande ok</span><p class="ampy-msg ampy-msg--ok ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-check-circle"/></svg><span>Tack. Vi ringer dig inom 24 timmar på vardagar.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande fel</span><p class="ampy-msg ampy-msg--err ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-warning"/></svg><span>Det gick inte att skicka. Ring oss i stället.</span></p></div>
+      </div>
+
+      <h2 class="ds-h2" id="anatomi"><a class="ds-anchor" href="#anatomi">Anatomi</a></h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Kontroll</th><th>Höjd 1440 / 390</th><th>Padding</th><th>Radie 1440 / 390</th><th>Typografi</th><th>Kant, fokus, fyllning</th><th>Källa</th></tr></thead>
+        <tbody>
+          <tr><td>Input</td><td>48 / 48 (källan elcentral 52, LED 48)</td><td>0 x 14 / 0 x 10,5 (källan 10 x 12)</td><td>12 / 10,1 (källan 10)</td><td>Outfit 400 16, etikett 600 14</td><td>1 px rgba(9,11,50,.48); fokus #007a69 + 0 0 0 3px rgba(0,122,105,.9); fel #b3261e</td><td>elcentral :517-518</td></tr>
+          <tr><td>Sökfält</td><td>48 / 48</td><td>vänster 40 (källan 36)</td><td>12 / 10,1</td><td>16; lista 16 / 14,1</td><td>ikon 16 #6a7190; lista 1 px .14, 0 16px 40px .14, max 260</td><td>elkollen :716-770, main-form :174-196</td></tr>
+          <tr><td>Select</td><td>48 / 48</td><td>0 x 14, höger 42</td><td>12 / 10,1</td><td>16 (källan 15)</td><td>chevron 20 midnight, right 14</td><td>LED :285-290, hero-2-form :52</td></tr>
+          <tr><td>Textarea</td><td>min 70</td><td>9,9 x 14</td><td>12 / 10,1 (källan 8)</td><td>16 lh 1.4</td><td>som input; resize none</td><td>main-form :158-166</td></tr>
+          <tr><td>Checkbox</td><td>ruta 20 (källorna 18 / 20 / 21 / 22), rad 44</td><td>gap 9,9 / 8,3</td><td>8 / 6,1 (källan 4 / 6)</td><td>text 13/400 lh 1.5</td><td>1,5 px .48; vald teal-core + vit bock 10 px (clip-path)</td><td>LED :365-393, elcentral :388-392</td></tr>
+          <tr><td>Radio-chip</td><td>64 / 56 (källan 64 / 56)</td><td>14 x 19,8 / 10,5 x 13,3 (källan 16 x 20 / 14 x 16)</td><td>12 / 10,1 (källan 10)</td><td>titel 500 18 / 14,1 (källan 18 / 15); förtydligande 16 / 13</td><td>1 px .48; hover teal + lyft 1; vald teal-kant på teal .08 (källan rgb(240,250,248)); ruta 22</td><td>elcentral :372-392</td></tr>
+          <tr><td>Segment</td><td>spår 48, option 40 (LED 48 / 40)</td><td>spår 4; option 7 x 5,2</td><td>spår 12 / 10,1; option 8 / 6,1 (källan 12 / 6)</td><td>600 16 / 14,1 (källan PJS 600 15 / 13)</td><td>spår rgba(9,11,50,.07); vald vit + 0 1px 2px .06 + text #007a69 (källan #00a991)</td><td>LED :249-259</td></tr>
+          <tr><td>Slider</td><td>44; spår 6; tumme 24; ticks 32</td><td>spår inset 12</td><td>999</td><td>ticks 13 tabular</td><td>fyllning teal till emerald; tumme vit + 3 px teal + 0 10px 30px .07 (källan 0 .4rem 1.2rem .08)</td><td>LED :216-236</td></tr>
+          <tr><td>Stepper</td><td>46 (44 + kant); knappar 44 x 44; --pill 42, knappar 36</td><td>gap 2</td><td>8 / 6,1 (källan 6); --pill 999</td><td>värde 500 20; knapp 18</td><td>1 px .14 (källan #d7deeb); hover sky-mist; fokus 2 px teal-deep inset</td><td>energycalc :234-246, LED :261-265</td></tr>
+          <tr><td>Hjälp och fel</td><td>13 / 13</td><td>0</td><td>0</td><td>hjälp 400 lh 1.35; fel 500 lh 1.35</td><td>hjälp #565e82; fel #7a1623 (mörkt #ffb4b6)</td><td>hero-2 :525-526, elcentral :522</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="gor"><a class="ds-anchor" href="#gor">Gör och gör inte</a></h2>
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>16 px text i alla fält (iOS-golvet), 44 px träffyta på allt som trycks, en fokusring överallt (kant + ring, aldrig bara alfa .25).</li>
+          <li>Minsta lead: namn, telefon, postnummer och samtycke. Hjälptexten säger varför vi frågar; felet säger vad som ska rättas, i rött.</li>
+          <li>Samtycke som textrad under knappen när formuläret är kort; checkbox när valet är ett riktigt val.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Fel i teal (hero-2-form: fel = samma färg som fokus). Kontrollkanter under 3:1 (#e3e5ed), fokusringar under 3:1 (elkollen .25).</li>
+          <li>Nio fälthöjder och fem radier: 44 / 48 / 52 är storlekarna, radien är 12. Grå fält utan kant (main-form #f7f7f7), pill-fält.</li>
+          <li>Wizard med "Nästa"-knappar mellan enkelval: chipet avancerar självt. Segment för fler än fem val: då är det en select eller chips.</li>
+        </ul></div>
+      </div>
+
+      <h2 class="ds-h2" id="kod"><a class="ds-anchor" href="#kod">Kod</a></h2>
+      <div class="ds-code"><pre><code>&lt;div class="ampy-fields"&gt;
+  &lt;div class="ampy-field"&gt;
+    &lt;label class="ampy-field__label" for="tel"&gt;Telefon &lt;span class="ampy-field__req" aria-hidden="true"&gt;*&lt;/span&gt;&lt;/label&gt;
+    &lt;input class="ampy-input ampy-input--tabular" id="tel" type="tel" inputmode="tel" autocomplete="tel" required&gt;
+  &lt;/div&gt;
+  &lt;div class="ampy-field is-error"&gt;
+    &lt;label class="ampy-field__label" for="zip"&gt;Postnummer&lt;/label&gt;
+    &lt;input class="ampy-input" id="zip" inputmode="numeric" aria-invalid="true" aria-describedby="zip-e"&gt;
+    &lt;p class="ampy-error" id="zip-e" role="alert"&gt;Postnumret har fem siffror.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="ampy-field ampy-field--full"&gt;
+    &lt;button class="ampy-btn ampy-btn--secondary ampy-btn--block" type="submit"&gt;Boka rådgivning&lt;/button&gt;
+    &lt;p class="ampy-consent"&gt;Genom att trycka på "Boka rådgivning" samtycker du till att Ampy behandlar dina personuppgifter enligt vår &lt;a href="/integritetspolicy/"&gt;integritetspolicy&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Sökfält --&gt;
+&lt;div class="ampy-search"&gt;
+  &lt;svg class="ampy-search__icon" aria-hidden="true"&gt;&lt;use href="/system/ikoner.svg#ik-search"/&gt;&lt;/svg&gt;
+  &lt;input class="ampy-input" type="search" placeholder="Sök efter din adress"&gt;
+&lt;/div&gt;
+
+&lt;!-- Select, textarea, checkbox --&gt;
+&lt;select class="ampy-select"&gt;&lt;option&gt;Snitt brinntid (12,0 h/dygn)&lt;/option&gt;&lt;/select&gt;
+&lt;textarea class="ampy-textarea" rows="3" placeholder="Valfritt meddelande"&gt;&lt;/textarea&gt;
+&lt;label class="ampy-check"&gt;&lt;input type="checkbox"&gt;&lt;span class="ampy-check__text"&gt;Jag godkänner …&lt;/span&gt;&lt;/label&gt;
+
+&lt;!-- Radio-chips (enkelval) --&gt;
+&lt;fieldset class="ampy-chips"&gt;&lt;legend&gt;Hur gammal är elcentralen?&lt;/legend&gt;
+  &lt;label class="ampy-chip"&gt;&lt;input type="radio" name="alder"&gt;&lt;span class="ampy-chip__body"&gt;&lt;span class="ampy-chip__title"&gt;Nyare än 10 år&lt;/span&gt;&lt;span class="ampy-chip__clarifier"&gt;Automatsäkringar och jordfelsbrytare&lt;/span&gt;&lt;/span&gt;&lt;/label&gt;
+&lt;/fieldset&gt;
+&lt;!-- Flerval: lägg till ampy-chip--multi + &lt;span class="ampy-chip__check"&gt;&lt;svg&gt;…&lt;/svg&gt;&lt;/span&gt; före __body --&gt;
+
+&lt;!-- Segment --&gt;
+&lt;div class="ampy-segment" role="radiogroup"&gt;
+  &lt;label&gt;&lt;input type="radio" name="kund" checked&gt;BRF&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="kund"&gt;Företag&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="kund"&gt;Privat&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;!-- Slider: sätt --_fill i procent när värdet ändras --&gt;
+&lt;input class="ampy-range" type="range" min="40" max="400" value="80" style="--_fill:11.1%"&gt;
+
+&lt;!-- Stepper --&gt;
+&lt;div class="ampy-stepper"&gt;
+  &lt;button class="ampy-stepper__btn" type="button" aria-label="Färre"&gt;−&lt;/button&gt;
+  &lt;span class="ampy-stepper__value" aria-live="polite"&gt;2&lt;/span&gt;
+  &lt;button class="ampy-stepper__btn" type="button" aria-label="Fler"&gt;+&lt;/button&gt;
+&lt;/div&gt;</code></pre></div>
+
+      <h2 class="ds-h2" id="avvikelser"><a class="ds-anchor" href="#avvikelser">Avvikelser i blocken</a></h2>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Block</th><th>Avvikelse mot kanon</th><th>Åtgärd</th></tr></thead>
+        <tbody>
+          <tr><td>elcentral-kollen</td><td>input 52 h, radie 10, kant #e3e5ed; etikett PJS 13/600; option radie 10, vald tint rgb(240,250,248)</td><td>48 (--lg finns), 12, --ampy-line-strong; Outfit 14; tint-action .08</td></tr>
+          <tr><td>elkollen</td><td>48 h, radie 10, fokusring .25 (1,3:1, underkänd); option 72/64 h</td><td>fokusring --ampy-focus-ring; chips 64/56</td></tr>
+          <tr><td>LED, EV, battery</td><td>PJS 600 i segment och etiketter, JetBrains Mono i tick och värden; fokus teal .2 till .35; på mörkt fokus rgb(28,196,175)</td><td>Outfit + tabular (B7); --ampy-focus-ring; neon-mint (B14)</td></tr>
+          <tr><td>energycalc</td><td>fält 44 h, radie 9, bg vit .04, fokus neon; seg-pill #00806e; range 8 px spår, tumme 28 med 2 px kant; stepper radie 6</td><td>48 (--sm finns), 12; teal-deep; 6 / 24 / 3; radie small</td></tr>
+          <tr><td>hero-2-alternatives (ampy-field)</td><td>56/52 h, fokus 2 px teal + ring .18 med paddingkompensation, invalid 1,5 px #e5484d</td><td>48, fokusringen, --ampy-error</td></tr>
+          <tr><td>hero-2 Z, hero-2-form</td><td>44 h radie 10, fokus 3 px .55; 44/52 h radie 14 utan kant, fel i teal, textarea 78, select-pil #333, checkbox 21 radie 6 med bock #042b24</td><td>48, kant, fel i rött (B13), pil midnight</td></tr>
+          <tr><td>main-form</td><td>55 h, radie 8, #f7f7f7 utan kant (2 px transparent), fokus 3 px .30, fel #e00000, textarea 70, submit pill</td><td>48, 12, vit med kant, --ampy-error</td></tr>
+          <tr><td>booking</td><td>48 h, radie 14, 1,5 px .48, fel #8a6116, textarea 96</td><td>12, 1 px; --ampy-error</td></tr>
+          <tr><td>fotobedomningen</td><td>52 h, radie 12, sky-mist-fält med 1 px #5f6480</td><td>vit yta, --ampy-line-strong</td></tr>
+          <tr><td>EV toggle, energycalc byggår</td><td>vald solid #007d6b / #00806e</td><td>--ampy-action-strong #007a69</td></tr>
+          <tr><td>live Bricks-formulär</td><td>fokus #5eb1bf + ring .2; checked 0 0 0 2px #5eb1bf</td><td>fokusringen; #5eb1bf bär aldrig kontrollstatus (B16)</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <script>
+      (function () {
+        /* Dokumentationens demo-beteende för reglage: fyllning, ticks, stepper. Ingen tracking. */
+        document.querySelectorAll('[data-range]').forEach(function (r) {
+          var wrap = r.closest('.ampy-range-wrap'); var out = wrap && wrap.querySelector('[data-range-out]');
+          var paint = function () { var min = +r.min, max = +r.max, v = +r.value; r.style.setProperty('--_fill', ((v - min) / (max - min) * 100).toFixed(1) + '%'); if (out) out.textContent = String(v).replace('.', ','); wrap && wrap.querySelectorAll('[data-tick]').forEach(function (t) { t.classList.toggle('is-active', +t.dataset.tick === v); }); };
+          r.addEventListener('input', paint); wrap && wrap.querySelectorAll('[data-tick]').forEach(function (t) { t.addEventListener('click', function () { r.value = t.dataset.tick; paint(); }); }); paint();
+        });
+        document.querySelectorAll('[data-stepper]').forEach(function (s) {
+          var btns = s.querySelectorAll('.ampy-stepper__btn'), val = s.querySelector('.ampy-stepper__value');
+          btns.forEach(function (b, i) { b.addEventListener('click', function () { var v = parseInt(val.textContent, 10) + (i === 0 ? -1 : 1); if (v < 0 || v > 9) return; val.textContent = v; val.classList.remove('is-bump'); void val.offsetWidth; val.classList.add('is-bump'); btns[0].disabled = v === 0; }); });
+        });
+      })();
+      </script>
+
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

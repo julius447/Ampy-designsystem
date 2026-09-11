@@ -52,10 +52,16 @@
 .ampy-tag__pulse { position: relative; width: 9px; height: 9px; border-radius: var(--ampy-radius-pill); background: var(--ampy-action); flex: 0 0 auto; }
 .ampy-tag__pulse::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--ampy-action); animation: ampyPulse 2s ease-out infinite; }
 @keyframes ampyPulse { 0% { transform: scale(1); opacity: .55; } 100% { transform: scale(2); opacity: 0; } }
-/* På mörkt: hero-2 ampy-chip (teal .12 yta, kant .35, text #7fe9d4 -> neonmint är tokenen på mörkt) */
+/* På mörkt: hero-2 ampy-chip (teal .12 yta, kant .35, text #7fe9d4 -> vit är tokenen på mörkt) */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-tag:not([class*="--success"]):not([class*="--warning"]):not([class*="--error"]):not([class*="--info"]) {
   background: rgba(0,169,145,.12); border: 1px solid rgba(0,169,145,.35); color: var(--ampy-on-dark);   /* hero-2 primitives.css:544-550 */
 }
+/* Nivåerna på mörkt = LED:s lead-msg-recept (styles.css:352-354): vit text på tint .16 + 1 px kant i tillståndsfärgen. Ingen källa ritar beskedpillen på mörkt; härledd ur LED. */
+:where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-tag--success { background: rgba(57,194,129,.16); color: var(--ampy-on-dark); border: 1px solid var(--ampy-success); }
+:where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-tag--warning { background: rgba(240,175,56,.16); color: var(--ampy-on-dark); border: 1px solid var(--ampy-warn); }
+:where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-tag--error   { background: rgba(179,38,30,.22);  color: var(--ampy-on-dark); border: 1px solid #ffb4b6; }   /* #ffb4b6 = hero-2 felfärg på navy ; saknas i tokens */
+:where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-tag--info    { background: rgba(182,242,255,.14); color: var(--ampy-on-dark); border: 1px solid var(--apcrystal-blue); }
+:where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-tag--live    { background: rgba(0,169,145,.12); border: 1px solid rgba(0,169,145,.35); color: var(--ampy-on-dark); }
 
 /* ---------- Stat-trio (LED __trio): 3 kolumner, etikett / värde + enhet / undertext ---------- */
 .ampy-stat-trio, .ampy-readout {
@@ -102,7 +108,7 @@
 .ampy-source--plain { border-top: 0; padding-top: 0; }
 .ampy-source a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .ampy-source a:hover { color: var(--ampy-ink); }
-.ampy-source svg { width: 13px; height: 13px; vertical-align: -2px; opacity: .75; }     /* elkollen __verdict-src extern-ikon 1.3rem */
+.ampy-source svg { display: inline-block; width: 13px; height: 13px; vertical-align: -2px; opacity: .75; }     /* elkollen __verdict-src extern-ikon 1.3rem ; inline (base.css sätter svg block) */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-source { color: var(--ampy-on-dark-faint); border-top-color: var(--ampy-on-dark-line); }
 
 /* ---------- Proof-rad (hero-1 .vb2__proof): G-ikon 16 + "5,0 på Google" + 5 stjärnor 13.5 + separator + volymrad ---------- */
@@ -126,10 +132,10 @@
 
 /* ---------- Citat / testimonial (testimonials-block .att-card__*): citattecken 56/600, text, namn 22/600, hårlinje, stjärnor + datum ---------- */
 .ampy-quote { margin: 0; display: flex; flex-direction: column; gap: var(--ampy-space-s); font-family: var(--ampy-font); color: var(--ampy-ink); }
-.ampy-quote__mark { font-size: 56px; line-height: 1; font-weight: var(--ampy-w-strong); height: 24px; margin-top: -4px; user-select: none; color: var(--ampy-action); opacity: .55; }   /* delivery css:53-58 (5.6rem, höjd 2.4rem, neonmint .55 på mörkt) */
-.ampy-quote__text { margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-body); line-height: var(--ampy-lh-body); color: var(--ampy-ink-body); max-width: var(--ampy-measure); }
-.ampy-quote__text::before { content: "\201D"; }   /* svenskt citattecken (99) före och efter, aldrig raka */
-.ampy-quote__text::after  { content: "\201D"; }
+.ampy-quote__top { display: flex; align-items: center; justify-content: space-between; min-height: 24px; }   /* delivery css:51 (min-height 2.4rem): citattecken vänster, Google-G 22 höger */
+.ampy-quote__mark { font-size: 56px; line-height: 1; font-weight: var(--ampy-w-strong); height: 24px; margin-top: -4px; user-select: none; color: var(--ampy-action); opacity: .55; }   /* delivery css:53-58 (5.6rem, höjd 2.4rem, neonmint .55 på mörkt); glyfen är &ldquo; som i källan (php:132), dekor, inte text */
+.ampy-quote__google { width: 22px; height: 22px; flex: 0 0 auto; }   /* delivery css:59 */
+.ampy-quote__text { margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-body); line-height: var(--ampy-lh-body); color: var(--ampy-ink-body); max-width: var(--ampy-measure); }   /* källan sätter inga citattecken runt texten (php:137); det stora tecknet bär citatet */
 .ampy-quote__foot { display: flex; flex-direction: column; gap: var(--ampy-space-2xs); }
 .ampy-quote__name { margin: 0; font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-strong); line-height: var(--ampy-lh-h3); color: var(--ampy-ink); }
 .ampy-quote__divider { border: 0; border-top: 1px solid var(--ampy-line); margin: 0; }
@@ -156,6 +162,7 @@
 .ampy-list--check.ampy-list--compact li { font-size: var(--ampy-text-small); font-weight: var(--ampy-w-ui); line-height: 1.4; color: var(--ampy-ink-body); }
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-list--check li { color: var(--ampy-on-dark-soft); }
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-list--check.ampy-list--compact { border-color: var(--ampy-on-dark-line); }
+:where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-list--check.ampy-list--compact li { color: var(--ampy-on-dark-soft); }
 
 /* Stegvis lista (rot-gt d2 .av-steps): cirkel 46 med teal-ring, siffra 17/500, h3 + p, 2 px connector i ringens spår */
 .ampy-list--steps {
@@ -179,7 +186,7 @@
 }
 .ampy-list--steps h3, .ampy-list--steps .ampy-list__title { margin: 0; font-family: var(--ampy-font); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-strong); line-height: var(--ampy-lh-h3); letter-spacing: var(--ampy-ls-heading); color: var(--ampy-ink); align-self: center; min-height: var(--_n); display: flex; align-items: center; }
 .ampy-list--steps p { margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-body); line-height: var(--ampy-lh-body); color: var(--ampy-ink-body); max-width: 58ch; }   /* d2:210 58ch */
-.ampy-list--steps li.is-done::before { background: var(--ampy-action); color: var(--ampy-action-on); box-shadow: none; }
+.ampy-list--steps li.is-done::before { box-shadow: inset 0 0 0 3px var(--ampy-action); }   /* d2 variant F: sluten båge = teal ring 3 px (stroke-width 3), siffran förblir navy */
 
 /* ---------- Inline-kod (LED methodology code: 13/600 på subtil yta, radie 6) ---------- */
 .ampy-code {
