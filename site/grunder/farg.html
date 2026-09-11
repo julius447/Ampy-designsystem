@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Färg: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för färgsidan (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; } /* brist i doc.css: 1fr-spåret ärver tabellernas min-content på mobil; rapporterad i _bygglogg/S1.md */
+  .ds-swatch__chip--light { box-shadow: inset 0 0 0 1px var(--ampy-line); }
+  .ds-swatch__sem { color: var(--ampy-action-strong); }
+  .ds-swatch__roll { display: block; color: var(--ampy-ink-muted); margin-top: 0.4rem; }
+  .ds-contrast { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+  .ds-contrast span, .ds-key span { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; line-height: 1; padding: 0.4rem 0.7rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); color: var(--ampy-ink-faint); white-space: nowrap; }
+  .is-aa { color: var(--ampy-success-ink) !important; border-color: var(--ampy-success-ink) !important; }
+  .is-lg { color: var(--ampy-warn-ink) !important; border-color: var(--ampy-warn-ink) !important; }
+  .is-no { color: var(--ampy-ink-faint) !important; }
+  td.is-aa, td.is-lg, td.is-no { border-color: var(--ampy-line) !important; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-key { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  .ds-dot { display: inline-block; width: 1.2rem; height: 1.2rem; border-radius: 0.3rem; vertical-align: -0.15em; margin-right: 0.6rem; box-shadow: inset 0 0 0 1px var(--ampy-line); }
+  .ds-ramp { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 0.4rem; margin: var(--ampy-space-2xs) 0 var(--ampy-space-xs); padding: var(--ampy-space-xs); border-radius: var(--ampy-radius-field); border: 1px solid var(--ampy-line); }
+  .ds-ramp--dark { background: var(--ampy-bg-dark); border-color: transparent; }
+  .ds-ramp span { display: grid; place-items: center; height: 5.6rem; border-radius: var(--ampy-radius-small); font-size: 1.2rem; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--ampy-ink-muted); box-shadow: inset 0 0 0 1px var(--ampy-line); }
+  .ds-ramp--dark span { color: var(--ampy-on-dark-muted); box-shadow: inset 0 0 0 1px var(--ampy-on-dark-line); }
+  .ds-nowrap { white-space: nowrap; }
+  .ds-list { margin: 0; padding-left: 1.6rem; }
+  .ds-list li { margin-bottom: 0.3rem; }
+  .ds-table__group th { padding-top: var(--ampy-space-s); color: var(--ampy-ink); font-size: var(--ampy-text-small); letter-spacing: 0; text-transform: none; font-weight: var(--ampy-w-strong); border-bottom: 1px solid var(--ampy-line-strong); }
+  .ds-beslut-tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-decoration: none; border: 1px solid currentColor; border-radius: var(--ampy-radius-pill); padding: 0.1rem 0.6rem; margin-left: 0.4rem; white-space: nowrap; }
+  .ds-grad { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr)); }
+  .ds-grad__chip { height: 11rem; border-radius: var(--ampy-radius-card); display: flex; align-items: flex-end; padding: var(--ampy-space-xs); font-size: var(--ampy-text-small); }
+  .ds-two { display: grid; gap: var(--ampy-space-xs); grid-template-columns: 1fr 1fr; }
+  .ds-two > div { border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); border: 1px solid var(--ampy-line); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-2xs); }
+  .ds-teal-wrong { color: var(--ampy-action); }
+  .ds-teal-right { color: var(--ampy-action-strong); }
+  @media (max-width: 991px) { .ds-ramp { grid-template-columns: repeat(5, minmax(0, 1fr)); } .ds-two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="farg.html" aria-current="page">Färg</a>
+        <a href="typografi.html">Typografi</a>
+        <a href="spacing.html">Spacing och layout</a>
+        <a href="form-djup.html">Form och djup</a>
+        <a href="rorelse.html">Rörelse</a>
+        <a href="ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Grunder</span>
+      <h1 class="ds-h1">Färg</h1>
+      <p class="ds-lead">Fem färger bär nästan allt. Två tealer är kanon: en accent som aldrig är text och en mörk för text och solida knappar. Resten är stöd, tillstånd eller drift som byts ut.</p>
+      <p class="ds-source"><code>konsolidering/farg.md</code> + <code>farg.json</code> (682 färgrader ur 30 inventerings-JSON, 257 unika hex), <code>system/tokens.css</code> (varje token bär källa och drift i sin kommentar). Kontrasten är räknad av <code>site/_probes/contrast.mjs</code>, som också fyller rutnäten nedan.</p>
+
+      <p class="ds-p">Varje ruta visar namn, hex, ap-token, de <code>--ampy-*</code>-tokens som pekar på färgen, rollen, antal källor (varav auktoritet 1) och kontrasten mot de tre ytorna. Antal = antal källfiler som bär färgen, inte antal förekomster.</p>
+      <div class="ds-key"><span class="is-aa">4,50 eller mer</span> brödtext, AA <span class="is-lg">3,00 till 4,49</span> stor text och kontrollkanter <span class="is-no">under 3,00</span> bara fyllning, aldrig text</div>
+
+      <h2 class="ds-h2" id="primitiva">Primitiva färger</h2>
+      <p class="ds-p">Lager 1 är de 47 färgtokens som Bricks kör live i <code>global-variables.css</code>, ordagrant. Lager 1c är 16 tillägg som saknades men bevisligen bär en roll i minst två källor av auktoritet 1 till 2 (sekundärteal, teal deep, navy-serien, tillstånden).</p>
+
+      <h3 class="ds-h3" id="karnan">Kärnan</h3>
+      <p class="ds-caption">De fem färger som bär nästan allt: 29, 26, 25, 22 och 21 av 30 källor.</p>
+      <div class="ds-grid">
+<!--@karnan:start-->
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#090b32"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Midnight</span>
+    <span class="ds-swatch__meta">#090b32</span>
+    <span class="ds-swatch__meta">--apmidnight-blue</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus</span>
+    <span class="ds-swatch__roll">mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa)</span>
+    <span class="ds-swatch__roll">29 källor (14 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 19,00</span><span class="is-no">midnight 1,00</span><span class="is-aa">sky 17,98</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#ffffff"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Vit</span>
+    <span class="ds-swatch__meta">#ffffff</span>
+    <span class="ds-swatch__meta">--appure-white</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-bg-surface, --ampy-on-dark, --ampy-action-on</span>
+    <span class="ds-swatch__roll">kort, text på mörkt, alfa-serie på mörkt</span>
+    <span class="ds-swatch__roll">26 källor (13 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,00</span><span class="is-aa">midnight 19,00</span><span class="is-no">sky 1,06</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#00a991"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Teal core</span>
+    <span class="ds-swatch__meta">#00a991</span>
+    <span class="ds-swatch__meta">--apteal-core</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-action</span>
+    <span class="ds-swatch__roll">accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA</span>
+    <span class="ds-swatch__roll">25 källor (12 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 2,96</span><span class="is-aa">midnight 6,41</span><span class="is-no">sky 2,81</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#55ff9a"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Neon mint</span>
+    <span class="ds-swatch__meta">#55ff9a</span>
+    <span class="ds-swatch__meta">--apneon-mint</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-focus-on-dark</span>
+    <span class="ds-swatch__roll">handlingsgradientens start, pulsprick, EFTER-chip, fokus på mörkt, stjärnor (testimonials-kort)</span>
+    <span class="ds-swatch__roll">22 källor (11 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,30</span><span class="is-aa">midnight 14,61</span><span class="is-no">sky 1,23</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#f5f9ff"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Sky mist</span>
+    <span class="ds-swatch__meta">#f5f9ff</span>
+    <span class="ds-swatch__meta">--apsky-mist</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-bg-page, --ampy-bg-subtle</span>
+    <span class="ds-swatch__roll">sidbakgrund, subtil yta, ljus aurora-bas</span>
+    <span class="ds-swatch__roll">21 källor (10 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,06</span><span class="is-aa">midnight 17,98</span><span class="is-no">sky 1,00</span></span>
+  </div>
+</div>
+<!--@karnan:end-->
+      </div>
+
+      <h3 class="ds-h3" id="tealer">Tealer och gröna toner</h3>
+      <p class="ds-caption">Två tealer är kanon: teal core som accent (ikoner, valda kanter, ringar, fyllningar utan text) och teal deep som text, länk och solid knapp med vit text. Sekundärteal är sajtens gradientslut och bär aldrig vit text (2,47:1). Aqua frost och mint surge är definierade men används ingenstans.</p>
+      <div class="ds-grid">
+<!--@tealer:start-->
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#00a991"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Teal core</span>
+    <span class="ds-swatch__meta">#00a991</span>
+    <span class="ds-swatch__meta">--apteal-core</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-action</span>
+    <span class="ds-swatch__roll">accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA</span>
+    <span class="ds-swatch__roll">25 källor (12 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 2,96</span><span class="is-aa">midnight 6,41</span><span class="is-no">sky 2,81</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#007a69"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Teal deep</span>
+    <span class="ds-swatch__meta">#007a69</span>
+    <span class="ds-swatch__meta">--apteal-deep</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-action-strong</span>
+    <span class="ds-swatch__roll">solid knapp med vit text, textlänk, sista H1-rad (diagnostik)</span>
+    <span class="ds-swatch__roll">2 källor (2 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 5,27</span><span class="is-lg">midnight 3,61</span><span class="is-aa">sky 4,98</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#008d79"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Teal hover</span>
+    <span class="ds-swatch__meta">#008d79</span>
+    <span class="ds-swatch__meta">--ampy-action-hover</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-action-hover</span>
+    <span class="ds-swatch__roll">hover på solid teal-knapp (header-CTA)</span>
+    <span class="ds-swatch__roll">hero-1 + website-blocks (header.css:13)</span>
+    <span class="ds-contrast"><span class="is-lg">vit 4,13</span><span class="is-aa">midnight 4,60</span><span class="is-lg">sky 3,91</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#5eb1bf"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Sekundärteal (brandbok s.8)</span>
+    <span class="ds-swatch__meta">#5eb1bf</span>
+    <span class="ds-swatch__meta">--apsecondary-teal</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-action-gradient(-ring)</span>
+    <span class="ds-swatch__roll">handlingsgradientens slut, ring-gradientens slut, live fokus/highlight (--color-7), mini-menu pill, certificates gradient</span>
+    <span class="ds-swatch__roll">17 källor (7 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 2,47</span><span class="is-aa">midnight 7,70</span><span class="is-no">sky 2,33</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#e3f6f1"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Teal tint</span>
+    <span class="ds-swatch__meta">#e3f6f1</span>
+    <span class="ds-swatch__meta">--apteal-tint</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(pill)</span>
+    <span class="ds-swatch__roll">pill/chip-yta (eljour-familjen)</span>
+    <span class="ds-swatch__roll">3 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,12</span><span class="is-aa">midnight 16,93</span><span class="is-no">sky 1,06</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#39c281"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Emerald flow</span>
+    <span class="ds-swatch__meta">#39c281</span>
+    <span class="ds-swatch__meta">--apemerald-flow</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-success</span>
+    <span class="ds-swatch__roll">success, "efter"-stapel, slider-fyllning</span>
+    <span class="ds-swatch__roll">9 källor (5 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 2,28</span><span class="is-aa">midnight 8,33</span><span class="is-no">sky 2,16</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#5cc5b6"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Seafoam mint</span>
+    <span class="ds-swatch__meta">#5cc5b6</span>
+    <span class="ds-swatch__meta">--apseafoam-mint</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(dekor)</span>
+    <span class="ds-swatch__roll">aurora-SVG-stopp (thank-you/offer)</span>
+    <span class="ds-swatch__roll">3 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 2,08</span><span class="is-aa">midnight 9,15</span><span class="is-no">sky 1,96</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#9de1ec"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Mint surge</span>
+    <span class="ds-swatch__meta">#9de1ec</span>
+    <span class="ds-swatch__meta">--apmint-surge</span>
+    
+    <span class="ds-swatch__roll">definierad i global-variables.css; 0 användningar i blocken (bara brandbokens jämförelselista)</span>
+    <span class="ds-swatch__roll">1 (brandbook-inventeringen)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,46</span><span class="is-aa">midnight 13,04</span><span class="is-no">sky 1,38</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#b6f2ff"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Crystal blue</span>
+    <span class="ds-swatch__meta">#b6f2ff</span>
+    <span class="ds-swatch__meta">--apcrystal-blue</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-action-gradient-ring, --ampy-aurora-light</span>
+    <span class="ds-swatch__roll">ring-gradientens start, ljus aurora (.48), footer-gradient, certificates-våg</span>
+    <span class="ds-swatch__roll">15 källor (5 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,23</span><span class="is-aa">midnight 15,50</span><span class="is-no">sky 1,16</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#a0fbc9"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Sublime green</span>
+    <span class="ds-swatch__meta">#a0fbc9</span>
+    <span class="ds-swatch__meta">--apsublime-green</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-aurora-light</span>
+    <span class="ds-swatch__roll">ljus aurora (radial .28)</span>
+    <span class="ds-swatch__roll">4 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,23</span><span class="is-aa">midnight 15,50</span><span class="is-no">sky 1,16</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#ddf9fd"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Aqua frost</span>
+    <span class="ds-swatch__meta">#ddf9fd</span>
+    <span class="ds-swatch__meta">--apaqua-frost</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(oanvänd)</span>
+    <span class="ds-swatch__roll">definierad, 0 användningar (live --color-29 #e5faff är en annan)</span>
+    <span class="ds-swatch__roll">1 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,10</span><span class="is-aa">midnight 17,23</span><span class="is-no">sky 1,04</span></span>
+  </div>
+</div>
+<!--@tealer:end-->
+      </div>
+
+      <h3 class="ds-h3" id="navy">Navy och bläck</h3>
+      <p class="ds-caption">Ett bläck (midnight) för rubrik och brödtext, en dämpad och en svag ton. Navy ink, darkest black och charcoal förekommer i källorna men är drift som byts ut (beslut B3). Indigo är bara knapptext på handlingsgradienten.</p>
+      <div class="ds-grid">
+<!--@navy:start-->
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#090b32"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Midnight (bläck)</span>
+    <span class="ds-swatch__meta">#090b32</span>
+    <span class="ds-swatch__meta">--apmidnight-blue</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus</span>
+    <span class="ds-swatch__roll">mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa)</span>
+    <span class="ds-swatch__roll">29 källor (14 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 19,00</span><span class="is-no">midnight 1,00</span><span class="is-aa">sky 17,98</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#282a53"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Indigo (knapptext på gradient)</span>
+    <span class="ds-swatch__meta">#282a53</span>
+    <span class="ds-swatch__meta">--apindigo</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-ink-on-action, --ampy-action-gradient-on</span>
+    <span class="ds-swatch__roll">knapptext på gradient</span>
+    <span class="ds-swatch__roll">6 källor (3 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 13,58</span><span class="is-no">midnight 1,40</span><span class="is-aa">sky 12,85</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#565e82"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Navy muted</span>
+    <span class="ds-swatch__meta">#565e82</span>
+    <span class="ds-swatch__meta">--apnavy-muted</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-ink-muted</span>
+    <span class="ds-swatch__roll">dämpad text</span>
+    <span class="ds-swatch__roll">8 källor (5 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 6,33</span><span class="is-lg">midnight 3,00</span><span class="is-aa">sky 5,99</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#6a7190"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Navy faint</span>
+    <span class="ds-swatch__meta">#6a7190</span>
+    <span class="ds-swatch__meta">--apnavy-faint</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-ink-faint</span>
+    <span class="ds-swatch__roll">svag text</span>
+    <span class="ds-swatch__roll">2 källor (2 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 4,80</span><span class="is-lg">midnight 3,96</span><span class="is-aa">sky 4,54</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#3b3f59"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Navy ink (drift, B3)</span>
+    <span class="ds-swatch__meta">#3b3f59</span>
+    <span class="ds-swatch__meta">--apnavy-ink</span>
+    <span class="ds-swatch__meta ds-swatch__sem">drift → --ampy-ink-body (B3)</span>
+    <span class="ds-swatch__roll">brödtext i eljour-familjen</span>
+    <span class="ds-swatch__roll">3 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 10,29</span><span class="is-no">midnight 1,85</span><span class="is-aa">sky 9,74</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#1e1e1e"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Darkest black (drift)</span>
+    <span class="ds-swatch__meta">#1e1e1e</span>
+    <span class="ds-swatch__meta">--apdarkest-black</span>
+    <span class="ds-swatch__meta ds-swatch__sem">drift → --ampy-ink</span>
+    <span class="ds-swatch__roll">energycalc ink, rot-gt rubrik-ink, footer h3, mini-menu pill-text, hero-2 Z submit-text</span>
+    <span class="ds-swatch__roll">9 källor (5 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 16,67</span><span class="is-no">midnight 1,14</span><span class="is-aa">sky 15,78</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#0e0f15"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Deepest blue</span>
+    <span class="ds-swatch__meta">#0e0f15</span>
+    <span class="ds-swatch__meta">--apdeepest-blue</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(oanvänd)</span>
+    <span class="ds-swatch__roll">definierad; 0 användningar</span>
+    <span class="ds-swatch__roll">0 källor</span>
+    <span class="ds-contrast"><span class="is-aa">vit 19,13</span><span class="is-no">midnight 1,01</span><span class="is-aa">sky 18,11</span></span>
+  </div>
+</div>
+<!--@navy:end-->
+      </div>
+      <p class="ds-caption" style="margin-top:var(--ampy-space-s)">Alfa-ramp <code>--apdarkest-black-5</code> till <code>-90</code> (lager 1, verbatim). Ingen källa använder den: blocken skriver egna <code>rgba(9,11,50,x)</code>.</p>
+      <div class="ds-ramp" aria-label="darkest-black alfa-ramp på vit">
+        <span style="background:var(--apdarkest-black-5)">5</span><span style="background:var(--apdarkest-black-10)">10</span><span style="background:var(--apdarkest-black-20)">20</span><span style="background:var(--apdarkest-black-30)">30</span><span style="background:var(--apdarkest-black-40)">40</span><span style="background:var(--apdarkest-black-50);color:#fff">50</span><span style="background:var(--apdarkest-black-60);color:#fff">60</span><span style="background:var(--apdarkest-black-70);color:#fff">70</span><span style="background:var(--apdarkest-black-80);color:#fff">80</span><span style="background:var(--apdarkest-black-90);color:#fff">90</span>
+      </div>
+
+      <h3 class="ds-h3" id="tillstand">Tillstånd</h3>
+      <p class="ds-caption">Fyllning, bläck och tint per tillstånd. Fyllningarna är för staplar, ikoner och ytor utan text; text sätts alltid i -ink-varianten. Varning (amber) är scopad till diagram och besked: 1,93:1 på vit. Felröd valdes på kontrast (6,54:1), beslut B13.</p>
+      <div class="ds-grid">
+<!--@tillstand:start-->
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#39c281"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Success (fyllning)</span>
+    <span class="ds-swatch__meta">#39c281</span>
+    <span class="ds-swatch__meta">--apemerald-flow</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-success</span>
+    <span class="ds-swatch__roll">success, "efter"-stapel, slider-fyllning</span>
+    <span class="ds-swatch__roll">9 källor (5 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 2,28</span><span class="is-aa">midnight 8,33</span><span class="is-no">sky 2,16</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#0f6e56"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Success ink</span>
+    <span class="ds-swatch__meta">#0f6e56</span>
+    <span class="ds-swatch__meta">--apverdict-green</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-success-ink</span>
+    <span class="ds-swatch__roll">besked-accent + success-text</span>
+    <span class="ds-swatch__roll">2 källor (2 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 6,20</span><span class="is-lg">midnight 3,06</span><span class="is-aa">sky 5,87</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:rgba(57,194,129,.12)"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Success tint</span>
+    <span class="ds-swatch__meta">#39c281 @ 0.12</span>
+    <span class="ds-swatch__meta">--ampy-success-tint</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-success-tint</span>
+    <span class="ds-swatch__roll">bakgrund bakom success-ikon/besked</span>
+    <span class="ds-swatch__roll">main-form (styles.css:238)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,10</span><span class="is-no">midnight 1,18</span><span class="is-no">sky 1,10</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#f0af38"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Varning (fyllning)</span>
+    <span class="ds-swatch__meta">#f0af38</span>
+    <span class="ds-swatch__meta">--apamber</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-warn</span>
+    <span class="ds-swatch__roll">"före"-stapel, varning i diagram</span>
+    <span class="ds-swatch__roll">3 källor (2 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,93</span><span class="is-aa">midnight 9,85</span><span class="is-no">sky 1,82</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#876507"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Varning ink</span>
+    <span class="ds-swatch__meta">#876507</span>
+    <span class="ds-swatch__meta">--apverdict-amber</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-warn-ink</span>
+    <span class="ds-swatch__roll">besked-accent + varningstext</span>
+    <span class="ds-swatch__roll">2 källor (2 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 5,39</span><span class="is-lg">midnight 3,52</span><span class="is-aa">sky 5,10</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#fff4e0"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Varning tint</span>
+    <span class="ds-swatch__meta">#fff4e0</span>
+    <span class="ds-swatch__meta">--apamber-tint</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-warn-tint</span>
+    <span class="ds-swatch__roll">varnings-bakgrund</span>
+    <span class="ds-swatch__roll">2 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,09</span><span class="is-aa">midnight 17,43</span><span class="is-no">sky 1,03</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#b3261e"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Fel (fält, meddelande)</span>
+    <span class="ds-swatch__meta">#b3261e</span>
+    <span class="ds-swatch__meta">--apsignal-red</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-error</span>
+    <span class="ds-swatch__roll">fel, akut</span>
+    <span class="ds-swatch__roll">3 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 6,54</span><span class="is-no">midnight 2,91</span><span class="is-aa">sky 6,19</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#7a1623"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Fel ink (besked)</span>
+    <span class="ds-swatch__meta">#7a1623</span>
+    <span class="ds-swatch__meta">--apverdict-red</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-error-ink</span>
+    <span class="ds-swatch__roll">besked-accent + akut-text</span>
+    <span class="ds-swatch__roll">2 källor (2 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 10,68</span><span class="is-no">midnight 1,78</span><span class="is-aa">sky 10,11</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#fdeceb"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Fel tint</span>
+    <span class="ds-swatch__meta">#fdeceb</span>
+    <span class="ds-swatch__meta">--apsignal-red-tint</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-error-tint</span>
+    <span class="ds-swatch__roll">fel-/akut-bakgrund</span>
+    <span class="ds-swatch__roll">3 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,14</span><span class="is-aa">midnight 16,62</span><span class="is-no">sky 1,08</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#0d568c"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Info ink</span>
+    <span class="ds-swatch__meta">#0d568c</span>
+    <span class="ds-swatch__meta">--apverdict-blue</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-info-ink</span>
+    <span class="ds-swatch__roll">besked-accent info</span>
+    <span class="ds-swatch__roll">2 källor (2 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 7,70</span><span class="is-no">midnight 2,47</span><span class="is-aa">sky 7,29</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#fbbc04"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Google-gult (stjärnor, B12)</span>
+    <span class="ds-swatch__meta">#fbbc04</span>
+    <span class="ds-swatch__meta">--apgoogle-gold</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(stjärnor, B12)</span>
+    <span class="ds-swatch__roll">Google-stjärnor</span>
+    <span class="ds-swatch__roll">2 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,71</span><span class="is-aa">midnight 11,12</span><span class="is-no">sky 1,62</span></span>
+  </div>
+</div>
+<!--@tillstand:end-->
+      </div>
+
+      <h3 class="ds-h3" id="gra">Grå och vita</h3>
+      <p class="ds-caption">Live definierar milk white och gray white som inget block använder. Charcoal (live <code>--color-20</code>) är brödtext i ROT/GT-blocken på mobil och byts ut mot midnight.</p>
+      <div class="ds-grid">
+<!--@gra:start-->
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#ffffff"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Pure white</span>
+    <span class="ds-swatch__meta">#ffffff</span>
+    <span class="ds-swatch__meta">--appure-white</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-bg-surface, --ampy-on-dark, --ampy-action-on</span>
+    <span class="ds-swatch__roll">kort, text på mörkt, alfa-serie på mörkt</span>
+    <span class="ds-swatch__roll">26 källor (13 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,00</span><span class="is-aa">midnight 19,00</span><span class="is-no">sky 1,06</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#f5f9ff"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Sky mist</span>
+    <span class="ds-swatch__meta">#f5f9ff</span>
+    <span class="ds-swatch__meta">--apsky-mist</span>
+    <span class="ds-swatch__meta ds-swatch__sem">--ampy-bg-page, --ampy-bg-subtle</span>
+    <span class="ds-swatch__roll">sidbakgrund, subtil yta, ljus aurora-bas</span>
+    <span class="ds-swatch__roll">21 källor (10 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,06</span><span class="is-aa">midnight 17,98</span><span class="is-no">sky 1,00</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip ds-swatch__chip--light" style="background:#f5f5f5"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Milk white</span>
+    <span class="ds-swatch__meta">#f5f5f5</span>
+    <span class="ds-swatch__meta">--apmilk-white</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(oanvänd)</span>
+    <span class="ds-swatch__roll">definierad + alfa-serie; 0 användningar i blocken</span>
+    <span class="ds-swatch__roll">1 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,09</span><span class="is-aa">midnight 17,42</span><span class="is-no">sky 1,03</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#d9d9d9"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Gray white</span>
+    <span class="ds-swatch__meta">#d9d9d9</span>
+    <span class="ds-swatch__meta">--apgray-white</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(oanvänd)</span>
+    <span class="ds-swatch__roll">definierad; 0 användningar</span>
+    <span class="ds-swatch__roll">1 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,41</span><span class="is-aa">midnight 13,46</span><span class="is-no">sky 1,34</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#333333"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Charcoal gray (drift)</span>
+    <span class="ds-swatch__meta">#333333</span>
+    <span class="ds-swatch__meta">--apcharcoal-gray</span>
+    <span class="ds-swatch__meta ds-swatch__sem">drift → --ampy-ink-body</span>
+    <span class="ds-swatch__roll">live --color-20: brödtext mobil ROT/GT, rot-gt-familjens p, booking body-ink, hero-2 input-text</span>
+    <span class="ds-swatch__roll">6 källor (3 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 12,63</span><span class="is-no">midnight 1,50</span><span class="is-aa">sky 11,96</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#000000"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Pure black</span>
+    <span class="ds-swatch__meta">#000000</span>
+    <span class="ds-swatch__meta">--appure-black</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(punkt)</span>
+    <span class="ds-swatch__roll">main-form asterisk; logo-PNG:er (#000)</span>
+    <span class="ds-swatch__roll">2 källor (1 auk 1)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 21,00</span><span class="is-no">midnight 1,11</span><span class="is-aa">sky 19,88</span></span>
+  </div>
+</div>
+<!--@gra:end-->
+      </div>
+      <p class="ds-caption" style="margin-top:var(--ampy-space-s)">Alfa-ramper <code>--appure-black-5</code> till <code>-90</code> (på vit) och <code>--apmilk-white-5</code> till <code>-90</code> (på midnight). Lager 1, 0 användningar. De alfa-steg som faktiskt används på mörkt är <code>--ampy-on-dark-*</code>, se tabellen "Alfa-steg" nedan.</p>
+      <div class="ds-ramp" aria-label="pure-black alfa-ramp på vit">
+        <span style="background:var(--appure-black-5)">5</span><span style="background:var(--appure-black-10)">10</span><span style="background:var(--appure-black-20)">20</span><span style="background:var(--appure-black-30)">30</span><span style="background:var(--appure-black-40)">40</span><span style="background:var(--appure-black-50);color:#fff">50</span><span style="background:var(--appure-black-60);color:#fff">60</span><span style="background:var(--appure-black-70);color:#fff">70</span><span style="background:var(--appure-black-80);color:#fff">80</span><span style="background:var(--appure-black-90);color:#fff">90</span>
+      </div>
+      <div class="ds-ramp ds-ramp--dark" aria-label="milk-white alfa-ramp på midnight">
+        <span style="background:var(--apmilk-white-5)">5</span><span style="background:var(--apmilk-white-10)">10</span><span style="background:var(--apmilk-white-20)">20</span><span style="background:var(--apmilk-white-30)">30</span><span style="background:var(--apmilk-white-40)">40</span><span style="background:var(--apmilk-white-50);color:#090b32">50</span><span style="background:var(--apmilk-white-60);color:#090b32">60</span><span style="background:var(--apmilk-white-70);color:#090b32">70</span><span style="background:var(--apmilk-white-80);color:#090b32">80</span><span style="background:var(--apmilk-white-90);color:#090b32">90</span>
+      </div>
+
+      <h3 class="ds-h3" id="brandbok">Brandbokens färger som inte används</h3>
+      <p class="ds-caption">Boken (s.7 till 8) och sajten delar bara midnight, neon mint och sky mist. Cobalt är bokens huvudaccent men saknas i produktionen; teal core saknas i boken. Ägarbeslutet 2026-07 gör teal till ensam accent. Boken skrivs om, beslut B1.</p>
+      <div class="ds-grid">
+<!--@brandbok:start-->
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#326afd"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Cobalt (brandbok s.7)</span>
+    <span class="ds-swatch__meta">#326afd</span>
+    <span class="ds-swatch__meta">(inget ap-token)</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(inget token)</span>
+    <span class="ds-swatch__roll">bokens huvudaccent: ikoner, blixt-former, hjälm, bil, skyltar</span>
+    <span class="ds-swatch__roll">2 (brandbook + artikelmallen som Tailwind "electric", 73 användningar)</span>
+    <span class="ds-contrast"><span class="is-aa">vit 4,55</span><span class="is-lg">midnight 4,17</span><span class="is-lg">sky 4,31</span></span>
+  </div>
+</div>
+<div class="ds-swatch">
+  <div class="ds-swatch__chip" style="background:#92ec47"></div>
+  <div class="ds-swatch__body">
+    <span class="ds-swatch__name">Lime (brandbok s.8)</span>
+    <span class="ds-swatch__meta">#92ec47</span>
+    <span class="ds-swatch__meta">(inget ap-token)</span>
+    <span class="ds-swatch__meta ds-swatch__sem">(inget token)</span>
+    <span class="ds-swatch__roll">stödfärg i boken, gradient 2</span>
+    <span class="ds-swatch__roll">1 (brandbook)</span>
+    <span class="ds-contrast"><span class="is-no">vit 1,47</span><span class="is-aa">midnight 12,95</span><span class="is-no">sky 1,39</span></span>
+  </div>
+</div>
+<!--@brandbok:end-->
+      </div>
+
+      <h2 class="ds-h2" id="semantik">Semantiska lagret</h2>
+      <p class="ds-p">Lager 2: roller som pekar på primitiverna. Kolumnerna källa och drift är tagna ordagrant ur radkommentaren i <code>system/tokens.css</code>. Rader med B-nummer väntar på ett beslut.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Token</th><th>Pekar på</th><th>Källa</th><th>Drift</th></tr></thead>
+        <tbody>
+<!--@semantik:start-->
+<tr class="ds-table__group"><th colspan="4">Ytor</th></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-page</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#f5f9ff"></span><code>--apsky-mist</code></td><td>live-ampy-se (post-15498 .brxe-rclikf #f5f9ff) + hero-1, header, eljour, thank-you, booking, visste-du-att = 21 källor</td><td>rgb(247,249,251) LED/EV, #f4f5fb elkollen/elcentral, #f4f5f7 main-form, #e9eff8 energycalc</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-surface</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#ffffff"></span><code>--appure-white</code></td><td>live-ampy-se (.rot__container) + 26 källor: alla kort är vita</td><td>rgb(247,249,251) LED inputkort</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-subtle</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#f5f9ff"></span><code>--apsky-mist</code></td><td>fotobedomningen (afk-styles.css:~20 "två ytor: #fff + #f5f9ff") + energycalc (hp-ic #f5f9ff) + elkollen job-row hover #f4f5fb</td><td>rgb(234,239,243) LED/EV spår, #f7f8fc elcentral, #f7f7f7 main-form</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-dark</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#090b32"></span><code>--apmidnight-blue</code></td><td>led-kalkylator (styles.css:16 --bg-surface) + EV, energycalc, visste-du-att, hero-2 S/G/E, footer</td><td>rgb(27,29,75) rot-gt-panel/hero-2 Z, #16183f Z-kort, #0b0f30-&gt;#2d516d testimonials, #00011e/#01021f footer, #11163f/#0c1040 energycalc</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-dark-glow</code> <a class="ds-a ds-beslut-tag" href="../beslut.html#b9">B9</a></td><td><span class="ds-dot" style="background:radial-gradient(120% 60% at 90% -10%, rgba(0,169,145,.28), transparent 60%), radial-gradient(80% 50% at -10% 110%, rgba(57,194,129,.16), transparent 60%)"></span><code>radial-gradient(120% 60% at 90% -10%, rgba…</code></td><td>led-kalkylator (styles.css:131-132) = ev-kalkylator, battery</td><td>energycalc 3 radialer (#00c4a7 .22 / neon .10 / midnight .40), visste-du-att (teal .42 + neon .18). Beslut B9: glöd eller platt</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-glass</code> <a class="ds-a ds-beslut-tag" href="../beslut.html#b15">B15</a></td><td><span class="ds-dot" style="background:rgba(255,255,255,.72)"></span><code>rgba(255,255,255,.72)</code></td><td>thank-you (v1/styles.css:40 glaskort)</td><td>.74 offer-accepted, .85 utan blur booking, rgba(255,255,255,.16) website-blocks go-cirkel. Beslut B15</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-glass-border</code></td><td><span class="ds-dot" style="background:rgba(255,255,255,.9)"></span><code>rgba(255,255,255,.9)</code></td><td>thank-you (v1/styles.css:41)</td><td>booking .9 (samma), hero-2 Z 1px vit .14 på mörkt</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-glass-blur</code></td><td><code>blur(16px) saturate(1.1)</code></td><td>thank-you (v1/styles.css:44) + offer-accepted</td><td>blur(30px) hero-2-form (dömd ut av hero-2-alternatives), blur(8/10px) saturate(150%) fore-efter navy-glas, blur(4px) website-blocks</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-glass-dark</code></td><td><span class="ds-dot" style="background:rgba(9,11,50,.82)"></span><code>rgba(9,11,50,.82)</code></td><td>fore-efter-cro (dist/01:~206-215 chip/ledtråd)</td><td>hero-2-form #090b32 + 156.51deg -&gt; #5eb1bf .76 (underkänd, kant 1,2:1)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-bg-tint-action</code></td><td><span class="ds-dot" style="background:rgba(0,169,145,.08)"></span><code>rgba(0,169,145,.08)</code></td><td>elkollen (roomtile-chip .08) + thank-you (ghost hover .08) + booking/offer (pill .08) + website-blocks (.09/.06)</td><td>solid --apteal-tint #e3f6f1 (eljour-familjen), #e0f5f2 (rot-gt/booking)</td></tr>
+<tr class="ds-table__group"><th colspan="4">Bläck på ljust</th></tr>
+<tr><td class="ds-nowrap"><code>--ampy-ink</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#090b32"></span><code>--apmidnight-blue</code></td><td>eljour-block (:13 --ink H2), testimonials-block (delivery css:21), elkollen/elcentral (--text-primary), fore-efter, visste-du-att, var-process = 29 källor</td><td>#0f123c (hero-1 header, LED/EV, mini-menu = near-miss, konsolideras hit), #0b1030 (thank-you/booking/offer), #1f1f1f (live ROT h2 --color-8), #1e1e1e (energycalc, rot-gt-familjen), #090c34 (main-cta)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-ink-body</code> <a class="ds-a ds-beslut-tag" href="../beslut.html#b3">B3</a></td><td class="ds-nowrap"><span class="ds-dot" style="background:#090b32"></span><code>--apmidnight-blue</code></td><td>testimonials-block (delivery css:21 "Outfit 300 navy" block-text) + fore-efter-cro (sektionens basfont Outfit 300 #090b32) + elkollen/elcentral/mini-menu/LED/EV via #0f123c-konsolidering = 11 källor</td><td>#363636/300 live Bricks-default (frontend.css body, ej token), #3b3f59/400 eljour-familjen (--apnavy-ink), #333 rot-gt-familjen/booking, rgba(9,11,50,.72) var-process, .62 thank-you. BESLUT B3</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-ink-muted</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#565e82"></span><code>--apnavy-muted</code></td><td>hero-1/website-blocks (header.css:15 --ink-muted) + LED/EV (--text-secondary) + mini-menu + rot-gt + booking = 8 källor, 6,33:1</td><td>#5f6480 eljour-familjen (5,80:1), #5a5d7a elkollen/elcentral, #51607a energycalc, rgba(11,16,48,.62) thank-you</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-ink-faint</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#6a7190"></span><code>--apnavy-faint</code></td><td>hero-1/website-blocks (header.css:15 --ink-faint), 4,80:1</td><td>#646b88 booking (4,97:1), #686b80 elkollen, #8a8da5 elcentral (3,26:1 underkänd), #8a8fa3 cta-website demo</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-ink-on-action</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#282a53"></span><code>--apindigo</code></td><td>cta-website (*.css:14 hsl(237 35% 24%)) + hero-1 + main-cta + rot-gt + fotobedomningen + eljour-sticky-bar</td><td>#0d0d0d (elkollen/elcentral/picasso), #1e1e1e (hero-2 Z submit), vit (LED/EV/energycalc/elcentral solid)</td></tr>
+<tr class="ds-table__group"><th colspan="4">Bläck på mörkt</th></tr>
+<tr><td class="ds-nowrap"><code>--ampy-on-dark</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#ffffff"></span><code>--appure-white</code></td><td>hero-1 (h1 vit), LED (--text-inverse), visste-du-att, testimonials = 14+ källor</td><td>#dbe3ec hero-2-alternatives --ap-ink (~13:1)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-on-dark-soft</code></td><td><span class="ds-dot" style="background:rgba(255,255,255,.92)"></span><code>rgba(255,255,255,.92)</code></td><td>hero-1 (style.css:234 lead .92) + hero-2-alternatives (lead .92) + main-form (.96 på foto)</td><td>.95 testimonials korttext, .94 LED lead-etiketter, #c9d4e0 hero-2 crumbs</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-on-dark-muted</code></td><td><span class="ds-dot" style="background:rgba(255,255,255,.66)"></span><code>rgba(255,255,255,.66)</code></td><td>led-kalkylator (styles.css:31 --on-surface-text-muted) + ev-kalkylator + battery, 8,44:1</td><td>.82 visste-du-att brödtext, .72 testimonials datum, #aeb8d4 energycalc</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-on-dark-faint</code></td><td><span class="ds-dot" style="background:rgba(255,255,255,.55)"></span><code>rgba(255,255,255,.55)</code></td><td>led-kalkylator (styles.css:32 --on-surface-text-faint, höjd från .42 efter WCAG) + ev + testimonials (citattecken .55), 6,12:1</td><td>.42 battery (3,99:1 underkänd), .70 rot-gt finstilt, #8a93b5 energycalc</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-on-dark-line</code></td><td><span class="ds-dot" style="background:rgba(255,255,255,.14)"></span><code>rgba(255,255,255,.14)</code></td><td>led-kalkylator (styles.css:33 --on-surface-border hr) + hero-2-alternatives (--ap-hairline .14) + EV</td><td>.12 energycalc --bd-dark, .16 rot-gt/energycalc trust, .18 rot-gt panel</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-on-dark-subtle</code></td><td><span class="ds-dot" style="background:rgba(255,255,255,.06)"></span><code>rgba(255,255,255,.06)</code></td><td>led-kalkylator (styles.css:35 jämförelsespår) + ev-kalkylator (monthly-panel/lead-form .06) + energycalc (sp-item-kant .06)</td><td>.08 EV stapelspår/rot-gt totalplatta, .02/.04 energycalc</td></tr>
+<tr class="ds-table__group"><th colspan="4">Handling</th></tr>
+<tr><td class="ds-nowrap"><code>--ampy-action</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#00a991"></span><code>--apteal-core</code></td><td>energycalc (tool.css:26 CTA + valda kanter), led-kalkylator (styles.css:21 --action-primary), website-blocks (header-CTA), elkollen/elcentral (accent), 25 källor</td><td>EV #007d6b, elcentral/elkollen knapp #007a69 (= --ampy-action-strong). Ägarbeslut 2026-07: teal ensam accent (cobalt #326afd 0 i produktion)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-action-strong</code> <a class="ds-a ds-beslut-tag" href="../beslut.html#b5">B5</a></td><td class="ds-nowrap"><span class="ds-dot" style="background:#007a69"></span><code>--apteal-deep</code></td><td>elcentral-kollen (elcentralkollen.css:46-47) + elkollen (behorighetskollen.css:51): solid knapp med vit text, textlänkar, sista H1-raden</td><td>se --apteal-deep. Beslut B5 (teal-kontrast)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-action-hover</code></td><td><span class="ds-dot" style="background:#008d79"></span><code>#008d79</code></td><td>hero-1 + website-blocks (header.css:13 --ap-teal-hover, header-CTA)</td><td>#00b89e energycalc (ljusare), rgb(0,108,93) elcentral strong-hover, LED/EV opacity .92 i stället för färgbyte</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-action-on</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#ffffff"></span><code>--appure-white</code></td><td>website-blocks (header-CTA vit 600) + energycalc + LED + elcentral/elkollen solid</td><td>--apindigo på gradienten (= --ampy-ink-on-action)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-action-gradient</code></td><td><span class="ds-dot" style="background:linear-gradient(120deg, #55ff9a 0%, #5eb1bf 100%)"></span><code>linear-gradient(120deg, #55ff9a 0%, #5eb1b…</code></td><td>cta-website (radgivning-cta.css:16, offert-cta.css:16) = hero-1 (style.css:71), rot-gt (d2:358), fotobedomningen (--afk-cta-grad), hero-2-alternatives (primitives:80 "DEN ENDA HANDLINGSGRADIENTEN"), elkollen/elcentral rail, picasso, booking shared.css:848 = 10+ källor. Stopp: --apneon-mint -&gt; --apsecondary-teal</td><td>282.84deg #55ff9a-&gt;#00ffda (hero-2-form, dödförklarad), 135deg #00b89c-&gt;#018271 (thank-you), 100deg #009e88-&gt;#17c6a0 (main-form), 146deg #055a4b-&gt;#0a8169 (eljour nödknapp), 145deg #c7f5ff-&gt;#5eb1bf (live ROT hover)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-action-gradient-ring</code></td><td><span class="ds-dot" style="background:linear-gradient(120deg, #b6f2ff 0%, #5eb1bf 100%)"></span><code>linear-gradient(120deg, #b6f2ff 0%, #5eb1b…</code></td><td>cta-website (ring-cta.css:16) = main-cta, eljour-sticky-bar, hero-2 Z/E. Stopp: --apcrystal-blue -&gt; --apsecondary-teal</td><td>141deg (picasso, elkollen, elcentral)</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-action-gradient-on</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#282a53"></span><code>--apindigo</code></td><td>cta-website (hsl(237 35% 24%)), 5,51:1 mot #5eb1bf</td><td>#0d0d0d, #1e1e1e</td></tr>
+<tr class="ds-table__group"><th colspan="4">Tillstånd</th></tr>
+<tr><td class="ds-nowrap"><code>--ampy-success</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#39c281"></span><code>--apemerald-flow</code></td><td>led-kalkylator (styles.css:23 --state-success "Med LED"), EV, battery, main-form (success-ikon), elcentral (--state-success deklarerad)</td><td>rgb(54,178,92)/rgb(27,132,71) elkollen verdikt-grön ("lövigare än teal"), #1f9d6b main-form validering, #1bd365/#00ad48 testimonials prickar</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-success-ink</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#0f6e56"></span><code>--apverdict-green</code></td><td>elcentral-kollen (--text-success) + elkollen (--text-success/row-icon), 6,20:1</td><td>rgb(6,71,55) elcentral pill-fg</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-success-tint</code></td><td><span class="ds-dot" style="background:rgba(57,194,129,.12)"></span><code>rgba(57,194,129,.12)</code></td><td>main-form (styles.css:238 success-ikon bg .12)</td><td>.16 LED ok-msg/glöd, rgb(240,249,245) elcentral tint, rgba(54,178,92,.10) elkollen board</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-warn</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#f0af38"></span><code>--apamber</code></td><td>led-kalkylator (styles.css:25 "I dag"-stapel), ev-kalkylator ; scopad till diagram/staplar på mörkt (1,93:1 på vit = aldrig text)</td><td>#f0b429 energycalc, #f5af19 elkollen/elcentral --state-warning</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-warn-ink</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#876507"></span><code>--apverdict-amber</code></td><td>elcentral-kollen + elkollen (accent-warning, factnote), 5,39:1</td><td>#8a5800 eljour Varning-tagg, #8a6116 booking fältfel, rgb(92,64,5) elcentral pill-fg</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-warn-tint</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#fff4e0"></span><code>--apamber-tint</code></td><td>eljour-block (:16) + hero-2-alternatives eljour</td><td>rgb(252,247,234)/rgb(250,233,197) elcentral</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-error</code> <a class="ds-a ds-beslut-tag" href="../beslut.html#b13">B13</a></td><td class="ds-nowrap"><span class="ds-dot" style="background:#b3261e"></span><code>--apsignal-red</code></td><td>eljour-block (:15) + fotobedomningen (--afk-fel invalid-kant + feltext) + hero-2 eljour, 6,54:1</td><td>rgb(214,76,76) LED/EV (4,20:1), rgb(214,64,64) elkollen, #e00000 main-form, #e5484d hero-2 primitives, teal (hero-2-form, ingen felfärg). Beslut B13</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-error-ink</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#7a1623"></span><code>--apverdict-red</code></td><td>elcentral-kollen (akut-text rgb(122,22,35)) + elkollen (accent red), 10,68:1</td><td>rgb(124,32,32) elcentral pill-fg</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-error-tint</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#fdeceb"></span><code>--apsignal-red-tint</code></td><td>eljour-block + fotobedomningen + hero-2 eljour</td><td>rgb(252,237,238) elcentral akut, rgba(209,73,91,.08) main-form banner, rgba(214,64,64,.06) elkollen board</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-info-ink</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#0d568c"></span><code>--apverdict-blue</code></td><td>elcentral-kollen (info-ikon, accent-info) + elkollen (info-ikon), 7,70:1</td><td>rgb(10,122,191) elkollen --text-info, rgb(17,82,135) elcentral pill-fg</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-focus</code> <a class="ds-a ds-beslut-tag" href="../beslut.html#b14">B14</a></td><td class="ds-nowrap"><span class="ds-dot" style="background:#090b32"></span><code>--apmidnight-blue</code></td><td>cta-website (*.css:33 focus-visible 3px solid #090b32 offset 3) + booking/offer (outline 3px navy, teal mätte 2,91:1) + fotobedomningen (3px, 19:1) + mini-menu/website-blocks</td><td>teal 3px (hero-1 CTA, thank-you, picasso), teal-ringar .2-.35 (LED sju varianter), #5eb1bf + rgba(94,177,191,.2) (live Bricks-formulär). Beslut B14</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-focus-on-dark</code></td><td class="ds-nowrap"><span class="ds-dot" style="background:#55ff9a"></span><code>--apneon-mint</code></td><td>energycalc (tool.css --ring-dark rgba(85,255,154,.30) + outline neon på mörkt) + elkollen/LED-sp-item neon inset</td><td>LED teal .35 på mörkt</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-focus-ring</code></td><td><code>0 0 0 3px rgba(0,122,105,.9)</code></td><td>elcentral-kollen (elcentralkollen.css --focus-ring, "höjd från .25 för WCAG 2.4.11", EN ring på alla fält+knappar)</td><td>0 0 0 3px rgba(0,169,145,.25) elkollen (1,3:1 underkänd), .30 main-form, .18 hero-2 fält, 0 0 0 3px rgba(94,177,191,.2) live</td></tr>
+<tr class="ds-table__group"><th colspan="4">Linjer</th></tr>
+<tr><td class="ds-nowrap"><code>--ampy-line</code></td><td><span class="ds-dot" style="background:rgba(9,11,50,.14)"></span><code>rgba(9,11,50,.14)</code></td><td>var-process-cro (v2/ampy-process.css:16 "blockets ENDA hairline") + led-kalkylator (styles.css:26 --border-default rgba(15,18,60,.12) -&gt; midnight) + fore-efter/certificates inset .07 ; solida drift: #e6ecf6 eljour-familjen (1,19:1), #dbe4f0 header, #e3e5ed/#ebedf3 elkollen/elcentral, #eaeef5 fore-efter, #d7deeb m.fl. energycalc</td><td><span class="ds-small">ingen</span></td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-line-strong</code></td><td><span class="ds-dot" style="background:rgba(9,11,50,.48)"></span><code>rgba(9,11,50,.48)</code></td><td>booking-confirmation (shared.css:42 --line-strong, kontrollkanter WCAG 1.4.11 -&gt; 3,39:1)</td><td>#5f6480 fotobedomningen (kontrollkant 5,80:1), #e3e5ed elkollen/elcentral inputs (1,26:1 underkänd), 2px transparent main-form</td></tr>
+<tr><td class="ds-nowrap"><code>--ampy-line-on-dark</code></td><td><span class="ds-dot" style="background:rgba(255,255,255,.14)"></span><code>var(--ampy-on-dark-line)</code></td><td>se --ampy-on-dark-line (LED hr .14, hero-2 --ap-hairline)</td><td>.12 energycalc, .16/.18 rot-gt</td></tr>
+<!--@semantik:end-->
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="alfa">Alfa-steg</h2>
+      <p class="ds-p">De genomskinliga stegen som faktiskt används, blandade mot sitt underlag och kontrastmätta. Vit .55 på midnight är golvet för text på mörkt (6,12:1); .42 (battery) faller på 3,99:1 och byts ut.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Token</th><th>Värde</th><th>På</th><th>Blandad</th><th>Kontrast</th></tr></thead>
+        <tbody>
+<!--@alfa:start-->
+<tr><td><code>--ampy-on-dark</code></td><td><code>#ffffff</code></td><td>midnight</td><td><span class="ds-dot" style="background:#ffffff"></span><code>#ffffff</code></td><td class="is-aa">19,00:1</td></tr>
+<tr><td><code>--ampy-on-dark-soft</code></td><td><code>rgba(255,255,255,.92)</code></td><td>midnight</td><td><span class="ds-dot" style="background:#ebebef"></span><code>#ebebef</code></td><td class="is-aa">16,03:1</td></tr>
+<tr><td><code>--ampy-on-dark-muted</code></td><td><code>rgba(255,255,255,.66)</code></td><td>midnight</td><td><span class="ds-dot" style="background:#abacb9"></span><code>#abacb9</code></td><td class="is-aa">8,45:1</td></tr>
+<tr><td><code>--ampy-on-dark-faint</code></td><td><code>rgba(255,255,255,.55)</code></td><td>midnight</td><td><span class="ds-dot" style="background:#9091a3"></span><code>#9091a3</code></td><td class="is-aa">6,13:1</td></tr>
+<tr><td><code>--ampy-on-dark-line</code></td><td><code>rgba(255,255,255,.14)</code></td><td>midnight</td><td><span class="ds-dot" style="background:#2b2d4f"></span><code>#2b2d4f</code></td><td class="is-no">1,44:1</td></tr>
+<tr><td><code>--ampy-on-dark-subtle</code></td><td><code>rgba(255,255,255,.06)</code></td><td>midnight</td><td><span class="ds-dot" style="background:#181a3e"></span><code>#181a3e</code></td><td class="is-no">1,13:1</td></tr>
+<tr><td><code>--ampy-line</code></td><td><code>rgba(9,11,50,.14)</code></td><td>vit</td><td><span class="ds-dot" style="background:#dddde2"></span><code>#dddde2</code></td><td class="is-no">1,36:1</td></tr>
+<tr><td><code>--ampy-line-strong</code></td><td><code>rgba(9,11,50,.48)</code></td><td>vit</td><td><span class="ds-dot" style="background:#898a9d"></span><code>#898a9d</code></td><td class="is-lg">3,40:1</td></tr>
+<tr><td><code>--ampy-bg-tint-action</code></td><td><code>rgba(0,169,145,.08)</code></td><td>vit</td><td><span class="ds-dot" style="background:#ebf8f6"></span><code>#ebf8f6</code></td><td class="is-no">1,09:1</td></tr>
+<tr><td><code>--ampy-bg-glass</code></td><td><code>rgba(255,255,255,.72)</code></td><td>sky-mist</td><td><span class="ds-dot" style="background:#fcfdff"></span><code>#fcfdff</code></td><td class="is-no">1,04:1</td></tr>
+<tr><td><code>--ampy-bg-glass-dark</code></td><td><code>rgba(9,11,50,.82)</code></td><td>vit</td><td><span class="ds-dot" style="background:#353757"></span><code>#353757</code></td><td class="is-aa">11,44:1</td></tr>
+<!--@alfa:end-->
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="regler">Regler</h2>
+
+      <h3 class="ds-h3">Teal är aldrig text</h3>
+      <p class="ds-p">Teal core mäter 2,96:1 mot vit och 2,81:1 mot sky mist. Fyra källor förbjuder den uttryckligen som text (var-process, fotobedömningen, sticky-bar, elkollen). Text-teal är <code>--ampy-action-strong</code> (teal deep, 5,27:1). Samma sak gäller solida knappar med vit text: teal deep, inte teal core (beslut B5).</p>
+      <div class="ds-two">
+        <div style="background:var(--ampy-bg-surface)"><span class="ds-demo__label">Gör inte</span><p class="ds-teal-wrong" style="font-size:var(--ampy-text-body);margin:0">Läs mer om ROT-avdraget i teal core, 2,96:1</p></div>
+        <div style="background:var(--ampy-bg-surface)"><span class="ds-demo__label">Gör</span><p class="ds-teal-right" style="font-size:var(--ampy-text-body);margin:0">Läs mer om ROT-avdraget i teal deep, 5,27:1</p></div>
+      </div>
+
+      <h3 class="ds-h3">Tealernas kontrast</h3>
+      <p class="ds-caption">Alla tealer som förekommer i källorna, mätta av <code>konsolidering/_probes/04-kontrast.py</code>. Bara teal deep och de mörkare CRM-tealerna klarar vit text; kanon väljer teal deep för att den finns i två källor av auktoritet 1.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Färg</th><th>Mot vit</th><th>Mot sky mist</th><th>Mot midnight</th></tr></thead>
+        <tbody>
+<!--@tealmatris:start-->
+<tr><td><span class="ds-dot" style="background:#00a991"></span>teal-core #00a991</td><td class="is-no">2,96</td><td class="is-no">2,81</td><td class="is-aa">6,41</td></tr>
+<tr><td><span class="ds-dot" style="background:#007a69"></span>teal-deep #007a69 (elcentral/elkollen)</td><td class="is-aa">5,27</td><td class="is-aa">4,98</td><td class="is-lg">3,61</td></tr>
+<tr><td><span class="ds-dot" style="background:#007d6b"></span>teal #007d6b (EV)</td><td class="is-aa">5,07</td><td class="is-aa">4,79</td><td class="is-lg">3,75</td></tr>
+<tr><td><span class="ds-dot" style="background:#00806e"></span>teal #00806e (energycalc)</td><td class="is-aa">4,87</td><td class="is-aa">4,61</td><td class="is-lg">3,90</td></tr>
+<tr><td><span class="ds-dot" style="background:#0a8f7c"></span>teal #0a8f7c (hero-2/eljour focus)</td><td class="is-lg">4,01</td><td class="is-lg">3,80</td><td class="is-aa">4,73</td></tr>
+<tr><td><span class="ds-dot" style="background:#0a6e58"></span>teal #0a6e58 (eljour pill)</td><td class="is-aa">6,21</td><td class="is-aa">5,87</td><td class="is-lg">3,06</td></tr>
+<tr><td><span class="ds-dot" style="background:#016a5d"></span>teal #016a5d (booking)</td><td class="is-aa">6,52</td><td class="is-aa">6,17</td><td class="is-no">2,91</td></tr>
+<tr><td><span class="ds-dot" style="background:#018271"></span>teal #018271 (thank-you)</td><td class="is-aa">4,74</td><td class="is-lg">4,48</td><td class="is-lg">4,01</td></tr>
+<tr><td><span class="ds-dot" style="background:#008d79"></span>teal-hover #008d79 (header)</td><td class="is-lg">4,13</td><td class="is-lg">3,91</td><td class="is-aa">4,60</td></tr>
+<tr><td><span class="ds-dot" style="background:#5eb1bf"></span>secondary-teal #5eb1bf</td><td class="is-no">2,47</td><td class="is-no">2,33</td><td class="is-aa">7,70</td></tr>
+<tr><td><span class="ds-dot" style="background:#39c281"></span>emerald #39c281</td><td class="is-no">2,28</td><td class="is-no">2,16</td><td class="is-aa">8,33</td></tr>
+<tr><td><span class="ds-dot" style="background:#55ff9a"></span>neon-mint #55ff9a</td><td class="is-no">1,30</td><td class="is-no">1,23</td><td class="is-aa">14,61</td></tr>
+<!--@tealmatris:end-->
+        </tbody>
+      </table>
+      </div>
+
+      <h3 class="ds-h3">En accent</h3>
+      <p class="ds-p">Teal är den enda accenten (ägarbeslut 2026-07). Neon mint förekommer bara som gradientstart, pulsprick, fokus på mörkt och "efter"-chip. Cobalt och lime finns inte i produktion. Google-gult är reserverat för stjärnor (beslut B12).</p>
+
+      <h3 class="ds-h3">Två ytor</h3>
+      <p class="ds-p">Sidan är sky mist, kortet är vitt. Fotobedömningen och energycalc formulerar regeln "två ytor: #fff + #f5f9ff"; LED/EV:s <code>rgb(247,249,251)</code> och elkollens <code>#f4f5fb</code> är near-miss som byts ut mot sky mist.</p>
+      <div class="ds-demo" style="background:var(--ampy-bg-page)"><span class="ds-demo__label">bg-page + bg-surface</span>
+        <div style="background:var(--ampy-bg-surface);border-radius:var(--ampy-radius-card);box-shadow:var(--ampy-shadow-card);padding:var(--ampy-space-card);max-width:36rem"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-2xs)">Vitt kort</p><p class="ampy-body" style="margin:0">Skuggan är midnight-alfa .07, aldrig grå (beslut B10).</p></div>
+        <div style="background:var(--ampy-bg-subtle);border-radius:var(--ampy-radius-card);border:1px solid var(--ampy-line);padding:var(--ampy-space-card);max-width:36rem"><p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-2xs)">Subtil yta</p><p class="ampy-body" style="margin:0"><code>--ampy-bg-subtle</code> är sky mist igen, med hairline i stället för skugga.</p></div>
+      </div>
+
+      <h3 class="ds-h3" id="gradienter">De två gradienterna</h3>
+      <p class="ds-p">Fjorton gradienter i källorna blir två: handlingsgradienten (sajtens primärknapp) och den ljusa auroran (tack-, boknings- och offertflödet). Ringvarianten startar i crystal blue i stället för neon mint. Den mörka glöden är en ytbehandling för kalkylatorernas resultatkort, inte en gradient i sig (beslut B9). Gradient i text finns inte: ägaren ogillar gradienttext och alla textgradienter i källorna är drift.</p>
+      <div class="ds-grad">
+        <div>
+          <div class="ds-grad__chip" style="background:var(--ampy-action-gradient);color:var(--ampy-action-gradient-on)">Text i indigo, 5,51:1 mot slutet</div>
+          <p class="ds-caption" style="margin-top:0.8rem"><code>--ampy-action-gradient</code><br>linear-gradient(120deg, #55ff9a 0%, #5eb1bf 100%)<br>Källa: cta-website (radgivning-cta.css:16) = hero-1, rot-gt, fotobedömningen, hero-2, elkollen, elcentral, picasso, booking. 10+ källor.</p>
+        </div>
+        <div>
+          <div class="ds-grad__chip" style="background:var(--ampy-action-gradient-ring);color:var(--ampy-action-gradient-on)">Ringknappen: crystal blue till sekundärteal</div>
+          <p class="ds-caption" style="margin-top:0.8rem"><code>--ampy-action-gradient-ring</code><br>linear-gradient(120deg, #b6f2ff 0%, #5eb1bf 100%)<br>Källa: cta-website (ring-cta.css:16) = main-cta, eljour-sticky-bar, hero-2 Z/E. Drift: 141° i picasso, elkollen, elcentral.</p>
+        </div>
+        <div>
+          <div class="ds-grad__chip" style="background:var(--ampy-aurora-light);color:var(--ampy-ink);border:1px solid var(--ampy-line)">Ljus aurora på sky mist</div>
+          <p class="ds-caption" style="margin-top:0.8rem"><code>--ampy-aurora-light</code><br>Fyra radialer (teal .12/.08, crystal blue .48, sublime green .28) på sky mist.<br>Källa: thank-you (v1/styles.css:18-23) = booking (shared.css:65-69) = offer-accepted. Bara kundflödet, beslut B11.</p>
+        </div>
+        <div>
+          <div class="ds-grad__chip" style="background:var(--ampy-bg-dark);background-image:var(--ampy-bg-dark-glow);color:var(--ampy-on-dark)">Mörk glöd (tillval för resultatkort)</div>
+          <p class="ds-caption" style="margin-top:0.8rem"><code>--ampy-bg-dark</code> + <code>--ampy-bg-dark-glow</code><br>radial teal .28 uppe höger + emerald .16 nere vänster.<br>Källa: led-kalkylator (styles.css:131-132) = EV, battery. Platt midnight är default för alla andra mörka ytor, beslut B9.</p>
+        </div>
+      </div>
+
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>Rubrik och brödtext i samma bläck (midnight); hierarki genom vikt och storlek, inte genom färg.</li>
+          <li>Dämpad text i <code>--ampy-ink-muted</code> (6,33:1), svag i <code>--ampy-ink-faint</code> (4,80:1). Aldrig lägre.</li>
+          <li>En handlingsgradient per vy. Alla knappar inne i verktyg, formulär och kort är solid teal deep med vit text.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Teal core som text, som liten text eller som yta under vit text.</li>
+          <li>Gradient i text eller på ytor (certificates, footer, testimonials-kortet är drift).</li>
+          <li>Egna navyer, tealer eller grå: <code>#0f123c</code>, <code>#0b1030</code>, <code>#363636</code>, <code>#00c4a7</code> och <code>rgba(190,190,190,.19)</code> byts ut, se listan nedan.</li>
+        </ul></div>
+      </div>
+
+      <h2 class="ds-h2" id="drift">Det här byts ut</h2>
+      <p class="ds-p">Driftlistan ur <code>konsolidering/farg.md</code>: vad som är uppmätt i källorna, vad som är kanon och vad som byts ut var.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Grupp</th><th>Uppmätt</th><th>Kanon</th><th>Byts ut</th></tr></thead>
+        <tbody>
+<!--@drift:start-->
+<tr><td><strong>Navy i sju värden</strong></td><td><ul class="ds-list"><li>#090b32 (--apmidnight-blue, 29 källor)</li><li>#0f123c (hero-1/website-blocks/LED/EV/mini-menu/rot-gt, 7)</li><li>#0b1030 (thank-you/booking/offer, 3)</li><li>#090c34 (main-cta, Bricks --color-3)</li><li>#1b1d4b (rot-gt-panel/hero-2 Z, Bricks --color-18)</li><li>#16183f, #17204a (hero-2 Z-kort/navy-soft)</li><li>#00011e/#01021f/#010033 (footer), #0b0f30→#2d516d (testimonials), #0d1350…#05061f (mini-menu aurora)</li></ul></td><td>--apmidnight-blue #090b32 för ALLA mörka ytor och allt bläck</td><td>#0f123c → midnight (near-miss, 6 enheter); #0b1030 → midnight; #090c34 → midnight; rot-gt/hero-2 Z-panel #1b1d4b → midnight (eller --ampy-bg-dark-glow); testimonials-gradient → midnight + glöd (B9); footer-gradient → midnight (B-lista: footer riktning)</td></tr>
+<tr><td><strong>Fem tealer (plus fem till)</strong></td><td><ul class="ds-list"><li>#00a991 teal-core (25)</li><li>#5eb1bf brandbokens sekundärteal (17)</li><li>#007a69 elcentral/elkollen "strong" (2 auk 1)</li><li>#007d6b EV</li><li>#00806e/#00b89e/#00c4a7/#19c39e energycalc</li><li>#0a8f7c/#0a6e58 eljour-familjen (4/3)</li><li>#016a5d/#017666/#018271 CRM-flödet</li><li>#1cc4af LED/main-form (oanvänd)</li><li>#008d79 header hover</li><li>#00a88f Bricks --color-15 (footer 5.0)</li></ul></td><td>TVÅ tealer: --apteal-core (accent, aldrig text) + --apteal-deep #007a69 (text, länk, solid knapp med vit text). --apsecondary-teal #5eb1bf bara som gradientslut/ring (aldrig text, 2,47:1).</td><td>alla mörka tealer → --apteal-deep; #00c4a7 (teal på mörkt) → --apteal-core (6,41:1 på midnight räcker); #1cc4af → bort; #00a88f → --apteal-core; hover → --ampy-action-hover #008d79</td></tr>
+<tr><td><strong>#0b1030-bläcket och de andra bläcken</strong></td><td><ul class="ds-list"><li>#0b1030 + rgba(11,16,48,.62/.44) (thank-you, booking, offer)</li><li>#0f123c (7)</li><li>#1f1f1f live ROT h2 (--color-8)</li><li>#1e1e1e (energycalc, rot-gt rubrik, footer h3)</li><li>#363636 live body (Bricks-default)</li><li>#333 (rot-gt p, booking, hero-2 input)</li><li>#3b3f59 eljour-familjen</li><li>#171717/#4d4d4d/#6a6a6a main-form (Svea)</li><li>#1a1d2e article</li></ul></td><td>--ampy-ink = midnight; --ampy-ink-body = midnight (B3); --ampy-ink-muted = #565e82; --ampy-ink-faint = #6a7190</td><td>#0b1030/#0f123c/#1f1f1f/#1e1e1e/#171717 → --ampy-ink; #363636/#333/#3b3f59/#4d4d4d/#1a1d2e → --ampy-ink-body (B3); rgba(11,16,48,.62)/#5f6480/#5a5d7a/#51607a/#6a6a6a → --ampy-ink-muted; #646b88/#686b80/#8a8da5 → --ampy-ink-faint</td></tr>
+<tr><td><strong>Dämpad text (muted) i sex värden</strong></td><td><ul class="ds-list"><li>#565e82 (8: header, LED, EV, mini-menu, rot-gt, booking)</li><li>#5f6480 (3: eljour, foto, sticky)</li><li>#5a5d7a (2: elkollen, elcentral)</li><li>#51607a energycalc</li><li>rgba(11,16,48,.62) thank-you</li><li>rgba(9,11,50,.72) var-process</li></ul></td><td>--apnavy-muted #565e82 (6,33:1)</td><td>de andra fem → --ampy-ink-muted</td></tr>
+<tr><td><strong>Hairlines i nio värden</strong></td><td><ul class="ds-list"><li>#e6ecf6 (eljour-familjen)</li><li>#dbe4f0 (header)</li><li>#e3e5ed/#ebedf3 (elkollen/elcentral)</li><li>rgba(15,18,60,.12) (LED-kitet)</li><li>rgba(9,11,50,.14) (var-process)</li><li>rgba(11,16,48,.09/.16/.48) (booking)</li><li>#eaeef5 (fore-efter)</li><li>#e1e8f4/#d7deeb/#dbe4f2/#eef2f9/#e3e9f5 (energycalc)</li><li>#d5d5dc (drawer)</li></ul></td><td>--ampy-line rgba(9,11,50,.14) (dekorativ) + --ampy-line-strong rgba(9,11,50,.48) (kontrollkant ≥3:1)</td><td>alla solida hairlines → --ampy-line; fältkanter #e3e5ed (1,26:1) → --ampy-line-strong</td></tr>
+<tr><td><strong>Fel/varning: sex röda, tre amber, tre gröna</strong></td><td><ul class="ds-list"><li>röd: #b3261e (3), rgb(214,76,76) LED/EV (2, 4,2:1), rgb(214,64,64) elkollen, #e00000 main-form, #e5484d/#e24b4a hero-2, #ff8a8a energycalc, teal (hero-2-form)</li><li>amber: #f0af38 LED/EV, #f0b429 energycalc, #f5af19 elkollen/elcentral, #e3a008 eljour-prick, #8a6116 booking</li><li>grön: #39c281 emerald (9), #1f9d6b main-form, rgb(54,178,92)/rgb(27,132,71) elkollen, #1bd365/#00ad48 testimonials, #0f6e56 elcentral/elkollen text</li></ul></td><td>--ampy-error #b3261e (6,54:1), --ampy-error-ink #7a1623; --ampy-warn #f0af38 (diagram/mörkt), --ampy-warn-ink #876507; --ampy-success #39c281 (fyllning), --ampy-success-ink #0f6e56</td><td>LED/EV rgb(214,76,76) → #b3261e (4,2:1 underkänd som text); hero-2-form fel-i-teal → #b3261e; testimonials #1bd365/#00ad48 → --apemerald-flow; energycalc #f0b429 → --apamber</td></tr>
+<tr><td><strong>Kortskuggor i fem familjer</strong></td><td><ul class="ds-list"><li>rgba(190,190,190,.19/.14/.4) "husets" (live, testimonials, main-cta, var-process)</li><li>rgba(15,18,60,.06/.08/.14) LED-kitet</li><li>rgba(9,11,50,…) eljour-familjen, fore-efter, certificates, thank-you, visste, mini-menu</li><li>rgba(11,13,42,.04/.07/.10) elkollen/elcentral</li><li>rgba(11,16,48,…) booking; rgba(181,181,181,.14) hero-2-form; rgba(241,241,241,.25) picasso-glöd</li></ul></td><td>EN skuggfärg: midnight-alfa. --ampy-shadow-card 0 10px 30px rgba(9,11,50,.07); -raised 0 16px 40px .14; -subtle 0 1px 2px .06</td><td>alla gråa (190/181/241) och near-miss-navyer (15,18,60 / 11,13,42 / 11,16,48) → rgba(9,11,50,x). Beslut B10 om husets grå skugga.</td></tr>
+<tr><td><strong>Gradienter: 14 → 2</strong></td><td><ul class="ds-list"><li>120° #55ff9a→#5eb1bf (handling, 10+)</li><li>120° #b6f2ff→#5eb1bf (ring)</li><li>ljus aurora (thank-you/booking/offer)</li><li>282.84° #55ff9a→#00ffda (hero-2-form)</li><li>135° #00b89c→#018271 (thank-you knapp)</li><li>100° #009e88→#17c6a0 (main-form knapp)</li><li>146° #055a4b→#0a8169 (eljour nödknapp)</li><li>145° #c7f5ff→#5eb1bf (live ROT hover)</li><li>90° #090b32→#5eb1bf (certificates)</li><li>−51° #70becb→#bbf5ff→#b6f2ff (prefooter)</li><li>−17° #00011e→#090b32 (footer)</li><li>−27° #0b0f30→#2d516d (testimonials-kort)</li><li>GT-rubrik #1f1f1f→#57ff9a→#33995c; main-cta text hsl(171 95% 41%)→#5eb1bf; main-form rubrik #12b09a→#55d199</li><li>92°/135° article (#326afd→#55ff9a)</li></ul></td><td>--ampy-action-gradient (120° neon-mint → sekundärteal, med ring-varianten) + --ampy-aurora-light. Allt annat = drift.</td><td>knapp-gradienterna i hero-2-form/thank-you/main-form → --ampy-action-gradient; textgradienter → bort (ägaren ogillar gradienttext); nödknappen → --apteal-deep solid (B6); certificates/footer/testimonials-ytor → midnight (+ glöd)</td></tr>
+<tr><td><strong>Cobalt och lime (brandbok) vs teal (produktion)</strong></td><td><ul class="ds-list"><li>#326afd cobalt: 0 i live, 73 i artikelmallen (Tailwind electric)</li><li>#92ec47 lime: 0 överallt</li><li>#00a991 teal-core: saknas i brandboken</li></ul></td><td>teal (ägarbeslut 2026-07): se B1</td><td>artikelmallens electric #326afd → --apteal-deep (länkar) / --apteal-core (accent)</td></tr>
+<!--@drift:end-->
+        </tbody>
+      </table>
+      </div>
+
+      <p class="ds-source">Beslut som rör färg: <a class="ds-a" href="../beslut.html#b1">B1 accent</a>, <a class="ds-a" href="../beslut.html#b3">B3 brödtext</a>, <a class="ds-a" href="../beslut.html#b5">B5 teal-kontrast</a>, <a class="ds-a" href="../beslut.html#b9">B9 glöd</a>, <a class="ds-a" href="../beslut.html#b10">B10 skugga</a>, <a class="ds-a" href="../beslut.html#b11">B11 aurora</a>, <a class="ds-a" href="../beslut.html#b12">B12 stjärnor</a>, <a class="ds-a" href="../beslut.html#b13">B13 felfärg</a>, <a class="ds-a" href="../beslut.html#b14">B14 fokus</a>, <a class="ds-a" href="../beslut.html#b16">B16 sekundärteal</a>.</p>
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

@@ -1,0 +1,985 @@
+{
+ "metod": "WCAG 2.x relativ luminans (sRGB); alfa blandas mot underlaget först. Källa för hex: system/tokens.css. Källor/roller: konsolidering/farg.json.",
+ "referens": {
+  "vit": "#ffffff",
+  "midnight": "#090b32",
+  "skymist": "#f5f9ff"
+ },
+ "grupper": [
+  {
+   "id": "karnan",
+   "rubrik": "Kärnan",
+   "rader": [
+    {
+     "namn": "Midnight",
+     "token": "--apmidnight-blue",
+     "hex": "#090b32",
+     "ampy": "--ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus",
+     "roll": "mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa)",
+     "kallor": "29 källor (14 auk 1)",
+     "mot_vit": 19,
+     "mot_midnight": 1,
+     "mot_skymist": 17.98
+    },
+    {
+     "namn": "Vit",
+     "token": "--appure-white",
+     "hex": "#ffffff",
+     "ampy": "--ampy-bg-surface, --ampy-on-dark, --ampy-action-on",
+     "roll": "kort, text på mörkt, alfa-serie på mörkt",
+     "kallor": "26 källor (13 auk 1)",
+     "mot_vit": 1,
+     "mot_midnight": 19,
+     "mot_skymist": 1.06
+    },
+    {
+     "namn": "Teal core",
+     "token": "--apteal-core",
+     "hex": "#00a991",
+     "ampy": "--ampy-action",
+     "roll": "accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA",
+     "kallor": "25 källor (12 auk 1)",
+     "mot_vit": 2.96,
+     "mot_midnight": 6.41,
+     "mot_skymist": 2.81
+    },
+    {
+     "namn": "Neon mint",
+     "token": "--apneon-mint",
+     "hex": "#55ff9a",
+     "ampy": "--ampy-focus-on-dark",
+     "roll": "handlingsgradientens start, pulsprick, EFTER-chip, fokus på mörkt, stjärnor (testimonials-kort)",
+     "kallor": "22 källor (11 auk 1)",
+     "mot_vit": 1.3,
+     "mot_midnight": 14.61,
+     "mot_skymist": 1.23
+    },
+    {
+     "namn": "Sky mist",
+     "token": "--apsky-mist",
+     "hex": "#f5f9ff",
+     "ampy": "--ampy-bg-page, --ampy-bg-subtle",
+     "roll": "sidbakgrund, subtil yta, ljus aurora-bas",
+     "kallor": "21 källor (10 auk 1)",
+     "mot_vit": 1.06,
+     "mot_midnight": 17.98,
+     "mot_skymist": 1
+    }
+   ]
+  },
+  {
+   "id": "tealer",
+   "rubrik": "Tealer och gröna toner",
+   "rader": [
+    {
+     "namn": "Teal core",
+     "token": "--apteal-core",
+     "hex": "#00a991",
+     "ampy": "--ampy-action",
+     "roll": "accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA",
+     "kallor": "25 källor (12 auk 1)",
+     "mot_vit": 2.96,
+     "mot_midnight": 6.41,
+     "mot_skymist": 2.81
+    },
+    {
+     "namn": "Teal deep",
+     "token": "--apteal-deep",
+     "hex": "#007a69",
+     "ampy": "--ampy-action-strong",
+     "roll": "solid knapp med vit text, textlänk, sista H1-rad (diagnostik)",
+     "kallor": "2 källor (2 auk 1)",
+     "mot_vit": 5.27,
+     "mot_midnight": 3.61,
+     "mot_skymist": 4.98
+    },
+    {
+     "namn": "Teal hover",
+     "token": "--ampy-action-hover",
+     "hex": "#008d79",
+     "ampy": "--ampy-action-hover",
+     "roll": "hover på solid teal-knapp (header-CTA)",
+     "kallor": "hero-1 + website-blocks (header.css:13)",
+     "mot_vit": 4.13,
+     "mot_midnight": 4.6,
+     "mot_skymist": 3.91
+    },
+    {
+     "namn": "Sekundärteal (brandbok s.8)",
+     "token": "--apsecondary-teal",
+     "hex": "#5eb1bf",
+     "ampy": "--ampy-action-gradient(-ring)",
+     "roll": "handlingsgradientens slut, ring-gradientens slut, live fokus/highlight (--color-7), mini-menu pill, certificates gradient",
+     "kallor": "17 källor (7 auk 1)",
+     "mot_vit": 2.47,
+     "mot_midnight": 7.7,
+     "mot_skymist": 2.33
+    },
+    {
+     "namn": "Teal tint",
+     "token": "--apteal-tint",
+     "hex": "#e3f6f1",
+     "ampy": "(pill)",
+     "roll": "pill/chip-yta (eljour-familjen)",
+     "kallor": "3 källor (1 auk 1)",
+     "mot_vit": 1.12,
+     "mot_midnight": 16.93,
+     "mot_skymist": 1.06
+    },
+    {
+     "namn": "Emerald flow",
+     "token": "--apemerald-flow",
+     "hex": "#39c281",
+     "ampy": "--ampy-success",
+     "roll": "success, \"efter\"-stapel, slider-fyllning",
+     "kallor": "9 källor (5 auk 1)",
+     "mot_vit": 2.28,
+     "mot_midnight": 8.33,
+     "mot_skymist": 2.16
+    },
+    {
+     "namn": "Seafoam mint",
+     "token": "--apseafoam-mint",
+     "hex": "#5cc5b6",
+     "ampy": "(dekor)",
+     "roll": "aurora-SVG-stopp (thank-you/offer)",
+     "kallor": "3 källor (1 auk 1)",
+     "mot_vit": 2.08,
+     "mot_midnight": 9.15,
+     "mot_skymist": 1.96
+    },
+    {
+     "namn": "Mint surge",
+     "token": "--apmint-surge",
+     "hex": "#9de1ec",
+     "ampy": "",
+     "roll": "definierad i global-variables.css; 0 användningar i blocken (bara brandbokens jämförelselista)",
+     "kallor": "1 (brandbook-inventeringen)",
+     "mot_vit": 1.46,
+     "mot_midnight": 13.04,
+     "mot_skymist": 1.38
+    },
+    {
+     "namn": "Crystal blue",
+     "token": "--apcrystal-blue",
+     "hex": "#b6f2ff",
+     "ampy": "--ampy-action-gradient-ring, --ampy-aurora-light",
+     "roll": "ring-gradientens start, ljus aurora (.48), footer-gradient, certificates-våg",
+     "kallor": "15 källor (5 auk 1)",
+     "mot_vit": 1.23,
+     "mot_midnight": 15.5,
+     "mot_skymist": 1.16
+    },
+    {
+     "namn": "Sublime green",
+     "token": "--apsublime-green",
+     "hex": "#a0fbc9",
+     "ampy": "--ampy-aurora-light",
+     "roll": "ljus aurora (radial .28)",
+     "kallor": "4 källor (1 auk 1)",
+     "mot_vit": 1.23,
+     "mot_midnight": 15.5,
+     "mot_skymist": 1.16
+    },
+    {
+     "namn": "Aqua frost",
+     "token": "--apaqua-frost",
+     "hex": "#ddf9fd",
+     "ampy": "(oanvänd)",
+     "roll": "definierad, 0 användningar (live --color-29 #e5faff är en annan)",
+     "kallor": "1 källor (1 auk 1)",
+     "mot_vit": 1.1,
+     "mot_midnight": 17.23,
+     "mot_skymist": 1.04
+    }
+   ]
+  },
+  {
+   "id": "navy",
+   "rubrik": "Navy och bläck",
+   "rader": [
+    {
+     "namn": "Midnight (bläck)",
+     "token": "--apmidnight-blue",
+     "hex": "#090b32",
+     "ampy": "--ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus",
+     "roll": "mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa)",
+     "kallor": "29 källor (14 auk 1)",
+     "mot_vit": 19,
+     "mot_midnight": 1,
+     "mot_skymist": 17.98
+    },
+    {
+     "namn": "Indigo (knapptext på gradient)",
+     "token": "--apindigo",
+     "hex": "#282a53",
+     "ampy": "--ampy-ink-on-action, --ampy-action-gradient-on",
+     "roll": "knapptext på gradient",
+     "kallor": "6 källor (3 auk 1)",
+     "mot_vit": 13.58,
+     "mot_midnight": 1.4,
+     "mot_skymist": 12.85
+    },
+    {
+     "namn": "Navy muted",
+     "token": "--apnavy-muted",
+     "hex": "#565e82",
+     "ampy": "--ampy-ink-muted",
+     "roll": "dämpad text",
+     "kallor": "8 källor (5 auk 1)",
+     "mot_vit": 6.33,
+     "mot_midnight": 3,
+     "mot_skymist": 5.99
+    },
+    {
+     "namn": "Navy faint",
+     "token": "--apnavy-faint",
+     "hex": "#6a7190",
+     "ampy": "--ampy-ink-faint",
+     "roll": "svag text",
+     "kallor": "2 källor (2 auk 1)",
+     "mot_vit": 4.8,
+     "mot_midnight": 3.96,
+     "mot_skymist": 4.54
+    },
+    {
+     "namn": "Navy ink (drift, B3)",
+     "token": "--apnavy-ink",
+     "hex": "#3b3f59",
+     "ampy": "drift → --ampy-ink-body (B3)",
+     "roll": "brödtext i eljour-familjen",
+     "kallor": "3 källor (1 auk 1)",
+     "mot_vit": 10.29,
+     "mot_midnight": 1.85,
+     "mot_skymist": 9.74
+    },
+    {
+     "namn": "Darkest black (drift)",
+     "token": "--apdarkest-black",
+     "hex": "#1e1e1e",
+     "ampy": "drift → --ampy-ink",
+     "roll": "energycalc ink, rot-gt rubrik-ink, footer h3, mini-menu pill-text, hero-2 Z submit-text",
+     "kallor": "9 källor (5 auk 1)",
+     "mot_vit": 16.67,
+     "mot_midnight": 1.14,
+     "mot_skymist": 15.78
+    },
+    {
+     "namn": "Deepest blue",
+     "token": "--apdeepest-blue",
+     "hex": "#0e0f15",
+     "ampy": "(oanvänd)",
+     "roll": "definierad; 0 användningar",
+     "kallor": "0 källor",
+     "mot_vit": 19.13,
+     "mot_midnight": 1.01,
+     "mot_skymist": 18.11
+    }
+   ]
+  },
+  {
+   "id": "tillstand",
+   "rubrik": "Tillstånd",
+   "rader": [
+    {
+     "namn": "Success (fyllning)",
+     "token": "--apemerald-flow",
+     "hex": "#39c281",
+     "ampy": "--ampy-success",
+     "roll": "success, \"efter\"-stapel, slider-fyllning",
+     "kallor": "9 källor (5 auk 1)",
+     "mot_vit": 2.28,
+     "mot_midnight": 8.33,
+     "mot_skymist": 2.16
+    },
+    {
+     "namn": "Success ink",
+     "token": "--apverdict-green",
+     "hex": "#0f6e56",
+     "ampy": "--ampy-success-ink",
+     "roll": "besked-accent + success-text",
+     "kallor": "2 källor (2 auk 1)",
+     "mot_vit": 6.2,
+     "mot_midnight": 3.06,
+     "mot_skymist": 5.87
+    },
+    {
+     "namn": "Success tint",
+     "token": "--ampy-success-tint",
+     "hex": "#39c281 @ 0.12",
+     "ampy": "--ampy-success-tint",
+     "roll": "bakgrund bakom success-ikon/besked",
+     "kallor": "main-form (styles.css:238)",
+     "mot_vit": 1.1,
+     "mot_midnight": 1.18,
+     "mot_skymist": 1.1
+    },
+    {
+     "namn": "Varning (fyllning)",
+     "token": "--apamber",
+     "hex": "#f0af38",
+     "ampy": "--ampy-warn",
+     "roll": "\"före\"-stapel, varning i diagram",
+     "kallor": "3 källor (2 auk 1)",
+     "mot_vit": 1.93,
+     "mot_midnight": 9.85,
+     "mot_skymist": 1.82
+    },
+    {
+     "namn": "Varning ink",
+     "token": "--apverdict-amber",
+     "hex": "#876507",
+     "ampy": "--ampy-warn-ink",
+     "roll": "besked-accent + varningstext",
+     "kallor": "2 källor (2 auk 1)",
+     "mot_vit": 5.39,
+     "mot_midnight": 3.52,
+     "mot_skymist": 5.1
+    },
+    {
+     "namn": "Varning tint",
+     "token": "--apamber-tint",
+     "hex": "#fff4e0",
+     "ampy": "--ampy-warn-tint",
+     "roll": "varnings-bakgrund",
+     "kallor": "2 källor (1 auk 1)",
+     "mot_vit": 1.09,
+     "mot_midnight": 17.43,
+     "mot_skymist": 1.03
+    },
+    {
+     "namn": "Fel (fält, meddelande)",
+     "token": "--apsignal-red",
+     "hex": "#b3261e",
+     "ampy": "--ampy-error",
+     "roll": "fel, akut",
+     "kallor": "3 källor (1 auk 1)",
+     "mot_vit": 6.54,
+     "mot_midnight": 2.91,
+     "mot_skymist": 6.19
+    },
+    {
+     "namn": "Fel ink (besked)",
+     "token": "--apverdict-red",
+     "hex": "#7a1623",
+     "ampy": "--ampy-error-ink",
+     "roll": "besked-accent + akut-text",
+     "kallor": "2 källor (2 auk 1)",
+     "mot_vit": 10.68,
+     "mot_midnight": 1.78,
+     "mot_skymist": 10.11
+    },
+    {
+     "namn": "Fel tint",
+     "token": "--apsignal-red-tint",
+     "hex": "#fdeceb",
+     "ampy": "--ampy-error-tint",
+     "roll": "fel-/akut-bakgrund",
+     "kallor": "3 källor (1 auk 1)",
+     "mot_vit": 1.14,
+     "mot_midnight": 16.62,
+     "mot_skymist": 1.08
+    },
+    {
+     "namn": "Info ink",
+     "token": "--apverdict-blue",
+     "hex": "#0d568c",
+     "ampy": "--ampy-info-ink",
+     "roll": "besked-accent info",
+     "kallor": "2 källor (2 auk 1)",
+     "mot_vit": 7.7,
+     "mot_midnight": 2.47,
+     "mot_skymist": 7.29
+    },
+    {
+     "namn": "Google-gult (stjärnor, B12)",
+     "token": "--apgoogle-gold",
+     "hex": "#fbbc04",
+     "ampy": "(stjärnor, B12)",
+     "roll": "Google-stjärnor",
+     "kallor": "2 källor (1 auk 1)",
+     "mot_vit": 1.71,
+     "mot_midnight": 11.12,
+     "mot_skymist": 1.62
+    }
+   ]
+  },
+  {
+   "id": "gra",
+   "rubrik": "Grå och vita",
+   "rader": [
+    {
+     "namn": "Pure white",
+     "token": "--appure-white",
+     "hex": "#ffffff",
+     "ampy": "--ampy-bg-surface, --ampy-on-dark, --ampy-action-on",
+     "roll": "kort, text på mörkt, alfa-serie på mörkt",
+     "kallor": "26 källor (13 auk 1)",
+     "mot_vit": 1,
+     "mot_midnight": 19,
+     "mot_skymist": 1.06
+    },
+    {
+     "namn": "Sky mist",
+     "token": "--apsky-mist",
+     "hex": "#f5f9ff",
+     "ampy": "--ampy-bg-page, --ampy-bg-subtle",
+     "roll": "sidbakgrund, subtil yta, ljus aurora-bas",
+     "kallor": "21 källor (10 auk 1)",
+     "mot_vit": 1.06,
+     "mot_midnight": 17.98,
+     "mot_skymist": 1
+    },
+    {
+     "namn": "Milk white",
+     "token": "--apmilk-white",
+     "hex": "#f5f5f5",
+     "ampy": "(oanvänd)",
+     "roll": "definierad + alfa-serie; 0 användningar i blocken",
+     "kallor": "1 källor (1 auk 1)",
+     "mot_vit": 1.09,
+     "mot_midnight": 17.42,
+     "mot_skymist": 1.03
+    },
+    {
+     "namn": "Gray white",
+     "token": "--apgray-white",
+     "hex": "#d9d9d9",
+     "ampy": "(oanvänd)",
+     "roll": "definierad; 0 användningar",
+     "kallor": "1 källor (1 auk 1)",
+     "mot_vit": 1.41,
+     "mot_midnight": 13.46,
+     "mot_skymist": 1.34
+    },
+    {
+     "namn": "Charcoal gray (drift)",
+     "token": "--apcharcoal-gray",
+     "hex": "#333333",
+     "ampy": "drift → --ampy-ink-body",
+     "roll": "live --color-20: brödtext mobil ROT/GT, rot-gt-familjens p, booking body-ink, hero-2 input-text",
+     "kallor": "6 källor (3 auk 1)",
+     "mot_vit": 12.63,
+     "mot_midnight": 1.5,
+     "mot_skymist": 11.96
+    },
+    {
+     "namn": "Pure black",
+     "token": "--appure-black",
+     "hex": "#000000",
+     "ampy": "(punkt)",
+     "roll": "main-form asterisk; logo-PNG:er (#000)",
+     "kallor": "2 källor (1 auk 1)",
+     "mot_vit": 21,
+     "mot_midnight": 1.11,
+     "mot_skymist": 19.88
+    }
+   ]
+  },
+  {
+   "id": "brandbok",
+   "rubrik": "Brandbokens färger som inte används",
+   "rader": [
+    {
+     "namn": "Cobalt (brandbok s.7)",
+     "token": "#326afd",
+     "hex": "#326afd",
+     "ampy": "(inget token)",
+     "roll": "bokens huvudaccent: ikoner, blixt-former, hjälm, bil, skyltar",
+     "kallor": "2 (brandbook + artikelmallen som Tailwind \"electric\", 73 användningar)",
+     "mot_vit": 4.55,
+     "mot_midnight": 4.17,
+     "mot_skymist": 4.31
+    },
+    {
+     "namn": "Lime (brandbok s.8)",
+     "token": "#92ec47",
+     "hex": "#92ec47",
+     "ampy": "(inget token)",
+     "roll": "stödfärg i boken, gradient 2",
+     "kallor": "1 (brandbook)",
+     "mot_vit": 1.47,
+     "mot_midnight": 12.95,
+     "mot_skymist": 1.39
+    }
+   ]
+  }
+ ],
+ "alfa": [
+  {
+   "token": "--ampy-on-dark",
+   "varde": "var(--appure-white)",
+   "pa": "midnight",
+   "blandad": "#ffffff",
+   "kontrast": 19
+  },
+  {
+   "token": "--ampy-on-dark-soft",
+   "varde": "rgba(255,255,255,.92)",
+   "pa": "midnight",
+   "blandad": "#ebebef",
+   "kontrast": 16.03
+  },
+  {
+   "token": "--ampy-on-dark-muted",
+   "varde": "rgba(255,255,255,.66)",
+   "pa": "midnight",
+   "blandad": "#abacb9",
+   "kontrast": 8.45
+  },
+  {
+   "token": "--ampy-on-dark-faint",
+   "varde": "rgba(255,255,255,.55)",
+   "pa": "midnight",
+   "blandad": "#9091a3",
+   "kontrast": 6.13
+  },
+  {
+   "token": "--ampy-on-dark-line",
+   "varde": "rgba(255,255,255,.14)",
+   "pa": "midnight",
+   "blandad": "#2b2d4f",
+   "kontrast": 1.44
+  },
+  {
+   "token": "--ampy-on-dark-subtle",
+   "varde": "rgba(255,255,255,.06)",
+   "pa": "midnight",
+   "blandad": "#181a3e",
+   "kontrast": 1.13
+  },
+  {
+   "token": "--ampy-line",
+   "varde": "rgba(9,11,50,.14)",
+   "pa": "vit",
+   "blandad": "#dddde2",
+   "kontrast": 1.36
+  },
+  {
+   "token": "--ampy-line-strong",
+   "varde": "rgba(9,11,50,.48)",
+   "pa": "vit",
+   "blandad": "#898a9d",
+   "kontrast": 3.4
+  },
+  {
+   "token": "--ampy-bg-tint-action",
+   "varde": "rgba(0,169,145,.08)",
+   "pa": "vit",
+   "blandad": "#ebf8f6",
+   "kontrast": 1.09
+  },
+  {
+   "token": "--ampy-bg-glass",
+   "varde": "rgba(255,255,255,.72)",
+   "pa": "sky-mist",
+   "blandad": "#fcfdff",
+   "kontrast": 1.04
+  },
+  {
+   "token": "--ampy-bg-glass-dark",
+   "varde": "rgba(9,11,50,.82)",
+   "pa": "vit",
+   "blandad": "#353757",
+   "kontrast": 11.44
+  }
+ ],
+ "semantik": [
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-page",
+   "varde": "var(--apsky-mist)",
+   "primitiv": "--apsky-mist",
+   "kalla": "live-ampy-se (post-15498 .brxe-rclikf #f5f9ff) + hero-1, header, eljour, thank-you, booking, visste-du-att = 21 källor",
+   "drift": "rgb(247,249,251) LED/EV, #f4f5fb elkollen/elcentral, #f4f5f7 main-form, #e9eff8 energycalc",
+   "beslut": null
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-surface",
+   "varde": "var(--appure-white)",
+   "primitiv": "--appure-white",
+   "kalla": "live-ampy-se (.rot__container) + 26 källor: alla kort är vita",
+   "drift": "rgb(247,249,251) LED inputkort",
+   "beslut": null
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-subtle",
+   "varde": "var(--apsky-mist)",
+   "primitiv": "--apsky-mist",
+   "kalla": "fotobedomningen (afk-styles.css:~20 \"två ytor: #fff + #f5f9ff\") + energycalc (hp-ic #f5f9ff) + elkollen job-row hover #f4f5fb",
+   "drift": "rgb(234,239,243) LED/EV spår, #f7f8fc elcentral, #f7f7f7 main-form",
+   "beslut": null
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-dark",
+   "varde": "var(--apmidnight-blue)",
+   "primitiv": "--apmidnight-blue",
+   "kalla": "led-kalkylator (styles.css:16 --bg-surface) + EV, energycalc, visste-du-att, hero-2 S/G/E, footer",
+   "drift": "rgb(27,29,75) rot-gt-panel/hero-2 Z, #16183f Z-kort, #0b0f30->#2d516d testimonials, #00011e/#01021f footer, #11163f/#0c1040 energycalc",
+   "beslut": null
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-dark-glow",
+   "varde": "radial-gradient(120% 60% at 90% -10%, rgba(0,169,145,.28), transparent 60%), radial-gradient(80% 50% at -10% 110%, rgba(57,194,129,.16), transparent 60%)",
+   "primitiv": null,
+   "kalla": "led-kalkylator (styles.css:131-132) = ev-kalkylator, battery",
+   "drift": "energycalc 3 radialer (#00c4a7 .22 / neon .10 / midnight .40), visste-du-att (teal .42 + neon .18). Beslut B9: glöd eller platt",
+   "beslut": "B9"
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-glass",
+   "varde": "rgba(255,255,255,.72)",
+   "primitiv": null,
+   "kalla": "thank-you (v1/styles.css:40 glaskort)",
+   "drift": ".74 offer-accepted, .85 utan blur booking, rgba(255,255,255,.16) website-blocks go-cirkel. Beslut B15",
+   "beslut": "B15"
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-glass-border",
+   "varde": "rgba(255,255,255,.9)",
+   "primitiv": null,
+   "kalla": "thank-you (v1/styles.css:41)",
+   "drift": "booking .9 (samma), hero-2 Z 1px vit .14 på mörkt",
+   "beslut": null
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-glass-blur",
+   "varde": "blur(16px) saturate(1.1)",
+   "primitiv": null,
+   "kalla": "thank-you (v1/styles.css:44) + offer-accepted",
+   "drift": "blur(30px) hero-2-form (dömd ut av hero-2-alternatives), blur(8/10px) saturate(150%) fore-efter navy-glas, blur(4px) website-blocks",
+   "beslut": null
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-glass-dark",
+   "varde": "rgba(9,11,50,.82)",
+   "primitiv": null,
+   "kalla": "fore-efter-cro (dist/01:~206-215 chip/ledtråd)",
+   "drift": "hero-2-form #090b32 + 156.51deg -> #5eb1bf .76 (underkänd, kant 1,2:1)",
+   "beslut": null
+  },
+  {
+   "grupp": "Ytor",
+   "token": "--ampy-bg-tint-action",
+   "varde": "rgba(0,169,145,.08)",
+   "primitiv": null,
+   "kalla": "elkollen (roomtile-chip .08) + thank-you (ghost hover .08) + booking/offer (pill .08) + website-blocks (.09/.06)",
+   "drift": "solid --apteal-tint #e3f6f1 (eljour-familjen), #e0f5f2 (rot-gt/booking)",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på ljust",
+   "token": "--ampy-ink",
+   "varde": "var(--apmidnight-blue)",
+   "primitiv": "--apmidnight-blue",
+   "kalla": "eljour-block (:13 --ink H2), testimonials-block (delivery css:21), elkollen/elcentral (--text-primary), fore-efter, visste-du-att, var-process = 29 källor",
+   "drift": "#0f123c (hero-1 header, LED/EV, mini-menu = near-miss, konsolideras hit), #0b1030 (thank-you/booking/offer), #1f1f1f (live ROT h2 --color-8), #1e1e1e (energycalc, rot-gt-familjen), #090c34 (main-cta)",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på ljust",
+   "token": "--ampy-ink-body",
+   "varde": "var(--apmidnight-blue)",
+   "primitiv": "--apmidnight-blue",
+   "kalla": "testimonials-block (delivery css:21 \"Outfit 300 navy\" block-text) + fore-efter-cro (sektionens basfont Outfit 300 #090b32) + elkollen/elcentral/mini-menu/LED/EV via #0f123c-konsolidering = 11 källor",
+   "drift": "#363636/300 live Bricks-default (frontend.css body, ej token), #3b3f59/400 eljour-familjen (--apnavy-ink), #333 rot-gt-familjen/booking, rgba(9,11,50,.72) var-process, .62 thank-you. BESLUT B3",
+   "beslut": "B3"
+  },
+  {
+   "grupp": "Bläck på ljust",
+   "token": "--ampy-ink-muted",
+   "varde": "var(--apnavy-muted)",
+   "primitiv": "--apnavy-muted",
+   "kalla": "hero-1/website-blocks (header.css:15 --ink-muted) + LED/EV (--text-secondary) + mini-menu + rot-gt + booking = 8 källor, 6,33:1",
+   "drift": "#5f6480 eljour-familjen (5,80:1), #5a5d7a elkollen/elcentral, #51607a energycalc, rgba(11,16,48,.62) thank-you",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på ljust",
+   "token": "--ampy-ink-faint",
+   "varde": "var(--apnavy-faint)",
+   "primitiv": "--apnavy-faint",
+   "kalla": "hero-1/website-blocks (header.css:15 --ink-faint), 4,80:1",
+   "drift": "#646b88 booking (4,97:1), #686b80 elkollen, #8a8da5 elcentral (3,26:1 underkänd), #8a8fa3 cta-website demo",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på ljust",
+   "token": "--ampy-ink-on-action",
+   "varde": "var(--apindigo)",
+   "primitiv": "--apindigo",
+   "kalla": "cta-website (*.css:14 hsl(237 35% 24%)) + hero-1 + main-cta + rot-gt + fotobedomningen + eljour-sticky-bar",
+   "drift": "#0d0d0d (elkollen/elcentral/picasso), #1e1e1e (hero-2 Z submit), vit (LED/EV/energycalc/elcentral solid)",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på mörkt",
+   "token": "--ampy-on-dark",
+   "varde": "var(--appure-white)",
+   "primitiv": "--appure-white",
+   "kalla": "hero-1 (h1 vit), LED (--text-inverse), visste-du-att, testimonials = 14+ källor",
+   "drift": "#dbe3ec hero-2-alternatives --ap-ink (~13:1)",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på mörkt",
+   "token": "--ampy-on-dark-soft",
+   "varde": "rgba(255,255,255,.92)",
+   "primitiv": null,
+   "kalla": "hero-1 (style.css:234 lead .92) + hero-2-alternatives (lead .92) + main-form (.96 på foto)",
+   "drift": ".95 testimonials korttext, .94 LED lead-etiketter, #c9d4e0 hero-2 crumbs",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på mörkt",
+   "token": "--ampy-on-dark-muted",
+   "varde": "rgba(255,255,255,.66)",
+   "primitiv": null,
+   "kalla": "led-kalkylator (styles.css:31 --on-surface-text-muted) + ev-kalkylator + battery, 8,44:1",
+   "drift": ".82 visste-du-att brödtext, .72 testimonials datum, #aeb8d4 energycalc",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på mörkt",
+   "token": "--ampy-on-dark-faint",
+   "varde": "rgba(255,255,255,.55)",
+   "primitiv": null,
+   "kalla": "led-kalkylator (styles.css:32 --on-surface-text-faint, höjd från .42 efter WCAG) + ev + testimonials (citattecken .55), 6,12:1",
+   "drift": ".42 battery (3,99:1 underkänd), .70 rot-gt finstilt, #8a93b5 energycalc",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på mörkt",
+   "token": "--ampy-on-dark-line",
+   "varde": "rgba(255,255,255,.14)",
+   "primitiv": null,
+   "kalla": "led-kalkylator (styles.css:33 --on-surface-border hr) + hero-2-alternatives (--ap-hairline .14) + EV",
+   "drift": ".12 energycalc --bd-dark, .16 rot-gt/energycalc trust, .18 rot-gt panel",
+   "beslut": null
+  },
+  {
+   "grupp": "Bläck på mörkt",
+   "token": "--ampy-on-dark-subtle",
+   "varde": "rgba(255,255,255,.06)",
+   "primitiv": null,
+   "kalla": "led-kalkylator (styles.css:35 jämförelsespår) + ev-kalkylator (monthly-panel/lead-form .06) + energycalc (sp-item-kant .06)",
+   "drift": ".08 EV stapelspår/rot-gt totalplatta, .02/.04 energycalc",
+   "beslut": null
+  },
+  {
+   "grupp": "Handling",
+   "token": "--ampy-action",
+   "varde": "var(--apteal-core)",
+   "primitiv": "--apteal-core",
+   "kalla": "energycalc (tool.css:26 CTA + valda kanter), led-kalkylator (styles.css:21 --action-primary), website-blocks (header-CTA), elkollen/elcentral (accent), 25 källor",
+   "drift": "EV #007d6b, elcentral/elkollen knapp #007a69 (= --ampy-action-strong). Ägarbeslut 2026-07: teal ensam accent (cobalt #326afd 0 i produktion)",
+   "beslut": null
+  },
+  {
+   "grupp": "Handling",
+   "token": "--ampy-action-strong",
+   "varde": "var(--apteal-deep)",
+   "primitiv": "--apteal-deep",
+   "kalla": "elcentral-kollen (elcentralkollen.css:46-47) + elkollen (behorighetskollen.css:51): solid knapp med vit text, textlänkar, sista H1-raden",
+   "drift": "se --apteal-deep. Beslut B5 (teal-kontrast)",
+   "beslut": "B5"
+  },
+  {
+   "grupp": "Handling",
+   "token": "--ampy-action-hover",
+   "varde": "#008d79",
+   "primitiv": null,
+   "kalla": "hero-1 + website-blocks (header.css:13 --ap-teal-hover, header-CTA)",
+   "drift": "#00b89e energycalc (ljusare), rgb(0,108,93) elcentral strong-hover, LED/EV opacity .92 i stället för färgbyte",
+   "beslut": null
+  },
+  {
+   "grupp": "Handling",
+   "token": "--ampy-action-on",
+   "varde": "var(--appure-white)",
+   "primitiv": "--appure-white",
+   "kalla": "website-blocks (header-CTA vit 600) + energycalc + LED + elcentral/elkollen solid",
+   "drift": "--apindigo på gradienten (= --ampy-ink-on-action)",
+   "beslut": null
+  },
+  {
+   "grupp": "Handling",
+   "token": "--ampy-action-gradient",
+   "varde": "linear-gradient(120deg, #55ff9a 0%, #5eb1bf 100%)",
+   "primitiv": null,
+   "kalla": "cta-website (radgivning-cta.css:16, offert-cta.css:16) = hero-1 (style.css:71), rot-gt (d2:358), fotobedomningen (--afk-cta-grad), hero-2-alternatives (primitives:80 \"DEN ENDA HANDLINGSGRADIENTEN\"), elkollen/elcentral rail, picasso, booking shared.css:848 = 10+ källor. Stopp: --apneon-mint -> --apsecondary-teal",
+   "drift": "282.84deg #55ff9a->#00ffda (hero-2-form, dödförklarad), 135deg #00b89c->#018271 (thank-you), 100deg #009e88->#17c6a0 (main-form), 146deg #055a4b->#0a8169 (eljour nödknapp), 145deg #c7f5ff->#5eb1bf (live ROT hover)",
+   "beslut": null
+  },
+  {
+   "grupp": "Handling",
+   "token": "--ampy-action-gradient-ring",
+   "varde": "linear-gradient(120deg, #b6f2ff 0%, #5eb1bf 100%)",
+   "primitiv": null,
+   "kalla": "cta-website (ring-cta.css:16) = main-cta, eljour-sticky-bar, hero-2 Z/E. Stopp: --apcrystal-blue -> --apsecondary-teal",
+   "drift": "141deg (picasso, elkollen, elcentral)",
+   "beslut": null
+  },
+  {
+   "grupp": "Handling",
+   "token": "--ampy-action-gradient-on",
+   "varde": "var(--apindigo)",
+   "primitiv": "--apindigo",
+   "kalla": "cta-website (hsl(237 35% 24%)), 5,51:1 mot #5eb1bf",
+   "drift": "#0d0d0d, #1e1e1e",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-success",
+   "varde": "var(--apemerald-flow)",
+   "primitiv": "--apemerald-flow",
+   "kalla": "led-kalkylator (styles.css:23 --state-success \"Med LED\"), EV, battery, main-form (success-ikon), elcentral (--state-success deklarerad)",
+   "drift": "rgb(54,178,92)/rgb(27,132,71) elkollen verdikt-grön (\"lövigare än teal\"), #1f9d6b main-form validering, #1bd365/#00ad48 testimonials prickar",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-success-ink",
+   "varde": "var(--apverdict-green)",
+   "primitiv": "--apverdict-green",
+   "kalla": "elcentral-kollen (--text-success) + elkollen (--text-success/row-icon), 6,20:1",
+   "drift": "rgb(6,71,55) elcentral pill-fg",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-success-tint",
+   "varde": "rgba(57,194,129,.12)",
+   "primitiv": null,
+   "kalla": "main-form (styles.css:238 success-ikon bg .12)",
+   "drift": ".16 LED ok-msg/glöd, rgb(240,249,245) elcentral tint, rgba(54,178,92,.10) elkollen board",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-warn",
+   "varde": "var(--apamber)",
+   "primitiv": "--apamber",
+   "kalla": "led-kalkylator (styles.css:25 \"I dag\"-stapel), ev-kalkylator ; scopad till diagram/staplar på mörkt (1,93:1 på vit = aldrig text)",
+   "drift": "#f0b429 energycalc, #f5af19 elkollen/elcentral --state-warning",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-warn-ink",
+   "varde": "var(--apverdict-amber)",
+   "primitiv": "--apverdict-amber",
+   "kalla": "elcentral-kollen + elkollen (accent-warning, factnote), 5,39:1",
+   "drift": "#8a5800 eljour Varning-tagg, #8a6116 booking fältfel, rgb(92,64,5) elcentral pill-fg",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-warn-tint",
+   "varde": "var(--apamber-tint)",
+   "primitiv": "--apamber-tint",
+   "kalla": "eljour-block (:16) + hero-2-alternatives eljour",
+   "drift": "rgb(252,247,234)/rgb(250,233,197) elcentral",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-error",
+   "varde": "var(--apsignal-red)",
+   "primitiv": "--apsignal-red",
+   "kalla": "eljour-block (:15) + fotobedomningen (--afk-fel invalid-kant + feltext) + hero-2 eljour, 6,54:1",
+   "drift": "rgb(214,76,76) LED/EV (4,20:1), rgb(214,64,64) elkollen, #e00000 main-form, #e5484d hero-2 primitives, teal (hero-2-form, ingen felfärg). Beslut B13",
+   "beslut": "B13"
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-error-ink",
+   "varde": "var(--apverdict-red)",
+   "primitiv": "--apverdict-red",
+   "kalla": "elcentral-kollen (akut-text rgb(122,22,35)) + elkollen (accent red), 10,68:1",
+   "drift": "rgb(124,32,32) elcentral pill-fg",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-error-tint",
+   "varde": "var(--apsignal-red-tint)",
+   "primitiv": "--apsignal-red-tint",
+   "kalla": "eljour-block + fotobedomningen + hero-2 eljour",
+   "drift": "rgb(252,237,238) elcentral akut, rgba(209,73,91,.08) main-form banner, rgba(214,64,64,.06) elkollen board",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-info-ink",
+   "varde": "var(--apverdict-blue)",
+   "primitiv": "--apverdict-blue",
+   "kalla": "elcentral-kollen (info-ikon, accent-info) + elkollen (info-ikon), 7,70:1",
+   "drift": "rgb(10,122,191) elkollen --text-info, rgb(17,82,135) elcentral pill-fg",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-focus",
+   "varde": "var(--apmidnight-blue)",
+   "primitiv": "--apmidnight-blue",
+   "kalla": "cta-website (*.css:33 focus-visible 3px solid #090b32 offset 3) + booking/offer (outline 3px navy, teal mätte 2,91:1) + fotobedomningen (3px, 19:1) + mini-menu/website-blocks",
+   "drift": "teal 3px (hero-1 CTA, thank-you, picasso), teal-ringar .2-.35 (LED sju varianter), #5eb1bf + rgba(94,177,191,.2) (live Bricks-formulär). Beslut B14",
+   "beslut": "B14"
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-focus-on-dark",
+   "varde": "var(--apneon-mint)",
+   "primitiv": "--apneon-mint",
+   "kalla": "energycalc (tool.css --ring-dark rgba(85,255,154,.30) + outline neon på mörkt) + elkollen/LED-sp-item neon inset",
+   "drift": "LED teal .35 på mörkt",
+   "beslut": null
+  },
+  {
+   "grupp": "Tillstånd",
+   "token": "--ampy-focus-ring",
+   "varde": "0 0 0 3px rgba(0,122,105,.9)",
+   "primitiv": null,
+   "kalla": "elcentral-kollen (elcentralkollen.css --focus-ring, \"höjd från .25 för WCAG 2.4.11\", EN ring på alla fält+knappar)",
+   "drift": "0 0 0 3px rgba(0,169,145,.25) elkollen (1,3:1 underkänd), .30 main-form, .18 hero-2 fält, 0 0 0 3px rgba(94,177,191,.2) live",
+   "beslut": null
+  },
+  {
+   "grupp": "Linjer",
+   "token": "--ampy-line",
+   "varde": "rgba(9,11,50,.14)",
+   "primitiv": null,
+   "kalla": "var-process-cro (v2/ampy-process.css:16 \"blockets ENDA hairline\") + led-kalkylator (styles.css:26 --border-default rgba(15,18,60,.12) -> midnight) + fore-efter/certificates inset .07 ; solida drift: #e6ecf6 eljour-familjen (1,19:1), #dbe4f0 header, #e3e5ed/#ebedf3 elkollen/elcentral, #eaeef5 fore-efter, #d7deeb m.fl. energycalc",
+   "drift": "",
+   "beslut": null
+  },
+  {
+   "grupp": "Linjer",
+   "token": "--ampy-line-strong",
+   "varde": "rgba(9,11,50,.48)",
+   "primitiv": null,
+   "kalla": "booking-confirmation (shared.css:42 --line-strong, kontrollkanter WCAG 1.4.11 -> 3,39:1)",
+   "drift": "#5f6480 fotobedomningen (kontrollkant 5,80:1), #e3e5ed elkollen/elcentral inputs (1,26:1 underkänd), 2px transparent main-form",
+   "beslut": null
+  },
+  {
+   "grupp": "Linjer",
+   "token": "--ampy-line-on-dark",
+   "varde": "var(--ampy-on-dark-line)",
+   "primitiv": null,
+   "kalla": "se --ampy-on-dark-line (LED hr .14, hero-2 --ap-hairline)",
+   "drift": ".12 energycalc, .16/.18 rot-gt",
+   "beslut": null
+  }
+ ]
+}

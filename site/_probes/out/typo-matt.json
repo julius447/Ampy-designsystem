@@ -1,0 +1,275 @@
+{
+ "metod": "Chromium (Playwright), getComputedStyle på [data-role] i site/grunder/typografi.html; Outfit self-hostad från system/fonts",
+ "viewports": {
+  "390": {
+   "display": {
+    "fontSize": 36,
+    "fontWeight": "700",
+    "lineHeight": "38.52px",
+    "letterSpacing": "-0.648px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.07
+   },
+   "h1": {
+    "fontSize": 31.33,
+    "fontWeight": "700",
+    "lineHeight": "33.5252px",
+    "letterSpacing": "-0.46998px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.07
+   },
+   "h2": {
+    "fontSize": 26.76,
+    "fontWeight": "500",
+    "lineHeight": "32.1072px",
+    "letterSpacing": "-0.26756px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.2
+   },
+   "h3": {
+    "fontSize": 20.12,
+    "fontWeight": "600",
+    "lineHeight": "25.1488px",
+    "letterSpacing": "-0.20119px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.25
+   },
+   "lead": {
+    "fontSize": 17,
+    "fontWeight": "400",
+    "lineHeight": "26.86px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.58
+   },
+   "body": {
+    "fontSize": 16.12,
+    "fontWeight": "300",
+    "lineHeight": "24.1785px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "small": {
+    "fontSize": 14.12,
+    "fontWeight": "400",
+    "lineHeight": "21.1785px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "eyebrow": {
+    "fontSize": 12,
+    "fontWeight": "600",
+    "lineHeight": "18px",
+    "letterSpacing": "1.68px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "number": {
+    "fontSize": 38.3,
+    "fontWeight": "700",
+    "lineHeight": "38.2971px",
+    "letterSpacing": "-1.14891px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1
+   },
+   "label": {
+    "fontSize": 14,
+    "fontWeight": "600",
+    "lineHeight": "19.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.4
+   },
+   "button": {
+    "fontSize": 16,
+    "fontWeight": "500",
+    "lineHeight": "16px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1
+   }
+  },
+  "768": {
+   "display": {
+    "fontSize": 36,
+    "fontWeight": "700",
+    "lineHeight": "38.52px",
+    "letterSpacing": "-0.648px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.07
+   },
+   "h1": {
+    "fontSize": 38.44,
+    "fontWeight": "700",
+    "lineHeight": "41.1291px",
+    "letterSpacing": "-0.576576px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.07
+   },
+   "h2": {
+    "fontSize": 30.69,
+    "fontWeight": "500",
+    "lineHeight": "36.8246px",
+    "letterSpacing": "-0.306872px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.2
+   },
+   "h3": {
+    "fontSize": 20.91,
+    "fontWeight": "600",
+    "lineHeight": "26.141px",
+    "letterSpacing": "-0.209128px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.25
+   },
+   "lead": {
+    "fontSize": 17,
+    "fontWeight": "400",
+    "lineHeight": "26.86px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.58
+   },
+   "body": {
+    "fontSize": 16.91,
+    "fontWeight": "300",
+    "lineHeight": "25.3692px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "small": {
+    "fontSize": 14.91,
+    "fontWeight": "400",
+    "lineHeight": "22.3692px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "eyebrow": {
+    "fontSize": 12,
+    "fontWeight": "600",
+    "lineHeight": "18px",
+    "letterSpacing": "1.68px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "number": {
+    "fontSize": 45.82,
+    "fontWeight": "700",
+    "lineHeight": "45.8155px",
+    "letterSpacing": "-1.37447px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1
+   },
+   "label": {
+    "fontSize": 14,
+    "fontWeight": "600",
+    "lineHeight": "19.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.4
+   },
+   "button": {
+    "fontSize": 16,
+    "fontWeight": "500",
+    "lineHeight": "16px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1
+   }
+  },
+  "1440": {
+   "display": {
+    "fontSize": 60,
+    "fontWeight": "700",
+    "lineHeight": "64.2px",
+    "letterSpacing": "-1.08px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.07
+   },
+   "h1": {
+    "fontSize": 48,
+    "fontWeight": "700",
+    "lineHeight": "51.36px",
+    "letterSpacing": "-0.72px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.07
+   },
+   "h2": {
+    "fontSize": 36,
+    "fontWeight": "500",
+    "lineHeight": "43.2px",
+    "letterSpacing": "-0.36px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.2
+   },
+   "h3": {
+    "fontSize": 22,
+    "fontWeight": "600",
+    "lineHeight": "27.5px",
+    "letterSpacing": "-0.22px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.25
+   },
+   "lead": {
+    "fontSize": 22,
+    "fontWeight": "400",
+    "lineHeight": "34.76px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.58
+   },
+   "body": {
+    "fontSize": 18,
+    "fontWeight": "300",
+    "lineHeight": "27px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "small": {
+    "fontSize": 16,
+    "fontWeight": "400",
+    "lineHeight": "24px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "eyebrow": {
+    "fontSize": 12,
+    "fontWeight": "600",
+    "lineHeight": "18px",
+    "letterSpacing": "1.68px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.5
+   },
+   "number": {
+    "fontSize": 56,
+    "fontWeight": "700",
+    "lineHeight": "56px",
+    "letterSpacing": "-1.68px",
+    "fontFamily": "Outfit",
+    "lhRatio": 1
+   },
+   "label": {
+    "fontSize": 14,
+    "fontWeight": "600",
+    "lineHeight": "19.6px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1.4
+   },
+   "button": {
+    "fontSize": 16,
+    "fontWeight": "500",
+    "lineHeight": "16px",
+    "letterSpacing": "normal",
+    "fontFamily": "Outfit",
+    "lhRatio": 1
+   }
+  }
+ }
+}

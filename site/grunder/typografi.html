@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typografi: Ampy designsystem</title>
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för typografisidan */
+  .ds-main { min-width: 0; } /* brist i doc.css: 1fr-spåret ärver tabellernas min-content på mobil */
+  .ds-specimen { display: grid; gap: var(--ampy-space-2xs); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-m); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-specimen__glyphs { font-size: clamp(28px, 4vw, 52px); line-height: 1.15; letter-spacing: -0.01em; color: var(--ampy-ink); overflow-wrap: anywhere; }
+  .ds-weights { display: grid; gap: var(--ampy-space-xs); grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); }
+  .ds-weight { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-s) var(--ampy-space-m); }
+  .ds-weight__sample { font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; color: var(--ampy-ink); letter-spacing: -0.01em; margin: 0 0 var(--ampy-space-2xs); }
+  .ds-weight__meta { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); line-height: 1.5; }
+  .ds-weight--drift { border-style: dashed; }
+  .ds-type-row__label strong { display: block; color: var(--ampy-ink); font-weight: var(--ampy-w-medium); }
+  .ds-type-row__label code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; }
+  .ds-type-row__sample { min-width: 0; overflow-wrap: anywhere; }
+  .ds-type-row__meta small { display: block; font-family: var(--ampy-font); color: var(--ampy-ink-faint); margin-top: 0.4rem; }
+  .ds-measure { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); background: var(--ampy-bg-surface); padding: var(--ampy-space-m); margin: var(--ampy-space-xs) 0 var(--ampy-space-s); display: grid; gap: var(--ampy-space-s); }
+  .ds-measure__box { position: relative; border-top: 1px dashed var(--ampy-line-strong); padding-top: var(--ampy-space-2xs); }
+  .ds-measure__box::after { content: attr(data-mått); position: absolute; right: 0; top: -1.1em; font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); background: var(--ampy-bg-surface); padding-left: 0.6rem; }
+  .ds-num { display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; }
+  .ds-num .ampy-number { color: var(--ampy-ink); }
+  .ds-num__unit { font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-medium); color: var(--ampy-ink-muted); line-height: 1; }
+  .ds-nowrap { white-space: nowrap; }
+  .ds-two { display: grid; gap: var(--ampy-space-xs); grid-template-columns: 1fr 1fr; }
+  .ds-two > div { border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); border: 1px solid var(--ampy-line); background: var(--ampy-bg-surface); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-2xs); }
+  .ds-gradtext { background: linear-gradient(120deg, #55ff9a, #5eb1bf); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .ds-table td.is-hit { color: var(--ampy-success-ink); font-weight: var(--ampy-w-medium); }
+  .ds-table td.is-miss { color: var(--ampy-warn-ink); }
+  @media (max-width: 991px) { .ds-two { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="farg.html">Färg</a>
+        <a href="typografi.html" aria-current="page">Typografi</a>
+        <a href="spacing.html">Spacing och layout</a>
+        <a href="form-djup.html">Form och djup</a>
+        <a href="rorelse.html">Rörelse</a>
+        <a href="ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Grunder</span>
+      <h1 class="ds-h1">Typografi</h1>
+      <p class="ds-lead">Ett typsnitt: Outfit, self-hostad variabel. Hierarki genom vikt och storlek i ett och samma bläck. Elva roller, mätta i pixlar vid 390, 768 och 1440.</p>
+      <p class="ds-source"><code>konsolidering/typografi.md</code> + <code>typografi.json</code> (401 typografirader ur 30 JSON, 267 klassade till 11 roller), <code>system/tokens.css</code> och <code>base.css</code> (rollklasserna), <code>inventering/brandbook.md</code> s.13 till 14. Storlekarna nedan är mätta i Chromium på den här sidan av <code>site/_probes/typo-matt.mjs</code>.</p>
+
+      <h2 class="ds-h2" id="outfit">Outfit</h2>
+      <p class="ds-p">Brandboken (s.13) anger Outfit som enda typsnitt och live laddar den variabla filen 100 till 900 från <code>wp-content/uploads/core-framework/fonts/</code>. Systemet self-hostar samma fil: <code>system/fonts/Outfit-VariableFont_wght.woff2</code> (kopierad från <code>kallor/Hero-1/assets/fonts</code>), <code>font-display: swap</code>, inga Google Fonts. Plus Jakarta Sans (LED, EV, battery, elcentral-rubriker, footerns "5.0") och JetBrains Mono (kalkylatorernas inputsiffror) är drift, beslut B7.</p>
+      <div class="ds-specimen">
+        <p class="ds-specimen__glyphs" style="font-weight:300">Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz Åå Ää Öö</p>
+        <p class="ds-specimen__glyphs" style="font-weight:700;font-variant-numeric:tabular-nums">0123456789 kr/år kWh % 010-265 79 79</p>
+        <p class="ds-caption" style="margin:0">Variabel vikt 100 till 900 i en fil. Siffror med <code>font-variant-numeric: tabular-nums lining-nums</code> där de ska jämföras eller räknas.</p>
+      </div>
+
+      <h2 class="ds-h2" id="vikter">Vikternas roller</h2>
+      <p class="ds-p">Brandboken ger tre vikter roller: Light för lång text, Medium för underrubriker och Black för titlar. Inget byggt block sätter en rubrik i 900; hero-1 (ägargodkänd, "perfektion") är 700 och H2 är 500 i sex källor. Kanon följer det uppmätta och behåller 900 som tillåten variant för hero-siffror. Beslut B2.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Vikt</th><th>Brandboken s.14</th><th>Uppmätt kanon (tokens.css)</th><th>Källor</th></tr></thead>
+        <tbody>
+          <tr><td>300 Light</td><td>lång och sekundär text, beskrivningar, noter, sidfötter</td><td><code>--ampy-w-body</code>: brödtext</td><td>brandbok + live theme-style body + testimonials V1, certificates, rot-gt, main-cta, visste-du-att, var-process, energycalc = 10 källor. Drift: 400 i eljour, elkollen/elcentral, LED/EV, thank-you, booking, main-form, article (B3)</td></tr>
+          <tr><td>400 Regular</td><td>(ingen roll i boken)</td><td><code>--ampy-w-ui</code>: UI-text, leads, formulär</td><td>hero-1 lead, elkollen "400 = body", LED/EV body, thank-you ingress</td></tr>
+          <tr><td>500 Medium</td><td>underrubriker, highlights, textblock</td><td><code>--ampy-w-heading</code>: H2. <code>--ampy-w-medium</code>: knappar, chips, interaktivt</td><td>H2 500 i eljour, theme-style, visste-du-att, mini-menu, main-cta, var-process (6). Knapp 500 i cta-website, live .bricks-button, elkollen</td></tr>
+          <tr><td>600 Semibold</td><td>(ingen roll i boken)</td><td><code>--ampy-w-strong</code>: H3, etiketter, starkt UI</td><td>elkollen, elcentral q-title, booking, header kolumntitlar, testimonials namn</td></tr>
+          <tr><td>700 Bold</td><td>(ingen roll i boken)</td><td><code>--ampy-w-display</code>: display, H1, hero-siffra</td><td>hero-1 h1, hero-2-alternatives ampy-h1, elcentral rail-h1, LED hero-number</td></tr>
+          <tr><td>900 Black</td><td>titlar, rubriker, "maximum impact"</td><td>ingen roll; tillåten variant för hero-siffror (B2 c)</td><td>bara energycalcs anchor-siffra (52/900). 800 i artikelmallen och mini-menu-prototypen</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="ds-weights">
+        <div class="ds-weight"><p class="ds-weight__sample" style="font-weight:300">Light, lång text</p><p class="ds-weight__meta">300, brödtext. Brandbok + 10 källor.</p></div>
+        <div class="ds-weight"><p class="ds-weight__sample" style="font-weight:400">Regular, gränssnitt</p><p class="ds-weight__meta">400, UI-text och leads.</p></div>
+        <div class="ds-weight"><p class="ds-weight__sample" style="font-weight:500">Medium, H2 och knappar</p><p class="ds-weight__meta">500, H2 i 6 källor, knapp i CTA-biblioteket.</p></div>
+        <div class="ds-weight"><p class="ds-weight__sample" style="font-weight:600">Semibold, H3 och etiketter</p><p class="ds-weight__meta">600, H3, label, starkt UI.</p></div>
+        <div class="ds-weight"><p class="ds-weight__sample" style="font-weight:700">Bold, display och H1</p><p class="ds-weight__meta">700, hero-1 är ägargodkänd med den här vikten.</p></div>
+        <div class="ds-weight ds-weight--drift"><p class="ds-weight__sample" style="font-weight:900">Black, bokens titelvikt</p><p class="ds-weight__meta">900, används i inget byggt block utom energycalcs siffra. Beslut B2.</p></div>
+      </div>
+
+      <h2 class="ds-h2" id="skala">Rollskalan</h2>
+      <p class="ds-p">Elva roller, renderade nedan i de riktiga klasserna ur <code>system/base.css</code>. Storlekarna är px-clamp i lager 2 med samma värden som live-tokens i lager 1 (h1 = <code>--aptext-3xl</code>, h2 = <code>--aptext-2xl</code>, h3 = <code>--aptext-ml</code>, body = <code>--aptext-m</code>, small = <code>--aptext-sm</code>). Meta per rad: px vid 390 / 768 / 1440, vikt, radavstånd, spärrning, token och källa.</p>
+
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Display</strong><code>.ampy-display</code></div>
+        <div class="ds-type-row__sample"><p class="ampy-display" data-role="display">Elinstallationer i hemmet, gjort ordentligt.</p></div>
+        <div class="ds-type-row__meta">36 / 36 / 60 px<br>700, lh 1.07, ls -0.018em<br>--ampy-text-display<br><small>hero-1 (assets/style.css:38-46 .hero__h1) = live .home-hero__heading</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>H1</strong><code>.ampy-h1</code></div>
+        <div class="ds-type-row__sample"><h1 class="ampy-h1" data-role="h1">Elektriker som berättar sanningen om din elcentral</h1></div>
+        <div class="ds-type-row__meta">31,3 / 38,4 / 48 px<br>700, lh 1.07, ls -0.015em<br>--ampy-text-h1 = --aptext-3xl<br><small>hero-2-alternatives (primitives 2b, 48 vid 1200+), article 48, booking 46, elcentral 44</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>H2</strong><code>.ampy-h2</code></div>
+        <div class="ds-type-row__sample"><h2 class="ampy-h2" data-role="h2">Sänk kostnaden för byte av din elcentral med 30 % ROT-avdrag</h2></div>
+        <div class="ds-type-row__meta">26,8 / 30,7 / 36 px<br>500, lh 1.2, ls -0.01em<br>--ampy-text-h2 = --aptext-2xl<br><small>eljour-block (index.html:33), testimonials V1, certificates v2, rot-gt, visste-du-att, fotobedömningen, mini-menu = 7 källor. Beslut B17</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>H3</strong><code>.ampy-h3</code></div>
+        <div class="ds-type-row__sample"><h3 class="ampy-h3" data-role="h3">Projektledning med expert</h3></div>
+        <div class="ds-type-row__meta">20,1 / 20,9 / 22 px<br>600, lh 1.25, ls -0.01em<br>--ampy-text-h3 = --aptext-ml<br><small>live ROT/GT-steg (--aptext-ml), elkollen (--fs-22 600), var-process, testimonials namn</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Lead</strong><code>.ampy-lead</code></div>
+        <div class="ds-type-row__sample"><p class="ampy-lead" data-role="lead">Våra egna behöriga elektriker hjälper dig i hela Sverige, med allt från elfel och elcentraler till laddbox och batterilagring.</p></div>
+        <div class="ds-type-row__meta">17 / 17 / 22 px<br>400, lh 1.58<br>--ampy-text-lead, mått 46ch<br><small>hero-1 (assets/style.css:48-55 .hero__sub) = live .home-hero__text. Beslut B18</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Body</strong><code>.ampy-body</code></div>
+        <div class="ds-type-row__sample"><p class="ampy-body" data-role="body">Våra experter går igenom ditt projekt och räknar ut hur mycket du kan spara i ROT. En av våra certifierade elektriker utför installationen. Vi samlar ihop all dokumentation och skickar in ROT-ansökan till Skatteverket åt dig.</p></div>
+        <div class="ds-type-row__meta">16,1 / 16,9 / 18 px<br>300, lh 1.5<br>--ampy-text-body = --aptext-m, mått 62ch<br><small>live (.rot__text-basic, .brxe-post-content), testimonials V1, certificates, rot-gt, main-cta, visste-du-att. Beslut B3, B20</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Small</strong><code>.ampy-small</code></div>
+        <div class="ds-type-row__sample"><p class="ampy-small" data-role="small">Källa: Elsäkerhetsverket och Elsäkerhetslagen (2016:732). Vägledning, inte juridisk rådgivning.</p></div>
+        <div class="ds-type-row__meta">14,1 / 14,9 / 16 px<br>400, lh 1.5, ink-muted<br>--ampy-text-small = --aptext-sm<br><small>live theme-style body, .bricks-button, footer-länkar, thank-you, testimonials badge, elkollen meta</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Eyebrow</strong><code>.ampy-eyebrow</code></div>
+        <div class="ds-type-row__sample"><p class="ampy-eyebrow" data-role="eyebrow">Så räknas ROT</p></div>
+        <div class="ds-type-row__meta">12 / 12 / 12 px (fast)<br>600, lh 1.5, ls 0.14em, versaler<br>--ampy-text-eyebrow<br><small>energycalc (--ty-eyebrow), thank-you, offer, booking, elcentral. Beslut B19: aldrig ensam bärare av information</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Siffra</strong><code>.ampy-number</code></div>
+        <div class="ds-type-row__sample"><div class="ds-num"><span class="ampy-number" data-role="number">27 752</span><span class="ds-num__unit">kr/år</span></div></div>
+        <div class="ds-type-row__meta">38,3 / 45,8 / 56 px<br>700, lh 1, ls -0.03em, tabular-nums<br>--ampy-text-number<br><small>led-kalkylator (styles.css:295 hero-number) i Outfit i stället för Plus Jakarta Sans (B7)</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Label</strong><code>.ampy-label</code></div>
+        <div class="ds-type-row__sample"><p class="ampy-label" data-role="label">Ditt postnummer</p></div>
+        <div class="ds-type-row__meta">14 / 14 / 14 px (fast)<br>600, lh 1.4<br>--ampy-text-label<br><small>hero-2-alternatives (primitives:488), elkollen (--fs-14 600), main-form (14/500)</small></div>
+      </div>
+      <div class="ds-type-row">
+        <div class="ds-type-row__label"><strong>Knapp</strong><code>.ampy-button-text</code></div>
+        <div class="ds-type-row__sample"><p class="ampy-button-text" data-role="button" style="margin:0">Kostnadsfri rådgivning</p></div>
+        <div class="ds-type-row__meta">16 / 16 / 16 px (fast)<br>500, lh 1, ls normal<br>--ampy-text-button<br><small>cta-website (*.css:13 "16px 500 lh 1, ingen mobilskalning") = main-cta, rot-gt, fotobedömningen, live .bricks-button</small></div>
+      </div>
+
+      <h3 class="ds-h3" id="uppmatt">Uppmätt på den här sidan</h3>
+      <p class="ds-caption">Chromium, <code>getComputedStyle</code> på raderna ovan vid tre viewportbredder. Kolumnen "kanon" är målvärdet ur <code>konsolidering/typografi.md</code>; grönt = träff inom 0,1 px.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Roll</th><th>390 px</th><th>768 px</th><th>1440 px</th><th>Vikt</th><th>Radavstånd</th><th>Spärrning</th><th>Kanon 390 / 768 / 1440</th></tr></thead>
+        <tbody>
+<!--@typomatt:start-->
+<tr><td>Display</td><td class="is-hit">36</td><td class="is-hit">36</td><td class="is-hit">60</td><td>700</td><td>1,07</td><td>-0,018em</td><td>36 / 36 / 60</td></tr>
+<tr><td>H1</td><td class="is-hit">31,33</td><td class="is-hit">38,44</td><td class="is-hit">48</td><td>700</td><td>1,07</td><td>-0,015em</td><td>31,33 / 38,44 / 48</td></tr>
+<tr><td>H2</td><td class="is-hit">26,76</td><td class="is-hit">30,69</td><td class="is-hit">36</td><td>500</td><td>1,2</td><td>-0,010em</td><td>26,75 / 30,67 / 36</td></tr>
+<tr><td>H3</td><td class="is-hit">20,12</td><td class="is-hit">20,91</td><td class="is-hit">22</td><td>600</td><td>1,25</td><td>-0,010em</td><td>20,11 / 20,91 / 22</td></tr>
+<tr><td>Lead</td><td class="is-hit">17</td><td class="is-hit">17</td><td class="is-hit">22</td><td>400</td><td>1,58</td><td>normal</td><td>17 / 17 / 22</td></tr>
+<tr><td>Body</td><td class="is-hit">16,12</td><td class="is-hit">16,91</td><td class="is-hit">18</td><td>300</td><td>1,5</td><td>normal</td><td>16,11 / 16,91 / 18</td></tr>
+<tr><td>Small</td><td class="is-hit">14,12</td><td class="is-hit">14,91</td><td class="is-hit">16</td><td>400</td><td>1,5</td><td>normal</td><td>14,11 / 14,91 / 16</td></tr>
+<tr><td>Eyebrow</td><td class="is-hit">12</td><td class="is-hit">12</td><td class="is-hit">12</td><td>600</td><td>1,5</td><td>0,140em</td><td>12 / 12 / 12</td></tr>
+<tr><td>Siffra</td><td class="is-hit">38,3</td><td class="is-hit">45,82</td><td class="is-hit">56</td><td>700</td><td>1</td><td>-0,030em</td><td>38,3 / 45,81 / 56</td></tr>
+<tr><td>Label</td><td class="is-hit">14</td><td class="is-hit">14</td><td class="is-hit">14</td><td>600</td><td>1,4</td><td>normal</td><td>14 / 14 / 14</td></tr>
+<tr><td>Knapp</td><td class="is-hit">16</td><td class="is-hit">16</td><td class="is-hit">16</td><td>500</td><td>1</td><td>normal</td><td>16 / 16 / 16</td></tr>
+<!--@typomatt:end-->
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="matt">Måttet</h2>
+      <p class="ds-p">Brödtext får max 62ch (<code>--ampy-measure</code>: eljour risktext, energycalc verdict, fore-efter tagline, elcentral finding) och lead 46ch (<code>--ampy-measure-lead</code>: elcentral rail-lead, elkollen hero-sub). Var-process noterar att "ch ljuger i Outfit" och sätter 27em i stället; det är drift.</p>
+      <div class="ds-measure">
+        <div class="ds-measure__box" data-mått="lead, 46ch"><p class="ampy-lead">Elcentralen är hemmets viktigaste säkerhetsdetalj. Vi byter den med jordfelsbrytare, dokumenterar och sköter ROT-ansökan åt dig.</p></div>
+        <div class="ds-measure__box" data-mått="body, 62ch"><p class="ampy-body">En elcentral från 70-talet saknar ofta jordfelsbrytare och har säkringar som inte är dimensionerade för dagens laster. Det behöver inte vara farligt i dag, men det kan bli det när du lägger till laddbox eller värmepump. Ett byte tar en arbetsdag och materialet omfattas inte av ROT.</p></div>
+      </div>
+
+      <h2 class="ds-h2" id="h2-matris">Konflikten om H2</h2>
+      <p class="ds-p">Samma vecka sattes H2 i 32, 36, 38 och 40 px i olika block. 36 (<code>--aptext-2xl</code>) vinner på antal källor och tokenbindning och ligger mellan ytterligheterna. Tabellen är H2-raden ur matrisen källa × roll i <code>typografi.json</code>.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Källa (auktoritet)</th><th>px 1440 / 390</th><th>Vikt</th><th>Radavstånd</th><th>Spärrning</th><th>Typsnitt</th><th>Roll i källan</th></tr></thead>
+        <tbody>
+<!--@h2matris:start-->
+<tr><td class="ds-nowrap">article-template (2)</td><td class="ds-nowrap">30 / 24</td><td>700</td><td>1.2 / 1.333</td><td>-0.015em</td><td>Outfit</td><td>h2 (artikel)</td></tr>
+<tr><td class="ds-nowrap">article-template (2)</td><td class="ds-nowrap">36 / 30</td><td>700</td><td>1.11</td><td>-0.025em</td><td>Outfit</td><td>h2 'Populära artiklar'</td></tr>
+<tr><td class="ds-nowrap">booking-confirmation (2)</td><td class="ds-nowrap">24 / 20.12</td><td>600</td><td>1.2</td><td>-0.01em</td><td>Outfit</td><td>h2 kortrubrik (of-h2)</td></tr>
+<tr><td class="ds-nowrap">certificates (2)</td><td class="ds-nowrap">36 / 26.76</td><td>400</td><td>1.2</td><td>-0.01em</td><td>Outfit</td><td>h2</td></tr>
+<tr><td class="ds-nowrap">elcentral-kollen (1)</td><td class="ds-nowrap">36 / 20.9</td><td>700</td><td>1.15</td><td>-0.02em</td><td>Plus Jakarta Sans</td><td>start-heading (Då sätter vi igång)</td></tr>
+<tr><td class="ds-nowrap">elcentral-kollen (1)</td><td class="ds-nowrap">32 / 20</td><td>600</td><td>1.25</td><td>-0.015em</td><td>Plus Jakarta Sans</td><td>q-title (frågerubrik)</td></tr>
+<tr><td class="ds-nowrap">elcentral-kollen (1)</td><td class="ds-nowrap">32 / 28</td><td>700</td><td>1.12</td><td>-0.02em</td><td>Plus Jakarta Sans</td><td>blockhead-title (blockläge: Behöver din elcentral bytas?)</td></tr>
+<tr><td class="ds-nowrap">eljour-block (1)</td><td class="ds-nowrap">36 / 26</td><td>500</td><td>1.15</td><td>-0.015em</td><td>Outfit (Google Fonts i preview; self-hostad i produktion enligt README)</td><td>h2 (delad: fråga + instruktion)</td></tr>
+<tr><td class="ds-nowrap">footer-cro (1)</td><td class="ds-nowrap">32 / 24.54</td><td>600</td><td>normal</td><td>null</td><td>Outfit</td><td>prefooter sektionsrubrik (h3)</td></tr>
+<tr><td class="ds-nowrap">fore-efter-cro (2)</td><td class="ds-nowrap">32 / 24.54</td><td>400</td><td>1.2</td><td>normal</td><td>Outfit (Google Fonts i preview)</td><td>h2</td></tr>
+<tr><td class="ds-nowrap">fore-efter-cro (2)</td><td class="ds-nowrap">32 / 24.54</td><td>400</td><td>1.2</td><td>normal</td><td>Outfit</td><td>h2-accent</td></tr>
+<tr><td class="ds-nowrap">fotobedomningen (2)</td><td class="ds-nowrap">36 / 28</td><td>fråga 300 (#3b3f59), svar 500 (#090b32)</td><td>1.18 / 1.15 desktop</td><td>-0.015em</td><td>Outfit</td><td>h2 (fråga + svar)</td></tr>
+<tr><td class="ds-nowrap">live-ampy-se (1)</td><td class="ds-nowrap">40 / 28.88</td><td>500</td><td>1.4</td><td>normal</td><td>Outfit</td><td>h2 (tema-default)</td></tr>
+<tr><td class="ds-nowrap">live-ampy-se (1)</td><td class="ds-nowrap">32 / 22.46</td><td>400</td><td>1.3</td><td>normal</td><td>Outfit</td><td>h2 ROT-block (.rot__main-heading)</td></tr>
+<tr><td class="ds-nowrap">live-ampy-se (1)</td><td class="ds-nowrap">32 / 22.46</td><td>400</td><td>1.3</td><td>normal</td><td>Outfit</td><td>h2 GT-block (.gron-teknik__gt-heading)</td></tr>
+<tr><td class="ds-nowrap">main-cta (2)</td><td class="ds-nowrap">40 / 24</td><td>500</td><td>1.1</td><td>-0.4px</td><td>Outfit</td><td>h2 (.mcta__h)</td></tr>
+<tr><td class="ds-nowrap">main-form (2)</td><td class="ds-nowrap">26 / 21.9</td><td>500</td><td>1.35</td><td>normal</td><td>Outfit</td><td>h2 formulärrubrik</td></tr>
+<tr><td class="ds-nowrap">mini-menu (2)</td><td class="ds-nowrap">38 / 28</td><td>500</td><td>1.2</td><td>-0.38px</td><td>Outfit</td><td>h2 (.amp3__title)</td></tr>
+<tr><td class="ds-nowrap">rot-gt-cro (1)</td><td class="ds-nowrap">32 / 22.46</td><td>400</td><td>1.3 desktop / 1.2 mobil</td><td>normal</td><td>Outfit</td><td>h2 (ROT/GT)</td></tr>
+<tr><td class="ds-nowrap">rot-gt-cro (1)</td><td class="ds-nowrap">36 / 26.76</td><td>450</td><td>1.2</td><td>-0.01em</td><td>AvdragOutfit (= Outfit variable, laddad från ampy.se/wp-content/uploads/fonts/)</td><td>h2</td></tr>
+<tr><td class="ds-nowrap">rot-gt-cro (1)</td><td class="ds-nowrap">36 / 26.76</td><td>550</td><td>1.2</td><td>-0.01em</td><td>AvdragOutfit</td><td>h2-accent</td></tr>
+<tr><td class="ds-nowrap">testimonials-block (1)</td><td class="ds-nowrap">36 / 24.96</td><td>400</td><td>1.15</td><td>-0.01em</td><td>Outfit</td><td>h2</td></tr>
+<tr><td class="ds-nowrap">testimonials-block (1)</td><td class="ds-nowrap">32 / 24.54</td><td>400</td><td>1.2</td><td>normal</td><td>Outfit</td><td>h2</td></tr>
+<tr><td class="ds-nowrap">var-process-cro (3)</td><td class="ds-nowrap">40 / 28</td><td>500</td><td>1.05 desktop / 1.1 mobil</td><td>-0.018em desktop / -0.012em mobil</td><td>Outfit (självhostad)</td><td>h2 'Vad som händer sen'</td></tr>
+<tr><td class="ds-nowrap">var-process-cro (3)</td><td class="ds-nowrap">40 / 28</td><td>500</td><td>1.15</td><td>-0.01em</td><td>Outfit</td><td>h2 'Så funkar det'</td></tr>
+<tr><td class="ds-nowrap">visste-du-att (2)</td><td class="ds-nowrap">36 / 26.8</td><td>500</td><td>1.2</td><td>normal</td><td>Outfit</td><td>h2</td></tr>
+<!--@h2matris:end-->
+        </tbody>
+      </table>
+      </div>
+
+      <h3 class="ds-h3">Frekvens per roll</h3>
+      <p class="ds-caption">Antal källor av auktoritet 1 till 2 som delar ett värde (ur <code>_probes/out/typ-matris.json</code>). De tre vanligaste per kolumn.</p>
+      <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>Roll</th><th>Vikt</th><th>Radavstånd</th><th>px vid 1440</th><th>Spärrning</th></tr></thead>
+        <tbody>
+<!--@frekvens:start-->
+<tr><td>Display</td><td>700 (4), 800 (1), 600 (1)</td><td>1.07 (3), 1.08 (2), 1.0 (48 px) / 1.08 (1)</td><td>40 (2), 48 (1), 44 (1)</td><td>-0.02em (2), -0.018em (2), -0.025em (−1,2 px) (1)</td></tr>
+<tr><td>H1</td><td>600 (3), 700 (2), ej angivet (1)</td><td>1.2 (2), 1.05 (1), normal (1)</td><td>46 (1), 28 (1), 40 (1)</td><td>-0.015em (3), ej angivet (2), -0.025em (1)</td></tr>
+<tr><td>H2</td><td>500 (6), 400 (5), 600 (3)</td><td>1.2 (7), 1.15 (3), 1.2 / 1.333 (1)</td><td>36 (7), 32 (4), 32.0 (2)</td><td>normal (6), -0.015em (4), -0.01em (4)</td></tr>
+<tr><td>H3</td><td>600 (5), 400 (2), 500 (2)</td><td>1.3 (4), 1.25 (2), ej angivet (2)</td><td>20 (3), 22 (3), 22.0 (2)</td><td>normal (5), ej angivet (4), -0.01em (3)</td></tr>
+<tr><td>Lead</td><td>400 (9), 300 (4), 600 (1)</td><td>ej angivet (4), 1.55 (3), 1.58 (2)</td><td>18 (5), 20 (3), 16 (2)</td><td>normal (9), ej angivet (6)</td></tr>
+<tr><td>Body</td><td>400 (11), 300 (8), 500 (4)</td><td>1.5 (11), ej angivet (5), 1.7 (3)</td><td>16 (9), 18 (5), 17 (4)</td><td>normal (11), ej angivet (10), -0.005em (1)</td></tr>
+<tr><td>Small</td><td>400 (10), 500 (3), 300 (3)</td><td>ej angivet (5), 1.5 (4), 1.45 (3)</td><td>13 (4), 14 (4), 12 (3)</td><td>ej angivet (7), normal (6), -0.01em (1)</td></tr>
+<tr><td>Eyebrow</td><td>600 (6), 500 (3), 700 (2)</td><td>1.5 (4), ej angivet (4), normal (2)</td><td>12 (4), 11.0 (2), 15 (2)</td><td>0.06em (3), 0.04em (2), 0.02em (2)</td></tr>
+<tr><td>Siffra</td><td>700 (3), 400 (1), 700 / 500 / 700 (1)</td><td>1.3 (2), 1.0 (2), 1.5 (1)</td><td>15 (1), 12.0 (1), 20.07 (1)</td><td>-0.01em (2), -0.03em (2), normal (1)</td></tr>
+<tr><td>Label</td><td>500 (6), 600 (3), 400 (2)</td><td>ej angivet (4), 1.5 (3), 1.35 (2)</td><td>13.5 (2), 13.0 (2), 16 (2)</td><td>ej angivet (6), normal (3), 0.02em (2)</td></tr>
+<tr><td>Knapp</td><td>500 (13), 600 (10), 400 (3)</td><td>1 (6), ej angivet (6), normal (4)</td><td>16 (10), 16.0 (5), 15 (4)</td><td>normal (10), ej angivet (9), 0.5px (2)</td></tr>
+<!--@frekvens:end-->
+        </tbody>
+      </table>
+      </div>
+
+      <h2 class="ds-h2" id="regler">Regler</h2>
+      <div class="ds-two">
+        <div><span class="ds-demo__label">Gör inte: gradient i text</span><p class="ampy-h2 ds-gradtext" style="margin:0">30 % ROT-avdrag</p><p class="ds-caption" style="margin:0.8rem 0 0">Live GT-rubriken, main-cta och main-form kör textgradient. Ägaren ogillar det, ingen token finns.</p></div>
+        <div><span class="ds-demo__label">Gör: ett bläck, hierarki i vikt</span><p class="ampy-h2" style="margin:0">30 % ROT-avdrag</p><p class="ds-caption" style="margin:0.8rem 0 0">Midnight, 500. Vill du lyfta något: sista raden i teal deep (diagnostikens H1) eller understrykning (rot-gt).</p></div>
+      </div>
+      <div class="ds-two" style="margin-top:var(--ampy-space-xs)">
+        <div><span class="ds-demo__label">Gör: siffra + enhet</span><div class="ds-num"><span class="ampy-number">17 276</span><span class="ds-num__unit">kr/år</span></div><p class="ds-caption" style="margin:0.8rem 0 0">Tusental med mellanslag, enheten i ett eget mindre element i dämpad färg på samma baslinje (LED-readouten: siffra 56/700, enhet 28/500 i .66). <code>tabular-nums</code> så att siffror i kolumn står stilla när värdet ändras.</p></div>
+        <div><span class="ds-demo__label">Gör inte</span><p class="ampy-number" style="margin:0">17276kr</p><p class="ds-caption" style="margin:0.8rem 0 0">Enheten inne i siffran, utan mellanslag. Aldrig "SEK", aldrig "kr" i samma storlek som talet.</p></div>
+      </div>
+      <div class="ds-dodont">
+        <div><strong>Gör</strong><ul>
+          <li>Rubrik och brödtext i samma bläck (midnight); rubriker 700/500/600, brödtext 300, UI 400.</li>
+          <li><code>text-wrap: balance</code> på display, H1 och H2; <code>pretty</code> på lead. Radavstånd 1.07 på display, 1.2 på H2, 1.5 på brödtext.</li>
+          <li>Eyebrow 12 px versal med 0.14em, alltid följd av en rubrik som bär informationen.</li>
+        </ul></div>
+        <div><strong>Gör inte</strong><ul>
+          <li>Tankstreck eller punktavskiljare i gränssnittstext. Skriv "till", kommatecken eller kolon; "5,0 på Google, över 3 000 installationer" i stället för "5,0 · 3 000".</li>
+          <li>Andra typsnitt: inga Plus Jakarta Sans-rubriker, ingen mono för inputsiffror (B7), inga Google Fonts-anrop.</li>
+          <li>Brödtext under 16 px på mobil (live body var 14,1 px, B20) eller dämpad text under 4,5:1.</li>
+        </ul></div>
+      </div>
+
+      <p class="ds-source">Beslut som rör typografi: <a class="ds-a" href="../beslut.html#b2">B2 rubrikvikt</a>, <a class="ds-a" href="../beslut.html#b3">B3 brödtext</a>, <a class="ds-a" href="../beslut.html#b7">B7 Plus Jakarta Sans och mono</a>, <a class="ds-a" href="../beslut.html#b8">B8 rotstorlek</a>, <a class="ds-a" href="../beslut.html#b17">B17 H2</a>, <a class="ds-a" href="../beslut.html#b18">B18 lead</a>, <a class="ds-a" href="../beslut.html#b19">B19 eyebrow</a>, <a class="ds-a" href="../beslut.html#b20">B20 body-element</a>.</p>
+    </div>
+  </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>
