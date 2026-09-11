@@ -1,0 +1,115 @@
+START
+Använda systemet
+
+En CSS-fil att ladda, ett skop att stå i, en namnkonvention att följa och en regel för hur nya komponenter kommer in: som kloner av sin källa, aldrig som påhitt.
+
+system/ampy.css, system/tokens.css (huvudkommentaren och lager 1 till 2), system/base.css, BYGGBRIEF.md (klon-regeln, sidmallen, render-loopen), KONSOLIDERINGSBRIEF.md (precedens), INVENTERINGSBRIEF.md (auktoritet 1 till 3), konsolidering/BEVIS.md (skripten), tools/shot.mjs.
+
+Ladda in
+
+Allt ligger i system/. ampy.css importerar i bindande ordning: tokens, base, sedan komponenterna. Fonten är självhostad (system/fonts/Outfit-VariableFont_wght.woff2, variabel 100 till 900) och base.css refererar den relativt, så mappen flyttas hel. Inga CDN:er, inga Google Fonts (LED laddar Google Fonts två gånger i dag, GDPR-defekt enligt B7).
+
+<link rel="stylesheet" href="system/ampy.css">
+<!-- eller bara grunden, utan komponenter: -->
+<link rel="stylesheet" href="system/tokens.css">
+<link rel="stylesheet" href="system/base.css">
+Kopiera
+/* system/ampy.css: ordningen är bindande */
+@import url("tokens.css");
+@import url("base.css");
+@import url("components/knappar.css");
+@import url("components/text.css");
+@import url("components/ytor.css");
+@import url("components/falt.css");
+@import url("components/verktyg.css");
+@import url("components/diagnostik.css");
+@import url("components/block.css");
+Kopiera
+Skopet .ampy
+
+Element-standarden i base.css (h1 till h4, p, small, strong, a, hr, fokus, selection) ligger inne i :where(.ampy). :where() nollar specificiteten, så rollklasser (.ampy-h2) och komponentklasser (.ampy-btn) vinner alltid över standarden, och Bricks egna regler utanför skopet påverkas inte. På en fristående sida: <body class="ampy">. I Bricks eller ett FluentSnippet: <div class="ampy"> runt blocket. Mörka ytor får .ampy--dark eller .ampy-on-dark så att fokusringen byter till neon mint (--ampy-focus-on-dark).
+
+<section class="ampy ampy-section">
+  <div class="ampy-container">
+    <div class="ampy-card">
+      <p class="ampy-eyebrow">Så räknas ROT</p>
+      <h2 class="ampy-h2">30 procent på arbetet</h2>
+      <p class="ampy-body">Skatteverket drar avdraget direkt på fakturan.</p>
+      <a class="ampy-btn ampy-btn--compact" href="/offert/">Räkna på ditt jobb
+        <svg class="ampy-btn__icon" aria-hidden="true"><use href="system/ikoner.svg#ik-arrow-right"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+Kopiera
+RENDERAT
+
+SÅ RÄKNAS ROT
+
+30 procent på arbetet
+
+Skatteverket drar avdraget direkt på fakturan.
+
+Räkna på ditt jobb
+Klasskonventionen
+MÖNSTER	EXEMPEL	BETYDER
+.ampy-<komponent>	.ampy-btn, .ampy-card, .ampy-input, .ampy-tag	komponentens rot; en komponent = en fil i system/components/
+.ampy-<komponent>__<del>	.ampy-btn__icon, .ampy-btn__chip, .ampy-stat__value	en del inuti komponenten (BEM, dubbla understreck)
+.ampy-<komponent>--<variant>	.ampy-btn--ring, .ampy-card--dark, .ampy-card--glass, .ampy-tag--warning	variant på roten (dubbla bindestreck); kombineras fritt
+.is-<tillstånd>	.is-hover, .is-open, .is-loading, .is-disabled, .is-invalid	tillstånd satt av JS eller för att visa ett läge statiskt (dokumentationen använder .is-hover för skärmdumpar); ARIA-attribut (aria-invalid, aria-disabled, aria-expanded) styr samma stil
+rollklasser	.ampy-display, .ampy-h1 till .ampy-h3, .ampy-lead, .ampy-body, .ampy-small, .ampy-eyebrow, .ampy-number, .ampy-label, .ampy-button-text	typografiroller ur base.css; fungerar utan skopet
+layout	.ampy-container, .ampy-container--text, .ampy-section, .ampy-section--full, .ampy-section--dark	1280-container med gutter, sektion med 2xl-padding, fullbredd, mörk sektion
+--_<namn>	--_h: 58px, --_chip: 36px i knappar.css	komponentlokal custom property för ett värde ur källan som saknar token; källan står i kommentaren, bristen i bygglogg
+.ds-*	.ds-h2, .ds-table, .ds-demo	bara den här dokumentationen (site/doc.css); aldrig i produktion
+Tokens i två lager
+LAGER	PREFIX	VAD	ENHET	ANVÄNDS AV
+1	--ap*	de 101 primitiva tokens Bricks kör live, verbatim ur global-variables.css (47 färg, 11 spacing, 15 text, 6 radie, 5 skugga, 8 kolumner, 7 alias, 2 skärm)	rem-clamp på 10 px-rot	Bricks-temat, block som redan är tokenbundna (footer, testimonials, visste-du-att, tack-sidan)
+1b	--ap*	två rättade buggar (--shadow-primary definierad, --apspace-4xs min och max i rätt ordning) + alias --aptext-mmm	som lager 1	samma
+1c	--ap*	16 primitiva som saknades men bär en roll i minst två källor av auktoritet 1 till 2 (sekundärteal, teal deep, teal tint, indigo, navy-serien, amber, signalröd, verdict-kvartetten, Google-gult)	hex	lager 2
+2	--ampy-*	134 semantiska roller: ytor, bläck, handling, tillstånd, linjer, radier, skuggor, scrims, aurora, rörelse, typografi, container, spacing-roller. Färger pekar på lager 1 via var(); mått är px-clamp med samma värden	px (rem-oberoende)	alla komponenter i system/components/, FluentSnippets, CRM-sidor, artikelmallen
+
+Regeln: komponenter använder bara --ampy-*. --ap* finns för paritet med Bricks och ska inte spridas i ny kod. Varje token i tokens.css bär en radkommentar källa: <slug> (<fil:rad>) ; drift: <värden>; allt märkt "Beslut Bn" ligger hos Julius på beslutssidan. Filen ändras inte av den som bygger en komponent: brister rapporteras i bygglogg (site/_bygglogg/), inte lappas.
+
+Rotstorlek, Bricks och FluentSnippets
+
+Live kör html { font-size: 62.5% } (1 rem = 10 px) i theme-style.css, frontend.css och core-framework-inline, och lager 1 räknar rätt bara där. Därför är lager 2 skrivet i px: samma pixlar på sajtens 10 px-rot som på en 16 px-rot. Hero-2-alternatives formulerade problemet ("html{62.5%} är en värdsideregel som inte kan levereras") och sticky-baren regeln ("aldrig rem: en rem-bar med 16 px-antagande blir 37,5 % för liten"). Beslut B8 avgör om sajten ska byta rot; till dess:
+
+Bricks-block: använd --ampy-* i _cssCustom eller i blockets CSS; --ap* går bra där blocket redan är tokenbundet. Bricks brytpunkter skrivs 991 / 767 / 478 (kanon 992 / 768 / 480). Sektionspadding i temat är --apspace-l (39,6), kanon för sektioner är 2xl.
+FluentSnippets: leveransen är tre filer, CSS + PHP (shortcode, ev. ACF) + JS (fore-efter, mini-menu, testimonials, hero-2, website-blocks och main-form levererades så). CSS:en börjar med .ampy-skopet och lager 2, aldrig rem, aldrig html-regler. Fonten laddas inte igen: sajten har redan Outfit.
+CRM-sidor och artikelmallen (16 px-rot): ta bort html { font-size: 62.5% } ur base.css och använd bara --ampy-*; lager 1 blir då fel i skala och ska inte refereras.
+Ikoner: <use href="system/ikoner.svg#ik-…"> kräver http och samma origin; i Bricks: klistra in symbolen inline eller ladda spriten en gång i sidfoten (dold, aria-hidden).
+Klon-regeln: så kommer en komponent in
+
+Varje komponent i system/components/*.css är en klon av sin kanoniska källa, omskriven så att värdena kommer från tokens i stället för literaler. Kravet är pixelparitet mot källan vid 1440 och 390. Ingen ritar en ny knapp; man hittar den som redan är godkänd.
+
+Slå upp komponenten i konsolidering/komponenter-karta.md. Kolumnen "kanonisk källa" ger slug och fil, till exempel cta-website radgivning-cta/radgivning-cta.css:8-48. Finns komponenten inte i kartan är den inte byggd med auktoritet 1 till 2, och då saknas belägg: rapportera, hitta inte på.
+Öppna källkoden i kallor/<repo>/ och skärmdumpen i inventering/skarmdumpar/. Kopiera CSS-värdena ordagrant först.
+Bind varje värde till en --ampy-*-token. Ett värde som saknar token blir en komponentlokal --_namn med källan i kommentaren; bristen skrivs i site/_bygglogg/<S>.md. Tokens.css ändras aldrig i det här steget.
+Rendera: node tools/shot.mjs site/komponenter/<sida>.html _shots/<namn>. Öppna PNG:erna, jämför mot källans skärmdump vid 1440 och 390: höjd, padding, radie, färg. Loopen är klar när utskriften säger errors: [] och overflowX: false.
+Dokumentera på komponentsidan i fast ordning: rubrik och en rad, källa (kanon + "finns även i" med avvikelser), live-exempel per tillstånd (default, .is-hover, focus-visible, disabled, laddar, storlekar, ljus och mörk yta), anatomi med mått vid 1440 och 390, gör och gör inte (tre + tre), kod med kopiera-knapp, avvikelser i blocken ur komponentkartan.
+En avvikelse mot källan ska stå under "Avvikelser" med skäl, till exempel "källan använde #0b1030, tokenen är #090b32 enligt beslut B3". Drift i andra block listas, inte tystas.
+Verktygen
+VERKTYG	GÖR	KÖR
+tools/shot.mjs	startar en statisk server för repot, renderar sidan i Chromium (Playwright 1.62.1) på 1440×1000 och 390×844 med 2× skala, sparar helsides-PNG och skriver höjd, horisontell overflow och konsolfel per viewport. --query för sidor som behöver parametrar.	cd tools && npm install en gång, sedan node tools/shot.mjs site/grunder/farg.html _shots/farg
+site/_probes/overflow.mjs	listar de element vars högerkant sticker utanför viewporten (orsaken när shot.mjs säger overflowX: true)	node site/_probes/overflow.mjs site/grunder/farg.html 390
+site/_probes/contrast.mjs	räknar WCAG-kontrast för alla färgpar på färgsidan och fyller rutnäten och tabellerna mellan <!--@…:start--> och :end	node site/_probes/contrast.mjs (idempotent)
+site/_probes/typo-matt.mjs	mäter rollskalan på typografisidan med getComputedStyle vid 390, 768 och 1440 och fyller tabellen "Uppmätt på den här sidan"	node site/_probes/typo-matt.mjs
+konsolidering/_probes/01 till 07	frekvens per färg (01), typmatris (02), radier, skuggor, rörelse, spacing (03), kontrast (04), lager 1 ur global-variables.css (05), röktest av tokens i Chromium (06), tabellerna (07). Utdata i _probes/out/.	Python 3 (01 till 05, 07), Node (06)
+system/_smoke.html	röktest av tokens.css + base.css utan komponenter: alla 101 ap* resolvar, Outfit laddad, rollskalan i rätt ordning	node tools/shot.mjs system/_smoke.html _shots/smoke
+Mappkartan
+ampy-designsystem/ ├── INVENTERINGSBRIEF.md fas 1: mät 31 källor, auktoritet 1 till 3 ├── KONSOLIDERINGSBRIEF.md fas 2: precedens, lager 1 och 2, beslut ├── BYGGBRIEF.md fas 3: sajten, klon-regeln, sidmallen ├── kallor/ 30 källrepon, grunt klonade 2026-09-11 (läs, ändra aldrig; gitignorerad) ├── inventering/ <slug>.md + .json per källa (30), brandbook, tidigare-dokumentation, brand/ (logofiler), skarmdumpar/ (200 PNG), _probes/ ├── konsolidering/ kanon-sammanfattning, farg/typografi/spacing/form-djup-rorelse .md + .json, komponenter-karta, beslut (B1 till B20), BEVIS, _probes/ + out/ ├── system/ tokens.css, base.css, ampy.css, components/ (7 filer), fonts/, ikoner.svg, _smoke.html ├── site/ den här dokumentationen: index, beslut, kod, grunder/, komponenter/, monster/, regler/, blockbibliotek; doc.css, doc.js, _mall.html, bilder/, brand/, _probes/, _bygglogg/ ├── tools/shot.mjs render-loopen └── _shots/ renderingar (gitignorerad)
+Proveniensregeln
+
+Ingen siffra, färg, radie eller regel i systemet saknar källa. Formen är slug plus fil och rad: hero-1 (assets/style.css:40). Saknas belägg skrivs [GAP], aldrig ett rimligt värde. Frekvens räknas som antal källfiler som bär ett värde, inte antal förekomster, viktat med auktoritet (BEVIS.md). När källor säger olika gäller: auktoritet 1 slår 2 slår 3; inom auktoritet 1 gäller ansvarsområde (live = primitiver, hero-1 = display, cta-website = knappar, website-blocks = header, LED = verktyg, elcentral och elkollen = diagnostik, eljour = innehållsblock, testimonials = omdömen, brandbook = logo, palettnamn, vikter); frekvens bryter lika; de andra värdena skrivs alltid ut som drift. Rot-gt-calculator/wireframes räknas aldrig (underkända); skill-referensen är dokumentation, inte källa. Sajten bygger själv på tokens (dogfooding): ser dokumentationen billig ut är systemet fel.
+
+Så hänger filerna ihop
+1. Inventering
+inventering/<slug>.md + .json per källa: vad det är, auktoritet, uppmätta färger, typografi, spacing, radier, skuggor, rörelse, komponenter, defekter; skärmdumpar 1440 och 390. Samma JSON-schema för alla 30 + brandbook + tidigare dokumentation.
+2. Konsolidering
+konsolidering/: skripten 01 till 07 räknar frekvens och kontrast ur JSON:erna; tabellerna farg, typografi, spacing, form-djup-rorelse och komponentkartan (45 rader) sätter kanon och skriver ut drift; beslut.md samlar det som inte kan avgöras; BEVIS.md visar hur.
+3. Tokens och bas
+system/tokens.css (lager 1 verbatim + 1b + 1c + lager 2 med källa per rad) och base.css (reset, Outfit, roller, skopet, fokus, reduced-motion, container). Röktestat i Chromium: 0 saknade tokens, samma px som live.
+4. Komponenter och sajt
+system/components/ som kloner av komponentkartans kanon, site/ som renderar allt på de egna tokens. Bygglogg per agent i site/_bygglogg/ med paritetsmått, avvikelser och token-brister.
+
+Läsordning enligt BYGGBRIEF.md: kanon-sammanfattning och beslut, tokens.css och base.css, tabellerna, inventeringen för de källor du bygger på (öppna skärmdumparna), sidmallen, källkoden i kallor/ när du klonar.

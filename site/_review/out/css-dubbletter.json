@@ -1,0 +1,189 @@
+{
+ "decls": 5736,
+ "selektorerIFleraFiler": [
+  {
+   "selector": "||.ampy-eyebrow",
+   "files": [
+    "system/base.css",
+    "system/components/text.css"
+   ]
+  },
+  {
+   "selector": "||:where(.ampy)",
+   "files": [
+    "system/base.css",
+    "system/components/falt.css",
+    "system/components/text.css"
+   ]
+  }
+ ],
+ "egenskapKonflikter": [],
+ "egenskapDubbletter": [],
+ "klassnamnIFleraKomponentfiler": [
+  {
+   "klass": "ampy-btn",
+   "files": [
+    "block.css",
+    "diagnostik.css",
+    "knappar.css"
+   ]
+  },
+  {
+   "klass": "ampy-btn__icon",
+   "files": [
+    "block.css",
+    "knappar.css",
+    "verktyg.css"
+   ]
+  },
+  {
+   "klass": "ampy-tag--live",
+   "files": [
+    "block.css",
+    "text.css"
+   ]
+  },
+  {
+   "klass": "ampy-btn--ring",
+   "files": [
+    "block.css",
+    "diagnostik.css",
+    "knappar.css"
+   ]
+  },
+  {
+   "klass": "ampy-frame",
+   "files": [
+    "block.css",
+    "falt.css",
+    "knappar.css",
+    "text.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy-display",
+   "files": [
+    "block.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy-lead",
+   "files": [
+    "block.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy-list",
+   "files": [
+    "diagnostik.css",
+    "text.css"
+   ]
+  },
+  {
+   "klass": "ampy-chips",
+   "files": [
+    "diagnostik.css",
+    "falt.css"
+   ]
+  },
+  {
+   "klass": "ampy-eyebrow",
+   "files": [
+    "diagnostik.css",
+    "text.css",
+    "verktyg.css"
+   ]
+  },
+  {
+   "klass": "ampy-tag",
+   "files": [
+    "diagnostik.css",
+    "text.css",
+    "verktyg.css"
+   ]
+  },
+  {
+   "klass": "ampy-field",
+   "files": [
+    "falt.css",
+    "verktyg.css"
+   ]
+  },
+  {
+   "klass": "ampy-fields",
+   "files": [
+    "falt.css",
+    "verktyg.css"
+   ]
+  },
+  {
+   "klass": "ampy-check",
+   "files": [
+    "falt.css",
+    "verktyg.css"
+   ]
+  },
+  {
+   "klass": "ampy-on-dark",
+   "files": [
+    "falt.css",
+    "knappar.css",
+    "text.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy--dark",
+   "files": [
+    "falt.css",
+    "knappar.css",
+    "text.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy-section--dark",
+   "files": [
+    "falt.css",
+    "knappar.css",
+    "text.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy-card--dark",
+   "files": [
+    "falt.css",
+    "knappar.css",
+    "text.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy-band--dark",
+   "files": [
+    "falt.css",
+    "knappar.css",
+    "text.css",
+    "ytor.css"
+   ]
+  },
+  {
+   "klass": "ampy-stat-trio",
+   "files": [
+    "text.css",
+    "verktyg.css"
+   ]
+  },
+  {
+   "klass": "ampy-readout",
+   "files": [
+    "text.css",
+    "verktyg.css"
+   ]
+  }
+ ]
+}

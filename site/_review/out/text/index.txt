@@ -1,0 +1,142 @@
+START
+Ampys designsystem, mätt
+
+Det här är inte ett förslag. Det är vad Ampy faktiskt designar med, uppmätt i 31 källor den 11 september 2026, konsoliderat till ett tokensystem och renderat på sina egna tokens. Där källorna säger olika står det, och där bara du kan avgöra står det som ett beslut.
+
+konsolidering/kanon-sammanfattning.md (de tio raderna), INVENTERINGSBRIEF.md (källorna och auktoriteten), konsolidering/BEVIS.md (hur det räknades), system/tokens.css, konsolidering/komponenter-karta.md, konsolidering/beslut.md.
+
+KÄLLOR
+31
+30 inventerings-JSON + tidigare dokumentation
+TOKENS
+101
++ 16 + 134
+live ap*, nya primitiva, semantiska ampy-*
+BESLUT
+20
+som väntar på Julius
+Klon-först: ingenting är påhittat, ingenting är "förbättrat". Varje värde bär sin källa som slug och fil:rad; det som saknar belägg står som [GAP].
+
+Uppdraget (Julius, 2026-09-11): återskapa Ampys designsystem från start ur allt som byggts i blockbiblioteket, så att det går att se vad vi designar utifrån och därifrån fixa det fundamentalt.
+
+Metoden: tre faser. Inventering mätte varje källa med grep och getComputedStyle och renderade den på 1440 och 390. Konsolideringen räknade frekvens per källa, viktade med auktoritet (1 = ägargodkänd eller live, 2 = levererad, 3 = prototyp) och skrev ut allt annat som drift. Sajten bygger på resultatet: system/tokens.css är den enda tokenfilen, och varje komponent är en klon av sin kanoniska källa.
+
+Precedensen när källor säger olika: auktoritet 1 slår 2 slår 3; inom 1 gäller ansvarsområde (live = primitiver, hero-1 = display, cta-website = knappar, website-blocks = header, LED = verktyg, elcentral och elkollen = diagnostik, eljour = innehållsblock, testimonials = omdömen, brandbook = logo, palettnamn och vikter); frekvens bryter lika.
+
+Systemet i tio rader
+
+Ur konsolidering/kanon-sammanfattning.md, ordagrant i sak. Allt är uppmätt, inte gissat.
+
+Sajten har redan ett komplett fluid-tokensystem: 101 --ap*-tokens i global-variables.css (47 färg, 11 spacing, 15 text, 6 radie, 5 skugga, 8 kolumner, 7 alias, 2 skärm) på 10 px-rot, men bara footer, testimonials, visste-du-att, live-blocken och tack-sidan använder det. Alla kalkylatorer, diagnostiker, heros, formulär och CRM-sidor bygger egna tokennamnrum med samma färger under nya namn (sju namnrum räknade). Två buggar (--shadow-primary odefinierad så alla --apshadow-* blir none; --apspace-4xs med min större än max) är rättade i tokens.css.
+Färg: midnight #090b32 (29 källor), vit, teal #00a991 (25), neon mint #55ff9a (22), sky mist #f5f9ff (21) är kärnan. Brandbokens sekundärteal #5eb1bf finns i 17 källor (handlingsgradientens slut) men var inget token; nu --apsecondary-teal. Sex navyer, tio tealer och nio bläck blev ett bläck (midnight), en dämpad (#565e82), en svag (#6a7190), en accent-teal och en text-teal (#007a69, 5,3:1). Cobalt #326afd och lime finns inte i produktion.
+Typografi: Outfit ensamt (brandbok + 24 källor). Roller i px: display 60/36, h1 48/31, h2 36/27, h3 22/20, lead 22/17, body 18/16, small 16/14, eyebrow 12, siffra 56/38, label 14, knapp 16. Vikter 700 display, 500 H2, 600 H3 och etikett, 300 brödtext. H2 var det stora bråket (32, 36, 38 och 40 samma vecka); 36 (--aptext-2xl) vinner på antal källor och tokenbindning.
+Spacing: apspace-skalan behålls värde för värde (4,9 till 158 px) och speglas i px (rem-oberoende). Sektion = 2xl 79/35, gutter = l 40/21, kort = m 28/17, stack = s 20/13, rutnät = m. Container 1280 (fullbredd tillåten). Brytpunkter 992/768/480, helst @container.
+Form: kort radie 20 till 16 (17 källor), knapp 16 (17 källor, = legacy --radius), fält 12 till 10, chip 8 till 6, pill 999. Elkollen och elcentral (14), booking (22), thank-you (32) och main-form (15) är drift.
+Djup: en skuggfärg (midnight-alfa) i tre styrkor; "husets" gråa rgba(190,190,190,.19) från live är drift (B10). Knappen bär CTA-bibliotekets tre-lagers skugga ordagrant. Glas = tack-sidans .72 + blur(16px).
+Gradienter 14 till 2: handlingsgradienten 120° #55ff9a till #5eb1bf (plus ringvarianten från crystal blue) och den ljusa auroran (tack och CRM). Textgradienter, ytgradienter (certificates, footer, testimonials) och avvikande knappgradienter (hero-2-form, thank-you, main-form, eljours nödknapp) är drift.
+Rörelse: 160 ms knappar, 200 ms UI, 300 ms tak, cubic-bezier(.2,.6,.2,1) (live site-css), lyft -1,5 px + saturate(1.06), reduced-motion nollställer allt (alla auktoritet 1-källor gör det).
+Komponenter: cirka 45 rader i kartan. Kanon utan drift: ring-CTA, rail, frågekort, dualstatus, trafikljus, stat-trio, segment, selector, slider, hero-1, hero-2, mini-menu, testimonials, certifikat, eljour-block, före/efter, fotobedömning, visste-du-att, CTA-band, header. Kanon med drift: gradient-CTA (fyra höjder), solid knapp (fyra tealer), input (nio recept), kort (fem radier), eyebrow (tre system). Saknas i auktoritet 1 till 2: sekundär och tertiär knapp i biblioteket, streams-bar och break-even (bara battery, auktoritet 3), processteg, tack-sidans tidslinje.
+Tjugo beslut ligger hos dig: de tyngsta är B3 brödtextens färg och vikt, B4 knappradie 16 mot live 12/20, B5 teal-kontrasten (2,96:1 på solid knapp), B6 gradient mot solid primär plus nödknappen, B7 kapa Plus Jakarta Sans och JetBrains Mono, B9 glöd mot platt på mörka kort, B10 grå mot navy skugga, B12 stjärnfärg, B17 H2 36/32/40. Tokens.css bär rekommendationerna tills du säger annat.
+Sajten
+6 SIDOR
+
+Grunder
+
+Färg, typografi, spacing och layout, form och djup, rörelse, ornament och ikoner. Varje värde renderat med sin token, källa och drift.
+
+8 SIDOR
+
+Komponenter
+
+Knappar, textelement, ytor, fält, kalkylator-kitet, diagnostik-kitet och blocken, i alla tillstånd med kod och källa.
+
+4 SIDOR
+
+Mönster
+
+Layoutfamiljerna, tjänstesidans rytm, mobil 390, register och ton.
+
+4 SIDOR
+
+Regler
+
+Röst i gränssnittet, candour-grinden, AI-tecken som inte får finnas, tillgänglighet.
+
+30 KÄLLOR
+
+Blockbiblioteket
+
+Galleriet: varje inventerad källa med skärmdump, auktoritet och vad den är kanon för.
+
+B1 TILL B20
+
+Beslut som väntar
+
+Tjugo frågor som inte kan avgöras genom att räkna källor. Svara med numren: "B4 a, B17 b".
+
+väntar på dig
+Så läser du sidorna
+Samma anatomi överallt
+Eyebrow, rubrik, en ingress som säger vad som gäller, och en källrad som säger var siffrorna kommer ifrån. Sedan avsnitt med renderade exempel, tabeller och till sist "Det här byts ut": driften i blocken.
+Kanon, drift, beslut
+Kanon är det värde tokens.css bär. Drift är allt annat som finns i källorna, alltid utskrivet med källa. En etikett som B4 betyder att värdet ligger i ett beslut hos Julius; tills det är taget gäller rekommendationen.
+Mätt på den här sidan
+Flera sidor mäter sig själva i din webbläsare (getComputedStyle) och visar px vid din viewport. Komponentsidorna visar hover som en statisk variant med klassen .is-hover så att skärmdumpar kan visa alla lägen.
+Så här är det byggt
+1. system/tokens.css
+Den enda tokenfilen. Lager 1: de 101 --ap* Bricks kör live, verbatim, rem-clamp på 10 px-rot. Lager 1b: två rättade buggar. Lager 1c: 16 primitiva som saknades. Lager 2: 134 semantiska --ampy-* i px-clamp, rem-oberoende, med källa och drift på varje rad.
+2. system/base.css
+Reset, självhostad Outfit 100 till 900, body i 300, rubrikroller som klasser och som element-standard inne i :where(.ampy), fokus (3 px navy, neon mint på mörkt), reduced-motion, .ampy-container 1280 och .ampy-section 2xl. Bär html { font-size: 62.5% } som dokumenterad värdregel (B8).
+3. system/components/
+Sju filer, en per kit: knappar, text, ytor, fält, verktyg, diagnostik, block. Varje komponent är en klon av komponentkartans kanon, bunden till lager 2. system/ampy.css importerar allt i bindande ordning. Ikonerna ligger i system/ikoner.svg, 22 symboler med 1,75 px streck.
+
+Hur man laddar, skopet .ampy, klasskonventionen, FluentSnippets och Bricks, klon-regeln och verktygen: Använda systemet.
+
+De 31 källorna
+
+Grunt klonade från julius447 den 11 september 2026 till kallor/, mätta i inventering/. Auktoritet 1 är ägargodkänt, live eller låst och sätter kanon; 2 är levererat och produktionsklart; 3 är riktningar och prototyper som bara får belägga mönster. rot-gt-calculator/wireframes är uteslutet (underkänt av ägaren).
+
+Auktoritet 1 (14)
+
+live-ampy-se
+hero-1
+website-blocks
+cta-website
+footer-cro (baslinjen)
+rot-gt-cro (klonen av live)
+testimonials-block
+eljour-block
+led-kalkylator
+ev-kalkylator
+energycalc
+elcentral-kollen
+elkollen
+brandbook (logo, palett, vikter)
+
+Auktoritet 2 (13)
+
+main-cta
+hero-2-alternatives
+hero-2-form
+mini-menu
+rot-gt-cro (familjen)
+certificates
+eljour-sticky-bar
+fore-efter-cro
+fotobedomningen
+main-form
+thank-you
+booking-confirmation
+article-template
+
+Auktoritet 3 (4) och jämförelseunderlag
+
+var-process-cro
+battery-calculator
+offer-accepted
+picasso
+tidigare dokumentation (skillen, ampy-foretagsdata §9 och §11)
+
+Footer-cro räknas 1 för baslinjen och 3 för riktningarna; rot-gt-cro 1 för klonen av live och 2 för den levererade familjen. Thank-you-implementation och offer-accepted-preview är speglar av thank-you respektive offer-accepted och räknas in i dem.
+
+Sajten byggs av fyra agenter (S1: start, grunder, beslut, kod; S2: knappar, text, ytor, fält; S3: kalkylator- och diagnostik-kitet; S4: block, mönster, regler, blockbiblioteket). Bygglogg per agent med paritetsmått, avvikelser och token-brister: site/_bygglogg/.

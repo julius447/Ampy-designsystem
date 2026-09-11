@@ -1,0 +1,618 @@
+[
+ {
+  "page": "knappar",
+  "slug": "cta-website",
+  "file": "kallor/CTA-website/radgivning-cta/radgivning-cta.css",
+  "lines": "8-48",
+  "status": "ok",
+  "sample": ".btn-radgivning{ ⏎ display:inline-flex;align-items:center;gap:16px; ⏎ min-height:58px;padding:11px 24px;",
+  "ctx": "cta-website (radgivning-cta/radgivning-cta.css:8-48, ring-ct"
+ },
+ {
+  "page": "knappar",
+  "slug": "cta-website",
+  "file": "kallor/CTA-website/ring-cta/ring-cta.css",
+  "lines": "8-65",
+  "status": "ok",
+  "sample": ".btn-ring{ ⏎ display:inline-flex;align-items:center;gap:14px; ⏎ min-height:58px;padding:11px 30px 11px 12px;",
+  "ctx": "cta-website (radgivning-cta/radgivning-cta.css:8-48, ring-ct"
+ },
+ {
+  "page": "knappar",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "555-579",
+  "status": "ok",
+  "sample": ".ampy-ec__cta-primary { ⏎ display: flex; align-items: center; justify-content: center; gap: var(--space-3); width: 100%; padding: var(-- ⏎ font-family: 'Outfit', system-ui, sans-serif; font-size: var(--fs-15); font-weight: 600; line-height: 1.3; bor",
+  "ctx": "cta-website (radgivning-cta/radgivning-cta.css:8-48, ring-ct"
+ },
+ {
+  "page": "text",
+  "slug": "energycalc",
+  "file": "kallor/Energycalc/vB/tool.css",
+  "lines": "317-319",
+  "status": "ok",
+  "sample": ".eyebrow{font-size:var(--ty-eyebrow);letter-spacing:var(--tr-eyebrow);color:var(--eyebrow);text-transform:uppe ⏎ .eyebrow::before{content:'';display:inline-block;width:2.4rem;height:2px;background:var(--teal-bright); ⏎ vertical-align:middle;margin-right:var(--sp-2)}",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/s"
+ },
+ {
+  "page": "text",
+  "slug": "thank-you",
+  "file": "kallor/Thank-you-Offer-accepted/v1/styles.css",
+  "lines": "77-77",
+  "status": "ok",
+  "sample": ".cta-eyebrow{ font-size:var(--aptext-xs); font-weight:600; text-transform:uppercase; letter-spacing:.14em; col",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/s"
+ },
+ {
+  "page": "text",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "428-440",
+  "status": "ok",
+  "sample": ".ampy-ec__pill { ⏎ display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-6); ⏎ border-radius: var(--radius-full); font-family: 'Plus Jakarta Sans', system-ui, sans-serif;",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/s"
+ },
+ {
+  "page": "text",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "293-311",
+  "status": "ok",
+  "sample": ".ampy-calc__hero { display: flex; flex-direction: column; gap: var(--spacing-sm); } ⏎ .ampy-calc__hero-eyebrow { font-family: var(--font-heading); font-size: var(--fs-sm); font-weight: 600; color: ⏎ .ampy-calc__hero-value { font-family: var(--font-heading); font-size: var(--fs-4xl); line-height: 1.0; font-we",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/s"
+ },
+ {
+  "page": "text",
+  "slug": "elkollen",
+  "file": "kallor/Elkollen/assets/behorighetskollen.css",
+  "lines": "880-889",
+  "status": "ok",
+  "sample": ".ampy-bk__source-line { ⏎ font-family: 'Outfit', system-ui, sans-serif; ⏎ font-size: var(--fs-13);",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/s"
+ },
+ {
+  "page": "text",
+  "slug": "hero-1",
+  "file": "kallor/Hero-1/assets/style.css",
+  "lines": "236-265",
+  "status": "ok",
+  "sample": ".vb2__proof { ⏎ position: absolute; ⏎ z-index: 1;",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/s"
+ },
+ {
+  "page": "text",
+  "slug": "testimonials-block",
+  "file": "kallor/Testimonials-block/delivery/ampy-testimonials.css",
+  "lines": "46-66",
+  "status": "ok",
+  "sample": ".ampy-testimonials .att-card { ⏎ display: flex; flex-direction: column; ⏎ min-height: 360px; height: 100%;",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/s"
+ },
+ {
+  "page": "ytor",
+  "slug": "eljour-block",
+  "file": "kallor/Eljour-block/index.html",
+  "lines": "21-21",
+  "status": "ok",
+  "sample": "--shadow-card:0 1rem 3rem rgba(9,11,50,.07);",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --aprad"
+ },
+ {
+  "page": "ytor",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "125-134",
+  "status": "ok",
+  "sample": ".ampy-calc__card--surface { ⏎ background: var(--bg-surface); color: var(--text-inverse); border-color: transparent; ⏎ box-shadow: var(--shadow-lg);",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --aprad"
+ },
+ {
+  "page": "ytor",
+  "slug": "thank-you",
+  "file": "kallor/Thank-you-Offer-accepted/v1/styles.css",
+  "lines": "36-46",
+  "status": "ok",
+  "sample": ".card{ ⏎ position:relative; z-index:1; width:100%; max-width:52rem; ⏎ display:flex; flex-direction:column; align-items:center; text-align:center;",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --aprad"
+ },
+ {
+  "page": "ytor",
+  "slug": "fore-efter-cro",
+  "file": "kallor/f-re-efter-CRO-/dist/01-fore-efter.css",
+  "lines": "281-290",
+  "status": "ok",
+  "sample": "box-shadow: 0 2px 10px rgba(9, 11, 50, 0.18); ⏎ } ⏎ .ampy-foreefter__chip--fore {",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --aprad"
+ },
+ {
+  "page": "ytor",
+  "slug": "hero-1",
+  "file": "kallor/Hero-1/assets/style.css",
+  "lines": "190-235",
+  "status": "ok",
+  "sample": ".vb2__section { ⏎ padding: clamp(12px, 1.6vw, 20px) clamp(14px, 2vw, 26px) clamp(20px, 2.6vw, 30px); ⏎ }",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --aprad"
+ },
+ {
+  "page": "falt",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "517-518",
+  "status": "ok",
+  "sample": ".ampy-ec__lead-input { width: 100%; min-height: 5.2rem; padding: var(--space-4) var(--space-5); font: inherit; ⏎ .ampy-ec__lead-input:focus { outline: none; border-color: var(--border-focus); box-shadow: var(--focus-ring); ",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, "
+ },
+ {
+  "page": "falt",
+  "slug": "elkollen",
+  "file": "kallor/Elkollen/assets/behorighetskollen.css",
+  "lines": "716-770",
+  "status": "ok",
+  "sample": "/* Search */ ⏎ .ampy-bk__search { ⏎ margin: 0 0 var(--space-7);",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, "
+ },
+ {
+  "page": "falt",
+  "slug": "main-form",
+  "file": "kallor/Ampy-main-form/css/styles.css",
+  "lines": "174-196",
+  "status": "ok",
+  "sample": "/* ---- Address (Svea: bg #f4f4f5, manual-link top-right #545454 13px) --------- */ ⏎ .mf-addr { position: relative; } ⏎ .mf-addr__label-row { display: flex; align-items: baseline; justify-content: space-between; gap: 1.2rem; }",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, "
+ },
+ {
+  "page": "falt",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "285-290",
+  "status": "ok",
+  "sample": ".ampy-calc__input, .ampy-calc__select { ⏎ width: 100%; font-family: var(--font-body); font-size: var(--fs-sm); padding: var(--spacing-sm) var(--spacing- ⏎ border: 1px solid var(--border-default); border-radius: var(--radius-md); min-height: 4.8rem;",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, "
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "96-134",
+  "status": "ok",
+  "sample": ".ampy-calc__container { ⏎ max-width: 128rem; margin: 0 auto; ⏎ padding: var(--spacing-xl) var(--spacing-lg);",
+  "ctx": "led-kalkylator (styles.css:96-134). Finns även i: ev-kalkyla"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "137-157",
+  "status": "ok",
+  "sample": ".ampy-calc__tier { display: flex; flex-direction: column; gap: var(--spacing-md); } ⏎ .ampy-calc__tier--primary { gap: var(--spacing-lg); } ⏎ .ampy-calc__tier + .ampy-calc__tier {",
+  "ctx": "led-kalkylator (styles.css:137-157 tier/fält, 161-206 väljar"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "161-206 (väljare)",
+  "status": "ok",
+  "sample": ".ampy-calc__selector { position: relative; } ⏎ .ampy-calc__selector-button {"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "210-236 (värde + reglage)",
+  "status": "ok",
+  "sample": ".ampy-calc__value-prominent { ⏎ font-family: var(--font-mono); font-weight: 700; color: var(--text-primary); font-size: var(--fs-xl)"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "249-259 (segment)",
+  "status": "ok",
+  "sample": ".ampy-calc__segmented { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 0.4rem;  ⏎ .ampy-calc__segmented-option {"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "285-290 (select)",
+  "status": "ok",
+  "sample": ".ampy-calc__input, .ampy-calc__select { ⏎ width: 100%; font-family: var(--font-body); font-size: var(--fs-sm); padding: var(--spacing-sm) var("
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "293-297",
+  "status": "ok",
+  "sample": ".ampy-calc__hero { display: flex; flex-direction: column; gap: var(--spacing-sm); } ⏎ .ampy-calc__hero-eyebrow { font-family: var(--font-heading); font-size: var(--fs-sm); font-weight: 600; color: ⏎ .ampy-calc__hero-value { font-family: var(--font-heading); font-size: var(--fs-4xl); line-height: 1.0; font-we",
+  "ctx": "led-kalkylator (styles.css:293-297 hero, 300-311 trio, 398-4"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "300-311 (trio)",
+  "status": "ok",
+  "sample": ".ampy-calc__trio { ⏎ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto;"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "398-412 (compare)",
+  "status": "ok",
+  "sample": "/* --- Before/after comparison (electricity cost per year) ------------------ */ ⏎ .ampy-calc__compare { display: flex; flex-direction: column; gap: var(--spacing-sm); }"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "351-396",
+  "status": "ok",
+  "sample": ".ampy-calc__lead-form { display: flex; flex-direction: column; gap: var(--spacing-md); } ⏎ .ampy-calc__lead-intro { color: var(--on-surface-text-muted); font-size: var(--fs-sm); } ⏎ .ampy-calc__lead-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); }",
+  "ctx": "led-kalkylator (styles.css:351-396). Finns även i: ev-kalkyl"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "268-274",
+  "status": "ok",
+  "sample": ".ampy-calc__tip { ⏎ width: 1.6rem; height: 1.6rem; border-radius: var(--radius-full); background: transparent; ⏎ border: 1px solid var(--border-default); color: var(--text-secondary); font-size: 1rem; font-weight: 700;",
+  "ctx": "led-kalkylator (styles.css:268-274 chip) + ev-kalkylator (pr"
+ },
+ {
+  "page": "verktyg",
+  "slug": "ev-kalkylator",
+  "file": "kallor/EV-Caluclator/prototype/styles.css",
+  "lines": "864-935",
+  "status": "ok",
+  "sample": ".ampy-calc__tip { ⏎ width: 1.6rem; height: 1.6rem; border-radius: var(--radius-full); ⏎ background: transparent; border: 1px solid var(--border-default);",
+  "ctx": "led-kalkylator (styles.css:268-274 chip) + ev-kalkylator (pr"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "file": "kallor/Led-kalkylator/styles.css",
+  "lines": "161-206",
+  "status": "ok",
+  "sample": ".ampy-calc__selector { position: relative; } ⏎ .ampy-calc__selector-button { ⏎ display: flex; align-items: center; gap: var(--spacing-md); width: 100%;",
+  "ctx": "led-kalkylator (styles.css:161-206). Finns även i: ev-kalkyl"
+ },
+ {
+  "page": "verktyg",
+  "slug": "energycalc",
+  "file": "kallor/Energycalc/vB/tool.css",
+  "lines": "467-491",
+  "status": "ok",
+  "sample": "/* share — DEMOTED to a quiet text-level action (R9); still a full ≥44px target */ ⏎ .share-wrap{position:relative;margin-top:var(--sp-1)} ⏎ .share-btn{display:block;width:100%;min-height:4.4rem;margin-top:0;border-radius:var(--r-md);",
+  "ctx": "energycalc (vB/tool.css:467-491). Finns även i: elcentral-ko"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "160-292",
+  "status": "ok",
+  "sample": ".ampy-ec__shell { ⏎ max-width: 128rem; /* Ampy container (1280px) — reduces edge whitespace on desktop */ ⏎ margin: 0 auto;",
+  "ctx": "elcentral-kollen (assets/elcentralkollen.css:160-292, \"1:1 m"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elkollen",
+  "file": "kallor/Elkollen/preview/hero.html",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "elcentral-kollen (assets/elcentralkollen.css:160-292, \"1:1 m"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "344-399",
+  "status": "ok",
+  "sample": ".ampy-ec__crumb { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); mar ⏎ .ampy-ec__crumb--result { justify-content: flex-start; gap: var(--space-7); } ⏎ .ampy-ec__crumb-left { display: inline-flex; align-items: center; }",
+  "ctx": "elcentral-kollen (elcentralkollen.css:344-399, 856-862). Fin"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "404-441",
+  "status": "ok",
+  "sample": ".ampy-ec__result-eyebrow { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-size: var(--fs-12); f ⏎  ⏎ .ampy-ec__dualstatus {",
+  "ctx": "elcentral-kollen (elcentralkollen.css:404-441 dualstatus, 42"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "428-440 (pill)",
+  "status": "ok",
+  "sample": ".ampy-ec__pill { ⏎ display: inline-flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "447-502 (fynd/factnote/akut)",
+  "status": "ok",
+  "sample": ".ampy-ec__findings-wrap { margin: 0 0 var(--rhythm-section); } ⏎ .ampy-ec__findings-headrow { display: flex; align-items: baseline; justify-content: space-between; g"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "ampy-tag",
+  "ref": "text.css, samma källa",
+  "ctx": "elcentral-kollen (elcentralkollen.css:404-441 dualstatus, 428-440 pill, 442 lede, 447-502 fynd/factnote/akut). Pillens fem nivåer är .ampy-tag (text.css, samma ",
+  "status": "slug utan repo-mappning (klass/ej källa)"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elkollen",
+  "file": "kallor/Elkollen/assets/behorighetskollen.css",
+  "lines": "1223-1290",
+  "status": "ok",
+  "sample": ".ampy-bk--hero .ampy-bk__block[data-verdict] { position: relative; overflow: hidden; } ⏎ .ampy-bk--hero .ampy-bk__block[data-verdict]::before { ⏎ content: '';",
+  "ctx": "elkollen (assets/behorighetskollen.css:1223-1290 board + was"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elkollen",
+  "file": "kallor/Elkollen/assets/behorighetskollen.css",
+  "lines": "417-433 (källrad)",
+  "status": "ok",
+  "sample": ".ampy-bk__verdict-src { ⏎ display: inline-flex;"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elkollen",
+  "file": "kallor/Elkollen/assets/behorighetskollen.css",
+  "lines": "438-473 (tabbar)",
+  "status": "ok",
+  "sample": ".ampy-bk__tabs { ⏎ display: flex;"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elkollen",
+  "file": "kallor/Elkollen/assets/behorighetskollen.css",
+  "lines": "488-560 (rader + caveat)",
+  "status": "ok",
+  "sample": " ⏎ .ampy-bk__summary {"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "stapel",
+  "ref": "behorighetskollen.css:340-411",
+  "ctx": "elkollen (assets/behorighetskollen.css:1223-1290 board + wash, 417-433 källrad, 438-473 tabbar, 488-560 rader + caveat). GUL finns i CSS:en men ingen data använ",
+  "status": "slug utan repo-mappning (klass/ej källa)"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "464-488",
+  "status": "ok",
+  "sample": "/* ---- Foldable finding row (v2.21) ---------------------------------------------------------- ⏎ Every finding keeps its own always-visible row: icon + name. Only the explanation folds, so the ⏎ besked is scannable on a phone without a single finding leaving the DOM. Replaces the old",
+  "ctx": "elcentral-kollen (elcentralkollen.css:464-488 fynd, 618-633 "
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "618-633 (dela)",
+  "status": "ok",
+  "sample": "/* Share */ ⏎ .ampy-ec__share-anchor { position: relative; display: inline-flex; align-items: center; }"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "593-604 (sticky)",
+  "status": "ok",
+  "sample": ".ampy-ec__stickycta { ⏎ position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css",
+  "lines": "687-840",
+  "status": "ok",
+  "sample": ".ampy-ec[data-layout=\"block\"] { ⏎ /* Self-contained band: works full-bleed (Bricks full-width section) AND inside a 1280 container. */ ⏎ /* Tone matched to the host page: /elservice/elcentral/ paints its tinted sections rgb(245,249,255).",
+  "ctx": "elcentral-kollen (elcentralkollen.css:687-840, preview/block"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "file": "kallor/Elcentral-lead-magnet/preview/block.html",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "elcentral-kollen (elcentralkollen.css:687-840, preview/block"
+ },
+ {
+  "page": "block",
+  "slug": "rot-gt-cro",
+  "file": "kallor/ROT-GT-CRO-/designs/d2-kvittot-forst.html",
+  "lines": "163-217",
+  "status": "ok",
+  "sample": ".av-steps { --av-sgap: clamp(32px, 3.1vw, 44px); list-style: none; display: flex; flex-direction: column; gap: ⏎ /* Optisk linjering (sprint 2026-08-15): cirkelns mitt = H3:ns första radmitt, EXAKT vid ⏎ varje viewport — --av-nmt räknas ur H3:ns verkliga radhöjd i st.f. ett gissat fast avdrag",
+  "ctx": "rot-gt-cro (designs/d2-kvittot-forst.html:163-217, variant F"
+ },
+ {
+  "page": "block",
+  "slug": "rot-gt-cro",
+  "file": "kallor/ROT-GT-CRO-/designs/d2-kvittot-forst.html",
+  "lines": "220-300",
+  "status": "ok",
+  "sample": "/* symmetrisk vertikal padding, 8-bas-ändpunkter (spacing P2-7 + P2-12) */ ⏎ --av-panel-pad-x: clamp(24px, 2.2vw, 32px); ⏎ position: relative;",
+  "ctx": "rot-gt-cro (designs/d2-kvittot-forst.html:220-300, auktorite"
+ },
+ {
+  "page": "block",
+  "slug": "rot-gt-cro",
+  "file": "kallor/ROT-GT-CRO-/designs/d2-kvittot-forst.html",
+  "lines": "94-135",
+  "status": "ok",
+  "sample": "container-blindheten som gav vansterspalten 363px mot panelens 456px @1024. */ ⏎ container-type: inline-size; container-name: rotblk; ⏎ background: #fff; border: 1px solid var(--av-line);",
+  "ctx": "rot-gt-cro (designs/d2-kvittot-forst.html:94-135 .av-block +"
+ },
+ {
+  "page": "block",
+  "slug": "testimonials-block",
+  "file": "kallor/Testimonials-block/delivery/ampy-testimonials.css",
+  "lines": "41-98",
+  "status": "ok",
+  "sample": ".ampy-testimonials .att-slider .splide__track { overflow: visible; } ⏎ .ampy-testimonials .att-slider { padding-bottom: var(--apspace-2xs, 0.9rem); } ⏎ .ampy-testimonials .splide__list { align-items: stretch; }",
+  "ctx": "testimonials-block (delivery/ampy-testimonials.css:41-98, V1"
+ },
+ {
+  "page": "block",
+  "slug": "certificates",
+  "file": "kallor/Certificates/delivery/dist/ampy-certificates.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "certificates (delivery/dist/ampy-certificates.css, v2, aukto"
+ },
+ {
+  "page": "block",
+  "slug": "eljour-block",
+  "file": "kallor/Eljour-block/index.html",
+  "lines": "12-140",
+  "status": "ok",
+  "sample": ":root { ⏎ --bg:#f5f9ff; --surface:#ffffff; --ink:#090b32; --ink-body:#3b3f59; --ink-soft:#5f6480; ⏎ --teal:#00a991; --teal-dark:#0a8f7c; --teal-pill:#0a6e58; --teal-tint:#e3f6f1; --line:#e6ecf6;",
+  "ctx": "eljour-block (index.html:12-140, \"sajtens bästa block 23/25\""
+ },
+ {
+  "page": "block",
+  "slug": "eljour-sticky-bar",
+  "file": "kallor/Eljour-sticky-bar/dist/ampy-callbar.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "eljour-sticky-bar (dist/ampy-callbar.css, M1 ring låst, aukt"
+ },
+ {
+  "page": "block",
+  "slug": "main-cta",
+  "file": "kallor/Main_CTA/delivery/ampy-main-cta.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "main-cta (delivery/ampy-main-cta.css, version B låst, auktor"
+ },
+ {
+  "page": "block",
+  "slug": "website-blocks",
+  "file": "kallor/Website-blocks/Header/index.html",
+  "lines": "20-140",
+  "status": "ok",
+  "sample": "Tokens = Ampy production. Prototype loads Outfit via Google Fonts (prod self-hosts). ⏎ ============================================================================ */ ⏎ :root{",
+  "ctx": "website-blocks (Header/index.html:20-140, header godkänd, au"
+ },
+ {
+  "page": "block",
+  "slug": "website-blocks",
+  "file": "assets/header.css",
+  "lines": "",
+  "status": "FIL SAKNAS",
+  "ctx": "website-blocks (Header/index.html:20-140, header godkänd, auktoritet 1; CSS:en ä"
+ },
+ {
+  "page": "block",
+  "slug": "footer-cro",
+  "file": "kallor/Footer-CRO-/css/baseline.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "footer-cro (css/baseline.css, 42 av 42 computed values ident"
+ },
+ {
+  "page": "block",
+  "slug": "hero-1",
+  "file": "kallor/Hero-1/assets/style.css",
+  "lines": "40-60",
+  "status": "ok",
+  "sample": "font-size: clamp(36px, 4.6vw, 60px); ⏎ line-height: 1.07; ⏎ font-weight: 700;",
+  "ctx": "hero-1 (assets/style.css:40-60, 190-265, auktoritet 1). Finn"
+ },
+ {
+  "page": "block",
+  "slug": "ampy-frame",
+  "ref": "ytor.css",
+  "ctx": "hero-1 (assets/style.css:40-60, 190-265, auktoritet 1). Finns även i: live site-css .home-hero__* (= Hero-1 installerad), picasso hero/ampy. Ramen = S2:s .ampy-",
+  "status": "slug utan repo-mappning (klass/ej källa)"
+ },
+ {
+  "page": "block",
+  "slug": "ampy-proof",
+  "ref": "text.css",
+  "ctx": "hero-1 (assets/style.css:40-60, 190-265, auktoritet 1). Finns även i: live site-css .home-hero__* (= Hero-1 installerad), picasso hero/ampy. Ramen = S2:s .ampy-",
+  "status": "slug utan repo-mappning (klass/ej källa)"
+ },
+ {
+  "page": "block",
+  "slug": "hero-2-alternatives",
+  "file": "kallor/Hero_2-alternatives/dist/ampy-hero-primitives.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "hero-2-alternatives (dist/ampy-hero-primitives.css + ampy-he"
+ },
+ {
+  "page": "block",
+  "slug": "hero-2-alternatives",
+  "file": "kallor/Hero_2-alternatives/dist/ampy-hero-s.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "hero-2-alternatives (dist/ampy-hero-primitives.css + ampy-he"
+ },
+ {
+  "page": "block",
+  "slug": "mini-menu",
+  "file": "kallor/mini-menu/fluentsnippets/ampy-elfirma.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "mini-menu (fluentsnippets/ampy-elfirma.css, levererad och in"
+ },
+ {
+  "page": "block",
+  "slug": "fore-efter-cro",
+  "file": "kallor/f-re-efter-CRO-/dist/01-fore-efter.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "fore-efter-cro (dist/01-fore-efter.css, riktning A \"Reglaget"
+ },
+ {
+  "page": "block",
+  "slug": "fotobedomningen",
+  "file": "kallor/Fotobed-mning-CRO-/v2/dist/afk-styles.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "fotobedomningen (v2/dist/afk-styles.css, v2 byggd, auktorite"
+ },
+ {
+  "page": "block",
+  "slug": "visste-du-att",
+  "file": "visste-du-att.css",
+  "lines": "",
+  "status": "FIL SAKNAS",
+  "ctx": "visste-du-att (visste-du-att.css + Bricks paste-JSON, slutaudit GO, auktoritet 2"
+ },
+ {
+  "page": "block",
+  "slug": "article-template",
+  "file": "kallor/ampy-article-template/handover-ampy-tabell/ampy-tabell.css",
+  "lines": "",
+  "status": "ok",
+  "sample": "(ingen rad angiven)",
+  "ctx": "article-template (src/ + handover-ampy-tabell/ampy-tabell.cs"
+ }
+]

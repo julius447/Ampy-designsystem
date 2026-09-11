@@ -1,0 +1,43 @@
+{
+ "sidor": 26,
+ "referenser": 2089,
+ "trasiga": 5,
+ "saknadeAnkare": 26,
+ "externaHref": 27,
+ "navAvvikelser": 0,
+ "platshallare": 0,
+ "imgUtanAlt": 0,
+ "tokenDiff": {
+  "live": 101,
+  "tokens": 118,
+  "ampy": 134,
+  "saknade": 0,
+  "avviker": 1,
+  "extra": 17
+ },
+ "fargSida": {
+  "swatchar": 42,
+  "kontroller": 199,
+  "avvikelser": 0
+ },
+ "kanon": {
+  "pastaenden": 71,
+  "ok": 65,
+  "filSaknas": 2,
+  "utanRad": 12,
+  "ejKalla": 4
+ },
+ "css": {
+  "deklarationer": 5736,
+  "selektorerIFleraFiler": 2,
+  "konflikter": 0,
+  "klassnamnIFleraFiler": 21
+ },
+ "kontrast": {
+  "sidor": 26,
+  "textnoder": 9322,
+  "underkanda": 14,
+  "tealSomText": 5,
+  "okandYta": 270
+ }
+}

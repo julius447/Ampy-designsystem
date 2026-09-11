@@ -1,0 +1,379 @@
+{
+ "rader": 55,
+ "avvikelser": [
+  {
+   "token": "--ampy-bg-page",
+   "typ": "pekar≠värde",
+   "sida": "--apsky-mist",
+   "tokens": "var(--apsky-mist)"
+  },
+  {
+   "token": "--ampy-bg-surface",
+   "typ": "pekar≠värde",
+   "sida": "--appure-white",
+   "tokens": "var(--appure-white)"
+  },
+  {
+   "token": "--ampy-bg-subtle",
+   "typ": "pekar≠värde",
+   "sida": "--apsky-mist",
+   "tokens": "var(--apsky-mist)"
+  },
+  {
+   "token": "--ampy-bg-dark",
+   "typ": "pekar≠värde",
+   "sida": "--apmidnight-blue",
+   "tokens": "var(--apmidnight-blue)"
+  },
+  {
+   "token": "--ampy-ink",
+   "typ": "pekar≠värde",
+   "sida": "--apmidnight-blue",
+   "tokens": "var(--apmidnight-blue)"
+  },
+  {
+   "token": "--ampy-ink-body",
+   "typ": "pekar≠värde",
+   "sida": "--apmidnight-blue",
+   "tokens": "var(--apmidnight-blue)"
+  },
+  {
+   "token": "--ampy-ink-muted",
+   "typ": "pekar≠värde",
+   "sida": "--apnavy-muted",
+   "tokens": "var(--apnavy-muted)"
+  },
+  {
+   "token": "--ampy-ink-faint",
+   "typ": "pekar≠värde",
+   "sida": "--apnavy-faint",
+   "tokens": "var(--apnavy-faint)"
+  },
+  {
+   "token": "--ampy-ink-on-action",
+   "typ": "pekar≠värde",
+   "sida": "--apindigo",
+   "tokens": "var(--apindigo)"
+  },
+  {
+   "token": "--ampy-on-dark",
+   "typ": "pekar≠värde",
+   "sida": "--appure-white",
+   "tokens": "var(--appure-white)"
+  },
+  {
+   "token": "--ampy-action",
+   "typ": "pekar≠värde",
+   "sida": "--apteal-core",
+   "tokens": "var(--apteal-core)"
+  },
+  {
+   "token": "--ampy-action-strong",
+   "typ": "pekar≠värde",
+   "sida": "--apteal-deep",
+   "tokens": "var(--apteal-deep)"
+  },
+  {
+   "token": "--ampy-action-on",
+   "typ": "pekar≠värde",
+   "sida": "--appure-white",
+   "tokens": "var(--appure-white)"
+  },
+  {
+   "token": "--ampy-action-gradient-on",
+   "typ": "pekar≠värde",
+   "sida": "--apindigo",
+   "tokens": "var(--apindigo)"
+  },
+  {
+   "token": "--ampy-success",
+   "typ": "pekar≠värde",
+   "sida": "--apemerald-flow",
+   "tokens": "var(--apemerald-flow)"
+  },
+  {
+   "token": "--ampy-success-ink",
+   "typ": "pekar≠värde",
+   "sida": "--apverdict-green",
+   "tokens": "var(--apverdict-green)"
+  },
+  {
+   "token": "--ampy-warn",
+   "typ": "pekar≠värde",
+   "sida": "--apamber",
+   "tokens": "var(--apamber)"
+  },
+  {
+   "token": "--ampy-warn-ink",
+   "typ": "pekar≠värde",
+   "sida": "--apverdict-amber",
+   "tokens": "var(--apverdict-amber)"
+  },
+  {
+   "token": "--ampy-warn-tint",
+   "typ": "pekar≠värde",
+   "sida": "--apamber-tint",
+   "tokens": "var(--apamber-tint)"
+  },
+  {
+   "token": "--ampy-error",
+   "typ": "pekar≠värde",
+   "sida": "--apsignal-red",
+   "tokens": "var(--apsignal-red)"
+  },
+  {
+   "token": "--ampy-error-ink",
+   "typ": "pekar≠värde",
+   "sida": "--apverdict-red",
+   "tokens": "var(--apverdict-red)"
+  },
+  {
+   "token": "--ampy-error-tint",
+   "typ": "pekar≠värde",
+   "sida": "--apsignal-red-tint",
+   "tokens": "var(--apsignal-red-tint)"
+  },
+  {
+   "token": "--ampy-info-ink",
+   "typ": "pekar≠värde",
+   "sida": "--apverdict-blue",
+   "tokens": "var(--apverdict-blue)"
+  },
+  {
+   "token": "--ampy-focus",
+   "typ": "pekar≠värde",
+   "sida": "--apmidnight-blue",
+   "tokens": "var(--apmidnight-blue)"
+  },
+  {
+   "token": "--ampy-focus-on-dark",
+   "typ": "pekar≠värde",
+   "sida": "--apneon-mint",
+   "tokens": "var(--apneon-mint)"
+  },
+  {
+   "token": "--ampy-on-dark",
+   "typ": "pekar≠värde",
+   "sida": "#ffffff",
+   "tokens": "var(--appure-white)"
+  },
+  {
+   "token": "--ampy-on-dark",
+   "typ": "källa≠kommentar",
+   "sida": "midnight",
+   "tokens": "hero-1 (h1 vit), LED (--text-inverse), visste-du-att, testimonials = 14+ källor"
+  },
+  {
+   "token": "--ampy-on-dark",
+   "typ": "drift≠kommentar",
+   "sida": "#ffffff19,00:1",
+   "tokens": "#dbe3ec hero-2-alternatives --ap-ink (~13:1)"
+  },
+  {
+   "token": "--ampy-on-dark-soft",
+   "typ": "källa≠kommentar",
+   "sida": "midnight",
+   "tokens": "hero-1 (style.css:234 lead .92) + hero-2-alternatives (lead .92) + main-form (.96 på foto)"
+  },
+  {
+   "token": "--ampy-on-dark-soft",
+   "typ": "drift≠kommentar",
+   "sida": "#ebebef16,03:1",
+   "tokens": ".95 testimonials korttext, .94 LED lead-etiketter, #c9d4e0 hero-2 crumbs"
+  },
+  {
+   "token": "--ampy-on-dark-muted",
+   "typ": "källa≠kommentar",
+   "sida": "midnight",
+   "tokens": "led-kalkylator (styles.css:31 --on-surface-text-muted) + ev-kalkylator + battery, 8,44:1"
+  },
+  {
+   "token": "--ampy-on-dark-muted",
+   "typ": "drift≠kommentar",
+   "sida": "#abacb98,45:1",
+   "tokens": ".82 visste-du-att brödtext, .72 testimonials datum, #aeb8d4 energycalc"
+  },
+  {
+   "token": "--ampy-on-dark-faint",
+   "typ": "källa≠kommentar",
+   "sida": "midnight",
+   "tokens": "led-kalkylator (styles.css:32 --on-surface-text-faint, höjd från .42 efter WCAG) + ev + te"
+  },
+  {
+   "token": "--ampy-on-dark-faint",
+   "typ": "drift≠kommentar",
+   "sida": "#9091a36,13:1",
+   "tokens": ".42 battery (3,99:1 underkänd), .70 rot-gt finstilt, #8a93b5 energycalc"
+  },
+  {
+   "token": "--ampy-on-dark-line",
+   "typ": "källa≠kommentar",
+   "sida": "midnight",
+   "tokens": "led-kalkylator (styles.css:33 --on-surface-border hr) + hero-2-alternatives (--ap-hairline"
+  },
+  {
+   "token": "--ampy-on-dark-line",
+   "typ": "drift≠kommentar",
+   "sida": "#2b2d4f1,44:1",
+   "tokens": ".12 energycalc --bd-dark, .16 rot-gt/energycalc trust, .18 rot-gt panel"
+  },
+  {
+   "token": "--ampy-on-dark-subtle",
+   "typ": "källa≠kommentar",
+   "sida": "midnight",
+   "tokens": "led-kalkylator (styles.css:35 jämförelsespår) + ev-kalkylator (monthly-panel/lead-form .06"
+  },
+  {
+   "token": "--ampy-on-dark-subtle",
+   "typ": "drift≠kommentar",
+   "sida": "#181a3e1,13:1",
+   "tokens": ".08 EV stapelspår/rot-gt totalplatta, .02/.04 energycalc"
+  },
+  {
+   "token": "--ampy-line",
+   "typ": "källa≠kommentar",
+   "sida": "vit",
+   "tokens": "var-process-cro (v2/ampy-process.css:16 \"blockets ENDA hairline\") + led-kalkylator (styles"
+  },
+  {
+   "token": "--ampy-line-strong",
+   "typ": "källa≠kommentar",
+   "sida": "vit",
+   "tokens": "booking-confirmation (shared.css:42 --line-strong, kontrollkanter WCAG 1.4.11 -> 3,39:1)"
+  },
+  {
+   "token": "--ampy-line-strong",
+   "typ": "drift≠kommentar",
+   "sida": "#898a9d3,40:1",
+   "tokens": "#5f6480 fotobedomningen (kontrollkant 5,80:1), #e3e5ed elkollen/elcentral inputs (1,26:1 u"
+  },
+  {
+   "token": "--ampy-bg-tint-action",
+   "typ": "källa≠kommentar",
+   "sida": "vit",
+   "tokens": "elkollen (roomtile-chip .08) + thank-you (ghost hover .08) + booking/offer (pill .08) + we"
+  },
+  {
+   "token": "--ampy-bg-tint-action",
+   "typ": "drift≠kommentar",
+   "sida": "#ebf8f61,09:1",
+   "tokens": "solid --apteal-tint #e3f6f1 (eljour-familjen), #e0f5f2 (rot-gt/booking)"
+  },
+  {
+   "token": "--ampy-bg-glass",
+   "typ": "källa≠kommentar",
+   "sida": "sky-mist",
+   "tokens": "thank-you (v1/styles.css:40 glaskort)"
+  },
+  {
+   "token": "--ampy-bg-glass",
+   "typ": "drift≠kommentar",
+   "sida": "#fcfdff1,04:1",
+   "tokens": ".74 offer-accepted, .85 utan blur booking, rgba(255,255,255,.16) website-blocks go-cirkel."
+  },
+  {
+   "token": "--ampy-bg-glass-dark",
+   "typ": "källa≠kommentar",
+   "sida": "vit",
+   "tokens": "fore-efter-cro (dist/01:~206-215 chip/ledtråd)"
+  },
+  {
+   "token": "--ampy-bg-glass-dark",
+   "typ": "drift≠kommentar",
+   "sida": "#35375711,44:1",
+   "tokens": "hero-2-form #090b32 + 156.51deg -> #5eb1bf .76 (underkänd, kant 1,2:1)"
+  }
+ ],
+ "saknasITabellen": [
+  "--ampy-radius-small",
+  "--ampy-radius-field",
+  "--ampy-radius-button",
+  "--ampy-radius-card",
+  "--ampy-radius-card-lg",
+  "--ampy-radius-pill",
+  "--ampy-shadow-subtle",
+  "--ampy-shadow-card",
+  "--ampy-shadow-raised",
+  "--ampy-shadow-button",
+  "--ampy-shadow-button-hover",
+  "--ampy-shadow-button-ring",
+  "--ampy-shadow-glow-action",
+  "--ampy-shadow-photo",
+  "--ampy-scrim-hero",
+  "--ampy-scrim-strong",
+  "--ampy-scrim-light",
+  "--ampy-aurora-light",
+  "--ampy-dur-fast",
+  "--ampy-dur-base",
+  "--ampy-dur-slow",
+  "--ampy-ease",
+  "--ampy-ease-out",
+  "--ampy-lift",
+  "--ampy-hover-filter",
+  "--ampy-font",
+  "--ampy-text-display",
+  "--ampy-text-h1",
+  "--ampy-text-h2",
+  "--ampy-text-h3",
+  "--ampy-text-lead",
+  "--ampy-text-body",
+  "--ampy-text-small",
+  "--ampy-text-eyebrow",
+  "--ampy-text-number",
+  "--ampy-text-label",
+  "--ampy-text-button",
+  "--ampy-w-display",
+  "--ampy-w-heading",
+  "--ampy-w-strong",
+  "--ampy-w-medium",
+  "--ampy-w-ui",
+  "--ampy-w-body",
+  "--ampy-lh-display",
+  "--ampy-lh-heading",
+  "--ampy-lh-h3",
+  "--ampy-lh-lead",
+  "--ampy-lh-body",
+  "--ampy-lh-ui",
+  "--ampy-lh-tight",
+  "--ampy-ls-display",
+  "--ampy-ls-heading",
+  "--ampy-ls-number",
+  "--ampy-ls-eyebrow",
+  "--ampy-ls-button",
+  "--ampy-measure",
+  "--ampy-measure-lead",
+  "--ampy-container",
+  "--ampy-container-text",
+  "--ampy-gutter",
+  "--ampy-bp-lg",
+  "--ampy-bp-md",
+  "--ampy-bp-sm",
+  "--ampy-bp-xl",
+  "--ampy-space-4xs",
+  "--ampy-space-3xs",
+  "--ampy-space-2xs",
+  "--ampy-space-xs",
+  "--ampy-space-s",
+  "--ampy-space-m",
+  "--ampy-space-l",
+  "--ampy-space-xl",
+  "--ampy-space-2xl",
+  "--ampy-space-3xl",
+  "--ampy-space-4xl",
+  "--ampy-space-section-y",
+  "--ampy-space-section-x",
+  "--ampy-space-card",
+  "--ampy-space-card-lg",
+  "--ampy-space-stack-xs",
+  "--ampy-space-stack-sm",
+  "--ampy-space-stack",
+  "--ampy-space-stack-lg",
+  "--ampy-space-stack-xl",
+  "--ampy-space-inline-xs",
+  "--ampy-space-inline-sm",
+  "--ampy-space-inline",
+  "--ampy-space-inline-lg",
+  "--ampy-space-gap",
+  "--ampy-space-gap-lg"
+ ]
+}

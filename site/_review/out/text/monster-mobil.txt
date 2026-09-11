@@ -1,0 +1,92 @@
+MÖNSTER
+Mobil 390
+
+Mobilen läggs om, den skalas inte ned. Reglerna nedan är hämtade ur de byggda blocken: vad som byter ordning, vad som staplas, vad som kollapsar och vad som aldrig får bli mindre än tummen.
+
+Inventeringarna (inventering/*.md, mätningar vid 390 med getComputedStyle), .claude/skills/ampy-wireframe-ux/SKILL.md §3 (mobilomläggningen per familj), ampy-foretagsdata.md §9.5 (brytpunkter 992 / 768 / 480), sticky-barens leverans (tap-centrum), tokens.css (44 px-golvet finns inte som token: det står i koden i elcentral, eljour, sticky-bar, testimonials, fotobedömningen).
+
+Reglerna
+Omlagd, inte skalad
+kalkylatorkitet, hero-2, avdragsblocket
+
+Det mörka resultatkortets glöd är kalibrerad för en 600 px-panel; sträckt över en telefon blir den en lerig wash. Glöden ankras om bakom siffran. Hero-2 lägger bilden bakom texten och byter till den bastanta scrimmen. Avdragsblocket centrerar H2:n och släpper nowrap på accenten så raderna balanserar.
+
+Stapelordning: det som bär budskapet först
+CTA-bandet, visste-du-att, eljour, hero-2 Z, kalkylatorn
+
+CTA-bandet lägger porträttet överst (order -1) och centrerar texten. Visste-du-att lägger lampan överst. Eljour lägger samtalskortet över listan och flyttar källraden under listan. Hero-2 Z lägger formkortet under texten. Kalkylatorn lägger inputkortet först och resultatet under; diagnostiken lägger railens innehåll via display: contents och order runt scenen.
+
+Chips och pillar radbryter, klär aldrig av sig
+kvittopanelen, fotobedömningen, segmentet, energycalcs byggår
+
+Under 400 px panelbredd byter kvittoraderna till etikett över värde, etiketten kliver in i caps-rollen (13 / 700) och pillarna förblir pillar. Byggårssegmentet radbryter med flex 1 1 30 %. En chip som blir ren text på mobil har tappat sin roll.
+
+Sticky CTA-kollaps: två blir en
+diagnostikens rail, eljour + sticky-bar, elcentral __stickycta
+
+Railens två telefon-CTA:er kollapsar till EN sticky "Ring / Kontakta" på mobil; beskedets egen CTA blir den andra, aldrig en tredje knapp i stapel. Eljour-sidan: sticky-baren bär ring-knappen (kanon), symptomblocket bär nödknappen; två CTA-språk i samma viewport är en dokumenterad defekt att lösa (B6). Baren är 83 px hög med tap-centrum 45 px från underkanten (iOS gestremsa), body får bottenpaddingen server-side så inträdet inte ger layoutskift.
+
+44 px är golvet för allt som trycks
+testimonials prickar, symptomrader 60, "Se fler" 55, reglage 44, tel-länk 43,75, ikonknappar 44 x 44, TOC-länkar
+
+Träffytan får vara osynlig (prickarnas ::before -12 px, telefonlänkens padding 11 px med negativ margin) men aldrig mindre än 44 px. Rader i listor är 60 till 68 px. Under pointer:coarse växer mega-menyns länkar till 12 px vertikal padding. Ingen träffyta får styra layouten av misstag (footerns sociala ankare gav 201 px kolumnhöjd).
+
+Text går aldrig under 12 px, fält aldrig under 16
+testimonials datum 10,1 (defekt), footer copyright 10,1 (defekt), elcentral 13 meta, inputs 16 (iOS-golv)
+
+--aptext-xs ger 10,1 px på 390; eyebrow-rollen är därför 12 px fast. Inputs är minst 16 px så iOS inte zoomar. Brödtexten är 16,1 px (body-token), inte live-temats 14,1 (B20).
+
+Knappen blir full bredd, chippen till höger
+ring-knappens --block, avdragsblockets CTA under 430, eljours nödknapp, CTA-bandet
+
+Text vänster, ikon höger (live-blockets grammatik). Etiketten får radbryta (text-wrap balance, lh 1.25) i stället för att skjuta ut ur gradienten (uppmätt -15 px på 320 i D2 före fixen). Hero-1 skalar knappen till 52 h / 15 px, en dokumenterad avvikelse mot CTA-kanon 58.
+
+Proof-raden blir kolumn, sliders blir 1-upp, grid blir stack
+hero-1 proof under 560, testimonials under 759, certifikat under 900, mini-menu under 767, prefooter 5 till 2 till 1
+
+Separatorn försvinner när raden blir kolumn (proof), subline döljs (testimonials), gradienten vrids så ljusänden hamnar bakom korten (certifikat). Brytpunkterna är 992 / 768 / 480; blocken mäter helst mot sin egen bredd (@container) så de överlever en smal Bricks-kolumn.
+
+Header: bar 66, drawer från höger, mega bort
+website-blocks under 992, logo 100 under 560, CTA 42 h
+
+Nav-länkarna döljs, burgaren visas, CTA:n behåller solid teal men krymper till 42 h. Drawern är ett vitt högerark 440 med "MENY"-eyebrow, platta accordions och en teal foot-CTA 56 h. Brytpunktstrappan går ned till 339 px.
+
+Kort kant i kant är undantag, inte regel
+vår process under 479 (radie 0), övriga 10 till 16 px marginal
+
+Blocket får gå kant i kant när det är ett dokumentkort som ska läsas, inte när det är ett kort i ett band. Heros behåller 8 px och radie 18.
+
+Rörelse och fixed på mobil
+sticky-bar 180 ms in, 0 ms ut vid tangentbord, ingen translateY på bottenremsa, reduced-motion släcker allt
+
+En bar som glider in under en tumme får aldrig ringa ett samtal (400 ms kall period). Tangentbordet uppe: baren försvinner utan animation. Hover finns inte: bara (hover:hover) and (pointer:fine) får hover-koreografi, annars fastnar den efter tap.
+
+Sida vid sida: 1440 och 390
+
+Samma block, mätt i källorna. Titta på vad som byter plats, inte på vad som blir mindre.
+
+CTA-bandet: porträttet överst, knappen full bredd med chippen höger
+1440: text vänster, porträtt 320 x 366 höger, chip vänster i knappen.
+390: bild överst (292 px), rubrik 24 centrerad, knapp 100 procent.
+Diagnostiken: railen runt scenen, sticky CTA i botten
+1440: rail 44fr med två CTA:er, scen 56fr.
+390: display contents + order, sticky-CTA 77 h.
+Kalkylatorn: inputkortet först, glöden omjusterad
+1440: 5fr / 7fr, glöden uppe till höger i resultatkortet.
+390: en kolumn; källan har 20 px padding överallt och kant i kant (drift).
+Eljour: kortet över listan, puls på knappen bara här
+1440: 4fr / 6fr, ingen puls på knappen (statuspillen pulserar).
+390: sticky ring-bar 83 px i botten, tap-centrum 45 px.
+Hero-2: bilden bakom texten, bastant scrim
+1440: fullbredds-foto, CTA + ghost-pill.
+390: kort 374 x 754, stack centrerad med 7vh bias.
+Header: bar 66 och drawer
+1440: 76 px bar, mega-ark i samma färg.
+390: 66 px bar, Evify-drawer, foot-CTA 56 h.
+Checklista före leverans (mobil)
+node tools/shot.mjs desktop + mobil: overflowX: false, errors: []. Sidan scrollar aldrig i sidled.
+Alla träffytor minst 44 px; text minst 12 px; fält minst 16 px.
+Blocket bryter mot sin egen bredd (@container) med @media-fallback för Safari under 16.
+Fixed element: server-printad body-padding, pixellåst höjd, ingen will-change i vila.
+reduced-motion släcker även pseudoelementens animationer (animation ärvs inte, ett bart * når aldrig ::after).
+En öppen panel i taget, stängda paneler inert, fokus flyttas dit det hör hemma.

@@ -1,0 +1,251 @@
+GRUNDER
+Spacing och layout
+
+Elva steg som Bricks redan kör live, behållna värde för värde och speglade i px så att de är oberoende av rotstorleken. Sektion är 2xl, kort är m, stack är s. Container 1280, men fullbredd är tillåten.
+
+konsolidering/spacing.md + spacing.json (apspace-referenser i 30 inventerings-JSON, 17 uppmätta sektionspaddingar i 13 källor, 80 containerrader, 55 brytpunktsvärden), system/tokens.css (varje roll bär källa och drift). Px vid 390 / 768 / 1440 är mätta i Chromium av konsolidering/_probes/06-smoke-matt.mjs; "på den här sidan" räknas av sidans eget skript.
+
+Skalan
+
+Lager 1 är --apspace-4xs till --apspace-4xl ur global-variables.css, rem-clamp mellan 320 och 1280 px. Lager 2 (--ampy-space-*) har samma värden som px-clamp. Stapeln är tokenens värde i din viewport just nu; siffran till höger om stapeln mäts på sidan. Meta visar px vid 390 / 768 / 1440 och hur många källor som refererar steget (grå stapel = definierad men utan användning).
+
+4xs--apspace-4xs
+--ampy-space-4xs
+5,2 px
+4,9 / 5,0 / 5,2 px
+1 källa: footer-cro (bar-padding)
+var trasig live (min > max, låst på 5,19 px); rättad i tokens.css lager 1b till 4,9 till 5,2
+3xs--apspace-3xs
+--ampy-space-3xs
+7 px
+6,6 / 6,8 / 7 px
+2 källor: footer-cro (li-padding), testimonials-block
+2xs--apspace-2xs
+--ampy-space-2xs
+9,9 px
+8,3 / 9,0 / 9,9 px
+7 källor: footer-cro, fore-efter-cro, main-form, picasso, testimonials-block, thank-you, var-process-cro
+xs--apspace-xs
+--ampy-space-xs
+14 px
+10,5 / 12,0 / 14 px
+5 källor: certificates, footer-cro, fore-efter-cro, picasso, testimonials-block
+s--apspace-s
+--ampy-space-s
+19,8 px
+13,3 / 16,1 / 19,8 px
+9 källor: certificates, footer-cro, fore-efter-cro, live-ampy-se, picasso, rot-gt-cro, testimonials-block, thank-you, visste-du-att
+m--apspace-m
+--ampy-space-m
+28 px
+16,9 / 21,6 / 28 px
+9 källor: certificates, footer-cro, fore-efter-cro, live-ampy-se, picasso, rot-gt-cro, testimonials-block, thank-you, visste-du-att
+l--apspace-l
+--ampy-space-l
+39,6 px
+21,5 / 29,2 / 39,6 px
+7 källor: footer-cro, fore-efter-cro, live-ampy-se (.brxe-section), picasso, rot-gt-cro, testimonials-block, visste-du-att
+xl--apspace-xl
+--ampy-space-xl
+56 px
+27,3 / 39,5 / 56 px
+6 källor: certificates, footer-cro, live-ampy-se, rot-gt-cro, testimonials-block, visste-du-att
+2xl--apspace-2xl
+--ampy-space-2xl
+79,2 px
+34,8 / 53,6 / 79,2 px
+6 källor: certificates, footer-cro, fore-efter-cro, testimonials-block, var-process-cro, visste-du-att
+3xl--apspace-3xl
+--ampy-space-3xl
+111,9 px
+44,4 / 73,1 / 111,9 px
+2 källor: live-ampy-se (ROT-kortets padding), rot-gt-cro
+4xl--apspace-4xl
+--ampy-space-4xl
+158,3 px
+56,8 / 99,8 / 158,3 px
+0 källor: definierad i global-variables.css, refereras inte av något block
+behålls för skalans skull
+Rollerna
+
+Lager 2 ger stegen namn efter vad de gör. Ingen roll har ett eget värde: alla pekar tillbaka på ett steg i skalan. Sektion = 2xl vann över xl på antal källor av auktoritet 1 (3 mot 2, BEVIS.md punkt 7).
+
+ROLL	TOKEN	STEG (PX 1440 / 390)	KÄLLA	DRIFT
+Sektion och container
+Sektion vertikalt	--ampy-space-section-y	2xl (79,2 / 34,8)	testimonials, visste-du-att, fore-efter, footer, certificates live (5; 3 auk 1)	xl 56 (certificates v2, prefooter, main-cta, elcentral, var-process); l 39,6 (theme .brxe-section); 64/28 eljour; 110/64 mini-menu; 60/0 main-form; 40/48 fotobedomningen
+Sektion horisontellt (gutter)	--ampy-space-section-x
+= --ampy-gutter	l (39,6 / 21,5)	theme-style .brxe-section, visste-du-att, footer	m 28 testimonials; 40/16 eljour, main-cta, elcentral; 28/16 header; 24 mini-menu, energycalc; 15/10 LED
+Kort
+Kortpadding	--ampy-space-card	m (28 / 16,9)	testimonials kort, eljour (28/20), live testimonials, certificates inner	20 LED inputkort, EV; 32 elcentral, elkollen, energycalc; 40 LED resultat; 24 mini-menu, booking; 79 visste-du-att
+Kortpadding stort	--ampy-space-card-lg	l (39,6 / 21,5)	LED resultatkort 40, energycalc 40 vid 1200 och uppåt, var-process 40	56 GT-kort (xl); 112 ROT-kort (3xl); 52/56 thank-you
+Stack (vertikalt mellan syskon)
+Stack xs	--ampy-space-stack-xs	2xs (9,9 / 8,3)	testimonials h2 till subline, thank-you ghost, var-process 10 "inom grupp", energycalc label till kontroll 8	
+Stack sm	--ampy-space-stack-sm	xs (14 / 10,5)	certificates h2 till p, energycalc head till innehåll 16, hero-1 h1 till lead 18	
+Stack	--ampy-space-stack	s (19,8 / 13,3)	thank-you rubrik till ingress, visste-du-att innehållsgap, testimonials kortkropp, eljour inre gap 16	24 thank-you kort-gap; 20 var-process syskon
+Stack lg	--ampy-space-stack-lg	l (39,6 / 21,5)	testimonials rubrikblock-mb, fore-efter h2-mb, eljour rubrik-mb 36, hero-1 lead till CTA 32	44 rot-gt H2-mb
+Stack xl	--ampy-space-stack-xl	xl (56 / 27,3)	var-process "zon" 56	64 mini-menu head till grid; 79 visste-du-att grid-gap
+Inline (horisontellt mellan syskon)
+Inline xs	--ampy-space-inline-xs	3xs (7 / 6,6)	footer li 7, testimonials meta 8, hero-1 proof g-row 9	
+Inline sm	--ampy-space-inline-sm	2xs (9,9 / 8,3)	header nav-gap 10, main-form etikett till fält 8, LED gap 7,5 till 10	
+Inline	--ampy-space-inline	xs (14 / 10,5)	cta-website gap 16 (pil) och 14 (chip), hero-1 proof-gap 14, footer row-gap 14	
+Inline lg	--ampy-space-inline-lg	s (19,8 / 13,3)	live steg-grid gap, certificates kolumngap "minst radien"	
+Rutnät
+Rutnätsgap	--ampy-space-gap	m (28 / 16,9)	fore-efter par-gap, live GT-grid, certificates 28, testimonials 24, mini-menu 30	
+Rutnätsgap stort	--ampy-space-gap-lg	l (39,6 / 21,5)	main-cta 43, eljour 40, fotobedomningen 43,7	64 elcentral, elkollen shell; 56 var-process; 79 rot-gt, visste-du-att
+Rollerna i ett kort
+
+Ett vitt kort med de riktiga tokens: kortpadding m (1), stack-xs mellan eyebrow och rubrik (2), stack-sm mellan rubrik och text (3), stack-lg före knappen (4). De skrafferade fälten är avstånden i sin verkliga storlek; tabellen mäter dem på den här sidan.
+
+1
+
+SÅ RÄKNAS ROT
+
+30 procent på arbetet, inte på materialet
+
+Skatteverket drar avdraget direkt på fakturan. Vi skickar in ansökan åt dig när jobbet är klart.
+
+Räkna på ditt jobb
+AVSTÅND	TOKEN	HÄR
+1Kortets padding	--ampy-space-card	28 px
+2Eyebrow till rubrik	--ampy-space-stack-xs	9,9 px
+3Rubrik till text	--ampy-space-stack-sm	14 px
+4Text till knapp	--ampy-space-stack-lg	39,6 px
+Gutter	--ampy-gutter	39,6 px
+Sektion vertikalt	--ampy-space-section-y	79,2 px
+
+Kolumnen "Här" är getComputedStyle i din viewport. Ändra fönsterbredden och ladda om så följer siffrorna clamp-kurvan.
+
+Sektionsrytmen
+
+Tre sektioner staplade med .ampy-section ur base.css: padding-block --ampy-space-section-y (2xl, 79,2 px vid 1440 och 34,8 vid 390) och padding-inline --ampy-gutter (l, 39,6 / 21,5). Linjalen mäter paddingen live. Ljus, vit och mörk sektion i följd är tjänstesidans vanligaste rytm (live: sky-mist-sektion med vitt kort; testimonials och footer mörka).
+
+section-y 79,2 px
+gutter 39,6 px
+
+SEKTION 1, SKY MIST
+
+Sektion på sidbakgrunden
+
+Sky mist som sektion, vitt kort inuti. Live-sajtens ROT- och GT-block är byggda så.
+
+section-y 79,2 px
+gutter 39,6 px
+
+SEKTION 2, VIT
+
+Vit sektion
+
+Samma padding. Certificates v2 och main-cta kör xl (56) här; kanon är 2xl.
+
+section-y 79,2 px
+gutter 39,6 px
+
+SEKTION 3, MIDNIGHT
+
+Mörk sektion
+
+Platt midnight, ingen glöd (beslut B9). Footerns mörka zon är 2xl på samma sätt.
+
+Uppmätt sektionspadding i källorna (desktop / mobil): testimonials 79,2 / 27,3 (2xl, xl på mobil), visste-du-att 79,2 / 21,5, fore-efter 79,2 / 34,8, certificates v2 56 / 34,8, main-cta 56 / 28, eljour 64 / 28, mini-menu 110 / 64, live .brxe-section 39,6 / 21,5, main-form 60 / 0. Hela tabellen längst ned.
+
+Container och fullbredd
+
+Kanon är 1280 px (--container-width, --apmax-screen-width, theme .brxe-container; 14 källor) och textmåttet 980 px (--max-width, legacy Core Framework). 1280 är inte ett tak: ägardirektivet 2026-08-14 tillåter fullbreddsblock, och hero-1 ramar 1700 px, hero-2 1424. Diagrammet är i skala mot en 1440 px bred viewport.
+
+viewport 1440
+fullbredd: hero-1 1700 max (fyller viewporten), hero-2 1424
+--ampy-container 1280 (.ampy-container, gutter 39,6 på var sida)
+--ampy-container-text 980 (.ampy-container--text)
+drift: energycalc 1360
+drift: mini-menu 1320
+drift: elkollen hero 1180
+drift: live testimonials 1100 (Bricks-default)
+drift: article 1088
+booking 780 (dokument)
+thank-you 520
+
+Källor per rad ur spacing.json container-tabellen: hero-1 "hero frame max-width 1700"; hero-2-alternatives 1424; certificates, eljour, LED, EV, elcentral, main-cta, var-process, visste-du-att, fore-efter, footer 1280; energycalc "--shell-max 136rem, premium shell"; mini-menu 1320; elkollen "hero .wrap 118rem, smalare än sajtens 1280"; article 1088 (704 artikel + 320 TOC); booking "bk-shell 780"; thank-you 520.
+
+GÖR
+Innehåll i .ampy-container (1280) med gutter --ampy-gutter; löpande text i .ampy-container--text (980) eller med --ampy-measure 62ch.
+Fullbreddsblock när blocket är en scen (hero, foto, mörk sektion): .ampy-section--full, innehållet fortfarande i containern.
+Mobil: samma tokens, inga egna px. Gutter blir 21,5 vid 390 av sig själv.
+GÖR INTE
+Egna containerbredder (1320, 1360, 1180, 1100) för att ett block "känns trångt"; bredda med fullbredd i stället.
+Sidopadding 0 på mobil så att kortet går kant i kant (var-process under 480, main-form under 768): kanten behövs för radien och skuggan.
+Kortpadding 79 på mobil (visste-du-att) eller 15/10 (LED): kort är m, stora kort l.
+Brytpunkter
+
+Kanon 992 / 768 / 480, skrivna som max-width 991 / 767 / 479 (Bricks skriver 991 / 767 / 478). Räknat över alla 30 källor är 767 och 768 vanligast (10 och 9 källor), 992 och 480 finns i 9 vardera. 560 (8 källor: hero-1, header, LED, EV, booking) och 1200 (4) är fintrimningssteg, inte brytpunkter. Brytpunkter kan inte läsa var(), så --ampy-bp-* i tokens.css är dokumentation.
+
+992
+9
+993
+4
+991
+7
+768
+9
+767
+10
+480
+9
+478
+4
+1200
+4
+1024
+7
+960
+3
+600
+5
+560
+8
+
+Antal källor per max-width-värde ur spacing.json (55 värden totalt; de tolv vanligaste visas, sedan följer 900, 520, 561 och 400 med 3 källor vardera). Teal = kanon.
+
+Föredra @container mot blockets egen bredd när blocket kan hamna i en smalare kolumn: hero-2-alternatives, EV-kalkylatorn (.ampy-calc-outer { container-type: inline-size }, alla brytpunkter i cqi), fore-efter (wrapper "ampyfe" staplar under 680, varje figur "ampyfefig" under 420), fotobedomningen (900 cqi) och main-cta-leveransen gör så. Kalkylatorkitet bryter tvåpanelen vid 960 cqi. En känd fälla: EV:s hero-siffra mäter 38,7 px i stället för avsedda 75 på grund av en cqi-bugg (typografi.md), så mät alltid resultatet.
+
+Kolumntokens
+
+--apcolumns-1 till --apcolumns-8 är repeat(n, minmax(0, 1fr)) ur global-variables.css. minmax(0, 1fr) är poängen: kolumner får inte växa av sitt innehåll, så en lång sträng spiller inte ut rutnätet. Gap = --ampy-space-gap (m, 28 px). På mobil byter man till --apcolumns-1.
+
+--apcolumns-2
+1fr
+--apcolumns-3
+1fr
+1fr
+--apcolumns-4
+1fr
+1fr
+1fr
+
+Blocken som delar sig i två ojämna paneler använder egna bråk, inte kolumntokens: kalkylatorkitet 5fr/7fr (LED), diagnostiken 44fr/56fr (elcentral), main-cta 1fr/400 px, var-process 32 %/1fr.
+
+Det här byts ut
+
+Sektionspadding per källa ur spacing.md, desktop / mobil i px, mot kanonens 2xl / l (79,2 x 39,6 vid 1440 och 34,8 x 21,5 vid 390).
+
+KÄLLA (AUKTORITET)	UPPMÄTT PADDING	PX DESKTOP	PX MOBIL	TOKEN I KÄLLAN
+live-ampy-se (1)	var(--apspace-l) alla sidor (.brxe-section)	39,6	21,5	--apspace-l
+live-ampy-se (1)	padding-inline var(--space-xs), legacy Core Framework-token		9,0	--space-xs (ej ap*)
+testimonials-block (1)	var(--apspace-2xl) var(--apspace-m); tablett xl/m; under 759 xl/s	79,2 / 28	27,3 / 13,3	--apspace-2xl, -m, -xl, -s
+testimonials-block (1)	var(--apspace-l) 0; mobil l/xl + 3xs	39,6 / 0	21,5 till 27,3 / 6,6	--apspace-l, -xl, -3xs
+hero-1 (1)	clamp(12px,1.6vw,20px) clamp(14px,2vw,26px) clamp(20px,2.6vw,30px); under 992: 10 10 16	20 / 26 / 30	10 / 10 / 16	egna clamp
+eljour-block (1)	clamp(2.8rem, 5vw, 6.4rem) clamp(1.6rem, 4vw, 4rem)	64 / 40	28 / 16	egna clamp
+rot-gt-cro (1)	var(--apspace-l) alla sidor; mobil vertikalt 27,3 = xl, sidor 9,0 = legacy --space-xs	39,6	27,3 / 9,0	--apspace-l, --space-xs
+certificates (2)	var(--apspace-xl) var(--apspace-xl); under 900 vertikalt 2xl; under 389 sidopadding 18px	56 / 56	34,8 / 27,3	--apspace-xl, -2xl
+certificates (2)	var(--apspace-2xl) var(--apspace-xl)	79,2 / 56	34,8 / 27,3	--apspace-2xl, -xl
+visste-du-att (2)	var(--apspace-2xl) var(--apspace-l); under 992 xl/m; under 480 l/s	79,2 / 39,6	21,5 / 13,3	--apspace-2xl, -l, -xl, -m, -s
+fore-efter-cro (2)	clamp(31.3px, 4.99vw + 15.3px, 79.2px) clamp(12.8px, ...) = 2xl / s i px	79,2 / 19,8	34,8 / 13,3	= --apspace-2xl, -s (px)
+main-cta (2)	clamp(28px,4vw,56px) clamp(16px,3vw,40px)	56 / 40	28 / 16	egna clamp
+main-form (2)	clamp(2.4rem, 1rem + 4vw, 6rem) clamp(1.2rem, 0.6rem + 2vw, 2.4rem); 0 under 768	60 / 24	0	egna clamp
+mini-menu (2)	clamp(6.4rem, 4rem + 6vw, 11rem)	110	64	egen clamp
+fotobedomningen (2)	40px 16px 48px (mobil och desktop)	40 / 16 / 48	40 / 16 / 48	fasta px
+var-process-cro (3)	24px 20px 28px; från 992: 56px 40px 80px; under 480 sidopadding 0	56 / 40 / 80	24 / 0 / 28	fasta px
+var-process-cro (3)	40px 20px + padding-bottom var(--apspace-2xl, 48px)	56 / 40 / 72,7	40 / 20 / 31,4	--apspace-2xl
+
+Sammanfattning: sektioner på xl (certificates v2, prefooter, main-cta, elcentral, var-process) växer till 2xl; eljour 64/28, mini-menu 110/64 och main-form 60/0 byter till 2xl; egna clamp-uttryck och fasta px byts till tokens; legacy --space-xs (Core Framework) byts till --ampy-gutter. Kortpadding 20 (LED, EV), 32 (elcentral, elkollen, energycalc) och 24 (mini-menu, booking) blir m; 40 (LED resultat) blir l; 79 (visste-du-att) blir l.
+
+Beslut som rör spacing och layout: B8 rotstorlek (lager 2 är px-clamp så att blocken fungerar på både 62,5 % och 16 px). Öppet i BEVIS.md: punkt 9 (4xs-lutningen), punkt 10 (lager 2 via var() eller px).

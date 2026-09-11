@@ -1,0 +1,133 @@
+REGLER
+Tillgänglighet
+
+Kontrasten är räknad, inte antagen. Teal core är aldrig text. Allt som trycks är minst 44 px. Fokus syns på navy, rörelse släcks när användaren ber om det, och siffror som jämförs står stilla.
+
+konsolidering/farg.json (kontrast mot vit, midnight och sky-mist för alla primitiva), system/tokens.css (radkommentarerna med uppmätta värden), site/_probes/contrast.mjs; reglerna ur källorna: elcentral-kollen (fokusring 3 px .9 "mätt mot WCAG 2.4.11"), booking (kontrollkanter .16 till .48 = 3,1:1), fotobedömningen (kontrollkant #5f6480, aldrig teal som kant), certificates (tvåtonsring), sticky-bar (tap-centrum 45 px), LED (on-dark-faint höjd .42 till .55).
+
+Kontrast
+4,50 eller mer
+brödtext, AA
+3,00 till 4,49
+stor text (minst 24 px, eller 19 px fet) och kontrollkanter
+under 3,00
+bara fyllning, aldrig text
+Text på ljust
+ROLL	TOKEN	HEX	MOT VIT	MOT SKY-MIST	REGEL
+Rubrik och brödtext	--ampy-ink, --ampy-ink-body	#090b32	19,00	17,98	Ett bläck; hierarki genom vikt (B3).
+Dämpad text	--ampy-ink-muted	#565e82	6,33	5,99	Undertext, källrader, eyebrows.
+Svag text	--ampy-ink-faint	#6a7190	4,80	4,54	Golvet för liten text. Elcentrals #8a8da5 (3,26) är underkänd.
+Eljour-familjens brödtext	--apnavy-ink	#3b3f59	10,29	9,74	Behålls i fotobedömningen och hörnkortet.
+Text-teal, länk, solid knapp	--ampy-action-strong	#007a69	5,27	4,98	Den enda tealen som får vara text.
+Teal core	--ampy-action	#00a991	2,96	2,81	Aldrig text, aldrig kontrollkant. Ikoner, ringar, fyllningar, valda kanter med redundans.
+Sekundärteal (gradientslut)	--apsecondary-teal	#5eb1bf	2,47	2,33	Bär aldrig vit text (B16). Mörk text på den: indigo 5,51, darkest 6,76.
+Knapptext på handlingsgradienten	--ampy-action-gradient-on	#282a53	5,51 mot #5eb1bf, 11,08 mot #b6f2ff	Gradientens mörkaste stopp är måttet.
+Fel	--ampy-error	#b3261e	6,54	6,19	5,72 mot sin tint. Fel är röd, fokus är navy (B13, B14).
+Beskedens accenter	--ampy-success-ink, -warn-ink, -error-ink, -info-ink	#0f6e56, #876507, #7a1623, #0d568c	6,20 / 5,39 / 10,68 / 7,70	5,87 / 5,10 / 10,11 / 7,29	Pill-paren i diagnostiken; warn-ink 4,95 mot sin tint.
+Varning som yta	--ampy-warn	#f0af38	1,93	1,82	Bara staplar och prickar på mörkt, aldrig text.
+Googles gult	--apgoogle-gold	#fbbc04	1,71	1,62	Stjärnor är ikoner (fyllning); talet bredvid är bläck.
+Text på midnight
+ROLL	TOKEN	VÄRDE	MOT MIDNIGHT	REGEL
+Rubrik, siffra	--ampy-on-dark	vit	19,00	
+Lead, brödtext	--ampy-on-dark-soft	vit .92	15,98	Visste-du-att kör .82 = 12,75.
+Dämpad	--ampy-on-dark-muted	vit .66	8,44	Etiketter, enheter, datum.
+Svag	--ampy-on-dark-faint	vit .55	6,12	LED höjde från .42 (3,99, underkänd) efter mätning.
+Hårlinje	--ampy-on-dark-line	vit .14	dekor	Avdelare, aldrig kontrollkant.
+Fokus på mörkt	--ampy-focus-on-dark	#55ff9a	14,61	Neonmint mot vitt är 1,30: aldrig på ljust.
+Teal core som stor text	--ampy-action	#00a991	6,41	Kickern i visste-du-att (22 px / 500). Som liten text: nej.
+Gula stjärnor	--apgoogle-gold	#fbbc04	11,12	
+Nödknappens vita text	literal	#0a8169 (ljusaste stoppet)	4,82	Knappen får aldrig göras ljusare.
+Kanter och kontroller (WCAG 1.4.11, 3:1)
+ROLL	TOKEN	VÄRDE	MOT VIT	REGEL
+Kontrollkant (fält, sekundärknapp)	--ampy-line-strong	midnight .48	3,39	Bokningen höjde från .16 (1,41). Elcentrals #e3e5ed (1,26) och eljours #e6ecf6 (1,19) är dekor, inte kant.
+Hårlinje (dekor)	--ampy-line	midnight .14	1,35	Avdelare i kort och listor.
+Fotobedömningens kontrollkant	literal	#5f6480	5,80	Samma färg som mjuk text: två semantiker (drift).
+Fokusring på ljust	--ampy-focus	3 px #090b32, offset 3	19,00	Teal som fokus mätte 2,91 (booking) och byttes.
+Fokusring på fält	--ampy-focus-ring	0 0 0 3px rgba(0,122,105,.9)	4,7	Elkollens .25 (1,3) är underkänd.
+Tvåtonsring på gradient	certificates	3 px vit + 6 px navy	minst 4,36 över hela bandet	En enfärgad ring klarar aldrig 3:1 över en gradient som spänner 19:1 till 1,9:1.
+Träffytor: 44 px är golvet
+
+Allt som trycks är minst 44 x 44 px. Träffytan får vara större än det synliga (osynlig padding, negativ margin) men aldrig mindre. Rader i listor är 60 till 68 px. Sticky-barens tap-centrum ligger 45 px från viewportens underkant så en missad tryckning landar i krom, inte i webbläsarens eget UI.
+
+44
+48 h kompakt
+58 h standard
+Textlänk, 44 px träffyta
+
+Pricken är 44 x 6 synlig men 52 x 30 tryckbar (::before inset -12 / -4). Länken har 44 px min-height utan att påverka radhöjden runt.
+
+Fokus
+
+Tangentbordsfokus är alltid synligt och ritas med outline (överlever egna box-shadows och forced-colors). Navy 3 px med 3 px offset på ljust; neonmint på mörkt; teal-deep-ring på fält. Fokus flyttas dit det hör hemma: till kvittorubriken efter inskick (tabindex="-1"), tillbaka till knappen när en meny stängs. scroll-margin-block 96 px mot sticky-baren så fokus aldrig hamnar bakom den (2.4.11).
+
+Fokus på ljust
+Fokus på mörkt
+Fält i fokus
+
+Visade som statiska tillstånd. I koden: :focus-visible i base.css (navy), :where(.ampy-on-dark) :focus-visible (neonmint), --ampy-focus-ring på fält (S2).
+
+Rörelse
+Tak 300 ms (--ampy-dur-slow), 160 ms på handlingsytor. Ingen entrance-animation som gömmer innehåll (opacity 0 utgångsläge är sajtens LCP-bugg).
+prefers-reduced-motion: reduce släcker allt: transitions, animationer, autoplay, pulser. Pseudoelementen måste stå med (animation ärvs inte; ett bart * når aldrig ::after). Reduced-motion ger en statisk markör i sliderns prickar och visar bocken på tack-sidan direkt.
+Halo-pulsen på tack-sidan är källornas enda oändliga animation; ampyRing (2,8 s) och pulsprickarna är de andra. Alla tre släcks av reduced-motion.
+Hover-koreografi bara på (hover:hover) and (pointer:fine).
+Semantik och skärmläsare
+fieldset och legend
+radio-chips, segment, byggår
+
+Varje grupp av val är ett fieldset med en legend som är frågan. Chippen är riktiga radioknappar (visuellt dolda, inte display none) så piltangenterna fungerar.
+
+aria-live
+kalkylatorns resultat, kvittot, felmeddelanden
+
+Hero-siffran och beskedet ligger i en role="status" med aria-live="polite" och aria-atomic, monterad som sektionens första barn utanför omskriven markup (fotobedömningens afk__sr). Fel meddelas där de uppstår, kopplade med aria-describedby.
+
+Listor som listor
+stegen, märkeskorten, symptomlistan
+
+role="list" när list-style släcks: WebKit och VoiceOver tar annars bort listsemantiken ("lista med 4 objekt" försvinner).
+
+Expanderbart
+symptomlistan, FAQ, "Så har vi räknat", mega-menyn
+
+aria-expanded och aria-controls på knappen, inert på stängda paneler, Escape stänger, fokus återvänder. FAQ och metoden är details/summary där det räcker.
+
+Dekor är dold
+vågor, blobbar, glöd, citattecken, stjärnrader
+
+aria-hidden="true" på dekor; stjärnraden är en role="img" med "5 av 5 stjärnor" som etikett; ikoner utan mening är dolda, ikoner med mening har text intill (teal-glyfen är alltid redundant mot texten).
+
+Länkar som öppnas i ny flik
+certifikat-korten
+
+"Öppnas i ny flik" i aria-label, rel="noopener noreferrer".
+
+Forced colors och print
+avdragsblocket, mini-menu, CTA-bandet, sticky-bar
+
+Windows högkontrast: knappar får ButtonFace/ButtonText/ButtonBorder, dekor-SVG döljs, ytor som bara bär en genomskinlig vit får ram i CanvasText. Print: bakgrunder trycks inte, ramar och bläck bär formen, mörka kort inverteras.
+
+Tabulära siffror
+
+Siffror som byts (kalkylatorns resultat, kvittots belopp, tider, telefonnummer) är font-variant-numeric: tabular-nums lining-nums så raden inte hoppar när värdet ändras. Outfits woff2 bär tnum (uppmätt: "1111111111" 58,6 px proportionellt mot 94,4 px tabulärt). Proportionella siffror i löptext.
+
+PROPORTIONELLT
+
+11 111 kr
+27 752 kr
+9 000 kr
+
+TABULÄRT
+
+11 111 kr
+27 752 kr
+9 000 kr
+
+Checklista
+Brödtext minst 4,5:1, stor text minst 3:1, kontrollkanter minst 3:1; mätt i site/_probes/contrast.mjs, inte antaget.
+Teal core är aldrig text eller kant. Sekundärteal bär aldrig vit text. Neonmint aldrig mot vitt.
+44 px träffytor, 16 px i fält, 12 px som textgolv.
+Fokus synligt med outline; fokus flyttas efter tillståndsbyte; scroll-margin mot sticky element.
+reduced-motion släcker allt inklusive pseudoelement; inget innehåll gömt bakom en animation.
+fieldset/legend, aria-live, role list, aria-expanded/controls, inert, aria-hidden på dekor.
+Tabulära siffror där värden byts.

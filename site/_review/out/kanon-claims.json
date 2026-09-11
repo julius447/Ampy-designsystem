@@ -1,0 +1,326 @@
+[
+ {
+  "page": "knappar",
+  "slug": "cta-website",
+  "ref": "radgivning-cta/radgivning-cta.css:8-48, ring-cta/ring-cta.css:8-65, auktoritet 1",
+  "ctx": "cta-website (radgivning-cta/radgivning-cta.css:8-48, ring-cta/ring-cta.css:8-65, auktoritet 1). Solid: website-blocks header-CTA (Header/delivery/fluentsnippets"
+ },
+ {
+  "page": "knappar",
+  "slug": "elcentral-kollen",
+  "ref": "assets/elcentralkollen.css:555-579",
+  "ctx": "cta-website (radgivning-cta/radgivning-cta.css:8-48, ring-cta/ring-cta.css:8-65, auktoritet 1). Solid: website-blocks header-CTA (Header/delivery/fluentsnippets"
+ },
+ {
+  "page": "text",
+  "slug": "energycalc",
+  "ref": "vB/tool.css:317-319",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led"
+ },
+ {
+  "page": "text",
+  "slug": "thank-you",
+  "ref": "v1/styles.css:77",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led"
+ },
+ {
+  "page": "text",
+  "slug": "elcentral-kollen",
+  "ref": "assets/elcentralkollen.css:428-440",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led"
+ },
+ {
+  "page": "text",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:293-311",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led"
+ },
+ {
+  "page": "text",
+  "slug": "elkollen",
+  "ref": "assets/behorighetskollen.css:880-889",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led"
+ },
+ {
+  "page": "text",
+  "slug": "hero-1",
+  "ref": "assets/style.css:236-265",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led"
+ },
+ {
+  "page": "text",
+  "slug": "testimonials-block",
+  "ref": "delivery/ampy-testimonials.css:46-66",
+  "ctx": "eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led"
+ },
+ {
+  "page": "ytor",
+  "slug": "eljour-block",
+  "ref": "index.html:21,57-58, skuggan navy-alfa enligt B10",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --apradius-l, på sky-mist) med ram och skugga ur eljour-block (index.html:21,57-58, skuggan navy-alfa enlig"
+ },
+ {
+  "page": "ytor",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:125-134, glöden är tillval enligt B9",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --apradius-l, på sky-mist) med ram och skugga ur eljour-block (index.html:21,57-58, skuggan navy-alfa enlig"
+ },
+ {
+  "page": "ytor",
+  "slug": "thank-you",
+  "ref": "v1/styles.css:36-46",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --apradius-l, på sky-mist) med ram och skugga ur eljour-block (index.html:21,57-58, skuggan navy-alfa enlig"
+ },
+ {
+  "page": "ytor",
+  "slug": "fore-efter-cro",
+  "ref": "dist/01-fore-efter.css:281-290",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --apradius-l, på sky-mist) med ram och skugga ur eljour-block (index.html:21,57-58, skuggan navy-alfa enlig"
+ },
+ {
+  "page": "ytor",
+  "slug": "hero-1",
+  "ref": "assets/style.css:190-235",
+  "ctx": "ljust kort live-ampy-se (.rot__container: vit, radie --apradius-l, på sky-mist) med ram och skugga ur eljour-block (index.html:21,57-58, skuggan navy-alfa enlig"
+ },
+ {
+  "page": "falt",
+  "slug": "elcentral-kollen",
+  "ref": "assets/elcentralkollen.css:517-518, konsoliderad till 48 h enligt komponentkartan",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, konsoliderad till 48 h enligt komponentkartan); sökfält elkollen (assets/behorighetskollen.css:716-7"
+ },
+ {
+  "page": "falt",
+  "slug": "elkollen",
+  "ref": "assets/behorighetskollen.css:716-770",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, konsoliderad till 48 h enligt komponentkartan); sökfält elkollen (assets/behorighetskollen.css:716-7"
+ },
+ {
+  "page": "falt",
+  "slug": "main-form",
+  "ref": "css/styles.css:174-196",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, konsoliderad till 48 h enligt komponentkartan); sökfält elkollen (assets/behorighetskollen.css:716-7"
+ },
+ {
+  "page": "falt",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:285-290",
+  "ctx": "input elcentral-kollen (assets/elcentralkollen.css:517-518, konsoliderad till 48 h enligt komponentkartan); sökfält elkollen (assets/behorighetskollen.css:716-7"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:96-134",
+  "ctx": "led-kalkylator (styles.css:96-134). Finns även i: ev-kalkylator (padding 20 överallt, cqi-brytpunkter), battery-calculator (overflow-defekt 394,9 px på 390), en"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:137-157 tier/fält, 161-206 väljare, 210-236 värde + reglage, 249-259 segment, 285-290 select",
+  "ctx": "led-kalkylator (styles.css:137-157 tier/fält, 161-206 väljare, 210-236 värde + reglage, 249-259 segment, 285-290 select). Finns även i: ev-kalkylator (foto-välj"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:293-297 hero, 300-311 trio, 398-412 compare, 325-333 CTA",
+  "ctx": "led-kalkylator (styles.css:293-297 hero, 300-311 trio, 398-412 compare, 325-333 CTA). Finns även i: ev-kalkylator (månadspanel med två 10 px-staplar och \"Du spa"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:351-396",
+  "ctx": "led-kalkylator (styles.css:351-396). Finns även i: ev-kalkylator (CTA:n står kvar ovanför formuläret, native checkbox, inline-fel), energycalc (reveal via grid-"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:268-274 chip",
+  "ctx": "led-kalkylator (styles.css:268-274 chip) + ev-kalkylator (prototype/styles.css:864-935 popover, ersätter LED:s fixed tooltip som täcker H1 på 390). Finns även i"
+ },
+ {
+  "page": "verktyg",
+  "slug": "ev-kalkylator",
+  "ref": "prototype/styles.css:864-935 popover, ersätter LED:s fixed tooltip som täcker H1 på 390",
+  "ctx": "led-kalkylator (styles.css:268-274 chip) + ev-kalkylator (prototype/styles.css:864-935 popover, ersätter LED:s fixed tooltip som täcker H1 på 390). Finns även i"
+ },
+ {
+  "page": "verktyg",
+  "slug": "led-kalkylator",
+  "ref": "styles.css:161-206",
+  "ctx": "led-kalkylator (styles.css:161-206). Finns även i: ev-kalkylator (foto, badge promote / soft / muted, 16 laddboxar, max-height min(50rem, 60vh)), battery (samma"
+ },
+ {
+  "page": "verktyg",
+  "slug": "energycalc",
+  "ref": "vB/tool.css:467-491",
+  "ctx": "energycalc (vB/tool.css:467-491). Finns även i: elcentral-kollen (44 × 44 ikonknapp + ljus meny + toast), ev-kalkylator (popover av tooltip-typ)."
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "ref": "assets/elcentralkollen.css:160-292, \"1:1 med Elkollen hero__copy\"",
+  "ctx": "elcentral-kollen (assets/elcentralkollen.css:160-292, \"1:1 med Elkollen hero__copy\"). Finns även i: elkollen (preview/hero.html: 1180-wrap, H1 40/600 med teal s"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elkollen",
+  "ref": "preview/hero.html: 1180-wrap, H1 40/600 med teal sista rad, 96 px toppspacer",
+  "ctx": "elcentral-kollen (assets/elcentralkollen.css:160-292, \"1:1 med Elkollen hero__copy\"). Finns även i: elkollen (preview/hero.html: 1180-wrap, H1 40/600 med teal s"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "ref": "elcentralkollen.css:344-399, 856-862",
+  "ctx": "elcentral-kollen (elcentralkollen.css:344-399, 856-862). Finns även i: elkollen (rumstiles 112 × 2 kolumner, jobblista 52 px, options 72/64 med pil), energycalc"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "ref": "elcentralkollen.css:404-441 dualstatus, 428-440 pill, 442 lede, 447-502 fynd/factnote/akut",
+  "ctx": "elcentral-kollen (elcentralkollen.css:404-441 dualstatus, 428-440 pill, 442 lede, 447-502 fynd/factnote/akut). Pillens fem nivåer är .ampy-tag (text.css, samma "
+ },
+ {
+  "page": "diagnostik",
+  "slug": "ampy-tag",
+  "ref": "text.css, samma källa",
+  "ctx": "elcentral-kollen (elcentralkollen.css:404-441 dualstatus, 428-440 pill, 442 lede, 447-502 fynd/factnote/akut). Pillens fem nivåer är .ampy-tag (text.css, samma "
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elkollen",
+  "ref": "assets/behorighetskollen.css:1223-1290 board + wash, 417-433 källrad, 438-473 tabbar, 488-560 rader + caveat",
+  "ctx": "elkollen (assets/behorighetskollen.css:1223-1290 board + wash, 417-433 källrad, 438-473 tabbar, 488-560 rader + caveat). GUL finns i CSS:en men ingen data använ"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "stapel",
+  "ref": "behorighetskollen.css:340-411",
+  "ctx": "elkollen (assets/behorighetskollen.css:1223-1290 board + wash, 417-433 källrad, 438-473 tabbar, 488-560 rader + caveat). GUL finns i CSS:en men ingen data använ"
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "ref": "elcentralkollen.css:464-488 fynd, 618-633 dela, 593-604 sticky",
+  "ctx": "elcentral-kollen (elcentralkollen.css:464-488 fynd, 618-633 dela, 593-604 sticky). No-JS: elkollen (.ampy-bk__noscript) + energycalc (.noscript-note)."
+ },
+ {
+  "page": "diagnostik",
+  "slug": "elcentral-kollen",
+  "ref": "elcentralkollen.css:687-840, preview/block.html",
+  "ctx": "elcentral-kollen (elcentralkollen.css:687-840, preview/block.html). Finns även i: elkollen (inbäddat 600-läge under en sidrubrik \"Koppla elen\")."
+ },
+ {
+  "page": "block",
+  "slug": "rot-gt-cro",
+  "ref": "designs/d2-kvittot-forst.html:163-217, variant F, auktoritet 2",
+  "ctx": "rot-gt-cro (designs/d2-kvittot-forst.html:163-217, variant F, auktoritet 2). Finns även i: live ROT/GT-blocket (penselringar 95 px + JS-linjer, avvikelse: tre k"
+ },
+ {
+  "page": "block",
+  "slug": "rot-gt-cro",
+  "ref": "designs/d2-kvittot-forst.html:220-300, auktoritet 2",
+  "ctx": "rot-gt-cro (designs/d2-kvittot-forst.html:220-300, auktoritet 2). Finns även i: booking-confirmation (kvittorader med dashed ledare + totalplatta, se bokningsko"
+ },
+ {
+  "page": "block",
+  "slug": "rot-gt-cro",
+  "ref": "designs/d2-kvittot-forst.html:94-135 .av-block + .av-grid, auktoritet 2, 278 sidor mappade",
+  "ctx": "rot-gt-cro (designs/d2-kvittot-forst.html:94-135 .av-block + .av-grid, auktoritet 2, 278 sidor mappade). Finns även i: live ROT/GT (vitt kort radie 20, husets s"
+ },
+ {
+  "page": "block",
+  "slug": "testimonials-block",
+  "ref": "delivery/ampy-testimonials.css:41-98, V1 låst 2026-07-19, auktoritet 1",
+  "ctx": "testimonials-block (delivery/ampy-testimonials.css:41-98, V1 låst 2026-07-19, auktoritet 1). Finns även i: live-baslinjen (kort 383 x 360 utan datum, Bricks-pag"
+ },
+ {
+  "page": "block",
+  "slug": "certificates",
+  "ref": "delivery/dist/ampy-certificates.css, v2, auktoritet 2, paritet 24 av 24 bredder",
+  "ctx": "certificates (delivery/dist/ampy-certificates.css, v2, auktoritet 2, paritet 24 av 24 bredder). Finns även i: live-baslinjen (sex kort 113 x 90 utan skugga, kli"
+ },
+ {
+  "page": "block",
+  "slug": "eljour-block",
+  "ref": "index.html:12-140, \"sajtens bästa block 23/25\", auktoritet 1",
+  "ctx": "eljour-block (index.html:12-140, \"sajtens bästa block 23/25\", auktoritet 1). Finns även i: eljour-sticky-bar (gör samtalskortet sticky från 993 px, grön fork av"
+ },
+ {
+  "page": "block",
+  "slug": "eljour-sticky-bar",
+  "ref": "dist/ampy-callbar.css, M1 ring låst, auktoritet 2, hörnval öppet",
+  "ctx": "eljour-sticky-bar (dist/ampy-callbar.css, M1 ring låst, auktoritet 2, hörnval öppet). Finns även i: elcentral-kollen __stickycta (77 h vit hylla med kortets sol"
+ },
+ {
+  "page": "block",
+  "slug": "main-cta",
+  "ref": "delivery/ampy-main-cta.css, version B låst, auktoritet 2",
+  "ctx": "main-cta (delivery/ampy-main-cta.css, version B låst, auktoritet 2). Finns även i: picasso components/main-cta (baslinjeklon + tre riktningar), Main-CTA-block ("
+ },
+ {
+  "page": "block",
+  "slug": "website-blocks",
+  "ref": "Header/index.html:20-140, header godkänd, auktoritet 1; CSS:en är tecken-identisk med hero-1 assets/header.css",
+  "ctx": "website-blocks (Header/index.html:20-140, header godkänd, auktoritet 1; CSS:en är tecken-identisk med hero-1 assets/header.css). Finns även i: article SiteNav ("
+ },
+ {
+  "page": "block",
+  "slug": "footer-cro",
+  "ref": "css/baseline.css, 42 av 42 computed values identiska med live, auktoritet 1",
+  "ctx": "footer-cro (css/baseline.css, 42 av 42 computed values identiska med live, auktoritet 1). Riktningar A, B, C (auktoritet 3) väntar ägarval. Blockbiblioteket"
+ },
+ {
+  "page": "block",
+  "slug": "hero-1",
+  "ref": "assets/style.css:40-60, 190-265, auktoritet 1",
+  "ctx": "hero-1 (assets/style.css:40-60, 190-265, auktoritet 1). Finns även i: live site-css .home-hero__* (= Hero-1 installerad), picasso hero/ampy. Ramen = S2:s .ampy-"
+ },
+ {
+  "page": "block",
+  "slug": "ampy-frame",
+  "ref": "ytor.css",
+  "ctx": "hero-1 (assets/style.css:40-60, 190-265, auktoritet 1). Finns även i: live site-css .home-hero__* (= Hero-1 installerad), picasso hero/ampy. Ramen = S2:s .ampy-"
+ },
+ {
+  "page": "block",
+  "slug": "ampy-proof",
+  "ref": "text.css",
+  "ctx": "hero-1 (assets/style.css:40-60, 190-265, auktoritet 1). Finns även i: live site-css .home-hero__* (= Hero-1 installerad), picasso hero/ampy. Ramen = S2:s .ampy-"
+ },
+ {
+  "page": "block",
+  "slug": "hero-2-alternatives",
+  "ref": "dist/ampy-hero-primitives.css + ampy-hero-s.css, v18 slutversion, auktoritet 2, lanseringsgrindar öppna",
+  "ctx": "hero-2-alternatives (dist/ampy-hero-primitives.css + ampy-hero-s.css, v18 slutversion, auktoritet 2, lanseringsgrindar öppna). Finns även i: hero-2-form (formko"
+ },
+ {
+  "page": "block",
+  "slug": "mini-menu",
+  "ref": "fluentsnippets/ampy-elfirma.css, levererad och installerad live som .ampy-elfirma, auktoritet 2",
+  "ctx": "mini-menu (fluentsnippets/ampy-elfirma.css, levererad och installerad live som .ampy-elfirma, auktoritet 2). Varianter: prototype.html (ljus glas-trio: vita kor"
+ },
+ {
+  "page": "block",
+  "slug": "fore-efter-cro",
+  "ref": "dist/01-fore-efter.css, riktning A \"Reglaget\" vald 2026-08-17, auktoritet 2",
+  "ctx": "fore-efter-cro (dist/01-fore-efter.css, riktning A \"Reglaget\" vald 2026-08-17, auktoritet 2). Bilderna är illustrationer tills fotobiblioteket finns ([GAP]). Bl"
+ },
+ {
+  "page": "block",
+  "slug": "fotobedomningen",
+  "ref": "v2/dist/afk-styles.css, v2 byggd, auktoritet 2, go/no-go = dubbel uppladdning",
+  "ctx": "fotobedomningen (v2/dist/afk-styles.css, v2 byggd, auktoritet 2, go/no-go = dubbel uppladdning). Formfälten dokumenteras i Fält och reglage. Blockbiblioteket"
+ },
+ {
+  "page": "block",
+  "slug": "visste-du-att",
+  "ref": "visste-du-att.css + Bricks paste-JSON, slutaudit GO, auktoritet 2",
+  "ctx": "visste-du-att (visste-du-att.css + Bricks paste-JSON, slutaudit GO, auktoritet 2). Mätningen visade att prototypen speglade fel tokenskala (H2 48 i prototypen, "
+ },
+ {
+  "page": "block",
+  "slug": "article-template",
+  "ref": "src/ + handover-ampy-tabell/ampy-tabell.css, auktoritet 2, 187 filer okommitterade lokalt",
+  "ctx": "article-template (src/ + handover-ampy-tabell/ampy-tabell.css, auktoritet 2, 187 filer okommitterade lokalt). Mallens hero, TOC-aktivering, JSON-LD och delning "
+ }
+]

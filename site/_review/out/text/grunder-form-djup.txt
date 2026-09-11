@@ -1,0 +1,233 @@
+GRUNDER
+Form och djup
+
+Sex radier, en skuggfärg i tre styrkor, en hairline och en kontrollkant, ett ljust och ett mörkt glas, en navy-ram och tre scrims på foto. Allt annat som ligger i blocken är drift och listas längst ned.
+
+konsolidering/form-djup-rorelse.md + form-djup-rorelse.json (radier.json, skuggor.json ur 30 inventerings-JSON: 16 radievärden, 27 skuggfärger, 8 delade skuggsträngar), system/tokens.css (varje token bär källa och drift). Px vid 390 och 1440 ur konsolidering/_probes/out/tokens-px.json. Allt nedan renderas med de riktiga tokens och komponentklasserna i system/.
+
+Radier
+
+Fem radier med roll, plus pill. Fyra av dem är lager 1-tokens rakt av (--apradius-s/m/l/xl, fluida 320 till 1280); knappradien är fast 16 px enligt CTA-biblioteket (beslut B4). Rutorna ritas med tokenen och siffran i rutan är radien uppmätt på den här sidan, så på mobil är de mindre.
+
+8 px
+Small
+--ampy-radius-small = --apradius-s
+8 px vid 1440, 6,1 vid 390
+Källa: LED, EV, energycalc, elkollen, elcentral 6 (tooltip, tick, option, chip)
+Drift: 4 LED-checkbox, 8 main-form input, 9 energycalc
+12 px
+Field
+--ampy-radius-field = --apradius-m
+12 px vid 1440, 10,1 vid 390
+Källa: LED (styles.css --radius-md 12: select, input, knapp), EV, hero-2-alternatives (--ap-r-field 12), fotobedömningen (--afk-r-in 12)
+Drift: 10 elkollen, elcentral, hero-2 Z; 14 booking, hero-2-form; 8 main-form; 9 energycalc
+16 px
+Button B4
+--ampy-radius-button = 16 px fast
+16 px vid 1440 och 390
+Källa: cta-website (*.css:11 "radie 16", alla tre) = hero-1, main-cta, rot-gt, fotobedömningen, elkollen och elcentral rail-CTA, sticky-bar, picasso (legacy --radius 16) = 17 källor
+Drift: live ROT 20 / GT 12, header-CTA 15, LED, EV, energycalc 12, elkollen, elcentral solid 10, hero-2 14, pill i thank-you, main-form, mini-menu
+20 px
+Card
+--ampy-radius-card = --apradius-l
+20 px vid 1440, 16,3 vid 390
+Källa: live .rot__container (--apradius-l) + LED, EV, energycalc, eljour, certificates, visste-du-att, fore-efter, fotobedömningen, mini-menu, main-cta, website-blocks = 17 källor
+Drift: 14 elkollen, elcentral; 22 hero-1-ram, booking, rot-gt-panel; 27 hero-2-form; 15 main-form; 16 testimonials
+32 px
+Card large
+--ampy-radius-card-lg = --apradius-xl
+32 px vid 1440, 24,5 vid 390
+Källa: thank-you (v1/styles.css:42 --apradius-xl), rot-gt-cro (--av-r-xl 32), offer-accepted
+Drift: hero-1 A-variant 32/28
+pill
+Pill
+--ampy-radius-pill = 999px (--apradius-full 999rem)
+Källa: live, testimonials prickar, thank-you knapp, mini-menu pill, hero-2 (--ap-r-pill), fotobedömningen chip
+Drift: 99rem eljour, 9999px legacy och article
+Radievärden i källorna
+
+Antal källor per px-värde ur radier.json. Teal = ett kanonvärde vid 1440. Under stapeln: vad värdet används till i källorna.
+
+16
+17
+knapp (cta-website, hero-1, live legacy --radius, testimonials, elkollen, elcentral, energycalc, rot-gt) och testimonials-kortet
+20
+17
+kort (live, LED, EV, energycalc, eljour, certificates, mini-menu, main-cta, visste-du-att, fore-efter) och live ROT-knappen
+14
+11
+elkollen och elcentral kort, hero-2 knappar och fält, booking faktabricka, mini-menu tiles, eljour nödknapp
+12
+9
+fält (LED, EV, hero-2), energycalc --r-md, live GT-knappen, thank-you, rot-gt
+6
+8
+small: tooltip, tick, option, chip, crumb (LED, EV, energycalc, elkollen, elcentral)
+10
+7
+elkollen och elcentral options, CTA:er och lead-input; eljour säkerhetsruta; hero-2 Z
+22
+7
+hero-1 ram, hero-2 hjälteram, booking kort, live floating banner, rot-gt panel, mini-menu glasprototyp
+8
+6
+main-form input, energycalc prickar, sticky-bar fokus, testimonials, header, article
+15
+4
+header-CTA, main-form kort, fore-efter ram, website-blocks CTA
+32
+4
+card-lg: thank-you kort, rot-gt block, booking --r-xl, hero-1 A-variant
+
+Under 4 källor: 3 (3: elkollen accent, energycalc prickar, burger-streck), 9 (2), 18 (2), 24 (2), 28 (2), 4 (1: LED samtyckesbock). 3 och 4 px är detaljradier utan egen roll; 18/24/28 är hero-1 A-varianten och hero-2 E, som är drift.
+
+Linjer
+
+Två linjer på ljust och en på mörkt, alla alfa på midnight respektive vitt så att de fungerar på både vit och sky mist. Hairlinen är dekor (1,36:1 blandad mot vit); kontrollkanten är den som får bära ett fält (3,40:1, WCAG 1.4.11). Solida hairlines i nio värden (#e6ecf6, #dbe4f0, #e3e5ed, #ebedf3, #eaeef5, energycalcs fem) byts ut.
+
+--AMPY-LINE, HAIRLINE
+
+rgba(9,11,50,.14). Källa: var-process (v2/ampy-process.css:16 "blockets ENDA hairline"), LED --border-default .12 (15,18,60 till midnight), fore-efter och certificates inset .07. Avdelare: .ampy-divider.
+
+--AMPY-LINE-STRONG, KONTROLLKANT
+Postnummer
+
+rgba(9,11,50,.48), 3,40:1. Källa: booking-confirmation (shared.css:42 --line-strong, "kontrollkanter WCAG 1.4.11"). Drift: #5f6480 fotobedömningen (5,80:1), #e3e5ed elkollen och elcentral inputs (1,26:1, underkänd), 2 px transparent main-form.
+
+DRIFT: #E3E5ED SOM FÄLTKANT
+Postnummer
+
+Elkollens och elcentrals inputkant mäter 1,26:1 mot vit. Kanten syns knappt på sky mist och faller på WCAG 1.4.11. Byts till --ampy-line-strong.
+
+--AMPY-ON-DARK-LINE, PÅ MÖRKT
+
+rgba(255,255,255,.14). Källa: LED (styles.css:33 --on-surface-border hr), hero-2-alternatives (--ap-hairline .14), EV. Drift: .12 energycalc, .16 och .18 rot-gt.
+
+Skuggor
+
+En skuggfärg: midnight-alfa. Tre styrkor för ytor (subtle .06, card .07, raised .14) och tre ordagranna knappskuggor ur CTA-biblioteket. rgb(9,11,50) förekommer 78 gånger i 21 källor; near-miss-tripletterna rgb(15,18,60) (25 i 10 källor) och rgb(11,13,42) (7 i 2) är samma avsikt och konsolideras hit. Den gråa rgba(190,190,190,.19) från live är drift, beslut B10. Alla rutor nedan ligger på sky mist, som blocken gör.
+
+subtle
+--ampy-shadow-subtle
+0 1px 2px rgba(9,11,50,.06)
+Källa: LED, EV --shadow-sm (15,18,60 till midnight). Drift: .04 elcentral, elkollen, fotobedömningen, article.
+card
+--ampy-shadow-card B10
+0 10px 30px rgba(9,11,50,.07)
+Källa: eljour-block (index.html:21 --shadow-card 0 1rem 3rem), fotobedömningen mittlager, sticky-bar hörnkort. Drift: se tabellen nedan.
+raised
+--ampy-shadow-raised
+0 16px 40px rgba(9,11,50,.14)
+Källa: LED, EV, battery --shadow-lg (resultatkort, lista, tooltip), sticky-bar 0 16px 40px .16. Drift: rot-gt 0 24px 50px -10px .18, thank-you 0 3rem 7rem .12, mini-menu -12px .28.
+drift: husets grå
+Live-idiomet, byts ut
+0 0 16px 0 rgba(190,190,190,.19)
+14 förekomster på live, testimonials .14, main-cta .4, var-process v2 ("husets skugga"). Grå på blåtonad sky mist ser smutsig ut; rot-gt och fore-efter avvisar den uttryckligen.
+Boka rådgivning
+--ampy-shadow-button
+inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45)
+Källa: cta-website (radgivning-cta.css:17-20) = rot-gt, fotobedömningen, hero-2. Drift: hero-1:s kopia (navy .40 i stället för grön glöd).
+Boka rådgivning (hover)
+--ampy-shadow-button-hover
+inset 0 1px 0 rgba(255,255,255,.5), 0 3px 6px rgba(9,11,50,.07), 0 16px 34px -8px rgba(94,199,160,.55)
+Källa: cta-website (radgivning-cta.css:27-30). Visas här med lyftet -1,5 px.
+Ring 010-265 79 79
+--ampy-shadow-button-ring
+inset 0 1px 0 rgba(255,255,255,.55), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,177,191,.55)
+Källa: cta-website (ring-cta.css:17-20) = main-cta, sticky-bar. Drift: 0 0 16px rgba(241,241,241,.25) i picasso, elkollen, elcentral.
+Kostnadsfri rådgivning
+--ampy-shadow-glow-action
+0 4px 12px -5px rgba(0,169,145,.5)
+Källa: header-CTA (hero-1 och website-blocks header.css:73). Drift: thank-you 0 1rem 2.4rem .3, energycalc hover -.8rem .42, main-form .45. Headern lägger skuggan på teal core med vit text (2,96:1); här ligger den på teal deep (5,27:1) enligt beslut B5.
+--ampy-shadow-photo
+0 18px 40px -20px rgba(9,11,50,.26)
+Källa: main-cta (index.html porträtt). Drift: hero-2 Z 0 28px 60px -28px rgba(0,0,0,.65).
+Lager 1: --apshadow-xs till xl, lagade
+
+Bricks fem skuggtokens refererar --shadow-primary som aldrig definieras på live (30 referenser, 0 definitioner), så alla fem beräknas till none. tokens.css lager 1b sätter --shadow-primary: rgba(9,11,50,.10), det enda värdet någon källa definierar (thank-you v1/styles.css:7). Därmed blir de användbara igen.
+
+xs
+0 1px 2px
+s
+0 1.5px 3px
+m
+0 2px 6px
+l
+0 3px 12px
+xl
+0 6px 48px
+Glas
+
+Ljust glas är tack-sidans kort: vit .72, 1 px vit .9, blur(16px) saturate(1.1) och en inset-highlight, renderat på den ljusa auroran (som bara finns i kundflödet, beslut B11). Mörkt glas är fore-efters chip: midnight .82 med blur(8 till 10 px). Bokningens .85 utan blur och hero-2-forms 156,51° navy-till-sekundärteal med blur 30 är drift, beslut B15.
+
+Tack, vi har fått din förfrågan
+
+.ampy-card--glass: --ampy-bg-glass rgba(255,255,255,.72) + --ampy-glass-border 1 px vit .9 + --ampy-glass-blur blur(16px) saturate(1.1). Källa: thank-you v1/styles.css:36-46. Offer-accepted kör .74, samma blur.
+
+Drift: bokningen, .85 utan blur
+
+Renderar utan backdrop-filter (snabbare) men läser som en vanlig vit yta. Booking-confirmation assets/bokning.css. Beslut B15: får blur eller accepterad avvikelse av prestandaskäl.
+
+Efter
+
+.ampy-card--glass-dark: --ampy-bg-glass-dark rgba(9,11,50,.82) + blur(10px) saturate(150%) + 1 px vit .16. Källa: fore-efter-cro dist/01-fore-efter.css:281-290 (chip och ledtråd). 11,44:1 blandad mot vit, så vit text är trygg.
+
+Drift: hero-2-forms mörka glas
+
+midnight + 156,51° till #5eb1bf .76 + blur 30. Kanten mäter 1,2:1 och hero-2-alternatives dömde ut kortet; hero-2 Z är i dag platt navy.
+
+Navy-ramen
+
+Hero-1:s hjälteram (assets/style.css:190-235, ägargodkänd): max 1700 px, midnight som bakgrund under fotot, höjd 100svh minus header och 48 px (min 620, max 950), foto object-position: 62 % 60 %, veil --ampy-scrim-hero, innehåll max 880 vänster. .ampy-frame i ytor.css är klonen; här i den korta varianten --short (360 till 520 px). Källans radie är 22 (18 mobil), klonen använder kortradien 20/16,3; hero-2 använder samma ram i 1424 bredd med h1 48 i stället för 60.
+
+NAVY-RAM MED FOTO OCH VEIL
+
+Elinstallationer i hemmet, gjort ordentligt.
+
+Fotot ligger under en veil på 98° från .68 till .02 plus en bottentoning .38 till 0, så texten klarar kontrasten var som helst i ramen.
+
+Avvikelser i klonen mot hero-1: radie 20 i stället för 22 (kortradien, beslut B4-logiken: en radie per roll); höjden i --short är dokumentationens egen. Mobilveilen (under 560) är hero-1:s egen och saknar token.
+
+Scrims på foto
+
+Tre kontrastmätta toningar för text på foto. Ägardirektiv: inga midnattsblå gradient-scrims som yta; de finns bara som foto-veil. Samma foto i alla fyra rutor, vit text i alla.
+
+Utan scrim
+Vit text direkt på fotot. Kontrasten beror på bilden.
+--ampy-scrim-hero
+98° från .68 till .02, plus bottentoning .38 till 0. Hero-1 och live startsidan.
+--ampy-scrim-strong
+180° .58 till .82, plus 98° .28 till .05. Minst 4,75:1 för vit text även på helvit bild.
+--ampy-scrim-light
+180° .06 till .22. Fotot som objekt, inte som textunderlag.
+
+Källor: hero-1 (assets/style.css:212-217 .vb2__veil) = live site-css .home-hero (scrim-hero); hero-2-alternatives (primitives.css:110-112 --ampy-scrim-bastant, kontrastmätt; 113-114 --ampy-scrim-latt). Drift: main-form platt rgba(6,8,26,.55); energycalc trust 103° .94 till .28; mini-menu radial .30 till .56 plus body-scrim; hero-1 mobilveil under 560 (fyra stopp .30/.24/.28/.64).
+
+GÖR
+En radie per roll: small 6 till 8, field 10 till 12, button 16, card 16 till 20, card-lg 24 till 32, pill. Inre element får aldrig större radie än sin behållare.
+Skugga i midnight-alfa, aldrig grå eller svart; card på vita kort på sky mist, raised på mörka resultatkort och popovers, subtle på inputkort.
+Fältkanter minst 3:1 (--ampy-line-strong); hairline bara som avdelare.
+GÖR INTE
+Egna radier (14, 15, 22, 27) eller pill på primärknappen (thank-you, main-form, mini-menu): en knappform.
+Glas utan blur som "glas", eller mörkt glas med gradient och 1,2:1-kant (hero-2-form).
+Skuggor med svart (rgba(0,0,0,.65) i hero-2 Z) eller vita glödskuggor på knappar (rgba(241,241,241,.25) i picasso, elkollen, elcentral).
+Det här byts ut
+Radier per källa
+ROLL	KANON	DRIFT (KÄLLA: VÄRDE)	BYTS UT TILL
+Knapp	16 (17 källor)	live ROT 20, live GT 12, header-CTA 15, LED 12, EV 12, energycalc 12, elkollen 10, elcentral 10, hero-2 14, hero-2-form 14, thank-you pill, main-form pill, mini-menu pill, picasso 16 men 38 px hög	--ampy-radius-button 16 (B4)
+Kort	20 till 16,3 (17 källor)	elkollen 14, elcentral 14, hero-1-ram 22, booking 22, rot-gt-panel 22, hero-2-form 27, main-form 15, testimonials 16 (legacy --radius)	--ampy-radius-card
+Fält	12 till 10,1	elkollen 10, elcentral 10, hero-2 Z 10, booking 14, hero-2-form 14, main-form 8, energycalc 9	--ampy-radius-field
+Small	8 till 6,1	LED checkbox 4, main-form input 8 (är ett fält), energycalc 9	--ampy-radius-small
+Stort kort	32 till 24,5	hero-1 A-variant 32/28 (bortvald), rot-gt block 32	--ampy-radius-card-lg
+Skuggor per källa
+FAMILJ	VAR	VÄRDE	BYTS UT TILL
+Husets grå	live (14 förekomster), testimonials, main-cta, var-process, rot-gt live-klon	0 0 16px 0 rgba(190,190,190,.19), .14, .4	--ampy-shadow-card (B10)
+LED-kitets near-miss	LED, EV, battery, hero-1, website-blocks, mini-menu, booking, main-form (rgb(15,18,60), 25 förekomster)	0 1px 2px .06, 0 4px 12px .08, 0 16px 40px .14, 0 22px 36px -28px .20	samma geometri, färg rgba(9,11,50,x): subtle / card / raised
+Diagnostikens near-miss	elkollen, elcentral (rgb(11,13,42), 7 förekomster)	0 1px 2px .04, 0 6px 18px .06 (elkollen), 0 8px 28px .07 (elcentral kortet), 0 14px 32px .10 (--shadow-lg, deklarerad)	subtle / card / raised
+Bokningens near-miss	booking-confirmation (rgb(11,16,48))	0 18px 44px .09 + inset	card
+Tredelade kortskuggor	fore-efter (.04/.06/.05), certificates (.10/.10/.07), fotobedömningen (.04/.07/.10), mini-menu	tre lager midnight-alfa	card (en skugga räcker; tre lager syns inte på sky mist)
+Svart och vitt	hero-2 Z 0 28px 60px -28px rgba(0,0,0,.65); picasso, elkollen, elcentral, live knappglöd 0 0 16px rgba(241,241,241,.25); hero-2-form rgba(181,181,181,.14)	svart, vit, grå	photo / button (CTA-bibliotekets tre lager)
+Teal-glöd i fem styrkor	header (.5), thank-you (.3), energycalc (.42), main-form (.45), mini-menu, booking, hero-2-form, elkollen, LED (17 förekomster)	0 4px 12px -5px rgba(0,169,145,.5) och varianter	--ampy-shadow-glow-action (bara solid knapp)
+Bricks --apshadow-*	live global-variables.css (odefinierad --shadow-primary)	beräknas till none	lagade i lager 1b med rgba(9,11,50,.10)
+
+Beslut som rör form och djup: B4 knappradie, B9 glöd på mörka kort, B10 grå eller navy skugga, B11 auroran, B15 glasets värden.

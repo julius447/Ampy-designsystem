@@ -148,6 +148,13 @@ Siffror kommer från `_probes/out/` (frekvens, kontrast, mätning). "Källor" = 
 
 ---
 
+## B21 · Teal core som text på midnight?
+
+- **Alternativ:** (a) aldrig text, oavsett yta (fyra källor formulerar "teal aldrig text" ur ljus-kontrasten 2,96:1); (b) tillåten på midnight (6,41:1 mot #090b32) för kicker, readout-enhet och siffra >= 16 px där källan gör så (visste-du-att, battery-calculator, LED "Med LED"-etikett); (c) bara `--ampy-action-strong` överallt.
+- **Källorna:** visste-du-att (kicker teal på midnight, auk 2), battery-calculator (readout, auk 3), LED (stapeletikett "Med LED" i emerald, auk 1); regeln "aldrig text" i var-process, fotobedomningen, sticky-bar, elkollen (alla ljus yta).
+- **Rekommendation:** (b). Kontrasten är AA på midnight; regeln handlar om ljus yta. Skrivs identiskt i tokens.css (`--ampy-action`), farg.html, tillganglighet.html, ai-tells.html (granskning 2026-09-12, TOKENS-2).
+- **Konsekvens:** verktyg.css (chart-etiketter), block.css (visste-du-att-kicker) behåller teal på midnight; ai-tells-exemplet märks "tillåtet per B21". Säger du (a): tre filer byter till `--ampy-on-dark`/`--apneon-mint`.
+
 ### Redan avgjort av ägardirektiv (ingår inte i listan, men tokens.css följer dem)
 
 - Outfit stays (B7 följer det). Teal ensam accent (B1 följer). Spacing på befintliga apspace-värden (lager 2 speglar dem, inga nya). Fullbreddsblock tillåtna (`--ampy-container` är inte ett tak). Inga midnattsblå gradient-scrims som yta (scrim-tokens finns bara för foto-veil). Inga tankstreck eller "·" i UI-strängar (base.css/smoke använder inga). Gradienttext ogillas (alla textgradienter = drift, ingen token). "AI-slop-defaulten" (mörkt kort + glöd + centrerad vit rubrik) = B9 gör glöden till tillval.

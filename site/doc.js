@@ -3,11 +3,16 @@
   var side = document.querySelector('.ds-side');
   var btn = document.querySelector('[data-ds-nav-toggle]');
   if (side && btn) {
-    btn.addEventListener('click', function () {
-      var open = side.classList.toggle('is-open');
+    var backdrop = document.createElement('button'); backdrop.type = 'button'; backdrop.className = 'ds-backdrop'; backdrop.setAttribute('aria-label', 'Stäng meny'); document.body.appendChild(backdrop);
+    var setOpen = function (open) {
+      side.classList.toggle('is-open', open); backdrop.classList.toggle('is-open', open);
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && side.classList.contains('is-open')) { side.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.focus(); } });
+      document.body.style.overflow = open ? 'hidden' : '';
+      if (open) { var first = side.querySelector('.ds-nav a'); if (first) first.focus(); }
+    };
+    btn.addEventListener('click', function () { setOpen(!side.classList.contains('is-open')); });
+    backdrop.addEventListener('click', function () { setOpen(false); btn.focus(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && side.classList.contains('is-open')) { setOpen(false); btn.focus(); } });
   }
   document.querySelectorAll('.ds-code').forEach(function (box) {
     var pre = box.querySelector('pre'); if (!pre) return;

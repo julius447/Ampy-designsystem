@@ -27,7 +27,7 @@
   --_gap: 64px;                                   /* källa: elcentralkollen.css:173 gap 6.4rem (= elkollen hero__grid) ; tokens: xl 56 / 2xl 79 */
   --_minh: 560px;                                 /* källa: elcentralkollen.css:41 --ec-q-minh 56rem (mobil 60rem :338) */
   --_q-fs: clamp(20px, 1.2vw + 14.7px, 32px);     /* källa: elcentralkollen.css:114 (--fs-title 20-24) + :856 (>= 1024: 26-32) ; tokens saknar kortrubrik mellan h3 22 och h2 36 */
-  --_fine: var(--ampy-fine, 13px);
+  --_fine: var(--ampy-text-fine);
   --_illu: 120px;                                 /* källa: elcentralkollen.css:869 start-illu 12rem (mobil 11rem) */
   --_ds-min: 420px;                               /* källa: elcentralkollen.css:875 dualstatus min-width 42rem (>= 1024) */
   --_axis-w: 90px;                                /* källa: elcentralkollen.css:427 statusrow-axis min-width 9rem (<= 520: 7rem) */

@@ -1,0 +1,808 @@
+KOMPONENTER
+Kalkylator-kitet
+
+Tvåpanel-verktyget som räknar åt kunden: vitt inputkort till vänster, mörkt resultatkort till höger. Kanon är LED-kalkylatorn (auktoritet 1); EV och batteri är samma kit med drift. Allt nedan är klassen .ampy-calc komponerad med systemets primitiver.
+
+Tvåpanel-skalet
+Inputkortet
+Resultatkortet
+Inline-lead
+Tips-chip och popover
+Produktväljare
+Dela
+Streams-bar och break-even
+Paritet
+Avvikelser och drift
+Komponerat med S2 (falt.css): segment (.ampy-segment), reglage med ticks (.ampy-range-wrap, .ampy-range, .ampy-range__ticks), select (.ampy-select), lead-fälten (.ampy-fields, .ampy-field, .ampy-input, .ampy-error), samtycke (.ampy-check), meddelanden (.ampy-msg) och hjälptext (.ampy-help) kommer från falt.css, inklusive deras mörka varianter. Kitet självt (verktyg.css) äger bara skalet, tier/fält-rytmen, tips-chipet, väljaren, det prominenta värdet, staplarna, lead-flödet runt fälten, metodkortet, dela och de två batteri-devices.
+Tvåpanel-skalet
+
+Container 1280, rubrik ovanför, grid 5fr/7fr med gap 20 som blir en kolumn under 960 px containerbredd. Vitt inputkort (.ampy-card--flat --tight) till vänster, mörkt resultatkort (.ampy-card--dark, glöden --glow är tillval per B9) till höger med "Så har vi räknat" som eget vitt kort under. Resultatkolumnen kan vara sticky (.ampy-calc__stack--sticky, energycalc-mönstret).
+
+Kanon: led-kalkylator (styles.css:96-134). Finns även i: ev-kalkylator (padding 20 överallt, cqi-brytpunkter), battery-calculator (overflow-defekt 394,9 px på 390), energycalc (egen familj: 1360-shell, sticky inputkort 420, jump-pill). Blockbiblioteket: LED-kalkylatorn.
+
+DEFAULT, 1440 = TVÅ KOLUMNER, 390 = STAPLAT
+Vad sparar du på att byta till LED?
+VAD DU BYTER
+Vem räknar vi för?
+i
+BRF
+Företag
+Privat
+
+Vi räknar för föreningens gemensamma belysning.
+
+Vad byter du från?
+i
+Lysrörsarmatur 2×36 W T8 (120 cm)
+82 → 34 W, 3600 till 4400 lm
+Antal armaturer
+i
+80
+st
+40
+80
+160
+280
+400
+DIN SITUATION
+Var sitter belysningen?
+i
+Snitt brinntid (12,0 h/dygn)
+Trapphus utan styrning (24,0 h/dygn)
+Garage med närvarostyrning (6,0 h/dygn)
+Kontor (9,0 h/dygn)
+Brinntid
+i
+12,0
+h/dygn
+0,0 h
+6,0 h
+12,0 h
+18,0 h
+24,0 h
+Elprisområde
+i
+SE1
+SE2
+SE3
+SE4
+ÅRLIG BESPARING
+27 752
+kr/år
+Så mycket lägre kan elkostnaden bli, varje år, så länge belysningen lyser.
+ENERGI DU KAPAR
+16 819
+kWh/år
+59 % lägre förbrukning
+CO₂ DU SPARAR
+7,8
+ton/år
+jämfört med nordisk elmix
+UPPSKATTAD KOSTNAD
+120 000
+kr
+ca 1 500 kr per armatur, inkl. installation
+VAD BELYSNINGEN KOSTAR PER ÅR
+I dag
+47 409 kr
+Med LED
+19 657 kr
+
+LED drar 59 % mindre, skillnaden är din besparing.
+
+Få en skräddarsydd offert
+Så har vi räknat
+Så ser källan ut (LED-kalkylatorn live). Skillnaderna mot kitet ovan står under Avvikelser: Outfit i stället för Plus Jakarta Sans och JetBrains Mono, teal-deep i stället för teal-core på knappen, tokenradier.
+Anatomi
+DEL	1440	390	TOKEN
+Container	1280, padding 19,8 / 14	padding 13,3 / 10,5	--ampy-container, --ampy-space-s / -xs (LED 20/15, 15/10)
+Grid	5fr / 7fr, gap 19,8	en kolumn, gap 13,3	--ampy-space-s (LED gap 20); brytpunkt 960 (LED) som containerfråga
+Inputkort	radie 20, padding 19,8, 1 px kant, shadow-subtle	radie 16,3, padding 13,3	.ampy-card--flat --tight (LED radie 20 fast, padding 20/15)
+Resultatkort	radie 20, padding 39,6, gap 28, shadow-raised	radie 16,3, padding 16,9 / 13,3, gap 13,3	.ampy-card--dark + kitets padding (LED 40 / 30; mobil 20 15 / 20)
+Glöd	två radialer teal .28 / emerald .16	samma	--ampy-bg-dark-glow via .ampy-card--glow, tillval (B9)
+Rubrik	36 / 700	26,8 / 700	--ampy-text-h2 (LED PJS 34/24)
+<div class="ampy-calc">
+  <header class="ampy-calc__head"><h2 class="ampy-calc__title">Vad sparar du på att byta till LED?</h2></header>
+  <div class="ampy-calc__main">
+    <section class="ampy-card ampy-card--flat ampy-card--tight ampy-calc__input" aria-label="Dina värden">
+      <!-- tiers och fält, se Inputkortet -->
+    </section>
+    <div class="ampy-calc__stack ampy-calc__stack--sticky">
+      <section class="ampy-card ampy-card--dark ampy-card--glow ampy-calc__result" aria-label="Ditt resultat">
+        <!-- readout, stat-trio, staplar, CTA, se Resultatkortet -->
+      </section>
+      <details class="ampy-calc__method">…</details>
+    </div>
+  </div>
+</div>
+Kopiera
+GÖR
+Värde först: resultatet syns från första målning, formuläret öppnas först när CTA:n klickas.
+En kolumn under 960 px containerbredd; inputkortet överst så att reglagen kommer före siffran på mobil.
+Tabular-nums på alla siffror så att staplar och belopp står stilla när värdet ändras.
+GÖR INTE
+Ingen e-postvägg framför resultatet (LED, EV, energycalc gör alla värde-först).
+Ingen glöd som default på andra mörka ytor; radialerna är kitets tillval (B9).
+Inga tre typsnitt: Outfit ensam, siffror med tabular-nums (B7).
+Inputkortets sektioner
+
+Tier med eyebrow, fråga med tips-chip, segmenterat val, produktväljare med ikon och underrad, prominent värde med reglage och tick-etiketter, native select, och en hårlinje mellan tier 1 och tier 2. Segment, reglage och select är fältprimitiver (S2); kitet äger tier, fråga, hint, prominent värde, ticks och väljaren.
+
+Kanon: led-kalkylator (styles.css:137-157 tier/fält, 161-206 väljare, 210-236 värde + reglage, 249-259 segment, 285-290 select). Finns även i: ev-kalkylator (foto-väljare, AC/DC-toggle, tick-marker), energycalc (heat-picker-kort, glidande seg-pill, stepper), battery (segment 33 px hög = under 44-golvet).
+
+INPUTKORTET ENSAMT
+VAD DU BYTER
+Vem räknar vi för?
+i
+BRF
+Företag
+Privat
+
+Vi räknar för föreningens gemensamma belysning.
+
+Vad byter du från?
+i
+Lysrörsarmatur 2×36 W T8 (120 cm)
+82 → 34 W, 3600 till 4400 lm
+Antal armaturer
+i
+80
+st
+40
+80
+160
+280
+400
+DIN SITUATION
+Var sitter belysningen?
+i
+Snitt brinntid (12,0 h/dygn)
+Trapphus utan styrning (24,0 h/dygn)
+Garage med närvarostyrning (6,0 h/dygn)
+Kontor (9,0 h/dygn)
+Brinntid
+i
+12,0
+h/dygn
+0,0 h
+6,0 h
+12,0 h
+18,0 h
+24,0 h
+Elprisområde
+i
+SE1
+SE2
+SE3
+SE4
+<div class="ampy-calc ampy-calc--flush" id="calc-input" style="max-width: 512px"><section class="ampy-card ampy-card--flat ampy-card--tight ampy-calc__input" aria-label="Dina värden">
+  <div class="ampy-calc__tier ampy-calc__tier--primary">
+    <span class="ampy-eyebrow">Vad du byter</span>
+    <div class="ampy-calc__field">
+      <span class="ampy-calc__q" id="c3-segq">Vem räknar vi för? <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-describedby="c3-tip1" aria-label="Förklaring">i</button><span class="ampy-calc__popover" role="tooltip" id="c3-tip1">BRF, företag och privatperson räknas olika: vi anpassar armaturtyp, brinntid och pris efter din profil.</span></span></span>
+      <div class="ampy-segment" role="radiogroup" aria-label="Vem räknar vi för?">
+  <label class="ampy-segment__option"><input type="radio" name="c3-seg" value="BRF" checked><span>BRF</span></label>
+  <label class="ampy-segment__option"><input type="radio" name="c3-seg" value="Företag"><span>Företag</span></label>
+  <label class="ampy-segment__option"><input type="radio" name="c3-seg" value="Privat"><span>Privat</span></label>
+</div>
+      <p class="ampy-help">Vi räknar för föreningens gemensamma belysning.</p>
+    </div>
+    <div class="ampy-calc__field ampy-calc__field--prominent">
+      <span class="ampy-calc__q">Vad byter du från? <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-describedby="c3-tip2" aria-label="Förklaring">i</button><span class="ampy-calc__popover" role="tooltip" id="c3-tip2">Välj din nuvarande ljuskälla. Vi jämför mot en likvärdig LED-ersättning med samma ljus.</span></span></span>
+      <div class="ampy-calc__selector" aria-expanded="false">
+        <button type="button" class="ampy-calc__selector-btn" aria-haspopup="listbox">
+          <span class="ampy-calc__selector-img"><svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.3 1 2.5h6c0-1.2.3-1.7 1-2.5A6 6 0 0 0 12 3Z"/></svg></span>
+          <span class="ampy-calc__selector-text">
+            <span class="ampy-calc__selector-name">Lysrörsarmatur 2×36 W T8 (120 cm)</span>
+            <span class="ampy-calc__selector-meta">82 → 34 W, 3600 till 4400 lm</span>
+          </span>
+          <svg class="ampy-calc__selector-chevron" width="20" height="20" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="ampy-calc__field ampy-calc__field--prominent">
+      <label class="ampy-calc__q" for="c3-antal">Antal armaturer <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-describedby="c3-tip3" aria-label="Förklaring">i</button><span class="ampy-calc__popover" role="tooltip" id="c3-tip3">Hur många armaturer eller ljuskällor bytet gäller. Dra i reglaget eller klicka på en siffra.</span></span></label>
+      <span class="ampy-calc__value"><span>80</span><span class="ampy-calc__unit">st</span></span>
+      <div class="ampy-range-wrap">
+        <input class="ampy-range" id="c3-antal" type="range" min="40" max="400" step="10" value="80" style="--_fill: 11%" aria-valuetext="80 armaturer">
+        <ul class="ampy-range__ticks" aria-hidden="true">
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">40</button></li>
+  <li><button type="button" class="ampy-range__tick is-active" tabindex="-1">80</button></li>
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">160</button></li>
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">280</button></li>
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">400</button></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="ampy-calc__tier">
+    <span class="ampy-eyebrow">Din situation</span>
+    <div class="ampy-calc__field">
+      <label class="ampy-calc__q ampy-calc__q--strong" for="c3-kontext">Var sitter belysningen? <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-describedby="c3-tip4" aria-label="Förklaring">i</button><span class="ampy-calc__popover" role="tooltip" id="c3-tip4">Styr brinntiden. Snitt brinntid är ett genomsnitt över alla armaturer, bra när bytet omfattar flera utrymmen.</span></span></label>
+      <select class="ampy-select" id="c3-kontext">
+        <option>Snitt brinntid (12,0 h/dygn)</option>
+        <option>Trapphus utan styrning (24,0 h/dygn)</option>
+        <option>Garage med närvarostyrning (6,0 h/dygn)</option>
+        <option>Kontor (9,0 h/dygn)</option>
+      </select>
+    </div>
+    <div class="ampy-calc__field ampy-calc__field--prominent">
+      <label class="ampy-calc__q" for="c3-brinn">Brinntid <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-describedby="c3-tip5" aria-label="Förklaring">i</button><span class="ampy-calc__popover" role="tooltip" id="c3-tip5">Timmar per dygn som belysningen lyser, i snitt över året.</span></span></label>
+      <span class="ampy-calc__value ampy-calc__value--sm"><span>12,0</span><span class="ampy-calc__unit">h/dygn</span></span>
+      <div class="ampy-range-wrap">
+        <input class="ampy-range" id="c3-brinn" type="range" min="0" max="24" step="0.5" value="12" style="--_fill: 50%" aria-valuetext="12 timmar per dygn">
+        <ul class="ampy-range__ticks" aria-hidden="true">
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">0,0 h</button></li>
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">6,0 h</button></li>
+  <li><button type="button" class="ampy-range__tick is-active" tabindex="-1">12,0 h</button></li>
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">18,0 h</button></li>
+  <li><button type="button" class="ampy-range__tick" tabindex="-1">24,0 h</button></li>
+</ul>
+      </div>
+    </div>
+    <div class="ampy-calc__field">
+      <span class="ampy-calc__q ampy-calc__q--strong">Elprisområde <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-describedby="c3-tip6" aria-label="Förklaring">i</button><span class="ampy-calc__popover" role="tooltip" id="c3-tip6">Vi använder ett medvetet lågt schablonpris per område (SE1 till SE4). Din verkliga besparing blir snarare högre.</span></span></span>
+      <div class="ampy-segment" role="radiogroup" aria-label="Elprisområde">
+  <label class="ampy-segment__option"><input type="radio" name="c3-region" value="SE1"><span>SE1</span></label>
+  <label class="ampy-segment__option"><input type="radio" name="c3-region" value="SE2"><span>SE2</span></label>
+  <label class="ampy-segment__option"><input type="radio" name="c3-region" value="SE3" checked><span>SE3</span></label>
+  <label class="ampy-segment__option"><input type="radio" name="c3-region" value="SE4"><span>SE4</span></label>
+</div>
+    </div>
+  </div>
+</section></div>
+Kopiera
+
+Tips-chipens popover öppnas på hover/fokus i exemplet; i produktion fäster JS den i body med fixed position (EV-mönstret).
+
+Anatomi
+DEL	1440	390	KÄLLA / TOKEN
+Tier-etikett	eyebrow 12 / 600 / .14em	12	LED 15/600/.08em, krymper till eyebrow-rollen (B19)
+Tier 2-avdelare	margin 14 + padding 14 + 1 px	10,5 + 10,5 + 1	--ampy-space-xs, --ampy-line (LED 15 + 15)
+Fråga (tiny)	13 / 500 dämpad, gap 5	13	--ampy-fine, --ampy-space-4xs (LED field-label-tiny 13/500)
+Fråga (stark)	14 / 600 ink	14	--ampy-text-label (LED PJS 600 15)
+Tips-chip	16 × 16, 10/700, 1 px kant	16 (44 träffyta på touch)	kit-egen --_tip (LED 1.6rem), hover teal-deep + vit (B5)
+Prominent värde	28 / 700 tnum, enhet 16 / 500 dämpad	21 / 700, enhet 14,1	kit-egen --_mid = LED --fs-xl; enhet small (LED 15)
+Tick-etiketter	min-höjd 32, 13 tnum, aktiv teal-deep 700	samma	S2 .ampy-range__tick (LED 3.2rem, mono 13, aktiv teal-core: B5)
+Väljare	78 hög, ikonruta 56 radie 8, namn 18/600, meta 13	78, radie 6,1	LED 78 / 56 / radie 6, PJS 600 19
+Segment	spår 48 radie 12 padding 4, option 40 radie 8	48 / 40, radie 10,1 / 6,1	S2 .ampy-segment (LED 48/40, radie 12/6)
+Reglage	spår 6, tumme 24 med 3 px teal, träffyta 44	samma	S2 .ampy-range (LED)
+Select	48 hög, radie 12, 16	48, radie 10,1, 14,1	S2 .ampy-select (LED 48, radie 12, Outfit 15)
+<div class="ampy-calc__tier ampy-calc__tier--primary">
+  <span class="ampy-eyebrow">Vad du byter</span>
+  <div class="ampy-calc__field">
+    <span class="ampy-calc__q">Vem räknar vi för?
+      <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-describedby="t1">i</button><span class="ampy-calc__popover" role="tooltip" id="t1">BRF, företag och privatperson räknas olika.</span></span>
+    </span>
+    <div class="ampy-segment" role="radiogroup" aria-label="Vem räknar vi för?">
+      <label class="ampy-segment__option"><input type="radio" name="seg" checked><span>BRF</span></label>
+      <label class="ampy-segment__option"><input type="radio" name="seg"><span>Företag</span></label>
+      <label class="ampy-segment__option"><input type="radio" name="seg"><span>Privat</span></label>
+    </div>
+    <p class="ampy-help">Vi räknar för föreningens gemensamma belysning.</p>
+  </div>
+  <div class="ampy-calc__field ampy-calc__field--prominent">
+    <label class="ampy-calc__q" for="antal">Antal armaturer</label>
+    <span class="ampy-calc__value"><span>80</span><span class="ampy-calc__unit">st</span></span>
+    <div class="ampy-range-wrap">
+      <input class="ampy-range" id="antal" type="range" min="40" max="400" step="10" value="80" style="--_fill: 11%">
+      <ul class="ampy-calc__ticks" aria-hidden="true"><li><button type="button" class="ampy-calc__tick" tabindex="-1">40</button></li><li><button type="button" class="ampy-calc__tick is-active" tabindex="-1">80</button></li>…</ul>
+    </div>
+  </div>
+</div>
+Kopiera
+GÖR
+Etiketten ovanför, värdet stort med enheten baseline-satt i mindre och dämpad, reglaget under.
+Tick-etiketter som klickbara knappar med 32 px höjd; den aktiva i teal-deep 700.
+Segment med sunk track / raised pill: spår subtil, vald = vit pill + shadow-subtle + teal-deep-text.
+GÖR INTE
+Aldrig teal-core som text (2,96:1): aktiv tick och segment-text är teal-deep.
+Ingen tooltip som täcker rubriken på 390 (LED:s defekt); popovern breddkapas till 280 och fästs vid chipet.
+Inga tick-etiketter under 13 px (EV:s 9 px på mobil är en defekt).
+Resultatkortet
+
+Eyebrow, hjältesiffra med enhet och undertext (.ampy-readout), stat-trio med underetiketter (.ampy-stat-trio), hårlinje, före/efter-staplarna (kitets signaturenhet: "I dag" amber mot "Med LED" emerald i samma spår, belopp i tabular-nums), hårlinje, CTA. Staplarnas bredd sätts med --_w.
+
+Kanon: led-kalkylator (styles.css:293-297 hero, 300-311 trio, 398-412 compare, 325-333 CTA). Finns även i: ev-kalkylator (månadspanel med två 10 px-staplar och "Du sparar"-delta i stället för före/efter-raden; hjältesiffran 38,7 px pga cqi-buggen), battery (streams-bar + payback-kurva, se nedan), energycalc (anchor Outfit 900 52, Sparstaplarna 10 px + mint-band).
+
+RESULTATKORTET ENSAMT
+ÅRLIG BESPARING
+27 752
+kr/år
+Så mycket lägre kan elkostnaden bli, varje år, så länge belysningen lyser.
+ENERGI DU KAPAR
+16 819
+kWh/år
+59 % lägre förbrukning
+CO₂ DU SPARAR
+7,8
+ton/år
+jämfört med nordisk elmix
+UPPSKATTAD KOSTNAD
+120 000
+kr
+ca 1 500 kr per armatur, inkl. installation
+VAD BELYSNINGEN KOSTAR PER ÅR
+I dag
+47 409 kr
+Med LED
+19 657 kr
+
+LED drar 59 % mindre, skillnaden är din besparing.
+
+Få en skräddarsydd offert
+<div class="ampy-calc ampy-calc--flush" id="calc-result" style="max-width: 717px"><section class="ampy-card ampy-card--dark ampy-card--glow ampy-calc__result" aria-label="Ditt resultat">
+<div class="ampy-readout">
+  <span class="ampy-eyebrow">Årlig besparing</span>
+  <span class="ampy-readout__value"><span class="ampy-number">27 752</span><span class="ampy-readout__unit">kr/år</span></span>
+  <span class="ampy-readout__sub">Så mycket lägre kan elkostnaden bli, varje år, så länge belysningen lyser.</span>
+</div>
+<div class="ampy-stat-trio">
+  <div class="ampy-stat"><span class="ampy-stat__label">Energi du kapar</span><span class="ampy-stat__value">16 819<span class="ampy-stat__unit">kWh/år</span></span><span class="ampy-stat__sub">59 % lägre förbrukning</span></div>
+  <div class="ampy-stat"><span class="ampy-stat__label">CO₂ du sparar</span><span class="ampy-stat__value">7,8<span class="ampy-stat__unit">ton/år</span></span><span class="ampy-stat__sub">jämfört med nordisk elmix</span></div>
+  <div class="ampy-stat"><span class="ampy-stat__label">Uppskattad kostnad</span><span class="ampy-stat__value">120 000<span class="ampy-stat__unit">kr</span></span><span class="ampy-stat__sub">ca 1 500 kr per armatur, inkl. installation</span></div>
+</div>
+<hr class="ampy-divider ampy-divider--tight">
+<div class="ampy-calc__compare">
+  <span class="ampy-eyebrow">Vad belysningen kostar per år</span>
+  <div class="ampy-calc__compare-row ampy-calc__compare-row--now">
+    <span class="ampy-calc__compare-key">I dag</span>
+    <span class="ampy-calc__compare-track"><span class="ampy-calc__compare-bar" style="--_w: 100%"></span></span>
+    <span class="ampy-calc__compare-val">47 409 kr</span>
+  </div>
+  <div class="ampy-calc__compare-row ampy-calc__compare-row--after">
+    <span class="ampy-calc__compare-key">Med LED</span>
+    <span class="ampy-calc__compare-track"><span class="ampy-calc__compare-bar" style="--_w: 41%"></span></span>
+    <span class="ampy-calc__compare-val">19 657 kr</span>
+  </div>
+  <p class="ampy-calc__compare-caption">LED drar <strong>59 % mindre</strong>, skillnaden är din besparing.</p>
+</div>
+<hr class="ampy-divider ampy-divider--tight">
+<div class="ampy-calc__cta-stack">
+  <button class="ampy-btn ampy-btn--secondary ampy-calc__cta" type="button">Få en skräddarsydd offert <svg class="ampy-btn__icon" width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></button>
+</div>
+</section></div>
+Kopiera
+Anatomi
+DEL	1440	390	KÄLLA / TOKEN
+Eyebrow	12 / 600 / .14em, vit .66	12	.ampy-eyebrow på mörkt (LED PJS 600 15 .06em .66)
+Hjältesiffra	56 / 700 / lh 1 / −.03em tnum	38,3	--ampy-text-number = LED:s clamp exakt (PJS → Outfit)
+Enhet	28 / 500 vit .66, baseline-gap 12	21	.ampy-readout__unit (LED --fs-xl 28/21)
+Undertext	16 vit .66	14,1	--ampy-text-small (LED 15)
+Stat-trio	3 kolumner, etikett 12 / värde 28 / sub 13; staplas ≤ 560	staplad, 10 mellan	.ampy-stat-trio (LED trio-label 13, value 28, sub 13)
+Stapelspår	höjd 24, radie pill, vit .06; stapel min 16	24	kit-egen --_track (LED 2.4rem), --ampy-on-dark-subtle
+Nyckel / belopp	nyckel 60 bred 13/600, belopp min 90, 16/600 tnum	nyckel 50, belopp 75, 13	LED 6rem / 9rem (≤ 560: 5 / 7.5), mono 600 15
+Amber / emerald	#f0af38 / #39c281	samma	--ampy-warn (bara på mörkt) / --ampy-success
+CTA	58 hög, radie 16, 16/600 vit på teal-deep	58	.ampy-btn--secondary (LED 50 hög, radie 12, PJS 600 15 på teal-core: B4, B5, B6)
+<section class="ampy-card ampy-card--dark ampy-card--glow ampy-calc__result" aria-label="Ditt resultat">
+  <div class="ampy-readout">
+    <span class="ampy-eyebrow">Årlig besparing</span>
+    <span class="ampy-readout__value"><span class="ampy-number">27 752</span><span class="ampy-readout__unit">kr/år</span></span>
+    <span class="ampy-readout__sub">Så mycket lägre kan elkostnaden bli, varje år, så länge belysningen lyser.</span>
+  </div>
+  <div class="ampy-stat-trio">
+    <div class="ampy-stat"><span class="ampy-stat__label">Energi du kapar</span><span class="ampy-stat__value">16 819<span class="ampy-stat__unit">kWh/år</span></span><span class="ampy-stat__sub">59 % lägre förbrukning</span></div>
+    …
+  </div>
+  <hr class="ampy-divider ampy-divider--tight">
+  <div class="ampy-calc__compare">
+    <span class="ampy-eyebrow">Vad belysningen kostar per år</span>
+    <div class="ampy-calc__compare-row ampy-calc__compare-row--now">
+      <span class="ampy-calc__compare-key">I dag</span>
+      <span class="ampy-calc__compare-track"><span class="ampy-calc__compare-bar" style="--_w: 100%"></span></span>
+      <span class="ampy-calc__compare-val">47 409 kr</span>
+    </div>
+    <div class="ampy-calc__compare-row ampy-calc__compare-row--after">
+      <span class="ampy-calc__compare-key">Med LED</span>
+      <span class="ampy-calc__compare-track"><span class="ampy-calc__compare-bar" style="--_w: 41%"></span></span>
+      <span class="ampy-calc__compare-val">19 657 kr</span>
+    </div>
+    <p class="ampy-calc__compare-caption">LED drar <strong>59 % mindre</strong>, skillnaden är din besparing.</p>
+  </div>
+  <hr class="ampy-divider ampy-divider--tight">
+  <div class="ampy-calc__cta-stack">
+    <button class="ampy-btn ampy-btn--secondary ampy-calc__cta" type="button">Få en skräddarsydd offert <svg class="ampy-btn__icon" width="18" height="18" aria-hidden="true"><use href="…/ikoner.svg#ik-arrow-right"/></svg></button>
+  </div>
+</section>
+Kopiera
+GÖR
+Siffran är hjälten: eyebrow ovanför, enheten i halva storleken på samma baslinje, undertexten dämpad.
+Staplarna gör matematiken synlig: kostnadsskillnaden ÄR besparingen, och captionen säger procenten.
+En hårlinje mellan sektionerna, kortets gap ger luften (margin 0 på linjen).
+GÖR INTE
+Ingen centrerad vit rubrik på det mörka kortet (AI-slop-defaulten, B9): siffran står till vänster.
+Ingen andra CTA i samma kort (EV:s "Läs mer om Zaptec Go" renderade teal på midnatt = kontrastdefekt).
+Inga "≈"-prefix eller ±-spann i hjältesiffran utan att undertexten förklarar dem.
+Inline-lead: formuläret under CTA:n
+
+Klick på CTA:n byter ut knappen mot formuläret på samma mörka kort (LED). Fyra fält i två kolumner från 600 px containerbredd, honeypot, samtyckesruta, submit, finstilt med "Avbryt". Fel visas vid fältet (EV:s inline-fel, inte LED:s samlade meddelande). Nedan: formuläret öppet med ett ogiltigt fält, och metodkortet utfällt.
+
+Kanon: led-kalkylator (styles.css:351-396). Finns även i: ev-kalkylator (CTA:n står kvar ovanför formuläret, native checkbox, inline-fel), energycalc (reveal via grid-rows, CTA:n morfar till "Stäng", samtycke som text utan ruta), elcentral/elkollen (lead som eget steg i kortet, 52/48 höga fält, samtyckesnot).
+
+LEAD-FORMULÄRET ÖPPET + OGILTIGT FÄLT + METODKORTET ÖPPET
+VAD DU BYTER
+Vem räknar vi för?
+i
+BRF
+Företag
+Privat
+
+Vi räknar för föreningens gemensamma belysning.
+
+Vad byter du från?
+i
+Lysrörsarmatur 2×36 W T8 (120 cm)
+82 → 34 W, 3600 till 4400 lm
+Antal armaturer
+i
+80
+st
+40
+80
+160
+280
+400
+DIN SITUATION
+Var sitter belysningen?
+i
+Snitt brinntid (12,0 h/dygn)
+Trapphus utan styrning (24,0 h/dygn)
+Garage med närvarostyrning (6,0 h/dygn)
+Kontor (9,0 h/dygn)
+Brinntid
+i
+12,0
+h/dygn
+0,0 h
+6,0 h
+12,0 h
+18,0 h
+24,0 h
+Elprisområde
+i
+SE1
+SE2
+SE3
+SE4
+ÅRLIG BESPARING
+27 752
+kr/år
+Så mycket lägre kan elkostnaden bli, varje år, så länge belysningen lyser.
+ENERGI DU KAPAR
+16 819
+kWh/år
+59 % lägre förbrukning
+CO₂ DU SPARAR
+7,8
+ton/år
+jämfört med nordisk elmix
+UPPSKATTAD KOSTNAD
+120 000
+kr
+ca 1 500 kr per armatur, inkl. installation
+VAD BELYSNINGEN KOSTAR PER ÅR
+I dag
+47 409 kr
+Med LED
+19 657 kr
+
+LED drar 59 % mindre, skillnaden är din besparing.
+
+Vår belysningsexpert hör av sig med ett offertförslag, oftast inom en arbetsdag.
+
+Namn
+
+Skriv ditt namn.
+
+E-post
+Telefon
+Postnummer
+Lämna detta fält tomt
+Jag godkänner att Ampy sparar mina uppgifter för att kontakta mig med en offert, enligt integritetspolicyn.
+Skicka offertförfrågan
+
+Kostnadsfritt och utan förbindelse. Avbryt
+
+Så har vi räknat
+Årlig besparing
+(W_före − W_efter) ÷ 1000 × h/dygn × 365 × antal × elpris
+
+Ren aritmetik på tal du själv ser och kan justera.
+
+Energi du kapar
+(W_före − W_efter) ÷ 1000 × h/dygn × 365 × antal
+
+Minskningen i elförbrukning (kWh/år), samma procent som i före/efter-jämförelsen.
+
+Uppskattad kostnad
+pris per armatur × antal
+
+Material och installation ingår i priset.
+
+Priser är ex moms och inkl. installation. Exakt pris får du i offerten.
+
+Elpris: medvetet lågt schablonpris per elprisområde (SE1 till SE4). Watt-, kostnads- och timantaganden är konservativt valda.
+
+SKICKAT / FEL
+
+Tack. Vi hör av oss inom en arbetsdag.
+
+Det gick inte att skicka. Prova igen eller ring oss på 010-265 79 79.
+
+Anatomi
+DEL	1440	390	KÄLLA / TOKEN
+Fält	48 hög, radie 12, bg vit .05, kant vit .28, 16	48, radie 10,1, 14,1	S2 .ampy-input + kitets mörka yta (LED 48, radie 12, Outfit 15)
+Etikett	13 / 500 vit .92	13	S2 .ampy-field > label (14/600), kitet drar ned till LED 13/500
+Fokus	kant neonmint + ring .30	samma	--ampy-focus-on-dark (LED rgb(28,196,175) .35: B14)
+Fel	kant signalröd + ring, text 13/500 #ffb4b6 på mörkt	samma	S2 .ampy-field.is-error + .ampy-error (LED rgb(214,76,76) 4,2:1: B13)
+Samtyckesruta	20 × 20 radie 8, 1,5 px kant vit .28, vald = teal + vit bock	samma	S2 .ampy-check (LED 18 radie 4 = drift enligt S2)
+Submit	58 hög	58	.ampy-btn--secondary (LED 48)
+Metodkortet	vit, radie 12, padding 9,9 / 14, summary 18/600 44 hög	radie 10,1	LED radie 12, padding 10 15, PJS 600 19; items label 14/600, kod .ampy-code, p 13
+<div class="ampy-calc__cta-stack">
+  <form class="ampy-calc__lead" novalidate>
+    <p class="ampy-calc__lead-intro">Vår belysningsexpert hör av sig med ett offertförslag, oftast inom en arbetsdag.</p>
+    <div class="ampy-fields">
+      <div class="ampy-field is-error"><label for="lead-namn">Namn</label><input class="ampy-input" id="lead-namn" name="namn" type="text" autocomplete="name" required aria-invalid="true" aria-describedby="lead-namn-err"><p class="ampy-error" id="lead-namn-err">Skriv ditt namn.</p></div>
+      <div class="ampy-field"><label for="lead-epost">E-post</label><input class="ampy-input" id="lead-epost" name="epost" type="email" autocomplete="email" inputmode="email" required></div>
+      <div class="ampy-field"><label for="lead-tel">Telefon</label><input class="ampy-input" id="lead-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div class="ampy-field"><label for="lead-postnr">Postnummer</label><input class="ampy-input" id="lead-postnr" name="postnummer" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="6" required></div>
+    </div>
+    <div class="ampy-calc__hp" aria-hidden="true"><label>Lämna detta fält tomt<input name="company_url" type="text" tabindex="-1" autocomplete="off"></label></div>
+    <label class="ampy-check"><input type="checkbox" name="samtycke" required><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kontakta mig med en offert, enligt <a href="#">integritetspolicyn</a>.</span></label>
+    <button class="ampy-btn ampy-btn--secondary ampy-calc__cta" type="submit">Skicka offertförfrågan</button>
+    <p class="ampy-calc__lead-fine">Kostnadsfritt och utan förbindelse. <button type="button" class="ampy-calc__lead-cancel">Avbryt</button></p>
+  </form>
+</div>
+Kopiera
+<details class="ampy-calc__method" open>
+  <summary class="ampy-calc__method-summary">Så har vi räknat <svg class="" width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></summary>
+  <div class="ampy-calc__method-body">
+    <div class="ampy-calc__method-item"><h3>Årlig besparing</h3><code class="ampy-code">(W_före − W_efter) ÷ 1000 × h/dygn × 365 × antal × elpris</code><p>Ren aritmetik på tal du själv ser och kan justera.</p></div>
+    <div class="ampy-calc__method-item"><h3>Energi du kapar</h3><code class="ampy-code">(W_före − W_efter) ÷ 1000 × h/dygn × 365 × antal</code><p>Minskningen i elförbrukning (kWh/år), samma procent som i före/efter-jämförelsen.</p></div>
+    <div class="ampy-calc__method-item"><h3>Uppskattad kostnad</h3><code class="ampy-code">pris per armatur × antal</code><p>Material och installation ingår i priset.</p></div>
+    <div class="ampy-calc__method-disclaimers"><p>Priser är ex moms och inkl. installation. Exakt pris får du i offerten.</p><p>Elpris: medvetet lågt schablonpris per elprisområde (SE1 till SE4). Watt-, kostnads- och timantaganden är konservativt valda.</p></div>
+  </div>
+</details>
+Kopiera
+GÖR
+Formuläret ersätter knappen och bor på samma kort: kunden lämnar aldrig resultatet.
+Fel vid fältet i röd tint på mörkt (rött på midnatt läses inte), ringen är samma färg som kanten.
+Honeypot + novalidate med egen felhantering, aldrig webbläsarens bubblor.
+GÖR INTE
+Ingen fokusring som samtidigt är teal när kanten är röd (LED:s defekt).
+Ingen samlad felrad under finstilten, långt från fältet (LED).
+Ingen e-post som enda fält (battery-prototypens "Maila kalkylen" var en vägg).
+Tips-chip och popover
+
+16 px cirkel med "i" intill etiketten. Hover, fokus och aria-expanded ger teal-deep-yta. Popovern är EV:s: bredd-kapad till 280, midnatt, 13/1.45, radie 6, caret 9 px, 150 ms fade. På touch växer den osynliga träffytan till 44 px utan att cirkeln växer.
+
+Kanon: led-kalkylator (styles.css:268-274 chip) + ev-kalkylator (prototype/styles.css:864-935 popover, ersätter LED:s fixed tooltip som täcker H1 på 390). Finns även i: energycalc (15 px slate-ikoner utan tooltip).
+
+POPOVER ÖPPEN (ARIA-EXPANDED="TRUE")
+Andel offentlig laddning
+i
+Hur stor del av din laddning som i dag sker på publika laddare. Resten antas ske hemma.
+<div class="ampy-calc ampy-calc--flush" id="calc-tip">
+  <div class="ampy-calc__field" style="padding-bottom: 96px">
+    <span class="ampy-calc__q">Andel offentlig laddning <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip" aria-expanded="true" aria-describedby="tip-open">i</button><span class="ampy-calc__popover" role="tooltip" id="tip-open" data-open>Hur stor del av din laddning som i dag sker på publika laddare. Resten antas ske hemma.</span></span></span>
+  </div>
+</div>
+Kopiera
+GÖR
+Chipet är ett riktigt knappelement med aria-describedby till popovern.
+Popovern fästs vid chipet och kapas i bredd; JS klämmer den mot kanten och siktar careten.
+Escape och klick utanför stänger.
+GÖR INTE
+Ingen tooltip som bara reagerar på hover (touch får inget).
+Ingen popover bredare än 280 px eller som slab i full bredd.
+Ingen teal-core-yta med vit text på chipet (2,96:1).
+Produktväljare med foto och badge
+
+LED:s väljare med ikonruta 56; EV lägger foto 48 × 48 i en vit slot, en badge före chevronen och en scrollbar lista med gruppetiketter, 40 px ikonrutor och tre badge-nivåer. Här renderas listan öppen i flödet (--static).
+
+Kanon: led-kalkylator (styles.css:161-206). Finns även i: ev-kalkylator (foto, badge promote / soft / muted, 16 laddboxar, max-height min(50rem, 60vh)), battery (samma som LED).
+
+LISTAN ÖPPEN, FOTO, BADGES
+Laddbox att installera
+Zaptec Go
+Kompakt, upp till 22 kW
+Bästsäljare
+REKOMMENDERADE
+Zaptec Go
+Bästsäljare
+Easee Charge Lite
+Prisvärd
+FÖRETAG OCH BRF
+Zaptec Pro
+Offert
+Garo Entity Pro
+Slut i lager
+<div class="ampy-calc ampy-calc--flush" id="calc-selector">
+  <div class="ampy-calc__field ampy-calc__field--prominent">
+    <span class="ampy-calc__q">Laddbox att installera</span>
+    <div class="ampy-calc__selector is-open">
+      <button type="button" class="ampy-calc__selector-btn" aria-haspopup="listbox" aria-expanded="true">
+        <span class="ampy-calc__selector-img ampy-calc__selector-img--photo" aria-hidden="true"><img src="data:image/jpeg;base64,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" alt="" width="48" height="48"></span>
+        <span class="ampy-calc__selector-text">
+          <span class="ampy-calc__selector-name">Zaptec Go</span>
+          <span class="ampy-calc__selector-meta">Kompakt, upp till 22 kW</span>
+        </span>
+        <span class="ampy-tag ampy-tag--sm ampy-tag--success">Bästsäljare</span>
+        <svg class="ampy-calc__selector-chevron" width="20" height="20" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg>
+      </button>
+      <ul class="ampy-calc__selector-list ampy-calc__selector-list--static" role="listbox" aria-label="Laddbox">
+        <li class="ampy-calc__selector-group" role="presentation">Rekommenderade</li>
+        <li><button type="button" class="ampy-calc__selector-option is-selected" role="option" aria-selected="true"><span class="ampy-calc__selector-img"><svg class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.3 1 2.5h6c0-1.2.3-1.7 1-2.5A6 6 0 0 0 12 3Z"/></svg></span><span class="ampy-calc__selector-option-name">Zaptec Go</span><span class="ampy-tag ampy-tag--sm ampy-tag--success">Bästsäljare</span></button></li>
+        <li><button type="button" class="ampy-calc__selector-option" role="option"><span class="ampy-calc__selector-img"><svg class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.3 1 2.5h6c0-1.2.3-1.7 1-2.5A6 6 0 0 0 12 3Z"/></svg></span><span class="ampy-calc__selector-option-name">Easee Charge Lite</span><span class="ampy-tag ampy-tag--sm ampy-tag--action">Prisvärd</span></button></li>
+        <li class="ampy-calc__selector-group" role="presentation">Företag och BRF</li>
+        <li><button type="button" class="ampy-calc__selector-option" role="option"><span class="ampy-calc__selector-img"><svg class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.3 1 2.5h6c0-1.2.3-1.7 1-2.5A6 6 0 0 0 12 3Z"/></svg></span><span class="ampy-calc__selector-option-name">Zaptec Pro</span><span class="ampy-tag ampy-tag--sm ampy-tag--neutral">Offert</span></button></li>
+        <li><button type="button" class="ampy-calc__selector-option" role="option" aria-disabled="true"><span class="ampy-calc__selector-img"><svg class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.3 1 2.5h6c0-1.2.3-1.7 1-2.5A6 6 0 0 0 12 3Z"/></svg></span><span class="ampy-calc__selector-option-name">Garo Entity Pro</span><span class="ampy-calc__selector-option-meta">Slut i lager</span></button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+Kopiera
+
+Badge = .ampy-tag--sm med nivå (--success promote, --action soft, --neutral muted). EV:s 10 px-badge lyfts till 12 (eyebrow-golvet).
+
+DEL	1440	390	KÄLLA / TOKEN
+Knapp	78 hög, padding 9,9, gap 9,9, radie 12, 1 px kant	78, radie 10,1	LED 78, padding 10, radie 12 (EV 70/65 med foto)
+Ikonruta / foto	56 radie 8 subtil bg / 48 vit slot	56 radie 6,1	LED 5.6rem radie 6; EV 4.8rem
+Namn / meta	18/600 ellipsis / 13 dämpad	16,1 / 13	LED PJS 600 19 / 13
+Lista	radie 12, shadow-raised, padding 5, max min(440, 60vh)	radie 10,1	LED min(44rem, 60vh)
+Option	padding 7, radie 8, hover/vald subtil bg, fokus inset 2 px teal-deep	samma	LED 37,5 hög (utan foto), EV 63 (med foto)
+Dela-popover
+
+Energycalcs tysta textknapp (44 hög, 13/300) med en popover ovanför: 240 bred, chip-yta #11163f, 1 px vit .14, radie 12, tre 44-rader med ikon 18 i mint. Kopierad rad markeras med .is-done. Diagnostikens ljusa variant (ikonknapp + meny) står på diagnostiksidan.
+
+Kanon: energycalc (vB/tool.css:467-491). Finns även i: elcentral-kollen (44 × 44 ikonknapp + ljus meny + toast), ev-kalkylator (popover av tooltip-typ).
+
+POPOVER ÖPPEN
+Kopiera länk
+Dela via mejl
+Delad på Facebook
+Dela din kalkyl
+<div class="ampy-calc ampy-calc--flush" id="calc-share">
+  <div class="ampy-calc__share">
+    <div class="ampy-calc__share-pop ampy-calc__share-pop--static" role="menu" aria-label="Dela din kalkyl">
+      <button type="button" class="ampy-calc__share-act" role="menuitem"><svg class="" width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-copy"/></svg><span>Kopiera länk</span></button>
+      <a class="ampy-calc__share-act" role="menuitem" href="#"><svg class="" width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-mail"/></svg><span>Dela via mejl</span></a>
+      <a class="ampy-calc__share-act is-done" role="menuitem" href="#"><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 0 0Z"/></svg><span>Delad på Facebook</span></a>
+    </div>
+    <button type="button" class="ampy-calc__share-btn" aria-haspopup="menu" aria-expanded="true">Dela din kalkyl</button>
+  </div>
+</div>
+Kopiera
+Streams-bar och break-even-kurva (prototyp, ej kanon)
+
+De två devices som bara finns i batterikalkylatorn (auktoritet 3, aldrig live). Streams-bar: 24 px pill med fyra segment vars bredd är andelen, legend på begäran. Break-even: tre kurvfria remsor (slutvärde, plot, axel) och ETT HTML-förankrat märke "Återbetald" på --_be-x / --_be-y, så text aldrig kolliderar med kurvan. Belägg, inte kanon: skillen refererar dem, men ingen auk 1-källa bär dem.
+
+Belägg: battery-calculator (index.html:666-717 streams, 735-885 chart). LED/EV bär klasserna och --chart-stream-3/4 som dött arv.
+
+STREAMS-BAR + LEGEND (PROTOTYP)
+FYRA INTÄKTSKÄLLOR
+Se fördelningen
+Stödtjänster
+9 300 kr40 %
+Spotpris-arbitrage
+5 400 kr23 %
+Effekttoppskapning
+2 800 kr12 %
+Ökad egenanvändning
+5 800 kr25 %
+<div class="ampy-calc ampy-calc--flush" id="calc-streams">
+  <div class="ampy-calc__evidence">
+    <span class="ampy-eyebrow">Fyra intäktskällor</span>
+    <div class="ampy-calc__streams-bar" role="img" aria-label="Fördelning av årlig avkastning: stödtjänster 40 procent, spotpris 23, effekttoppar 12, egenanvändning 25">
+      <span class="ampy-calc__streams-seg" style="--_w: 40%"></span><span class="ampy-calc__streams-seg" style="--_w: 23%"></span><span class="ampy-calc__streams-seg" style="--_w: 12%"></span><span class="ampy-calc__streams-seg" style="--_w: 25%"></span>
+    </div>
+    <details class="ampy-calc__streams-details" open>
+      <summary class="ampy-calc__streams-summary"><span>Se fördelningen</span> <svg class="" width="14" height="14" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></summary>
+      <ul class="ampy-calc__streams-legend">
+        <li class="ampy-calc__stream"><span class="ampy-calc__stream-dot" style="--_c: var(--ampy-action)"></span><span class="ampy-calc__stream-name">Stödtjänster</span><span class="ampy-calc__stream-val">9 300 kr<small>40 %</small></span></li>
+        <li class="ampy-calc__stream"><span class="ampy-calc__stream-dot" style="--_c: var(--ampy-success)"></span><span class="ampy-calc__stream-name">Spotpris-arbitrage</span><span class="ampy-calc__stream-val">5 400 kr<small>23 %</small></span></li>
+        <li class="ampy-calc__stream"><span class="ampy-calc__stream-dot" style="--_c: var(--_stream-3)"></span><span class="ampy-calc__stream-name">Effekttoppskapning</span><span class="ampy-calc__stream-val">2 800 kr<small>12 %</small></span></li>
+        <li class="ampy-calc__stream"><span class="ampy-calc__stream-dot" style="--_c: var(--_stream-4)"></span><span class="ampy-calc__stream-name">Ökad egenanvändning</span><span class="ampy-calc__stream-val">5 800 kr<small>25 %</small></span></li>
+      </ul>
+    </details>
+  </div>
+</div>
+Kopiera
+BREAK-EVEN-KURVA (PROTOTYP, STATISK SVG)
+PAYBACK-KURVA
++293 087 kr
+I dag
+15 år
+Återbetald
+2,4 år
+<div class="ampy-calc ampy-calc--flush" id="calc-chart">
+  <div class="ampy-calc__evidence">
+    <span class="ampy-eyebrow">Payback-kurva</span>
+    <div class="ampy-calc__chart" role="img" aria-label="Ackumulerat resultat över 15 år: återbetald efter 2,4 år, plus 293 087 kronor efter 15 år">
+      <div class="ampy-calc__chart-inner">
+        <div class="ampy-calc__chart-top"><span class="ampy-calc__chart-corner ampy-calc__chart-corner--end">+293 087 kr</span></div>
+        <div class="ampy-calc__chart-plot">
+          <svg viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="0" y1="340" x2="1000" y2="340" stroke="rgba(255,255,255,.32)" stroke-width="1.5" stroke-dasharray="3.5 3.5"/>
+            <polygon points="0,400 0,340 160,340" fill="var(--_zone-loss)"/>
+            <polygon points="160,340 1000,340 1000,10" fill="var(--_zone-profit)"/>
+            <polyline points="0,400 160,340" fill="none" stroke="var(--ampy-warn)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+            <polyline points="160,340 1000,10" fill="none" stroke="var(--ampy-action)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+          </svg>
+        </div>
+        <div class="ampy-calc__chart-axis">
+          <span class="ampy-calc__chart-corner ampy-calc__chart-corner--today">I dag</span>
+          <span class="ampy-calc__chart-corner ampy-calc__chart-corner--axis-end">15 år</span>
+        </div>
+        <div class="ampy-calc__be" style="--_be-x: 16%; --_be-y: 0.15">
+          <span class="ampy-calc__be-dot"></span>
+          <span class="ampy-calc__be-line"></span>
+          <div class="ampy-calc__be-label"><span class="ampy-calc__be-caption">Återbetald</span><span class="ampy-calc__be-time">2,4 år</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+Kopiera
+
+Färger: linje amber → teal vid nollgenomgången, zoner i samma tokens i alfa (.18 / .16). Segment 3 och 4 (rgb(122,208,198) / rgb(160,184,196)) saknar token och står som kit-egna.
+
+Paritet mot källan
+
+Kitets exempel ovan mätta i Chromium vid 1440 och 390, i en 1280-ram som motsvarar LED:s container, mot källans uppmätta värden i inventeringen.
+
+MÅTT	1440: KÄLLA / KIT	390: KÄLLA / KIT	NOT
+Inputkort bredd	512,5 / 513,4	370 / 369	grid 5fr/7fr med gap 19,8 (LED 20)
+Resultatkort bredd	717,5 / 718,8	370 / 369	
+Inputkort höjd	848,1 / 822,8	806,1 / 766,2	Outfit i st.f. PJS/mono, eyebrows 12 i st.f. 15, ticks 32; innehållsberoende
+Resultatkort höjd	589,1 / 600,1	634,1 / 604,1	CTA 58 i st.f. 50, padding 39,6/16,9 i st.f. 40/20
+Inputkort padding	20 / 19,8	15 / 13,3	--ampy-space-s (LED 20 / 15)
+Inputkort radie	20 / 20	20 / 16,3	--ampy-radius-card 20 -> 16,3 (LED 20 fast)
+Resultatkort padding	40 / 39,6	20 / 16,9	--ampy-space-l 39,6 / m 16,9 (LED 40 / 20)
+Rubrik (px)	34 / 36	24,2 / 26,8	h2-rollen 36/26,8 (LED PJS 34/24)
+Hjältesiffra (px)	56 / 56	38,3 / 38,3	--ampy-text-number = LED:s clamp
+Hjältesiffra radhöjd	56 / 56	38,3 / 38,3	
+Enhet (px)	28 / 28	21,1 / 21,1	kit-egen --_mid = LED --fs-xl
+Trio-värde (px)	28 / 28	21,1 / 21,1	text.css --_mid
+Stapelspår höjd	24 / 24	24 / 24	signaturen: 24
+Stapel höjd	24 / 24	24 / 24	
+Stapelnyckel bredd	60 / 60	50 / 50	60 / 50 (mobil: auto med min 50)
+Segment spår höjd	48 / 48	48 / 48	falt.css
+Segment option höjd	40 / 40	40 / 40	falt.css
+Reglage tumme	24 / 24	24 / 24	falt.css --_thumb (pseudo-elementet kan inte mätas via API, källan mättes som DOM-element)
+Reglage spår höjd	6 / 6	6 / 6	falt.css --_track-h
+Select höjd	48 / 48	48 / 48	falt.css
+Väljare höjd	78 / 77,8	78 / 74,6	
+Väljare ikonruta	56 / 56	56 / 56	
+Tips-chip	16 / 16	16 / 16	
+Tick-etikett höjd	32 / 32	32 / 32	falt.css
+CTA höjd	50 / 58	50 / 58	.ampy-btn 58 (LED 50): B4/B6, avsiktlig
+CTA radie	12 / 16	12 / 16	16 (LED 12): B4, avsiktlig
+Metodkort höjd (stängd)	60,5 / 65,8	56,1 / 62,6	summary 18/600 med 44 px träffyta (LED 19/600)
+
+Källa = inventering/_probes/led-kalkylator.measure.json (Chromium 1440x1000 / 390x844, Google Fonts laddade). Kit = getComputedStyle/getBoundingClientRect på den här sidans exempel, lyft in i en 1280-ram (site/_probes/out/s3-harness-calc.html: .ampy-calc utan --flush = 1280 + padding 19,8/14, som LED:s container). Grönt = inom 1 px. Mätt 2026-09-11 22:46.
+
+Avvikelser och drift
+VAR	KÄLLAN	KITET	SKÄL
+Typsnitt	Plus Jakarta Sans (rubrik, etiketter, siffror) + Outfit + JetBrains Mono (inputsiffror)	Outfit överallt, siffror med tabular-nums	B7, brandbok + live + energycalc + Elkollen v7
+Bläck	rgb(15,18,60) / rgb(86,94,130)	--ampy-ink midnight / --ampy-ink-muted #565e82	near-miss konsolideras (tokens.css)
+Inputkortets yta	rgb(247,249,251)	vit	near-miss av sky-mist; alla kort är vita (26 källor)
+CTA	50 hög, radie 12, PJS 600 15, teal-core + vit (2,96:1)	58, radie 16, Outfit 600 16, teal-deep + vit (5,3:1)	B4 (radie 16), B5 (teal-kontrast), B6 (solid = teal-deep i verktyg)
+Eyebrows	tier 15/600 .08em, hero 15/600 .06em, trio 13/600 .04em	12/600 .14em	B19: ett eyebrow-system
+Kortradie på mobil	20 fast	16,3 (--ampy-radius-card)	radien följer tokenkurvan; källan var rem-fast
+Metodkortets radie	12	12 → 10,1 på mobil	--ampy-radius-field; LED-defekten "12 mot korten 20" kvarstår som avsiktlig hierarki (kortet är sekundärt)
+Fokusringar	sju varianter teal .2 till .35	en ring: --ampy-focus-ring (ljust) / neon .30 (mörkt)	B14
+Fel	rgb(214,76,76) (4,2:1)	--ampy-error #b3261e + tint-text på mörkt	B13
+Brytpunkter	@media 960 / 768 / 600 / 560 / 380	@container 960 / 600 / 560 på .ampy-calc	verktyget svarar på sitt utrymme (EV-mönstret), inte på viewporten
+Skuggor	rgba(15,18,60,.06/.08/.14)	--ampy-shadow-subtle / -card / -raised	en skuggfärg (midnight-alfa), B10
+Drift i de andra instanserna
+INSTANS	AVVIKER SÅ HÄR
+ev-kalkylator (auk 1)	Typskalan låst av cqi-buggen (h1 23, hjälte 38,7 avsett 75); mörkad teal rgb(0,125,107) som andra primär; kortpadding 20 överallt (10 på 390); slider 150 ms; CTA 56/17; CTA:n står kvar ovanför formuläret; native checkbox; månadspanel i stället för före/efter-raden; 40 % oanvänd CSS.
+battery-calculator (auk 3)	Samma px-bugg i typskalan (hjälte 44); faint .42 (3,99:1); toggle 30 / segment 33 px höga; inputkortet 394,9 px bred på 390 (overflow); e-postrad som vägg. Bär streams-bar och break-even som enda källa.
+energycalc (auk 1)	Egen kodfamilj (.input/.result/.seg): shell 1360, sticky inputkort 420, anchor Outfit 900 52, native range 28/2 px, glidande seg-pill #00806e, fyra tealer och fyra gråblå utanför tokens, samtycke utan ruta, trust-kort med foto, jump-pill.
+B9 (glöd)	LED, EV, battery har identisk glöd (teal .28 / emerald .16); energycalc tre radialer + inset-highlight; visste-du-att en radial. Kitet: .ampy-card--glow är tillval på resultatkort, aldrig default på andra mörka ytor.
+Brister i tokens.css som kitet stötte på
+Ingen mellanstorlek 28 / 21 för prominent värde och hjälte-enhet (LED --fs-xl): kit-egen --_mid (samma i text.css).
+Ingen felfärg för text på mörkt (falt.css valde #ffb4b6, kitet ärver den); tokens har bara --ampy-error.
+Ingen chip-yta för mörka popovers (#11163f) och inga chart-färger 3/4: kit-egna med källa.
+Container-brytpunkter finns bara som dokumentation (kan inte läsas i @container): 960 / 600 / 560 skrivna som literaler.

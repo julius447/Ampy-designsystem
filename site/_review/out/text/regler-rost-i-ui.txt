@@ -1,0 +1,126 @@
+REGLER
+Röst i gränssnittet
+
+Hantverkaren som säger som det är. Du-tilltal, korta påståenden, siffror som gör jobbet, "kan" där lagen kräver det. Reglerna nedan gäller varje sträng som renderas för en användare: rubriker, knappar, tomma lägen, fel och kvitton.
+
+.claude/skills/ampy-rost/SKILL.md (regel 1 till 12, självkontrollen, DO / DON'T), ampy-foretagsdata.md §8.1 till 8.3, ägardirektiv 2026-07-15 ("!" tillåtet med smak) och 2026-07-18 (starka superlativ och "hela Sverige" tillåtna). Mikrocopyn är hämtad ur de byggda blocken (elcentral-kollen, LED, energycalc, main-form, fotobedömningen, bokningen).
+
+Reglerna, med mekanismen
+1. Du-tilltal
+ampy-rost regel 1
+
+En elektriker talar till en husägare. "ni" och passiv företagsröst läser som marknadsavdelning, det båda publikerna misstror. "Du får besked även om svaret är att du inte behöver göra något."
+
+2. Korta påståenden
+regel 2
+
+En tanke per mening. "Två återställningar är taket." Ett blunt påstående läser som fältkunskap; en garderad bisats läser som någon som täcker sig.
+
+3. Konkreta substantiv och siffror, inte adjektiv
+regel 3 och 4
+
+"78 grader", "40 procent av surrande centraler", "27 752 kr/år". Siffran övertygar; adjektivet på siffran signalerar att du inte litar på den. Aldrig "fantastiska", "enormt", "väldigt ofta".
+
+4. "!" är tillåtet, med smak
+regel 5, ägardirektiv 2026-07-15
+
+Ett utropstecken för förtjänt emfas, en varm takt eller en punchig CTA. Ungefär ett per kort block, aldrig för att stötta en svag rad. Testet är påståendet under tecknet, inte tecknet. Spray är felet: ett "!" på nästan varje rad.
+
+5. Starka superlativ med lätt stöd
+regel 6, ägardirektiv 2026-07-18
+
+"Snabbast på plats i området" får stå, helst med stödet nära ("snittutryckning under X h"). Det enda hårda kravet: aldrig bevisligen falskt. "Alltid billigast på natten" är falskt i SE4 på sommaren och stannar ute som ett påhittat faktum. "Hela Sverige" och "rikstäckande" är tillåtna: Ampy är en nationell elfirma.
+
+6. "kan", inte "kommer att", på lag, försäkring och säkerhet
+regel 8, marknadsföringslagen
+
+"Din hemförsäkring kan sätta ned eller neka ersättning." Aldrig "försäkringen gäller inte". Ett kategoriskt påstående vänder bevisbördan och läser som skrämselhype. Samma sak för skatt: "räcker inte din skatt kan Skatteverket kräva mellanskillnaden".
+
+7. Förklara mekanismen, påstå inte
+regel 7 och 10
+
+"Varmgång kan starta en brand långt innan säkringen reagerar", inte "det är farligt". Jargong glosseras i samma andetag: "lastbalansering: en liten enhet som fördelar strömmen mellan bilen och hushållet".
+
+8. Candour är varumärket
+regel 11, det bärande draget
+
+Säg när de inte ska köpa. Rätta en myt mot din egen merförsäljning. "Du behöver inte byta den i förebyggande syfte." Det är dyrt att säga nej till det stora jobbet, därför läses det som ärligt, och det köper tillit till varje ja.
+
+9. Inga tankstreck och ingen mittpunkt i UI
+regel 12, hård blockerare
+
+Varken em-dash, en-dash eller "·" i en sträng som renderas. Skriv om med kommatecken, kolon, "och" eller en ny mening. Enda undantaget är platshållarglyfen för tomt värde. Tankstrecket renderar olika i värdarna och är dessutom den första AI-signaturen läsaren ser. Grep före leverans: förväntat antal 0.
+
+10. Värme där sanningen är god
+de två polerna, §8.1b
+
+"Skönt besked: du behöver förmodligen inte byta hela centralen." Reglerna dödar hype, inte värme. Dämpad rädsla när svaret är positivt är felet som rättas.
+
+Siffror och enheter
+REGEL	RÄTT	FEL
+Tusentalsavgränsare är ett fast mellanslag (U+00A0)	9 000 kr, 27 752 kr/år, 50 000 kr	9000 kr, 9.000 kr, 9,000 kr
+Procent med mellanslag	30 %, 50 %	30%, 30 procent i en siffertabell (i löptext går "procent")
+Decimalkomma, aldrig punkt	5,0 på Google, 2,4 år, 12,0 h	5.0, 2.4
+Enhet efter mellanslag, gemener där svenskan har det	kr, kr/år, kWh, kW, h/dygn	KR, Kr, kwh
+Belopp bryts aldrig över rad	50 000 kr med fasta mellanslag; siffra och enhet skyddas i copy ("30 %")	procenttecknet ensamt på en rad
+Siffror som jämförs är tabulära	font-variant-numeric: tabular-nums på belopp, telefonnummer, tider och kvittorader	proportionella siffror som hoppar när värdet byts
+Telefonnummer	010-265 79 79 (visning), tel:+46102657979 (länk)	010 265 79 79, 010-2657979
+Datum	torsdag 17 september, mars 2026, 2026-08-14 (i tekniska sammanhang)	17/9, 17.9.2026
+Spann, inte punkt, på osäkra tal	"7 till 12 år", "oftast inom en arbetsdag"	"4 år", "inom 24 timmar" (LM-1: intern motsägelse)
+Minus som riktigt minus	−30 %, −5 850 kr (U+2212)	-30 % med bindestreck i belopp
+Mikrocopy: tomt, fel, laddar, klart
+
+Mönstren nedan är hämtade ur de byggda blocken och skrivna i registret. Komponenterna (fält, fel, tagg, knapp) dokumenteras hos S2; här står orden.
+
+TOMT LÄGE
+
+Inget resultat än. Välj vad du byter från, så räknar vi direkt.
+
+Kalkylatorn: värdet är alltid gratis, inget mejl före resultatet. Aldrig "Börja här!" eller en tom mörk panel.
+
+FEL I FÄLT
+
+Telefonnummer
+
+Skriv numret med riktnummer, till exempel 010-265 79 79.
+
+Säg vad som saknas och visa formen. Aldrig "Ogiltig inmatning", aldrig teal som felfärg (B13: fel är röd, fokus är navy).
+
+LADDAR OCH SKICKAR
+
+Knappen: etiketten döljs, spinnern 20 px visas, cursor: progress. Ingen text byts till "Skickar..." med tre punkter.
+
+Efter inskick: "Tack. Din bild är inskickad." och ett ärende-id. Sidan påstår aldrig mer än "mottaget"; "vi ringer oftast inom en arbetsdag" är löftesraden (kanon, LM-1).
+
+KLART OCH GRÖNT BESKED
+
+Bra läge för laddbox. Din elcentral klarar det, så länge gruppen är egen.
+
+Goda nyheter som goda nyheter. Ett grönt besked bär ingen solid teal-säljknapp (kvalitetsribban punkt 4); erbjudandet är en textlänk.
+
+SAMTYCKE OCH FINSTILT
+
+"Genom att skicka godkänner du att vi kontaktar dig om din förfrågan. Vi sparar inget mer än det du skriver här." Samtycket är en rad under knappen, inte en kryssruta (ägarbeslut v2.17).
+
+Villkoret står EN gång, i finstilten, där misstaget görs. Gardera inte för avslagsfallet i varje mening (hedging-direktivet).
+
+KÄLLRAD
+
+"Källa: Elsäkerhetsverket, 2025." 13 px svag, hårlinje ovanför, länken understruken. Varje siffra som inte är kundens egen bär en källa.
+
+"Så har vi räknat": regel, källa och datum per rad, spannet först, punktvärdet aldrig.
+
+Knappar och länkar
+Verbet först, nyttan i etiketten: "Begär offert med ROT inräknat", "Få en skräddarsydd offert", "Ring eljouren 010-265 79 79".
+En primär CTA per yta. Sekundära handlingar är textlänkar ("Berätta vad som behöver göras"), inte en andra knapp.
+Konsultativ, inte tryckande: "Kostnadsfri rådgivning", aldrig "Boka nu!", "Skynda", "Bara i dag".
+"Gratis" sägs en gång, tyst ("Gratis rådgivning", "Helt gratis. Inget mejl, ingen inloggning, ingen hake"). Aldrig "Gratis!" som rubrik och aldrig som säljargument.
+Telefonnumret är en del av handlingen i knappen, inte en datapunkt i ledtexten (hörnkortet).
+Självkontroll före leverans
+grep -nE '—|–|·' path/to/shipped-strings   # tankstreck och mittpunkt = fix före leverans (0 träffar)
+grep -cE '!' path/to/shipped-strings         # "!" = räkna bara; bedöm tätheten, nollställ inte
+Kopiera
+Varje Ampy-siffra (pris, sats, kunder, betyg) har en [FACT]-källa i ampy-foretagsdata.md; saknas den skrivs [GAP], aldrig ett påhittat tal.
+Inga "1000+ kunder", "5,0 på Google", "3 000 installationer" utan ägarbekräftelse (CLAUDE.md regel 3).
+Registret är valt före orden: allvarligt på pengar och säkerhet, lätt på redaktionellt (Register och ton).
+Candour-grinden är passerad (Candour-grinden).

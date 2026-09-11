@@ -1,0 +1,119 @@
+REGLER
+AI-tecken som inte får finnas
+
+Ägarens lista över det som avslöjar genererad design och genererad text. Varje punkt har ett skäl och ett rätt alternativ; fyra av dem visas renderade som fel och rätt sida vid sida.
+
+Ägardirektiv samlade i CLAUDE.md (regel 0 anti-teater, regel 3 proveniens), konsolidering/beslut.md (B9 glöd, B16 gradientslut, "gradienttext ogillas", "AI-slop-defaulten"), var-process v2:s byggspec ("ser ut som ett system och beter sig som en hög lokala beslut"), ampy-rost regel 12 (tankstreck) och regel 5 ("!"-spray), candour-grinden.
+
+Listan
+TECKNET	VARFÖR DET AVSLÖJAR	RÄTT
+Tankstreck (em- och en-dash) i UI	Modellernas favoritskiljetecken; renderar dessutom olika i värdarna.	Komma, kolon, "och", ny mening. Enda undantaget: platshållaren för tomt värde.
+Mittpunkten "·" som avdelare	Samma familj; ett skiljetecken ingen skriver för hand.	En 1 px separator, ett mellanslag, ett kommatecken.
+Gradienttext	Dekoration som ersätter ett påstående; kontrasten faller (~2:1 i CTA-bandet).	Accent i text-teal (5,27:1) eller understrykning i textens egen färg.
+Midnattsblå scrims som yta	Ytan får en gradient utan funktion; fotot dör.	Scrim bara som veil på foto (kontrastmätt); ytor är platta: sky-mist, vit, midnight.
+Mörkt kort + radial glöd + centrerad vit rubrik	"AI-slop-defaulten": kortet ser ut som varje annan AI-landningssida; glöden är dekor, rubriken säger inget.	Platt midnight som default (B9); glöd bara som ytbehandling bakom en siffra i verktygen; rubriken vänsterställd med kicker och ett specifikt påstående.
+Ojämn spacing	24 godtyckliga avstånd i ett block: "ser ut som ett system och beter sig som en hög lokala beslut".	Rytmstegen ur tokens: 10, 20, 28, 40, 56, 80. Zon mot syskon cirka 2,0.
+Fluff	"Vi brinner för kvalitet", "skräddarsydda lösningar för dina behov": adjektiv utan substantiv, inga tal.	Konkreta substantiv och siffror: "40 procent av surrande centraler vi rycker ut på behöver bara ett nytt bleck."
+Citat utan källa	Ett citat utan namn och datum är ett påhittat citat tills motsatsen bevisats.	Namn, månad och år, Google-G; recensionerna ur V1:s datafil.
+Siffror utan källa	"1000+ kunder", "5,0", "3 000 installationer": bevis som inte finns i datalagret.	[FACT] med src i ampy-foretagsdata eller [GAP]; siffran bär sin källrad.
+"Helt gratis"-säljande	"Gratis!" som rubrik säljer in något som inte är produkten; verktygets värde är svaret.	Sägs en gång, tyst, i trust-raden. Aldrig med utropstecken, aldrig som rubrik.
+Utropsteckenspray	Ett "!" på varje rad propps upp tomma påståenden.	Ett "!" per kort block, på en rad som redan är sann.
+Emoji i UI	Skriver "genererat" på varje rad; hör inte till en elfirmas röst.	Sprite-ikonen (1,75 px stroke, en familj) eller ingenting.
+Narrerad process i stället för artefakt	En tabell som säger "klart" utan att visa vad som gjordes (anti-teater, CLAUDE.md regel 0).	Artefakten: skärmdumpen, mätningen, filen. Hoppades ett steg över sägs det rakt ut.
+Fel och rätt, renderade
+1. Gradienttext mot text-teal
+FEL
+
+Prata med en elektriker inom 60 sekunder!
+
+Gradient teal till blå med background-clip. Kontrast ~2:1 i den ljusa änden, ett tidslöfte som candour-grinden stoppar, och dekoration som gör jobbet påståendet skulle göra.
+
+RÄTT
+
+Prata med en elektriker direkt på telefon
+
+Accent i --ampy-action-strong (5,27:1) eller understrykning i textens färg (avdragsblocket). Löftet är kontrollerbart.
+
+2. Det mörka slop-kortet mot det redaktionella kortet
+FEL
+
+Framtidens el, i dag
+
+Vi levererar skräddarsydda lösningar med fokus på kvalitet, hållbarhet och trygghet för hela ditt hem.
+
+Kom igång
+RÄTT
+
+VISSTE DU ATT
+
+40 procent av surrande centraler behöver bara ett nytt bleck
+
+Platt midnight (B9), vänsterställd rubrik med kicker, ett specifikt påstående med tal, teal bara som stor text eller ikon. Glöden är ett tillval bakom en siffra i verktygen, inte en default.
+
+3. Tankstreck och mittpunkt mot avdelare och kommatecken
+FEL
+
+5,0 på Google · Över 3 000 installationer per år — varje gång med legitimation.
+
+Elcentral — installation · Skräddarsydd offert
+
+Mittpunkt som avdelare, tankstreck som inskott. Två tecken ingen skriver för hand, och båda renderar olika i värdarna.
+
+RÄTT
+5,0 på Google
+Över 3 000 installationer per år
+
+Elcentral + installation, skräddarsydd offert. Varje gång med legitimation.
+
+Separatorn är en 1 x 15 px linje (proof-raden), inskottet är ett kommatecken eller en ny mening. (Siffrorna ovan är exempel och [GAP] mot datalagret.)
+
+4. Ojämn spacing mot rytmstegen
+FEL
+
+STEG FÖR STEG
+
+Få offert inklusive ROT-avdrag
+
+En elektriker räknar på ditt projekt.
+
+En auktoriserad elektriker gör jobbet
+
+En av våra elektriker kommer hem till dig.
+
+Avstånden 13, 27, 9, 41 och 17 px: fem tal utan relation, tre teckengrader som nästan är lika (17, 18, 19). Systemet ser ut att finnas men finns inte.
+
+RÄTT
+
+STEG FÖR STEG
+
+Få offert inklusive ROT-avdrag
+
+En elektriker räknar på ditt projekt.
+
+En auktoriserad elektriker gör jobbet
+
+En av våra elektriker kommer hem till dig.
+
+Inom grupp 2xs (10), syskon m (28), zon s till l. Tre roller: eyebrow 12, h3 22, body 18. Tokens: --ampy-space-*, --ampy-text-*.
+
+5. "Helt gratis!" mot den tysta trust-raden
+FEL
+
+Testa vårt verktyg HELT GRATIS! 🎉
+
+Rubriken säljer in att verktyget är gratis, med versaler, utropstecken och emoji. Verktygets värde är svaret, inte att det inte kostar.
+
+RÄTT
+Byggt på Elsäkerhetslagen och Elsäkerhetsverket
+Registrerat elinstallationsföretag
+Helt gratis. Inget mejl, ingen inloggning, ingen hake
+
+En gång, tyst, som tredje trust-punkt i diagnostikens rail (ordagrant i båda diagnostikerna). Rubriken handlar om svaret: "Behöver du byta elcentral?"
+
+Kontrollen före leverans
+Grep de skeppade strängarna för tankstreck och mittpunkt: 0 träffar.
+Sök i CSS efter background-clip: text och -webkit-text-fill-color: transparent: 0 träffar.
+Sök efter radial-gradient på mörka ytor utanför kalkylatorkitet och visste-du-att: 0 träffar.
+Räkna avstånden i blocket: alla ska vara tokens eller stå i rytmstegen. Räkna teckengraderna: max sex.
+Varje siffra, varje citat, varje logotyp har en källa; annars [GAP].
+Rendera och titta (ampy-syn): desktop och mobil, båda skärmdumparna finns i leveransen.

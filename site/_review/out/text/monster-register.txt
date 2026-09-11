@@ -1,0 +1,67 @@
+MÖNSTER
+Register och ton
+
+Candour är inte allvar. Insatsen i sammanhanget väljer registret innan ett ord skrivs: det allvarliga, noggranna registret på ekonomi och säkerhet, det lätta och inbjudande på redaktionella ytor och varumärkesögonblick. Samma röst, två lägen.
+
+ampy-foretagsdata.md §8.1 (husrösten), §8.1b (värmepolen: candour = lättnad, inte varning), §8.1c (register efter sammanhang, ägardirektiv 2026), §8.3 (guldstandard-exempel); .claude/skills/ampy-rost/SKILL.md (de två polerna, register efter kontext, regel 1 till 12); CLAUDE.md regel 6 (candour ≠ solemnity, kommersiell prioritet service, laddbox, batteri).
+
+De två lägena
+ALLVARLIGT OCH NOGGRANT
+
+När: pengar, säkerhet, juridik. Batteriets ROI, en offert på 60 000 kr, byte av elcentral, allt med "kan" på skatt, försäkring och el.
+
+Hur: exakta tal, den oflatterande siffran först, "kan" i stället för "kommer att", ingen flourish, inga "!". Mekanismen förklaras, inte påstås. Räkneexempel som läsaren kan kontrollera.
+
+Ett "!" här läser som säljare. En bild av ett nyfiket ansikte här läser som oseriös.
+
+LÄTT OCH INBJUDANDE
+
+När: awareness, redaktionellt, startsidan, "Visste du att", fun-facts, varumärkesögonblick, toppen av tratten.
+
+Hur: nyfiket, mänskligt, kort. Ett "!" är välkommet för värme (ett per kort block, aldrig som stöd för en tom rad). Påståendet ska fortfarande hålla; lätt är inte hype.
+
+Det allvarliga registret här är en defekt: det gav "det mörka, tunga slop-kortet".
+
+Värmepolen gäller båda: när det ärliga svaret är goda nyheter, säg det som goda nyheter. "Skönt besked: du behöver förmodligen inte byta hela centralen." är candour. Dämpad rädsla när svaret är positivt är felet som rättas. Rädsla är ett verktyg, inte husstilen.
+
+Vilka block som är vilka
+BLOCK	REGISTER	VARFÖR	ETT EXEMPEL UR KÄLLAN
+Avdragsblocket och kvittopanelen	Allvarligt	Skatteregel, tak, mellanskillnad i slutskatten	"Räcker inte din skatt kan Skatteverket kräva mellanskillnaden i slutskatten."
+Eljour: symptomlista och samtalskort	Allvarligt, men varmt	Säkerhet; 112 och 1177 före oss	"Löser samma säkring ut gång på gång är det en kortslutning eller ett glapp. Ring oss så hittar vi felet."
+Fotobedömningen	Allvarligt	En bedömning, inte en besiktning; ansvarsraden	"En bild säger mycket, men inte allt."
+Hero-2 S / E, bokningen, offert accepterad	Allvarligt	Stora jobb, avtalad tid, pris	"Fast pris. Skriftligt, materialet inräknat, ingenting som hänger på slumpen."
+Kalkylatorernas resultat och diagnostikens besked	Allvarligt	Projektion med osäkerhet, payback som spann	"Vi använder ett medvetet lågt schablonpris. Din verkliga besparing blir snarare högre."
+Visste du att	Lätt	Fun-fact, redaktionellt	"Visste du att en jordfelsbrytare bryter på under 30 millisekunder? Snabbare än hjärtat hinner reagera."
+Hero-1, mini-menu, CTA-bandet	Lätt, varmt	Startsidan, toppen av tratten	"Din elektriker för hela hemmet." "Prata med en elektriker direkt på telefon."
+Testimonials-rubriken	Lätt	Bevisblock med grannen som avsändare	"Vad säger dina grannar om Ampy?"
+Tack-sidan	Lätt, varmt	Bekräftelse, lättnad	"Din förfrågan har blivit mottagen!"
+Header-CTA, footer	Neutralt	Navigation	"Gratis rådgivning" (tyst, en gång; aldrig "Gratis!" som rubrik)
+Samma faktum, två register
+
+Jordfelsbrytaren som exempel. Faktumet är detsamma; insatsen väljer orden.
+
+I DIAGNOSTIKENS BESKED (ALLVARLIGT)
+
+"Din central saknar jordfelsbrytare. Det är inte olagligt i en äldre anläggning, men det betyder att ett fel i en apparat inte bryts förrän säkringen löser ut. Kostnaden för att sätta en är oftast lägre än en självrisk. Vi rekommenderar det, men du behöver inte byta hela centralen för det."
+
+I "VISSTE DU ATT" (LÄTT)
+
+"En jordfelsbrytare bryter strömmen på under 30 millisekunder. Det är snabbare än hjärtat hinner reagera! Därför är den det billigaste skyddet i hela elcentralen, och det första vi kollar när vi kommer hem till dig."
+
+FEL: HYPE I DET ALLVARLIGA
+
+"Byt nu innan det är för sent! Spara upp till 50 000 kr med ROT!" (fake urgency, "spara", staplade "!")
+
+FEL: ALLVAR I DET LÄTTA
+
+"Elrelaterade bränder orsakar varje år betydande skador. Kontrollera att din anläggning uppfyller gällande krav." (myndighetston på ett faktakort; det som gav slop-kortet)
+
+Register efter publik
+
+Candour-mekaniken är konstant (säg när de inte ska köpa, visa haken, håll varje påstående bevisbart). Det som skiftar är vems plånbok du talar till.
+
+Villaägare (privat): du-tilltal, en elektriker till en husägare. Pengarna är hans; payback och avdraget är personliga. Standardläget.
+BRF-styrelse: kollektiv och förvaltande ram: "medlemmarnas pengar", "avgiftstrycket", "föreningen". Draget är "använd medlemmarnas pengar väl", inte "spara själv". Inga "!".
+B2B (företag, kommun, fastighetsägare): risk, ansvar, total kostnad över livslängden, driftstopp. Candour läses som "vi säljer ingen överspec du måste försvara i en budgetgenomgång". Inga "!".
+
+Kommersiell prioritet när ett block är vertikalneutralt: service, sedan laddbox, sedan batteri (CLAUDE.md regel 6). Batteriets ekonomiska djup finns kvar i datalagret, men det är inte defaultexemplet.

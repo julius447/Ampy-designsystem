@@ -27,8 +27,7 @@
 
 /* ---------- Rot: container, kit-egna mått ---------- */
 .ampy-calc {
-  --_mid: clamp(21px, 0.773vw + 18.1px, 28px);   /* källa: led-kalkylator styles.css:67 --fs-xl (28 @1440, 21 @390): prominent värde, hero-enhet ; saknas i tokens */
-  --_fine: var(--ampy-fine, 13px);                /* 13 px-golvet ur text.css (LED --fs-xs 13/12) */
+  --_fine: var(--ampy-text-fine);                /* 13 px-golvet ur text.css (LED --fs-xs 13/12) */
   --_tip: 16px;                                   /* källa: styles.css:269 tip 1.6rem */
   --_tip-fs: 10px;                                /* källa: styles.css:270 font-size 1rem (10 px) */
   --_key: 60px;                                   /* källa: styles.css:401 compare-key 6rem (<= 560: 5rem) */
@@ -117,7 +116,7 @@
 .ampy-calc__popover--top::after { top: auto; bottom: -4px; }
 
 /* ---------- Prominent värde + enhet (LED styles.css:210-215) ---------- */
-.ampy-calc__value { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--ampy-font); font-size: var(--_mid); font-weight: var(--ampy-w-display); line-height: 1.3; letter-spacing: -0.01em; color: var(--ampy-ink); font-variant-numeric: tabular-nums lining-nums; }   /* LED JetBrains Mono 700 28 -> Outfit + tnum (B7) */
+.ampy-calc__value { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--ampy-font); font-size: var(--ampy-text-mid); font-weight: var(--ampy-w-display); line-height: 1.3; letter-spacing: -0.01em; color: var(--ampy-ink); font-variant-numeric: tabular-nums lining-nums; }   /* LED JetBrains Mono 700 28 -> Outfit + tnum (B7) */
 .ampy-calc__value--sm { font-size: var(--ampy-text-body); }                                                                       /* LED --fs-md 19 -> body 18/16.1 */
 .ampy-calc__unit { font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); letter-spacing: normal; color: var(--ampy-ink-muted); }   /* LED Outfit 500 15 -> small 16/14.1 */
 

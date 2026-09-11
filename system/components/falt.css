@@ -38,9 +38,6 @@
 
 /* ---------- Gemensamma fältvärden (bara här, en gång) ---------- */
 :where(.ampy) {
-  --ampy-field-h: 48px;            /* källa: LED/elkollen/booking/hero-2-form 48 = kartans kanon ; saknas i tokens (höjder), se bygglogg */
-  --ampy-field-fs: 16px;           /* källa: elcentral fs-16, hero-2 16, main-form 1.6rem = iOS-golvet ; saknas i tokens (--ampy-text-small skalar under 16 på mobil) */
-  --ampy-field-track: rgba(9,11,50,.07);   /* källa: LED --bg-subtle rgb(234,239,243) = midnight ~.07 på vit ("sunk track") ; --ampy-bg-subtle (sky-mist) är för nära vit på ett vitt kort */
 }
 
 /* ---------- Fältgrupp: etikett -> kontroll -> hjälp/fel ---------- */
@@ -61,7 +58,7 @@
 /* ---------- Input (text / tel / e-post / nummer) ---------- */
 .ampy-input, .ampy-textarea, .ampy-select {
   width: 100%; min-width: 0;
-  min-height: var(--ampy-field-h);
+  min-height: var(--_h, var(--ampy-field-h));
   padding: 0 var(--ampy-space-xs);                       /* elcentral 10/12, hero-2 0/16, LED 7.5/10 -> xs 14/10.5 */
   font-family: var(--ampy-font); font-size: var(--ampy-field-fs); font-weight: var(--ampy-w-ui); line-height: 1.3;
   color: var(--ampy-ink);
@@ -87,8 +84,8 @@
 .ampy-input[aria-disabled="true"], .ampy-input.is-disabled {
   background-color: var(--ampy-bg-subtle); color: var(--ampy-ink-muted); border-color: var(--ampy-line); cursor: not-allowed; box-shadow: none;   /* härledd: ingen källa ritar disabled input, se bygglogg. background-color (inte shorthand) så selectens pil behåller no-repeat */
 }
-.ampy-input--sm { --ampy-field-h: 44px; }              /* energycalc lead-fält 44, hero-2 Z 44 */
-.ampy-input--lg { --ampy-field-h: 52px; }              /* elcentral __lead-input 52, fotobedomningen 52 */
+.ampy-input--sm { --_h: 44px; }              /* energycalc lead-fält 44, hero-2 Z 44 */
+.ampy-input--lg { --_h: 52px; }              /* elcentral __lead-input 52, fotobedomningen 52 */
 .ampy-input--tabular { font-variant-numeric: tabular-nums lining-nums; }
 .ampy-input[type="number"] { -moz-appearance: textfield; }
 .ampy-input::-webkit-outer-spin-button, .ampy-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -96,7 +93,7 @@
 
 /* ---------- Sökfält: ikon vänster + valfri lista (elkollen __search + main-form adress) ---------- */
 .ampy-search { position: relative; display: block; min-width: 0; }
-.ampy-search__icon { position: absolute; left: var(--ampy-space-xs); top: calc(var(--ampy-field-h) / 2); transform: translateY(-50%); width: 16px; height: 16px; color: var(--ampy-ink-faint); pointer-events: none; }   /* elkollen: 1.6rem, text-tertiary, left space-5 */
+.ampy-search__icon { position: absolute; left: var(--ampy-space-xs); top: calc(var(--_h, var(--ampy-field-h)) / 2); transform: translateY(-50%); width: 16px; height: 16px; color: var(--ampy-ink-faint); pointer-events: none; }   /* elkollen: 1.6rem, text-tertiary, left space-5 */
 .ampy-search .ampy-input { padding-left: calc(var(--ampy-space-xs) + 16px + var(--ampy-space-2xs)); }     /* elkollen: space-5 + 1.6rem + space-3 = 36 */
 .ampy-search__list {
   position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + var(--ampy-space-3xs));
@@ -117,7 +114,7 @@
 .ampy-search__opt:focus-visible { outline: 0; box-shadow: inset 0 0 0 2px var(--ampy-action-strong); }
 .ampy-search__opt svg { width: 16px; height: 16px; color: var(--ampy-action); flex: 0 0 auto; }
 .ampy-search__opt mark { background: none; color: var(--ampy-action-strong); font-weight: var(--ampy-w-strong); }   /* main-form <mark> teal 600 -> teal-deep (B5) */
-.ampy-search__opt small { color: var(--ampy-ink-muted); margin-left: auto; font-size: var(--ampy-fine); }
+.ampy-search__opt small { color: var(--ampy-ink-muted); margin-left: auto; font-size: var(--ampy-text-fine); }
 
 /* ---------- Select (native) med chevron ---------- */
 .ampy-select {
@@ -140,7 +137,7 @@
   --_r: 6px;                                             /* källa: elcentral __check radius-sm 0.6rem, hero-2-form 6 ; --ampy-radius-small är 8 vid 1440 = nästan cirkel på 20 px, se bygglogg */
   display: flex; align-items: flex-start; gap: var(--ampy-space-2xs);   /* LED gap spacing-sm 7.5, hero-2-form 10 -> 2xs 9.9/8.3 */
   min-height: 44px; cursor: pointer;                     /* EV: >= 44 px träffyta via raden (WCAG 2.5.5) */
-  font-family: var(--ampy-font); font-size: var(--ampy-fine); font-weight: var(--ampy-w-ui); line-height: 1.5; color: var(--ampy-ink-muted);   /* LED lead-consent fs-xs 13 muted lh 1.5 */
+  font-family: var(--ampy-font); font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-ui); line-height: 1.5; color: var(--ampy-ink-muted);   /* LED lead-consent fs-xs 13 muted lh 1.5 */
 }
 .ampy-check--center { align-items: center; }
 .ampy-check input {
@@ -171,7 +168,7 @@
 .ampy-check__text a:hover { color: var(--ampy-ink); }
 .ampy-check--strong { font-size: var(--ampy-text-small); color: var(--ampy-ink); }   /* checkbox som val (inte finstilt samtycke) */
 /* Samtycke som textrad under knappen (mönstret i 4 källor: elcentral, energycalc, main-form, fotobedomningen; ägarbeslut v2.17) */
-.ampy-consent { margin: var(--ampy-space-xs) 0 0; font-family: var(--ampy-font); font-size: var(--ampy-fine); font-weight: var(--ampy-w-ui); line-height: 1.55; color: var(--ampy-ink-muted); text-align: center; max-width: none; }   /* elcentral fs-12/400 -> fine 13 (en finstiltstorlek), se avvikelser */
+.ampy-consent { margin: var(--ampy-space-xs) 0 0; font-family: var(--ampy-font); font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-ui); line-height: 1.55; color: var(--ampy-ink-muted); text-align: center; max-width: none; }   /* elcentral fs-12/400 -> fine 13 (en finstiltstorlek), se avvikelser */
 .ampy-consent a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .ampy-consent a:hover { color: var(--ampy-ink); }
 .ampy-consent--left { text-align: left; }
@@ -193,7 +190,7 @@
 .ampy-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }   /* riktig radio/checkbox, visuellt dold; chipet bär tillståndet */
 .ampy-chip__body { display: block; flex: 1; min-width: 0; }
 .ampy-chip__title { display: block; }
-.ampy-chip__clarifier { display: block; margin-top: 4px; font-size: var(--ampy-fine); font-weight: var(--ampy-w-ui); line-height: 1.45; color: var(--ampy-ink-muted); }   /* elcentral clarifier fs-13 400 (fs-15 >= 1024) */
+.ampy-chip__clarifier { display: block; margin-top: 4px; font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-ui); line-height: 1.45; color: var(--ampy-ink-muted); }   /* elcentral clarifier fs-13 400 (fs-15 >= 1024) */
 @media (min-width: 1024px) { .ampy-chip__clarifier { font-size: var(--ampy-text-small); } }
 .ampy-chip__arrow { flex: 0 0 auto; width: 16px; height: 16px; color: var(--ampy-ink-faint); margin-left: auto; }   /* elkollen option pil */
 @media (hover: hover) {
@@ -253,7 +250,7 @@
 }
 .ampy-segment__option:focus-visible, .ampy-segment > button:focus-visible, .ampy-segment > label:has(input:focus-visible) { outline: 0; box-shadow: var(--ampy-focus-ring); }   /* LED ring .3 -> --ampy-focus-ring */
 .ampy-segment__option:disabled, .ampy-segment[aria-disabled="true"] > *, .ampy-segment.is-disabled > * { opacity: .5; cursor: not-allowed; }
-@media (max-width: 380px) { .ampy-segment__option, .ampy-segment > button, .ampy-segment > label { padding-inline: 3px; font-size: var(--ampy-fine); } }   /* LED <= 380 */
+@media (max-width: 380px) { .ampy-segment__option, .ampy-segment > button, .ampy-segment > label { padding-inline: 3px; font-size: var(--ampy-text-fine); } }   /* LED <= 380 */
 /* --pill: toggle med solid vald (EV AC/DC): pillspår, vald = solid teal-deep + vit text */
 .ampy-segment--pill { display: inline-grid; grid-auto-columns: auto; border-radius: var(--ampy-radius-pill); gap: 2px; }   /* EV gap 0.2rem */
 .ampy-segment--pill > :is(label, button, .ampy-segment__option) { border-radius: var(--ampy-radius-pill); min-width: 64px; padding-inline: var(--ampy-space-2xs); }   /* EV min-width 6.4rem, padding 6/10 */
@@ -299,7 +296,7 @@
 .ampy-range__tick {
   min-height: 32px; display: inline-flex; align-items: center; justify-content: center; padding: 6px 4px;   /* LED 3.2rem, .6rem .4rem */
   border: 0; background: none; border-radius: var(--ampy-radius-small); cursor: pointer;
-  font-family: var(--ampy-font); font-size: var(--ampy-fine); font-weight: var(--ampy-w-ui); color: var(--ampy-ink-muted); font-variant-numeric: tabular-nums lining-nums;   /* LED mono 13 -> Outfit tabular (B7) */
+  font-family: var(--ampy-font); font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-ui); color: var(--ampy-ink-muted); font-variant-numeric: tabular-nums lining-nums;   /* LED mono 13 -> Outfit tabular (B7) */
   -webkit-tap-highlight-color: transparent; user-select: none;
 }
 .ampy-range__tick:hover { color: var(--ampy-ink); }
@@ -340,8 +337,8 @@
 .ampy-stepper--pill .ampy-stepper__value { min-width: 40px; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-display); }
 
 /* ---------- Hjälp, fel, meddelanden ---------- */
-.ampy-help  { margin: 0; font-family: var(--ampy-font); font-size: var(--ampy-fine); font-weight: var(--ampy-w-ui); line-height: 1.35; color: var(--ampy-ink-muted); max-width: var(--ampy-measure); }   /* hero-2 __help 13/1.35 quiet, LED hint 13 */
-.ampy-error { margin: 0; font-family: var(--ampy-font); font-size: var(--ampy-fine); font-weight: var(--ampy-w-medium); line-height: 1.35; color: var(--ampy-error-ink); display: flex; align-items: flex-start; gap: 6px; max-width: var(--ampy-measure); }   /* elcentral lead-error 13/500 accent-error */
+.ampy-help  { margin: 0; font-family: var(--ampy-font); font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-ui); line-height: 1.35; color: var(--ampy-ink-muted); max-width: var(--ampy-measure); }   /* hero-2 __help 13/1.35 quiet, LED hint 13 */
+.ampy-error { margin: 0; font-family: var(--ampy-font); font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-medium); line-height: 1.35; color: var(--ampy-error-ink); display: flex; align-items: flex-start; gap: 6px; max-width: var(--ampy-measure); }   /* elcentral lead-error 13/500 accent-error */
 .ampy-error svg { width: 15px; height: 15px; flex: 0 0 auto; margin-top: 1px; }
 .ampy-error[hidden], .ampy-help[hidden] { display: none; }
 .ampy-msg { margin: 0; padding: var(--ampy-space-2xs) var(--ampy-space-xs); border-radius: var(--ampy-radius-field); font-family: var(--ampy-font); font-size: var(--ampy-text-small); line-height: 1.45; border: 1px solid transparent; }   /* LED lead-msg: fs-sm, padding sm/md, radie md */
@@ -353,7 +350,6 @@
 
 /* ---------- På mörk yta (LED lead-form på resultatkortet) ---------- */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) {
-  --ampy-field-track: rgba(255,255,255,.12);             /* LED spår på mörkt: on-surface-subtle .06 -> .12 för synlighet (energycalc --bd-dark .12) */
 }
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) :is(.ampy-field__label, .ampy-field > label) { color: var(--ampy-on-dark-soft); }   /* LED label on-surface-text .94 */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) :is(.ampy-input, .ampy-textarea, .ampy-select) {

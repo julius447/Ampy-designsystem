@@ -1,0 +1,281 @@
+KOMPONENTER
+Textelement
+
+De små textbitarna som återkommer i alla block: eyebrow, tagg, stat-trio, hero-siffra med enhet, källrad, proof-rad, citat, listor och prisrad. Samma bläck, hierarki genom vikt, siffror i tabular-nums.
+
+Kanon: eyebrow energycalc (vB/tool.css:317-319) och thank-you (v1/styles.css:77); tagg elcentral-kollen (assets/elcentralkollen.css:428-440); stat-trio och readout led-kalkylator (styles.css:293-311); källrad elkollen (assets/behorighetskollen.css:880-889); proof-rad hero-1 (assets/style.css:236-265); citat testimonials-block (delivery/ampy-testimonials.css:46-66); bocklista elcentral-kollen (:198-201); steg rot-gt-cro (designs/d2-kvittot-forst.html:163-217); prisrad rot-gt-cro (:279-299). Finns även i: eljour, EV, battery, hero-2, booking, thank-you, main-form, footer, article (avvikelser längst ned). Blockbiblioteket: LED-kalkylatorn, Testimonials.
+
+Eyebrow
+Tagg och pill
+Stat-trio
+Hero-siffra
+Källrad
+Proof-rad
+Citat
+Listor
+Prisrad
+Anatomi
+Gör och gör inte
+Kod
+Avvikelser
+Eyebrow
+
+Grundrollen bor i base.css: 12 px, 600, spärrning .14em, versaler, dämpad. Tre varianter: med teal-streck (energycalc, resultatkortets rubrikrad), i text-teal (thank-you, ovanför CTA:n) och på mörkt. En eyebrow bär aldrig ensam informationen (beslut B19).
+
+LJUS YTA
+DEFAULT
+DITT BESKED
+MED STRECK (--DASH)
+DAGENS KOSTNAD
+TEXT-TEAL (--ACTION)
+MEDAN DU VÄNTAR
+MÖRK YTA
+DEFAULT
+ÅRLIG BESPARING
+MED STRECK
+DAGENS KOSTNAD
+Tagg, badge och pill
+
+Elcentrals beskedpill: fem nivåer med bakgrund- och textpar över 6,8:1, ikon 16, radie full. Åtta pillrecept i källorna blev ett: nivåerna, en neutral med kant, en teal för referenser (booking/offer) och statuspillen med puls ("Jour öppen just nu", eljour). Liten variant för nivåtaggar i listor.
+
+LJUS YTA
+SUCCESS
+Låg risk
+WARNING
+Bör ses över
+ERROR
+Akut
+INFO
+Inget planerat
+NEUTRAL
+Oklart
+ACTION (REFERENS)
+Bokning 4821
+LIVE MED PULS
+Jour öppen just nu
+LITEN (--SM)
+Akut
+Varning
+STOR (--LG)
+Redo för laddbox
+MÖRK YTA (HERO-2 CHIP)
+DEFAULT
+Laddbox
+SUCCESS
+Låg risk
+LIVE
+Jour öppen just nu
+Stat-trio
+
+LED-kalkylatorns tre siffror under hero-siffran: etikett i versaler, värde 28 px med enhet, undertext. Tre kolumner med grid-auto-flow: column så att etiketter, värden och undertexter linjerar radvis. Under 560 px staplas de. Två kolumner med --2 (EV). Typsnittet är Outfit med tabular-nums, inte Plus Jakarta Sans (B7).
+
+MÖRK YTA (LED)
+ENERGI DU KAPAR
+16 819
+kWh/år
+59 % lägre förbrukning
+CO₂ DU SPARAR
+7,8
+ton/år
+jämfört med nordisk elmix
+UPPSKATTAD KOSTNAD
+120 000
+kr
+cirka 1 500 kr per armatur, inklusive installation
+LJUS YTA, TVÅ KOLUMNER
+ATT BETALA
+14 950
+kr
+efter grön teknik-avdrag
+ÅTERBETALD
+4,2
+år
+vid dagens elpris
+
+Siffrorna är exempelvärden ur kalkylatorerna, inte faktapåståenden.
+
+Hero-siffra med enhet
+
+Resultatkortets huvudtal: eyebrow, siffra 56 px (38 på mobil) i 700 med spärrning -.03em och tabular-nums, enheten 28 px i 500 på baslinjen med 12 px mellanrum, undertext. .ampy-number är rollen ur base.css; readouten sätter enheten och undertexten. Siffran, inte rubriken, står i mitten (B9).
+
+MÖRK YTA (LED)
+ÅRLIG BESPARING
+27 752
+kr/år
+Så mycket lägre kan elkostnaden bli, varje år så länge belysningen lyser.
+LJUS YTA
+DIN KOSTNAD I DAG
+31 400
+kr/år
+Uppskattad elkostnad för uppvärmning per år, före åtgärd.
+Källrad
+
+Elkollens källrad: 13 px, svag färg, hårlinje ovanför, pinnad sist i kortet. Färgen är --ampy-ink-faint (4,80:1) i stället för källans #8a8da5 (3,26:1). Med --plain utan linje. Länkar ärver färgen och stryks under.
+
+LJUS YTA
+
+Källa: Elsäkerhetsverket, Elsäkerhetslagen (2016:732) och ELSÄK-FS 2022:1. Beskedet bygger på dina svar och ersätter inte en besiktning på plats. 
+
+Utan linje: Elsäkerhetsverket registrerade 298 händelser 2018 till 2022 där elcentralen var orsaken.
+
+MÖRK YTA
+
+Källa: Energimyndigheten, elpris SE3 2025. Räknat på 12 timmars brinntid per dygn.
+
+Proof-rad
+
+Hero-1:s bevisrad under CTA:n: G-ikon 16, "5,0 på Google" med fet siffra, fem stjärnor 13,5 px, en separator 1 gånger 15 och volymraden. Stjärnorna är guld på alla ytor (ägardirektiv 2026-08-06, beslut B12); hero-1 hade vita. Under 560 px blir raden en kolumn och separatorn göms. Faktapåståendena ("5,0", "3 000+") är [GAP] mot ampy-foretagsdata tills ägaren bekräftar dem.
+
+LJUS YTA
+5,0 på Google
+3 000+ installationer om året
+PÅ FOTO OCH MÖRKT (HERO-1)
+5,0 på Google
+3 000+ installationer om året
+Citat
+
+Testimonial-kortets innehåll utan kortet: citattecken 56 px i teal (neon-mint på mörkt, opacitet .55), text i 300, namn 22/600, hårlinje, stjärnor och datum. Det stora tecknet är dekor (&ldquo; som i källan) och bär citatet: texten får inga egna citattecken. Kortet självt är ytor: mörkt kort.
+
+LJUS YTA
+“
+Från start till mål levererades en service i världsklass. Elektrikern förklarade vad som behövde göras och varför, och lämnade en central som ser ut som ny.
+
+Anna, Huddinge
+
+Augusti 2026
+MÖRK YTA (TESTIMONIALS)
+“
+Från start till mål levererades en service i världsklass. Elektrikern förklarade vad som behövde göras och varför, och lämnade en central som ser ut som ny.
+
+Anna, Huddinge
+
+Augusti 2026
+Listor
+
+Bocklistan ur elcentral-railen (17/500 dämpad, ikon 20 i teal, rader med 16 px luft), den kompakta ur eljour-kortet (15/400 mellan hårlinjer) och stegen ur ROT/GT-panelen (cirkel 46 med teal-ring, siffra 17/500, H3 och stycke, connector i ringens spår). Förloppsbågen 1/3, 2/3, hel hör till blocket (S4).
+
+LJUS YTA
+BOCKLISTA (--CHECK)
+Byggt på Elsäkerhetslagen och Elsäkerhetsverket
+Registrerat elinstallationsföretag
+Ett ärligt besked, byggt på dina egna svar
+KOMPAKT (--COMPACT)
+Behörig elektriker svarar
+Du får ett pris innan vi börjar
+Inga dolda avgifter
+STEG (--STEPS)
+Du beskriver jobbet
+
+Formuläret tar en minut. Skriv gärna vad som redan finns på plats, så slipper vi fråga.
+
+Vi ringer och räknar
+
+En elektriker går igenom dina uppgifter och återkommer med ett fast pris.
+
+Jobbet görs och kvittot stämmer
+
+ROT dras direkt på fakturan. Du betalar det som stod i offerten.
+
+MÖRK YTA
+BOCKLISTA
+Byggt på Elsäkerhetslagen och Elsäkerhetsverket
+Registrerat elinstallationsföretag
+Ett ärligt besked, byggt på dina egna svar
+KOMPAKT
+Behörig elektriker svarar
+Du får ett pris innan vi börjar
+Inga dolda avgifter
+Prisrad
+
+Kvittots terminala rad ur ROT/GT-panelen: etikett i versaler, belopp 20 till 24 px i 700 med tabular-nums, noten där undantaget står. Kanon med förbehåll: produktsidornas prisrad är inte inventerad, så det här är den enda uppmätta. Inline-varianten för löptext.
+
+LJUS YTA
+ATT BETALA
+14 950 kr
+efter ROT-avdrag på arbetskostnaden. Materialet är inte avdragsgillt.
+INLINE
+
+från 4 900 kr
+efter ROT
+
+INLINE-KOD
+
+Formeln kWh × pris × 0,59 ger besparingen.
+
+MÖRK YTA (KVITTOPANEL)
+ATT BETALA
+14 950 kr
+efter ROT-avdrag på arbetskostnaden. Materialet är inte avdragsgillt.
+Anatomi
+ELEMENT	KÄLLA 1440 / 390	TYPOGRAFI	FÄRG	MÅTT OCH AVSTÅND
+Eyebrow	12 / 12 (thank-you, energycalc, elcentral)	Outfit 600, .14em, versaler	#565e82; --action #007a69; på mörkt vit .66	streck 24 x 2 teal, gap 8
+Tagg	37,6 / 29 hög (elcentral "Låg risk")	Outfit 600 16 / 14 (källan PJS 18 / 14)	success #0f6e56 på rgba(57,194,129,.12); warning #876507 på #fff4e0; error #7a1623 på #fdeceb; info #0d568c på rgb(224,236,248)	padding 9,9 / 14 (8,3 / 10,5), ikon 16, radie 999
+Stat-trio	3 kolumner, staplas under 560	etikett 12/600 versal; värde 28 / 21 i 700; enhet 16 / 14 i 500; undertext 13	etikett .66, värde vit, undertext .55 på mörkt	column-gap 19,8 / 13,3, row-gap 2
+Hero-siffra	56 / 38,3 (LED --fs-4xl)	700, lh 1, -.03em, tabular; enhet 28 / 21 i 500	vit på mörkt, #090b32 på ljust	baslinjegap 12, stack-gap 9,9
+Källrad	13 / 13 (elkollen fs-13)	Outfit 400, lh 1.45	#6a7190 (källan #8a8da5)	hårlinje 1 px, padding-top 14 / 10,5
+Proof-rad	14,5 / 14,5 (hero-1)	Outfit 400, fet siffra 700	bläck; guld #fbbc04 stjärnor; separator rgba(9,11,50,.48)	gap 14, G-ikon 16, stjärna 13,5, separator 1 x 15
+Citat	text 18 / 16,1; namn 22 / 20,1	text 300 lh 1.5; namn 600; citattecken 56/600; datum 12	citattecken teal .55 (neon-mint på mörkt); text .95 på mörkt	gap 19,8 / 13,3; stjärnor 15 gap 3
+Bocklista	17 / 17 källa, 18 / 16,1 system	Outfit 500, lh 1.45	text #565e82, ikon teal	ikon 20, gap 14 / 10,5, rader 19,8 / 13,3
+Steg	cirkel 46, gap 44 / 32	siffra 17/500; H3 22 / 20,1 i 600 (källan 23 / 19 i 450); p 18 / 16,1 i 300	ring rgba(0,169,145,.20) 1,5 px, connector 2 px	kolumngap 19,8, radgap 4
+Prisrad	belopp 22 / 20,1 (källan 24 / 20)	etikett 12/600 versal (källan 13/700); belopp 700 tabular; not 13/400	bläck på teal .08 (källan .055); vit på vit .08 på mörkt	padding 19,8 / 28; radie 12 / 10,1 (källan 14)
+Gör och gör inte
+GÖR
+Siffror i tabular-nums där de jämförs eller byts, enheten i egen span på baslinjen.
+Källrad under varje besked och varje kalkyl: vem säger det, vilket år. Faktapåståenden hämtas ur ampy-foretagsdata, annars [GAP].
+En eyebrow ovanför rubriken, aldrig i stället för den. Taggens nivå bär även ikonen, inte bara färgen.
+GÖR INTE
+Teal som liten text (2,96:1). Text-teal är teal-deep, och bara som handling.
+Gradienttext, mittpunkt och tankstreck i etiketter och proof-rader; raka citattecken.
+Eyebrow på 15 px (fotobedomningen, LED) eller i 700 (rot-gt): då blir den en rubrik. Stjärnor i vitt, neon-mint eller teal: guld (B12).
+Kod
+<span class="ampy-eyebrow ampy-eyebrow--dash">Dagens kostnad</span>
+
+<span class="ampy-tag ampy-tag--success"><svg width="16" height="16" aria-hidden="true"><use href="/system/ikoner.svg#ik-check-circle"/></svg>Låg risk</span>
+
+<div class="ampy-readout">
+  <span class="ampy-eyebrow">Årlig besparing</span>
+  <span class="ampy-readout__value"><span class="ampy-number">27 752</span><span class="ampy-readout__unit">kr/år</span></span>
+  <span class="ampy-readout__sub">Så mycket lägre kan elkostnaden bli.</span>
+</div>
+
+<ul class="ampy-stat-trio">
+  <li class="ampy-stat">
+    <span class="ampy-stat__label">Energi du kapar</span>
+    <span class="ampy-stat__value">16 819 <span class="ampy-stat__unit">kWh/år</span></span>
+    <span class="ampy-stat__sub">59 % lägre förbrukning</span>
+  </li>
+  ...
+</ul>
+
+<p class="ampy-source">Källa: Elsäkerhetsverket, Elsäkerhetslagen (2016:732).</p>
+
+<ul class="ampy-list ampy-list--check">
+  <li><svg width="20" height="20" aria-hidden="true"><use href="/system/ikoner.svg#ik-check"/></svg>Registrerat elinstallationsföretag</li>
+</ul>
+
+<ol class="ampy-list ampy-list--steps">
+  <li class="is-done"><h3 class="ampy-list__title">Du beskriver jobbet</h3><p>Formuläret tar en minut.</p></li>
+  <li><h3 class="ampy-list__title">Vi ringer och räknar</h3><p>Fast pris innan vi börjar.</p></li>
+</ol>
+
+<div class="ampy-price">
+  <span class="ampy-price__label">Att betala</span>
+  <span class="ampy-price__amount">14 950 kr</span>
+  <span class="ampy-price__note">efter ROT-avdrag på arbetskostnaden.</span>
+</div>
+Kopiera
+Avvikelser i blocken
+BLOCK	AVVIKELSE MOT KANON	ÅTGÄRD
+rot-gt-cro	eyebrow 13/700 .12em; steg-H3 i vikt 450, stegcirkelns förloppsbåge	12/600 .14em; H3 600 (bågen är blockets, S4)
+header (website-blocks)	"GUIDER & VERKTYG" 12,5/600	12
+elcentral-kollen	"DITT BESKED" i Plus Jakarta Sans 600 12; pill i PJS 18/14, neutral med kant #8a8da5	Outfit; pill 16/14, kant --ampy-line-strong
+LED, EV, battery	tier-label 15/600 .08em; trio och siffra i PJS 700, enhet PJS 500; stat-sub .55 (battery .42 = 3,99:1)	eyebrow 12; Outfit (B7); .55
+fotobedomningen	eyebrow 15/600 .02em med kamera-glyf	12/600 .14em
+visste-du-att	kicker 24/500 teal med blixt (--aptext-l)	egen roll i blocket, ingen eyebrow
+energycalc	anchor-siffra Outfit 900 52/35,7 lh 1.08; eyebrow #5dcaa5 på mörkt	700 56/38 (900 tillåten variant, B2); vit .66
+hero-1, hero-2 E	stjärnor vita på foto (hero-1); hero-2 guld per V7	guld överallt (B12)
+thank-you, offer, main-form, footer	"5 av 5, Betyg på Google" 16/14 med mittpunkt som avdelare; footer "5.0" PJS 800 teal	proof-rad utan mittpunkt, Outfit, bläck; [GAP] på siffran
+eljour-block	nivåtagg 12/600 (#fdeceb/#b3261e, #fff4e0/#8a5800); statuspill #0a6e58 på #e3f6f1; trust-lista 15/400 med hårlinjer	= --sm och --live (klonade); kompakt lista
+booking, offer	ref-pill 13/600 teal-ink på teal .08; belopp 26 till 30/700	--action; prisrad 22
+testimonials-block	stjärnor neon-mint på mörkt; datum .72	guld (B12); .72 behålls
+article-template	eyebrows 10 till 15 px i 700 till 800 med .2 till .25em	12/600 .14em

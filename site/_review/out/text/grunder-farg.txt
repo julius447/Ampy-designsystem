@@ -1,0 +1,702 @@
+GRUNDER
+Färg
+
+Fem färger bär nästan allt. Två tealer är kanon: en accent som aldrig är text och en mörk för text och solida knappar. Resten är stöd, tillstånd eller drift som byts ut.
+
+konsolidering/farg.md + farg.json (682 färgrader ur 30 inventerings-JSON, 257 unika hex), system/tokens.css (varje token bär källa och drift i sin kommentar). Kontrasten är räknad av site/_probes/contrast.mjs, som också fyller rutnäten nedan.
+
+Varje ruta visar namn, hex, ap-token, de --ampy-*-tokens som pekar på färgen, rollen, antal källor (varav auktoritet 1) och kontrasten mot de tre ytorna. Antal = antal källfiler som bär färgen, inte antal förekomster.
+
+4,50 eller mer
+brödtext, AA
+3,00 till 4,49
+stor text och kontrollkanter
+under 3,00
+bara fyllning, aldrig text
+Primitiva färger
+
+Lager 1 är de 47 färgtokens som Bricks kör live i global-variables.css, ordagrant. Lager 1c är 16 tillägg som saknades men bevisligen bär en roll i minst två källor av auktoritet 1 till 2 (sekundärteal, teal deep, navy-serien, tillstånden).
+
+Kärnan
+
+De fem färger som bär nästan allt: 29, 26, 25, 22 och 21 av 30 källor.
+
+Midnight
+#090b32
+--apmidnight-blue
+--ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus
+mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa)
+29 källor (14 auk 1)
+vit 19,00
+midnight 1,00
+sky 17,98
+Vit
+#ffffff
+--appure-white
+--ampy-bg-surface, --ampy-on-dark, --ampy-action-on
+kort, text på mörkt, alfa-serie på mörkt
+26 källor (13 auk 1)
+vit 1,00
+midnight 19,00
+sky 1,06
+Teal core
+#00a991
+--apteal-core
+--ampy-action
+accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA
+25 källor (12 auk 1)
+vit 2,96
+midnight 6,41
+sky 2,81
+Neon mint
+#55ff9a
+--apneon-mint
+--ampy-focus-on-dark
+handlingsgradientens start, pulsprick, EFTER-chip, fokus på mörkt, stjärnor (testimonials-kort)
+22 källor (11 auk 1)
+vit 1,30
+midnight 14,61
+sky 1,23
+Sky mist
+#f5f9ff
+--apsky-mist
+--ampy-bg-page, --ampy-bg-subtle
+sidbakgrund, subtil yta, ljus aurora-bas
+21 källor (10 auk 1)
+vit 1,06
+midnight 17,98
+sky 1,00
+Tealer och gröna toner
+
+Två tealer är kanon: teal core som accent (ikoner, valda kanter, ringar, fyllningar utan text) och teal deep som text, länk och solid knapp med vit text. Sekundärteal är sajtens gradientslut och bär aldrig vit text (2,47:1). Aqua frost och mint surge är definierade men används ingenstans.
+
+Teal core
+#00a991
+--apteal-core
+--ampy-action
+accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA
+25 källor (12 auk 1)
+vit 2,96
+midnight 6,41
+sky 2,81
+Teal deep
+#007a69
+--apteal-deep
+--ampy-action-strong
+solid knapp med vit text, textlänk, sista H1-rad (diagnostik)
+2 källor (2 auk 1)
+vit 5,27
+midnight 3,61
+sky 4,98
+Teal hover
+#008d79
+--ampy-action-hover
+--ampy-action-hover
+hover på solid teal-knapp (header-CTA)
+hero-1 + website-blocks (header.css:13)
+vit 4,13
+midnight 4,60
+sky 3,91
+Sekundärteal (brandbok s.8)
+#5eb1bf
+--apsecondary-teal
+--ampy-action-gradient(-ring)
+handlingsgradientens slut, ring-gradientens slut, live fokus/highlight (--color-7), mini-menu pill, certificates gradient
+17 källor (7 auk 1)
+vit 2,47
+midnight 7,70
+sky 2,33
+Teal tint
+#e3f6f1
+--apteal-tint
+(pill)
+pill/chip-yta (eljour-familjen)
+3 källor (1 auk 1)
+vit 1,12
+midnight 16,93
+sky 1,06
+Emerald flow
+#39c281
+--apemerald-flow
+--ampy-success
+success, "efter"-stapel, slider-fyllning
+9 källor (5 auk 1)
+vit 2,28
+midnight 8,33
+sky 2,16
+Seafoam mint
+#5cc5b6
+--apseafoam-mint
+(dekor)
+aurora-SVG-stopp (thank-you/offer)
+3 källor (1 auk 1)
+vit 2,08
+midnight 9,15
+sky 1,96
+Mint surge
+#9de1ec
+--apmint-surge
+definierad i global-variables.css; 0 användningar i blocken (bara brandbokens jämförelselista)
+1 (brandbook-inventeringen)
+vit 1,46
+midnight 13,04
+sky 1,38
+Crystal blue
+#b6f2ff
+--apcrystal-blue
+--ampy-action-gradient-ring, --ampy-aurora-light
+ring-gradientens start, ljus aurora (.48), footer-gradient, certificates-våg
+15 källor (5 auk 1)
+vit 1,23
+midnight 15,50
+sky 1,16
+Sublime green
+#a0fbc9
+--apsublime-green
+--ampy-aurora-light
+ljus aurora (radial .28)
+4 källor (1 auk 1)
+vit 1,23
+midnight 15,50
+sky 1,16
+Aqua frost
+#ddf9fd
+--apaqua-frost
+(oanvänd)
+definierad, 0 användningar (live --color-29 #e5faff är en annan)
+1 källor (1 auk 1)
+vit 1,10
+midnight 17,23
+sky 1,04
+Navy och bläck
+
+Ett bläck (midnight) för rubrik och brödtext, en dämpad och en svag ton. Navy ink, darkest black och charcoal förekommer i källorna men är drift som byts ut (beslut B3). Indigo är bara knapptext på handlingsgradienten.
+
+Midnight (bläck)
+#090b32
+--apmidnight-blue
+--ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus
+mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa)
+29 källor (14 auk 1)
+vit 19,00
+midnight 1,00
+sky 17,98
+Indigo (knapptext på gradient)
+#282a53
+--apindigo
+--ampy-ink-on-action, --ampy-action-gradient-on
+knapptext på gradient
+6 källor (3 auk 1)
+vit 13,58
+midnight 1,40
+sky 12,85
+Navy muted
+#565e82
+--apnavy-muted
+--ampy-ink-muted
+dämpad text
+8 källor (5 auk 1)
+vit 6,33
+midnight 3,00
+sky 5,99
+Navy faint
+#6a7190
+--apnavy-faint
+--ampy-ink-faint
+svag text
+2 källor (2 auk 1)
+vit 4,80
+midnight 3,96
+sky 4,54
+Navy ink (drift, B3)
+#3b3f59
+--apnavy-ink
+drift → --ampy-ink-body (B3)
+brödtext i eljour-familjen
+3 källor (1 auk 1)
+vit 10,29
+midnight 1,85
+sky 9,74
+Darkest black (drift)
+#1e1e1e
+--apdarkest-black
+drift → --ampy-ink
+energycalc ink, rot-gt rubrik-ink, footer h3, mini-menu pill-text, hero-2 Z submit-text
+9 källor (5 auk 1)
+vit 16,67
+midnight 1,14
+sky 15,78
+Deepest blue
+#0e0f15
+--apdeepest-blue
+(oanvänd)
+definierad; 0 användningar
+0 källor
+vit 19,13
+midnight 1,01
+sky 18,11
+
+Alfa-ramp --apdarkest-black-5 till -90 (lager 1, verbatim). Ingen källa använder den: blocken skriver egna rgba(9,11,50,x).
+
+5
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Tillstånd
+
+Fyllning, bläck och tint per tillstånd. Fyllningarna är för staplar, ikoner och ytor utan text; text sätts alltid i -ink-varianten. Varning (amber) är scopad till diagram och besked: 1,93:1 på vit. Felröd valdes på kontrast (6,54:1), beslut B13.
+
+Success (fyllning)
+#39c281
+--apemerald-flow
+--ampy-success
+success, "efter"-stapel, slider-fyllning
+9 källor (5 auk 1)
+vit 2,28
+midnight 8,33
+sky 2,16
+Success ink
+#0f6e56
+--apverdict-green
+--ampy-success-ink
+besked-accent + success-text
+2 källor (2 auk 1)
+vit 6,20
+midnight 3,06
+sky 5,87
+Success tint
+#39c281 @ 0.12
+--ampy-success-tint
+--ampy-success-tint
+bakgrund bakom success-ikon/besked
+main-form (styles.css:238)
+vit 1,10
+midnight 1,18
+sky 1,10
+Varning (fyllning)
+#f0af38
+--apamber
+--ampy-warn
+"före"-stapel, varning i diagram
+3 källor (2 auk 1)
+vit 1,93
+midnight 9,85
+sky 1,82
+Varning ink
+#876507
+--apverdict-amber
+--ampy-warn-ink
+besked-accent + varningstext
+2 källor (2 auk 1)
+vit 5,39
+midnight 3,52
+sky 5,10
+Varning tint
+#fff4e0
+--apamber-tint
+--ampy-warn-tint
+varnings-bakgrund
+2 källor (1 auk 1)
+vit 1,09
+midnight 17,43
+sky 1,03
+Fel (fält, meddelande)
+#b3261e
+--apsignal-red
+--ampy-error
+fel, akut
+3 källor (1 auk 1)
+vit 6,54
+midnight 2,91
+sky 6,19
+Fel ink (besked)
+#7a1623
+--apverdict-red
+--ampy-error-ink
+besked-accent + akut-text
+2 källor (2 auk 1)
+vit 10,68
+midnight 1,78
+sky 10,11
+Fel tint
+#fdeceb
+--apsignal-red-tint
+--ampy-error-tint
+fel-/akut-bakgrund
+3 källor (1 auk 1)
+vit 1,14
+midnight 16,62
+sky 1,08
+Info ink
+#0d568c
+--apverdict-blue
+--ampy-info-ink
+besked-accent info
+2 källor (2 auk 1)
+vit 7,70
+midnight 2,47
+sky 7,29
+Google-gult (stjärnor, B12)
+#fbbc04
+--apgoogle-gold
+(stjärnor, B12)
+Google-stjärnor
+2 källor (1 auk 1)
+vit 1,71
+midnight 11,12
+sky 1,62
+Grå och vita
+
+Live definierar milk white och gray white som inget block använder. Charcoal (live --color-20) är brödtext i ROT/GT-blocken på mobil och byts ut mot midnight.
+
+Pure white
+#ffffff
+--appure-white
+--ampy-bg-surface, --ampy-on-dark, --ampy-action-on
+kort, text på mörkt, alfa-serie på mörkt
+26 källor (13 auk 1)
+vit 1,00
+midnight 19,00
+sky 1,06
+Sky mist
+#f5f9ff
+--apsky-mist
+--ampy-bg-page, --ampy-bg-subtle
+sidbakgrund, subtil yta, ljus aurora-bas
+21 källor (10 auk 1)
+vit 1,06
+midnight 17,98
+sky 1,00
+Milk white
+#f5f5f5
+--apmilk-white
+(oanvänd)
+definierad + alfa-serie; 0 användningar i blocken
+1 källor (1 auk 1)
+vit 1,09
+midnight 17,42
+sky 1,03
+Gray white
+#d9d9d9
+--apgray-white
+(oanvänd)
+definierad; 0 användningar
+1 källor (1 auk 1)
+vit 1,41
+midnight 13,46
+sky 1,34
+Charcoal gray (drift)
+#333333
+--apcharcoal-gray
+drift → --ampy-ink-body
+live --color-20: brödtext mobil ROT/GT, rot-gt-familjens p, booking body-ink, hero-2 input-text
+6 källor (3 auk 1)
+vit 12,63
+midnight 1,50
+sky 11,96
+Pure black
+#000000
+--appure-black
+(punkt)
+main-form asterisk; logo-PNG:er (#000)
+2 källor (1 auk 1)
+vit 21,00
+midnight 1,11
+sky 19,88
+
+Alfa-ramper --appure-black-5 till -90 (på vit) och --apmilk-white-5 till -90 (på midnight). Lager 1, 0 användningar. De alfa-steg som faktiskt används på mörkt är --ampy-on-dark-*, se tabellen "Alfa-steg" nedan.
+
+5
+10
+20
+30
+40
+50
+60
+70
+80
+90
+5
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Brandbokens färger som inte används
+
+Boken (s.7 till 8) och sajten delar bara midnight, neon mint och sky mist. Cobalt är bokens huvudaccent men saknas i produktionen; teal core saknas i boken. Ägarbeslutet 2026-07 gör teal till ensam accent. Boken skrivs om, beslut B1.
+
+Cobalt (brandbok s.7)
+#326afd
+(inget ap-token)
+(inget token)
+bokens huvudaccent: ikoner, blixt-former, hjälm, bil, skyltar
+2 (brandbook + artikelmallen som Tailwind "electric", 73 användningar)
+vit 4,55
+midnight 4,17
+sky 4,31
+Lime (brandbok s.8)
+#92ec47
+(inget ap-token)
+(inget token)
+stödfärg i boken, gradient 2
+1 (brandbook)
+vit 1,47
+midnight 12,95
+sky 1,39
+Semantiska lagret
+
+Lager 2: roller som pekar på primitiverna. Kolumnerna källa och drift är tagna ordagrant ur radkommentaren i system/tokens.css. Rader med B-nummer väntar på ett beslut.
+
+TOKEN	PEKAR PÅ	KÄLLA	DRIFT
+Ytor
+--ampy-bg-page	--apsky-mist	live-ampy-se (post-15498 .brxe-rclikf #f5f9ff) + hero-1, header, eljour, thank-you, booking, visste-du-att = 21 källor	rgb(247,249,251) LED/EV, #f4f5fb elkollen/elcentral, #f4f5f7 main-form, #e9eff8 energycalc
+--ampy-bg-surface	--appure-white	live-ampy-se (.rot__container) + 26 källor: alla kort är vita	rgb(247,249,251) LED inputkort
+--ampy-bg-subtle	--apsky-mist	fotobedomningen (afk-styles.css:~20 "två ytor: #fff + #f5f9ff") + energycalc (hp-ic #f5f9ff) + elkollen job-row hover #f4f5fb	rgb(234,239,243) LED/EV spår, #f7f8fc elcentral, #f7f7f7 main-form
+--ampy-bg-dark	--apmidnight-blue	led-kalkylator (styles.css:16 --bg-surface) + EV, energycalc, visste-du-att, hero-2 S/G/E, footer	rgb(27,29,75) rot-gt-panel/hero-2 Z, #16183f Z-kort, #0b0f30->#2d516d testimonials, #00011e/#01021f footer, #11163f/#0c1040 energycalc
+--ampy-bg-dark-glow B9	radial-gradient(120% 60% at 90% -10%, rgba…	led-kalkylator (styles.css:131-132) = ev-kalkylator, battery	energycalc 3 radialer (#00c4a7 .22 / neon .10 / midnight .40), visste-du-att (teal .42 + neon .18). Beslut B9: glöd eller platt
+--ampy-bg-glass B15	rgba(255,255,255,.72)	thank-you (v1/styles.css:40 glaskort)	.74 offer-accepted, .85 utan blur booking, rgba(255,255,255,.16) website-blocks go-cirkel. Beslut B15
+--ampy-glass-border	rgba(255,255,255,.9)	thank-you (v1/styles.css:41)	booking .9 (samma), hero-2 Z 1px vit .14 på mörkt
+--ampy-glass-blur	blur(16px) saturate(1.1)	thank-you (v1/styles.css:44) + offer-accepted	blur(30px) hero-2-form (dömd ut av hero-2-alternatives), blur(8/10px) saturate(150%) fore-efter navy-glas, blur(4px) website-blocks
+--ampy-bg-glass-dark	rgba(9,11,50,.82)	fore-efter-cro (dist/01:~206-215 chip/ledtråd)	hero-2-form #090b32 + 156.51deg -> #5eb1bf .76 (underkänd, kant 1,2:1)
+--ampy-bg-tint-action	rgba(0,169,145,.08)	elkollen (roomtile-chip .08) + thank-you (ghost hover .08) + booking/offer (pill .08) + website-blocks (.09/.06)	solid --apteal-tint #e3f6f1 (eljour-familjen), #e0f5f2 (rot-gt/booking)
+Bläck på ljust
+--ampy-ink	--apmidnight-blue	eljour-block (:13 --ink H2), testimonials-block (delivery css:21), elkollen/elcentral (--text-primary), fore-efter, visste-du-att, var-process = 29 källor	#0f123c (hero-1 header, LED/EV, mini-menu = near-miss, konsolideras hit), #0b1030 (thank-you/booking/offer), #1f1f1f (live ROT h2 --color-8), #1e1e1e (energycalc, rot-gt-familjen), #090c34 (main-cta)
+--ampy-ink-body B3	--apmidnight-blue	testimonials-block (delivery css:21 "Outfit 300 navy" block-text) + fore-efter-cro (sektionens basfont Outfit 300 #090b32) + elkollen/elcentral/mini-menu/LED/EV via #0f123c-konsolidering = 11 källor	#363636/300 live Bricks-default (frontend.css body, ej token), #3b3f59/400 eljour-familjen (--apnavy-ink), #333 rot-gt-familjen/booking, rgba(9,11,50,.72) var-process, .62 thank-you. BESLUT B3
+--ampy-ink-muted	--apnavy-muted	hero-1/website-blocks (header.css:15 --ink-muted) + LED/EV (--text-secondary) + mini-menu + rot-gt + booking = 8 källor, 6,33:1	#5f6480 eljour-familjen (5,80:1), #5a5d7a elkollen/elcentral, #51607a energycalc, rgba(11,16,48,.62) thank-you
+--ampy-ink-faint	--apnavy-faint	hero-1/website-blocks (header.css:15 --ink-faint), 4,80:1	#646b88 booking (4,97:1), #686b80 elkollen, #8a8da5 elcentral (3,26:1 underkänd), #8a8fa3 cta-website demo
+--ampy-ink-on-action	--apindigo	cta-website (*.css:14 hsl(237 35% 24%)) + hero-1 + main-cta + rot-gt + fotobedomningen + eljour-sticky-bar	#0d0d0d (elkollen/elcentral/picasso), #1e1e1e (hero-2 Z submit), vit (LED/EV/energycalc/elcentral solid)
+Bläck på mörkt
+--ampy-on-dark	--appure-white	hero-1 (h1 vit), LED (--text-inverse), visste-du-att, testimonials = 14+ källor	#dbe3ec hero-2-alternatives --ap-ink (~13:1)
+--ampy-on-dark-soft	rgba(255,255,255,.92)	hero-1 (style.css:234 lead .92) + hero-2-alternatives (lead .92) + main-form (.96 på foto)	.95 testimonials korttext, .94 LED lead-etiketter, #c9d4e0 hero-2 crumbs
+--ampy-on-dark-muted	rgba(255,255,255,.66)	led-kalkylator (styles.css:31 --on-surface-text-muted) + ev-kalkylator + battery, 8,44:1	.82 visste-du-att brödtext, .72 testimonials datum, #aeb8d4 energycalc
+--ampy-on-dark-faint	rgba(255,255,255,.55)	led-kalkylator (styles.css:32 --on-surface-text-faint, höjd från .42 efter WCAG) + ev + testimonials (citattecken .55), 6,12:1	.42 battery (3,99:1 underkänd), .70 rot-gt finstilt, #8a93b5 energycalc
+--ampy-on-dark-line	rgba(255,255,255,.14)	led-kalkylator (styles.css:33 --on-surface-border hr) + hero-2-alternatives (--ap-hairline .14) + EV	.12 energycalc --bd-dark, .16 rot-gt/energycalc trust, .18 rot-gt panel
+--ampy-on-dark-subtle	rgba(255,255,255,.06)	led-kalkylator (styles.css:35 jämförelsespår) + ev-kalkylator (monthly-panel/lead-form .06) + energycalc (sp-item-kant .06)	.08 EV stapelspår/rot-gt totalplatta, .02/.04 energycalc
+Handling
+--ampy-action	--apteal-core	energycalc (tool.css:26 CTA + valda kanter), led-kalkylator (styles.css:21 --action-primary), website-blocks (header-CTA), elkollen/elcentral (accent), 25 källor	EV #007d6b, elcentral/elkollen knapp #007a69 (= --ampy-action-strong). Ägarbeslut 2026-07: teal ensam accent (cobalt #326afd 0 i produktion)
+--ampy-action-strong B5	--apteal-deep	elcentral-kollen (elcentralkollen.css:46-47) + elkollen (behorighetskollen.css:51): solid knapp med vit text, textlänkar, sista H1-raden	se --apteal-deep. Beslut B5 (teal-kontrast)
+--ampy-action-hover	#008d79	hero-1 + website-blocks (header.css:13 --ap-teal-hover, header-CTA)	#00b89e energycalc (ljusare), rgb(0,108,93) elcentral strong-hover, LED/EV opacity .92 i stället för färgbyte
+--ampy-action-on	--appure-white	website-blocks (header-CTA vit 600) + energycalc + LED + elcentral/elkollen solid	--apindigo på gradienten (= --ampy-ink-on-action)
+--ampy-action-gradient	linear-gradient(120deg, #55ff9a 0%, #5eb1b…	cta-website (radgivning-cta.css:16, offert-cta.css:16) = hero-1 (style.css:71), rot-gt (d2:358), fotobedomningen (--afk-cta-grad), hero-2-alternatives (primitives:80 "DEN ENDA HANDLINGSGRADIENTEN"), elkollen/elcentral rail, picasso, booking shared.css:848 = 10+ källor. Stopp: --apneon-mint -> --apsecondary-teal	282.84deg #55ff9a->#00ffda (hero-2-form, dödförklarad), 135deg #00b89c->#018271 (thank-you), 100deg #009e88->#17c6a0 (main-form), 146deg #055a4b->#0a8169 (eljour nödknapp), 145deg #c7f5ff->#5eb1bf (live ROT hover)
+--ampy-action-gradient-ring	linear-gradient(120deg, #b6f2ff 0%, #5eb1b…	cta-website (ring-cta.css:16) = main-cta, eljour-sticky-bar, hero-2 Z/E. Stopp: --apcrystal-blue -> --apsecondary-teal	141deg (picasso, elkollen, elcentral)
+--ampy-action-gradient-on	--apindigo	cta-website (hsl(237 35% 24%)), 5,51:1 mot #5eb1bf	#0d0d0d, #1e1e1e
+Tillstånd
+--ampy-success	--apemerald-flow	led-kalkylator (styles.css:23 --state-success "Med LED"), EV, battery, main-form (success-ikon), elcentral (--state-success deklarerad)	rgb(54,178,92)/rgb(27,132,71) elkollen verdikt-grön ("lövigare än teal"), #1f9d6b main-form validering, #1bd365/#00ad48 testimonials prickar
+--ampy-success-ink	--apverdict-green	elcentral-kollen (--text-success) + elkollen (--text-success/row-icon), 6,20:1	rgb(6,71,55) elcentral pill-fg
+--ampy-success-tint	rgba(57,194,129,.12)	main-form (styles.css:238 success-ikon bg .12)	.16 LED ok-msg/glöd, rgb(240,249,245) elcentral tint, rgba(54,178,92,.10) elkollen board
+--ampy-warn	--apamber	led-kalkylator (styles.css:25 "I dag"-stapel), ev-kalkylator ; scopad till diagram/staplar på mörkt (1,93:1 på vit = aldrig text)	#f0b429 energycalc, #f5af19 elkollen/elcentral --state-warning
+--ampy-warn-ink	--apverdict-amber	elcentral-kollen + elkollen (accent-warning, factnote), 5,39:1	#8a5800 eljour Varning-tagg, #8a6116 booking fältfel, rgb(92,64,5) elcentral pill-fg
+--ampy-warn-tint	--apamber-tint	eljour-block (:16) + hero-2-alternatives eljour	rgb(252,247,234)/rgb(250,233,197) elcentral
+--ampy-error B13	--apsignal-red	eljour-block (:15) + fotobedomningen (--afk-fel invalid-kant + feltext) + hero-2 eljour, 6,54:1	rgb(214,76,76) LED/EV (4,20:1), rgb(214,64,64) elkollen, #e00000 main-form, #e5484d hero-2 primitives, teal (hero-2-form, ingen felfärg). Beslut B13
+--ampy-error-ink	--apverdict-red	elcentral-kollen (akut-text rgb(122,22,35)) + elkollen (accent red), 10,68:1	rgb(124,32,32) elcentral pill-fg
+--ampy-error-tint	--apsignal-red-tint	eljour-block + fotobedomningen + hero-2 eljour	rgb(252,237,238) elcentral akut, rgba(209,73,91,.08) main-form banner, rgba(214,64,64,.06) elkollen board
+--ampy-info-ink	--apverdict-blue	elcentral-kollen (info-ikon, accent-info) + elkollen (info-ikon), 7,70:1	rgb(10,122,191) elkollen --text-info, rgb(17,82,135) elcentral pill-fg
+--ampy-focus B14	--apmidnight-blue	cta-website (*.css:33 focus-visible 3px solid #090b32 offset 3) + booking/offer (outline 3px navy, teal mätte 2,91:1) + fotobedomningen (3px, 19:1) + mini-menu/website-blocks	teal 3px (hero-1 CTA, thank-you, picasso), teal-ringar .2-.35 (LED sju varianter), #5eb1bf + rgba(94,177,191,.2) (live Bricks-formulär). Beslut B14
+--ampy-focus-on-dark	--apneon-mint	energycalc (tool.css --ring-dark rgba(85,255,154,.30) + outline neon på mörkt) + elkollen/LED-sp-item neon inset	LED teal .35 på mörkt
+--ampy-focus-ring	0 0 0 3px rgba(0,122,105,.9)	elcentral-kollen (elcentralkollen.css --focus-ring, "höjd från .25 för WCAG 2.4.11", EN ring på alla fält+knappar)	0 0 0 3px rgba(0,169,145,.25) elkollen (1,3:1 underkänd), .30 main-form, .18 hero-2 fält, 0 0 0 3px rgba(94,177,191,.2) live
+Linjer
+--ampy-line	rgba(9,11,50,.14)	var-process-cro (v2/ampy-process.css:16 "blockets ENDA hairline") + led-kalkylator (styles.css:26 --border-default rgba(15,18,60,.12) -> midnight) + fore-efter/certificates inset .07 ; solida drift: #e6ecf6 eljour-familjen (1,19:1), #dbe4f0 header, #e3e5ed/#ebedf3 elkollen/elcentral, #eaeef5 fore-efter, #d7deeb m.fl. energycalc	ingen
+--ampy-line-strong	rgba(9,11,50,.48)	booking-confirmation (shared.css:42 --line-strong, kontrollkanter WCAG 1.4.11 -> 3,39:1)	#5f6480 fotobedomningen (kontrollkant 5,80:1), #e3e5ed elkollen/elcentral inputs (1,26:1 underkänd), 2px transparent main-form
+--ampy-line-on-dark	var(--ampy-on-dark-line)	se --ampy-on-dark-line (LED hr .14, hero-2 --ap-hairline)	.12 energycalc, .16/.18 rot-gt
+Alfa-steg
+
+De genomskinliga stegen som faktiskt används, blandade mot sitt underlag och kontrastmätta. Vit .55 på midnight är golvet för text på mörkt (6,12:1); .42 (battery) faller på 3,99:1 och byts ut.
+
+TOKEN	VÄRDE	PÅ	BLANDAD	KONTRAST
+--ampy-on-dark	#ffffff	midnight	#ffffff	19,00:1
+--ampy-on-dark-soft	rgba(255,255,255,.92)	midnight	#ebebef	16,03:1
+--ampy-on-dark-muted	rgba(255,255,255,.66)	midnight	#abacb9	8,45:1
+--ampy-on-dark-faint	rgba(255,255,255,.55)	midnight	#9091a3	6,13:1
+--ampy-on-dark-line	rgba(255,255,255,.14)	midnight	#2b2d4f	1,44:1
+--ampy-on-dark-subtle	rgba(255,255,255,.06)	midnight	#181a3e	1,13:1
+--ampy-line	rgba(9,11,50,.14)	vit	#dddde2	1,36:1
+--ampy-line-strong	rgba(9,11,50,.48)	vit	#898a9d	3,40:1
+--ampy-bg-tint-action	rgba(0,169,145,.08)	vit	#ebf8f6	1,09:1
+--ampy-bg-glass	rgba(255,255,255,.72)	sky-mist	#fcfdff	1,04:1
+--ampy-bg-glass-dark	rgba(9,11,50,.82)	vit	#353757	11,44:1
+Regler
+Teal är aldrig text
+
+Teal core mäter 2,96:1 mot vit och 2,81:1 mot sky mist. Fyra källor förbjuder den uttryckligen som text (var-process, fotobedömningen, sticky-bar, elkollen). Text-teal är --ampy-action-strong (teal deep, 5,27:1). Samma sak gäller solida knappar med vit text: teal deep, inte teal core (beslut B5).
+
+GÖR INTE
+
+Läs mer om ROT-avdraget i teal core, 2,96:1
+
+GÖR
+
+Läs mer om ROT-avdraget i teal deep, 5,27:1
+
+Tealernas kontrast
+
+Alla tealer som förekommer i källorna, mätta av konsolidering/_probes/04-kontrast.py. Bara teal deep och de mörkare CRM-tealerna klarar vit text; kanon väljer teal deep för att den finns i två källor av auktoritet 1.
+
+FÄRG	MOT VIT	MOT SKY MIST	MOT MIDNIGHT
+teal-core #00a991	2,96	2,81	6,41
+teal-deep #007a69 (elcentral/elkollen)	5,27	4,98	3,61
+teal #007d6b (EV)	5,07	4,79	3,75
+teal #00806e (energycalc)	4,87	4,61	3,90
+teal #0a8f7c (hero-2/eljour focus)	4,01	3,80	4,73
+teal #0a6e58 (eljour pill)	6,21	5,87	3,06
+teal #016a5d (booking)	6,52	6,17	2,91
+teal #018271 (thank-you)	4,74	4,48	4,01
+teal-hover #008d79 (header)	4,13	3,91	4,60
+secondary-teal #5eb1bf	2,47	2,33	7,70
+emerald #39c281	2,28	2,16	8,33
+neon-mint #55ff9a	1,30	1,23	14,61
+En accent
+
+Teal är den enda accenten (ägarbeslut 2026-07). Neon mint förekommer bara som gradientstart, pulsprick, fokus på mörkt och "efter"-chip. Cobalt och lime finns inte i produktion. Google-gult är reserverat för stjärnor (beslut B12).
+
+Två ytor
+
+Sidan är sky mist, kortet är vitt. Fotobedömningen och energycalc formulerar regeln "två ytor: #fff + #f5f9ff"; LED/EV:s rgb(247,249,251) och elkollens #f4f5fb är near-miss som byts ut mot sky mist.
+
+BG-PAGE + BG-SURFACE
+
+VITT KORT
+
+Skuggan är midnight-alfa .07, aldrig grå (beslut B10).
+
+SUBTIL YTA
+
+--ampy-bg-subtle är sky mist igen, med hairline i stället för skugga.
+
+De två gradienterna
+
+Fjorton gradienter i källorna blir två: handlingsgradienten (sajtens primärknapp) och den ljusa auroran (tack-, boknings- och offertflödet). Ringvarianten startar i crystal blue i stället för neon mint. Den mörka glöden är en ytbehandling för kalkylatorernas resultatkort, inte en gradient i sig (beslut B9). Gradient i text finns inte: ägaren ogillar gradienttext och alla textgradienter i källorna är drift.
+
+Text i indigo, 5,51:1 mot slutet
+
+--ampy-action-gradient
+linear-gradient(120deg, #55ff9a 0%, #5eb1bf 100%)
+Källa: cta-website (radgivning-cta.css:16) = hero-1, rot-gt, fotobedömningen, hero-2, elkollen, elcentral, picasso, booking. 10+ källor.
+
+Ringknappen: crystal blue till sekundärteal
+
+--ampy-action-gradient-ring
+linear-gradient(120deg, #b6f2ff 0%, #5eb1bf 100%)
+Källa: cta-website (ring-cta.css:16) = main-cta, eljour-sticky-bar, hero-2 Z/E. Drift: 141° i picasso, elkollen, elcentral.
+
+Ljus aurora på sky mist
+
+--ampy-aurora-light
+Fyra radialer (teal .12/.08, crystal blue .48, sublime green .28) på sky mist.
+Källa: thank-you (v1/styles.css:18-23) = booking (shared.css:65-69) = offer-accepted. Bara kundflödet, beslut B11.
+
+Mörk glöd (tillval för resultatkort)
+
+--ampy-bg-dark + --ampy-bg-dark-glow
+radial teal .28 uppe höger + emerald .16 nere vänster.
+Källa: led-kalkylator (styles.css:131-132) = EV, battery. Platt midnight är default för alla andra mörka ytor, beslut B9.
+
+GÖR
+Rubrik och brödtext i samma bläck (midnight); hierarki genom vikt och storlek, inte genom färg.
+Dämpad text i --ampy-ink-muted (6,33:1), svag i --ampy-ink-faint (4,80:1). Aldrig lägre.
+En handlingsgradient per vy. Alla knappar inne i verktyg, formulär och kort är solid teal deep med vit text.
+GÖR INTE
+Teal core som text, som liten text eller som yta under vit text.
+Gradient i text eller på ytor (certificates, footer, testimonials-kortet är drift).
+Egna navyer, tealer eller grå: #0f123c, #0b1030, #363636, #00c4a7 och rgba(190,190,190,.19) byts ut, se listan nedan.
+Det här byts ut
+
+Driftlistan ur konsolidering/farg.md: vad som är uppmätt i källorna, vad som är kanon och vad som byts ut var.
+
+GRUPP	UPPMÄTT	KANON	BYTS UT
+Navy i sju värden	
+#090b32 (--apmidnight-blue, 29 källor)
+#0f123c (hero-1/website-blocks/LED/EV/mini-menu/rot-gt, 7)
+#0b1030 (thank-you/booking/offer, 3)
+#090c34 (main-cta, Bricks --color-3)
+#1b1d4b (rot-gt-panel/hero-2 Z, Bricks --color-18)
+#16183f, #17204a (hero-2 Z-kort/navy-soft)
+#00011e/#01021f/#010033 (footer), #0b0f30→#2d516d (testimonials), #0d1350…#05061f (mini-menu aurora)
+	--apmidnight-blue #090b32 för ALLA mörka ytor och allt bläck	#0f123c → midnight (near-miss, 6 enheter); #0b1030 → midnight; #090c34 → midnight; rot-gt/hero-2 Z-panel #1b1d4b → midnight (eller --ampy-bg-dark-glow); testimonials-gradient → midnight + glöd (B9); footer-gradient → midnight (B-lista: footer riktning)
+Fem tealer (plus fem till)	
+#00a991 teal-core (25)
+#5eb1bf brandbokens sekundärteal (17)
+#007a69 elcentral/elkollen "strong" (2 auk 1)
+#007d6b EV
+#00806e/#00b89e/#00c4a7/#19c39e energycalc
+#0a8f7c/#0a6e58 eljour-familjen (4/3)
+#016a5d/#017666/#018271 CRM-flödet
+#1cc4af LED/main-form (oanvänd)
+#008d79 header hover
+#00a88f Bricks --color-15 (footer 5.0)
+	TVÅ tealer: --apteal-core (accent, aldrig text) + --apteal-deep #007a69 (text, länk, solid knapp med vit text). --apsecondary-teal #5eb1bf bara som gradientslut/ring (aldrig text, 2,47:1).	alla mörka tealer → --apteal-deep; #00c4a7 (teal på mörkt) → --apteal-core (6,41:1 på midnight räcker); #1cc4af → bort; #00a88f → --apteal-core; hover → --ampy-action-hover #008d79
+#0b1030-bläcket och de andra bläcken	
+#0b1030 + rgba(11,16,48,.62/.44) (thank-you, booking, offer)
+#0f123c (7)
+#1f1f1f live ROT h2 (--color-8)
+#1e1e1e (energycalc, rot-gt rubrik, footer h3)
+#363636 live body (Bricks-default)
+#333 (rot-gt p, booking, hero-2 input)
+#3b3f59 eljour-familjen
+#171717/#4d4d4d/#6a6a6a main-form (Svea)
+#1a1d2e article
+	--ampy-ink = midnight; --ampy-ink-body = midnight (B3); --ampy-ink-muted = #565e82; --ampy-ink-faint = #6a7190	#0b1030/#0f123c/#1f1f1f/#1e1e1e/#171717 → --ampy-ink; #363636/#333/#3b3f59/#4d4d4d/#1a1d2e → --ampy-ink-body (B3); rgba(11,16,48,.62)/#5f6480/#5a5d7a/#51607a/#6a6a6a → --ampy-ink-muted; #646b88/#686b80/#8a8da5 → --ampy-ink-faint
+Dämpad text (muted) i sex värden	
+#565e82 (8: header, LED, EV, mini-menu, rot-gt, booking)
+#5f6480 (3: eljour, foto, sticky)
+#5a5d7a (2: elkollen, elcentral)
+#51607a energycalc
+rgba(11,16,48,.62) thank-you
+rgba(9,11,50,.72) var-process
+	--apnavy-muted #565e82 (6,33:1)	de andra fem → --ampy-ink-muted
+Hairlines i nio värden	
+#e6ecf6 (eljour-familjen)
+#dbe4f0 (header)
+#e3e5ed/#ebedf3 (elkollen/elcentral)
+rgba(15,18,60,.12) (LED-kitet)
+rgba(9,11,50,.14) (var-process)
+rgba(11,16,48,.09/.16/.48) (booking)
+#eaeef5 (fore-efter)
+#e1e8f4/#d7deeb/#dbe4f2/#eef2f9/#e3e9f5 (energycalc)
+#d5d5dc (drawer)
+	--ampy-line rgba(9,11,50,.14) (dekorativ) + --ampy-line-strong rgba(9,11,50,.48) (kontrollkant ≥3:1)	alla solida hairlines → --ampy-line; fältkanter #e3e5ed (1,26:1) → --ampy-line-strong
+Fel/varning: sex röda, tre amber, tre gröna	
+röd: #b3261e (3), rgb(214,76,76) LED/EV (2, 4,2:1), rgb(214,64,64) elkollen, #e00000 main-form, #e5484d/#e24b4a hero-2, #ff8a8a energycalc, teal (hero-2-form)
+amber: #f0af38 LED/EV, #f0b429 energycalc, #f5af19 elkollen/elcentral, #e3a008 eljour-prick, #8a6116 booking
+grön: #39c281 emerald (9), #1f9d6b main-form, rgb(54,178,92)/rgb(27,132,71) elkollen, #1bd365/#00ad48 testimonials, #0f6e56 elcentral/elkollen text
+	--ampy-error #b3261e (6,54:1), --ampy-error-ink #7a1623; --ampy-warn #f0af38 (diagram/mörkt), --ampy-warn-ink #876507; --ampy-success #39c281 (fyllning), --ampy-success-ink #0f6e56	LED/EV rgb(214,76,76) → #b3261e (4,2:1 underkänd som text); hero-2-form fel-i-teal → #b3261e; testimonials #1bd365/#00ad48 → --apemerald-flow; energycalc #f0b429 → --apamber
+Kortskuggor i fem familjer	
+rgba(190,190,190,.19/.14/.4) "husets" (live, testimonials, main-cta, var-process)
+rgba(15,18,60,.06/.08/.14) LED-kitet
+rgba(9,11,50,…) eljour-familjen, fore-efter, certificates, thank-you, visste, mini-menu
+rgba(11,13,42,.04/.07/.10) elkollen/elcentral
+rgba(11,16,48,…) booking; rgba(181,181,181,.14) hero-2-form; rgba(241,241,241,.25) picasso-glöd
+	EN skuggfärg: midnight-alfa. --ampy-shadow-card 0 10px 30px rgba(9,11,50,.07); -raised 0 16px 40px .14; -subtle 0 1px 2px .06	alla gråa (190/181/241) och near-miss-navyer (15,18,60 / 11,13,42 / 11,16,48) → rgba(9,11,50,x). Beslut B10 om husets grå skugga.
+Gradienter: 14 → 2	
+120° #55ff9a→#5eb1bf (handling, 10+)
+120° #b6f2ff→#5eb1bf (ring)
+ljus aurora (thank-you/booking/offer)
+282.84° #55ff9a→#00ffda (hero-2-form)
+135° #00b89c→#018271 (thank-you knapp)
+100° #009e88→#17c6a0 (main-form knapp)
+146° #055a4b→#0a8169 (eljour nödknapp)
+145° #c7f5ff→#5eb1bf (live ROT hover)
+90° #090b32→#5eb1bf (certificates)
+−51° #70becb→#bbf5ff→#b6f2ff (prefooter)
+−17° #00011e→#090b32 (footer)
+−27° #0b0f30→#2d516d (testimonials-kort)
+GT-rubrik #1f1f1f→#57ff9a→#33995c; main-cta text hsl(171 95% 41%)→#5eb1bf; main-form rubrik #12b09a→#55d199
+92°/135° article (#326afd→#55ff9a)
+	--ampy-action-gradient (120° neon-mint → sekundärteal, med ring-varianten) + --ampy-aurora-light. Allt annat = drift.	knapp-gradienterna i hero-2-form/thank-you/main-form → --ampy-action-gradient; textgradienter → bort (ägaren ogillar gradienttext); nödknappen → --apteal-deep solid (B6); certificates/footer/testimonials-ytor → midnight (+ glöd)
+Cobalt och lime (brandbok) vs teal (produktion)	
+#326afd cobalt: 0 i live, 73 i artikelmallen (Tailwind electric)
+#92ec47 lime: 0 överallt
+#00a991 teal-core: saknas i brandboken
+	teal (ägarbeslut 2026-07): se B1	artikelmallens electric #326afd → --apteal-deep (länkar) / --apteal-core (accent)
+
+Beslut som rör färg: B1 accent, B3 brödtext, B5 teal-kontrast, B9 glöd, B10 skugga, B11 aurora, B12 stjärnor, B13 felfärg, B14 fokus, B16 sekundärteal.

@@ -1,0 +1,228 @@
+{
+ "site/index.html": {
+  "tabSequence": [
+   "a.ds-brand \"Ampy designsystem\" x=11 synlig=true",
+   "button.ds-topbar__btn \"Meny\" x=315 synlig=true",
+   "a.ds-brand \"Ampy designsystemMätt ur\" x=-287 synlig=false",
+   "a \"Översikt\" x=-295 synlig=false",
+   "a \"Beslut som väntar\" x=-295 synlig=false",
+   "a \"Använda systemet\" x=-295 synlig=false"
+  ],
+  "focusInsideClosedNav": {
+   "focused": true,
+   "sideVisibility": "visible",
+   "sideTransform": "matrix(1, 0, 0, 1, -300, 0)",
+   "inert": false,
+   "ariaHidden": null
+  },
+  "menuVisible": true,
+  "afterEnter": {
+   "expanded": "true",
+   "open": true,
+   "transform": "none",
+   "hasCloseBtn": false,
+   "focusMovedIntoNav": false,
+   "bodyScrollLocked": false,
+   "backdrop": false
+  },
+  "afterEscape": {
+   "expanded": "false",
+   "open": false,
+   "focusOnBtn": true
+  },
+  "details": {
+   "count": 0,
+   "summaryFocusable": []
+  },
+  "copy": {
+   "count": 0
+  },
+  "focusRing": {
+   "outlineStyle": "solid",
+   "outlineWidth": "3px",
+   "outlineColor": "rgb(9, 11, 50)"
+  },
+  "smallTargets": {
+   "total": 14,
+   "under32": 8,
+   "sample": [
+    "a. 18px \"Färg\"",
+    "a. 18px \"Typografi\"",
+    "a. 18px \"Spacing\"",
+    "a. 18px \"Form\"",
+    "a. 18px \"Rörelse\""
+   ]
+  }
+ },
+ "site/komponenter/knappar.html": {
+  "tabSequence": [
+   "a.ds-brand \"Ampy designsystem\" x=11 synlig=true",
+   "button.ds-topbar__btn \"Meny\" x=315 synlig=true",
+   "a.ds-brand \"Ampy designsystemMätt ur\" x=-287 synlig=false",
+   "a \"Översikt\" x=-295 synlig=false",
+   "a \"Beslut som väntar\" x=-295 synlig=false",
+   "a \"Använda systemet\" x=-295 synlig=false"
+  ],
+  "focusInsideClosedNav": {
+   "focused": true,
+   "sideVisibility": "visible",
+   "sideTransform": "matrix(1, 0, 0, 1, -300, 0)",
+   "inert": false,
+   "ariaHidden": null
+  },
+  "menuVisible": true,
+  "afterEnter": {
+   "expanded": "true",
+   "open": true,
+   "transform": "none",
+   "hasCloseBtn": false,
+   "focusMovedIntoNav": false,
+   "bodyScrollLocked": false,
+   "backdrop": false
+  },
+  "afterEscape": {
+   "expanded": "false",
+   "open": false,
+   "focusOnBtn": true
+  },
+  "details": {
+   "count": 0,
+   "summaryFocusable": []
+  },
+  "copy": {
+   "count": 1,
+   "focusable": true,
+   "tabindex": 0,
+   "minHeight": 33.1875,
+   "fontSize": "14.119px"
+  },
+  "focusRing": {
+   "outlineStyle": "solid",
+   "outlineWidth": "3px",
+   "outlineColor": "rgb(9, 11, 50)"
+  },
+  "smallTargets": {
+   "total": 74,
+   "under32": 1,
+   "sample": [
+    "a.ds-a 18px \"CTA-biblioteket\""
+   ]
+  }
+ },
+ "site/grunder/rorelse.html": {
+  "tabSequence": [
+   "a.ds-brand \"Ampy designsystem\" x=11 synlig=true",
+   "button.ds-topbar__btn \"Meny\" x=315 synlig=true",
+   "a.ds-brand \"Ampy designsystemMätt ur\" x=-287 synlig=false",
+   "a \"Översikt\" x=-295 synlig=false",
+   "a \"Beslut som väntar\" x=-295 synlig=false",
+   "a \"Använda systemet\" x=-295 synlig=false"
+  ],
+  "focusInsideClosedNav": {
+   "focused": true,
+   "sideVisibility": "visible",
+   "sideTransform": "matrix(1, 0, 0, 1, -300, 0)",
+   "inert": false,
+   "ariaHidden": null
+  },
+  "menuVisible": true,
+  "afterEnter": {
+   "expanded": "true",
+   "open": true,
+   "transform": "none",
+   "hasCloseBtn": false,
+   "focusMovedIntoNav": false,
+   "bodyScrollLocked": false,
+   "backdrop": false
+  },
+  "afterEscape": {
+   "expanded": "false",
+   "open": false,
+   "focusOnBtn": true
+  },
+  "details": {
+   "count": 0,
+   "summaryFocusable": []
+  },
+  "copy": {
+   "count": 1,
+   "focusable": true,
+   "tabindex": 0,
+   "minHeight": 33.1875,
+   "fontSize": "14.119px"
+  },
+  "focusRing": {
+   "outlineStyle": "solid",
+   "outlineWidth": "3px",
+   "outlineColor": "rgb(9, 11, 50)"
+  },
+  "smallTargets": {
+   "total": 10,
+   "under32": 0,
+   "sample": []
+  }
+ },
+ "site/komponenter/verktyg.html": {
+  "tabSequence": [
+   "a.ds-brand \"Ampy designsystem\" x=11 synlig=true",
+   "button.ds-topbar__btn \"Meny\" x=315 synlig=true",
+   "a.ds-brand \"Ampy designsystemMätt ur\" x=-287 synlig=false",
+   "a \"Översikt\" x=-295 synlig=false",
+   "a \"Beslut som väntar\" x=-295 synlig=false",
+   "a \"Använda systemet\" x=-295 synlig=false"
+  ],
+  "focusInsideClosedNav": {
+   "focused": true,
+   "sideVisibility": "visible",
+   "sideTransform": "matrix(1, 0, 0, 1, -300, 0)",
+   "inert": false,
+   "ariaHidden": null
+  },
+  "menuVisible": true,
+  "afterEnter": {
+   "expanded": "true",
+   "open": true,
+   "transform": "none",
+   "hasCloseBtn": false,
+   "focusMovedIntoNav": false,
+   "bodyScrollLocked": false,
+   "backdrop": false
+  },
+  "afterEscape": {
+   "expanded": "false",
+   "open": false,
+   "focusOnBtn": true
+  },
+  "details": {
+   "count": 3,
+   "summaryFocusable": [
+    true,
+    true,
+    true
+   ]
+  },
+  "copy": {
+   "count": 12,
+   "focusable": true,
+   "tabindex": 0,
+   "minHeight": 33.1875,
+   "fontSize": "14.119px"
+  },
+  "focusRing": {
+   "outlineStyle": "solid",
+   "outlineWidth": "3px",
+   "outlineColor": "rgb(9, 11, 50)"
+  },
+  "smallTargets": {
+   "total": 89,
+   "under32": 22,
+   "sample": [
+    "a.ds-a 18px \"LED-kalkylatorn\"",
+    "button.ampy-calc__tip 16px \"i\"",
+    "button.ampy-calc__tip 16px \"i\"",
+    "button.ampy-calc__tip 16px \"i\"",
+    "button.ampy-calc__tip 16px \"i\""
+   ]
+  }
+ }
+}

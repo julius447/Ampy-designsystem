@@ -1,0 +1,196 @@
+GRUNDER
+Rörelse
+
+Tre längder, två kurvor, ett lyft. Knappar rör sig på 160 ms, gränssnittet på 200, ingenting tar längre än 300. Allt nollställs under reduced-motion, och siffror animeras bara när de ändras, aldrig när de laddas.
+
+konsolidering/form-djup-rorelse.md + form-djup-rorelse.json (rorelse.json ur 30 inventerings-JSON: 26 durationsvärden, 14 easings), system/tokens.css (rörelsetokens med källa och drift), inventering/<slug>.json rorelse[] för listan över vad som rör sig i auktoritet 1-källorna. Demonstrationerna nedan använder tokens rakt av; knapp och kort är komponentklasserna i system/components/.
+
+Simulera prefers-reduced-motion på demonstrationerna (0,001 ms på allt)
+Längderna
+
+Tre tokens. --ampy-dur-fast 160 ms är CTA-bibliotekets hover (8 källor); verktygen kör 150 (9 källor) och skillnaden syns inte. --ampy-dur-base 200 ms är headerns --t (26 användningar) och 11 källor. --ampy-dur-slow 300 ms är sliders, staplar, reveal och Bricks fadeIn (13 källor) och samtidigt taket: hero-2-alternatives och fotobedömningen skriver "tak 300 ms". Tryck Spela så springer tre prickar samma sträcka med varsin token.
+
+fast 160 ms
+base 200 ms
+slow 300 ms
+drift 640 ms
+Spela
+
+Den gråa är mini-menyns 640 ms (foto-zoom) och thank-you-bockens 640 ms, båda över taket. Kurvan är --ampy-ease på alla fyra.
+
+TOKEN	VÄRDE	ANVÄNDS TILL	KÄLLA	DRIFT
+--ampy-dur-fast	160 ms	knappars hover, pil, färgbyten på kontroller	cta-website (*.css:21 ".16s ease") = hero-1, main-cta, rot-gt, fotobedömningen, live site-css hero-CTA (8 källor)	150 LED, EV, elkollen, booking (9 källor, verktygskontroller); 120 elcentral; 140 energycalc; 180 hero-2 (--ap-motion)
+--ampy-dur-base	200 ms	UI: meny, drawer, chevron, details, stegprickar, popover	website-blocks + hero-1 (header.css:20 --t .2s ease-out, 26 användningar) + thank-you, main-form, mini-menu, elkollen, elcentral (11 källor)	220 energycalc, elcentral, booking; 280 mini-menu, main-form; 240 elkollen kort
+--ampy-dur-slow	300 ms	slider, stapelbredd, reveal vid första målning, sektionens fadeIn; taket	led-kalkylator (styles.css --motion-normal 300) + eljour (--m .3s) + energycalc --t-slow + live Bricks fadeIn 0.3s (13 källor); "tak 300 ms" hero-2-alternatives, fotobedömningen	350 testimonials prickar; 400 rot-gt fade; 520 och 640 mini-menu; 560 och 640 thank-you bock; 800 EV; 900 testimonials
+Kurvorna
+
+--ampy-ease är live-sajtens egen --ease i site-css (7 källor med samma bezier) och används på allt som rör sig av sig självt. --ampy-ease-out är energycalcs och mini-menyns utrullning, för det som ska landa mjukt (reveal, popover). Nyckelordet ease (18 källor) kommer från CTA-bibliotekets shorthand och är okej på 160 ms, men ingen ny kurva ritas för hand: en studs på en kronsiffra ser ut som ett spel.
+
+--ampy-ease
+cubic-bezier(.2,.6,.2,1)
+live-ampy-se site-css --ease + mini-menu, energycalc, elcentral, elkollen, main-form, footer (7 källor)
+--ampy-ease-out
+cubic-bezier(.16,1,.3,1)
+energycalc (tool.css --ease-out), mini-menu (foto-zoom), main-form, rot-gt
+ease (nyckelord)
+cubic-bezier(.25,.1,.25,1)
+18 källor, CTA-bibliotekets transition-shorthand. Tillåten på 160 ms-hover, inte som ny kanon.
+Drift: LED-kitets kurva
+cubic-bezier(.2,0,.2,1)
+LED, EV, battery --easing. Byts till --ampy-ease.
+Drift: kundflödets kurva
+cubic-bezier(.16,.84,.44,1)
+thank-you, booking. Byts till --ampy-ease-out.
+Så rör sig delarna
+
+Fyra rörelser som finns i systemet, med de riktiga klasserna. Håll muspekaren över knappen och kortet; de statiska varianterna bredvid har klassen .is-hover så att hover-läget syns i skärmdumpar.
+
+KNAPPLYFT: -1,5 PX + SATURATE(1.06) BRIGHTNESS(1.02), 160 MS
+Boka rådgivning
+Boka rådgivning
+
+--ampy-lift -1,5 px och --ampy-hover-filter, pilen skalar 1.18 och glider aldrig. Källa: cta-website (*.css:21-26, offert-cta.css:36-37) = hero-1, rot-gt, fotobedömningen, main-cta. Drift: -1 px picasso, elcentral, EV; -2 px energycalc, certificates, thank-you; -4 px mini-menu kort; 0 på sticky-bar (aldrig lyft på en bottenfäst remsa); opacity .92 i stället för lyft i LED och EV.
+
+KORTLYFT: -2 PX + RAISED-SKUGGA, 160 MS
+
+CERTIFIKAT
+
+Håll över kortet.
+
+CERTIFIKAT
+
+Hover-läget, statiskt.
+
+.ampy-card--hover: transform och box-shadow på --ampy-dur-fast --ampy-ease. Källa: certificates v2 (hover -2, tvåtonsring), website-blocks lösningskort (-.4rem .25s, bild scale 1.05 .45s), energycalc hp-card (-1 px, kant teal). Kortet lyfter 2 px i källorna, knappen 1,5; det är två olika lyft.
+
+STAPEL SOM FYLLS VID FÖRSTA MÅLNING, 300 MS
+Spela igen
+
+scaleX(0) till 1 på --ampy-dur-slow --ampy-ease, på kompositorn (ingen breddanimation). Källa: energycalc storybar (scaleX 300 ms, delay 0/45/90), EV slider-fyllning (scaleX 150 ms), LED stapelbredd 300 ms (animerar width, byts till transform).
+
+DETAILS: GRID-TEMPLATE-ROWS 0FR TILL 1FR, 200 MS
+Så har vi räknat
+Panelen öppnas utan att höjden mäts i JS: raden går från 0fr till 1fr och innehållet har overflow hidden. Chevronen roterar 180°. Eljour-blockets symptompanel (--m .3s), energycalcs gear-collapsed (220 ms ease-out) och elcentrals finding-chevron (220 ms) gör exakt så.
+
+Aldrig max-height-trick (headerns accordion .28s är drift) och aldrig animerad height: det är en layoutförskjutning.
+
+Siffror: bara vid ändring, aldrig vid laddning
+
+Hjältesiffran står färdig när sidan visas. Den räknas inte upp från 0 (det fördröjer värdet och animerar en textnod som påverkar layouten). När värdet ändras av en kontroll får siffran en kort markering: energycalcs anchor-num.flash (opacity .4 till 1, 220 ms) eller EV:s value-prominent.is-snap (teal + scale 1.04 tillbaka, 150 ms). Ingen av dem tar längre än ett hover.
+
+GÖR: FÄRDIG SIFFRA, MARKERING VID ÄNDRING
+17 276
+kr/år
+Ändra värde (flash 220 ms)
+Ändra värde (snap 150 ms)
+
+tabular-nums så att kolumnen inte hoppar när siffrorna byts. Källa: energycalc (tool.css ampyFlash 220 ms), ev-kalkylator (ampy-snap-highlight 150 ms), led-kalkylator (readouten byts direkt, reveal bara vid första målning).
+
+GÖR INTE: RÄKNA UPP FRÅN NOLL VID LADDNING
+0
+kr/år
+Visa vad som händer
+
+Under 1,2 sekunder visar siffran fel värde, layouten ändras när talet växer från ett tecken till sex, och användaren väntar på det som är verktygets hela poäng. Ingen auktoritet 1-källa gör så; regeln kommer ur ampy-ux-polish §1 ("DON'T animate the hero number counting up from 0").
+
+Reveal med stagger (mönster, ingen token)
+
+Kalkylatorerna visar resultatkortets delar i följd vid första målning: opacity 0 till 1 plus 6 till 12 px translateY, 300 ms, med 40 till 60 ms mellan delarna. LED: hero 40, trio 120, compare 180, cta 260 ms. EV: 40/100/160/220/280. Energycalc: 45 ms-steg. Elcentral: findings 45 ms-steg. Mini-menu 50 till 360 ms. Mönstret är kanon, stegets längd är inte tokeniserat; demonstrationen kör 60 ms.
+
+Spela igen
+
+En gång per sektion, aldrig igen vid scroll upp (Bricks fadeIn runOnce på live). Animera bara opacity och transform.
+
+Reduced-motion
+
+Alla auktoritet 1-källor nollställer rörelsen under prefers-reduced-motion: reduce: hero-1 och website-blocks (*{animation:none;transition:none} !important), cta-website (transition none, puls av), LED och EV (0,001 ms på allt), energycalc (nollställer --t-*), elcentral (animation none på block, dualstatus, finding, share-menu), elkollen, eljour (pulser display none), testimonials (ingen autoplay, markören statisk). Artikelmallen saknar regeln (defekt). base.css bär regeln för hela .ampy-skopet:
+
+@media (prefers-reduced-motion: reduce) {
+  .ampy *, .ampy *::before, .ampy *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+Kopiera
+
+Kryssrutan högst upp på sidan lägger samma regel på demonstrationerna med en klass, eftersom en sida inte kan slå på mediefrågan själv. Oändliga animationer (pulser, halo, spinner) är de som märks mest; de ska stanna helt, inte bara gå långsammare.
+
+Det som rör sig i auktoritet 1-källorna
+
+Ur rorelse[] i respektive inventerings-JSON. Det här är hela rörelseordförrådet i produktion; allt utanför listan är nytt och ska motiveras.
+
+KÄLLA	VAD	HUR
+cta-website	knapphover, pil, ring-puls, active	transform, box-shadow, filter .16s ease till translateY(-1.5px) saturate(1.06 eller 1.08) brightness(1.02); pil scale(1.18); ampyRing 2.8 s cubic-bezier(.4,0,.4,1) infinite (box-shadow 0 till 9 px vit .65 till 0 vid 55 %); active translateY(0); reduced-motion: allt av
+hero-1	CTA-hover, header, pulsprick, mega-meny, lösningskort, drawer	CTA som cta-website; header --t .2s ease-out (26 användningar); pulsprick 1 rem mint cta_dot 1.6 s ease-in-out infinite; mega-meny opacity var(--t) + visibility 0s .2s; lösningskort transform och box-shadow .25s ease-out, bild scale(1.05) .45s; drawer translateX(100 %) till 0 .2s, accordion max-height .28s ease-out
+website-blocks	samma header som hero-1 + produkt-tile	--t .2s ease-out; produkt-tile hover bg rgba(0,169,145,.06), go opacity .35 till 1 + translateX(.3rem); burger-X scale_in .3s
+live-ampy-se	tab-knapp, hero-CTA, mini-menu-kort, ROT-knapp, blockinträde	all 0.3s ease + hover translateY(-2px) (fluent_snippet_14); hero-CTA .16s som cta-website; mini-menu-kort 280 ms var(--ease); ROT-knapp hover byter gradient utan transition; Bricks enterView fadeIn 0.3 s runOnce, hidden-on-load
+led-kalkylator	kontroller, slider, staplar, reveal, knapp, thumb	--motion-fast 150 ms (border, färg, bg, opacity, transform, chevron); --motion-normal 300 ms (slider width/left, stapelbredd); --easing cubic-bezier(0.2,0,0.2,1); ampy-reveal opacity 0 till 1 + translateY(0.6rem) 300 ms, stagger 40/120/180/260; knapp hover opacity .92, active .82 + 1 px; thumb active scale(1.08), .is-dragging utan transitions
+ev-kalkylator	slider, snap, reveal, staplar, popover, spinner	150 / 300 ms, samma kurva som LED; slider-fyllning scaleX 150 ms, thumb left 150 ms; ampy-snap-highlight teal + scale 1.04 150 ms; reveal 300 ms stagger 40/100/160/220/280; stapel width 300 ms; popover opacity, transform 2 px, visibility 150 ms; spinner 0.8 s linear infinite
+energycalc	inträde, storybar, spark-list, seg-pill, gear, bump, flash, hover, thumb, jump-pill	--t-fast 140 / --t-mid 220 / --t-slow 300 / --t-stagger 45 ms; --ease cubic-bezier(0.2,0.6,0.2,1), --ease-out cubic-bezier(0.16,1,0.3,1); ampyRise translateY(12px) till 0 300 ms ease-out staggat ×1 till ×6; storybar scaleX 300 ms delay 0/45/90; spark-list scaleX 220 + opacity 140; seg-pill 140 ms; gear-collapsed 0fr till 1fr 220 ms; ampyBump 140 ms, ampyFlash 220 ms; hp-card hover -1 px; cta hover -2 px; thumb hover 1.06, active 1.12; jpNudge 2.6 s infinite
+elcentral-kollen	stegbyte, besked, stegprickar, option, chevron, sticky-CTA, share	--dur-fast 120 / --dur-base 220 / --dur-reveal 300, ease-out cubic-bezier(0.2,0.6,0.2,1); ec-in-fwd/back opacity + translateX(±10px) 220 ms; dualstatus ec-rise 300 ms, findings 220 ms med 45 ms stagger; stegprickar bg + width 220 ms (18 till 28 px); option hover kant teal + -1 px 120 ms; chevron rotate 180° 220 ms; sticky-CTA translateY(110 %) till 0 260 ms; ec-pop på share-menyn
+elkollen	kort, drawer, judgment, tiles, tabb, hero-kort	ampy-bk-block opacity + translateY(2px) 240 ms; ampy-bk-fade 200 ms; ampy-bk-judgment 280 ms cubic-bezier(.2,.6,.2,1); tiles, options, job-row, cta 150 ms ease, tile active scale .98; tabb color + border 150 ms (vikt 500 i båda lägen så bredden inte hoppar); hero-kort min-height 200 ms; ett dark-tema (ej valt) med elk-aurora 24 s infinite
+eljour-block	panel, chevron, CTA, statuspuls, mobil-CTA-puls	--m .3s ease på panel (grid-template-rows 0fr till 1fr), chevron rotate 180, CTA hover translateY(-1px); eb-pulse 2 s ease-out infinite (scale 1 till 2, opacity .55 till 0); eb-cta-pulse 2 s (scale 1 till 2.6); reduced-motion: pulser display none
+testimonials-block	Splide, prickar, badge	autoplay 4000 ms, speed 500 ms, pauseOnHover och pauseOnFocus; prick width och bg .35s ease, aktiv fylls via scaleX i takt med autoplay; badge hover understrykning; reduced-motion: ingen autoplay, markören statisk. Live: speed 400, interval 3000
+rot-gt-cro	blockinträde, CTA	live: Bricks fadeIn 0.3 s runOnce; familjen: av-fade 400 ms cubic-bezier(.16,1,.3,1) opacity-only, vänster +60, panel +120 ms; CTA som cta-website
+footer-cro	inga (baslinje)	tokens.css i repot definierar --ease cubic-bezier(.2,.6,.2,1) för riktningarna
+brandbook	inga	boken innehåller inga rörelseregler
+Det här byts ut
+Durations i källorna
+
+Antal källor per värde ur rorelse.json. Teal = token. Allt över 300 ms är drift utom oändliga pulser (som är egna beslut, se ornament).
+
+300 ms
+13
+200 ms
+11
+150 ms
+9
+160 ms
+8
+280 ms
+7
+180 ms
+6
+220 ms
+5
+250 ms
+4
+400 ms
+3
+260 ms
+3
+
+Två källor vardera: 120, 450, 500, 640 ms. En källa: 60, 80, 90, 140, 240, 350, 420, 520, 560, 700, 800, 900 ms.
+
+Easings i källorna
+ease
+18
+ease-out
+8
+.2,.6,.2,1
+7
+linear
+5
+ease-in-out
+3
+.16,1,.3,1
+3
+.2,0,.2,1
+3
+.16,.84,.44,1
+2
+.33,1,.68,1
+2
+
+Kanonkurvan räknas med båda skrivsätten (.2,.6,.2,1 i 5 källor + 0.2,0.6,0.2,1 i 2); ease-out-kurvan likaså (2 + 1). En källa vardera: cubic-bezier(.4,0,.4,1) (ring-pulsen), cubic-bezier(.22,.61,.36,1) (fore-efter).
+
+ROLL	KANON	DRIFT (KÄLLA: VÄRDE)	BYTS UT TILL
+Lyft	translateY(-1.5px) på knapp	picasso, elcentral, EV -1 px; energycalc, certificates, thank-you -2 px; mini-menu kort -4 px; live tab-knapp -2 px	--ampy-lift på knappar; kort får -2 px (.ampy-card--hover); sticky-bar 0
+Hover-filter	saturate(1.06) brightness(1.02)	ring-knappen saturate(1.08) (behålls i klonen som avvikelse); picasso, elkollen 1.05; main-form brightness(1.06); LED, EV opacity .92	--ampy-hover-filter
+Snabb	160 ms	150 (LED, EV, elkollen, booking, picasso, hero-2-form, article, battery), 120 (elcentral, rot-gt), 140 (energycalc), 180 (hero-2, booking, sticky-bar, thank-you)	--ampy-dur-fast
+Bas	200 ms	220 (energycalc, elcentral, booking, battery, mini-menu), 240 (elkollen), 250 (certificates, fore-efter, hero-1, website-blocks), 260, 280 (mini-menu, main-form, EV, elkollen, hero-1, live, website-blocks)	--ampy-dur-base
+Långsam	300 ms (tak)	350 testimonials, 400 rot-gt fade, sticky-bar, article; 420/520/640 mini-menu; 450 hero-1, website-blocks bild-zoom; 500 main-form, testimonials; 560/640 thank-you bock; 700 main-form; 800 EV; 900 testimonials	--ampy-dur-slow; bocken i tack-flödet är ett eget beslut (bekräftelse-scen, komponentkartan)
+Kurva	cubic-bezier(.2,.6,.2,1) / ease-out-kurvan	LED-kitets (.2,0,.2,1); kundflödets (.16,.84,.44,1) och (.33,1,.68,1); fore-efter (.22,.61,.36,1); ease-in-out (elkollen, hero-1, website-blocks); linear (5 källor, mest spinners och Splide)	--ampy-ease / --ampy-ease-out; linear bara på spinner
+Animerad egenskap	opacity, transform	LED slider width/left och stapelbredd; EV stapel width; hero-1 accordion max-height; elkollen hero-kort min-height; elcentral stegprickar width	transform (scaleX) och grid-template-rows

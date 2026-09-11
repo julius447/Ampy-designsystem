@@ -1,0 +1,2027 @@
+{
+ "site/index.html": {
+  "checked": 154,
+  "fails": [],
+  "unknown": [],
+  "teal": []
+ },
+ "site/grunder/farg.html": {
+  "checked": 913,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "20",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(202,205,210)",
+    "ratio": 3.98,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "30",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(181,183,188)",
+    "ratio": 3.16,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "40",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(159,161,165)",
+    "ratio": 2.45,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "50",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgb(138,140,143)",
+    "ratio": 3.39,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "20",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(196,199,204)",
+    "ratio": 3.74,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "30",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(172,174,179)",
+    "ratio": 2.85,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "40",
+    "color": "rgb(86, 94, 130)",
+    "bg": "rgb(147,149,153)",
+    "ratio": 2.12,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp > span",
+    "txt": "50",
+    "color": "rgb(255, 255, 255)",
+    "bg": "rgb(123,125,128)",
+    "ratio": 4.16,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp.ds-ramp--dark > span",
+    "txt": "30",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(80,81,109)",
+    "ratio": 4.42,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-ramp.ds-ramp--dark > span",
+    "txt": "40",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(103,105,128)",
+    "ratio": 3.37,
+    "need": 4.5,
+    "fontSize": 12,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-two > div > p.ds-teal-wrong",
+    "txt": "Läs mer om ROT-avdraget i teal core, 2,96:1",
+    "color": "rgb(0, 169, 145)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 2.96,
+    "need": 4.5,
+    "fontSize": 18,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "Text i indigo, 5,51:1 mot slutet",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "Ringknappen: crystal blue till sekundärt",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "Ljus aurora på sky mist",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "Mörk glöd (tillval för resultatkort)",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": [
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-two > div > p.ds-teal-wrong",
+    "txt": "Läs mer om ROT-avdraget i teal core, 2,96:1",
+    "fontSize": "18px",
+    "ratio": 2.96
+   }
+  ]
+ },
+ "site/grunder/typografi.html": {
+  "checked": 525,
+  "fails": [],
+  "unknown": [
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-two > div > p.ampy-h2.ds-gradtext",
+    "txt": "30 % ROT-avdrag",
+    "why": "gradienttext"
+   }
+  ],
+  "teal": []
+ },
+ "site/komponenter/knappar.html": {
+  "checked": 274,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--primary.is-hover",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--primary.is-focus",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri rådgivning",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo > div.ds-demo__item > button.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo > div.ds-demo__item > button.ampy-btn.ampy-btn--primary.is-loading",
+    "txt": "Skickar din förfrågan",
+    "why": "gradienttext"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ampy-on-dark.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ampy-on-dark.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--primary.is-hover",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ampy-on-dark.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--primary.is-focus",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo.ds-demo--stack > div.ds-demo__col > a.ampy-btn.ampy-btn--primary.ampy-btn--block",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--ring > span.ampy-link--tel",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--ring.is-hover > span.ampy-link--tel",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--ring.is-focus > span.ampy-link--tel",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--ring.ampy-btn--compact > span.ampy-link--tel",
+    "txt": "010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ampy-on-dark.ds-demo > div.ds-demo__item > a.ampy-btn.ampy-btn--ring > span.ampy-link--tel",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo.ds-demo--stack > div.ds-demo__col > a.ampy-btn.ampy-btn--ring.ampy-btn--block > span.ampy-link--tel",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo > div.ds-demo__item > button.ampy-btn.ampy-btn--secondary.is-loading",
+    "txt": "Boka rådgivning",
+    "why": "gradienttext"
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ampy.ds-demo > a.ampy-btn.ampy-btn--primary",
+    "txt": "58 px",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ampy.ds-demo > a.ampy-btn.ampy-btn--primary.ampy-btn--compact",
+    "txt": "48 px",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ampy.ds-demo.ds-demo--stack > div.ds-demo__col.ds-demo__col--wide > a.ampy-btn.ampy-btn--primary.ampy-btn--block-mobile",
+    "txt": "Kontakta oss",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo.ds-demo--stack > div.ds-demo__col.ds-demo__col--wide > a.ampy-btn.ampy-btn--ring.ampy-btn--block-mobile > span.ampy-link--tel",
+    "txt": "010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/komponenter/falt.html": {
+  "checked": 431,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [],
+  "teal": []
+ },
+ "site/komponenter/verktyg.html": {
+  "checked": 762,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ampy-calc__stack.ampy-calc__stack--sticky > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-eyebrow",
+    "txt": "Årlig besparing",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-number",
+    "txt": "27 752",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-readout__unit",
+    "txt": "kr/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__stack.ampy-calc__stack--sticky > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__sub",
+    "txt": "Så mycket lägre kan elkostnaden bli, var",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "Energi du kapar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "16 819",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kWh/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "59 % lägre förbrukning",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "CO₂ du sparar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "7,8",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "ton/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "jämfört med nordisk elmix",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "Uppskattad kostnad",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "120 000",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kr",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "ca 1 500 kr per armatur, inkl. installat",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__stack.ampy-calc__stack--sticky > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > span.ampy-eyebrow",
+    "txt": "Vad belysningen kostar per år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--now > span.ampy-calc__compare-key",
+    "txt": "I dag",
+    "color": "rgb(240, 175, 56)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--now > span.ampy-calc__compare-val",
+    "txt": "47 409 kr",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--after > span.ampy-calc__compare-key",
+    "txt": "Med LED",
+    "color": "rgb(57, 194, 129)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--after > span.ampy-calc__compare-val",
+    "txt": "19 657 kr",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__stack.ampy-calc__stack--sticky > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > p.ampy-calc__compare-caption",
+    "txt": "LED drar",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > p.ampy-calc__compare-caption > strong",
+    "txt": "59 % mindre",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc.ampy-calc--flush > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-eyebrow",
+    "txt": "Årlig besparing",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-number",
+    "txt": "27 752",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-readout__unit",
+    "txt": "kr/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc.ampy-calc--flush > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__sub",
+    "txt": "Så mycket lägre kan elkostnaden bli, var",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "Energi du kapar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "16 819",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kWh/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "59 % lägre förbrukning",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "CO₂ du sparar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "7,8",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "ton/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "jämfört med nordisk elmix",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "Uppskattad kostnad",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "120 000",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kr",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "ca 1 500 kr per armatur, inkl. installat",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc.ampy-calc--flush > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > span.ampy-eyebrow",
+    "txt": "Vad belysningen kostar per år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--now > span.ampy-calc__compare-key",
+    "txt": "I dag",
+    "color": "rgb(240, 175, 56)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--now > span.ampy-calc__compare-val",
+    "txt": "47 409 kr",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--after > span.ampy-calc__compare-key",
+    "txt": "Med LED",
+    "color": "rgb(57, 194, 129)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--after > span.ampy-calc__compare-val",
+    "txt": "19 657 kr",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc.ampy-calc--flush > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > p.ampy-calc__compare-caption",
+    "txt": "LED drar",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > p.ampy-calc__compare-caption > strong",
+    "txt": "59 % mindre",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__stack > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-eyebrow",
+    "txt": "Årlig besparing",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-number",
+    "txt": "27 752",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-readout__unit",
+    "txt": "kr/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__stack > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__sub",
+    "txt": "Så mycket lägre kan elkostnaden bli, var",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "Energi du kapar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "16 819",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kWh/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "59 % lägre förbrukning",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "CO₂ du sparar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "7,8",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "ton/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "jämfört med nordisk elmix",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__label",
+    "txt": "Uppskattad kostnad",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value",
+    "txt": "120 000",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kr",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-stat-trio > div.ampy-stat > span.ampy-stat__sub",
+    "txt": "ca 1 500 kr per armatur, inkl. installat",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__stack > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > span.ampy-eyebrow",
+    "txt": "Vad belysningen kostar per år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--now > span.ampy-calc__compare-key",
+    "txt": "I dag",
+    "color": "rgb(240, 175, 56)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--now > span.ampy-calc__compare-val",
+    "txt": "47 409 kr",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--after > span.ampy-calc__compare-key",
+    "txt": "Med LED",
+    "color": "rgb(57, 194, 129)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > div.ampy-calc__compare-row.ampy-calc__compare-row--after > span.ampy-calc__compare-val",
+    "txt": "19 657 kr",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__stack > section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > p.ampy-calc__compare-caption",
+    "txt": "LED drar",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__compare > p.ampy-calc__compare-caption > strong",
+    "txt": "59 % mindre",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__cta-stack > form.ampy-calc__lead > p.ampy-calc__lead-intro",
+    "txt": "Vår belysningsexpert hör av sig med ett ",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "form.ampy-calc__lead > div.ampy-fields > div.ampy-field.is-error > label",
+    "txt": "Namn",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "form.ampy-calc__lead > div.ampy-fields > div.ampy-field.is-error > p.ampy-error",
+    "txt": "Skriv ditt namn.",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "form.ampy-calc__lead > div.ampy-fields > div.ampy-field > label",
+    "txt": "E-post",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "form.ampy-calc__lead > div.ampy-fields > div.ampy-field > label",
+    "txt": "Telefon",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "form.ampy-calc__lead > div.ampy-fields > div.ampy-field > label",
+    "txt": "Postnummer",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__cta-stack > form.ampy-calc__lead > div.ampy-calc__hp > label",
+    "txt": "Lämna detta fält tomt",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__cta-stack > form.ampy-calc__lead > label.ampy-check > span.ampy-check__text",
+    "txt": "Jag godkänner att Ampy sparar mina uppgi",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "form.ampy-calc__lead > label.ampy-check > span.ampy-check__text > a",
+    "txt": "integritetspolicyn",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-calc__cta-stack > form.ampy-calc__lead > p.ampy-calc__lead-fine",
+    "txt": "Kostnadsfritt och utan förbindelse.",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-calc__cta-stack > form.ampy-calc__lead > p.ampy-calc__lead-fine > button.ampy-calc__lead-cancel",
+    "txt": "Avbryt",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": [
+   {
+    "path": "div.ampy-calc__chart > div.ampy-calc__chart-inner > div.ampy-calc__chart-top > span.ampy-calc__chart-corner.ampy-calc__chart-corner--end",
+    "txt": "+293 087 kr",
+    "fontSize": "16.88px",
+    "ratio": 5.65
+   },
+   {
+    "path": "div.ampy-calc__chart-inner > div.ampy-calc__be > div.ampy-calc__be-label > span.ampy-calc__be-time",
+    "txt": "2,4 år",
+    "fontSize": "16px",
+    "ratio": 5.65
+   }
+  ]
+ },
+ "site/komponenter/diagnostik.html": {
+  "checked": 763,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ampy-diag__inner > div.ampy-diag__rail > div.ampy-diag__rail-actions > a.ampy-btn.ampy-btn--block",
+    "txt": "Kontakta oss",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-diag__rail > div.ampy-diag__rail-actions > a.ampy-btn.ampy-btn--ring.ampy-btn--block > span",
+    "txt": "010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-diag__inner > div.ampy-diag__rail > div.ampy-diag__rail-actions > a.ampy-btn.ampy-btn--block",
+    "txt": "Kontakta oss",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-diag__rail > div.ampy-diag__rail-actions > a.ampy-btn.ampy-btn--ring.ampy-btn--block > span",
+    "txt": "010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-diag.ampy-diag--block > div.ampy-diag__inner > div.ampy-diag__blockhead > h2.ampy-diag__blockhead-title",
+    "txt": "Behöver din elcentral bytas?",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-diag.ampy-diag--block > div.ampy-diag__inner > div.ampy-diag__blockhead > p.ampy-diag__blockhead-lead",
+    "txt": "Besvara sju frågor om din elcentral och ",
+    "color": "rgb(86, 94, 130)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo.ds-demo--full > div.ampy-diag.ampy-diag--block > div.ampy-diag__inner > p.ampy-diag__blockground",
+    "txt": "Byggt på Elsäkerhetslagen och Elsäkerhet",
+    "color": "rgb(86, 94, 130)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/komponenter/block.html": {
+  "checked": 1461,
+  "fails": [
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div > section.ampy-receipt > div.ampy-receipt__cta > a.ampy-btn.ampy-btn--primary",
+    "txt": "Begär offert med ROT inräknat",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div > section.ampy-receipt.ampy-receipt--dark.ampy-on-dark > div.ampy-receipt__cta > a.ampy-btn.ampy-btn--primary",
+    "txt": "Begär offert med avdraget inräknat",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-avdrag__grid > section.ampy-receipt.ampy-receipt--dark.ampy-on-dark > div.ampy-receipt__cta > a.ampy-btn.ampy-btn--primary",
+    "txt": "Begär offert med ROT inräknat",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-cert.ampy-on-dark > div.ampy-cert__inner > div.ampy-cert__intro > h2.ampy-cert__heading",
+    "txt": "Behörigheten bakom varje jobb",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-cert.ampy-on-dark > div.ampy-cert__inner > div.ampy-cert__intro > p.ampy-cert__text",
+    "txt": "Varje gång en av våra elektriker ringer ",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "aside.ampy-eljour__aside > div.ampy-callcard > a.ampy-btn.ampy-btn--emergency > span.ampy-btn__txt",
+    "txt": "Ring eljouren",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-callcard > a.ampy-btn.ampy-btn--emergency > span.ampy-btn__txt > b",
+    "txt": "010-265 79 79",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-symptoms__panel-pad > div.ampy-symptoms__act > a.ampy-btn.ampy-btn--emergency > span.ampy-btn__txt",
+    "txt": "Ring eljouren",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-symptoms__act > a.ampy-btn.ampy-btn--emergency > span.ampy-btn__txt > b",
+    "txt": "010-265 79 79",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo--phone > div.ampy-callbar.ampy-callbar--demo > a.ampy-btn.ampy-btn--ring.ampy-btn--block > span.ampy-btn__txt",
+    "txt": "Ring eljouren",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-callbar.ampy-callbar--demo > a.ampy-btn.ampy-btn--ring.ampy-btn--block > span.ampy-btn__txt > b",
+    "txt": "010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-cornercard.ampy-cornercard--demo > a.ampy-btn.ampy-btn--ring > span.ampy-cornercard__txt > span.ampy-cornercard__verb",
+    "txt": "Ring eljouren",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-cornercard.ampy-cornercard--demo > a.ampy-btn.ampy-btn--ring > span.ampy-cornercard__txt > span.ampy-cornercard__num",
+    "txt": "010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-ctaband__card > div.ampy-ctaband__text > div.ampy-ctaband__action > a.ampy-btn.ampy-btn--ring",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "footer.ampy-footer > section.ampy-footer__pre > div.ampy-footer__inner > h3.ampy-footer__pre-heading",
+    "txt": "Populära kategorier",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__pre-grid > div.ampy-footer__pre-block > h4.ampy-footer__pre-h",
+    "txt": "Elinstallation",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Eljour",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Elektriker",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Belysning",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__pre-grid > div.ampy-footer__pre-block > h4.ampy-footer__pre-h",
+    "txt": "Laddboxar",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Zaptec Go",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Zaptec Go 2",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Easee Charge up",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__pre-grid > div.ampy-footer__pre-block > h4.ampy-footer__pre-h",
+    "txt": "Batterilagring",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "SAJ HS3",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "SigenStor",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Dyness Stack100",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__pre-grid > div.ampy-footer__pre-block > h4.ampy-footer__pre-h",
+    "txt": "Områden",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Stockholm",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Sollentuna",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Haninge",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__pre-grid > div.ampy-footer__pre-block > h4.ampy-footer__pre-h",
+    "txt": "Lösningar",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Elektriker för företag",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Elektriker för restaurang",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__pre-block > ul.ampy-footer__list > li > a",
+    "txt": "Elektriker för bostadsrättsförening",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-footer__main.ampy-on-dark > div.ampy-footer__inner > div.ampy-footer__brand > p.ampy-footer__text",
+    "txt": "Framtidens elfirma för privatpersoner so",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-footer__main.ampy-on-dark > div.ampy-footer__inner > div.ampy-footer__google > span.ampy-footer__rating",
+    "txt": "5,0",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__cols > div.ampy-footer__col > h4.ampy-footer__h",
+    "txt": "Mer om Ampy",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__col > ul.ampy-footer__list > li > a",
+    "txt": "Om oss",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__col > ul.ampy-footer__list > li > a",
+    "txt": "Jobba hos oss",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__col > ul.ampy-footer__list > li > a",
+    "txt": "Nyheter och artiklar",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__cols > div.ampy-footer__col > h4.ampy-footer__h",
+    "txt": "Kundtjänst",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__col > ul.ampy-footer__list > li > a",
+    "txt": "Support",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__col > ul.ampy-footer__list > li > a",
+    "txt": "ROT-avdrag 2026",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__col > ul.ampy-footer__list > li > a",
+    "txt": "Grön teknik 2026",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__inner > div.ampy-footer__cols > div.ampy-footer__col.ampy-footer__col--contact > h4.ampy-footer__h",
+    "txt": "Få en kostnadsfri konsultation",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__col.ampy-footer__col--contact > div.ampy-footer__contact > div.ampy-footer__row > p",
+    "txt": "Västbergavägen 25, 126 30 Hägersten",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__contact > div.ampy-footer__row > p > a",
+    "txt": "bokning@ampy.se",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-footer__contact > div.ampy-footer__row > p > a",
+    "txt": "010-265 79 79",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-hero1 > div.ampy-frame.ampy-frame--short.ampy-on-dark > div.ampy-frame__content.ampy-hero1__stack > a.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri rådgivning",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-hero2__card.ampy-on-dark > div.ampy-hero2__body > div.ampy-hero2__actions > a.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri rådgivning",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-picker__grid > a.ampy-picker__card.ampy-on-dark > span.ampy-picker__body > span.ampy-picker__cardtitle",
+    "txt": "Elservice",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-picker__grid > a.ampy-picker__card.ampy-on-dark > span.ampy-picker__body > span.ampy-picker__cardtitle",
+    "txt": "Laddbox",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-picker__grid > a.ampy-picker__card.ampy-on-dark > span.ampy-picker__body > span.ampy-picker__cardtitle",
+    "txt": "Batterilagring",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo.ds-demo--full > section.ampy-ba > div.ampy-ba__inner > h2.ampy-ba__h2",
+    "txt": "Så ser det ut när vi har",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-ba > div.ampy-ba__inner > h2.ampy-ba__h2 > span.ampy-ba__accent",
+    "txt": "bytt en elcentral",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo.ds-demo--full > section.ampy-ba > div.ampy-ba__inner > p.ampy-ba__tagline",
+    "txt": "Ny elcentral, jordfelsbrytare och märkta",
+    "color": "rgba(9, 11, 50, 0.78)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div > div.ampy-byline > div.ampy-byline__avatars > span.ampy-byline__avatar",
+    "txt": "JC",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div > div.ampy-byline > div.ampy-byline__avatars > span.ampy-byline__avatar",
+    "txt": "EL",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div > div.ampy-byline > div.ampy-byline__avatars > span.ampy-byline__avatar",
+    "txt": "OS",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy.ds-demo.ampy-aurora > div > div.ampy-timeline > p.ampy-timeline__eyebrow",
+    "txt": "Så här går vi vidare",
+    "color": "rgb(0, 122, 105)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-timeline > ol.ampy-timeline__steps > li.ampy-timeline__step > span.ampy-timeline__text",
+    "txt": "Din accept är registrerad",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ol.ampy-timeline__steps > li.ampy-timeline__step > span.ampy-timeline__text > small",
+    "txt": "Klart, vi har tagit emot ditt godkännand",
+    "color": "rgb(86, 94, 130)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-timeline > ol.ampy-timeline__steps > li.ampy-timeline__step > span.ampy-timeline__text",
+    "txt": "Anna ringer och bokar tid",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ol.ampy-timeline__steps > li.ampy-timeline__step > span.ampy-timeline__text > small",
+    "txt": "Ni kommer överens om en tid som passar d",
+    "color": "rgb(86, 94, 130)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-timeline > ol.ampy-timeline__steps > li.ampy-timeline__step > span.ampy-timeline__text",
+    "txt": "Ampys behöriga elektriker utför arbetet",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ol.ampy-timeline__steps > li.ampy-timeline__step > span.ampy-timeline__text > small",
+    "txt": "På avtalad tid, utan överraskningar.",
+    "color": "rgb(86, 94, 130)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div > div.ampy-booking > section.ampy-booking__card > p.ampy-booking__cap",
+    "txt": "Vi kommer",
+    "color": "rgb(106, 113, 144)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-booking > section.ampy-booking__card > h1.ampy-booking__day > span.ampy-booking__rel",
+    "txt": "Imorgon,",
+    "color": "rgb(0, 122, 105)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div > div.ampy-booking > section.ampy-booking__card > h1.ampy-booking__day",
+    "txt": "torsdag 17 september",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__facts > div.ampy-booking__fact > span.ampy-booking__txt",
+    "txt": "Mellan",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-booking__facts > div.ampy-booking__fact > span.ampy-booking__txt > b",
+    "txt": "08:00",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-booking__facts > div.ampy-booking__fact > span.ampy-booking__txt > b",
+    "txt": "09:00",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-booking__facts > div.ampy-booking__fact > span.ampy-booking__txt > span.ampy-booking__sub",
+    "txt": "Vi ringer när elektrikern är på väg.",
+    "color": "rgb(86, 94, 130)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__facts > div.ampy-booking__fact > span.ampy-booking__txt",
+    "txt": "Storgatan 12, Sollentuna",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div > div.ampy-booking > section.ampy-booking__card > h2.ampy-booking__h2",
+    "txt": "Din beställning",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ul.ampy-booking__work > li > div > h3",
+    "txt": "Byte av elcentral",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ul.ampy-booking__work > li > div > p",
+    "txt": "Ny central med jordfelsbrytare, märkta g",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ul.ampy-booking__work > li > div > h3",
+    "txt": "Provning och protokoll",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__rows > div.ampy-booking__row > span.ampy-booking__lbl",
+    "txt": "Arbete",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__rows > div.ampy-booking__row > span.ampy-booking__amt",
+    "txt": "18 000 kr",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-booking__rows > div.ampy-booking__row > span.ampy-booking__lbl > span.ampy-booking__tag",
+    "txt": "Tillägg",
+    "color": "rgb(0, 122, 105)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__rows > div.ampy-booking__row > span.ampy-booking__lbl",
+    "txt": "Extra grupp till laddbox",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__rows > div.ampy-booking__row > span.ampy-booking__amt",
+    "txt": "1 500 kr",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__rows > div.ampy-booking__row > span.ampy-booking__lbl",
+    "txt": "ROT-avdrag på arbetet",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-booking__card > div.ampy-booking__rows > div.ampy-booking__row > span.ampy-booking__amt",
+    "txt": "−5 850 kr",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": [
+   {
+    "path": "section.ampy-vda > div.ampy-vda__card.ampy-on-dark > div.ampy-vda__content > p.ampy-vda__kicker",
+    "txt": "Visste du att",
+    "fontSize": "22px",
+    "ratio": 6.41
+   }
+  ]
+ },
+ "site/komponenter/text.html": {
+  "checked": 310,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [],
+  "teal": []
+ },
+ "site/komponenter/ytor.html": {
+  "checked": 257,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ds-demo__col.ds-demo__col--wide > div.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-eyebrow",
+    "txt": "Årlig besparing",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-number",
+    "txt": "27 752",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__value > span.ampy-readout__unit",
+    "txt": "kr/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo__col.ds-demo__col--wide > div.ampy-card.ampy-card--dark.ampy-card--glow > div.ampy-readout > span.ampy-readout__sub",
+    "txt": "Så mycket lägre kan elkostnaden bli, var",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__label",
+    "txt": "Energi du kapar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__value",
+    "txt": "16 819",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kWh/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__sub",
+    "txt": "59 % lägre förbrukning",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__label",
+    "txt": "CO₂ du sparar",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__value",
+    "txt": "7,8",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "ton/år",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__sub",
+    "txt": "jämfört med nordisk elmix",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__label",
+    "txt": "Uppskattad kostnad",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__value",
+    "txt": "120 000",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__value > span.ampy-stat__unit",
+    "txt": "kr",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-card.ampy-card--dark.ampy-card--glow > ul.ampy-stat-trio > li.ampy-stat > span.ampy-stat__sub",
+    "txt": "inklusive installation",
+    "color": "rgba(255, 255, 255, 0.55)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo.ds-demo--full > div.ampy.ampy-aurora > div.ampy-card.ampy-card--glass.ampy-card--center > span.ampy-eyebrow.ampy-eyebrow--action",
+    "txt": "Tack",
+    "color": "rgb(0, 122, 105)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo.ds-demo--full > div.ampy.ampy-aurora > div.ampy-card.ampy-card--glass.ampy-card--center > h2",
+    "txt": "Din förfrågan är mottagen",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo.ds-demo--full > div.ampy.ampy-aurora > div.ampy-card.ampy-card--glass.ampy-card--center > p",
+    "txt": "En av våra rådgivare kontaktar dig inom ",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ampy-frame.ampy-frame--short > div.ampy-frame__content > div > a.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ampy-frame__content > div > a.ampy-btn.ampy-btn--ring > span.ampy-link--tel",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo.ds-demo--full.ampy > section.ampy-band.ampy-band--fade.ampy-band--tight > div.ampy-band__inner > span.ampy-eyebrow",
+    "txt": "Band, toning",
+    "color": "rgb(86, 94, 130)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo.ds-demo--full.ampy > section.ampy-band.ampy-band--fade.ampy-band--tight > div.ampy-band__inner > h2",
+    "txt": "Sky-mist till vitt",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demo.ds-demo--full.ampy > section.ampy-band.ampy-band--fade.ampy-band--tight > div.ampy-band__inner > p",
+    "txt": "Elcentral-kollens blockläge.",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-demo.ds-demo--full > div.ampy.ampy-aurora > p.ampy-eyebrow.ampy-eyebrow--action",
+    "txt": "Aurora, 4 radialer på sky-mist",
+    "color": "rgb(0, 122, 105)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/beslut.html": {
+  "checked": 470,
+  "fails": [],
+  "unknown": [],
+  "teal": []
+ },
+ "site/blockbibliotek.html": {
+  "checked": 376,
+  "fails": [],
+  "unknown": [],
+  "teal": []
+ }
+}

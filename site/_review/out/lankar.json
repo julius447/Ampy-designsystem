@@ -1,0 +1,3307 @@
+{
+ "pages": {
+  "site/beslut.html": {
+   "refs": 61,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Beslut som väntar: Ampy designsystem",
+   "h1": [
+    "Beslut som väntar på dig"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Beslut som väntar på dig"
+    },
+    {
+     "level": 3,
+     "text": "Svara med numren"
+    },
+    {
+     "level": 2,
+     "text": "Alla tjugo på en sida"
+    },
+    {
+     "level": 2,
+     "text": "Identitet"
+    },
+    {
+     "level": 3,
+     "text": "Accentfärg: teal (produktion) eller cobalt (brandb"
+    },
+    {
+     "level": 3,
+     "text": "Rubrikvikt: 700 display + 500 H2 (som i dag) eller"
+    },
+    {
+     "level": 3,
+     "text": "#5eb1bf som token (brandbokens sekundärteal)?"
+    },
+    {
+     "level": 2,
+     "text": "Typografi"
+    },
+    {
+     "level": 3,
+     "text": "Brödtext: vilken färg och vikt?"
+    },
+    {
+     "level": 3,
+     "text": "H2-storlek: 36 (--aptext-2xl) eller 32 (--aptext-x"
+    },
+    {
+     "level": 3,
+     "text": "Lead: Hero-1:s clamp(17,1.55vw,22) eller diagnosti"
+    },
+    {
+     "level": 3,
+     "text": "Eyebrow-storlek: 12 px eller 15 px-golvet?"
+    },
+    {
+     "level": 3,
+     "text": "Body-elementets storlek: 16 (live --aptext-sm) ell"
+    },
+    {
+     "level": 2,
+     "text": "Knappar"
+    },
+    {
+     "level": 3,
+     "text": "Knappradie: 16 (CTA-biblioteket) eller live Bricks"
+    },
+    {
+     "level": 3,
+     "text": "Teal-kontrast: teal-core som knappyta/text (2,96:1"
+    },
+    {
+     "level": 3,
+     "text": "Två primära knappar (gradient vs solid) + nödknapp"
+    },
+    {
+     "level": 2,
+     "text": "Teknik"
+    },
+    {
+     "level": 3,
+     "text": "Plus Jakarta Sans och JetBrains Mono: kapa?"
+    },
+    {
+     "level": 3,
+     "text": "Rotstorlek: 62,5 % (10 px) eller 16 px?"
+    },
+    {
+     "level": 2,
+     "text": "Ytor"
+    },
+    {
+     "level": 3,
+     "text": "Mörkt resultatkort: med radialglöd eller platt?"
+    },
+    {
+     "level": 3,
+     "text": "\"Husets\" gråa kortskugga eller navy-alfa?"
+    },
+    {
+     "level": 3,
+     "text": "Den ljusa auroran"
+    },
+    {
+     "level": 3,
+     "text": "Glasets värden"
+    },
+    {
+     "level": 2,
+     "text": "Tillstånd"
+    },
+    {
+     "level": 3,
+     "text": "Google-stjärnornas färg"
+    },
+    {
+     "level": 3,
+     "text": "Felfärg"
+    },
+    {
+     "level": 3,
+     "text": "Fokusfärg: navy eller teal?"
+    },
+    {
+     "level": 2,
+     "text": "Redan avgjort av ägardirektiv"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Beslut som väntar"
+   ]
+  },
+  "site/blockbibliotek.html": {
+   "refs": 197,
+   "broken": 5,
+   "external": 27,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Blockbiblioteket: Ampy designsystem",
+   "h1": [
+    "Blockbiblioteket"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Blockbiblioteket"
+    },
+    {
+     "level": 2,
+     "text": "Skelett"
+    },
+    {
+     "level": 3,
+     "text": "Live ampy.se (CSS + två block)"
+    },
+    {
+     "level": 3,
+     "text": "Header v5 (Website-blocks)"
+    },
+    {
+     "level": 3,
+     "text": "Hero-1 (startsidan, riktning B)"
+    },
+    {
+     "level": 3,
+     "text": "Footer (baslinje + tre riktningar)"
+    },
+    {
+     "level": 3,
+     "text": "Knappbiblioteket (CTA-website)"
+    },
+    {
+     "level": 2,
+     "text": "Block"
+    },
+    {
+     "level": 3,
+     "text": "CTA-bandet (Main CTA, version B)"
+    },
+    {
+     "level": 3,
+     "text": "Avdragsblocken (ROT / GT / hemförsäkring)"
+    },
+    {
+     "level": 3,
+     "text": "Omdömesslidern (Testimonials V1)"
+    },
+    {
+     "level": 3,
+     "text": "Certifikat-bandet (v2)"
+    },
+    {
+     "level": 3,
+     "text": "Eljour-blocket (symptom + samtal)"
+    },
+    {
+     "level": 3,
+     "text": "Sticky call-bar + hörnkort"
+    },
+    {
+     "level": 3,
+     "text": "Före/efter (riktning A 'Reglaget')"
+    },
+    {
+     "level": 3,
+     "text": "Vår process (3 riktningar + v2)"
+    },
+    {
+     "level": 3,
+     "text": "Fotobedömningen v2 'Avslutskortet'"
+    },
+    {
+     "level": 3,
+     "text": "Visste du att"
+    },
+    {
+     "level": 3,
+     "text": "Mini-menu (produktväljaren)"
+    },
+    {
+     "level": 3,
+     "text": "Hero-2 S/G/Z/E (v18)"
+    },
+    {
+     "level": 3,
+     "text": "Hero-2:s offertformulär (V1/V2)"
+    },
+    {
+     "level": 2,
+     "text": "Verktyg"
+    },
+    {
+     "level": 3,
+     "text": "LED-kalkylatorn"
+    },
+    {
+     "level": 3,
+     "text": "Laddboxkalkylatorn (EV)"
+    },
+    {
+     "level": 3,
+     "text": "Energikalkylatorn vB v36"
+    },
+    {
+     "level": 3,
+     "text": "Elcentral-kollen"
+    },
+    {
+     "level": 3,
+     "text": "Behörighetskollen (Elkollen)"
+    },
+    {
+     "level": 3,
+     "text": "Batterikalkylatorn"
+    },
+    {
+     "level": 2,
+     "text": "Sidor"
+    },
+    {
+     "level": 3,
+     "text": "/offert-formuläret (redesign)"
+    },
+    {
+     "level": 3,
+     "text": "Tack-sidan v1 FINAL"
+    },
+    {
+     "level": 3,
+     "text": "Tack-sidans implementationspaket"
+    },
+    {
+     "level": 3,
+     "text": "Offert accepterad (spegel)"
+    },
+    {
+     "level": 3,
+     "text": "Bokningsbekräftelsen (riktning B 'Dagen')"
+    },
+    {
+     "level": 3,
+     "text": "Artikelmallen (21 komponenter)"
+    },
+    {
+     "level": 2,
+     "text": "Varumärke och referens"
+    },
+    {
+     "level": 3,
+     "text": "Ampy Brandbook (PDF) + logotyper"
+    },
+    {
+     "level": 3,
+     "text": "Picasso (referensbiblioteket)"
+    },
+    {
+     "level": 3,
+     "text": "Tidigare dokumentation (designsystem-skillen)"
+    },
+    {
+     "level": 2,
+     "text": "Motexempel"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Blockbiblioteket"
+   ]
+  },
+  "site/grunder/farg.html": {
+   "refs": 50,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Färg: Ampy designsystem",
+   "h1": [
+    "Färg"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Färg"
+    },
+    {
+     "level": 2,
+     "text": "Primitiva färger"
+    },
+    {
+     "level": 3,
+     "text": "Kärnan"
+    },
+    {
+     "level": 3,
+     "text": "Tealer och gröna toner"
+    },
+    {
+     "level": 3,
+     "text": "Navy och bläck"
+    },
+    {
+     "level": 3,
+     "text": "Tillstånd"
+    },
+    {
+     "level": 3,
+     "text": "Grå och vita"
+    },
+    {
+     "level": 3,
+     "text": "Brandbokens färger som inte används"
+    },
+    {
+     "level": 2,
+     "text": "Semantiska lagret"
+    },
+    {
+     "level": 2,
+     "text": "Alfa-steg"
+    },
+    {
+     "level": 2,
+     "text": "Regler"
+    },
+    {
+     "level": 3,
+     "text": "Teal är aldrig text"
+    },
+    {
+     "level": 3,
+     "text": "Tealernas kontrast"
+    },
+    {
+     "level": 3,
+     "text": "En accent"
+    },
+    {
+     "level": 3,
+     "text": "Två ytor"
+    },
+    {
+     "level": 3,
+     "text": "De två gradienterna"
+    },
+    {
+     "level": 2,
+     "text": "Det här byts ut"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Färg"
+   ]
+  },
+  "site/grunder/form-djup.html": {
+   "refs": 45,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Form och djup: Ampy designsystem",
+   "h1": [
+    "Form och djup"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Form och djup"
+    },
+    {
+     "level": 2,
+     "text": "Radier"
+    },
+    {
+     "level": 3,
+     "text": "Radievärden i källorna"
+    },
+    {
+     "level": 2,
+     "text": "Linjer"
+    },
+    {
+     "level": 2,
+     "text": "Skuggor"
+    },
+    {
+     "level": 3,
+     "text": "Lager 1: --apshadow-xs till xl, lagade"
+    },
+    {
+     "level": 2,
+     "text": "Glas"
+    },
+    {
+     "level": 3,
+     "text": "Tack, vi har fått din förfrågan"
+    },
+    {
+     "level": 3,
+     "text": "Drift: bokningen, .85 utan blur"
+    },
+    {
+     "level": 3,
+     "text": "Efter"
+    },
+    {
+     "level": 3,
+     "text": "Drift: hero-2-forms mörka glas"
+    },
+    {
+     "level": 2,
+     "text": "Navy-ramen"
+    },
+    {
+     "level": 2,
+     "text": "Elinstallationer i hemmet, gjort ordentligt."
+    },
+    {
+     "level": 2,
+     "text": "Scrims på foto"
+    },
+    {
+     "level": 2,
+     "text": "Det här byts ut"
+    },
+    {
+     "level": 3,
+     "text": "Radier per källa"
+    },
+    {
+     "level": 3,
+     "text": "Skuggor per källa"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Form och djup"
+   ]
+  },
+  "site/grunder/ornament.html": {
+   "refs": 102,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Ornament och ikoner: Ampy designsystem",
+   "h1": [
+    "Ornament och ikoner"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Ornament och ikoner"
+    },
+    {
+     "level": 2,
+     "text": "Logosystemet"
+    },
+    {
+     "level": 3,
+     "text": "Friyta och minsta storlek"
+    },
+    {
+     "level": 3,
+     "text": "Felaktig användning (brandbok s.5)"
+    },
+    {
+     "level": 2,
+     "text": "Blixten: det enda ornamentet"
+    },
+    {
+     "level": 2,
+     "text": "Vågor, blobbar, auroror och pulser"
+    },
+    {
+     "level": 3,
+     "text": "Pulser"
+    },
+    {
+     "level": 2,
+     "text": "De två gradienterna och scrims"
+    },
+    {
+     "level": 2,
+     "text": "Ikonfamiljen"
+    },
+    {
+     "level": 3,
+     "text": "Storlekar"
+    },
+    {
+     "level": 3,
+     "text": "Det här får inte finnas"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Ornament och ikoner"
+   ]
+  },
+  "site/grunder/rorelse.html": {
+   "refs": 39,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Rörelse: Ampy designsystem",
+   "h1": [
+    "Rörelse"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Rörelse"
+    },
+    {
+     "level": 2,
+     "text": "Längderna"
+    },
+    {
+     "level": 2,
+     "text": "Kurvorna"
+    },
+    {
+     "level": 2,
+     "text": "Så rör sig delarna"
+    },
+    {
+     "level": 2,
+     "text": "Siffror: bara vid ändring, aldrig vid laddning"
+    },
+    {
+     "level": 2,
+     "text": "Reveal med stagger (mönster, ingen token)"
+    },
+    {
+     "level": 2,
+     "text": "Reduced-motion"
+    },
+    {
+     "level": 2,
+     "text": "Det som rör sig i auktoritet 1-källorna"
+    },
+    {
+     "level": 2,
+     "text": "Det här byts ut"
+    },
+    {
+     "level": 3,
+     "text": "Durations i källorna"
+    },
+    {
+     "level": 3,
+     "text": "Easings i källorna"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Rörelse"
+   ]
+  },
+  "site/grunder/spacing.html": {
+   "refs": 37,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Spacing och layout: Ampy designsystem",
+   "h1": [
+    "Spacing och layout"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Spacing och layout"
+    },
+    {
+     "level": 2,
+     "text": "Skalan"
+    },
+    {
+     "level": 2,
+     "text": "Rollerna"
+    },
+    {
+     "level": 3,
+     "text": "Rollerna i ett kort"
+    },
+    {
+     "level": 3,
+     "text": "30 procent på arbetet, inte på materialet"
+    },
+    {
+     "level": 2,
+     "text": "Sektionsrytmen"
+    },
+    {
+     "level": 2,
+     "text": "Sektion på sidbakgrunden"
+    },
+    {
+     "level": 2,
+     "text": "Vit sektion"
+    },
+    {
+     "level": 2,
+     "text": "Mörk sektion"
+    },
+    {
+     "level": 2,
+     "text": "Container och fullbredd"
+    },
+    {
+     "level": 2,
+     "text": "Brytpunkter"
+    },
+    {
+     "level": 2,
+     "text": "Kolumntokens"
+    },
+    {
+     "level": 2,
+     "text": "Det här byts ut"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Spacing och layout"
+   ]
+  },
+  "site/grunder/typografi.html": {
+   "refs": 42,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Typografi: Ampy designsystem",
+   "h1": [
+    "Typografi",
+    "Elektriker som berättar sanningen om din elcentral"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Typografi"
+    },
+    {
+     "level": 2,
+     "text": "Outfit"
+    },
+    {
+     "level": 2,
+     "text": "Vikternas roller"
+    },
+    {
+     "level": 2,
+     "text": "Rollskalan"
+    },
+    {
+     "level": 1,
+     "text": "Elektriker som berättar sanningen om din elcentral"
+    },
+    {
+     "level": 2,
+     "text": "Sänk kostnaden för byte av din elcentral med 30 % "
+    },
+    {
+     "level": 3,
+     "text": "Projektledning med expert"
+    },
+    {
+     "level": 3,
+     "text": "Uppmätt på den här sidan"
+    },
+    {
+     "level": 2,
+     "text": "Måttet"
+    },
+    {
+     "level": 2,
+     "text": "Konflikten om H2"
+    },
+    {
+     "level": 3,
+     "text": "Frekvens per roll"
+    },
+    {
+     "level": 2,
+     "text": "Regler"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Typografi"
+   ]
+  },
+  "site/index.html": {
+   "refs": 55,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Översikt: Ampy designsystem",
+   "h1": [
+    "Ampys designsystem, mätt"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Ampys designsystem, mätt"
+    },
+    {
+     "level": 2,
+     "text": "Systemet i tio rader"
+    },
+    {
+     "level": 2,
+     "text": "Sajten"
+    },
+    {
+     "level": 2,
+     "text": "Så läser du sidorna"
+    },
+    {
+     "level": 2,
+     "text": "Så här är det byggt"
+    },
+    {
+     "level": 2,
+     "text": "De 31 källorna"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Översikt"
+   ]
+  },
+  "site/kod.html": {
+   "refs": 37,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Använda systemet: Ampy designsystem",
+   "h1": [
+    "Använda systemet"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Använda systemet"
+    },
+    {
+     "level": 2,
+     "text": "Ladda in"
+    },
+    {
+     "level": 2,
+     "text": "Skopet .ampy"
+    },
+    {
+     "level": 2,
+     "text": "30 procent på arbetet"
+    },
+    {
+     "level": 2,
+     "text": "Klasskonventionen"
+    },
+    {
+     "level": 2,
+     "text": "Tokens i två lager"
+    },
+    {
+     "level": 2,
+     "text": "Rotstorlek, Bricks och FluentSnippets"
+    },
+    {
+     "level": 2,
+     "text": "Klon-regeln: så kommer en komponent in"
+    },
+    {
+     "level": 2,
+     "text": "Verktygen"
+    },
+    {
+     "level": 2,
+     "text": "Mappkartan"
+    },
+    {
+     "level": 2,
+     "text": "Proveniensregeln"
+    },
+    {
+     "level": 2,
+     "text": "Så hänger filerna ihop"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Använda systemet"
+   ]
+  },
+  "site/komponenter/block.html": {
+   "refs": 308,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Block: Ampy designsystem",
+   "h1": [
+    "Block",
+    "Elektrikern som görditt hem redo för framtiden",
+    "Byta elcentral med fast pris och ROT-avdrag",
+    "Imorgon,torsdag 17 september"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Block"
+    },
+    {
+     "level": 2,
+     "text": "Processteg med ringar och connector"
+    },
+    {
+     "level": 3,
+     "text": "Få offert inklusive ROT-avdrag"
+    },
+    {
+     "level": 3,
+     "text": "En auktoriserad elektriker gör jobbet"
+    },
+    {
+     "level": 3,
+     "text": "Du slipper pappersarbetet"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Kvittopanel \"Så räknas ditt pris\""
+    },
+    {
+     "level": 3,
+     "text": "Så räknas ROT"
+    },
+    {
+     "level": 3,
+     "text": "Så räknas Grön Teknik"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Avdragsblocket: H2, stegen och kvittot"
+    },
+    {
+     "level": 2,
+     "text": "Byta elcentral med 30 % ROT-avdrag"
+    },
+    {
+     "level": 3,
+     "text": "Få offert inklusive ROT-avdrag"
+    },
+    {
+     "level": 3,
+     "text": "En auktoriserad elektriker gör jobbet"
+    },
+    {
+     "level": 3,
+     "text": "Du slipper pappersarbetet"
+    },
+    {
+     "level": 3,
+     "text": "Så räknas ROT"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Testimonial-kort och slider-skal"
+    },
+    {
+     "level": 2,
+     "text": "Vad säger dina grannar om Ampy?"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Certifikat-band"
+    },
+    {
+     "level": 2,
+     "text": "Behörigheten bakom varje jobb"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Eljour: symptomlista, samtalskort och nödknapp"
+    },
+    {
+     "level": 2,
+     "text": "Är något fel med elen?Tryck på det du upplever."
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Sticky call-bar (mobil) och hörnkort (desktop)"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "CTA-band \"Prata med en elektriker\""
+    },
+    {
+     "level": 2,
+     "text": "Prata med en elektriker direkt på telefon"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Header och mega-meny"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Footer"
+    },
+    {
+     "level": 3,
+     "text": "Populära kategorier"
+    },
+    {
+     "level": 4,
+     "text": "Elinstallation"
+    },
+    {
+     "level": 4,
+     "text": "Laddboxar"
+    },
+    {
+     "level": 4,
+     "text": "Batterilagring"
+    },
+    {
+     "level": 4,
+     "text": "Områden"
+    },
+    {
+     "level": 4,
+     "text": "Lösningar"
+    },
+    {
+     "level": 4,
+     "text": "Mer om Ampy"
+    },
+    {
+     "level": 4,
+     "text": "Kundtjänst"
+    },
+    {
+     "level": 4,
+     "text": "Få en kostnadsfri konsultation"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Hero-1 (startsidan)"
+    },
+    {
+     "level": 1,
+     "text": "Elektrikern som görditt hem redo för framtiden"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Hero-2 S/G/Z/E (tjänstesidor)"
+    },
+    {
+     "level": 1,
+     "text": "Byta elcentral med fast pris och ROT-avdrag"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi (primitiverna)"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Mini-menu (produktväljaren under heron)"
+    },
+    {
+     "level": 2,
+     "text": "Din elektriker för hela hemmet"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Före/efter med reglage"
+    },
+    {
+     "level": 2,
+     "text": "Så ser det ut när vi har bytt en elcentral"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Vår process (baslinje, riktningsval väntar)"
+    },
+    {
+     "level": 2,
+     "text": "Vad som händer sen"
+    },
+    {
+     "level": 3,
+     "text": "Elektriker, inte säljare"
+    },
+    {
+     "level": 3,
+     "text": "Fast pris"
+    },
+    {
+     "level": 3,
+     "text": "Du får säga nej"
+    },
+    {
+     "level": 3,
+     "text": "Betala efteråt"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Fotobedömningens kort och kvitto"
+    },
+    {
+     "level": 2,
+     "text": "Osäker på elcentralen? Du får besked av en behörig"
+    },
+    {
+     "level": 3,
+     "text": "Tack. Din bild är inskickad."
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Visste du att (redaktionellt kort)"
+    },
+    {
+     "level": 2,
+     "text": "En jordfelsbrytare bryter strömmen på under 30 mil"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Artikelkomponenter"
+    },
+    {
+     "level": 2,
+     "text": "Behöver du byta elcentral?"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Kod"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    },
+    {
+     "level": 2,
+     "text": "Tack-sidans tidslinje och bokningens sammanfattnin"
+    },
+    {
+     "level": 1,
+     "text": "Imorgon,torsdag 17 september"
+    },
+    {
+     "level": 2,
+     "text": "Din beställning"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral"
+    },
+    {
+     "level": 3,
+     "text": "Provning och protokoll"
+    },
+    {
+     "level": 3,
+     "text": "Kod (tidslinjen)"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 3,
+     "text": "Avvikelser i klonen"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Block"
+   ]
+  },
+  "site/komponenter/diagnostik.html": {
+   "refs": 142,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Diagnostik-kitet: Ampy designsystem",
+   "h1": [
+    "Diagnostik-kitet"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Diagnostik-kitet"
+    },
+    {
+     "level": 2,
+     "text": "Rail och stage: startvyn"
+    },
+    {
+     "level": 2,
+     "text": "Är din elcentral säker?"
+    },
+    {
+     "level": 3,
+     "text": "Då sätter vi igång"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Frågekortet: en fråga i taget"
+    },
+    {
+     "level": 2,
+     "text": "Är din elcentral säker?"
+    },
+    {
+     "level": 3,
+     "text": "Hur gammalt är huset eller lägenheten?"
+    },
+    {
+     "level": 3,
+     "text": "Känner du igen något av det här hemma?"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Besked: dualstatus-matrisen (Säkerhet / Redo)"
+    },
+    {
+     "level": 4,
+     "text": "Våra fynd"
+    },
+    {
+     "level": 4,
+     "text": "Våra fynd"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Besked: trafikljus-boarden (Elkollen)"
+    },
+    {
+     "level": 3,
+     "text": "Det här får du göra själv"
+    },
+    {
+     "level": 3,
+     "text": "Det här kräver elektriker"
+    },
+    {
+     "level": 3,
+     "text": "Beror på hur det är kopplat"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Fynd-lista, dela, sticky-CTA och no-JS"
+    },
+    {
+     "level": 2,
+     "text": "Blockläge: kollen som station på en landningssida"
+    },
+    {
+     "level": 2,
+     "text": "Behöver din elcentral bytas?"
+    },
+    {
+     "level": 3,
+     "text": "Då sätter vi igång"
+    },
+    {
+     "level": 2,
+     "text": "Paritet mot källan"
+    },
+    {
+     "level": 2,
+     "text": "Avvikelser och drift"
+    },
+    {
+     "level": 3,
+     "text": "Drift i de andra instanserna"
+    },
+    {
+     "level": 3,
+     "text": "Brister i tokens.css som kitet stötte på"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Diagnostik-kitet"
+   ]
+  },
+  "site/komponenter/falt.html": {
+   "refs": 121,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Fält och reglage: Ampy designsystem",
+   "h1": [
+    "Fält och reglage"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Fält och reglage"
+    },
+    {
+     "level": 2,
+     "text": "Fältgrupp och input"
+    },
+    {
+     "level": 2,
+     "text": "Sökfält och adresslista"
+    },
+    {
+     "level": 2,
+     "text": "Select"
+    },
+    {
+     "level": 2,
+     "text": "Textarea"
+    },
+    {
+     "level": 2,
+     "text": "Checkbox och samtycke"
+    },
+    {
+     "level": 2,
+     "text": "Radio-chips och val"
+    },
+    {
+     "level": 2,
+     "text": "Segment"
+    },
+    {
+     "level": 2,
+     "text": "Slider"
+    },
+    {
+     "level": 2,
+     "text": "Stepper"
+    },
+    {
+     "level": 2,
+     "text": "Hjälp, fel och meddelanden"
+    },
+    {
+     "level": 2,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Gör och gör inte"
+    },
+    {
+     "level": 2,
+     "text": "Kod"
+    },
+    {
+     "level": 2,
+     "text": "Avvikelser i blocken"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Fält och reglage"
+   ]
+  },
+  "site/komponenter/index.html": {
+   "refs": 148,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 26,
+   "imgNoAlt": [],
+   "title": "Alla komponenter: Ampy designsystem",
+   "h1": [
+    "Alla komponenter"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Alla komponenter"
+    },
+    {
+     "level": 2,
+     "text": "Handling"
+    },
+    {
+     "level": 2,
+     "text": "Textelement"
+    },
+    {
+     "level": 2,
+     "text": "Ytor och kort"
+    },
+    {
+     "level": 2,
+     "text": "Fält och reglage"
+    },
+    {
+     "level": 2,
+     "text": "Kalkylator-kitet (S3)"
+    },
+    {
+     "level": 2,
+     "text": "Diagnostik-kitet (S3)"
+    },
+    {
+     "level": 2,
+     "text": "Block (S4)"
+    },
+    {
+     "level": 2,
+     "text": "Saknas i auktoritet 1 till 2"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Alla komponenter"
+   ]
+  },
+  "site/komponenter/knappar.html": {
+   "refs": 140,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Knappar och länkar: Ampy designsystem",
+   "h1": [
+    "Knappar och länkar"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Knappar och länkar"
+    },
+    {
+     "level": 2,
+     "text": "Primär: gradient-CTA"
+    },
+    {
+     "level": 2,
+     "text": "Tel-ring"
+    },
+    {
+     "level": 2,
+     "text": "Solid: knappen inne i verktyg, formulär och kort"
+    },
+    {
+     "level": 2,
+     "text": "Ghost: outline utan konkurrens"
+    },
+    {
+     "level": 2,
+     "text": "Storlekar: 58 och 48"
+    },
+    {
+     "level": 2,
+     "text": "Textlänkar"
+    },
+    {
+     "level": 2,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Gör och gör inte"
+    },
+    {
+     "level": 2,
+     "text": "Kod"
+    },
+    {
+     "level": 2,
+     "text": "Avvikelser i blocken"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Knappar och länkar"
+   ]
+  },
+  "site/komponenter/text.html": {
+   "refs": 110,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Textelement: Ampy designsystem",
+   "h1": [
+    "Textelement"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Textelement"
+    },
+    {
+     "level": 2,
+     "text": "Eyebrow"
+    },
+    {
+     "level": 2,
+     "text": "Tagg, badge och pill"
+    },
+    {
+     "level": 2,
+     "text": "Stat-trio"
+    },
+    {
+     "level": 2,
+     "text": "Hero-siffra med enhet"
+    },
+    {
+     "level": 2,
+     "text": "Källrad"
+    },
+    {
+     "level": 2,
+     "text": "Proof-rad"
+    },
+    {
+     "level": 2,
+     "text": "Citat"
+    },
+    {
+     "level": 2,
+     "text": "Listor"
+    },
+    {
+     "level": 3,
+     "text": "Du beskriver jobbet"
+    },
+    {
+     "level": 3,
+     "text": "Vi ringer och räknar"
+    },
+    {
+     "level": 3,
+     "text": "Jobbet görs och kvittot stämmer"
+    },
+    {
+     "level": 2,
+     "text": "Prisrad"
+    },
+    {
+     "level": 2,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Gör och gör inte"
+    },
+    {
+     "level": 2,
+     "text": "Kod"
+    },
+    {
+     "level": 2,
+     "text": "Avvikelser i blocken"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Textelement"
+   ]
+  },
+  "site/komponenter/verktyg.html": {
+   "refs": 62,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Kalkylator-kitet: Ampy designsystem",
+   "h1": [
+    "Kalkylator-kitet"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Kalkylator-kitet"
+    },
+    {
+     "level": 2,
+     "text": "Tvåpanel-skalet"
+    },
+    {
+     "level": 2,
+     "text": "Vad sparar du på att byta till LED?"
+    },
+    {
+     "level": 3,
+     "text": "Årlig besparing"
+    },
+    {
+     "level": 3,
+     "text": "Energi du kapar"
+    },
+    {
+     "level": 3,
+     "text": "Uppskattad kostnad"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Inputkortets sektioner"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Resultatkortet"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Inline-lead: formuläret under CTA:n"
+    },
+    {
+     "level": 3,
+     "text": "Årlig besparing"
+    },
+    {
+     "level": 3,
+     "text": "Energi du kapar"
+    },
+    {
+     "level": 3,
+     "text": "Uppskattad kostnad"
+    },
+    {
+     "level": 3,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Tips-chip och popover"
+    },
+    {
+     "level": 2,
+     "text": "Produktväljare med foto och badge"
+    },
+    {
+     "level": 2,
+     "text": "Dela-popover"
+    },
+    {
+     "level": 2,
+     "text": "Streams-bar och break-even-kurva (prototyp, ej kan"
+    },
+    {
+     "level": 2,
+     "text": "Paritet mot källan"
+    },
+    {
+     "level": 2,
+     "text": "Avvikelser och drift"
+    },
+    {
+     "level": 3,
+     "text": "Drift i de andra instanserna"
+    },
+    {
+     "level": 3,
+     "text": "Brister i tokens.css som kitet stötte på"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Kalkylator-kitet"
+   ]
+  },
+  "site/komponenter/ytor.html": {
+   "refs": 79,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Ytor och kort: Ampy designsystem",
+   "h1": [
+    "Ytor och kort",
+    "Elinstallationer i hemmet, gjort ordentligt."
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Ytor och kort"
+    },
+    {
+     "level": 2,
+     "text": "Ljust kort"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral i villa"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral i villa"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral i villa"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral i villa"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral i villa"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral i villa"
+    },
+    {
+     "level": 3,
+     "text": "Byte av elcentral i villa"
+    },
+    {
+     "level": 2,
+     "text": "Mörkt resultatkort"
+    },
+    {
+     "level": 2,
+     "text": "Glaskort"
+    },
+    {
+     "level": 2,
+     "text": "Din förfrågan är mottagen"
+    },
+    {
+     "level": 2,
+     "text": "Navy-ram (hjälteram)"
+    },
+    {
+     "level": 1,
+     "text": "Elinstallationer i hemmet, gjort ordentligt."
+    },
+    {
+     "level": 2,
+     "text": "Avdelare"
+    },
+    {
+     "level": 2,
+     "text": "Sektionsband"
+    },
+    {
+     "level": 2,
+     "text": "Sektion på sidans grund"
+    },
+    {
+     "level": 2,
+     "text": "Vit sektion"
+    },
+    {
+     "level": 2,
+     "text": "Sky-mist till vitt"
+    },
+    {
+     "level": 2,
+     "text": "Midnight-sektion"
+    },
+    {
+     "level": 2,
+     "text": "Den ljusa auroran"
+    },
+    {
+     "level": 2,
+     "text": "Anatomi"
+    },
+    {
+     "level": 2,
+     "text": "Gör och gör inte"
+    },
+    {
+     "level": 2,
+     "text": "Kod"
+    },
+    {
+     "level": 2,
+     "text": "Avvikelser i blocken"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Ytor och kort"
+   ]
+  },
+  "site/monster/layoutfamiljer.html": {
+   "refs": 49,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Layoutfamiljer: Ampy designsystem",
+   "h1": [
+    "Layoutfamiljer"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Layoutfamiljer"
+    },
+    {
+     "level": 2,
+     "text": "A. Kalkylatorns tvåpanel: vitt inputkort, mörkt re"
+    },
+    {
+     "level": 2,
+     "text": "B. Diagnostikens rail och scen"
+    },
+    {
+     "level": 2,
+     "text": "C. Blocket på tjänstesidan: H2 vänster, panel höge"
+    },
+    {
+     "level": 2,
+     "text": "D. Fullbreddsbandet"
+    },
+    {
+     "level": 2,
+     "text": "När används vilken"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Layoutfamiljer"
+   ]
+  },
+  "site/monster/mobil.html": {
+   "refs": 46,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Mobil 390: Ampy designsystem",
+   "h1": [
+    "Mobil 390"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Mobil 390"
+    },
+    {
+     "level": 2,
+     "text": "Reglerna"
+    },
+    {
+     "level": 2,
+     "text": "Sida vid sida: 1440 och 390"
+    },
+    {
+     "level": 3,
+     "text": "CTA-bandet: porträttet överst, knappen full bredd "
+    },
+    {
+     "level": 3,
+     "text": "Diagnostiken: railen runt scenen, sticky CTA i bot"
+    },
+    {
+     "level": 3,
+     "text": "Kalkylatorn: inputkortet först, glöden omjusterad"
+    },
+    {
+     "level": 3,
+     "text": "Eljour: kortet över listan, puls på knappen bara h"
+    },
+    {
+     "level": 3,
+     "text": "Hero-2: bilden bakom texten, bastant scrim"
+    },
+    {
+     "level": 3,
+     "text": "Header: bar 66 och drawer"
+    },
+    {
+     "level": 2,
+     "text": "Checklista före leverans (mobil)"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Mobil 390"
+   ]
+  },
+  "site/monster/register.html": {
+   "refs": 34,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Register och ton: Ampy designsystem",
+   "h1": [
+    "Register och ton"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Register och ton"
+    },
+    {
+     "level": 2,
+     "text": "De två lägena"
+    },
+    {
+     "level": 2,
+     "text": "Vilka block som är vilka"
+    },
+    {
+     "level": 2,
+     "text": "Samma faktum, två register"
+    },
+    {
+     "level": 2,
+     "text": "Register efter publik"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Register och ton"
+   ]
+  },
+  "site/monster/tjanstesida.html": {
+   "refs": 39,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Tjänstesidans rytm: Ampy designsystem",
+   "h1": [
+    "Tjänstesidans rytm"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Tjänstesidans rytm"
+    },
+    {
+     "level": 2,
+     "text": "Kanon-sekvensen (noll nya block)"
+    },
+    {
+     "level": 2,
+     "text": "Sektionernas luft, ur tokens"
+    },
+    {
+     "level": 2,
+     "text": "H2-regeln per sektion"
+    },
+    {
+     "level": 2,
+     "text": "Fullbreddsregeln"
+    },
+    {
+     "level": 2,
+     "text": "Fas 0 före allt (öppna grindar)"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Tjänstesidans rytm"
+   ]
+  },
+  "site/regler/ai-tells.html": {
+   "refs": 40,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "AI-tecken som inte får finnas: Ampy designsystem",
+   "h1": [
+    "AI-tecken som inte får finnas"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "AI-tecken som inte får finnas"
+    },
+    {
+     "level": 2,
+     "text": "Listan"
+    },
+    {
+     "level": 2,
+     "text": "Fel och rätt, renderade"
+    },
+    {
+     "level": 3,
+     "text": "1. Gradienttext mot text-teal"
+    },
+    {
+     "level": 3,
+     "text": "2. Det mörka slop-kortet mot det redaktionella kor"
+    },
+    {
+     "level": 3,
+     "text": "3. Tankstreck och mittpunkt mot avdelare och komma"
+    },
+    {
+     "level": 3,
+     "text": "4. Ojämn spacing mot rytmstegen"
+    },
+    {
+     "level": 3,
+     "text": "5. \"Helt gratis!\" mot den tysta trust-raden"
+    },
+    {
+     "level": 2,
+     "text": "Kontrollen före leverans"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "AI-tecken som inte får finnas"
+   ]
+  },
+  "site/regler/candour.html": {
+   "refs": 35,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Candour-grinden: Ampy designsystem",
+   "h1": [
+    "Candour-grinden"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Candour-grinden"
+    },
+    {
+     "level": 2,
+     "text": "Grinden i en mening"
+    },
+    {
+     "level": 2,
+     "text": "Taktiker som grinden dödar"
+    },
+    {
+     "level": 2,
+     "text": "Domslut per påstående (avdrag, verktyg, bevis)"
+    },
+    {
+     "level": 2,
+     "text": "De tre meningarna som gör mest för tilltron"
+    },
+    {
+     "level": 2,
+     "text": "Grinden i gränssnittet"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Candour-grinden"
+   ]
+  },
+  "site/regler/rost-i-ui.html": {
+   "refs": 36,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Röst i gränssnittet: Ampy designsystem",
+   "h1": [
+    "Röst i gränssnittet"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Röst i gränssnittet"
+    },
+    {
+     "level": 2,
+     "text": "Reglerna, med mekanismen"
+    },
+    {
+     "level": 2,
+     "text": "Siffror och enheter"
+    },
+    {
+     "level": 2,
+     "text": "Mikrocopy: tomt, fel, laddar, klart"
+    },
+    {
+     "level": 2,
+     "text": "Knappar och länkar"
+    },
+    {
+     "level": 2,
+     "text": "Självkontroll före leverans"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Röst i gränssnittet"
+   ]
+  },
+  "site/regler/tillganglighet.html": {
+   "refs": 35,
+   "broken": 0,
+   "external": 0,
+   "anchorsMissing": 0,
+   "imgNoAlt": [],
+   "title": "Tillgänglighet: Ampy designsystem",
+   "h1": [
+    "Tillgänglighet"
+   ],
+   "placeholders": [],
+   "headings": [
+    {
+     "level": 1,
+     "text": "Tillgänglighet"
+    },
+    {
+     "level": 2,
+     "text": "Kontrast"
+    },
+    {
+     "level": 3,
+     "text": "Text på ljust"
+    },
+    {
+     "level": 3,
+     "text": "Text på midnight"
+    },
+    {
+     "level": 3,
+     "text": "Kanter och kontroller (WCAG 1.4.11, 3:1)"
+    },
+    {
+     "level": 2,
+     "text": "Träffytor: 44 px är golvet"
+    },
+    {
+     "level": 2,
+     "text": "Fokus"
+    },
+    {
+     "level": 2,
+     "text": "Rörelse"
+    },
+    {
+     "level": 2,
+     "text": "Semantik och skärmläsare"
+    },
+    {
+     "level": 2,
+     "text": "Tabulära siffror"
+    },
+    {
+     "level": 2,
+     "text": "Checklista"
+    }
+   ],
+   "errors": [],
+   "failed": [],
+   "navGroups": [
+    "Start",
+    "Grunder",
+    "Komponenter",
+    "Mönster",
+    "Regler",
+    "Bibliotek"
+   ],
+   "navCount": 26,
+   "navCurrent": [
+    "Tillgänglighet"
+   ]
+  }
+ },
+ "broken": [
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "../inventering/thank-you-implementation.md",
+   "tag": "a",
+   "text": "Inventering",
+   "inNav": false,
+   "why": "saknas: inventering/thank-you-implementation.md"
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "../inventering/thank-you-implementation.json",
+   "tag": "a",
+   "text": "JSON",
+   "inNav": false,
+   "why": "saknas: inventering/thank-you-implementation.json"
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "../inventering/offer-accepted.md",
+   "tag": "a",
+   "text": "Inventering",
+   "inNav": false,
+   "why": "saknas: inventering/offer-accepted.md"
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "../inventering/offer-accepted.json",
+   "tag": "a",
+   "text": "JSON",
+   "inNav": false,
+   "why": "saknas: inventering/offer-accepted.json"
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "../inventering/tidigare-dokumentation.json",
+   "tag": "a",
+   "text": "JSON",
+   "inNav": false,
+   "why": "saknas: inventering/tidigare-dokumentation.json"
+  }
+ ],
+ "external": [
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://ampy.se",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Website-blocks/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Hero-1/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Footer-CRO-/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/CTA-website/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Main_CTA/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/ROT-GT-CRO-/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Testimonials-block/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Certificates/redesign/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Eljour-block/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Eljour-sticky-bar/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/f-re-efter-CRO-/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/V-r-process-CRO-/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Fotobed-mning-CRO-/preview/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/mini-menu/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Hero_2-alternatives/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Hero-2-form/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Led-kalkylator/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/EV-Caluclator/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Energycalc/vB/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Elcentral-lead-magnet/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Elkollen/preview/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Ampy-main-form/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Thank-you-Offer-accepted/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Thank-you-implementation/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Offer-accepted-preview/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  },
+  {
+   "page": "site/blockbibliotek.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "https://julius447.github.io/Booking-confirmation/riktning-b-dagen/",
+   "tag": "a",
+   "text": "Live",
+   "inNav": false
+  }
+ ],
+ "anchorsMissing": [
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "verktyg.html#tvapanel",
+   "tag": "a",
+   "text": "Kanon med driftTvåpanel-skalled-kalkylator (auk 1): 5fr/7fr,",
+   "inNav": false,
+   "why": "#tvapanel finns inte i site/komponenter/verktyg.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "verktyg.html#staplar",
+   "tag": "a",
+   "text": "Kanon med driftStaplar amber/teal (före/efter)led-kalkylator",
+   "inNav": false,
+   "why": "#staplar finns inte i site/komponenter/verktyg.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "verktyg.html#streams-bar",
+   "tag": "a",
+   "text": "Bara i en källaStreams-bar (intäktskällor)battery-calculator",
+   "inNav": false,
+   "why": "#streams-bar finns inte i site/komponenter/verktyg.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "verktyg.html#break-even",
+   "tag": "a",
+   "text": "Bara i en källaBreak-even-kurvabattery-calculator (auk 3). B",
+   "inNav": false,
+   "why": "#break-even finns inte i site/komponenter/verktyg.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "verktyg.html#sa-har-vi-raknat",
+   "tag": "a",
+   "text": "Kanon med driftSå har vi räknatled-kalkylator (auk 1) __meth",
+   "inNav": false,
+   "why": "#sa-har-vi-raknat finns inte i site/komponenter/verktyg.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "verktyg.html#lead-inline",
+   "tag": "a",
+   "text": "Kanon med driftLead-formulär inlineled-kalkylator (auk 1): e",
+   "inNav": false,
+   "why": "#lead-inline finns inte i site/komponenter/verktyg.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "verktyg.html#popover",
+   "tag": "a",
+   "text": "Kanon med driftPopover (dela)energycalc (auk 1) .share-pop.",
+   "inNav": false,
+   "why": "#popover finns inte i site/komponenter/verktyg.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "diagnostik.html#fragekort",
+   "tag": "a",
+   "text": "KanonFrågekort (stage)elcentral-kollen (auk 1): radie 14 (dr",
+   "inNav": false,
+   "why": "#fragekort finns inte i site/komponenter/diagnostik.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "diagnostik.html#dualstatus",
+   "tag": "a",
+   "text": "KanonBesked: dualstatus (2 gånger 2)elcentral-kollen (auk 1)",
+   "inNav": false,
+   "why": "#dualstatus finns inte i site/komponenter/diagnostik.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "diagnostik.html#trafikljus",
+   "tag": "a",
+   "text": "KanonBesked: trafikljus-boardelkollen (auk 1): 6 px sidostap",
+   "inNav": false,
+   "why": "#trafikljus finns inte i site/komponenter/diagnostik.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "diagnostik.html#dela",
+   "tag": "a",
+   "text": "Kanon med driftDelaelcentral-kollen (auk 1): 44 px ikonknapp",
+   "inNav": false,
+   "why": "#dela finns inte i site/komponenter/diagnostik.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "diagnostik.html#sticky-cta",
+   "tag": "a",
+   "text": "Kanon med driftSticky-CTA (mobil)elcentral-kollen (auk 1): f",
+   "inNav": false,
+   "why": "#sticky-cta finns inte i site/komponenter/diagnostik.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#hero-1",
+   "tag": "a",
+   "text": "KanonHero-1 (startsidan)hero-1 (auk 1), ägargodkänd. Inramad",
+   "inNav": false,
+   "why": "#hero-1 finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#hero-2",
+   "tag": "a",
+   "text": "KanonHero-2 S/G/Z/E (tjänstesidor)hero-2-alternatives (auk 2",
+   "inNav": false,
+   "why": "#hero-2 finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#mini-menu",
+   "tag": "a",
+   "text": "KanonMini-menu (produktväljare)mini-menu (auk 2): tre fotoko",
+   "inNav": false,
+   "why": "#mini-menu finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#rot-gt",
+   "tag": "a",
+   "text": "Kanon med driftROT/GT-kvittopanel och stegringarrot-gt-cro (",
+   "inNav": false,
+   "why": "#rot-gt finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#testimonials",
+   "tag": "a",
+   "text": "KanonTestimonial-kort och slidertestimonials-block (auk 1) V",
+   "inNav": false,
+   "why": "#testimonials finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#certifikat",
+   "tag": "a",
+   "text": "KanonCertifikat-badgecertificates (auk 2) v2: 236 gånger 113",
+   "inNav": false,
+   "why": "#certifikat finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#fore-efter",
+   "tag": "a",
+   "text": "KanonFöre/efterfore-efter-cro (auk 2): reglaget, clip-path, ",
+   "inNav": false,
+   "why": "#fore-efter finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#var-process",
+   "tag": "a",
+   "text": "Saknas i auk 1 till 2Vår processvar-process-cro (auk 3), vän",
+   "inNav": false,
+   "why": "#var-process finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#fotobedomningen",
+   "tag": "a",
+   "text": "KanonFotobedömning (Avslutskortet)fotobedomningen (auk 2) v2",
+   "inNav": false,
+   "why": "#fotobedomningen finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#visste-du-att",
+   "tag": "a",
+   "text": "KanonVisste du attvisste-du-att (auk 2): midnight-kort med k",
+   "inNav": false,
+   "why": "#visste-du-att finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#cta-band",
+   "tag": "a",
+   "text": "KanonCTA-band (Main CTA)main-cta (auk 2) B1: vitt kort, h2 4",
+   "inNav": false,
+   "why": "#cta-band finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#sticky-call-bar",
+   "tag": "a",
+   "text": "KanonSticky call-bareljour-sticky-bar (auk 2): 83 h remsa me",
+   "inNav": false,
+   "why": "#sticky-call-bar finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#bokning",
+   "tag": "a",
+   "text": "KanonBokningens sammanfattningskortbooking-confirmation (auk",
+   "inNav": false,
+   "why": "#bokning finns inte i site/komponenter/block.html"
+  },
+  {
+   "page": "site/komponenter/index.html",
+   "kind": "a",
+   "attr": "href",
+   "value": "block.html#bock",
+   "tag": "a",
+   "text": "KanonBekräftelse-bock (animerad)thank-you (auk 2): 104/88 px",
+   "inNav": false,
+   "why": "#bock finns inte i site/komponenter/block.html"
+  }
+ ],
+ "placeholders": [],
+ "navDiff": [],
+ "titles": {
+  "site/beslut.html": "Beslut som väntar: Ampy designsystem",
+  "site/blockbibliotek.html": "Blockbiblioteket: Ampy designsystem",
+  "site/grunder/farg.html": "Färg: Ampy designsystem",
+  "site/grunder/form-djup.html": "Form och djup: Ampy designsystem",
+  "site/grunder/ornament.html": "Ornament och ikoner: Ampy designsystem",
+  "site/grunder/rorelse.html": "Rörelse: Ampy designsystem",
+  "site/grunder/spacing.html": "Spacing och layout: Ampy designsystem",
+  "site/grunder/typografi.html": "Typografi: Ampy designsystem",
+  "site/index.html": "Översikt: Ampy designsystem",
+  "site/kod.html": "Använda systemet: Ampy designsystem",
+  "site/komponenter/block.html": "Block: Ampy designsystem",
+  "site/komponenter/diagnostik.html": "Diagnostik-kitet: Ampy designsystem",
+  "site/komponenter/falt.html": "Fält och reglage: Ampy designsystem",
+  "site/komponenter/index.html": "Alla komponenter: Ampy designsystem",
+  "site/komponenter/knappar.html": "Knappar och länkar: Ampy designsystem",
+  "site/komponenter/text.html": "Textelement: Ampy designsystem",
+  "site/komponenter/verktyg.html": "Kalkylator-kitet: Ampy designsystem",
+  "site/komponenter/ytor.html": "Ytor och kort: Ampy designsystem",
+  "site/monster/layoutfamiljer.html": "Layoutfamiljer: Ampy designsystem",
+  "site/monster/mobil.html": "Mobil 390: Ampy designsystem",
+  "site/monster/register.html": "Register och ton: Ampy designsystem",
+  "site/monster/tjanstesida.html": "Tjänstesidans rytm: Ampy designsystem",
+  "site/regler/ai-tells.html": "AI-tecken som inte får finnas: Ampy designsystem",
+  "site/regler/candour.html": "Candour-grinden: Ampy designsystem",
+  "site/regler/rost-i-ui.html": "Röst i gränssnittet: Ampy designsystem",
+  "site/regler/tillganglighet.html": "Tillgänglighet: Ampy designsystem"
+ },
+ "ariaCurrent": {
+  "site/beslut.html": [
+   "Beslut som väntar -> /site/beslut.html"
+  ],
+  "site/blockbibliotek.html": [
+   "Blockbiblioteket -> /site/blockbibliotek.html"
+  ],
+  "site/grunder/farg.html": [
+   "Färg -> /site/grunder/farg.html"
+  ],
+  "site/grunder/form-djup.html": [
+   "Form och djup -> /site/grunder/form-djup.html"
+  ],
+  "site/grunder/ornament.html": [
+   "Ornament och ikoner -> /site/grunder/ornament.html"
+  ],
+  "site/grunder/rorelse.html": [
+   "Rörelse -> /site/grunder/rorelse.html"
+  ],
+  "site/grunder/spacing.html": [
+   "Spacing och layout -> /site/grunder/spacing.html"
+  ],
+  "site/grunder/typografi.html": [
+   "Typografi -> /site/grunder/typografi.html"
+  ],
+  "site/index.html": [
+   "Översikt -> /site/index.html"
+  ],
+  "site/kod.html": [
+   "Använda systemet -> /site/kod.html"
+  ],
+  "site/komponenter/block.html": [
+   "Block -> /site/komponenter/block.html"
+  ],
+  "site/komponenter/diagnostik.html": [
+   "Diagnostik-kitet -> /site/komponenter/diagnostik.html"
+  ],
+  "site/komponenter/falt.html": [
+   "Fält och reglage -> /site/komponenter/falt.html"
+  ],
+  "site/komponenter/index.html": [
+   "Alla komponenter -> /site/komponenter/index.html"
+  ],
+  "site/komponenter/knappar.html": [
+   "Knappar och länkar -> /site/komponenter/knappar.html"
+  ],
+  "site/komponenter/text.html": [
+   "Textelement -> /site/komponenter/text.html"
+  ],
+  "site/komponenter/verktyg.html": [
+   "Kalkylator-kitet -> /site/komponenter/verktyg.html"
+  ],
+  "site/komponenter/ytor.html": [
+   "Ytor och kort -> /site/komponenter/ytor.html"
+  ],
+  "site/monster/layoutfamiljer.html": [
+   "Layoutfamiljer -> /site/monster/layoutfamiljer.html"
+  ],
+  "site/monster/mobil.html": [
+   "Mobil 390 -> /site/monster/mobil.html"
+  ],
+  "site/monster/register.html": [
+   "Register och ton -> /site/monster/register.html"
+  ],
+  "site/monster/tjanstesida.html": [
+   "Tjänstesidans rytm -> /site/monster/tjanstesida.html"
+  ],
+  "site/regler/ai-tells.html": [
+   "AI-tecken som inte får finnas -> /site/regler/ai-tells.html"
+  ],
+  "site/regler/candour.html": [
+   "Candour-grinden -> /site/regler/candour.html"
+  ],
+  "site/regler/rost-i-ui.html": [
+   "Röst i gränssnittet -> /site/regler/rost-i-ui.html"
+  ],
+  "site/regler/tillganglighet.html": [
+   "Tillgänglighet -> /site/regler/tillganglighet.html"
+  ]
+ },
+ "requests404": []
+}

@@ -1,0 +1,108 @@
+MÖNSTER
+Layoutfamiljer
+
+Två familjer skeppas för verktyg: kalkylatorns tvåpanel och diagnostikens rail och scen. Två sätt bär blocken på tjänstesidorna: H2 vänster med panel höger, och fullbreddsbandet. Allt annat är drift.
+
+ampy-foretagsdata.md §11.3 (de två layoutfamiljerna, kanonisk ägare), .claude/skills/ampy-wireframe-ux/SKILL.md §3 (tillämpningen: slot för slot, resultatpanelens ordning, mobilomläggningen), konsolidering/komponenter-karta.md (Verktyg, Diagnostik, Block), inventeringarna för led-kalkylator, elcentral-kollen, rot-gt-cro och certificates.
+
+A. Kalkylatorns tvåpanel: vitt inputkort, mörkt resultatkort
+
+För finansiell projektion, kostnadsuppskattning och konfigurator (LED, EV, energi, batteri). Vänster: vitt inputkort med begränsade val, avancerade val hopfällda. Höger: mörkt midnight-resultatkort där siffran, inte rubriken, är den tända punkten i första viewporten. Resultatpanelens ordning är låst.
+
+Container 1280
+header + rubrik ovanför, grid 5fr / 7fr, gap 20
+Inputkort (vitt)
+segment (BRF / Företag / Privat)
+produktväljare
+slider + stepper
+hopfällda avancerade val
+padding 20 / 15, radie 20, 1 px kant, shadow-sm
+Resultatkort (midnight)
+1. eyebrow
+2. HERO-SIFFRA + enhet
+3. hero-sub (en ärlig rad)
+4. stat-trio
+5. evidenspanel (EN signaturenhet: staplar eller break-even)
+6. CTA
+7. "Så har vi räknat" (details, stängd)
+padding 40 / 30, radie 20, shadow-lg, glöd som tillval (B9)
+under 960 px: en kolumn, inputkortet först; glöden omjusteras bakom siffran (re-laid-out, inte skalad)
+
+Ordningen är argumentet gjort fysiskt: krok (siffran), bevis (trion), demonstration (enheten), fråga (CTA), revision på begäran (metoden). Kalkylatorkitets komponenter: Kalkylator-kitet.
+
+LED-kalkylatorn (kanon, auktoritet 1) vid 1440.
+390: en kolumn, input först.
+B. Diagnostikens rail och scen
+
+För diagnostik-arketypen (Elcentral-kollen, Elkollen). Cirka 44fr / 56fr. Vänster: varumärkesrailen som står kvar hela tiden med H1, lead, tre trust-punkter och två gradient-CTA:er. Höger: scenen där interaktionen sker, från ingång via frågor till besked. Railen håller legitimiteten och candour-löftet ("ingen hake") i synfältet medan skeptikern svarar.
+
+Shell 1280
+grid 44fr / 56fr, gap 64, min-height 560
+Rail (persistent)
+H1 44 / 700, sista raden text-teal
+lead 20, 46ch
+tre trust-punkter 17 / 500 med teal-ikon
+två gradient-CTA:er 58 h (Kontakta oss, 010-265 79 79)
+stat 14
+ingen egen yta: står på bandet
+Scen (frågekortet)
+ingång: välj jobb / starta kollen
+frågor: tap-only, en skärm i taget, 7 stegprickar
+besked: dualstatus 2x2 (elcentral) eller trafikljus-board (elkollen)
+fynd med ikoner, källrad
+EN ärlig CTA till lead-formen
+vitt kort, radie 14, 1 px kant, shadow-md, min-height 560
+under 1024 px: railens två CTA:er kollapsar till EN sticky "Ring / Kontakta"; scenens besked-CTA blir den andra, aldrig en tredje knapp
+
+Trust-punkterna återanvänds ordagrant: "Byggt på Elsäkerhetslagen och Elsäkerhetsverket", "Registrerat elinstallationsföretag", "Helt gratis. Inget mejl, ingen inloggning, ingen hake". Diagnostikens komponenter: Diagnostik-kitet.
+
+Elcentral-kollen (kanon, auktoritet 1) vid 1440.
+390: beskedet, sticky-CTA i botten.
+C. Blocket på tjänstesidan: H2 vänster, panel höger
+
+Prejudikatet är avdragsblocket (ROT-GT D2): H2 och stegen i vänsterspalten, kvittopanelen i högerspalten, i ett fullbreddskort som är sin egen container. Samma form bär eljour-blocket (samtalskort 4fr, symptomlista 6fr), CTA-bandet (text 1fr, porträtt 400) och visste-du-att (text 1fr, lampa 260). Regeln: EN H2 per block, panelen vertikalt centrerad mot vänsterspalten, staplat under kortets egen brytpunkt.
+
+Fullbreddskort
+radie 32 (22 mobil), padding clamp(44, 5.4cqi, 100) / clamp(24, 4.4cqi, 80), container-type inline-size
+Vänster: rubrik + innehåll
+H2 36 / 500, 30ch, accent understruken
+caps "Steg för steg" 13 / 700
+tre processteg med ringar
+minmax(0, 1fr)
+Höger: panelen
+kvittot (caps, rader, pill, chip, totalplatta)
+finstilt
+EN CTA
+clamp(480, 37cqi, 530), gap clamp(48, 6.3cqi, 96), align center
+kortbredd under 1024: en kolumn, max 700 centrerad, H2 centrerad under 900, gap steg till panel 56
+
+Se blocket renderat: Avdragsblocket, Eljour, CTA-band, Visste du att.
+
+ROT-GT D2 vid 1440: H2 och steg vänster, mörk panel höger.
+390: H2 centrerad, steg, sedan panel.
+D. Fullbreddsbandet
+
+Vitmarginalregeln är pensionerad (ägardirektiv 2026-08-14): nya block kör nära full bredd. Bandet är ytan som bär ett block från kant till kant, med innerlayouten cappad på container 1280 (eller 1560 för fullbreddskort över 1497 px). Certifikat-bandet, header och footer, testimonials-sektionen och före/efter-sektionen är band; heros är ramar (radie 22) med 8 till 26 px luft runt.
+
+Band (kant till kant)
+padding-block section-y 2xl (79 / 35) eller xl (56 / 27) för täta band, padding-inline gutter l (39,6 / 21,5)
+inner: max-width 1280 centrerad
+yta
+sky-mist (page), vit (surface), midnight (dark), gradient navy till sekundärteal (certifikat, drift B16)
+rytm
+sektion till sektion: 2xl. Rubrikblock till innehåll: l. Kort i band: gap m.
+tak
+1280 är inte ett tak för ytan, bara för innehållet. Hero-1:s ram är 1700, avdragsblockets inner 1560 från 1497.
+Certifikat-bandet: fullbredd 354 px, inner 1280.
+Testimonials: band på sky-mist, inner 1200.
+När används vilken
+ARKETYP / BEHOV	FAMILJ	VARFÖR	PREJUDIKAT
+Finansiell projektion, kostnadsuppskattning, konfigurator	A. Kalkylatorns tvåpanel	Siffran ska vara den tända punkten i första viewporten; inputs till vänster, resultat till höger, metoden på begäran.	LED, EV, energi (auk 1), batteri (auk 3)
+Diagnostik / besked (rätt behörighet? behöver centralen bytas?)	B. Rail och scen	Tillitsramen får aldrig scrolla bort medan besökaren svarar; scenen byter tillstånd, railen står.	Elcentral-kollen, Elkollen (auk 1)
+Block på tjänstesida med en regel eller ett argument (avdraget, symptomen, samtalet)	C. H2 vänster, panel höger	Vänsterspalten bär läsningen uppifrån och ned, panelen bär det som ska läsas på tre sekunder.	ROT-GT D2, eljour-blocket, CTA-bandet
+Tillit, bevis, omdömen, navigation, avslut	D. Fullbreddsband	Ytan är budskapet (mörkt band = tyngd, ljust band = luft); innehållet cappas på 1280.	Certifikat, testimonials, före/efter, header, footer
+Bekräftelse och CRM-sidor (tack, offert accepterad, bokning)	Ett centrerat kort (520 till 780) på den ljusa auroran	Ingen sajtheader, ett dokument. Auroran bara här (B11).	Thank-you, offer-accepted, booking (auk 2 till 3)
+
+Det som inte finns: en tredje verktygsfamilj. Skillens "rot-gt-calculator"-wireframes (fem alternativ byggda på en dag) är underkända av ägaren och står som motexempel i blockbiblioteket.
+
+Kvalitetsribban som varje layout mäts mot (fem punkter, PASS eller FAIL): leder med exakt vem det är för, EN signaturenhet, ärlig och specifik copy, formfriktion kalibrerad till funnelsteget, instrumenterad för att lära. Kanon: ampy-foretagsdata.md §11.1.

@@ -1,0 +1,472 @@
+{
+ "site/kod.html": {
+  "checked": 245,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-example > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ds-example > div.ds-demo > div.ampy-card > a.ampy-btn.ampy-btn--compact",
+    "txt": "Räkna på ditt jobb",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/grunder/spacing.html": {
+  "checked": 372,
+  "fails": [],
+  "unknown": [
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-stack > div.ds-stack__card > a.ampy-btn.ampy-btn--compact",
+    "txt": "Räkna på ditt jobb",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/grunder/form-djup.html": {
+  "checked": 242,
+  "fails": [],
+  "unknown": [
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-shadows > div > div.ds-shadow__card.ds-shadow__card--btn",
+    "txt": "Boka rådgivning",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-shadows > div > div.ds-shadow__card.ds-shadow__card--btn",
+    "txt": "Boka rådgivning (hover)",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-shadows > div > div.ds-shadow__card.ds-shadow__card--btn.ds-shadow__card--ring",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--aurora > div.ampy-card.ampy-card--glass > h3",
+    "txt": "Tack, vi har fått din förfrågan",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-glass-stage.ds-glass-stage--aurora > div.ampy-card.ampy-card--glass > p > code",
+    "txt": ".ampy-card--glass",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-glass-stage.ds-glass-stage--aurora > div.ampy-card.ampy-card--glass > p > code",
+    "txt": "--ampy-bg-glass",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--aurora > div.ampy-card.ampy-card--glass > p",
+    "txt": "rgba(255,255,255,.72) +",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-glass-stage.ds-glass-stage--aurora > div.ampy-card.ampy-card--glass > p > code",
+    "txt": "--ampy-glass-border",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-glass-stage.ds-glass-stage--aurora > div.ampy-card.ampy-card--glass > p > code",
+    "txt": "--ampy-glass-blur",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--aurora > div.ds-glass-drift > h3",
+    "txt": "Drift: bokningen, .85 utan blur",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--aurora > div.ds-glass-drift > p",
+    "txt": "Renderar utan backdrop-filter (snabbare)",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--photo > div.ampy-card.ampy-card--glass-dark > h3",
+    "txt": "Efter",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-glass-stage.ds-glass-stage--photo > div.ampy-card.ampy-card--glass-dark > p > code",
+    "txt": ".ampy-card--glass-dark",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-glass-stage.ds-glass-stage--photo > div.ampy-card.ampy-card--glass-dark > p > code",
+    "txt": "--ampy-bg-glass-dark",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--photo > div.ampy-card.ampy-card--glass-dark > p",
+    "txt": "rgba(9,11,50,.82) + blur(10px) saturate(",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--photo > div.ds-glass-drift2 > h3",
+    "txt": "Drift: hero-2-forms mörka glas",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-glass-stage.ds-glass-stage--photo > div.ds-glass-drift2 > p",
+    "txt": "midnight + 156,51° till #5eb1bf .76 + bl",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > strong",
+    "txt": "Utan scrim",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > span",
+    "txt": "Vit text direkt på fotot. Kontrasten ber",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > strong",
+    "txt": "--ampy-scrim-hero",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > span",
+    "txt": "98° från .68 till .02, plus bottentoning",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > strong",
+    "txt": "--ampy-scrim-strong",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > span",
+    "txt": "180° .58 till .82, plus 98° .28 till .05",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > strong",
+    "txt": "--ampy-scrim-light",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-scrims > div.ds-scrim > div.ds-scrim__text > span",
+    "txt": "180° .06 till .22. Fotot som objekt, int",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/grunder/rorelse.html": {
+  "checked": 233,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ds-demos > div.ds-demo-box > div.ds-demo-box__row > a.ampy-btn",
+    "txt": "Boka rådgivning",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-demos > div.ds-demo-box > div.ds-demo-box__row > a.ampy-btn.is-hover",
+    "txt": "Boka rådgivning",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/grunder/ornament.html": {
+  "checked": 203,
+  "fails": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "main.ds-main > div.ds-content.ds-content--wide > div.ds-pulses > a.ampy-btn.ampy-btn--ring",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "--ampy-action-gradient",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "--ampy-action-gradient-ring",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "--ampy-aurora-light",
+    "color": "rgb(9, 11, 50)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > div.ds-grad > div > div.ds-grad__chip",
+    "txt": "--ampy-scrim-hero",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/komponenter/index.html": {
+  "checked": 304,
+  "fails": [],
+  "unknown": [
+   {
+    "path": "div.ds-cards.ampy > a.ds-card > div.ds-card__demo > span.ampy-btn.ampy-btn--primary",
+    "txt": "Kostnadsfri offert",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "a.ds-card > div.ds-card__demo > span.ampy-btn.ampy-btn--ring > span.ampy-link--tel",
+    "txt": "Ring 010-265 79 79",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-card__demo > div.ampy.ampy-aurora > div.ampy-card.ampy-card--glass > span.ampy-eyebrow.ampy-eyebrow--action",
+    "txt": "Tack",
+    "color": "rgb(0, 122, 105)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ },
+ "site/monster/layoutfamiljer.html": {
+  "checked": 118,
+  "fails": [
+   {
+    "path": "section.ds-blk > div.ds-diagram.ds-diagram--calc > div.ds-diagram__box.ds-diagram__box--dark > span.ds-diagram__meta",
+    "txt": "padding 40 / 30, radie 20, shadow-lg, glöd som til",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(9,11,50)",
+    "ratio": 3.96,
+    "need": 4.5,
+    "fontSize": 11.5,
+    "weight": 300
+   },
+   {
+    "path": "section.ds-blk > div.ds-diagram.ds-diagram--block > div.ds-diagram__box.ds-diagram__box--dark > span.ds-diagram__meta",
+    "txt": "clamp(480, 37cqi, 530), gap clamp(48, 6.3cqi, 96),",
+    "color": "rgb(106, 113, 144)",
+    "bg": "rgb(9,11,50)",
+    "ratio": 3.96,
+    "need": 4.5,
+    "fontSize": 11.5,
+    "weight": 300
+   }
+  ],
+  "unknown": [],
+  "teal": []
+ },
+ "site/monster/tjanstesida.html": {
+  "checked": 132,
+  "fails": [],
+  "unknown": [],
+  "teal": []
+ },
+ "site/monster/mobil.html": {
+  "checked": 74,
+  "fails": [],
+  "unknown": [],
+  "teal": []
+ },
+ "site/monster/register.html": {
+  "checked": 84,
+  "fails": [],
+  "unknown": [],
+  "teal": []
+ },
+ "site/regler/rost-i-ui.html": {
+  "checked": 113,
+  "fails": [
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ds-code > button.ds-code__copy",
+    "txt": "Kopiera",
+    "color": "rgba(255, 255, 255, 0.66)",
+    "bg": "rgb(245,249,255)",
+    "ratio": 1.04,
+    "need": 4.5,
+    "fontSize": 16,
+    "weight": 300
+   }
+  ],
+  "unknown": [],
+  "teal": []
+ },
+ "site/regler/candour.html": {
+  "checked": 139,
+  "fails": [],
+  "unknown": [],
+  "teal": []
+ },
+ "site/regler/ai-tells.html": {
+  "checked": 111,
+  "fails": [
+   {
+    "path": "div.ds-two > div.ds-wrong > div.ds-wrong__card > p.ds-wrong__k",
+    "txt": "STEG FÖR STEG",
+    "color": "rgb(138, 141, 165)",
+    "bg": "rgb(255,255,255)",
+    "ratio": 3.26,
+    "need": 4.5,
+    "fontSize": 13,
+    "weight": 300
+   }
+  ],
+  "unknown": [
+   {
+    "path": "div.ds-two > div.ds-wrong > p.ds-wrong__h > span.ds-wrong__grad",
+    "txt": "inom 60 sekunder!",
+    "why": "gradienttext"
+   },
+   {
+    "path": "section.ds-blk > div.ds-two > div.ds-wrong.ds-wrong--slop > span.ds-demo__label",
+    "txt": "Fel",
+    "color": "rgba(255, 255, 255, 0.6)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ds-blk > div.ds-two > div.ds-wrong.ds-wrong--slop > p.ds-wrong__slop-h",
+    "txt": "Framtidens el, i dag",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ds-blk > div.ds-two > div.ds-wrong.ds-wrong--slop > p.ds-wrong__slop-p",
+    "txt": "Vi levererar skräddarsydda lösningar med",
+    "color": "rgb(255, 255, 255)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ds-blk > div.ds-two > div.ds-wrong.ds-wrong--slop > span.ds-wrong__slop-btn",
+    "txt": "Kom igång",
+    "color": "rgb(11, 15, 48)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": [
+   {
+    "path": "section.ds-blk > div.ds-two > div.ampy.ampy-card.ampy-card--dark > p.ampy-eyebrow",
+    "txt": "Visste du att",
+    "fontSize": "12px",
+    "ratio": 6.41
+   }
+  ]
+ },
+ "site/regler/tillganglighet.html": {
+  "checked": 256,
+  "fails": [],
+  "unknown": [
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ampy.ds-demo > button.ampy-btn.ampy-btn--primary.ampy-btn--compact",
+    "txt": "48 h kompakt",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ampy.ds-demo > button.ampy-btn.ampy-btn--primary",
+    "txt": "58 h standard",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "div.ds-content.ds-content--wide > section.ds-blk > div.ampy.ds-demo.ds-focus-demo > button.ampy-btn.ampy-btn--primary",
+    "txt": "Fokus på ljust",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   },
+   {
+    "path": "section.ds-blk > div.ampy.ds-demo.ds-focus-demo > div.ampy-on-dark > button.ampy-btn.ampy-btn--primary",
+    "txt": "Fokus på mörkt",
+    "color": "rgb(40, 42, 83)",
+    "why": "background-image i kedjan"
+   }
+  ],
+  "teal": []
+ }
+}

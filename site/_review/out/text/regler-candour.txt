@@ -1,0 +1,68 @@
+REGLER
+Candour-grinden
+
+Ett påstående eller en taktik skeppas bara om den överlever grinden: stödtjänster räknas som noll och effektavgift som noll. Grinden slår varje generisk konverteringstaktik: ingen brådska, ingen knapphet, inga nedräkningar, inget påhittat bevis, aldrig "rabatt", aldrig "spara".
+
+Projektets CLAUDE.md regel 2 (candour-grinden är vallgraven) och regel 3 (proveniens eller det finns inte); rot-gt-calculator/research/05-leadmagnet-och-konvertering.md §7 (candour-grinden tillämpad, domslut per påstående, anpassad till tabellen nedan); ampy-foretagsdata.md §2.2 (candour-kanten), §6.1 (FCR-D-kollapsen), §6.3 (effekttariffen), §10.1 (begränsningar som tillitstillgångar).
+
+Grinden i en mening
+TESTET
+
+Sätt stödtjänster (FCR-D) till 0 kr och effektavgiften till 0 kr. Håller kalkylen, påståendet eller knappen fortfarande? Då får den stå. Faller den, är den byggd på en intäkt som kollapsade eller en tariff som inte alla har, och den skeppas inte.
+
+VARFÖR DET ÄR VALLGRAVEN
+
+Den analytiska villaägaren letar efter haken. Den som säger haken först, och av sig själv, har inget kvar att avslöja. Att skicka kunden till Skatteverkets räknare, bort från oss, är den dyraste signalen ett säljverktyg kan skicka, och den som gör hantverkaren trygg att vidarebefordra länken.
+
+Taktiker som grinden dödar
+TAKTIK	DOMSLUT	SKÄL OCH ERSÄTTNING
+Nedräkning, "erbjudandet går ut", "bara i dag"	ALDRIG	Falsk brådska. Avdraget är en regel, inte en kampanj. Ersättning: regeln och taket, sagda en gång.
+"Bara 3 platser kvar", "hög efterfrågan just nu"	ALDRIG	Falsk knapphet. Ampy har jour dygnet runt; det motsäger sig självt.
+Påhittat socialt bevis, "1000+ kunder", "5,0 på Google", "3 000+ installationer"	ALDRIG utan ägarbekräftelse	CLAUDE.md regel 3. Riktiga recensioner med namn och datum får stå; siffror kräver [FACT] i datalagret.
+Juicad ROI, en punkt-payback ("återbetald på 4 år")	ALDRIG	Payback är ett spann (typiskt + 7 till 12 år), osäkerheten synlig, den oflatterande siffran först.
+Gradienttext, mörka slop-kort, exklamationsspray som "energi"	Drift	Inte candour-grinden i sig men samma familj: dekoration i stället för ett påstående som håller. Se AI-tecken.
+Popup, exit-intent, "vänta!"	ALDRIG	Värdet är alltid gratis, ingen mejlvägg före resultatet; lead-formen förtjänar sina fält först i det heta ögonblicket.
+Domslut per påstående (avdrag, verktyg, bevis)
+
+OK = får stå. OK, formulering = får stå i den angivna formen. GRINDAD = kräver ägarsignering. ALDRIG = ute. Anpassat från research-rapportens §7; ROT- och GT-grindarna är dess numrerade ägarfrågor.
+
+PÅSTÅENDE	DOMSLUT	SKÄL OCH ERSÄTTNING
+"50 % rabatt", "30 % rabatt", "rabatt"	ALDRIG	Det är en skattereduktion: staten betalar via din skatt, och räcker den inte betalar du. "Rabatt" lovar ett pris, "avdrag" lovar en regel. Skatteverkets ord är "rotavdrag" och "skattereduktion".
+"Du sparar X kr", "Spara upp till 50 000 kr"	ALDRIG som rubrik eller belopp	"Spara" antyder pengar i handen och bjuder in "jämfört med vad?". Ersättning: "Avdrag: X kr", "X kr dras på fakturan", "Att betala efter avdrag: Y kr".
+"Du får X kr tillbaka"	ALDRIG	Inget betalas tillbaka till kunden; det dras på fakturan. Kvarskatt kan däremot komma åt andra hållet.
+"Du ligger aldrig ute med pengarna"	GRINDAD (ROT); ALDRIG utan skatteförbehåll (GT)	Kunden betalar mellanskillnaden i slutskatten om skatten inte räcker. Ersättning: "Avdraget dras på fakturan. Räcker inte din skatt kan Skatteverket kräva mellanskillnaden i slutskatten."
+"Avdraget dras direkt på fakturan"	OK (GT); OK, formulering (ROT: "vi drar avdraget på fakturan"); "alltid" GRINDAD	Lagfäst enda väg för grön teknik; Ampys publicerade praxis för ROT.
+"Vi sköter hela ansökan"	OK (GT); OK, formulering (ROT: "vi sköter ansökan hos Skatteverket"); "alltid / på alla jobb" GRINDAD	Aldrig "du behöver inte göra något": kunden lämnar personnummer och fastighetsbeteckning och måste ha skatt.
+"Garanterat avdrag", "godkänns alltid"	ALDRIG	Skatteverket avgör i deklarationen. "kan" på varje utfall.
+"50 % av hela kostnaden / totalpriset"	ALDRIG	"50 % av arbete och material"; resor, frakt och projektering ger inget; 97 % vid fast pris.
+"Upp till 100 000 kr för två ägare"	OK, formulering	"om ni båda äger och bor där och båda har skatt att räkna av mot".
+"Laddbox kräver solceller"	ALDRIG	Falskt.
+"När grön teknik-taket nås kan resten tas via ROT"	ALDRIG	Falskt (67 kap. 40 §): samma åtgärd får aldrig båda. Bara separata ROT-arbeten (elcentralen).
+"Batteri utan solceller: ROT 30 % på arbetet"	OK som "kan", GRINDAD som siffra	Arbetsandelen är Ampys, och själva batterimonteringen kan vara inventarie.
+"Stödtjänster ger X kr/år"	ALDRIG	FCR-D-intäkten kollapsade (§6.1). Får bara sägas: stödtjänster påverkar inte rätten till avdraget.
+"Alltid billigast på natten"	ALDRIG	Falskt i SE4 på sommaren: ett påhittat faktum, inte en superlativ.
+"Försäkringen gäller inte"	ALDRIG	Vänder bevisbördan under marknadsföringslagen. Alltid "kan sätta ned eller neka ersättning".
+"Dina befintliga lysrör är olagliga"	ALDRIG	Bara "nya lysrör säljs inte längre, EU-förbud 2023".
+"Inom 60 sekunder", "på 30 sek"	ALDRIG	Konkurrentmönster. Ersättning: den konkreta räkningen ("fyra frågor") eller inget tidslöfte alls.
+"Vi ringer inom 24 timmar"	OK, formulering: "oftast inom en arbetsdag"	Lead-magnet-kanon; /kontakt/ och Elcentral-kollen säger "inom 24 timmar" = intern motsägelse att jämka (LM-1).
+"Jour öppen just nu"	GRINDAD	Kräver att bemanningen är verifierad (sticky-barens GAP-1). Pulsringen runt ikonen påstår inget om bemanning; en "levande" grön prick gör det.
+"Gratis" / "Helt gratis. Inget mejl, ingen inloggning, ingen hake"	OK, en gång, tyst	Trust-punkten finns, men raden säljs inte in. Verktygets värde är svaret. Aldrig "Gratis!" som rubrik.
+"Registrerat elinstallationsföretag"	OK	Verifierat i Elsäkerhetsverkets register; länken till registret får stå.
+"Ampy har F-skatt"	OK	Självdeklarerat [FACT] + länk till Skatteverkets kontroll.
+"Certifierad elektriker krävs för avdraget"	OK, formulering	Avdragsvillkoret är F-skatt. Behörigheten är ett elsäkerhetskrav och står som skydd, inte som avdragsregel.
+"Pensionärer kan få ROT"	OK, formulering	"Ingen övre åldersgräns. Det som avgör är skatten." Aldrig "pensionärer får alltid".
+"Din skatt räcker"	OK, formulering	"preliminärt", "räcker troligen", "utrymme", och raden om mellanskillnaden. Punktvärdet är Skatteverkets jobb.
+"Fast pris" i CTA	OK där jobbet har fast pris; inte i den generiska CTA:n	Service debiteras per timme. "Vi lämnar alltid ett fast pris" är artikelns claim om centralbyten, inte om allt.
+"Potten fylls på 1 januari, beställ nu"	ALDRIG som tryck	Faktumet "betalningsdatumet styr året" får stå i "Så har vi räknat".
+"Vi sparar inget"	OK, en gång, intill skattefältet	Sant bara om beloppet aldrig lagras, loggas eller går i URL:en. Formuleringen "det du skriver här stannar i din webbläsare".
+"Hela Sverige", "rikstäckande"	OK	Ägardirektiv 2026-07-18: nationella claims är fria i copy; 27-kommunsettet styr bara annonsernas geo-targeting.
+De tre meningarna som gör mest för tilltron
+"Räcker inte din skatt betalar du mellanskillnaden i slutskatten. Därför räknar vi på ditt utrymme, inte bara på procenten." Haken han letar efter, sagd först och av oss.
+"Materialet ger inget ROT-avdrag. På ett jobb för 30 000 kr där 12 000 kr är material blir avdraget 5 400 kr, inte 9 000 kr." Den oflatterande siffran först, med ett räkneexempel han kan kontrollera.
+"Vi kan inte se din skatt. Skatteverkets räknare kan. Vill du ha det exakt: gå dit, det tar tio minuter." Att skicka kunden till myndigheten, bort från oss, är den dyraste signalen ett säljverktyg kan skicka.
+Grinden i gränssnittet
+Kvittopanelen: "Ditt pris efter ROT: 70 % av arbetet" med noten "Materialet omfattas inte av ROT" i totalplattan. Aldrig ett belopp, aldrig "spara".
+Kalkylatorn: spannet i "Så har vi räknat" med SE1 till SE4-tabellen så räkningen kan revideras; wide ranges signal honesty.
+Diagnostiken: grönt besked utan solid säljknapp; "du behöver inte byta" som fullvärdigt resultat.
+Proof-raden: bara siffror med [FACT]-källa; stjärnorna får vara guld, talet får inte hittas på.
+Tack-sidan: påstår aldrig mer än "mottaget"; "vi ringer oftast inom en arbetsdag" är löftet.

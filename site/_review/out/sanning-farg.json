@@ -1,0 +1,931 @@
+{
+ "swatchar": 42,
+ "kontroller": 199,
+ "avvikelser": [],
+ "swatches": [
+  {
+   "name": "Midnight",
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "antal": 29,
+   "auk1": 14,
+   "cons": [
+    [
+     "vit",
+     "19,00"
+    ],
+    [
+     "midnight",
+     "1,00"
+    ],
+    [
+     "sky",
+     "17,98"
+    ]
+   ],
+   "txt": " --ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa) 29 källor (14 auk 1) vit 19,00 midnight 1"
+  },
+  {
+   "name": "Vit",
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "antal": 26,
+   "auk1": 13,
+   "cons": [
+    [
+     "vit",
+     "1,00"
+    ],
+    [
+     "midnight",
+     "19,00"
+    ],
+    [
+     "sky",
+     "1,06"
+    ]
+   ],
+   "txt": " --ampy-bg-surface, --ampy-on-dark, --ampy-action-on kort, text på mörkt, alfa-serie på mörkt 26 källor (13 auk 1) vit 1,00 midnight 19,00 sky 1,06 "
+  },
+  {
+   "name": "Teal core",
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "antal": 25,
+   "auk1": 12,
+   "cons": [
+    [
+     "vit",
+     "2,96"
+    ],
+    [
+     "midnight",
+     "6,41"
+    ],
+    [
+     "sky",
+     "2,81"
+    ]
+   ],
+   "txt": " --ampy-action accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA 25 källor (12 auk 1) vit 2,96 midnight 6,41 sky 2,81 "
+  },
+  {
+   "name": "Neon mint",
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "antal": 22,
+   "auk1": 11,
+   "cons": [
+    [
+     "vit",
+     "1,30"
+    ],
+    [
+     "midnight",
+     "14,61"
+    ],
+    [
+     "sky",
+     "1,23"
+    ]
+   ],
+   "txt": " --ampy-focus-on-dark handlingsgradientens start, pulsprick, EFTER-chip, fokus på mörkt, stjärnor (testimonials-kort) 22 källor (11 auk 1) vit 1,30 midnight 14,"
+  },
+  {
+   "name": "Sky mist",
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "antal": 21,
+   "auk1": 10,
+   "cons": [
+    [
+     "vit",
+     "1,06"
+    ],
+    [
+     "midnight",
+     "17,98"
+    ],
+    [
+     "sky",
+     "1,00"
+    ]
+   ],
+   "txt": " --ampy-bg-page, --ampy-bg-subtle sidbakgrund, subtil yta, ljus aurora-bas 21 källor (10 auk 1) vit 1,06 midnight 17,98 sky 1,00 "
+  },
+  {
+   "name": "Teal core",
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "antal": 25,
+   "auk1": 12,
+   "cons": [
+    [
+     "vit",
+     "2,96"
+    ],
+    [
+     "midnight",
+     "6,41"
+    ],
+    [
+     "sky",
+     "2,81"
+    ]
+   ],
+   "txt": " --ampy-action accent: ikoner, valda kanter, ringar, fyllningar utan text; solid header-CTA 25 källor (12 auk 1) vit 2,96 midnight 6,41 sky 2,81 "
+  },
+  {
+   "name": "Teal deep",
+   "hex": "#007a69",
+   "token": "--apteal-deep",
+   "antal": 2,
+   "auk1": 2,
+   "cons": [
+    [
+     "vit",
+     "5,27"
+    ],
+    [
+     "midnight",
+     "3,61"
+    ],
+    [
+     "sky",
+     "4,98"
+    ]
+   ],
+   "txt": " --ampy-action-strong solid knapp med vit text, textlänk, sista H1-rad (diagnostik) 2 källor (2 auk 1) vit 5,27 midnight 3,61 sky 4,98 "
+  },
+  {
+   "name": "Teal hover",
+   "hex": "#008d79",
+   "token": "--ampy-action-hover",
+   "antal": null,
+   "auk1": null,
+   "cons": [
+    [
+     "vit",
+     "4,13"
+    ],
+    [
+     "midnight",
+     "4,60"
+    ],
+    [
+     "sky",
+     "3,91"
+    ]
+   ],
+   "txt": " --ampy-action-hover hover på solid teal-knapp (header-CTA) hero-1 + website-blocks (header.css:13) vit 4,13 midnight 4,60 sky 3,91 "
+  },
+  {
+   "name": "Sekundärteal (brandbok s.8)",
+   "hex": "#5eb1bf",
+   "token": "--apsecondary-teal",
+   "antal": 17,
+   "auk1": 7,
+   "cons": [
+    [
+     "vit",
+     "2,47"
+    ],
+    [
+     "midnight",
+     "7,70"
+    ],
+    [
+     "sky",
+     "2,33"
+    ]
+   ],
+   "txt": " --ampy-action-gradient(-ring) handlingsgradientens slut, ring-gradientens slut, live fokus/highlight (--color-7), mini-menu pill, certificates gradient 17 käll"
+  },
+  {
+   "name": "Teal tint",
+   "hex": "#e3f6f1",
+   "token": "--apteal-tint",
+   "antal": 3,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,12"
+    ],
+    [
+     "midnight",
+     "16,93"
+    ],
+    [
+     "sky",
+     "1,06"
+    ]
+   ],
+   "txt": " (pill) pill/chip-yta (eljour-familjen) 3 källor (1 auk 1) vit 1,12 midnight 16,93 sky 1,06 "
+  },
+  {
+   "name": "Emerald flow",
+   "hex": "#39c281",
+   "token": "--apemerald-flow",
+   "antal": 9,
+   "auk1": 5,
+   "cons": [
+    [
+     "vit",
+     "2,28"
+    ],
+    [
+     "midnight",
+     "8,33"
+    ],
+    [
+     "sky",
+     "2,16"
+    ]
+   ],
+   "txt": " --ampy-success success, \"efter\"-stapel, slider-fyllning 9 källor (5 auk 1) vit 2,28 midnight 8,33 sky 2,16 "
+  },
+  {
+   "name": "Seafoam mint",
+   "hex": "#5cc5b6",
+   "token": "--apseafoam-mint",
+   "antal": 3,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "2,08"
+    ],
+    [
+     "midnight",
+     "9,15"
+    ],
+    [
+     "sky",
+     "1,96"
+    ]
+   ],
+   "txt": " (dekor) aurora-SVG-stopp (thank-you/offer) 3 källor (1 auk 1) vit 2,08 midnight 9,15 sky 1,96 "
+  },
+  {
+   "name": "Mint surge",
+   "hex": "#9de1ec",
+   "token": "--apmint-surge",
+   "antal": null,
+   "auk1": null,
+   "cons": [
+    [
+     "vit",
+     "1,46"
+    ],
+    [
+     "midnight",
+     "13,04"
+    ],
+    [
+     "sky",
+     "1,38"
+    ]
+   ],
+   "txt": " definierad i global-variables.css; 0 användningar i blocken (bara brandbokens jämförelselista) 1 (brandbook-inventeringen) vit 1,46 midnight 13,04 sky 1,38 "
+  },
+  {
+   "name": "Crystal blue",
+   "hex": "#b6f2ff",
+   "token": "--apcrystal-blue",
+   "antal": 15,
+   "auk1": 5,
+   "cons": [
+    [
+     "vit",
+     "1,23"
+    ],
+    [
+     "midnight",
+     "15,50"
+    ],
+    [
+     "sky",
+     "1,16"
+    ]
+   ],
+   "txt": " --ampy-action-gradient-ring, --ampy-aurora-light ring-gradientens start, ljus aurora (.48), footer-gradient, certificates-våg 15 källor (5 auk 1) vit 1,23 midn"
+  },
+  {
+   "name": "Sublime green",
+   "hex": "#a0fbc9",
+   "token": "--apsublime-green",
+   "antal": 4,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,23"
+    ],
+    [
+     "midnight",
+     "15,50"
+    ],
+    [
+     "sky",
+     "1,16"
+    ]
+   ],
+   "txt": " --ampy-aurora-light ljus aurora (radial .28) 4 källor (1 auk 1) vit 1,23 midnight 15,50 sky 1,16 "
+  },
+  {
+   "name": "Aqua frost",
+   "hex": "#ddf9fd",
+   "token": "--apaqua-frost",
+   "antal": 1,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,10"
+    ],
+    [
+     "midnight",
+     "17,23"
+    ],
+    [
+     "sky",
+     "1,04"
+    ]
+   ],
+   "txt": " (oanvänd) definierad, 0 användningar (live --color-29 #e5faff är en annan) 1 källor (1 auk 1) vit 1,10 midnight 17,23 sky 1,04 "
+  },
+  {
+   "name": "Midnight (bläck)",
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "antal": 29,
+   "auk1": 14,
+   "cons": [
+    [
+     "vit",
+     "19,00"
+    ],
+    [
+     "midnight",
+     "1,00"
+    ],
+    [
+     "sky",
+     "17,98"
+    ]
+   ],
+   "txt": " --ampy-bg-dark, --ampy-ink, --ampy-ink-body, --ampy-focus mörk yta, all rubrik-/brödtext, fokusring, skuggfärg (alfa) 29 källor (14 auk 1) vit 19,00 midnight 1"
+  },
+  {
+   "name": "Indigo (knapptext på gradient)",
+   "hex": "#282a53",
+   "token": "--apindigo",
+   "antal": 6,
+   "auk1": 3,
+   "cons": [
+    [
+     "vit",
+     "13,58"
+    ],
+    [
+     "midnight",
+     "1,40"
+    ],
+    [
+     "sky",
+     "12,85"
+    ]
+   ],
+   "txt": " --ampy-ink-on-action, --ampy-action-gradient-on knapptext på gradient 6 källor (3 auk 1) vit 13,58 midnight 1,40 sky 12,85 "
+  },
+  {
+   "name": "Navy muted",
+   "hex": "#565e82",
+   "token": "--apnavy-muted",
+   "antal": 8,
+   "auk1": 5,
+   "cons": [
+    [
+     "vit",
+     "6,33"
+    ],
+    [
+     "midnight",
+     "3,00"
+    ],
+    [
+     "sky",
+     "5,99"
+    ]
+   ],
+   "txt": " --ampy-ink-muted dämpad text 8 källor (5 auk 1) vit 6,33 midnight 3,00 sky 5,99 "
+  },
+  {
+   "name": "Navy faint",
+   "hex": "#6a7190",
+   "token": "--apnavy-faint",
+   "antal": 2,
+   "auk1": 2,
+   "cons": [
+    [
+     "vit",
+     "4,80"
+    ],
+    [
+     "midnight",
+     "3,96"
+    ],
+    [
+     "sky",
+     "4,54"
+    ]
+   ],
+   "txt": " --ampy-ink-faint svag text 2 källor (2 auk 1) vit 4,80 midnight 3,96 sky 4,54 "
+  },
+  {
+   "name": "Navy ink (drift, B3)",
+   "hex": "#3b3f59",
+   "token": "--apnavy-ink",
+   "antal": 3,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "10,29"
+    ],
+    [
+     "midnight",
+     "1,85"
+    ],
+    [
+     "sky",
+     "9,74"
+    ]
+   ],
+   "txt": " drift → --ampy-ink-body (B3) brödtext i eljour-familjen 3 källor (1 auk 1) vit 10,29 midnight 1,85 sky 9,74 "
+  },
+  {
+   "name": "Darkest black (drift)",
+   "hex": "#1e1e1e",
+   "token": "--apdarkest-black",
+   "antal": 9,
+   "auk1": 5,
+   "cons": [
+    [
+     "vit",
+     "16,67"
+    ],
+    [
+     "midnight",
+     "1,14"
+    ],
+    [
+     "sky",
+     "15,78"
+    ]
+   ],
+   "txt": " drift → --ampy-ink energycalc ink, rot-gt rubrik-ink, footer h3, mini-menu pill-text, hero-2 Z submit-text 9 källor (5 auk 1) vit 16,67 midnight 1,14 sky 15,78"
+  },
+  {
+   "name": "Deepest blue",
+   "hex": "#0e0f15",
+   "token": "--apdeepest-blue",
+   "antal": null,
+   "auk1": null,
+   "cons": [
+    [
+     "vit",
+     "19,13"
+    ],
+    [
+     "midnight",
+     "1,01"
+    ],
+    [
+     "sky",
+     "18,11"
+    ]
+   ],
+   "txt": " (oanvänd) definierad; 0 användningar 0 källor vit 19,13 midnight 1,01 sky 18,11 Alfa-ramp --apdarkest-black-5 till -90 (lager 1, verbatim). Ingen källa använde"
+  },
+  {
+   "name": "Success (fyllning)",
+   "hex": "#39c281",
+   "token": "--apemerald-flow",
+   "antal": 9,
+   "auk1": 5,
+   "cons": [
+    [
+     "vit",
+     "2,28"
+    ],
+    [
+     "midnight",
+     "8,33"
+    ],
+    [
+     "sky",
+     "2,16"
+    ]
+   ],
+   "txt": " --ampy-success success, \"efter\"-stapel, slider-fyllning 9 källor (5 auk 1) vit 2,28 midnight 8,33 sky 2,16 "
+  },
+  {
+   "name": "Success ink",
+   "hex": "#0f6e56",
+   "token": "--apverdict-green",
+   "antal": 2,
+   "auk1": 2,
+   "cons": [
+    [
+     "vit",
+     "6,20"
+    ],
+    [
+     "midnight",
+     "3,06"
+    ],
+    [
+     "sky",
+     "5,87"
+    ]
+   ],
+   "txt": " --ampy-success-ink besked-accent + success-text 2 källor (2 auk 1) vit 6,20 midnight 3,06 sky 5,87 "
+  },
+  {
+   "name": "Success tint",
+   "hex": "#39c281 @ 0.12",
+   "token": "--ampy-success-tint",
+   "antal": null,
+   "auk1": null,
+   "cons": [
+    [
+     "vit",
+     "1,10"
+    ],
+    [
+     "midnight",
+     "1,18"
+    ],
+    [
+     "sky",
+     "1,10"
+    ]
+   ],
+   "txt": " --ampy-success-tint bakgrund bakom success-ikon/besked main-form (styles.css:238) vit 1,10 midnight 1,18 sky 1,10 "
+  },
+  {
+   "name": "Varning (fyllning)",
+   "hex": "#f0af38",
+   "token": "--apamber",
+   "antal": 3,
+   "auk1": 2,
+   "cons": [
+    [
+     "vit",
+     "1,93"
+    ],
+    [
+     "midnight",
+     "9,85"
+    ],
+    [
+     "sky",
+     "1,82"
+    ]
+   ],
+   "txt": " --ampy-warn \"före\"-stapel, varning i diagram 3 källor (2 auk 1) vit 1,93 midnight 9,85 sky 1,82 "
+  },
+  {
+   "name": "Varning ink",
+   "hex": "#876507",
+   "token": "--apverdict-amber",
+   "antal": 2,
+   "auk1": 2,
+   "cons": [
+    [
+     "vit",
+     "5,39"
+    ],
+    [
+     "midnight",
+     "3,52"
+    ],
+    [
+     "sky",
+     "5,10"
+    ]
+   ],
+   "txt": " --ampy-warn-ink besked-accent + varningstext 2 källor (2 auk 1) vit 5,39 midnight 3,52 sky 5,10 "
+  },
+  {
+   "name": "Varning tint",
+   "hex": "#fff4e0",
+   "token": "--apamber-tint",
+   "antal": 2,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,09"
+    ],
+    [
+     "midnight",
+     "17,43"
+    ],
+    [
+     "sky",
+     "1,03"
+    ]
+   ],
+   "txt": " --ampy-warn-tint varnings-bakgrund 2 källor (1 auk 1) vit 1,09 midnight 17,43 sky 1,03 "
+  },
+  {
+   "name": "Fel (fält, meddelande)",
+   "hex": "#b3261e",
+   "token": "--apsignal-red",
+   "antal": 3,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "6,54"
+    ],
+    [
+     "midnight",
+     "2,91"
+    ],
+    [
+     "sky",
+     "6,19"
+    ]
+   ],
+   "txt": " --ampy-error fel, akut 3 källor (1 auk 1) vit 6,54 midnight 2,91 sky 6,19 "
+  },
+  {
+   "name": "Fel ink (besked)",
+   "hex": "#7a1623",
+   "token": "--apverdict-red",
+   "antal": 2,
+   "auk1": 2,
+   "cons": [
+    [
+     "vit",
+     "10,68"
+    ],
+    [
+     "midnight",
+     "1,78"
+    ],
+    [
+     "sky",
+     "10,11"
+    ]
+   ],
+   "txt": " --ampy-error-ink besked-accent + akut-text 2 källor (2 auk 1) vit 10,68 midnight 1,78 sky 10,11 "
+  },
+  {
+   "name": "Fel tint",
+   "hex": "#fdeceb",
+   "token": "--apsignal-red-tint",
+   "antal": 3,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,14"
+    ],
+    [
+     "midnight",
+     "16,62"
+    ],
+    [
+     "sky",
+     "1,08"
+    ]
+   ],
+   "txt": " --ampy-error-tint fel-/akut-bakgrund 3 källor (1 auk 1) vit 1,14 midnight 16,62 sky 1,08 "
+  },
+  {
+   "name": "Info ink",
+   "hex": "#0d568c",
+   "token": "--apverdict-blue",
+   "antal": 2,
+   "auk1": 2,
+   "cons": [
+    [
+     "vit",
+     "7,70"
+    ],
+    [
+     "midnight",
+     "2,47"
+    ],
+    [
+     "sky",
+     "7,29"
+    ]
+   ],
+   "txt": " --ampy-info-ink besked-accent info 2 källor (2 auk 1) vit 7,70 midnight 2,47 sky 7,29 "
+  },
+  {
+   "name": "Google-gult (stjärnor, B12)",
+   "hex": "#fbbc04",
+   "token": "--apgoogle-gold",
+   "antal": 2,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,71"
+    ],
+    [
+     "midnight",
+     "11,12"
+    ],
+    [
+     "sky",
+     "1,62"
+    ]
+   ],
+   "txt": " (stjärnor, B12) Google-stjärnor 2 källor (1 auk 1) vit 1,71 midnight 11,12 sky 1,62 "
+  },
+  {
+   "name": "Pure white",
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "antal": 26,
+   "auk1": 13,
+   "cons": [
+    [
+     "vit",
+     "1,00"
+    ],
+    [
+     "midnight",
+     "19,00"
+    ],
+    [
+     "sky",
+     "1,06"
+    ]
+   ],
+   "txt": " --ampy-bg-surface, --ampy-on-dark, --ampy-action-on kort, text på mörkt, alfa-serie på mörkt 26 källor (13 auk 1) vit 1,00 midnight 19,00 sky 1,06 "
+  },
+  {
+   "name": "Sky mist",
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "antal": 21,
+   "auk1": 10,
+   "cons": [
+    [
+     "vit",
+     "1,06"
+    ],
+    [
+     "midnight",
+     "17,98"
+    ],
+    [
+     "sky",
+     "1,00"
+    ]
+   ],
+   "txt": " --ampy-bg-page, --ampy-bg-subtle sidbakgrund, subtil yta, ljus aurora-bas 21 källor (10 auk 1) vit 1,06 midnight 17,98 sky 1,00 "
+  },
+  {
+   "name": "Milk white",
+   "hex": "#f5f5f5",
+   "token": "--apmilk-white",
+   "antal": 1,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,09"
+    ],
+    [
+     "midnight",
+     "17,42"
+    ],
+    [
+     "sky",
+     "1,03"
+    ]
+   ],
+   "txt": " (oanvänd) definierad + alfa-serie; 0 användningar i blocken 1 källor (1 auk 1) vit 1,09 midnight 17,42 sky 1,03 "
+  },
+  {
+   "name": "Gray white",
+   "hex": "#d9d9d9",
+   "token": "--apgray-white",
+   "antal": 1,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "1,41"
+    ],
+    [
+     "midnight",
+     "13,46"
+    ],
+    [
+     "sky",
+     "1,34"
+    ]
+   ],
+   "txt": " (oanvänd) definierad; 0 användningar 1 källor (1 auk 1) vit 1,41 midnight 13,46 sky 1,34 "
+  },
+  {
+   "name": "Charcoal gray (drift)",
+   "hex": "#333333",
+   "token": "--apcharcoal-gray",
+   "antal": 6,
+   "auk1": 3,
+   "cons": [
+    [
+     "vit",
+     "12,63"
+    ],
+    [
+     "midnight",
+     "1,50"
+    ],
+    [
+     "sky",
+     "11,96"
+    ]
+   ],
+   "txt": " drift → --ampy-ink-body live --color-20: brödtext mobil ROT/GT, rot-gt-familjens p, booking body-ink, hero-2 input-text 6 källor (3 auk 1) vit 12,63 midnight 1"
+  },
+  {
+   "name": "Pure black",
+   "hex": "#000000",
+   "token": "--appure-black",
+   "antal": 2,
+   "auk1": 1,
+   "cons": [
+    [
+     "vit",
+     "21,00"
+    ],
+    [
+     "midnight",
+     "1,11"
+    ],
+    [
+     "sky",
+     "19,88"
+    ]
+   ],
+   "txt": " (punkt) main-form asterisk; logo-PNG:er (#000) 2 källor (1 auk 1) vit 21,00 midnight 1,11 sky 19,88 Alfa-ramper --appure-black-5 till -90 (på vit) och --apmilk"
+  },
+  {
+   "name": "Cobalt (brandbok s.7)",
+   "hex": "#326afd",
+   "token": "(inget ap-token)",
+   "antal": null,
+   "auk1": null,
+   "cons": [
+    [
+     "vit",
+     "4,55"
+    ],
+    [
+     "midnight",
+     "4,17"
+    ],
+    [
+     "sky",
+     "4,31"
+    ]
+   ],
+   "txt": " (inget token) bokens huvudaccent: ikoner, blixt-former, hjälm, bil, skyltar 2 (brandbook + artikelmallen som Tailwind \"electric\", 73 användningar) vit 4,55 mid"
+  },
+  {
+   "name": "Lime (brandbok s.8)",
+   "hex": "#92ec47",
+   "token": "(inget ap-token)",
+   "antal": null,
+   "auk1": null,
+   "cons": [
+    [
+     "vit",
+     "1,47"
+    ],
+    [
+     "midnight",
+     "12,95"
+    ],
+    [
+     "sky",
+     "1,39"
+    ]
+   ],
+   "txt": " (inget token) stödfärg i boken, gradient 2 1 (brandbook) vit 1,47 midnight 12,95 sky 1,39 "
+  }
+ ]
+}

@@ -1,0 +1,529 @@
+KOMPONENTER
+Alla komponenter
+
+Komponentkartans rader som galleri: 70 komponenter i sju grupper, var och en med sin kanoniska källa, status och en länk till sidan där den renderas i alla tillstånd. Grundkomponenterna (handling, text, ytor, fält) visas live i korten.
+
+konsolidering/komponenter-karta.md (en rad per komponent ur 290 komponentrader i 30 inventerings-JSON). Kanon = en källa äger komponenten; kanon med drift = källan är given men andra block avviker; bara i en källa; saknas = efterfrågad men inte byggd med auktoritet 1 till 2.
+
+KANON
+KANON MED DRIFT
+BARA I EN KÄLLA
+SAKNAS I AUK 1 TILL 2
+6
+Handling
+9
+Textelement
+7
+Ytor och kort
+10
+Fält och reglage
+10
+Kalkylator-kitet
+9
+Diagnostik-kitet
+19
+Block
+Handling
+
+En knappform, tre ytor och textlänkarna. Sidan: Knappar och länkar.
+
+Kostnadsfri offert
+KANON MED DRIFT
+
+Primär gradient-CTA
+
+cta-website (auk 1). Samma knapp i 38 / 46 / 52 / 58 px i källorna; 58 är kanon.
+
+Ring 010-265 79 79
+KANON
+
+Tel-ring
+
+cta-website (auk 1). Blå gradient, vit chip med lur och puls.
+
+Boka rådgivning
+KANON MED DRIFT
+
+Solid (verktyg, formulär, kort)
+
+website-blocks header-CTA (auk 1), ytan teal-deep enligt B5. Fyra tealer i källorna.
+
+Fortsätt
+KANON MED DRIFT
+
+Ghost och outline
+
+elcentral-kollen (auk 1). Fem sekundära utföranden i källorna; biblioteket saknar en.
+
+Räkna ut din besparing
+KANON MED DRIFT
+
+Textlänkar
+
+elcentral cta-link, hero-2 link-quiet, thank-you ghost. Länkfärg teal-deep.
+
+Ring jouren
+BARA I EN KÄLLA
+
+Nödknapp (eljour)
+
+eljour-block (auk 1). Tredje CTA-språket, blir solid teal-deep enligt B6.
+
+Textelement
+
+Eyebrow, tagg, stat-trio, hero-siffra, källrad, proof-rad, citat, listor, prisrad. Sidan: Textelement.
+
+DAGENS KOSTNAD
+KANON MED DRIFT
+
+Eyebrow
+
+energycalc + thank-you (12/600 .14em). Tre eyebrow-system i källorna, B19.
+
+Låg risk
+Bör ses över
+KANON MED DRIFT
+
+Tagg, badge, pill
+
+elcentral-kollen (auk 1), fem nivåer. Åtta pillrecept i källorna.
+
+ENERGI
+16 819
+kWh
+59 % lägre
+CO₂
+7,8
+ton
+per år
+KANON
+
+Stat-trio
+
+led-kalkylator (auk 1). Tre kolumner, Outfit per B7.
+
+27 752
+kr/år
+KANON MED DRIFT
+
+Hero-siffra med enhet
+
+led-kalkylator (auk 1): 56/38 i 700. Energycalc 52/900.
+
+Källa: Elsäkerhetsverket, händelser 2018 till 2022.
+
+KANON
+
+Källrad
+
+elkollen (auk 1): 13 px, svag, hårlinje.
+
+5,0 på Google
+KANON MED DRIFT
+
+Proof-rad
+
+hero-1 (auk 1). Stjärnor guld per B12; siffrorna [GAP].
+
+“
+Anna, Huddinge
+KANON
+
+Citat
+
+testimonials-block (auk 1). Citattecken, text, namn, stjärnor, datum.
+
+Behörig elektriker
+Fast pris innan start
+KANON
+
+Listor: bock, kompakt, steg
+
+elcentral rail-bullets, eljour trust, rot-gt av-steps.
+
+14 950 kr
+efter ROT
+KANON MED DRIFT
+
+Prisrad
+
+rot-gt-cro (auk 1 till 2). Produktsidornas prisrad inte inventerad.
+
+Ytor och kort
+
+Ljust kort, mörkt resultatkort, glaskort, navy-ram, avdelare, band, aurora. Sidan: Ytor och kort.
+
+ELCENTRAL
+
+Byte av elcentral
+
+KANON MED DRIFT
+
+Ljust kort
+
+live .rot__container (auk 1) + eljour ram och skugga. Fem radier, fem skuggor i källorna (B10).
+
+ÅRLIG BESPARING
+27 752
+kr/år
+KANON MED DRIFT
+
+Mörkt resultatkort
+
+led-kalkylator (auk 1). Platt default, glöd som tillval (B9).
+
+TACK
+KANON MED DRIFT
+
+Glaskort
+
+thank-you (auk 2). Vit .72 + blur 16. Bara på auroran (B15).
+
+HJÄLTERAM
+KANON MED DRIFT
+
+Navy-ram (hjälteram)
+
+hero-1 (auk 1): 1700, radie 22, veil. Hero-2: 1424/48.
+
+KANON
+
+Avdelare
+
+var-process hårlinje, LED intern avdelare, thank-you teal-toning.
+
+KANON
+
+Sektionsband
+
+live .brxe-section + testimonials + visste-du-att. 2xl-rytm.
+
+KANON
+
+Aurora (ljus)
+
+thank-you, booking, offer-accepted. Bara kundflödet (B11).
+
+Fält och reglage
+
+Input, sökfält, select, textarea, checkbox, radio-chips, segment, slider, stepper, hjälp och fel. Sidan: Fält och reglage.
+
+E-post
+KANON MED DRIFT
+
+Fält och input
+
+elcentral-kollen (auk 1), konsoliderad till 48 h, radie 12, kant 3:1. Nio recept i källorna.
+
+BARA I EN KÄLLA
+
+Sökfält och adresslista
+
+elkollen __search + main-form adress-combobox.
+
+Snitt brinntid (12,0 h/dygn)
+KANON
+
+Select
+
+led-kalkylator (auk 1) med pil ur hero-2-form.
+
+BARA I EN KÄLLA
+
+Textarea
+
+main-form (auk 2): min 70, resize none.
+
+Jag vill ha offert på laddbox också
+KANON MED DRIFT
+
+Checkbox och samtycke
+
+led-kalkylator ritad ruta + elcentral. Vanligast: samtycke som textrad.
+
+10 till 30 år
+KANON
+
+Radio-chips och val
+
+elcentral-kollen __option (auk 1): 64/56, auto-avancerar.
+
+BRF
+Företag
+Privat
+KANON MED DRIFT
+
+Segment
+
+led-kalkylator (auk 1): sunk track, raised pill. EV toggle, energycalc seg.
+
+KANON MED DRIFT
+
+Slider
+
+led-kalkylator (auk 1) som native range. Tre tumstorlekar i källorna.
+
+2
+KANON
+
+Stepper
+
+energycalc (auk 1): kant, 44 px knappar, värde 20/500.
+
+Postnumret har fem siffror.
+
+KANON
+
+Hjälp, fel, meddelanden
+
+hero-2 help/err, elcentral lead-error, LED lead-msg.
+
+Kalkylator-kitet (S3)
+
+Tvåpanel-skalet och allt som bor i resultatkortet. Sidan: Kalkylator-kitet.
+
+KANON MED DRIFT
+
+Tvåpanel-skal
+
+led-kalkylator (auk 1): 5fr/7fr, vitt inputkort + mörkt resultatkort. Padding 20 vs 40, 1280 vs 1360.
+
+KANON MED DRIFT
+
+Hero-readout
+
+Se textelement: hero-siffra med enhet.
+
+KANON MED DRIFT
+
+Staplar amber/teal (före/efter)
+
+led-kalkylator (auk 1) __compare. Tre stapelspråk i källorna.
+
+BARA I EN KÄLLA
+
+Streams-bar (intäktskällor)
+
+battery-calculator (auk 3). Belägg, inte kanon.
+
+BARA I EN KÄLLA
+
+Break-even-kurva
+
+battery-calculator (auk 3). Belägg, inte kanon.
+
+KANON MED DRIFT
+
+Så har vi räknat
+
+led-kalkylator (auk 1) __methodology: details/summary i eget kort.
+
+KANON MED DRIFT
+
+Lead-formulär inline
+
+led-kalkylator (auk 1): ersätter CTA:n. Fem inline-lead-mönster.
+
+KANON MED DRIFT
+
+Tips-chip och tooltip
+
+led-kalkylator (auk 1). EV:s popover är bättre än LED:s tooltip.
+
+KANON MED DRIFT
+
+Popover (dela)
+
+energycalc (auk 1) .share-pop.
+
+KANON MED DRIFT
+
+Produktväljare (selector)
+
+led-kalkylator (auk 1): knapp 78 med ikonruta, lista radie 12.
+
+Diagnostik-kitet (S3)
+
+Rail, frågekort, besked och delning. Sidan: Diagnostik-kitet.
+
+KANON
+
+Rail (varumärkeskolumn)
+
+elcentral-kollen (auk 1): H1, lead, trust-bullets, två gradient-CTA:er.
+
+KANON
+
+Frågekort (stage)
+
+elcentral-kollen (auk 1): radie 14 (drift mot kort 20), min-height 560, stegprickar.
+
+KANON
+
+Chips / options
+
+Se fält: radio-chips.
+
+KANON
+
+Besked: dualstatus (2 gånger 2)
+
+elcentral-kollen (auk 1), signaturen: tint-zon, 4 px accentstapel, pills.
+
+KANON
+
+Besked: trafikljus-board
+
+elkollen (auk 1): 6 px sidostapel, topp-wash, tabbar.
+
+KANON MED DRIFT
+
+Besked-pill
+
+Se textelement: tagg (fem nivåer).
+
+KANON
+
+Källrad (diagnostik)
+
+Se textelement: källrad.
+
+KANON MED DRIFT
+
+Dela
+
+elcentral-kollen (auk 1): 44 px ikonknapp, meny, toast (Arial-defekt).
+
+KANON MED DRIFT
+
+Sticky-CTA (mobil)
+
+elcentral-kollen (auk 1): fast vit shelf 77 h. Två sticky-recept.
+
+Block (S4)
+
+Hela block: hjältar, testimonials, certifikat, eljour, före/efter, header, footer och CRM-flödet. Sidan: Block. Galleriet med skärmdumpar: Blockbiblioteket.
+
+KANON
+
+Hero-1 (startsidan)
+
+hero-1 (auk 1), ägargodkänd. Inramad foto-hero, h1 60/700.
+
+KANON
+
+Hero-2 S/G/Z/E (tjänstesidor)
+
+hero-2-alternatives (auk 2), v18. Navy ram 22, h1 48.
+
+KANON
+
+Mini-menu (produktväljare)
+
+mini-menu (auk 2): tre fotokort 404, sky-blue pill.
+
+KANON MED DRIFT
+
+ROT/GT-kvittopanel och stegringar
+
+rot-gt-cro (auk 2) d2. Live-klonen driver.
+
+KANON
+
+Testimonial-kort och slider
+
+testimonials-block (auk 1) V1 låst. Fem färger utanför ap*.
+
+KANON
+
+Certifikat-badge
+
+certificates (auk 2) v2: 236 gånger 113, tre-lagers skugga.
+
+KANON
+
+Eljour-symptomlista och samtalskort
+
+eljour-block (auk 1), sajtens bästa block 23/25.
+
+KANON
+
+Före/efter
+
+fore-efter-cro (auk 2): reglaget, clip-path, chip.
+
+SAKNAS I AUK 1 TILL 2
+
+Vår process
+
+var-process-cro (auk 3), väntar val + fem GAP-signaturer.
+
+KANON
+
+Fotobedömning (Avslutskortet)
+
+fotobedomningen (auk 2) v2: fem staplar, en tänd.
+
+KANON
+
+Visste du att
+
+visste-du-att (auk 2): midnight-kort med kicker och blixt.
+
+KANON
+
+CTA-band (Main CTA)
+
+main-cta (auk 2) B1: vitt kort, h2 40, ring-CTA, porträtt.
+
+KANON
+
+Sticky call-bar
+
+eljour-sticky-bar (auk 2): 83 h remsa med ring-knappen, hörnkort desktop.
+
+KANON MED DRIFT
+
+Footer
+
+footer-cro (auk 1 baslinje). Riktning väntar ägarval; fyra navyer, PJS 800.
+
+KANON
+
+Header och mega-meny
+
+website-blocks (auk 1): 76/66 h, nav 18/500, CTA solid 48.
+
+KANON MED DRIFT
+
+Artikel-komponenter (21)
+
+article-template (auk 2): egen Tailwind-palett, konverteras till --ampy-*.
+
+SAKNAS I AUK 1 TILL 2
+
+Tack-sidans tidslinje
+
+offer-accepted (auk 3). Begärd av thank-you-briefen.
+
+KANON
+
+Bokningens sammanfattningskort
+
+booking-confirmation (auk 2), CRM, egen tokenlayer i px.
+
+KANON
+
+Bekräftelse-bock (animerad)
+
+thank-you (auk 2): 104/88 px SVG, halo 4 s.
+
+Saknas i auktoritet 1 till 2
+
+Efterfrågat av skillen eller briefer, inte byggt med auktoritet 1 till 2. Närmaste belägg i parentes.
+
+Sekundär- och tertiärknapp i knappbiblioteket (elkollen/elcentral outline, hero-2 ghost, booking sekundär): systemets solid och ghost är kanon med förbehåll.
+Streams-bar och break-even-chart (battery-calculator, auk 3): belägg, S3 visar dem som "bara i en källa".
+Processteg-block A7 (var-process v2 A, auk 3, väntar val): stegens lista finns som steg.
+Tack-sidans tre-stegsstege (offer-accepted, auk 3), krävd av thank-you-briefen.
+Felfärg, varning, fokusring och rörelse fanns inte som tokens: nu --ampy-error, --ampy-warn, --ampy-focus-ring, --ampy-dur-* i tokens.css.

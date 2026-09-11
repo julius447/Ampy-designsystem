@@ -1,0 +1,109 @@
+MÖNSTER
+Tjänstesidans rytm
+
+De 22 tjänstesidorna kör en kanonisk blocksekvens: heron, avdragsblocket i position 2, innehållet högt, sedan bevis, frågor och asken. Fyra asks i stället för tolv, ett betyg i stället för sex. Sektionernas luft, H2-regeln och fullbreddsregeln kommer från tokens och ägardirektiv.
+
+Sekvensen: ~/Desktop/Ampy Tjanstesidor-analys/ULTIMATA-STRUKTUREN.md (levererad 2026-08-10, revision 2 2026-08-13 till 14) återgiven ur minnesnoten tjanstesidor-ultimata-strukturen.md; blocken: konsolidering/komponenter-karta.md; luften: system/tokens.css (spacing-roller). Prisblocket i den första sekvensen är struket av ägardirektivet 2026-08-13 ("inga priser på tjänstesidorna"); avdragsblocket tar dess plats.
+
+Kanon-sekvensen (noll nya block)
+
+Alla 22 sidor kör identisk 14-blockssekvens i dag med tolv asks; kanon behåller blocken men flyttar tre av dem och tar bort upprepningarna. Positionerna nedan är kanon per revision 2; luften till höger är sektionsavståndet i tokens vid 1440 och 390.
+
+0
+Header (fixed 76 / 66)
+sidan börjar 76 px ned
+1
+HERO-S: navy ram, H1, lead, EN CTA, proof-rad (heron bär betyget, låst). T1-klassen (symptom) får tel: som hero-CTA.
+ram: 12 / 8 luft, 683 hög
+2
+Avdragsblocket (ROT eller grön teknik), flyttat 9 till 2: incitamentet före asken, inte under den. Tomt på felsökning, elbesiktning och lastbalansering (ingen ROT-sats). Renderar aldrig ett pris.
+sektion 2xl: 79 / 35
+3
+ContentBlock (innehållet) ligger kvar högt på alla 22 (ägarbeslut 2026-08-14), inte under asken.
+2xl
+4
+Klass-slot: det ENDA blocket som byts per intentklass. T1 symptom: eljour-blocket + sticky call-bar. T2 anläggning: Elcentral-kollen (bara elcentral, position 3, aldrig som paketets 2). T3 apparat och T6a rum: MainCTA v2. T4 ljus, T5 komfort: tom. T6b projekt: Vår process.
+2xl
+5
+Vår process "Vad som händer sen" (riktningsval väntar; dagens block ligger på 212 sidor).
+2xl
+6
+Testimonials (flyttat 2 till 5, före FAQ): sliderns badge är det enda betyget utöver heron.
+2xl
+7
+FAQ: details/summary, svaren i candour-registret, JSON-LD.
+2xl
+8
+MainContact (asken): det fyrfältiga offertformuläret, ingen wizard. enterView tömd (formuläret renderar utan JS).
+2xl
+9
+MapBlock: knappen bort, randen ut.
+xl: 56 / 27
+10
+Svansen med EN CTA (FooterSEO till #main-contact), relaterade tjänster sist.
+xl
+11
+Certifikat-bandet, olänkat, sedan Prefooter + Footer.
+xl / band 354, footer 2xl
+
+Asks: hero-CTA, avdragsblockets CTA, klass-slottens CTA, asken själv = fyra av konstruktion (bastemplaten §2b). Ett betyg (heron). Blocken renderade: Block.
+
+Position 1: HERO-S (22 tjänstesidor).
+Position 2: avdragsblocket.
+Sektionernas luft, ur tokens
+
+Sektion till sektion är en skala, inte ett tal per block. Tre steg täcker allt på en tjänstesida; mätt på live och i de levererade blocken (testimonials, visste-du-att, före/efter, footer, certifikat live = 2xl; certifikat v2, main-cta, elcentral-blockläge, var-process = xl; live-temats sektion = l).
+
+ROLL	TOKEN	1440	390	ANVÄNDS AV
+Sektion till sektion (standard)	--ampy-space-section-y = 2xl	79,2 px	34,8 px	testimonials, visste-du-att, före/efter, avdragsblocket, footerns mörka zon
+Tät sektion (band med egen yta)	--ampy-space-xl	56 px	27,3 px	certifikat v2, CTA-bandet, prefooter, vår process, elcentral-blockläge
+Sidoluft (gutter)	--ampy-gutter = l	39,6 px	21,5 px	alla band; heros kör 8 till 26 px runt ramen
+Rubrikblock till innehåll	--ampy-space-stack-lg = l	39,6 px	21,5 px	testimonials head, före/efter H2, avdragsblockets H2 (44 = egen clamp)
+Kort i band, rutnät	--ampy-space-gap = m	28 px	16,9 px	före/efter-paret, GT-grid, certifikat text till kort
+Kortets inre luft	--ampy-space-card = m, -card-lg = l	28 / 39,6 px	16,9 / 21,5 px	testimonial-kort, samtalskort; resultatkort, vår process
+
+Rytmregeln inuti ett block (var-process v2, bokningen): 10 inom grupp, 20 och 28 mellan syskon, 40 och 56 mellan zoner, 80 i botten. Zon mot syskon cirka 2,0; botten cirka 1,5 gånger toppen. Ett block med 24 godtyckliga avstånd "ser ut som ett system och beter sig som en hög lokala beslut": det är signaturen för genererad kod.
+
+H2-regeln per sektion
+En H2 per block
+eljour-block, avdragsblocket, testimonials, certifikat, före/efter, vår process, visste-du-att
+
+Varje block bär exakt en H2 och den är sektionens namn. Sidan har en H1 (heron). Eyebrow eller caps ovanför H2:n bär kategorin ("Steg för steg", "Visste du att"), aldrig informationen ensam (B19).
+
+Storlek 36 / 500 / 1.2 / -.01em
+--ampy-text-h2 (26,8 på 390), beslut B17
+
+Startsidan kör i dag fem H2-storlekar (40/500, 40/600, 38/500, 36/400, 32/400). Kanon är en: 36 med vikt 500. Sektions-H2 med kicker ovanför bär hierarkin via eyebrown, inte via storleken. Live ROT/GT, före/efter och footerns h3 växer 32 till 36; CTA-bandet, vår process och temat krymper 40 till 36.
+
+Centrerad i bevisblock, vänsterställd i argumentblock
+testimonials, certifikat (mobil), före/efter, eljour = centrerad; avdragsblocket (desktop), vår process, CTA-bandet, visste-du-att = vänster
+
+Blocket med en panel bredvid (familj C) ställer H2:n vänster över sin spalt; blocket som är ett band (familj D) centrerar. Avdragsblocket centrerar först under 900 px när spalterna staplas.
+
+Accenten
+avdragsblocket: 600 + 2 px understrykning; före/efter: linje .075em; testimonials live: gradientord (drift)
+
+Fyra accentdevices för "sista orden i H2" finns i källorna. Kanon är understrykningen i textens egen färg (ägarorder 2026-08-16); gradientord är drift (gradienttext ogillas). Accenten sitter på förmånsfrasen sist i mallen "[jobb] med [sats] % [avdragsnamn]".
+
+Mätt, inte ordbudget
+30ch (avdragsblocket), 720 px (testimonials), 600 px (mini-menu)
+
+H2:n har ett mått och text-wrap: balance; en nowrap-accent släpps under 900 px så balanseringen fungerar (rag-fixen i D2).
+
+Fullbreddsregeln
+
+Ägardirektiv 2026-08-14: vitmarginalregeln är pensionerad. Nya block kör nära full bredd, med prejudikat i Hero-S, headern och testimonials. Container 1280 är innehållets bredd, inte ytans tak.
+
+Bandet (sky-mist, vit, midnight) går kant till kant; innehållet cappas på 1280 med gutter 39,6 (21,5 på mobil).
+Fullbreddskort (avdragsblocket, vår process) har 8-bas-kvantiserad padding i cqi och cappar innerlayouten på 1560 från 1497 px kortbredd, så spalterna slutar driva isär på 1920.
+Heros är ramar: 1700 (Hero-1) eller 1424 (Hero-2) med 8 till 26 px luft, radie 22 (18 mobil). Två ramskalor på samma sajt är dokumenterad drift.
+Kant i kant på mobil är tillåtet för kortet (vår process under 479: radie 0, sidopadding 0) men inte kanon; övriga block behåller 10 till 16 px.
+Breda tabeller, kodblock och exempel scrollar i sin egen ram; sidan scrollar aldrig i sidled.
+I dag: live ROT-blocket i position 9 (under asken), vitt kort i container.
+Kanon: avdragsblocket i position 2, fullbreddskort.
+Fas 0 före allt (öppna grindar)
+Mätning: form_start med flera; sajten emitterar noll form_start i dag.
+Töm enterView på MainContact; bekräfta de två null-webhookarna (AMPY_LEAD_WEBHOOK, ECK lead_webhook_url): "Tack!" visas men leaden kastas.
+Fyra P0-antaganden väntar ägarsvar: telefonpreferensen (n = 2), "fast pris i offerten" osignerad, SEO-bevarandekravet, ROT som incitament på mikrojobb runt 450 kr.
+Riktningsval: vår process (A rekommenderad), footer (B rekommenderad), sticky call-barens hörn.
+A/B är omöjligt på mallen; beslut tas på mekanisk evidens och 28 dagars baslinje.

@@ -239,7 +239,7 @@
   --ampy-on-dark-subtle: rgba(255,255,255,.06);    /* källa: led-kalkylator (styles.css:35 jämförelsespår) + ev-kalkylator (monthly-panel/lead-form .06) + energycalc (sp-item-kant .06) ; drift: .08 EV stapelspår/rot-gt totalplatta, .02/.04 energycalc */
 
   /* ---------- HANDLING ---------- */
-  --ampy-action:            var(--apteal-core);      /* källa: energycalc (tool.css:26 CTA + valda kanter), led-kalkylator (styles.css:21 --action-primary), website-blocks (header-CTA), elkollen/elcentral (accent), 25 källor ; drift: EV #007d6b, elcentral/elkollen knapp #007a69 (= --ampy-action-strong). Ägarbeslut 2026-07: teal ensam accent (cobalt #326afd 0 i produktion) */
+  --ampy-action:            var(--apteal-core);      /* REGEL (beslut B21): teal core är aldrig text på ljus yta (2,96:1 mot vit). På midnight (6,41:1) tillåten för kicker, readout-enhet och siffra >= 16 px där källan gör så (visste-du-att, battery); all annan text-teal = --ampy-action-strong. Samma text i farg.html, tillganglighet.html, ai-tells.html. ; källa: energycalc (tool.css:26 CTA + valda kanter), led-kalkylator (styles.css:21 --action-primary), website-blocks (header-CTA), elkollen/elcentral (accent), 25 källor ; drift: EV #007d6b, elcentral/elkollen knapp #007a69 (= --ampy-action-strong). Ägarbeslut 2026-07: teal ensam accent (cobalt #326afd 0 i produktion) */
   --ampy-action-strong:     var(--apteal-deep);      /* källa: elcentral-kollen (elcentralkollen.css:46-47) + elkollen (behorighetskollen.css:51): solid knapp med vit text, textlänkar, sista H1-raden ; drift: se --apteal-deep. Beslut B5 (teal-kontrast) */
   --ampy-action-hover:      #008d79;                 /* källa: hero-1 + website-blocks (header.css:13 --ap-teal-hover, header-CTA) ; drift: #00b89e energycalc (ljusare), rgb(0,108,93) elcentral strong-hover, LED/EV opacity .92 i stället för färgbyte */
   --ampy-action-on:         var(--appure-white);     /* källa: website-blocks (header-CTA vit 600) + energycalc + LED + elcentral/elkollen solid ; drift: --apindigo på gradienten (= --ampy-ink-on-action) */
@@ -258,6 +258,10 @@
   --ampy-error-ink:      var(--apverdict-red);    /* källa: elcentral-kollen (akut-text rgb(122,22,35)) + elkollen (accent red), 10,68:1 ; drift: rgb(124,32,32) elcentral pill-fg */
   --ampy-error-tint:     var(--apsignal-red-tint);/* källa: eljour-block + fotobedomningen + hero-2 eljour ; drift: rgb(252,237,238) elcentral akut, rgba(209,73,91,.08) main-form banner, rgba(214,64,64,.06) elkollen board */
   --ampy-info-ink:       var(--apverdict-blue);   /* källa: elcentral-kollen (info-ikon, accent-info) + elkollen (info-ikon), 7,70:1 ; drift: rgb(10,122,191) elkollen --text-info, rgb(17,82,135) elcentral pill-fg */
+  --ampy-info-tint:          rgb(224,236,248);   /* källa: elcentral-kollen (info-pill bg) + elkollen ; tillagd 2026-09-12 (TOKENS-4) */
+  --ampy-success-tint-strong: rgb(214,240,229);  /* källa: elcentral-kollen (besked-pill bg) ; för pillar i beskedzon (TOKENS-4) */
+  --ampy-warn-tint-strong:   rgb(250,233,197);   /* källa: elcentral-kollen (varnings-pill bg) (TOKENS-4) */
+  --ampy-error-tint-strong:  rgb(250,224,222);   /* källa: elcentral-kollen (akut-pill bg) (TOKENS-4) */
   --ampy-focus:          var(--apmidnight-blue);  /* källa: cta-website (*.css:33 focus-visible 3px solid #090b32 offset 3) + booking/offer (outline 3px navy, teal mätte 2,91:1) + fotobedomningen (3px, 19:1) + mini-menu/website-blocks ; drift: teal 3px (hero-1 CTA, thank-you, picasso), teal-ringar .2-.35 (LED sju varianter), #5eb1bf + rgba(94,177,191,.2) (live Bricks-formulär). Beslut B14 */
   --ampy-focus-on-dark:  var(--apneon-mint);      /* källa: energycalc (tool.css --ring-dark rgba(85,255,154,.30) + outline neon på mörkt) + elkollen/LED-sp-item neon inset ; drift: LED teal .35 på mörkt */
   --ampy-focus-ring:     0 0 0 3px rgba(0,122,105,.9); /* källa: elcentral-kollen (elcentralkollen.css --focus-ring, "höjd från .25 för WCAG 2.4.11", EN ring på alla fält+knappar) ; drift: 0 0 0 3px rgba(0,169,145,.25) elkollen (1,3:1 underkänd), .30 main-form, .18 hero-2 fält, 0 0 0 3px rgba(94,177,191,.2) live */
@@ -274,6 +278,11 @@
   --ampy-radius-card:    clamp(16px, 0.42vw + 14.7px, 20px);    /* = --apradius-l (20 @1440, 16.3 @390) ; källa: live-ampy-se (.rot__container --apradius-l) + LED/EV/energycalc (20), eljour (20), certificates, visste-du-att, fore-efter, fotobedomningen, mini-menu, main-cta, website-blocks lösningskort = 17 källor ; drift: 14 elkollen/elcentral, 22 hero-1-ram/booking/rot-gt-panel, 27 hero-2-form, 15 main-form, 16 testimonials (legacy --radius) */
   --ampy-radius-card-lg: clamp(24px, 0.83vw + 21.3px, 32px);    /* = --apradius-xl (32 @1440, 24.5 @390) ; källa: thank-you (v1/styles.css:42 var(--apradius-xl)) + rot-gt-cro (--av-r-xl 32 "kanon 3.2rem") + offer-accepted (px-översatt xl) ; drift: hero-1 A-variant 32/28 */
   --ampy-radius-pill:    999px;                                  /* = --apradius-full (999rem) ; källa: live (--apradius-full), testimonials prickar, thank-you knapp, mini-menu pill, hero-2 (--ap-r-pill 999px), fotobedomningen chip ; drift: 99rem eljour, 9999px legacy --radius-pill/article */
+
+  /* ---- Fält (tillagda 2026-09-12, granskning TOKENS-1) ---- */
+  --ampy-field-h:      48px;                     /* källa: main-form (fält 48), LED select 48, thank-you input 48 ; drift: elcentral 52, booking 44 */
+  --ampy-field-fs:     16px;                     /* källa: main-form/LED/elkollen: 16 px i fält (iOS-zoomgolv) ; drift: 15 fotobedomningen */
+  --ampy-field-track:  rgba(9,11,50,.07);        /* källa: led-kalkylator (segment/slider-spår rgb(234,239,243) på vitt = midnight .07) ; drift: EV .06, energycalc #eef1f5 */
 
   /* ---------- SKUGGOR (ordagranna) ---------- */
   --ampy-shadow-subtle:  0 1px 2px rgba(9,11,50,.06);            /* källa: led-kalkylator (styles.css:54 --shadow-sm rgba(15,18,60,.06) -> midnight) + ev-kalkylator ; drift: .04 elcentral/elkollen (11,13,42), .04 fotobedomningen/article, cta-chip 0 1px 3px .14 */
@@ -317,6 +326,8 @@
   --ampy-text-eyebrow: 12px;                                     /* 12 / 12 / 12 (fast) ; källa: energycalc (tool.css --ty-eyebrow 1.2rem 500 .14em), thank-you (cta-eyebrow --aptext-xs 600 .14em), offer-accepted (12 600 .14em), booking (12 700 .12em), elcentral (result-eyebrow 12 600), hero-2 trustrow 12 ; drift: 12.5 header, 13/700 rot-gt caps, 15/600 fotobedomningen/LED tier-label, 24 visste-du-att kicker (--aptext-l), 10-15/800 article */
   --ampy-text-number:  clamp(38px, 1.989vw + 30.54px, 56px);     /* 38.3 / 45.8 / 56 ; källa: led-kalkylator (styles.css:295 hero-number --fs-4xl clamp(3.8rem, 3.054rem + 1.989vw, 5.6rem)) ; drift: energycalc anchor-num 52/35.7 (= --aptext-3-5xl-ändpunkter, Outfit 900), EV/battery avsett 75 (cqi-bugg -> 38.7/44), rot-gt total clamp(20,1.6vw,24), booking belopp clamp(26,3.4vw,30) */
   --ampy-text-label:   14px;                                     /* 14 / 14 / 14 (fast) ; källa: hero-2-alternatives (primitives.css:488 label 14px 600 lh 20) + elkollen (lead-label --fs-14 600) + main-form (14/500) ; drift: 15/600 LED (PJS), 13/600 elcentral + booking 13.5, 15/500 fotobedomningen, 12/400 energycalc */
+  --ampy-text-fine:    13px;                                     /* 13 / 13 / 13 (fast) finstilt ; källa: rot-gt-cro d2 (13/700 kvittoetiketter), eljour-block (:96 13/400 ground), hero-2-alternatives (crumbs 13/500), elcentral/booking meta 13-13.5, header 13 ; nio källor. Tillagd 2026-09-12 (granskning TOKENS-1) */
+  --ampy-text-mid:     clamp(21px, 0.78vw + 9.8px, 28px);        /* 21 / 24 / 28 ; källa: led-kalkylator (--fs-xl 28 -> 21: stat-värde, enhet, prominent värde) + EV ; drift: energycalc 24. Tillagd 2026-09-12 (TOKENS-3) */
   --ampy-text-button:  16px;                                     /* 16 / 16 / 16 (fast) ; källa: cta-website (*.css:13 "16px 500 lh 1, ingen mobilskalning") = main-cta, rot-gt, fotobedomningen, picasso (--aptext-sm), live .bricks-button (--aptext-sm 16->14.1) ; drift: 15.5/15 hero-1 mobil, 15/600 elcentral/LED, 17/600 EV/hero-2 ampy-btn, 18 energycalc, 19 hero-2 Z submit */
 
   /* Vikter */
