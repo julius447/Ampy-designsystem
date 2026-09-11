@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tillgänglighet: Ampy designsystem</title>
+<!-- Sökvägarna nedan gäller för en sida i site/. Ligger sidan i site/<mapp>/ blir prefixet ../ -->
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för mönstersidorna (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-demo--stack { flex-wrap: nowrap; }
+  .ds-demo--stack > *, .ds-demo > * { min-width: 0; }
+  .ds-diagram { display: grid; gap: var(--ampy-space-xs); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); font-size: var(--ampy-text-small); line-height: 1.4; }
+  .ds-diagram__box { border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); min-height: 6rem; display: flex; flex-direction: column; gap: 0.4rem; border: 1px dashed var(--ampy-line-strong); color: var(--ampy-ink-muted); }
+  .ds-diagram__box b { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); font-size: var(--ampy-text-small); }
+  .ds-diagram__box--dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark-muted); border-style: solid; border-color: transparent; }
+  .ds-diagram__box--dark b { color: var(--ampy-on-dark); }
+  .ds-diagram__box--white { background: var(--ampy-bg-surface); border-style: solid; border-color: var(--ampy-line-strong); }
+  .ds-diagram__box--tint { background: var(--ampy-bg-subtle); }
+  .ds-diagram__box--band { background: var(--ampy-bg-page); grid-column: 1 / -1; min-height: 4rem; flex-direction: row; align-items: center; justify-content: center; text-align: center; border-style: solid; }
+  .ds-diagram__meta { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); }
+  .ds-diagram--calc { grid-template-columns: 5fr 7fr; }
+  .ds-diagram--diag { grid-template-columns: 44fr 56fr; }
+  .ds-diagram--block { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); }
+  .ds-diagram--seq { grid-template-columns: 1fr; gap: 0.6rem; }
+  .ds-diagram--seq .ds-diagram__box { min-height: 0; flex-direction: row; align-items: baseline; gap: var(--ampy-space-xs); }
+  .ds-diagram__n { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); min-width: 2.4rem; }
+  .ds-diagram__pad { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-action-strong); margin-left: auto; white-space: nowrap; }
+  .ds-fig { margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
+  .ds-fig figcaption { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin-top: 0.6rem; }
+  .ds-fig--pair { display: grid; grid-template-columns: 3fr 1fr; gap: var(--ampy-space-s); align-items: start; }
+  .ds-fig--pair figure { margin: 0; }
+  .ds-fig--pair img { max-height: 56rem; object-fit: cover; object-position: top; }
+  .ds-fig--wide { grid-template-columns: 1fr 1fr; }
+  .ds-two { display: grid; gap: var(--ampy-space-s); grid-template-columns: 1fr 1fr; margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-two > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); background: var(--ampy-bg-surface); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-xs); }
+  .ds-rule { display: grid; grid-template-columns: 22rem 1fr; gap: var(--ampy-space-s); padding: var(--ampy-space-s) 0; border-top: 1px solid var(--ampy-line); }
+  .ds-rule:last-child { border-bottom: 1px solid var(--ampy-line); }
+  .ds-rule__t { font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-body); }
+  .ds-rule__t small { display: block; font-weight: var(--ampy-w-body); color: var(--ampy-ink-faint); font-size: var(--ampy-text-small); margin-top: 0.3rem; }
+  .ds-rule__b { font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-rule__b p { margin: 0 0 0.6rem; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: var(--ampy-lh-body); font-weight: var(--ampy-w-body); max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.4rem; }
+  .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
+  .ds-blk .ds-h2 { margin-top: 0; }
+  @media (max-width: 991px) {
+    .ds-diagram--calc, .ds-diagram--diag, .ds-diagram--block { grid-template-columns: 1fr; }
+    .ds-fig--pair, .ds-fig--wide, .ds-two, .ds-rule { grid-template-columns: 1fr; }
+    .ds-fig--pair figure + figure { max-width: 22rem; }
+  }
+  /* AVSIKTLIGT FEL: motexemplen på ai-tells.html. Literaler med flit; det är felet som visas. Aldrig i doc.css eller components. */
+  .ds-wrong { font-family: var(--ampy-font); }
+  .ds-wrong__h { font-size: 3.2rem; font-weight: 500; line-height: 1.1; color: #090c34; margin: 0 0 .8rem; }
+  .ds-wrong__grad { background: linear-gradient(90deg, hsl(171 95% 41%) 15%, hsl(189 43% 56%) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .ds-two > .ds-wrong--slop { background: radial-gradient(60% 70% at 85% 15%, rgba(0,169,145,.5), transparent 60%), radial-gradient(50% 60% at 10% 100%, rgba(85,255,154,.25), transparent 60%), linear-gradient(160deg, #0b0f30, #2d516d); color: #fff; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; }
+  .ds-wrong__slop-h { font-size: 3.2rem; font-weight: 700; margin: 0; }
+  .ds-wrong__slop-p { font-size: 1.6rem; opacity: .8; margin: 0; max-width: 32ch; }
+  .ds-wrong__slop-btn { display: inline-block; padding: 1.2rem 2.4rem; border-radius: 999px; background: linear-gradient(90deg, #55ff9a, #00ffda); color: #0b0f30; font-weight: 700; }
+  .ds-wrong__line { font-size: 1.6rem; margin: 0 0 .6rem; color: #363636; }
+  .ds-wrong__card { border: 1px solid #e6ecf6; border-radius: 22px; padding: 21px 19px 27px; background: #fff; margin-bottom: .8rem; }
+  .ds-wrong__k { font-size: 1.3rem; letter-spacing: .2em; color: #8a8da5; margin: 0 0 13px; }
+  .ds-wrong__t { font-size: 1.9rem; font-weight: 600; margin: 0 0 9px; color: #0f123c; }
+  .ds-wrong__p { font-size: 1.7rem; margin: 0 0 27px; color: #3b3f59; }
+  .ds-wrong__t2 { font-size: 1.8rem; font-weight: 700; margin: 0 0 17px; color: #1e1e1e; }
+  .ds-wrong__p2 { font-size: 1.75rem; margin: 0 0 41px; color: #333; }
+  .ds-swatch__sem { color: var(--ampy-action-strong); }
+  .ds-contrast { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .ds-contrast span, .ds-key span { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; line-height: 1; padding: 0.4rem 0.7rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); color: var(--ampy-ink-faint); white-space: nowrap; }
+  .is-aa { color: var(--ampy-success-ink) !important; border-color: var(--ampy-success-ink) !important; }
+  .is-lg { color: var(--ampy-warn-ink) !important; border-color: var(--ampy-warn-ink) !important; }
+  .is-no { color: var(--ampy-ink-faint) !important; }
+  .ds-key { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  td.is-aa, td.is-lg, td.is-no { border-color: var(--ampy-line) !important; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-target { display: inline-flex; align-items: center; justify-content: center; border: 1px dashed var(--ampy-line-strong); border-radius: var(--ampy-radius-small); font-size: 1.2rem; color: var(--ampy-ink-faint); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-focus-demo :focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+  .ds-tnum { font-family: var(--ampy-font); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-strong); line-height: 1.4; }
+  .ds-tnum--tab { font-variant-numeric: tabular-nums lining-nums; }
+  .ds-two > .ampy-card--dark { background: var(--ampy-bg-dark); border-color: transparent; }
+
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="candour.html">Candour-grinden</a>
+        <a href="ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="tillganglighet.html" aria-current="page">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Regler</span>
+      <h1 class="ds-h1">Tillgänglighet</h1>
+      <p class="ds-lead">Kontrasten är räknad, inte antagen. Teal core är aldrig text. Allt som trycks är minst 44 px. Fokus syns på navy, rörelse släcks när användaren ber om det, och siffror som jämförs står stilla.</p>
+      <p class="ds-source"><code>konsolidering/farg.json</code> (kontrast mot vit, midnight och sky-mist för alla primitiva), <code>system/tokens.css</code> (radkommentarerna med uppmätta värden), <code>site/_probes/contrast.mjs</code>; reglerna ur källorna: elcentral-kollen (fokusring 3 px .9 "mätt mot WCAG 2.4.11"), booking (kontrollkanter .16 till .48 = 3,1:1), fotobedömningen (kontrollkant #5f6480, aldrig teal som kant), certificates (tvåtonsring), sticky-bar (tap-centrum 45 px), LED (on-dark-faint höjd .42 till .55).</p>
+
+      <section class="ds-blk" id="kontrast">
+        <h2 class="ds-h2">Kontrast</h2>
+        <div class="ds-key"><span class="is-aa">4,50 eller mer</span> brödtext, AA <span class="is-lg">3,00 till 4,49</span> stor text (minst 24 px, eller 19 px fet) och kontrollkanter <span class="is-no">under 3,00</span> bara fyllning, aldrig text</div>
+
+        <h3 class="ds-h3">Text på ljust</h3>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Roll</th><th>Token</th><th>Hex</th><th>Mot vit</th><th>Mot sky-mist</th><th>Regel</th></tr></thead>
+          <tbody>
+            <tr><td>Rubrik och brödtext</td><td><code>--ampy-ink</code>, <code>--ampy-ink-body</code></td><td>#090b32</td><td class="is-aa">19,00</td><td class="is-aa">17,98</td><td>Ett bläck; hierarki genom vikt (B3).</td></tr>
+            <tr><td>Dämpad text</td><td><code>--ampy-ink-muted</code></td><td>#565e82</td><td class="is-aa">6,33</td><td class="is-aa">5,99</td><td>Undertext, källrader, eyebrows.</td></tr>
+            <tr><td>Svag text</td><td><code>--ampy-ink-faint</code></td><td>#6a7190</td><td class="is-aa">4,80</td><td class="is-aa">4,54</td><td>Golvet för liten text. Elcentrals #8a8da5 (3,26) är underkänd.</td></tr>
+            <tr><td>Eljour-familjens brödtext</td><td><code>--apnavy-ink</code></td><td>#3b3f59</td><td class="is-aa">10,29</td><td class="is-aa">9,74</td><td>Behålls i fotobedömningen och hörnkortet.</td></tr>
+            <tr><td>Text-teal, länk, solid knapp</td><td><code>--ampy-action-strong</code></td><td>#007a69</td><td class="is-aa">5,27</td><td class="is-aa">4,98</td><td>Den enda tealen som får vara text.</td></tr>
+            <tr><td>Teal core</td><td><code>--ampy-action</code></td><td>#00a991</td><td class="is-no">2,96</td><td class="is-no">2,81</td><td><b>Aldrig text, aldrig kontrollkant.</b> Ikoner, ringar, fyllningar, valda kanter med redundans.</td></tr>
+            <tr><td>Sekundärteal (gradientslut)</td><td><code>--apsecondary-teal</code></td><td>#5eb1bf</td><td class="is-no">2,47</td><td class="is-no">2,33</td><td>Bär aldrig vit text (B16). Mörk text på den: indigo 5,51, darkest 6,76.</td></tr>
+            <tr><td>Knapptext på handlingsgradienten</td><td><code>--ampy-action-gradient-on</code></td><td>#282a53</td><td colspan="2" class="is-aa">5,51 mot #5eb1bf, 11,08 mot #b6f2ff</td><td>Gradientens mörkaste stopp är måttet.</td></tr>
+            <tr><td>Fel</td><td><code>--ampy-error</code></td><td>#b3261e</td><td class="is-aa">6,54</td><td class="is-aa">6,19</td><td>5,72 mot sin tint. Fel är röd, fokus är navy (B13, B14).</td></tr>
+            <tr><td>Beskedens accenter</td><td><code>--ampy-success-ink</code>, <code>-warn-ink</code>, <code>-error-ink</code>, <code>-info-ink</code></td><td>#0f6e56, #876507, #7a1623, #0d568c</td><td class="is-aa">6,20 / 5,39 / 10,68 / 7,70</td><td class="is-aa">5,87 / 5,10 / 10,11 / 7,29</td><td>Pill-paren i diagnostiken; warn-ink 4,95 mot sin tint.</td></tr>
+            <tr><td>Varning som yta</td><td><code>--ampy-warn</code></td><td>#f0af38</td><td class="is-no">1,93</td><td class="is-no">1,82</td><td>Bara staplar och prickar på mörkt, aldrig text.</td></tr>
+            <tr><td>Googles gult</td><td><code>--apgoogle-gold</code></td><td>#fbbc04</td><td class="is-no">1,71</td><td class="is-no">1,62</td><td>Stjärnor är ikoner (fyllning); talet bredvid är bläck.</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3 class="ds-h3">Text på midnight</h3>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Roll</th><th>Token</th><th>Värde</th><th>Mot midnight</th><th>Regel</th></tr></thead>
+          <tbody>
+            <tr><td>Rubrik, siffra</td><td><code>--ampy-on-dark</code></td><td>vit</td><td class="is-aa">19,00</td><td></td></tr>
+            <tr><td>Lead, brödtext</td><td><code>--ampy-on-dark-soft</code></td><td>vit .92</td><td class="is-aa">15,98</td><td>Visste-du-att kör .82 = 12,75.</td></tr>
+            <tr><td>Dämpad</td><td><code>--ampy-on-dark-muted</code></td><td>vit .66</td><td class="is-aa">8,44</td><td>Etiketter, enheter, datum.</td></tr>
+            <tr><td>Svag</td><td><code>--ampy-on-dark-faint</code></td><td>vit .55</td><td class="is-aa">6,12</td><td>LED höjde från .42 (3,99, underkänd) efter mätning.</td></tr>
+            <tr><td>Hårlinje</td><td><code>--ampy-on-dark-line</code></td><td>vit .14</td><td class="is-no">dekor</td><td>Avdelare, aldrig kontrollkant.</td></tr>
+            <tr><td>Fokus på mörkt</td><td><code>--ampy-focus-on-dark</code></td><td>#55ff9a</td><td class="is-aa">14,61</td><td>Neonmint mot vitt är 1,30: aldrig på ljust.</td></tr>
+            <tr><td>Teal core som stor text</td><td><code>--ampy-action</code></td><td>#00a991</td><td class="is-aa">6,41</td><td>Kickern i visste-du-att (22 px / 500). Som liten text: nej.</td></tr>
+            <tr><td>Gula stjärnor</td><td><code>--apgoogle-gold</code></td><td>#fbbc04</td><td class="is-aa">11,12</td><td></td></tr>
+            <tr><td>Nödknappens vita text</td><td>literal</td><td>#0a8169 (ljusaste stoppet)</td><td class="is-aa">4,82</td><td>Knappen får aldrig göras ljusare.</td></tr>
+          </tbody>
+        </table></div>
+
+        <h3 class="ds-h3">Kanter och kontroller (WCAG 1.4.11, 3:1)</h3>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Roll</th><th>Token</th><th>Värde</th><th>Mot vit</th><th>Regel</th></tr></thead>
+          <tbody>
+            <tr><td>Kontrollkant (fält, sekundärknapp)</td><td><code>--ampy-line-strong</code></td><td>midnight .48</td><td class="is-lg">3,39</td><td>Bokningen höjde från .16 (1,41). Elcentrals #e3e5ed (1,26) och eljours #e6ecf6 (1,19) är dekor, inte kant.</td></tr>
+            <tr><td>Hårlinje (dekor)</td><td><code>--ampy-line</code></td><td>midnight .14</td><td class="is-no">1,35</td><td>Avdelare i kort och listor.</td></tr>
+            <tr><td>Fotobedömningens kontrollkant</td><td>literal</td><td>#5f6480</td><td class="is-aa">5,80</td><td>Samma färg som mjuk text: två semantiker (drift).</td></tr>
+            <tr><td>Fokusring på ljust</td><td><code>--ampy-focus</code></td><td>3 px #090b32, offset 3</td><td class="is-aa">19,00</td><td>Teal som fokus mätte 2,91 (booking) och byttes.</td></tr>
+            <tr><td>Fokusring på fält</td><td><code>--ampy-focus-ring</code></td><td>0 0 0 3px rgba(0,122,105,.9)</td><td class="is-aa">4,7</td><td>Elkollens .25 (1,3) är underkänd.</td></tr>
+            <tr><td>Tvåtonsring på gradient</td><td>certificates</td><td>3 px vit + 6 px navy</td><td class="is-aa">minst 4,36 över hela bandet</td><td>En enfärgad ring klarar aldrig 3:1 över en gradient som spänner 19:1 till 1,9:1.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="ds-blk" id="traffytor">
+        <h2 class="ds-h2">Träffytor: 44 px är golvet</h2>
+        <p class="ds-p">Allt som trycks är minst 44 x 44 px. Träffytan får vara större än det synliga (osynlig padding, negativ margin) men aldrig mindre. Rader i listor är 60 till 68 px. Sticky-barens tap-centrum ligger 45 px från viewportens underkant så en missad tryckning landar i krom, inte i webbläsarens eget UI.</p>
+        <div class="ampy ds-demo">
+          <span class="ds-target" style="width:4.4rem;height:4.4rem">44</span>
+          <button class="ampy-btn ampy-btn--primary ampy-btn--compact" type="button">48 h kompakt</button>
+          <button class="ampy-btn ampy-btn--primary" type="button">58 h standard</button>
+          <a class="ampy-link" href="#">Textlänk, 44 px träffyta</a>
+          <button class="ampy-slider__dot is-active" type="button" aria-label="Prick med osynlig träffyta" style="margin:1.2rem 0.4rem"><span class="ampy-slider__dot-fill"></span></button>
+        </div>
+        <p class="ds-caption">Pricken är 44 x 6 synlig men 52 x 30 tryckbar (::before inset -12 / -4). Länken har 44 px min-height utan att påverka radhöjden runt.</p>
+      </section>
+
+      <section class="ds-blk" id="fokus">
+        <h2 class="ds-h2">Fokus</h2>
+        <p class="ds-p">Tangentbordsfokus är alltid synligt och ritas med <code>outline</code> (överlever egna box-shadows och forced-colors). Navy 3 px med 3 px offset på ljust; neonmint på mörkt; teal-deep-ring på fält. Fokus flyttas dit det hör hemma: till kvittorubriken efter inskick (<code>tabindex="-1"</code>), tillbaka till knappen när en meny stängs. <code>scroll-margin-block</code> 96 px mot sticky-baren så fokus aldrig hamnar bakom den (2.4.11).</p>
+        <div class="ampy ds-demo ds-focus-demo">
+          <button class="ampy-btn ampy-btn--primary" type="button" style="outline:3px solid var(--ampy-focus);outline-offset:3px">Fokus på ljust</button>
+          <div class="ampy-on-dark" style="background:var(--ampy-bg-dark);padding:var(--ampy-space-s);border-radius:var(--ampy-radius-card)"><button class="ampy-btn ampy-btn--primary" type="button" style="outline:3px solid var(--ampy-focus-on-dark);outline-offset:3px">Fokus på mörkt</button></div>
+          <span style="display:inline-flex;align-items:center;height:4.8rem;padding:0 1.4rem;border:1px solid var(--ampy-action-strong);border-radius:var(--ampy-radius-field);box-shadow:var(--ampy-focus-ring);font-size:1.6rem;color:var(--ampy-ink)">Fält i fokus</span>
+        </div>
+        <p class="ds-caption">Visade som statiska tillstånd. I koden: <code>:focus-visible</code> i base.css (navy), <code>:where(.ampy-on-dark) :focus-visible</code> (neonmint), <code>--ampy-focus-ring</code> på fält (S2).</p>
+      </section>
+
+      <section class="ds-blk" id="rorelse">
+        <h2 class="ds-h2">Rörelse</h2>
+        <ul class="ds-list">
+          <li>Tak 300 ms (<code>--ampy-dur-slow</code>), 160 ms på handlingsytor. Ingen entrance-animation som gömmer innehåll (opacity 0 utgångsläge är sajtens LCP-bugg).</li>
+          <li><code>prefers-reduced-motion: reduce</code> släcker allt: transitions, animationer, autoplay, pulser. Pseudoelementen måste stå med (animation ärvs inte; ett bart <code>*</code> når aldrig <code>::after</code>). Reduced-motion ger en statisk markör i sliderns prickar och visar bocken på tack-sidan direkt.</li>
+          <li>Halo-pulsen på tack-sidan är källornas enda oändliga animation; ampyRing (2,8 s) och pulsprickarna är de andra. Alla tre släcks av reduced-motion.</li>
+          <li>Hover-koreografi bara på (hover:hover) and (pointer:fine).</li>
+        </ul>
+      </section>
+
+      <section class="ds-blk" id="semantik">
+        <h2 class="ds-h2">Semantik och skärmläsare</h2>
+        <div class="ds-rule"><div class="ds-rule__t">fieldset och legend<small>radio-chips, segment, byggår</small></div><div class="ds-rule__b"><p>Varje grupp av val är ett <code>fieldset</code> med en <code>legend</code> som är frågan. Chippen är riktiga radioknappar (visuellt dolda, inte display none) så piltangenterna fungerar.</p></div></div>
+        <div class="ds-rule"><div class="ds-rule__t">aria-live<small>kalkylatorns resultat, kvittot, felmeddelanden</small></div><div class="ds-rule__b"><p>Hero-siffran och beskedet ligger i en <code>role="status"</code> med <code>aria-live="polite"</code> och <code>aria-atomic</code>, monterad som sektionens första barn utanför omskriven markup (fotobedömningens <code>afk__sr</code>). Fel meddelas där de uppstår, kopplade med <code>aria-describedby</code>.</p></div></div>
+        <div class="ds-rule"><div class="ds-rule__t">Listor som listor<small>stegen, märkeskorten, symptomlistan</small></div><div class="ds-rule__b"><p><code>role="list"</code> när list-style släcks: WebKit och VoiceOver tar annars bort listsemantiken ("lista med 4 objekt" försvinner).</p></div></div>
+        <div class="ds-rule"><div class="ds-rule__t">Expanderbart<small>symptomlistan, FAQ, "Så har vi räknat", mega-menyn</small></div><div class="ds-rule__b"><p><code>aria-expanded</code> och <code>aria-controls</code> på knappen, <code>inert</code> på stängda paneler, Escape stänger, fokus återvänder. FAQ och metoden är <code>details/summary</code> där det räcker.</p></div></div>
+        <div class="ds-rule"><div class="ds-rule__t">Dekor är dold<small>vågor, blobbar, glöd, citattecken, stjärnrader</small></div><div class="ds-rule__b"><p><code>aria-hidden="true"</code> på dekor; stjärnraden är en <code>role="img"</code> med "5 av 5 stjärnor" som etikett; ikoner utan mening är dolda, ikoner med mening har text intill (teal-glyfen är alltid redundant mot texten).</p></div></div>
+        <div class="ds-rule"><div class="ds-rule__t">Länkar som öppnas i ny flik<small>certifikat-korten</small></div><div class="ds-rule__b"><p>"Öppnas i ny flik" i aria-label, <code>rel="noopener noreferrer"</code>.</p></div></div>
+        <div class="ds-rule"><div class="ds-rule__t">Forced colors och print<small>avdragsblocket, mini-menu, CTA-bandet, sticky-bar</small></div><div class="ds-rule__b"><p>Windows högkontrast: knappar får ButtonFace/ButtonText/ButtonBorder, dekor-SVG döljs, ytor som bara bär en genomskinlig vit får ram i CanvasText. Print: bakgrunder trycks inte, ramar och bläck bär formen, mörka kort inverteras.</p></div></div>
+      </section>
+
+      <section class="ds-blk" id="siffror">
+        <h2 class="ds-h2">Tabulära siffror</h2>
+        <p class="ds-p">Siffror som byts (kalkylatorns resultat, kvittots belopp, tider, telefonnummer) är <code>font-variant-numeric: tabular-nums lining-nums</code> så raden inte hoppar när värdet ändras. Outfits woff2 bär tnum (uppmätt: "1111111111" 58,6 px proportionellt mot 94,4 px tabulärt). Proportionella siffror i löptext.</p>
+        <div class="ampy ds-demo" style="gap:var(--ampy-space-l)">
+          <div><p class="ds-demo__label" style="position:static">Proportionellt</p><p class="ds-tnum">11 111 kr<br>27 752 kr<br>9 000 kr</p></div>
+          <div><p class="ds-demo__label" style="position:static">Tabulärt</p><p class="ds-tnum ds-tnum--tab">11 111 kr<br>27 752 kr<br>9 000 kr</p></div>
+        </div>
+      </section>
+
+      <section class="ds-blk" id="checklista">
+        <h2 class="ds-h2">Checklista</h2>
+        <ul class="ds-list">
+          <li>Brödtext minst 4,5:1, stor text minst 3:1, kontrollkanter minst 3:1; mätt i <code>site/_probes/contrast.mjs</code>, inte antaget.</li>
+          <li>Teal core är aldrig text eller kant. Sekundärteal bär aldrig vit text. Neonmint aldrig mot vitt.</li>
+          <li>44 px träffytor, 16 px i fält, 12 px som textgolv.</li>
+          <li>Fokus synligt med outline; fokus flyttas efter tillståndsbyte; scroll-margin mot sticky element.</li>
+          <li>reduced-motion släcker allt inklusive pseudoelement; inget innehåll gömt bakom en animation.</li>
+          <li>fieldset/legend, aria-live, role list, aria-expanded/controls, inert, aria-hidden på dekor.</li>
+          <li>Tabulära siffror där värden byts.</li>
+        </ul>
+      </section>
+    </div>
+
+    </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

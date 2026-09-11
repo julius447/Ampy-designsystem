@@ -1333,9 +1333,9 @@
       "gap": "9px"
      },
      "sys": {
-      "rectH": 38.8,
+      "rectH": 48.5,
       "rectW": 345.9,
-      "height": "38.7969px",
+      "height": "48.5px",
       "minHeight": "auto",
       "paddingTop": "0px",
       "paddingRight": "0px",
@@ -1343,9 +1343,9 @@
       "paddingLeft": "0px",
       "borderTopLeftRadius": "0px",
       "fontFamily": "Outfit",
-      "fontSize": "14.5px",
+      "fontSize": "13.5px",
       "fontWeight": "400",
-      "lineHeight": "14.5px",
+      "lineHeight": "13.5px",
       "letterSpacing": "normal",
       "color": "rgb(9, 11, 50)",
       "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -1354,7 +1354,7 @@
       "borderTopColor": "rgb(9, 11, 50)",
       "boxShadow": "none",
       "textTransform": "none",
-      "gap": "8.302px"
+      "gap": "9px"
      }
     },
     "1440": {

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-tecken som inte får finnas: Ampy designsystem</title>
+<!-- Sökvägarna nedan gäller för en sida i site/. Ligger sidan i site/<mapp>/ blir prefixet ../ -->
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för mönstersidorna (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-demo--stack { flex-wrap: nowrap; }
+  .ds-demo--stack > *, .ds-demo > * { min-width: 0; }
+  .ds-diagram { display: grid; gap: var(--ampy-space-xs); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); font-size: var(--ampy-text-small); line-height: 1.4; }
+  .ds-diagram__box { border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); min-height: 6rem; display: flex; flex-direction: column; gap: 0.4rem; border: 1px dashed var(--ampy-line-strong); color: var(--ampy-ink-muted); }
+  .ds-diagram__box b { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); font-size: var(--ampy-text-small); }
+  .ds-diagram__box--dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark-muted); border-style: solid; border-color: transparent; }
+  .ds-diagram__box--dark b { color: var(--ampy-on-dark); }
+  .ds-diagram__box--white { background: var(--ampy-bg-surface); border-style: solid; border-color: var(--ampy-line-strong); }
+  .ds-diagram__box--tint { background: var(--ampy-bg-subtle); }
+  .ds-diagram__box--band { background: var(--ampy-bg-page); grid-column: 1 / -1; min-height: 4rem; flex-direction: row; align-items: center; justify-content: center; text-align: center; border-style: solid; }
+  .ds-diagram__meta { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); }
+  .ds-diagram--calc { grid-template-columns: 5fr 7fr; }
+  .ds-diagram--diag { grid-template-columns: 44fr 56fr; }
+  .ds-diagram--block { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); }
+  .ds-diagram--seq { grid-template-columns: 1fr; gap: 0.6rem; }
+  .ds-diagram--seq .ds-diagram__box { min-height: 0; flex-direction: row; align-items: baseline; gap: var(--ampy-space-xs); }
+  .ds-diagram__n { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); min-width: 2.4rem; }
+  .ds-diagram__pad { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-action-strong); margin-left: auto; white-space: nowrap; }
+  .ds-fig { margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
+  .ds-fig figcaption { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin-top: 0.6rem; }
+  .ds-fig--pair { display: grid; grid-template-columns: 3fr 1fr; gap: var(--ampy-space-s); align-items: start; }
+  .ds-fig--pair figure { margin: 0; }
+  .ds-fig--pair img { max-height: 56rem; object-fit: cover; object-position: top; }
+  .ds-fig--wide { grid-template-columns: 1fr 1fr; }
+  .ds-two { display: grid; gap: var(--ampy-space-s); grid-template-columns: 1fr 1fr; margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-two > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); background: var(--ampy-bg-surface); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-xs); }
+  .ds-rule { display: grid; grid-template-columns: 22rem 1fr; gap: var(--ampy-space-s); padding: var(--ampy-space-s) 0; border-top: 1px solid var(--ampy-line); }
+  .ds-rule:last-child { border-bottom: 1px solid var(--ampy-line); }
+  .ds-rule__t { font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-body); }
+  .ds-rule__t small { display: block; font-weight: var(--ampy-w-body); color: var(--ampy-ink-faint); font-size: var(--ampy-text-small); margin-top: 0.3rem; }
+  .ds-rule__b { font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-rule__b p { margin: 0 0 0.6rem; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: var(--ampy-lh-body); font-weight: var(--ampy-w-body); max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.4rem; }
+  .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
+  .ds-blk .ds-h2 { margin-top: 0; }
+  @media (max-width: 991px) {
+    .ds-diagram--calc, .ds-diagram--diag, .ds-diagram--block { grid-template-columns: 1fr; }
+    .ds-fig--pair, .ds-fig--wide, .ds-two, .ds-rule { grid-template-columns: 1fr; }
+    .ds-fig--pair figure + figure { max-width: 22rem; }
+  }
+  /* AVSIKTLIGT FEL: motexemplen på ai-tells.html. Literaler med flit; det är felet som visas. Aldrig i doc.css eller components. */
+  .ds-wrong { font-family: var(--ampy-font); }
+  .ds-wrong__h { font-size: 3.2rem; font-weight: 500; line-height: 1.1; color: #090c34; margin: 0 0 .8rem; }
+  .ds-wrong__grad { background: linear-gradient(90deg, hsl(171 95% 41%) 15%, hsl(189 43% 56%) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .ds-two > .ds-wrong--slop { background: radial-gradient(60% 70% at 85% 15%, rgba(0,169,145,.5), transparent 60%), radial-gradient(50% 60% at 10% 100%, rgba(85,255,154,.25), transparent 60%), linear-gradient(160deg, #0b0f30, #2d516d); color: #fff; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; }
+  .ds-wrong__slop-h { font-size: 3.2rem; font-weight: 700; margin: 0; }
+  .ds-wrong__slop-p { font-size: 1.6rem; opacity: .8; margin: 0; max-width: 32ch; }
+  .ds-wrong__slop-btn { display: inline-block; padding: 1.2rem 2.4rem; border-radius: 999px; background: linear-gradient(90deg, #55ff9a, #00ffda); color: #0b0f30; font-weight: 700; }
+  .ds-wrong__line { font-size: 1.6rem; margin: 0 0 .6rem; color: #363636; }
+  .ds-wrong__card { border: 1px solid #e6ecf6; border-radius: 22px; padding: 21px 19px 27px; background: #fff; margin-bottom: .8rem; }
+  .ds-wrong__k { font-size: 1.3rem; letter-spacing: .2em; color: #8a8da5; margin: 0 0 13px; }
+  .ds-wrong__t { font-size: 1.9rem; font-weight: 600; margin: 0 0 9px; color: #0f123c; }
+  .ds-wrong__p { font-size: 1.7rem; margin: 0 0 27px; color: #3b3f59; }
+  .ds-wrong__t2 { font-size: 1.8rem; font-weight: 700; margin: 0 0 17px; color: #1e1e1e; }
+  .ds-wrong__p2 { font-size: 1.75rem; margin: 0 0 41px; color: #333; }
+  .ds-swatch__sem { color: var(--ampy-action-strong); }
+  .ds-contrast { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .ds-contrast span, .ds-key span { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; line-height: 1; padding: 0.4rem 0.7rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); color: var(--ampy-ink-faint); white-space: nowrap; }
+  .is-aa { color: var(--ampy-success-ink) !important; border-color: var(--ampy-success-ink) !important; }
+  .is-lg { color: var(--ampy-warn-ink) !important; border-color: var(--ampy-warn-ink) !important; }
+  .is-no { color: var(--ampy-ink-faint) !important; }
+  .ds-key { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  td.is-aa, td.is-lg, td.is-no { border-color: var(--ampy-line) !important; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-target { display: inline-flex; align-items: center; justify-content: center; border: 1px dashed var(--ampy-line-strong); border-radius: var(--ampy-radius-small); font-size: 1.2rem; color: var(--ampy-ink-faint); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-focus-demo :focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+  .ds-tnum { font-family: var(--ampy-font); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-strong); line-height: 1.4; }
+  .ds-tnum--tab { font-variant-numeric: tabular-nums lining-nums; }
+  .ds-two > .ampy-card--dark { background: var(--ampy-bg-dark); border-color: transparent; }
+
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="candour.html">Candour-grinden</a>
+        <a href="ai-tells.html" aria-current="page">AI-tecken som inte får finnas</a>
+        <a href="tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Regler</span>
+      <h1 class="ds-h1">AI-tecken som inte får finnas</h1>
+      <p class="ds-lead">Ägarens lista över det som avslöjar genererad design och genererad text. Varje punkt har ett skäl och ett rätt alternativ; fyra av dem visas renderade som fel och rätt sida vid sida.</p>
+      <p class="ds-source">Ägardirektiv samlade i CLAUDE.md (regel 0 anti-teater, regel 3 proveniens), <code>konsolidering/beslut.md</code> (B9 glöd, B16 gradientslut, "gradienttext ogillas", "AI-slop-defaulten"), var-process v2:s byggspec ("ser ut som ett system och beter sig som en hög lokala beslut"), <code>ampy-rost</code> regel 12 (tankstreck) och regel 5 ("!"-spray), candour-grinden.</p>
+
+      <section class="ds-blk" id="listan">
+        <h2 class="ds-h2">Listan</h2>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Tecknet</th><th>Varför det avslöjar</th><th>Rätt</th></tr></thead>
+          <tbody>
+            <tr><td>Tankstreck (em- och en-dash) i UI</td><td>Modellernas favoritskiljetecken; renderar dessutom olika i värdarna.</td><td>Komma, kolon, "och", ny mening. Enda undantaget: platshållaren för tomt värde.</td></tr>
+            <tr><td>Mittpunkten "·" som avdelare</td><td>Samma familj; ett skiljetecken ingen skriver för hand.</td><td>En 1 px separator, ett mellanslag, ett kommatecken.</td></tr>
+            <tr><td>Gradienttext</td><td>Dekoration som ersätter ett påstående; kontrasten faller (~2:1 i CTA-bandet).</td><td>Accent i text-teal (5,27:1) eller understrykning i textens egen färg.</td></tr>
+            <tr><td>Midnattsblå scrims som yta</td><td>Ytan får en gradient utan funktion; fotot dör.</td><td>Scrim bara som veil på foto (kontrastmätt); ytor är platta: sky-mist, vit, midnight.</td></tr>
+            <tr><td>Mörkt kort + radial glöd + centrerad vit rubrik</td><td>"AI-slop-defaulten": kortet ser ut som varje annan AI-landningssida; glöden är dekor, rubriken säger inget.</td><td>Platt midnight som default (B9); glöd bara som ytbehandling bakom en siffra i verktygen; rubriken vänsterställd med kicker och ett specifikt påstående.</td></tr>
+            <tr><td>Ojämn spacing</td><td>24 godtyckliga avstånd i ett block: "ser ut som ett system och beter sig som en hög lokala beslut".</td><td>Rytmstegen ur tokens: 10, 20, 28, 40, 56, 80. Zon mot syskon cirka 2,0.</td></tr>
+            <tr><td>Fluff</td><td>"Vi brinner för kvalitet", "skräddarsydda lösningar för dina behov": adjektiv utan substantiv, inga tal.</td><td>Konkreta substantiv och siffror: "40 procent av surrande centraler vi rycker ut på behöver bara ett nytt bleck."</td></tr>
+            <tr><td>Citat utan källa</td><td>Ett citat utan namn och datum är ett påhittat citat tills motsatsen bevisats.</td><td>Namn, månad och år, Google-G; recensionerna ur V1:s datafil.</td></tr>
+            <tr><td>Siffror utan källa</td><td>"1000+ kunder", "5,0", "3 000 installationer": bevis som inte finns i datalagret.</td><td>[FACT] med src i ampy-foretagsdata eller [GAP]; siffran bär sin källrad.</td></tr>
+            <tr><td>"Helt gratis"-säljande</td><td>"Gratis!" som rubrik säljer in något som inte är produkten; verktygets värde är svaret.</td><td>Sägs en gång, tyst, i trust-raden. Aldrig med utropstecken, aldrig som rubrik.</td></tr>
+            <tr><td>Utropsteckenspray</td><td>Ett "!" på varje rad propps upp tomma påståenden.</td><td>Ett "!" per kort block, på en rad som redan är sann.</td></tr>
+            <tr><td>Emoji i UI</td><td>Skriver "genererat" på varje rad; hör inte till en elfirmas röst.</td><td>Sprite-ikonen (1,75 px stroke, en familj) eller ingenting.</td></tr>
+            <tr><td>Narrerad process i stället för artefakt</td><td>En tabell som säger "klart" utan att visa vad som gjordes (anti-teater, CLAUDE.md regel 0).</td><td>Artefakten: skärmdumpen, mätningen, filen. Hoppades ett steg över sägs det rakt ut.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="ds-blk" id="par">
+        <h2 class="ds-h2">Fel och rätt, renderade</h2>
+
+        <h3 class="ds-h3">1. Gradienttext mot text-teal</h3>
+        <div class="ds-two">
+          <div class="ds-wrong">
+            <span class="ds-demo__label">Fel</span>
+            <p class="ds-wrong__h">Prata med en elektriker <span class="ds-wrong__grad">inom 60 sekunder!</span></p>
+            <p class="ds-small">Gradient teal till blå med background-clip. Kontrast ~2:1 i den ljusa änden, ett tidslöfte som candour-grinden stoppar, och dekoration som gör jobbet påståendet skulle göra.</p>
+          </div>
+          <div class="ampy">
+            <span class="ds-demo__label">Rätt</span>
+            <p class="ampy-h2" style="margin-bottom:.8rem">Prata med en elektriker <span style="color:var(--ampy-action-strong)">direkt på telefon</span></p>
+            <p class="ampy-small">Accent i <code>--ampy-action-strong</code> (5,27:1) eller understrykning i textens färg (avdragsblocket). Löftet är kontrollerbart.</p>
+          </div>
+        </div>
+
+        <h3 class="ds-h3">2. Det mörka slop-kortet mot det redaktionella kortet</h3>
+        <div class="ds-two">
+          <div class="ds-wrong ds-wrong--slop">
+            <span class="ds-demo__label" style="color:rgba(255,255,255,.6)">Fel</span>
+            <p class="ds-wrong__slop-h">Framtidens el, i dag</p>
+            <p class="ds-wrong__slop-p">Vi levererar skräddarsydda lösningar med fokus på kvalitet, hållbarhet och trygghet för hela ditt hem.</p>
+            <span class="ds-wrong__slop-btn">Kom igång</span>
+          </div>
+          <div class="ampy ampy-card ampy-card--dark ampy-on-dark" style="padding:var(--ampy-space-m)">
+            <span class="ds-demo__label" style="color:var(--ampy-on-dark-faint)">Rätt</span>
+            <p class="ampy-eyebrow" style="color:var(--ampy-action);margin-bottom:.8rem"><svg width="14" height="14" aria-hidden="true"><use href="../../system/ikoner.svg#ik-bolt"/></svg> Visste du att</p>
+            <p class="ampy-h3" style="color:var(--ampy-on-dark);margin-bottom:.8rem">40 procent av surrande centraler behöver bara ett nytt bleck</p>
+            <p class="ampy-small" style="color:var(--ampy-on-dark-muted)">Platt midnight (B9), vänsterställd rubrik med kicker, ett specifikt påstående med tal, teal bara som stor text eller ikon. Glöden är ett tillval bakom en siffra i verktygen, inte en default.</p>
+          </div>
+        </div>
+
+        <h3 class="ds-h3">3. Tankstreck och mittpunkt mot avdelare och kommatecken</h3>
+        <div class="ds-two">
+          <div class="ds-wrong">
+            <span class="ds-demo__label">Fel</span>
+            <p class="ds-wrong__line">5,0 på Google · Över 3 000 installationer per år — varje gång med legitimation.</p>
+            <p class="ds-wrong__line">Elcentral — installation · Skräddarsydd offert</p>
+            <p class="ds-small">Mittpunkt som avdelare, tankstreck som inskott. Två tecken ingen skriver för hand, och båda renderar olika i värdarna.</p>
+          </div>
+          <div class="ampy">
+            <span class="ds-demo__label">Rätt</span>
+            <div class="ampy-proof" style="margin-bottom:1rem"><a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google</span></a><span class="ampy-proof__sep" aria-hidden="true"></span><span class="ampy-proof__vol">Över 3 000 installationer per år</span></div>
+            <p class="ampy-small" style="margin-bottom:.6rem">Elcentral + installation, skräddarsydd offert. Varje gång med legitimation.</p>
+            <p class="ampy-small">Separatorn är en 1 x 15 px linje (proof-raden), inskottet är ett kommatecken eller en ny mening. (Siffrorna ovan är exempel och [GAP] mot datalagret.)</p>
+          </div>
+        </div>
+
+        <h3 class="ds-h3">4. Ojämn spacing mot rytmstegen</h3>
+        <div class="ds-two">
+          <div class="ds-wrong">
+            <span class="ds-demo__label">Fel</span>
+            <div class="ds-wrong__card">
+              <p class="ds-wrong__k">STEG FÖR STEG</p>
+              <p class="ds-wrong__t">Få offert inklusive ROT-avdrag</p>
+              <p class="ds-wrong__p">En elektriker räknar på ditt projekt.</p>
+              <p class="ds-wrong__t2">En auktoriserad elektriker gör jobbet</p>
+              <p class="ds-wrong__p2">En av våra elektriker kommer hem till dig.</p>
+            </div>
+            <p class="ds-small">Avstånden 13, 27, 9, 41 och 17 px: fem tal utan relation, tre teckengrader som nästan är lika (17, 18, 19). Systemet ser ut att finnas men finns inte.</p>
+          </div>
+          <div class="ampy">
+            <span class="ds-demo__label">Rätt</span>
+            <div class="ampy-card" style="padding:var(--ampy-space-m)">
+              <p class="ampy-eyebrow" style="margin-bottom:var(--ampy-space-s)">Steg för steg</p>
+              <p class="ampy-h3" style="margin-bottom:var(--ampy-space-2xs)">Få offert inklusive ROT-avdrag</p>
+              <p class="ampy-body" style="margin-bottom:var(--ampy-space-m)">En elektriker räknar på ditt projekt.</p>
+              <p class="ampy-h3" style="margin-bottom:var(--ampy-space-2xs)">En auktoriserad elektriker gör jobbet</p>
+              <p class="ampy-body">En av våra elektriker kommer hem till dig.</p>
+            </div>
+            <p class="ampy-small" style="margin-top:.8rem">Inom grupp 2xs (10), syskon m (28), zon s till l. Tre roller: eyebrow 12, h3 22, body 18. Tokens: <code>--ampy-space-*</code>, <code>--ampy-text-*</code>.</p>
+          </div>
+        </div>
+
+        <h3 class="ds-h3">5. "Helt gratis!" mot den tysta trust-raden</h3>
+        <div class="ds-two">
+          <div class="ds-wrong">
+            <span class="ds-demo__label">Fel</span>
+            <p class="ds-wrong__h" style="font-size:2.4rem">Testa vårt verktyg HELT GRATIS! 🎉</p>
+            <p class="ds-small">Rubriken säljer in att verktyget är gratis, med versaler, utropstecken och emoji. Verktygets värde är svaret, inte att det inte kostar.</p>
+          </div>
+          <div class="ampy">
+            <span class="ds-demo__label">Rätt</span>
+            <ul class="ampy-list ampy-list--check ampy-list--compact" style="margin-bottom:.8rem">
+              <li><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg> Byggt på Elsäkerhetslagen och Elsäkerhetsverket</li>
+              <li><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg> Registrerat elinstallationsföretag</li>
+              <li><svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg> Helt gratis. Inget mejl, ingen inloggning, ingen hake</li>
+            </ul>
+            <p class="ampy-small">En gång, tyst, som tredje trust-punkt i diagnostikens rail (ordagrant i båda diagnostikerna). Rubriken handlar om svaret: "Behöver du byta elcentral?"</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-blk" id="kontroll">
+        <h2 class="ds-h2">Kontrollen före leverans</h2>
+        <ul class="ds-list">
+          <li>Grep de skeppade strängarna för tankstreck och mittpunkt: 0 träffar.</li>
+          <li>Sök i CSS efter <code>background-clip: text</code> och <code>-webkit-text-fill-color: transparent</code>: 0 träffar.</li>
+          <li>Sök efter <code>radial-gradient</code> på mörka ytor utanför kalkylatorkitet och visste-du-att: 0 träffar.</li>
+          <li>Räkna avstånden i blocket: alla ska vara tokens eller stå i rytmstegen. Räkna teckengraderna: max sex.</li>
+          <li>Varje siffra, varje citat, varje logotyp har en källa; annars [GAP].</li>
+          <li>Rendera och titta (ampy-syn): desktop och mobil, båda skärmdumparna finns i leveransen.</li>
+        </ul>
+      </section>
+    </div>
+
+    </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

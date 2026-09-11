@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Candour-grinden: Ampy designsystem</title>
+<!-- Sökvägarna nedan gäller för en sida i site/. Ligger sidan i site/<mapp>/ blir prefixet ../ -->
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för mönstersidorna (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-demo--stack { flex-wrap: nowrap; }
+  .ds-demo--stack > *, .ds-demo > * { min-width: 0; }
+  .ds-diagram { display: grid; gap: var(--ampy-space-xs); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); font-size: var(--ampy-text-small); line-height: 1.4; }
+  .ds-diagram__box { border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); min-height: 6rem; display: flex; flex-direction: column; gap: 0.4rem; border: 1px dashed var(--ampy-line-strong); color: var(--ampy-ink-muted); }
+  .ds-diagram__box b { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); font-size: var(--ampy-text-small); }
+  .ds-diagram__box--dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark-muted); border-style: solid; border-color: transparent; }
+  .ds-diagram__box--dark b { color: var(--ampy-on-dark); }
+  .ds-diagram__box--white { background: var(--ampy-bg-surface); border-style: solid; border-color: var(--ampy-line-strong); }
+  .ds-diagram__box--tint { background: var(--ampy-bg-subtle); }
+  .ds-diagram__box--band { background: var(--ampy-bg-page); grid-column: 1 / -1; min-height: 4rem; flex-direction: row; align-items: center; justify-content: center; text-align: center; border-style: solid; }
+  .ds-diagram__meta { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); }
+  .ds-diagram--calc { grid-template-columns: 5fr 7fr; }
+  .ds-diagram--diag { grid-template-columns: 44fr 56fr; }
+  .ds-diagram--block { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); }
+  .ds-diagram--seq { grid-template-columns: 1fr; gap: 0.6rem; }
+  .ds-diagram--seq .ds-diagram__box { min-height: 0; flex-direction: row; align-items: baseline; gap: var(--ampy-space-xs); }
+  .ds-diagram__n { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); min-width: 2.4rem; }
+  .ds-diagram__pad { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-action-strong); margin-left: auto; white-space: nowrap; }
+  .ds-fig { margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
+  .ds-fig figcaption { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin-top: 0.6rem; }
+  .ds-fig--pair { display: grid; grid-template-columns: 3fr 1fr; gap: var(--ampy-space-s); align-items: start; }
+  .ds-fig--pair figure { margin: 0; }
+  .ds-fig--pair img { max-height: 56rem; object-fit: cover; object-position: top; }
+  .ds-fig--wide { grid-template-columns: 1fr 1fr; }
+  .ds-two { display: grid; gap: var(--ampy-space-s); grid-template-columns: 1fr 1fr; margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-two > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); background: var(--ampy-bg-surface); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-xs); }
+  .ds-rule { display: grid; grid-template-columns: 22rem 1fr; gap: var(--ampy-space-s); padding: var(--ampy-space-s) 0; border-top: 1px solid var(--ampy-line); }
+  .ds-rule:last-child { border-bottom: 1px solid var(--ampy-line); }
+  .ds-rule__t { font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-body); }
+  .ds-rule__t small { display: block; font-weight: var(--ampy-w-body); color: var(--ampy-ink-faint); font-size: var(--ampy-text-small); margin-top: 0.3rem; }
+  .ds-rule__b { font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-rule__b p { margin: 0 0 0.6rem; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: var(--ampy-lh-body); font-weight: var(--ampy-w-body); max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.4rem; }
+  .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
+  .ds-blk .ds-h2 { margin-top: 0; }
+  @media (max-width: 991px) {
+    .ds-diagram--calc, .ds-diagram--diag, .ds-diagram--block { grid-template-columns: 1fr; }
+    .ds-fig--pair, .ds-fig--wide, .ds-two, .ds-rule { grid-template-columns: 1fr; }
+    .ds-fig--pair figure + figure { max-width: 22rem; }
+  }
+  /* AVSIKTLIGT FEL: motexemplen på ai-tells.html. Literaler med flit; det är felet som visas. Aldrig i doc.css eller components. */
+  .ds-wrong { font-family: var(--ampy-font); }
+  .ds-wrong__h { font-size: 3.2rem; font-weight: 500; line-height: 1.1; color: #090c34; margin: 0 0 .8rem; }
+  .ds-wrong__grad { background: linear-gradient(90deg, hsl(171 95% 41%) 15%, hsl(189 43% 56%) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .ds-wrong--slop { background: radial-gradient(60% 70% at 85% 15%, rgba(0,169,145,.5), transparent 60%), radial-gradient(50% 60% at 10% 100%, rgba(85,255,154,.25), transparent 60%), linear-gradient(160deg, #0b0f30, #2d516d); color: #fff; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; }
+  .ds-wrong__slop-h { font-size: 3.2rem; font-weight: 700; margin: 0; }
+  .ds-wrong__slop-p { font-size: 1.6rem; opacity: .8; margin: 0; max-width: 32ch; }
+  .ds-wrong__slop-btn { display: inline-block; padding: 1.2rem 2.4rem; border-radius: 999px; background: linear-gradient(90deg, #55ff9a, #00ffda); color: #0b0f30; font-weight: 700; }
+  .ds-wrong__line { font-size: 1.6rem; margin: 0 0 .6rem; color: #363636; }
+  .ds-wrong__card { border: 1px solid #e6ecf6; border-radius: 22px; padding: 21px 19px 27px; background: #fff; margin-bottom: .8rem; }
+  .ds-wrong__k { font-size: 1.3rem; letter-spacing: .2em; color: #8a8da5; margin: 0 0 13px; }
+  .ds-wrong__t { font-size: 1.9rem; font-weight: 600; margin: 0 0 9px; color: #0f123c; }
+  .ds-wrong__p { font-size: 1.7rem; margin: 0 0 27px; color: #3b3f59; }
+  .ds-wrong__t2 { font-size: 1.8rem; font-weight: 700; margin: 0 0 17px; color: #1e1e1e; }
+  .ds-wrong__p2 { font-size: 1.75rem; margin: 0 0 41px; color: #333; }
+  .ds-swatch__sem { color: var(--ampy-action-strong); }
+  .ds-contrast { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .ds-contrast span, .ds-key span { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.2rem; line-height: 1; padding: 0.4rem 0.7rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); color: var(--ampy-ink-faint); white-space: nowrap; }
+  .is-aa { color: var(--ampy-success-ink) !important; border-color: var(--ampy-success-ink) !important; }
+  .is-lg { color: var(--ampy-warn-ink) !important; border-color: var(--ampy-warn-ink) !important; }
+  .is-no { color: var(--ampy-ink-faint) !important; }
+  .ds-key { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0 0 var(--ampy-space-m); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
+  td.is-aa, td.is-lg, td.is-no { border-color: var(--ampy-line) !important; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-target { display: inline-flex; align-items: center; justify-content: center; border: 1px dashed var(--ampy-line-strong); border-radius: var(--ampy-radius-small); font-size: 1.2rem; color: var(--ampy-ink-faint); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .ds-focus-demo :focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+  .ds-tnum { font-family: var(--ampy-font); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-strong); line-height: 1.4; }
+  .ds-tnum--tab { font-variant-numeric: tabular-nums lining-nums; }
+
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="../monster/layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="../monster/tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="../monster/mobil.html">Mobil 390</a>
+        <a href="../monster/register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="candour.html" aria-current="page">Candour-grinden</a>
+        <a href="ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Regler</span>
+      <h1 class="ds-h1">Candour-grinden</h1>
+      <p class="ds-lead">Ett påstående eller en taktik skeppas bara om den överlever grinden: stödtjänster räknas som noll och effektavgift som noll. Grinden slår varje generisk konverteringstaktik: ingen brådska, ingen knapphet, inga nedräkningar, inget påhittat bevis, aldrig "rabatt", aldrig "spara".</p>
+      <p class="ds-source">Projektets CLAUDE.md regel 2 (candour-grinden är vallgraven) och regel 3 (proveniens eller det finns inte); <code>rot-gt-calculator/research/05-leadmagnet-och-konvertering.md</code> §7 (candour-grinden tillämpad, domslut per påstående, anpassad till tabellen nedan); <code>ampy-foretagsdata.md</code> §2.2 (candour-kanten), §6.1 (FCR-D-kollapsen), §6.3 (effekttariffen), §10.1 (begränsningar som tillitstillgångar).</p>
+
+      <section class="ds-blk" id="grinden">
+        <h2 class="ds-h2">Grinden i en mening</h2>
+        <div class="ds-two">
+          <div>
+            <span class="ds-demo__label">Testet</span>
+            <p class="ds-p">Sätt stödtjänster (FCR-D) till 0 kr och effektavgiften till 0 kr. Håller kalkylen, påståendet eller knappen fortfarande? Då får den stå. Faller den, är den byggd på en intäkt som kollapsade eller en tariff som inte alla har, och den skeppas inte.</p>
+          </div>
+          <div>
+            <span class="ds-demo__label">Varför det är vallgraven</span>
+            <p class="ds-p">Den analytiska villaägaren letar efter haken. Den som säger haken först, och av sig själv, har inget kvar att avslöja. Att skicka kunden till Skatteverkets räknare, bort från oss, är den dyraste signalen ett säljverktyg kan skicka, och den som gör hantverkaren trygg att vidarebefordra länken.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-blk" id="taktik">
+        <h2 class="ds-h2">Taktiker som grinden dödar</h2>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Taktik</th><th>Domslut</th><th>Skäl och ersättning</th></tr></thead>
+          <tbody>
+            <tr><td>Nedräkning, "erbjudandet går ut", "bara i dag"</td><td>ALDRIG</td><td>Falsk brådska. Avdraget är en regel, inte en kampanj. Ersättning: regeln och taket, sagda en gång.</td></tr>
+            <tr><td>"Bara 3 platser kvar", "hög efterfrågan just nu"</td><td>ALDRIG</td><td>Falsk knapphet. Ampy har jour dygnet runt; det motsäger sig självt.</td></tr>
+            <tr><td>Påhittat socialt bevis, "1000+ kunder", "5,0 på Google", "3 000+ installationer"</td><td>ALDRIG utan ägarbekräftelse</td><td>CLAUDE.md regel 3. Riktiga recensioner med namn och datum får stå; siffror kräver [FACT] i datalagret.</td></tr>
+            <tr><td>Juicad ROI, en punkt-payback ("återbetald på 4 år")</td><td>ALDRIG</td><td>Payback är ett spann (typiskt + 7 till 12 år), osäkerheten synlig, den oflatterande siffran först.</td></tr>
+            <tr><td>Gradienttext, mörka slop-kort, exklamationsspray som "energi"</td><td>Drift</td><td>Inte candour-grinden i sig men samma familj: dekoration i stället för ett påstående som håller. Se <a class="ds-a" href="ai-tells.html">AI-tecken</a>.</td></tr>
+            <tr><td>Popup, exit-intent, "vänta!"</td><td>ALDRIG</td><td>Värdet är alltid gratis, ingen mejlvägg före resultatet; lead-formen förtjänar sina fält först i det heta ögonblicket.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="ds-blk" id="pastaenden">
+        <h2 class="ds-h2">Domslut per påstående (avdrag, verktyg, bevis)</h2>
+        <p class="ds-p">OK = får stå. OK, formulering = får stå i den angivna formen. GRINDAD = kräver ägarsignering. ALDRIG = ute. Anpassat från research-rapportens §7; ROT- och GT-grindarna är dess numrerade ägarfrågor.</p>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Påstående</th><th>Domslut</th><th>Skäl och ersättning</th></tr></thead>
+          <tbody>
+            <tr><td>"50 % rabatt", "30 % rabatt", "rabatt"</td><td>ALDRIG</td><td>Det är en skattereduktion: staten betalar via din skatt, och räcker den inte betalar du. "Rabatt" lovar ett pris, "avdrag" lovar en regel. Skatteverkets ord är "rotavdrag" och "skattereduktion".</td></tr>
+            <tr><td>"Du sparar X kr", "Spara upp till 50 000 kr"</td><td>ALDRIG som rubrik eller belopp</td><td>"Spara" antyder pengar i handen och bjuder in "jämfört med vad?". Ersättning: "Avdrag: X kr", "X kr dras på fakturan", "Att betala efter avdrag: Y kr".</td></tr>
+            <tr><td>"Du får X kr tillbaka"</td><td>ALDRIG</td><td>Inget betalas tillbaka till kunden; det dras på fakturan. Kvarskatt kan däremot komma åt andra hållet.</td></tr>
+            <tr><td>"Du ligger aldrig ute med pengarna"</td><td>GRINDAD (ROT); ALDRIG utan skatteförbehåll (GT)</td><td>Kunden betalar mellanskillnaden i slutskatten om skatten inte räcker. Ersättning: "Avdraget dras på fakturan. Räcker inte din skatt kan Skatteverket kräva mellanskillnaden i slutskatten."</td></tr>
+            <tr><td>"Avdraget dras direkt på fakturan"</td><td>OK (GT); OK, formulering (ROT: "vi drar avdraget på fakturan"); "alltid" GRINDAD</td><td>Lagfäst enda väg för grön teknik; Ampys publicerade praxis för ROT.</td></tr>
+            <tr><td>"Vi sköter hela ansökan"</td><td>OK (GT); OK, formulering (ROT: "vi sköter ansökan hos Skatteverket"); "alltid / på alla jobb" GRINDAD</td><td>Aldrig "du behöver inte göra något": kunden lämnar personnummer och fastighetsbeteckning och måste ha skatt.</td></tr>
+            <tr><td>"Garanterat avdrag", "godkänns alltid"</td><td>ALDRIG</td><td>Skatteverket avgör i deklarationen. "kan" på varje utfall.</td></tr>
+            <tr><td>"50 % av hela kostnaden / totalpriset"</td><td>ALDRIG</td><td>"50 % av arbete och material"; resor, frakt och projektering ger inget; 97 % vid fast pris.</td></tr>
+            <tr><td>"Upp till 100 000 kr för två ägare"</td><td>OK, formulering</td><td>"om ni båda äger och bor där och båda har skatt att räkna av mot".</td></tr>
+            <tr><td>"Laddbox kräver solceller"</td><td>ALDRIG</td><td>Falskt.</td></tr>
+            <tr><td>"När grön teknik-taket nås kan resten tas via ROT"</td><td>ALDRIG</td><td>Falskt (67 kap. 40 §): samma åtgärd får aldrig båda. Bara separata ROT-arbeten (elcentralen).</td></tr>
+            <tr><td>"Batteri utan solceller: ROT 30 % på arbetet"</td><td>OK som "kan", GRINDAD som siffra</td><td>Arbetsandelen är Ampys, och själva batterimonteringen kan vara inventarie.</td></tr>
+            <tr><td>"Stödtjänster ger X kr/år"</td><td>ALDRIG</td><td>FCR-D-intäkten kollapsade (§6.1). Får bara sägas: stödtjänster påverkar inte rätten till avdraget.</td></tr>
+            <tr><td>"Alltid billigast på natten"</td><td>ALDRIG</td><td>Falskt i SE4 på sommaren: ett påhittat faktum, inte en superlativ.</td></tr>
+            <tr><td>"Försäkringen gäller inte"</td><td>ALDRIG</td><td>Vänder bevisbördan under marknadsföringslagen. Alltid "kan sätta ned eller neka ersättning".</td></tr>
+            <tr><td>"Dina befintliga lysrör är olagliga"</td><td>ALDRIG</td><td>Bara "nya lysrör säljs inte längre, EU-förbud 2023".</td></tr>
+            <tr><td>"Inom 60 sekunder", "på 30 sek"</td><td>ALDRIG</td><td>Konkurrentmönster. Ersättning: den konkreta räkningen ("fyra frågor") eller inget tidslöfte alls.</td></tr>
+            <tr><td>"Vi ringer inom 24 timmar"</td><td>OK, formulering: "oftast inom en arbetsdag"</td><td>Lead-magnet-kanon; /kontakt/ och Elcentral-kollen säger "inom 24 timmar" = intern motsägelse att jämka (LM-1).</td></tr>
+            <tr><td>"Jour öppen just nu"</td><td>GRINDAD</td><td>Kräver att bemanningen är verifierad (sticky-barens GAP-1). Pulsringen runt ikonen påstår inget om bemanning; en "levande" grön prick gör det.</td></tr>
+            <tr><td>"Gratis" / "Helt gratis. Inget mejl, ingen inloggning, ingen hake"</td><td>OK, en gång, tyst</td><td>Trust-punkten finns, men raden säljs inte in. Verktygets värde är svaret. Aldrig "Gratis!" som rubrik.</td></tr>
+            <tr><td>"Registrerat elinstallationsföretag"</td><td>OK</td><td>Verifierat i Elsäkerhetsverkets register; länken till registret får stå.</td></tr>
+            <tr><td>"Ampy har F-skatt"</td><td>OK</td><td>Självdeklarerat [FACT] + länk till Skatteverkets kontroll.</td></tr>
+            <tr><td>"Certifierad elektriker krävs för avdraget"</td><td>OK, formulering</td><td>Avdragsvillkoret är F-skatt. Behörigheten är ett elsäkerhetskrav och står som skydd, inte som avdragsregel.</td></tr>
+            <tr><td>"Pensionärer kan få ROT"</td><td>OK, formulering</td><td>"Ingen övre åldersgräns. Det som avgör är skatten." Aldrig "pensionärer får alltid".</td></tr>
+            <tr><td>"Din skatt räcker"</td><td>OK, formulering</td><td>"preliminärt", "räcker troligen", "utrymme", och raden om mellanskillnaden. Punktvärdet är Skatteverkets jobb.</td></tr>
+            <tr><td>"Fast pris" i CTA</td><td>OK där jobbet har fast pris; inte i den generiska CTA:n</td><td>Service debiteras per timme. "Vi lämnar alltid ett fast pris" är artikelns claim om centralbyten, inte om allt.</td></tr>
+            <tr><td>"Potten fylls på 1 januari, beställ nu"</td><td>ALDRIG som tryck</td><td>Faktumet "betalningsdatumet styr året" får stå i "Så har vi räknat".</td></tr>
+            <tr><td>"Vi sparar inget"</td><td>OK, en gång, intill skattefältet</td><td>Sant bara om beloppet aldrig lagras, loggas eller går i URL:en. Formuleringen "det du skriver här stannar i din webbläsare".</td></tr>
+            <tr><td>"Hela Sverige", "rikstäckande"</td><td>OK</td><td>Ägardirektiv 2026-07-18: nationella claims är fria i copy; 27-kommunsettet styr bara annonsernas geo-targeting.</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="ds-blk" id="tre-meningar">
+        <h2 class="ds-h2">De tre meningarna som gör mest för tilltron</h2>
+        <ol class="ds-list">
+          <li><b>"Räcker inte din skatt betalar du mellanskillnaden i slutskatten. Därför räknar vi på ditt utrymme, inte bara på procenten."</b> Haken han letar efter, sagd först och av oss.</li>
+          <li><b>"Materialet ger inget ROT-avdrag. På ett jobb för 30 000 kr där 12 000 kr är material blir avdraget 5 400 kr, inte 9 000 kr."</b> Den oflatterande siffran först, med ett räkneexempel han kan kontrollera.</li>
+          <li><b>"Vi kan inte se din skatt. Skatteverkets räknare kan. Vill du ha det exakt: gå dit, det tar tio minuter."</b> Att skicka kunden till myndigheten, bort från oss, är den dyraste signalen ett säljverktyg kan skicka.</li>
+        </ol>
+      </section>
+
+      <section class="ds-blk" id="i-ui">
+        <h2 class="ds-h2">Grinden i gränssnittet</h2>
+        <ul class="ds-list">
+          <li>Kvittopanelen: "Ditt pris efter ROT: 70 % av arbetet" med noten "Materialet omfattas inte av ROT" i totalplattan. Aldrig ett belopp, aldrig "spara".</li>
+          <li>Kalkylatorn: spannet i "Så har vi räknat" med SE1 till SE4-tabellen så räkningen kan revideras; wide ranges signal honesty.</li>
+          <li>Diagnostiken: grönt besked utan solid säljknapp; "du behöver inte byta" som fullvärdigt resultat.</li>
+          <li>Proof-raden: bara siffror med [FACT]-källa; stjärnorna får vara guld, talet får inte hittas på.</li>
+          <li>Tack-sidan: påstår aldrig mer än "mottaget"; "vi ringer oftast inom en arbetsdag" är löftet.</li>
+        </ul>
+      </section>
+    </div>
+
+    </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>
