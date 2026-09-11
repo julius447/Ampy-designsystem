@@ -85,7 +85,6 @@
 .ampy-calc__field-row { display: flex; align-items: center; justify-content: space-between; gap: var(--ampy-space-2xs); flex-wrap: wrap; }
 .ampy-calc__q { display: inline-flex; align-items: center; gap: var(--ampy-space-4xs); font-size: var(--_fine); font-weight: var(--ampy-w-medium); letter-spacing: 0.02em; color: var(--ampy-ink-muted); }   /* LED field-label-tiny 13/500 .02em */
 .ampy-calc__q--strong { font-size: var(--ampy-text-label); font-weight: var(--ampy-w-strong); letter-spacing: 0.01em; color: var(--ampy-ink); }   /* LED field-label PJS 600 15 -> label-rollen 14/600 */
-.ampy-calc__hint { margin: 0; font-size: var(--_fine); color: var(--ampy-ink-muted); line-height: var(--ampy-lh-body); }
 
 /* ---------- Tips-chip (i) + popover ---------- */
 .ampy-calc__tipwrap { position: relative; display: inline-flex; }

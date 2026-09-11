@@ -859,7 +859,7 @@ const diagPage = shell({
 <div class="ds-dep"><strong>Komponerat med S2:</strong> svarsalternativen är <code>.ampy-chips</code> / <code>.ampy-chip</code> (falt.css, radio-chips med kanon elcentral-kollen), pills är <code>.ampy-tag</code> (text.css), knapparna <code>.ampy-btn</code> (knappar.css), trust-listan <code>.ampy-list--check</code>, källraden <code>.ampy-source</code>. Kitet självt (diagnostik.css) äger skalet, railen, kortet, crumb och förlopp, frågetiteln, info-rutan, dualstatus-zonen, fynd, akut, factnote, trafikljus-boarden med tabbar och rader, dela, sticky-CTA, blockläget och no-JS-noten.</div>
 
 ${h2('rail', 'Rail och stage: startvyn')}
-${p('Skalet är en 1280-container med två kolumner 44fr / 56fr och gap 64 från 992 px containerbredd. Railen (H1, lead, tre trust-bullets, två gradient-CTA:er i samma rad, statistikrad) centreras i en 560-box så att den aldrig hoppar mellan steg. Kortet har samma minsta höjd på start och frågor. På mobil packas railen upp: H1, lead, KORTET, "Hellre prata med en elektriker direkt?", telefon först, kontakt, statistik.')}
+${p('Skalet är en 1280-container (<code>.ampy-diag</code>) med gridet i <code>.ampy-diag__inner</code>: två kolumner 44fr / 56fr och gap 64 från 940 px innehållsbredd (= 992 px viewport i skalet). Railen (H1, lead, tre trust-bullets, två gradient-CTA:er i samma rad, statistikrad) centreras i en 560-box så att den aldrig hoppar mellan steg. Kortet har samma minsta höjd på start och frågor. På mobil packas railen upp: H1, lead, KORTET, "Hellre prata med en elektriker direkt?", telefon först, kontakt, statistik.')}
 ${source('Kanon: elcentral-kollen (assets/elcentralkollen.css:160-292, "1:1 med Elkollen hero__copy"). Finns även i: elkollen (preview/hero.html: 1180-wrap, H1 40/600 med teal sista rad, 96 px toppspacer). Blockbiblioteket: <a class="ds-a" href="../blockbibliotek.html#elcentral-kollen">Elcentral-kollen</a>, <a class="ds-a" href="../blockbibliotek.html#elkollen">Elkollen</a>.')}
 ${example({ id: 'ex-diag-entry', label: 'Start, 1440 = rail + stage, 390 = staplat', html: diagEntry, code: false })}
 <figure class="ds-shot"><img src="../bilder/elcentral-kollen-desktop.jpg" alt="Elcentral-kollen, källans rendering 1440" loading="lazy"><img src="../bilder/elcentral-kollen-mobile.jpg" alt="Elcentral-kollen, källans rendering 390" loading="lazy"><figcaption>Så ser källan ut (Elcentral-kollen v2.26 i preview-chrome). Skillnader mot kitet: Outfit i stället för Plus Jakarta Sans, kortradie 20 i stället för 14, ring-knappen med vit chip i stället för lur-ikon (kanon = CTA-biblioteket), H1 48 i stället för 44.</figcaption></figure>
@@ -1062,7 +1062,7 @@ ${table(['Var', 'Källan', 'Kitet', 'Skäl'], [
   ['Trafikljus-grönt', 'accent rgb(27,132,71) "lövigare"', '<code>--ampy-success-ink</code> rgb(15,110,86), board/wash på <code>--ampy-success</code>', 'en grön familj i tokens; källans lövgrön saknar token'],
   ['Caveat-kant', 'rgb(186,117,23)', '<code>--ampy-warn-ink</code> #876507', 'ingen token för källans amber'],
   ['Fokusring', 'elcentral 3 px .9 / elkollen .25 (1,3:1)', 'en ring <code>--ampy-focus-ring</code> (.9)', 'B14; elkollens .25 var underkänd'],
-  ['Brytpunkt', '@media 1024 (viewport)', '@container 992 (kitets bredd)', 'kanon 992; verktyget svarar på sitt utrymme'],
+  ['Brytpunkt', '@media 1024 (viewport)', '@container 940 (kitets innehållsbredd = 992 viewport i 1280-skalet)', 'kanon 992; verktyget svarar på sitt utrymme, inte på fönstret'],
 ])}
 ${h3('drift', 'Drift i de andra instanserna')}
 ${table(['Instans', 'Avviker så här'], [

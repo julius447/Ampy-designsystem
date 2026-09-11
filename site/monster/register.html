@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register och ton: Ampy designsystem</title>
+<!-- Sökvägarna nedan gäller för en sida i site/. Ligger sidan i site/<mapp>/ blir prefixet ../ -->
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för mönstersidorna (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-demo--stack { flex-wrap: nowrap; }
+  .ds-demo--stack > *, .ds-demo > * { min-width: 0; }
+  .ds-diagram { display: grid; gap: var(--ampy-space-xs); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); font-size: var(--ampy-text-small); line-height: 1.4; }
+  .ds-diagram__box { border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); min-height: 6rem; display: flex; flex-direction: column; gap: 0.4rem; border: 1px dashed var(--ampy-line-strong); color: var(--ampy-ink-muted); }
+  .ds-diagram__box b { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); font-size: var(--ampy-text-small); }
+  .ds-diagram__box--dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark-muted); border-style: solid; border-color: transparent; }
+  .ds-diagram__box--dark b { color: var(--ampy-on-dark); }
+  .ds-diagram__box--white { background: var(--ampy-bg-surface); border-style: solid; border-color: var(--ampy-line-strong); }
+  .ds-diagram__box--tint { background: var(--ampy-bg-subtle); }
+  .ds-diagram__box--band { background: var(--ampy-bg-page); grid-column: 1 / -1; min-height: 4rem; flex-direction: row; align-items: center; justify-content: center; text-align: center; border-style: solid; }
+  .ds-diagram__meta { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); }
+  .ds-diagram--calc { grid-template-columns: 5fr 7fr; }
+  .ds-diagram--diag { grid-template-columns: 44fr 56fr; }
+  .ds-diagram--block { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); }
+  .ds-diagram--seq { grid-template-columns: 1fr; gap: 0.6rem; }
+  .ds-diagram--seq .ds-diagram__box { min-height: 0; flex-direction: row; align-items: baseline; gap: var(--ampy-space-xs); }
+  .ds-diagram__n { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); min-width: 2.4rem; }
+  .ds-diagram__pad { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-action-strong); margin-left: auto; white-space: nowrap; }
+  .ds-fig { margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
+  .ds-fig figcaption { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin-top: 0.6rem; }
+  .ds-fig--pair { display: grid; grid-template-columns: 3fr 1fr; gap: var(--ampy-space-s); align-items: start; }
+  .ds-fig--pair figure { margin: 0; }
+  .ds-fig--pair img { max-height: 56rem; object-fit: cover; object-position: top; }
+  .ds-fig--wide { grid-template-columns: 1fr 1fr; }
+  .ds-two { display: grid; gap: var(--ampy-space-s); grid-template-columns: 1fr 1fr; margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-two > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); background: var(--ampy-bg-surface); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-xs); }
+  .ds-rule { display: grid; grid-template-columns: 22rem 1fr; gap: var(--ampy-space-s); padding: var(--ampy-space-s) 0; border-top: 1px solid var(--ampy-line); }
+  .ds-rule:last-child { border-bottom: 1px solid var(--ampy-line); }
+  .ds-rule__t { font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-body); }
+  .ds-rule__t small { display: block; font-weight: var(--ampy-w-body); color: var(--ampy-ink-faint); font-size: var(--ampy-text-small); margin-top: 0.3rem; }
+  .ds-rule__b { font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-rule__b p { margin: 0 0 0.6rem; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: var(--ampy-lh-body); font-weight: var(--ampy-w-body); max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.4rem; }
+  .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
+  .ds-blk .ds-h2 { margin-top: 0; }
+  @media (max-width: 991px) {
+    .ds-diagram--calc, .ds-diagram--diag, .ds-diagram--block { grid-template-columns: 1fr; }
+    .ds-fig--pair, .ds-fig--wide, .ds-two, .ds-rule { grid-template-columns: 1fr; }
+    .ds-fig--pair figure + figure { max-width: 22rem; }
+  }
+
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="mobil.html">Mobil 390</a>
+        <a href="register.html" aria-current="page">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Mönster</span>
+      <h1 class="ds-h1">Register och ton</h1>
+      <p class="ds-lead">Candour är inte allvar. Insatsen i sammanhanget väljer registret innan ett ord skrivs: det allvarliga, noggranna registret på ekonomi och säkerhet, det lätta och inbjudande på redaktionella ytor och varumärkesögonblick. Samma röst, två lägen.</p>
+      <p class="ds-source"><code>ampy-foretagsdata.md</code> §8.1 (husrösten), §8.1b (värmepolen: candour = lättnad, inte varning), §8.1c (register efter sammanhang, ägardirektiv 2026), §8.3 (guldstandard-exempel); <code>.claude/skills/ampy-rost/SKILL.md</code> (de två polerna, register efter kontext, regel 1 till 12); CLAUDE.md regel 6 (candour ≠ solemnity, kommersiell prioritet service, laddbox, batteri).</p>
+
+      <section class="ds-blk" id="tva-lagen">
+        <h2 class="ds-h2">De två lägena</h2>
+        <div class="ds-two">
+          <div>
+            <span class="ds-demo__label">Allvarligt och noggrant</span>
+            <p class="ds-p"><b>När:</b> pengar, säkerhet, juridik. Batteriets ROI, en offert på 60 000 kr, byte av elcentral, allt med "kan" på skatt, försäkring och el.</p>
+            <p class="ds-p"><b>Hur:</b> exakta tal, den oflatterande siffran först, "kan" i stället för "kommer att", ingen flourish, inga "!". Mekanismen förklaras, inte påstås. Räkneexempel som läsaren kan kontrollera.</p>
+            <p class="ds-p ds-p--muted">Ett "!" här läser som säljare. En bild av ett nyfiket ansikte här läser som oseriös.</p>
+          </div>
+          <div>
+            <span class="ds-demo__label">Lätt och inbjudande</span>
+            <p class="ds-p"><b>När:</b> awareness, redaktionellt, startsidan, "Visste du att", fun-facts, varumärkesögonblick, toppen av tratten.</p>
+            <p class="ds-p"><b>Hur:</b> nyfiket, mänskligt, kort. Ett "!" är välkommet för värme (ett per kort block, aldrig som stöd för en tom rad). Påståendet ska fortfarande hålla; lätt är inte hype.</p>
+            <p class="ds-p ds-p--muted">Det allvarliga registret här är en defekt: det gav "det mörka, tunga slop-kortet".</p>
+          </div>
+        </div>
+        <p class="ds-p">Värmepolen gäller båda: när det ärliga svaret är goda nyheter, säg det som goda nyheter. "Skönt besked: du behöver förmodligen inte byta hela centralen." är candour. Dämpad rädsla när svaret är positivt är felet som rättas. Rädsla är ett verktyg, inte husstilen.</p>
+      </section>
+
+      <section class="ds-blk" id="block">
+        <h2 class="ds-h2">Vilka block som är vilka</h2>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Block</th><th>Register</th><th>Varför</th><th>Ett exempel ur källan</th></tr></thead>
+          <tbody>
+            <tr><td>Avdragsblocket och kvittopanelen</td><td>Allvarligt</td><td>Skatteregel, tak, mellanskillnad i slutskatten</td><td>"Räcker inte din skatt kan Skatteverket kräva mellanskillnaden i slutskatten."</td></tr>
+            <tr><td>Eljour: symptomlista och samtalskort</td><td>Allvarligt, men varmt</td><td>Säkerhet; 112 och 1177 före oss</td><td>"Löser samma säkring ut gång på gång är det en kortslutning eller ett glapp. Ring oss så hittar vi felet."</td></tr>
+            <tr><td>Fotobedömningen</td><td>Allvarligt</td><td>En bedömning, inte en besiktning; ansvarsraden</td><td>"En bild säger mycket, men inte allt."</td></tr>
+            <tr><td>Hero-2 S / E, bokningen, offert accepterad</td><td>Allvarligt</td><td>Stora jobb, avtalad tid, pris</td><td>"Fast pris. Skriftligt, materialet inräknat, ingenting som hänger på slumpen."</td></tr>
+            <tr><td>Kalkylatorernas resultat och diagnostikens besked</td><td>Allvarligt</td><td>Projektion med osäkerhet, payback som spann</td><td>"Vi använder ett medvetet lågt schablonpris. Din verkliga besparing blir snarare högre."</td></tr>
+            <tr><td>Visste du att</td><td>Lätt</td><td>Fun-fact, redaktionellt</td><td>"Visste du att en jordfelsbrytare bryter på under 30 millisekunder? Snabbare än hjärtat hinner reagera."</td></tr>
+            <tr><td>Hero-1, mini-menu, CTA-bandet</td><td>Lätt, varmt</td><td>Startsidan, toppen av tratten</td><td>"Din elektriker för hela hemmet." "Prata med en elektriker direkt på telefon."</td></tr>
+            <tr><td>Testimonials-rubriken</td><td>Lätt</td><td>Bevisblock med grannen som avsändare</td><td>"Vad säger dina grannar om Ampy?"</td></tr>
+            <tr><td>Tack-sidan</td><td>Lätt, varmt</td><td>Bekräftelse, lättnad</td><td>"Din förfrågan har blivit mottagen!"</td></tr>
+            <tr><td>Header-CTA, footer</td><td>Neutralt</td><td>Navigation</td><td>"Gratis rådgivning" (tyst, en gång; aldrig "Gratis!" som rubrik)</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="ds-blk" id="exempel">
+        <h2 class="ds-h2">Samma faktum, två register</h2>
+        <p class="ds-p">Jordfelsbrytaren som exempel. Faktumet är detsamma; insatsen väljer orden.</p>
+        <div class="ds-two">
+          <div>
+            <span class="ds-demo__label">I diagnostikens besked (allvarligt)</span>
+            <p class="ds-p">"Din central saknar jordfelsbrytare. Det är inte olagligt i en äldre anläggning, men det betyder att ett fel i en apparat inte bryts förrän säkringen löser ut. Kostnaden för att sätta en är oftast lägre än en självrisk. Vi rekommenderar det, men du behöver inte byta hela centralen för det."</p>
+          </div>
+          <div>
+            <span class="ds-demo__label">I "Visste du att" (lätt)</span>
+            <p class="ds-p">"En jordfelsbrytare bryter strömmen på under 30 millisekunder. Det är snabbare än hjärtat hinner reagera! Därför är den det billigaste skyddet i hela elcentralen, och det första vi kollar när vi kommer hem till dig."</p>
+          </div>
+        </div>
+        <div class="ds-two">
+          <div>
+            <span class="ds-demo__label">Fel: hype i det allvarliga</span>
+            <p class="ds-p ds-p--muted">"Byt nu innan det är för sent! Spara upp till 50 000 kr med ROT!" (fake urgency, "spara", staplade "!")</p>
+          </div>
+          <div>
+            <span class="ds-demo__label">Fel: allvar i det lätta</span>
+            <p class="ds-p ds-p--muted">"Elrelaterade bränder orsakar varje år betydande skador. Kontrollera att din anläggning uppfyller gällande krav." (myndighetston på ett faktakort; det som gav slop-kortet)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ds-blk" id="publik">
+        <h2 class="ds-h2">Register efter publik</h2>
+        <p class="ds-p">Candour-mekaniken är konstant (säg när de inte ska köpa, visa haken, håll varje påstående bevisbart). Det som skiftar är vems plånbok du talar till.</p>
+        <ul class="ds-list">
+          <li><b>Villaägare (privat):</b> du-tilltal, en elektriker till en husägare. Pengarna är hans; payback och avdraget är personliga. Standardläget.</li>
+          <li><b>BRF-styrelse:</b> kollektiv och förvaltande ram: "medlemmarnas pengar", "avgiftstrycket", "föreningen". Draget är "använd medlemmarnas pengar väl", inte "spara själv". Inga "!".</li>
+          <li><b>B2B (företag, kommun, fastighetsägare):</b> risk, ansvar, total kostnad över livslängden, driftstopp. Candour läses som "vi säljer ingen överspec du måste försvara i en budgetgenomgång". Inga "!".</li>
+        </ul>
+        <p class="ds-p">Kommersiell prioritet när ett block är vertikalneutralt: service, sedan laddbox, sedan batteri (CLAUDE.md regel 6). Batteriets ekonomiska djup finns kvar i datalagret, men det är inte defaultexemplet.</p>
+      </section>
+    </div>
+
+    </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

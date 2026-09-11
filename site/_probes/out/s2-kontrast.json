@@ -1,0 +1,6125 @@
+{
+ "datum": "2026-09-11",
+ "sidor": {
+  "knappar": [
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover (.is-hover)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary is-hover",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary is-focus",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Utan ikon",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri rådgivning",
+    "cls": "ampy-btn ampy-btn--primary",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "Laddar (.is-loading)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary is-hover",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible (neon-mint)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary is-focus",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fullbredd (.ampy-btn--block)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary ampy-btn--block",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring 010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring 010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring 010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kompakt 48",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring 010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fullbredd: chipen till höger",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring 010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default 58",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Boka rådgivning",
+    "cls": "ampy-btn ampy-btn--secondary",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kompakt 48 (header)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kontakta oss",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--compact",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Boka rådgivning",
+    "cls": "ampy-btn ampy-btn--secondary is-hover",
+    "size": 16,
+    "weight": 600,
+    "ratio": 6.36,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Boka rådgivning",
+    "cls": "ampy-btn ampy-btn--secondary is-focus",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Boka rådgivning",
+    "cls": "ampy-btn ampy-btn--secondary",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "Laddar",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (LED-kortets CTA)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Få en skräddarsydd offert",
+    "cls": "ampy-btn ampy-btn--secondary",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Få en skräddarsydd offert",
+    "cls": "ampy-btn ampy-btn--secondary is-hover",
+    "size": 16,
+    "weight": 600,
+    "ratio": 6.36,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta, fullbredd (LED)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Få en skräddarsydd offert",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--block",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default 58",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Läs mer om elcentraler",
+    "cls": "ampy-btn ampy-btn--ghost",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kompakt 48",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fortsätt",
+    "cls": "ampy-btn ampy-btn--ghost ampy-btn--compact",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fortsätt",
+    "cls": "ampy-btn ampy-btn--ghost ampy-btn--compact is-hover",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fortsätt",
+    "cls": "ampy-btn ampy-btn--ghost ampy-btn--compact is-focus",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fortsätt",
+    "cls": "ampy-btn ampy-btn--ghost ampy-btn--compact",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "Mörk yta (hero-2 \"bli uppringd\")",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bli uppringd i stället",
+    "cls": "ampy-btn ampy-btn--ghost",
+    "size": 16,
+    "weight": 500,
+    "ratio": 14.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bli uppringd i stället",
+    "cls": "ampy-btn ampy-btn--ghost is-hover",
+    "size": 16,
+    "weight": 500,
+    "ratio": 12.29,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "58 px",
+    "cls": "ampy-btn ampy-btn--primary",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "48 px",
+    "cls": "ampy-btn ampy-btn--primary ampy-btn--compact",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "58 px",
+    "cls": "ampy-btn ampy-btn--secondary",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "48 px",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--compact",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "58 px",
+    "cls": "ampy-btn ampy-btn--ghost",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "48 px",
+    "cls": "ampy-btn ampy-btn--ghost ampy-btn--compact",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Två CTA:er i rad (elcentral-rail): fylle",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kontakta oss",
+    "cls": "ampy-btn ampy-btn--primary ampy-btn--block-mobile",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Handlingslänk",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Räkna ut din besparing",
+    "cls": "ampy-link",
+    "size": 14,
+    "weight": 500,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Räkna ut din besparing",
+    "cls": "ampy-link is-hover",
+    "size": 14,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tyst länk",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Se alla laddboxar",
+    "cls": "ampy-link ampy-link--quiet",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tyst länk, hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Se alla laddboxar",
+    "cls": "ampy-link ampy-link--quiet is-hover",
+    "size": 16,
+    "weight": 500,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ghost-pill",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Till startsidan",
+    "cls": "ampy-link ampy-link--ghost",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ghost, hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Till startsidan",
+    "cls": "ampy-link ampy-link--ghost is-hover",
+    "size": 16,
+    "weight": 500,
+    "ratio": 4.59,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tel-länk",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "010-265 79 79",
+    "cls": "ampy-link ampy-link--quiet ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Räkna ut din besparing",
+    "cls": "ampy-link is-focus",
+    "size": 14,
+    "weight": 500,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Handlingslänk",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så har vi räknat",
+    "cls": "ampy-link",
+    "size": 14,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så har vi räknat",
+    "cls": "ampy-link is-hover",
+    "size": 14,
+    "weight": 500,
+    "ratio": 14.61,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ghost-pill",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Avbryt",
+    "cls": "ampy-link ampy-link--ghost",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tel-länk",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "010-265 79 79",
+    "cls": "ampy-link ampy-link--quiet ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   }
+  ],
+  "text": [
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ditt besked",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Med streck (--dash)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Dagens kostnad",
+    "cls": "ampy-eyebrow ampy-eyebrow--dash",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Text-teal (--action)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Medan du väntar",
+    "cls": "ampy-eyebrow ampy-eyebrow--action",
+    "size": 12,
+    "weight": 600,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Årlig besparing",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Med streck",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Dagens kostnad",
+    "cls": "ampy-eyebrow ampy-eyebrow--dash",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Success",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Låg risk",
+    "cls": "ampy-tag ampy-tag--success",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.35,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Warning",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bör ses över",
+    "cls": "ampy-tag ampy-tag--warning",
+    "size": 16,
+    "weight": 600,
+    "ratio": 4.95,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Error",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Akut",
+    "cls": "ampy-tag ampy-tag--error",
+    "size": 16,
+    "weight": 600,
+    "ratio": 9.34,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Info",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Inget planerat",
+    "cls": "ampy-tag ampy-tag--info",
+    "size": 16,
+    "weight": 600,
+    "ratio": 6.43,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Neutral",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Oklart",
+    "cls": "ampy-tag ampy-tag--neutral",
+    "size": 16,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Action (referens)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bokning 4821",
+    "cls": "ampy-tag ampy-tag--action",
+    "size": 16,
+    "weight": 600,
+    "ratio": 4.59,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Live med puls",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jour öppen just nu",
+    "cls": "ampy-tag ampy-tag--live",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.53,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Liten (--sm)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Akut",
+    "cls": "ampy-tag ampy-tag--sm ampy-tag--error",
+    "size": 12,
+    "weight": 600,
+    "ratio": 9.34,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Varning",
+    "cls": "ampy-tag ampy-tag--sm ampy-tag--warning",
+    "size": 12,
+    "weight": 600,
+    "ratio": 4.95,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Stor (--lg)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Redo för laddbox",
+    "cls": "ampy-tag ampy-tag--lg ampy-tag--success",
+    "size": 18,
+    "weight": 600,
+    "ratio": 5.35,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (hero-2 chip)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Laddbox",
+    "cls": "ampy-tag ",
+    "size": 16,
+    "weight": 600,
+    "ratio": 16.62,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Success",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Låg risk",
+    "cls": "ampy-tag ampy-tag--success",
+    "size": 16,
+    "weight": 600,
+    "ratio": 14.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Live",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jour öppen just nu",
+    "cls": "ampy-tag ampy-tag--live",
+    "size": 16,
+    "weight": 600,
+    "ratio": 16.62,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (LED)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Energi du kapar",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "16 819",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kWh/år",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "59 % lägre förbrukning",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "CO₂ du sparar",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "7,8",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "ton/år",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "jämfört med nordisk elmix",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uppskattad kostnad",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "120 000",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "cirka 1 500 kr per armatur, inklusive in",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta, två kolumner",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Att betala",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "14 950",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "efter grön teknik-avdrag",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Återbetald",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "4,2",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "år",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "vid dagens elpris",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (LED)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Årlig besparing",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "27 752",
+    "cls": "ampy-number",
+    "size": 56,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr/år",
+    "cls": "ampy-readout__unit",
+    "size": 28,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så mycket lägre kan elkostnaden bli, var",
+    "cls": "ampy-readout__sub",
+    "size": 16,
+    "weight": 300,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Din kostnad i dag",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "31 400",
+    "cls": "ampy-number",
+    "size": 56,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr/år",
+    "cls": "ampy-readout__unit",
+    "size": 28,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uppskattad elkostnad för uppvärmning per",
+    "cls": "ampy-readout__sub",
+    "size": 16,
+    "weight": 300,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Källa: Elsäkerhetsverket,",
+    "cls": "ampy-source",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elsäkerhetslagen (2016:732)",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Utan linje: Elsäkerhetsverket registrera",
+    "cls": "ampy-source ampy-source--plain",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Källa: Energimyndigheten, elpris SE3 202",
+    "cls": "ampy-source",
+    "size": 13,
+    "weight": 400,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "5,0",
+    "cls": "",
+    "size": 14.5,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "på Google",
+    "cls": "ampy-proof__label",
+    "size": 14.5,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "3 000+",
+    "cls": "",
+    "size": 14.5,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "installationer om året",
+    "cls": "ampy-proof__vol",
+    "size": 14.5,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "På foto och mörkt (hero-1)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "5,0",
+    "cls": "",
+    "size": 14.5,
+    "weight": 700,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "på Google",
+    "cls": "ampy-proof__label",
+    "size": 14.5,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "3 000+",
+    "cls": "",
+    "size": 14.5,
+    "weight": 700,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "installationer om året",
+    "cls": "ampy-proof__vol",
+    "size": 14.5,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Från start till mål levererades en servi",
+    "cls": "ampy-quote__text",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Anna, Huddinge",
+    "cls": "ampy-quote__name",
+    "size": 22,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Augusti 2026",
+    "cls": "ampy-quote__date",
+    "size": 12,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (testimonials)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Från start till mål levererades en servi",
+    "cls": "ampy-quote__text",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.11,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Anna, Huddinge",
+    "cls": "ampy-quote__name",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Augusti 2026",
+    "cls": "ampy-quote__date",
+    "size": 12,
+    "weight": 400,
+    "ratio": 9.94,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bocklista (--check)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byggt på Elsäkerhetslagen och Elsäkerhet",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Registrerat elinstallationsföretag",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ett ärligt besked, byggt på dina egna sv",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kompakt (--compact)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Behörig elektriker svarar",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Du får ett pris innan vi börjar",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Inga dolda avgifter",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Steg (--steps)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Du beskriver jobbet",
+    "cls": "ampy-list__title",
+    "size": 22,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Formuläret tar en minut. Skriv gärna vad",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Vi ringer och räknar",
+    "cls": "ampy-list__title",
+    "size": 22,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "En elektriker går igenom dina uppgifter ",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jobbet görs och kvittot stämmer",
+    "cls": "ampy-list__title",
+    "size": 22,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "ROT dras direkt på fakturan. Du betalar ",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bocklista",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byggt på Elsäkerhetslagen och Elsäkerhet",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Registrerat elinstallationsföretag",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ett ärligt besked, byggt på dina egna sv",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kompakt",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Behörig elektriker svarar",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Du får ett pris innan vi börjar",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Inga dolda avgifter",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Att betala",
+    "cls": "ampy-price__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 16.57,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "14 950 kr",
+    "cls": "ampy-price__amount",
+    "size": 22,
+    "weight": 700,
+    "ratio": 16.57,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "efter ROT-avdrag på arbetskostnaden. Mat",
+    "cls": "ampy-price__note",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.52,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Inline",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "från 4 900 kr",
+    "cls": "ampy-price__amount",
+    "size": 22,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "efter ROT",
+    "cls": "ampy-price__note",
+    "size": 16,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Inline-kod",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Formeln",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kWh × pris × 0,59",
+    "cls": "ampy-code",
+    "size": 13,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (kvittopanel)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Att betala",
+    "cls": "ampy-price__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 15.89,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "14 950 kr",
+    "cls": "ampy-price__amount",
+    "size": 22,
+    "weight": 700,
+    "ratio": 15.89,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "efter ROT-avdrag på arbetskostnaden. Mat",
+    "cls": "ampy-price__note",
+    "size": 13,
+    "weight": 400,
+    "ratio": 10.11,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   }
+  ],
+  "ytor": [
+   {
+    "text": "På sky-mist",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral i villa",
+    "cls": "",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ny normcentral med jordfelsbrytare och a",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Flat (--flat)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral i villa",
+    "cls": "",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ny normcentral med jordfelsbrytare och a",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Plain (--plain)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral i villa",
+    "cls": "",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ny normcentral med jordfelsbrytare och a",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Raised (--raised)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral i villa",
+    "cls": "",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ny normcentral med jordfelsbrytare och a",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover (--hover .is-hover)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral i villa",
+    "cls": "",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ny normcentral med jordfelsbrytare och a",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tight (--tight)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral i villa",
+    "cls": "",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ny normcentral med jordfelsbrytare och a",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Stort (--lg)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral i villa",
+    "cls": "",
+    "size": 22,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ny normcentral med jordfelsbrytare och a",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Platt (default)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Årlig besparing",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "27 752",
+    "cls": "ampy-number",
+    "size": 56,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr/år",
+    "cls": "ampy-readout__unit",
+    "size": 28,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så mycket lägre kan elkostnaden bli, var",
+    "cls": "ampy-readout__sub",
+    "size": 16,
+    "weight": 300,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Energi du kapar",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "16 819",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kWh/år",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "59 % lägre förbrukning",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "CO₂ du sparar",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "7,8",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "ton/år",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "jämfört med nordisk elmix",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uppskattad kostnad",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "120 000",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "inklusive installation",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Med glöd (--glow, tillval för verktyg)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Årlig besparing",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "27 752",
+    "cls": "ampy-number",
+    "size": 56,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr/år",
+    "cls": "ampy-readout__unit",
+    "size": 28,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så mycket lägre kan elkostnaden bli, var",
+    "cls": "ampy-readout__sub",
+    "size": 16,
+    "weight": 300,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Energi du kapar",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "16 819",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kWh/år",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "59 % lägre förbrukning",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "CO₂ du sparar",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "7,8",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "ton/år",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "jämfört med nordisk elmix",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uppskattad kostnad",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "120 000",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "inklusive installation",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Innehållskort på mörkt (testimonials)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Blev rekommenderad av en granne att gå v",
+    "cls": "ampy-quote__text",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.11,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Filip Eriksson",
+    "cls": "ampy-quote__name",
+    "size": 22,
+    "weight": 600,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "mars 2026",
+    "cls": "ampy-quote__date",
+    "size": 12,
+    "weight": 400,
+    "ratio": 9.94,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "På auroran",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tack",
+    "cls": "ampy-eyebrow ampy-eyebrow--action",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Din förfrågan är mottagen",
+    "cls": "",
+    "size": 36,
+    "weight": 500,
+    "ratio": 18.71,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "En av våra rådgivare kontaktar dig inom ",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 18.71,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Utforska våra eltjänster",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--compact",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörkt glas (--glass-dark, före/efter-chi",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Före",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Dra i reglaget för att se skillnaden.",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elinstallationer i hemmet, gjort ordentl",
+    "cls": "ampy-display",
+    "size": 60,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Behöriga elektriker som berättar vad som",
+    "cls": "ampy-lead",
+    "size": 22,
+    "weight": 400,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring 010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "5,0",
+    "cls": "",
+    "size": 14.5,
+    "weight": 700,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "på Google",
+    "cls": "ampy-proof__label",
+    "size": 14.5,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Text ovanför avdelaren.",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Text under. Stark variant:",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Teal-toning, centrerad 60 px:",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tät variant utan luft:",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Text direkt under.",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hero-siffran ovanför.",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Stat-trion under.",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Band, sky-mist",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Sektion på sidans grund",
+    "cls": "",
+    "size": 36,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tight-variant: xl-padding 56/27.",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Band, vitt",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Vit sektion",
+    "cls": "",
+    "size": 36,
+    "weight": 500,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "För kort som annars skulle ligga vitt på",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Band, toning",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Sky-mist till vitt",
+    "cls": "",
+    "size": 36,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral-kollens blockläge.",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Band, mörkt",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Midnight-sektion",
+    "cls": "",
+    "size": 36,
+    "weight": 500,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Platt, utan glöd. Footer, visste-du-att ",
+    "cls": "",
+    "size": 18,
+    "weight": 300,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Aurora, 4 radialer på sky-mist",
+    "cls": "ampy-eyebrow ampy-eyebrow--action",
+    "size": 12,
+    "weight": 600,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   }
+  ],
+  "falt": [
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "E-post",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "E-post",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ifyllt",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Telefon",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fel",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Postnummer",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Postnumret har fem siffror.",
+    "cls": "ampy-error",
+    "size": 13,
+    "weight": 500,
+    "ratio": 10.11,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Med hjälptext",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Postnummer",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så vi vet vilken elektriker som är närma",
+    "cls": "ampy-help",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Valfritt",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Meddelande",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "(valfritt)",
+    "cls": "ampy-field__opt",
+    "size": 14,
+    "weight": 400,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kommun",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Storlekar 44 / 48 / 52",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fältgrid, två kolumner från 600 (elcentr",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Namn",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "E-post",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Telefon",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Postnummer",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så vi vet vilken elektriker som är närma",
+    "cls": "ampy-help",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Boka rådgivning",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--block",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Genom att trycka på \"Boka rådgivning\" sa",
+    "cls": "ampy-consent",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (LED)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Namn",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible (neon-mint)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "E-post",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fel",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Telefon",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Skriv hela numret.",
+    "cls": "ampy-error",
+    "size": 13,
+    "weight": 500,
+    "ratio": 11.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kommun",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Sökfält",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Med lista öppen",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Storgatan 1",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": ", Solna",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "171 52",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Storgatan 1",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "2, Sundbyberg",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "172 31",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Storgatan 1",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "4, Stockholm",
+    "cls": "",
+    "size": 16,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "114 51",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Var sitter belysningen?",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Var sitter belysningen?",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elprisområde",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Var sitter belysningen?",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 16.03,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Meddelande",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "(valfritt)",
+    "cls": "ampy-field__opt",
+    "size": 14,
+    "weight": 400,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Meddelande",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "(valfritt)",
+    "cls": "ampy-field__opt",
+    "size": 14,
+    "weight": 400,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentralen sitter i källaren, porslinss",
+    "cls": "ampy-textarea is-focus",
+    "size": 16,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag godkänner att Ampy sparar mina uppgi",
+    "cls": "ampy-check__text",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Vald",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag godkänner att Ampy sparar mina uppgi",
+    "cls": "ampy-check__text",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag godkänner att Ampy sparar mina uppgi",
+    "cls": "ampy-check__text",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fel (samtycke saknas)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag godkänner att Ampy sparar mina uppgi",
+    "cls": "ampy-check__text",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Du behöver godkänna för att vi ska kunna",
+    "cls": "ampy-error",
+    "size": 13,
+    "weight": 500,
+    "ratio": 10.11,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Som val (--strong)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag vill ha offert på laddbox också",
+    "cls": "ampy-check__text",
+    "size": 16,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag godkänner att Ampy sparar mina uppgi",
+    "cls": "ampy-check__text",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Samtycke som textrad",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Boka rådgivning",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--block",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Genom att trycka på \"Boka rådgivning\" sa",
+    "cls": "ampy-consent",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta (LED)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag godkänner att Ampy sparar mina uppgi",
+    "cls": "ampy-check__text",
+    "size": 13,
+    "weight": 400,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Vald",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag godkänner att Ampy sparar mina uppgi",
+    "cls": "ampy-check__text",
+    "size": 13,
+    "weight": 400,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Integritetspolicy",
+    "cls": "",
+    "size": 13,
+    "weight": 400,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Enkelval (auto-avancerar), ett valt",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hur gammal är elcentralen?",
+    "cls": "",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Nyare än 10 år",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Automatsäkringar och jordfelsbrytare",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "10 till 30 år",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.57,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ofta automatsäkringar, ibland utan jordf",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 5.52,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Äldre än 30 år eller vet inte",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Porslinssäkringar är ett säkert tecken",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Flerval (--multi) med Fortsätt",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Känner du igen något av det här hemma?",
+    "cls": "",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Säkringar som löser ut ofta",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.57,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uttag eller strömbrytare som blir varma",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Lampor som flimrar",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Inget av detta",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fortsätt",
+    "cls": "ampy-btn ampy-btn--ghost ampy-btn--compact ampy-btn--block",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tillstånd",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hover",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uttag som blir varma",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Glappkontakt är den vanligaste orsaken",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Focus-visible",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uttag som blir varma",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Glappkontakt är den vanligaste orsaken",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Uttag som blir varma",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Rutnät med ikonruta (--grid, energycalc)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hur värmer du huset?",
+    "cls": "",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Direktverkande el",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.57,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Luft-luftvärmepump",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fjärrvärme",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bergvärme",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Vet inte",
+    "cls": "ampy-chip__title",
+    "size": 16,
+    "weight": 300,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Rad (--row, rumschips)",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kök",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.57,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Badrum",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Garage",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Utomhus",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hur gammal är elcentralen?",
+    "cls": "",
+    "size": 14,
+    "weight": 600,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Nyare än 10 år",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 17.18,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Automatsäkringar och jordfelsbrytare",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 8.01,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "10 till 30 år",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.14,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ofta automatsäkringar, ibland utan jordf",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 7.66,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Äldre än 30 år eller vet inte",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 17.18,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Porslinssäkringar är ett säkert tecken",
+    "cls": "ampy-chip__clarifier",
+    "size": 16,
+    "weight": 400,
+    "ratio": 8.01,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tre val (LED)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "BRF",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Företag",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Privat",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fyra val (elprisområde)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "SE1",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "SE2",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "SE3",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "SE4",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Toggle (--pill, EV)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "AC",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "DC",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Kantad med solid vald (--line, energycal",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Före 1940",
+    "cls": "",
+    "size": 14,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "1940 till 1975",
+    "cls": "",
+    "size": 14,
+    "weight": 400,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "1976 till 2000",
+    "cls": "",
+    "size": 14,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Efter 2000",
+    "cls": "",
+    "size": 14,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Vet inte",
+    "cls": "",
+    "size": 14,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "BRF",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "Företag",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "Privat",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tre val",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "BRF",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 7,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Företag",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Privat",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 7,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Toggle",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Med",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Utan",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 7,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Antal armaturer",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "80",
+    "cls": "",
+    "size": 22,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "st",
+    "cls": "ampy-range-value__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "40",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "80",
+    "cls": "ampy-range__tick is-active",
+    "size": 13,
+    "weight": 700,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "160",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "280",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "400",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Disabled",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "80",
+    "cls": "",
+    "size": 22,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "st",
+    "cls": "ampy-range-value__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "40",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "80",
+    "cls": "ampy-range__tick ",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "160",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "280",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "400",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": true
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Brinntid",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "12",
+    "cls": "",
+    "size": 22,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "h/dygn",
+    "cls": "ampy-range-value__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "0,0 h",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "6,0 h",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "12,0 h",
+    "cls": "ampy-range__tick is-active",
+    "size": 13,
+    "weight": 700,
+    "ratio": 14.61,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "18,0 h",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "24,0 h",
+    "cls": "ampy-range__tick",
+    "size": 13,
+    "weight": 400,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "2",
+    "cls": "ampy-stepper__value",
+    "size": 20,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bunden ände (min)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "0",
+    "cls": "ampy-stepper__value",
+    "size": 20,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Pill (--pill)",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "3",
+    "cls": "ampy-stepper__value",
+    "size": 18,
+    "weight": 700,
+    "ratio": 15.52,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Default",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "2",
+    "cls": "ampy-stepper__value",
+    "size": 20,
+    "weight": 500,
+    "ratio": 17.18,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ljus yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hjälp",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Så vi vet vilken elektriker som är närma",
+    "cls": "ampy-help",
+    "size": 13,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fel",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fyll i alla fält.",
+    "cls": "ampy-error",
+    "size": 13,
+    "weight": 500,
+    "ratio": 10.11,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Meddelande ok",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tack. Vi ringer dig inom 24 timmar på va",
+    "cls": "",
+    "size": 16,
+    "weight": 300,
+    "ratio": 5.35,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Meddelande fel",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Det gick inte att skicka. Ring oss på 01",
+    "cls": "",
+    "size": 16,
+    "weight": 300,
+    "ratio": 9.34,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Info",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Värme och missfärgning är klassiska teck",
+    "cls": "",
+    "size": 16,
+    "weight": 300,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Mörk yta",
+    "cls": "ds-demo__label",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fel",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fyll i alla fält.",
+    "cls": "ampy-error",
+    "size": 13,
+    "weight": 500,
+    "ratio": 11.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Meddelande ok",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tack. Vi ringer dig inom 24 timmar på va",
+    "cls": "",
+    "size": 16,
+    "weight": 300,
+    "ratio": 14.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Meddelande fel",
+    "cls": "ds-demo__tag",
+    "size": 12,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Det gick inte att skicka. Ring oss i stä",
+    "cls": "",
+    "size": 16,
+    "weight": 300,
+    "ratio": 16.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   }
+  ],
+  "index": [
+   {
+    "text": "Kostnadsfri offert",
+    "cls": "ampy-btn ampy-btn--primary",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring 010-265 79 79",
+    "cls": "ampy-link--tel",
+    "size": 16,
+    "weight": 500,
+    "ratio": 5.51,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Boka rådgivning",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--compact",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fortsätt",
+    "cls": "ampy-btn ampy-btn--ghost ampy-btn--compact",
+    "size": 16,
+    "weight": 500,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Räkna ut din besparing",
+    "cls": "ampy-link",
+    "size": 14,
+    "weight": 500,
+    "ratio": 4.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Ring jouren",
+    "cls": "ampy-btn ampy-btn--secondary ampy-btn--compact",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Dagens kostnad",
+    "cls": "ampy-eyebrow ampy-eyebrow--dash",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Låg risk",
+    "cls": "ampy-tag ampy-tag--success",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.35,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Bör ses över",
+    "cls": "ampy-tag ampy-tag--warning",
+    "size": 16,
+    "weight": 600,
+    "ratio": 4.95,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Energi",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "16 819",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kWh",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "59 % lägre",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "CO₂",
+    "cls": "ampy-stat__label",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "7,8",
+    "cls": "ampy-stat__value",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "ton",
+    "cls": "ampy-stat__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "per år",
+    "cls": "ampy-stat__sub",
+    "size": 13,
+    "weight": 300,
+    "ratio": 6.13,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "27 752",
+    "cls": "ampy-number",
+    "size": 56,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr/år",
+    "cls": "ampy-readout__unit",
+    "size": 18,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Källa: Elsäkerhetsverket, händelser 2018",
+    "cls": "ampy-source",
+    "size": 13,
+    "weight": 400,
+    "ratio": 4.54,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "5,0",
+    "cls": "",
+    "size": 14.5,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "på Google",
+    "cls": "ampy-proof__label",
+    "size": 14.5,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Anna, Huddinge",
+    "cls": "ampy-quote__name",
+    "size": 22,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Behörig elektriker",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Fast pris innan start",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "14 950 kr",
+    "cls": "ampy-price__amount",
+    "size": 22,
+    "weight": 700,
+    "ratio": 17.98,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "efter ROT",
+    "cls": "ampy-price__note",
+    "size": 16,
+    "weight": 400,
+    "ratio": 5.99,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Elcentral",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 6.33,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Byte av elcentral",
+    "cls": "",
+    "size": 18,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Årlig besparing",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "27 752",
+    "cls": "ampy-number",
+    "size": 28,
+    "weight": 700,
+    "ratio": 19,
+    "need": 3,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "kr/år",
+    "cls": "ampy-readout__unit",
+    "size": 16,
+    "weight": 500,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Tack",
+    "cls": "ampy-eyebrow ampy-eyebrow--action",
+    "size": 12,
+    "weight": 600,
+    "ratio": 5.19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Hjälteram",
+    "cls": "ampy-eyebrow",
+    "size": 12,
+    "weight": 600,
+    "ratio": 8.45,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "E-post",
+    "cls": "ampy-field__label",
+    "size": 14,
+    "weight": 600,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Jag vill ha offert på laddbox också",
+    "cls": "ampy-check__text",
+    "size": 16,
+    "weight": 400,
+    "ratio": 17.98,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "10 till 30 år",
+    "cls": "ampy-chip__title",
+    "size": 18,
+    "weight": 500,
+    "ratio": 16.57,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "BRF",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.27,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Företag",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Privat",
+    "cls": "",
+    "size": 16,
+    "weight": 600,
+    "ratio": 5.17,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "2",
+    "cls": "ampy-stepper__value",
+    "size": 20,
+    "weight": 500,
+    "ratio": 19,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   },
+   {
+    "text": "Postnumret har fem siffror.",
+    "cls": "ampy-error",
+    "size": 13,
+    "weight": 500,
+    "ratio": 10.11,
+    "need": 4.5,
+    "ok": true,
+    "disabled": false
+   }
+  ]
+ }
+}

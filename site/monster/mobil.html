@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mobil 390: Ampy designsystem</title>
+<!-- Sökvägarna nedan gäller för en sida i site/. Ligger sidan i site/<mapp>/ blir prefixet ../ -->
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för mönstersidorna (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-demo--stack { flex-wrap: nowrap; }
+  .ds-demo--stack > *, .ds-demo > * { min-width: 0; }
+  .ds-diagram { display: grid; gap: var(--ampy-space-xs); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); font-size: var(--ampy-text-small); line-height: 1.4; }
+  .ds-diagram__box { border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); min-height: 6rem; display: flex; flex-direction: column; gap: 0.4rem; border: 1px dashed var(--ampy-line-strong); color: var(--ampy-ink-muted); }
+  .ds-diagram__box b { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); font-size: var(--ampy-text-small); }
+  .ds-diagram__box--dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark-muted); border-style: solid; border-color: transparent; }
+  .ds-diagram__box--dark b { color: var(--ampy-on-dark); }
+  .ds-diagram__box--white { background: var(--ampy-bg-surface); border-style: solid; border-color: var(--ampy-line-strong); }
+  .ds-diagram__box--tint { background: var(--ampy-bg-subtle); }
+  .ds-diagram__box--band { background: var(--ampy-bg-page); grid-column: 1 / -1; min-height: 4rem; flex-direction: row; align-items: center; justify-content: center; text-align: center; border-style: solid; }
+  .ds-diagram__meta { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); }
+  .ds-diagram--calc { grid-template-columns: 5fr 7fr; }
+  .ds-diagram--diag { grid-template-columns: 44fr 56fr; }
+  .ds-diagram--block { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); }
+  .ds-diagram--seq { grid-template-columns: 1fr; gap: 0.6rem; }
+  .ds-diagram--seq .ds-diagram__box { min-height: 0; flex-direction: row; align-items: baseline; gap: var(--ampy-space-xs); }
+  .ds-diagram__n { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); min-width: 2.4rem; }
+  .ds-diagram__pad { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-action-strong); margin-left: auto; white-space: nowrap; }
+  .ds-fig { margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
+  .ds-fig figcaption { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin-top: 0.6rem; }
+  .ds-fig--pair { display: grid; grid-template-columns: 3fr 1fr; gap: var(--ampy-space-s); align-items: start; }
+  .ds-fig--pair figure { margin: 0; }
+  .ds-fig--pair img { max-height: 56rem; object-fit: cover; object-position: top; }
+  .ds-fig--wide { grid-template-columns: 1fr 1fr; }
+  .ds-two { display: grid; gap: var(--ampy-space-s); grid-template-columns: 1fr 1fr; margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-two > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); background: var(--ampy-bg-surface); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-xs); }
+  .ds-rule { display: grid; grid-template-columns: 22rem 1fr; gap: var(--ampy-space-s); padding: var(--ampy-space-s) 0; border-top: 1px solid var(--ampy-line); }
+  .ds-rule:last-child { border-bottom: 1px solid var(--ampy-line); }
+  .ds-rule__t { font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-body); }
+  .ds-rule__t small { display: block; font-weight: var(--ampy-w-body); color: var(--ampy-ink-faint); font-size: var(--ampy-text-small); margin-top: 0.3rem; }
+  .ds-rule__b { font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-rule__b p { margin: 0 0 0.6rem; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: var(--ampy-lh-body); font-weight: var(--ampy-w-body); max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.4rem; }
+  .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
+  .ds-blk .ds-h2 { margin-top: 0; }
+  @media (max-width: 991px) {
+    .ds-diagram--calc, .ds-diagram--diag, .ds-diagram--block { grid-template-columns: 1fr; }
+    .ds-fig--pair, .ds-fig--wide, .ds-two, .ds-rule { grid-template-columns: 1fr; }
+    .ds-fig--pair figure + figure { max-width: 22rem; }
+  }
+
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="tjanstesida.html">Tjänstesidans rytm</a>
+        <a href="mobil.html" aria-current="page">Mobil 390</a>
+        <a href="register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Mönster</span>
+      <h1 class="ds-h1">Mobil 390</h1>
+      <p class="ds-lead">Mobilen läggs om, den skalas inte ned. Reglerna nedan är hämtade ur de byggda blocken: vad som byter ordning, vad som staplas, vad som kollapsar och vad som aldrig får bli mindre än tummen.</p>
+      <p class="ds-source">Inventeringarna (<code>inventering/*.md</code>, mätningar vid 390 med getComputedStyle), <code>.claude/skills/ampy-wireframe-ux/SKILL.md</code> §3 (mobilomläggningen per familj), <code>ampy-foretagsdata.md</code> §9.5 (brytpunkter 992 / 768 / 480), sticky-barens leverans (tap-centrum), tokens.css (44 px-golvet finns inte som token: det står i koden i elcentral, eljour, sticky-bar, testimonials, fotobedömningen).</p>
+
+      <section class="ds-blk" id="regler">
+        <h2 class="ds-h2">Reglerna</h2>
+
+        <div class="ds-rule">
+          <div class="ds-rule__t">Omlagd, inte skalad<small>kalkylatorkitet, hero-2, avdragsblocket</small></div>
+          <div class="ds-rule__b"><p>Det mörka resultatkortets glöd är kalibrerad för en 600 px-panel; sträckt över en telefon blir den en lerig wash. Glöden ankras om bakom siffran. Hero-2 lägger bilden bakom texten och byter till den bastanta scrimmen. Avdragsblocket centrerar H2:n och släpper nowrap på accenten så raderna balanserar.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Stapelordning: det som bär budskapet först<small>CTA-bandet, visste-du-att, eljour, hero-2 Z, kalkylatorn</small></div>
+          <div class="ds-rule__b"><p>CTA-bandet lägger porträttet överst (order -1) och centrerar texten. Visste-du-att lägger lampan överst. Eljour lägger samtalskortet över listan och flyttar källraden under listan. Hero-2 Z lägger formkortet under texten. Kalkylatorn lägger inputkortet först och resultatet under; diagnostiken lägger railens innehåll via <code>display: contents</code> och <code>order</code> runt scenen.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Chips och pillar radbryter, klär aldrig av sig<small>kvittopanelen, fotobedömningen, segmentet, energycalcs byggår</small></div>
+          <div class="ds-rule__b"><p>Under 400 px panelbredd byter kvittoraderna till etikett över värde, etiketten kliver in i caps-rollen (13 / 700) och pillarna förblir pillar. Byggårssegmentet radbryter med flex 1 1 30 %. En chip som blir ren text på mobil har tappat sin roll.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Sticky CTA-kollaps: två blir en<small>diagnostikens rail, eljour + sticky-bar, elcentral __stickycta</small></div>
+          <div class="ds-rule__b"><p>Railens två telefon-CTA:er kollapsar till EN sticky "Ring / Kontakta" på mobil; beskedets egen CTA blir den andra, aldrig en tredje knapp i stapel. Eljour-sidan: sticky-baren bär ring-knappen (kanon), symptomblocket bär nödknappen; två CTA-språk i samma viewport är en dokumenterad defekt att lösa (B6). Baren är 83 px hög med tap-centrum 45 px från underkanten (iOS gestremsa), body får bottenpaddingen server-side så inträdet inte ger layoutskift.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">44 px är golvet för allt som trycks<small>testimonials prickar, symptomrader 60, "Se fler" 55, reglage 44, tel-länk 43,75, ikonknappar 44 x 44, TOC-länkar</small></div>
+          <div class="ds-rule__b"><p>Träffytan får vara osynlig (prickarnas ::before -12 px, telefonlänkens padding 11 px med negativ margin) men aldrig mindre än 44 px. Rader i listor är 60 till 68 px. Under pointer:coarse växer mega-menyns länkar till 12 px vertikal padding. Ingen träffyta får styra layouten av misstag (footerns sociala ankare gav 201 px kolumnhöjd).</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Text går aldrig under 12 px, fält aldrig under 16<small>testimonials datum 10,1 (defekt), footer copyright 10,1 (defekt), elcentral 13 meta, inputs 16 (iOS-golv)</small></div>
+          <div class="ds-rule__b"><p><code>--aptext-xs</code> ger 10,1 px på 390; eyebrow-rollen är därför 12 px fast. Inputs är minst 16 px så iOS inte zoomar. Brödtexten är 16,1 px (body-token), inte live-temats 14,1 (B20).</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Knappen blir full bredd, chippen till höger<small>ring-knappens --block, avdragsblockets CTA under 430, eljours nödknapp, CTA-bandet</small></div>
+          <div class="ds-rule__b"><p>Text vänster, ikon höger (live-blockets grammatik). Etiketten får radbryta (text-wrap balance, lh 1.25) i stället för att skjuta ut ur gradienten (uppmätt -15 px på 320 i D2 före fixen). Hero-1 skalar knappen till 52 h / 15 px, en dokumenterad avvikelse mot CTA-kanon 58.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Proof-raden blir kolumn, sliders blir 1-upp, grid blir stack<small>hero-1 proof under 560, testimonials under 759, certifikat under 900, mini-menu under 767, prefooter 5 till 2 till 1</small></div>
+          <div class="ds-rule__b"><p>Separatorn försvinner när raden blir kolumn (proof), subline döljs (testimonials), gradienten vrids så ljusänden hamnar bakom korten (certifikat). Brytpunkterna är 992 / 768 / 480; blocken mäter helst mot sin egen bredd (@container) så de överlever en smal Bricks-kolumn.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Header: bar 66, drawer från höger, mega bort<small>website-blocks under 992, logo 100 under 560, CTA 42 h</small></div>
+          <div class="ds-rule__b"><p>Nav-länkarna döljs, burgaren visas, CTA:n behåller solid teal men krymper till 42 h. Drawern är ett vitt högerark 440 med "MENY"-eyebrow, platta accordions och en teal foot-CTA 56 h. Brytpunktstrappan går ned till 339 px.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Kort kant i kant är undantag, inte regel<small>vår process under 479 (radie 0), övriga 10 till 16 px marginal</small></div>
+          <div class="ds-rule__b"><p>Blocket får gå kant i kant när det är ett dokumentkort som ska läsas, inte när det är ett kort i ett band. Heros behåller 8 px och radie 18.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Rörelse och fixed på mobil<small>sticky-bar 180 ms in, 0 ms ut vid tangentbord, ingen translateY på bottenremsa, reduced-motion släcker allt</small></div>
+          <div class="ds-rule__b"><p>En bar som glider in under en tumme får aldrig ringa ett samtal (400 ms kall period). Tangentbordet uppe: baren försvinner utan animation. Hover finns inte: bara (hover:hover) and (pointer:fine) får hover-koreografi, annars fastnar den efter tap.</p></div>
+        </div>
+      </section>
+
+      <section class="ds-blk" id="sida-vid-sida">
+        <h2 class="ds-h2">Sida vid sida: 1440 och 390</h2>
+        <p class="ds-p">Samma block, mätt i källorna. Titta på vad som byter plats, inte på vad som blir mindre.</p>
+
+        <h3 class="ds-h3">CTA-bandet: porträttet överst, knappen full bredd med chippen höger</h3>
+        <div class="ds-fig ds-fig--pair">
+          <figure><img src="../bilder/main-cta-desktop.jpg" alt="CTA-bandet vid 1440"><figcaption>1440: text vänster, porträtt 320 x 366 höger, chip vänster i knappen.</figcaption></figure>
+          <figure><img src="../bilder/main-cta-mobile.jpg" alt="CTA-bandet vid 390"><figcaption>390: bild överst (292 px), rubrik 24 centrerad, knapp 100 procent.</figcaption></figure>
+        </div>
+
+        <h3 class="ds-h3">Diagnostiken: railen runt scenen, sticky CTA i botten</h3>
+        <div class="ds-fig ds-fig--pair">
+          <figure><img src="../bilder/elcentral-kollen-desktop-state-fraga.jpg" alt="Elcentral-kollen vid 1440 i frågeläge"><figcaption>1440: rail 44fr med två CTA:er, scen 56fr.</figcaption></figure>
+          <figure><img src="../bilder/elcentral-kollen-mobile-state-fraga.jpg" alt="Elcentral-kollen vid 390"><figcaption>390: display contents + order, sticky-CTA 77 h.</figcaption></figure>
+        </div>
+
+        <h3 class="ds-h3">Kalkylatorn: inputkortet först, glöden omjusterad</h3>
+        <div class="ds-fig ds-fig--pair">
+          <figure><img src="../bilder/ev-kalkylator-desktop.jpg" alt="EV-kalkylatorn vid 1440"><figcaption>1440: 5fr / 7fr, glöden uppe till höger i resultatkortet.</figcaption></figure>
+          <figure><img src="../bilder/ev-kalkylator-mobile.jpg" alt="EV-kalkylatorn vid 390"><figcaption>390: en kolumn; källan har 20 px padding överallt och kant i kant (drift).</figcaption></figure>
+        </div>
+
+        <h3 class="ds-h3">Eljour: kortet över listan, puls på knappen bara här</h3>
+        <div class="ds-fig ds-fig--pair">
+          <figure><img src="../bilder/eljour-block-desktop.jpg" alt="Eljour-blocket vid 1440"><figcaption>1440: 4fr / 6fr, ingen puls på knappen (statuspillen pulserar).</figcaption></figure>
+          <figure><img src="../bilder/eljour-sticky-bar-mobile-viewport.jpg" alt="Eljour med sticky-bar vid 390"><figcaption>390: sticky ring-bar 83 px i botten, tap-centrum 45 px.</figcaption></figure>
+        </div>
+
+        <h3 class="ds-h3">Hero-2: bilden bakom texten, bastant scrim</h3>
+        <div class="ds-fig ds-fig--pair">
+          <figure><img src="../bilder/hero-2-alternatives-g-desktop.jpg" alt="HERO-G vid 1440"><figcaption>1440: fullbredds-foto, CTA + ghost-pill.</figcaption></figure>
+          <figure><img src="../bilder/hero-2-alternatives-g-mobile.jpg" alt="HERO-G vid 390"><figcaption>390: kort 374 x 754, stack centrerad med 7vh bias.</figcaption></figure>
+        </div>
+
+        <h3 class="ds-h3">Header: bar 66 och drawer</h3>
+        <div class="ds-fig ds-fig--pair">
+          <figure><img src="../bilder/website-blocks-desktop-mega-tjanster.jpg" alt="Headern med Tjänster öppen vid 1440"><figcaption>1440: 76 px bar, mega-ark i samma färg.</figcaption></figure>
+          <figure><img src="../bilder/website-blocks-mobile-drawer-open.jpg" alt="Drawern vid 390"><figcaption>390: 66 px bar, Evify-drawer, foot-CTA 56 h.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="ds-blk" id="checklista">
+        <h2 class="ds-h2">Checklista före leverans (mobil)</h2>
+        <ul class="ds-list">
+          <li><code>node tools/shot.mjs</code> desktop + mobil: <code>overflowX: false</code>, <code>errors: []</code>. Sidan scrollar aldrig i sidled.</li>
+          <li>Alla träffytor minst 44 px; text minst 12 px; fält minst 16 px.</li>
+          <li>Blocket bryter mot sin egen bredd (@container) med @media-fallback för Safari under 16.</li>
+          <li>Fixed element: server-printad body-padding, pixellåst höjd, ingen will-change i vila.</li>
+          <li>reduced-motion släcker även pseudoelementens animationer (animation ärvs inte, ett bart * når aldrig ::after).</li>
+          <li>En öppen panel i taget, stängda paneler inert, fokus flyttas dit det hör hemma.</li>
+        </ul>
+      </section>
+    </div>
+
+    </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tjänstesidans rytm: Ampy designsystem</title>
+<!-- Sökvägarna nedan gäller för en sida i site/. Ligger sidan i site/<mapp>/ blir prefixet ../ -->
+<link rel="stylesheet" href="../../system/ampy.css">
+<link rel="stylesheet" href="../doc.css">
+<link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
+<style>
+  /* Lokala ds-klasser för mönstersidorna (bara här, aldrig i doc.css) */
+  .ds-main { min-width: 0; }
+  .ds-demo--stack { flex-wrap: nowrap; }
+  .ds-demo--stack > *, .ds-demo > * { min-width: 0; }
+  .ds-diagram { display: grid; gap: var(--ampy-space-xs); border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-s); background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); font-size: var(--ampy-text-small); line-height: 1.4; }
+  .ds-diagram__box { border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs); min-height: 6rem; display: flex; flex-direction: column; gap: 0.4rem; border: 1px dashed var(--ampy-line-strong); color: var(--ampy-ink-muted); }
+  .ds-diagram__box b { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); font-size: var(--ampy-text-small); }
+  .ds-diagram__box--dark { background: var(--ampy-bg-dark); color: var(--ampy-on-dark-muted); border-style: solid; border-color: transparent; }
+  .ds-diagram__box--dark b { color: var(--ampy-on-dark); }
+  .ds-diagram__box--white { background: var(--ampy-bg-surface); border-style: solid; border-color: var(--ampy-line-strong); }
+  .ds-diagram__box--tint { background: var(--ampy-bg-subtle); }
+  .ds-diagram__box--band { background: var(--ampy-bg-page); grid-column: 1 / -1; min-height: 4rem; flex-direction: row; align-items: center; justify-content: center; text-align: center; border-style: solid; }
+  .ds-diagram__meta { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); }
+  .ds-diagram--calc { grid-template-columns: 5fr 7fr; }
+  .ds-diagram--diag { grid-template-columns: 44fr 56fr; }
+  .ds-diagram--block { grid-template-columns: minmax(0, 1fr) minmax(0, .72fr); }
+  .ds-diagram--seq { grid-template-columns: 1fr; gap: 0.6rem; }
+  .ds-diagram--seq .ds-diagram__box { min-height: 0; flex-direction: row; align-items: baseline; gap: var(--ampy-space-xs); }
+  .ds-diagram__n { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-ink-faint); min-width: 2.4rem; }
+  .ds-diagram__pad { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.15rem; color: var(--ampy-action-strong); margin-left: auto; white-space: nowrap; }
+  .ds-fig { margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
+  .ds-fig figcaption { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin-top: 0.6rem; }
+  .ds-fig--pair { display: grid; grid-template-columns: 3fr 1fr; gap: var(--ampy-space-s); align-items: start; }
+  .ds-fig--pair figure { margin: 0; }
+  .ds-fig--pair img { max-height: 56rem; object-fit: cover; object-position: top; }
+  .ds-fig--wide { grid-template-columns: 1fr 1fr; }
+  .ds-two { display: grid; gap: var(--ampy-space-s); grid-template-columns: 1fr 1fr; margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
+  .ds-two > div { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); padding: var(--ampy-space-m); background: var(--ampy-bg-surface); }
+  .ds-two .ds-demo__label { position: static; display: block; margin-bottom: var(--ampy-space-xs); }
+  .ds-rule { display: grid; grid-template-columns: 22rem 1fr; gap: var(--ampy-space-s); padding: var(--ampy-space-s) 0; border-top: 1px solid var(--ampy-line); }
+  .ds-rule:last-child { border-bottom: 1px solid var(--ampy-line); }
+  .ds-rule__t { font-weight: var(--ampy-w-medium); color: var(--ampy-ink); font-size: var(--ampy-text-body); }
+  .ds-rule__t small { display: block; font-weight: var(--ampy-w-body); color: var(--ampy-ink-faint); font-size: var(--ampy-text-small); margin-top: 0.3rem; }
+  .ds-rule__b { font-size: var(--ampy-text-small); line-height: 1.5; color: var(--ampy-ink-body); }
+  .ds-rule__b p { margin: 0 0 0.6rem; }
+  .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: var(--ampy-lh-body); font-weight: var(--ampy-w-body); max-width: 68ch; }
+  .ds-list li { margin-bottom: 0.4rem; }
+  .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
+  .ds-blk .ds-h2 { margin-top: 0; }
+  @media (max-width: 991px) {
+    .ds-diagram--calc, .ds-diagram--diag, .ds-diagram--block { grid-template-columns: 1fr; }
+    .ds-fig--pair, .ds-fig--wide, .ds-two, .ds-rule { grid-template-columns: 1fr; }
+    .ds-fig--pair figure + figure { max-width: 22rem; }
+  }
+
+</style>
+</head>
+<body class="ds-body ampy">
+<div class="ds-topbar">
+  <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
+  <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
+</div>
+<div class="ds-layout">
+  <aside class="ds-side" id="ds-side">
+    <a class="ds-brand" href="../index.html"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span><span class="ds-brand__name">Ampy designsystem</span><span class="ds-brand__sub">Mätt ur blockbiblioteket 2026-09-11</span></span></a>
+    <nav class="ds-nav" aria-label="Designsystemet">
+      <div class="ds-nav__group"><span>Start</span>
+        <a href="../index.html">Översikt</a>
+        <a href="../beslut.html">Beslut som väntar</a>
+        <a href="../kod.html">Använda systemet</a>
+      </div>
+      <div class="ds-nav__group"><span>Grunder</span>
+        <a href="../grunder/farg.html">Färg</a>
+        <a href="../grunder/typografi.html">Typografi</a>
+        <a href="../grunder/spacing.html">Spacing och layout</a>
+        <a href="../grunder/form-djup.html">Form och djup</a>
+        <a href="../grunder/rorelse.html">Rörelse</a>
+        <a href="../grunder/ornament.html">Ornament och ikoner</a>
+      </div>
+      <div class="ds-nav__group"><span>Komponenter</span>
+        <a href="../komponenter/index.html">Alla komponenter</a>
+        <a href="../komponenter/knappar.html">Knappar och länkar</a>
+        <a href="../komponenter/text.html">Textelement</a>
+        <a href="../komponenter/ytor.html">Ytor och kort</a>
+        <a href="../komponenter/falt.html">Fält och reglage</a>
+        <a href="../komponenter/verktyg.html">Kalkylator-kitet</a>
+        <a href="../komponenter/diagnostik.html">Diagnostik-kitet</a>
+        <a href="../komponenter/block.html">Block</a>
+      </div>
+      <div class="ds-nav__group"><span>Mönster</span>
+        <a href="layoutfamiljer.html">Layoutfamiljer</a>
+        <a href="tjanstesida.html" aria-current="page">Tjänstesidans rytm</a>
+        <a href="mobil.html">Mobil 390</a>
+        <a href="register.html">Register och ton</a>
+      </div>
+      <div class="ds-nav__group"><span>Regler</span>
+        <a href="../regler/rost-i-ui.html">Röst i gränssnittet</a>
+        <a href="../regler/candour.html">Candour-grinden</a>
+        <a href="../regler/ai-tells.html">AI-tecken som inte får finnas</a>
+        <a href="../regler/tillganglighet.html">Tillgänglighet</a>
+      </div>
+      <div class="ds-nav__group"><span>Bibliotek</span>
+        <a href="../blockbibliotek.html">Blockbiblioteket</a>
+      </div>
+    </nav>
+  </aside>
+  <main class="ds-main">
+    <div class="ds-content ds-content--wide">
+      <span class="ds-eyebrow">Mönster</span>
+      <h1 class="ds-h1">Tjänstesidans rytm</h1>
+      <p class="ds-lead">De 22 tjänstesidorna kör en kanonisk blocksekvens: heron, avdragsblocket i position 2, innehållet högt, sedan bevis, frågor och asken. Fyra asks i stället för tolv, ett betyg i stället för sex. Sektionernas luft, H2-regeln och fullbreddsregeln kommer från tokens och ägardirektiv.</p>
+      <p class="ds-source">Sekvensen: <code>~/Desktop/Ampy Tjanstesidor-analys/ULTIMATA-STRUKTUREN.md</code> (levererad 2026-08-10, revision 2 2026-08-13 till 14) återgiven ur minnesnoten <code>tjanstesidor-ultimata-strukturen.md</code>; blocken: <code>konsolidering/komponenter-karta.md</code>; luften: <code>system/tokens.css</code> (spacing-roller). Prisblocket i den första sekvensen är struket av ägardirektivet 2026-08-13 ("inga priser på tjänstesidorna"); avdragsblocket tar dess plats.</p>
+
+      <!-- ================================================================ SEKVENSEN -->
+      <section class="ds-blk" id="sekvens">
+        <h2 class="ds-h2">Kanon-sekvensen (noll nya block)</h2>
+        <p class="ds-p">Alla 22 sidor kör identisk 14-blockssekvens i dag med tolv asks; kanon behåller blocken men flyttar tre av dem och tar bort upprepningarna. Positionerna nedan är kanon per revision 2; luften till höger är sektionsavståndet i tokens vid 1440 och 390.</p>
+
+        <div class="ds-diagram ds-diagram--seq" role="img" aria-label="Tjänstesidans blocksekvens">
+          <div class="ds-diagram__box"><span class="ds-diagram__n">0</span><span><b>Header</b> (fixed 76 / 66)</span><span class="ds-diagram__pad">sidan börjar 76 px ned</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">1</span><span><b>HERO-S</b>: navy ram, H1, lead, EN CTA, proof-rad (heron bär betyget, låst). T1-klassen (symptom) får tel: som hero-CTA.</span><span class="ds-diagram__pad">ram: 12 / 8 luft, 683 hög</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">2</span><span><b>Avdragsblocket</b> (ROT eller grön teknik), flyttat 9 till 2: incitamentet före asken, inte under den. Tomt på felsökning, elbesiktning och lastbalansering (ingen ROT-sats). Renderar aldrig ett pris.</span><span class="ds-diagram__pad">sektion 2xl: 79 / 35</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">3</span><span><b>ContentBlock</b> (innehållet) ligger kvar högt på alla 22 (ägarbeslut 2026-08-14), inte under asken.</span><span class="ds-diagram__pad">2xl</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">4</span><span><b>Klass-slot</b>: det ENDA blocket som byts per intentklass. T1 symptom: eljour-blocket + sticky call-bar. T2 anläggning: Elcentral-kollen (bara elcentral, position 3, aldrig som paketets 2). T3 apparat och T6a rum: MainCTA v2. T4 ljus, T5 komfort: tom. T6b projekt: Vår process.</span><span class="ds-diagram__pad">2xl</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">5</span><span><b>Vår process</b> "Vad som händer sen" (riktningsval väntar; dagens block ligger på 212 sidor).</span><span class="ds-diagram__pad">2xl</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">6</span><span><b>Testimonials</b> (flyttat 2 till 5, före FAQ): sliderns badge är det enda betyget utöver heron.</span><span class="ds-diagram__pad">2xl</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">7</span><span><b>FAQ</b>: details/summary, svaren i candour-registret, JSON-LD.</span><span class="ds-diagram__pad">2xl</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">8</span><span><b>MainContact</b> (asken): det fyrfältiga offertformuläret, ingen wizard. enterView tömd (formuläret renderar utan JS).</span><span class="ds-diagram__pad">2xl</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">9</span><span><b>MapBlock</b>: knappen bort, randen ut.</span><span class="ds-diagram__pad">xl: 56 / 27</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">10</span><span><b>Svansen</b> med EN CTA (FooterSEO till #main-contact), relaterade tjänster sist.</span><span class="ds-diagram__pad">xl</span></div>
+          <div class="ds-diagram__box"><span class="ds-diagram__n">11</span><span><b>Certifikat-bandet</b>, olänkat, sedan <b>Prefooter + Footer</b>.</span><span class="ds-diagram__pad">xl / band 354, footer 2xl</span></div>
+        </div>
+        <p class="ds-caption">Asks: hero-CTA, avdragsblockets CTA, klass-slottens CTA, asken själv = fyra av konstruktion (bastemplaten §2b). Ett betyg (heron). Blocken renderade: <a class="ds-a" href="../komponenter/block.html">Block</a>.</p>
+        <div class="ds-fig ds-fig--pair">
+          <figure><img src="../bilder/hero-2-alternatives-s-desktop.jpg" alt="HERO-S vid 1440"><figcaption>Position 1: HERO-S (22 tjänstesidor).</figcaption></figure>
+          <figure><img src="../bilder/rot-gt-cro-gt-produkt-mobile.jpg" alt="Avdragsblocket vid 390"><figcaption>Position 2: avdragsblocket.</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- ================================================================ LUFT -->
+      <section class="ds-blk" id="luft">
+        <h2 class="ds-h2">Sektionernas luft, ur tokens</h2>
+        <p class="ds-p">Sektion till sektion är en skala, inte ett tal per block. Tre steg täcker allt på en tjänstesida; mätt på live och i de levererade blocken (testimonials, visste-du-att, före/efter, footer, certifikat live = 2xl; certifikat v2, main-cta, elcentral-blockläge, var-process = xl; live-temats sektion = l).</p>
+        <div class="ds-table-wrap"><table class="ds-table">
+          <thead><tr><th>Roll</th><th>Token</th><th>1440</th><th>390</th><th>Används av</th></tr></thead>
+          <tbody>
+            <tr><td>Sektion till sektion (standard)</td><td><code>--ampy-space-section-y</code> = 2xl</td><td>79,2 px</td><td>34,8 px</td><td>testimonials, visste-du-att, före/efter, avdragsblocket, footerns mörka zon</td></tr>
+            <tr><td>Tät sektion (band med egen yta)</td><td><code>--ampy-space-xl</code></td><td>56 px</td><td>27,3 px</td><td>certifikat v2, CTA-bandet, prefooter, vår process, elcentral-blockläge</td></tr>
+            <tr><td>Sidoluft (gutter)</td><td><code>--ampy-gutter</code> = l</td><td>39,6 px</td><td>21,5 px</td><td>alla band; heros kör 8 till 26 px runt ramen</td></tr>
+            <tr><td>Rubrikblock till innehåll</td><td><code>--ampy-space-stack-lg</code> = l</td><td>39,6 px</td><td>21,5 px</td><td>testimonials head, före/efter H2, avdragsblockets H2 (44 = egen clamp)</td></tr>
+            <tr><td>Kort i band, rutnät</td><td><code>--ampy-space-gap</code> = m</td><td>28 px</td><td>16,9 px</td><td>före/efter-paret, GT-grid, certifikat text till kort</td></tr>
+            <tr><td>Kortets inre luft</td><td><code>--ampy-space-card</code> = m, <code>-card-lg</code> = l</td><td>28 / 39,6 px</td><td>16,9 / 21,5 px</td><td>testimonial-kort, samtalskort; resultatkort, vår process</td></tr>
+          </tbody>
+        </table></div>
+        <p class="ds-p">Rytmregeln inuti ett block (var-process v2, bokningen): 10 inom grupp, 20 och 28 mellan syskon, 40 och 56 mellan zoner, 80 i botten. Zon mot syskon cirka 2,0; botten cirka 1,5 gånger toppen. Ett block med 24 godtyckliga avstånd "ser ut som ett system och beter sig som en hög lokala beslut": det är signaturen för genererad kod.</p>
+      </section>
+
+      <!-- ================================================================ H2 -->
+      <section class="ds-blk" id="h2">
+        <h2 class="ds-h2">H2-regeln per sektion</h2>
+        <div class="ds-rule">
+          <div class="ds-rule__t">En H2 per block<small>eljour-block, avdragsblocket, testimonials, certifikat, före/efter, vår process, visste-du-att</small></div>
+          <div class="ds-rule__b"><p>Varje block bär exakt en H2 och den är sektionens namn. Sidan har en H1 (heron). Eyebrow eller caps ovanför H2:n bär kategorin ("Steg för steg", "Visste du att"), aldrig informationen ensam (B19).</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Storlek 36 / 500 / 1.2 / -.01em<small><code>--ampy-text-h2</code> (26,8 på 390), beslut B17</small></div>
+          <div class="ds-rule__b"><p>Startsidan kör i dag fem H2-storlekar (40/500, 40/600, 38/500, 36/400, 32/400). Kanon är en: 36 med vikt 500. Sektions-H2 med kicker ovanför bär hierarkin via eyebrown, inte via storleken. Live ROT/GT, före/efter och footerns h3 växer 32 till 36; CTA-bandet, vår process och temat krymper 40 till 36.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Centrerad i bevisblock, vänsterställd i argumentblock<small>testimonials, certifikat (mobil), före/efter, eljour = centrerad; avdragsblocket (desktop), vår process, CTA-bandet, visste-du-att = vänster</small></div>
+          <div class="ds-rule__b"><p>Blocket med en panel bredvid (familj C) ställer H2:n vänster över sin spalt; blocket som är ett band (familj D) centrerar. Avdragsblocket centrerar först under 900 px när spalterna staplas.</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Accenten<small>avdragsblocket: 600 + 2 px understrykning; före/efter: linje .075em; testimonials live: gradientord (drift)</small></div>
+          <div class="ds-rule__b"><p>Fyra accentdevices för "sista orden i H2" finns i källorna. Kanon är understrykningen i textens egen färg (ägarorder 2026-08-16); gradientord är drift (gradienttext ogillas). Accenten sitter på förmånsfrasen sist i mallen "[jobb] med [sats] % [avdragsnamn]".</p></div>
+        </div>
+        <div class="ds-rule">
+          <div class="ds-rule__t">Mätt, inte ordbudget<small>30ch (avdragsblocket), 720 px (testimonials), 600 px (mini-menu)</small></div>
+          <div class="ds-rule__b"><p>H2:n har ett mått och <code>text-wrap: balance</code>; en nowrap-accent släpps under 900 px så balanseringen fungerar (rag-fixen i D2).</p></div>
+        </div>
+      </section>
+
+      <!-- ================================================================ FULLBREDD -->
+      <section class="ds-blk" id="fullbredd">
+        <h2 class="ds-h2">Fullbreddsregeln</h2>
+        <p class="ds-p">Ägardirektiv 2026-08-14: vitmarginalregeln är pensionerad. Nya block kör nära full bredd, med prejudikat i Hero-S, headern och testimonials. Container 1280 är innehållets bredd, inte ytans tak.</p>
+        <ul class="ds-list">
+          <li>Bandet (sky-mist, vit, midnight) går kant till kant; innehållet cappas på 1280 med gutter 39,6 (21,5 på mobil).</li>
+          <li>Fullbreddskort (avdragsblocket, vår process) har 8-bas-kvantiserad padding i cqi och cappar innerlayouten på 1560 från 1497 px kortbredd, så spalterna slutar driva isär på 1920.</li>
+          <li>Heros är ramar: 1700 (Hero-1) eller 1424 (Hero-2) med 8 till 26 px luft, radie 22 (18 mobil). Två ramskalor på samma sajt är dokumenterad drift.</li>
+          <li>Kant i kant på mobil är tillåtet för kortet (vår process under 479: radie 0, sidopadding 0) men inte kanon; övriga block behåller 10 till 16 px.</li>
+          <li>Breda tabeller, kodblock och exempel scrollar i sin egen ram; sidan scrollar aldrig i sidled.</li>
+        </ul>
+        <div class="ds-fig ds-fig--pair ds-fig--wide">
+          <figure><img src="../bilder/live-ampy-se-rot-desktop.jpg" alt="Live ROT-blocket i dag vid 1440"><figcaption>I dag: live ROT-blocket i position 9 (under asken), vitt kort i container.</figcaption></figure>
+          <figure><img src="../bilder/rot-gt-cro-d2-rot-desktop.jpg" alt="D2-blocket vid 1440"><figcaption>Kanon: avdragsblocket i position 2, fullbreddskort.</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- ================================================================ GRINDAR -->
+      <section class="ds-blk" id="grindar">
+        <h2 class="ds-h2">Fas 0 före allt (öppna grindar)</h2>
+        <ul class="ds-list">
+          <li>Mätning: <code>form_start</code> med flera; sajten emitterar noll <code>form_start</code> i dag.</li>
+          <li>Töm enterView på MainContact; bekräfta de två null-webhookarna (AMPY_LEAD_WEBHOOK, ECK lead_webhook_url): "Tack!" visas men leaden kastas.</li>
+          <li>Fyra P0-antaganden väntar ägarsvar: telefonpreferensen (n = 2), "fast pris i offerten" osignerad, SEO-bevarandekravet, ROT som incitament på mikrojobb runt 450 kr.</li>
+          <li>Riktningsval: vår process (A rekommenderad), footer (B rekommenderad), sticky call-barens hörn.</li>
+          <li>A/B är omöjligt på mallen; beslut tas på mekanisk evidens och 28 dagars baslinje.</li>
+        </ul>
+      </section>
+    </div>
+
+    </main>
+</div>
+<script src="../doc.js"></script>
+</body>
+</html>

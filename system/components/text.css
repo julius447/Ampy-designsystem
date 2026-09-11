@@ -128,7 +128,11 @@
 .ampy-proof__vol { white-space: nowrap; }
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-proof { color: var(--ampy-on-dark); text-shadow: 0 1px 8px rgba(9,11,50,.45); }   /* hero-1 style.css:248 på foto */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-proof__sep { background: rgba(255,255,255,.45); }   /* hero-1 style.css:262 */
-@media (max-width: 560px) { .ampy-proof { flex-direction: column; align-items: flex-start; gap: var(--ampy-space-2xs); } .ampy-proof__sep { display: none; } }   /* hero-1: kolumn <= 560 */
+@media (max-width: 560px) {   /* hero-1 style.css:304-314: kolumn, gap 9, 13.5 px, separatorn blir en 26 px liggande linje */
+  .ampy-proof { --_fs: 13.5px; flex-direction: column; align-items: flex-start; gap: 9px; }
+  .ampy-proof__sep { width: 26px; height: 1px; }
+  .ampy-proof__vol { opacity: .92; }
+}
 
 /* ---------- Citat / testimonial (testimonials-block .att-card__*): citattecken 56/600, text, namn 22/600, hårlinje, stjärnor + datum ---------- */
 .ampy-quote { margin: 0; display: flex; flex-direction: column; gap: var(--ampy-space-s); font-family: var(--ampy-font); color: var(--ampy-ink); }
