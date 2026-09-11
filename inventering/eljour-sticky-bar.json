@@ -1,0 +1,111 @@
+{
+  "kalla": "eljour-sticky-bar",
+  "status": "omgång 4 (commit 4a18154): mobil M1 låst (sajtens kanoniska ring-knapp), desktop-hörnkort alltid synligt, väntar hörnval (höger/vänster); 63/63 beteendetester; forkar (geo/artikel/akut) avstängda i koden",
+  "auktoritet": 2,
+  "ingang": "kallor/Eljour-sticky-bar/preview/index.html (godkännandevy) → preview/states/a-eljour.html (mobil) + preview/states/desktop.html (hörnkort); leverans dist/ampy-callbar.{css,js,php}",
+  "matmetod": "inventering/_probes/eljour-sticky-bar.mjs (getComputedStyle efter 1,5 s så .is-in hunnit sättas; viewport-klippta skärmdumpar eftersom elementen är position:fixed) → _probes/out/eljour-sticky-bar.json",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/eljour-sticky-bar-mobile-viewport.png",
+    "inventering/skarmdumpar/eljour-sticky-bar-hornkort-viewport.png",
+    "inventering/skarmdumpar/eljour-sticky-bar-desktop.png",
+    "inventering/skarmdumpar/eljour-sticky-bar-mobile.png",
+    "inventering/skarmdumpar/eljour-sticky-bar-hornkort-desktop.png",
+    "inventering/skarmdumpar/eljour-sticky-bar-godkannandevy-desktop.png"
+  ],
+  "farger": [
+    {"hex": "#ffffff", "token": "--appure-white", "roll": "--acb-chrome: barens krom + hörnkortets yta", "antal": 2, "kalla_fil": "dist/ampy-callbar.css:44,131"},
+    {"hex": "#e6ecf6", "token": null, "roll": "--acb-line: barens topphairline + kortets ram (samplad ur symptomblockets --line)", "antal": 2, "kalla_fil": "dist/ampy-callbar.css:45,132"},
+    {"hex": "rgba(9,11,50,.10)", "token": null, "roll": "--acb-lift: barens lyftskugga 0 -4px 20px", "antal": 1, "kalla_fil": "dist/ampy-callbar.css:46"},
+    {"hex": "linear-gradient(120deg, #b6f2ff 0%, #5eb1bf 100%)", "token": "#b6f2ff = --apcrystal-blue · #5eb1bf utanför tokens", "roll": "M1 = sajtens kanoniska ring-knapp (btn-ring) — pillen i baren OCH i hörnkortet", "antal": 2, "kalla_fil": "dist/ampy-callbar.css §5b rad ~250, §10 rad ~477"},
+    {"hex": "#282a53 (= hsl(237 35% 24%))", "token": null, "roll": "ring-knappens text/ikon-ink (5,51:1 mot #5eb1bf; vit vore 1,23:1)", "antal": 6, "kalla_fil": "dist/ampy-callbar.css:257,271"},
+    {"hex": "rgba(255,255,255,.92)", "token": null, "roll": "ikonchipets vita cirkel 36 px", "antal": 2, "kalla_fil": "dist/ampy-callbar.css:266-70"},
+    {"hex": "inset 0 1px 0 rgba(255,255,255,.55) · 0 2px 4px rgba(9,11,50,.06) · 0 10px 26px -6px rgba(94,177,191,.55)", "token": null, "roll": "ring-knappens tre skuggor (hover 0 3px 6px .07 + 0 16px 34px -8px .65)", "antal": 2, "kalla_fil": "dist/ampy-callbar.css:253-56,285"},
+    {"hex": "linear-gradient(146deg, #055a4b 0%, #08735f 52%, #0a8169 100%)", "token": null, "roll": "--acb-grad: grön fork (§3, byte-identisk med symptomblockets .eb__cta) — avstängd i M1", "antal": 1, "kalla_fil": "dist/ampy-callbar.css:37"},
+    {"hex": "rgba(4,110,90,.32) / .40", "token": null, "roll": "--acb-shadow / hover (grön fork)", "antal": 1, "kalla_fil": "dist/ampy-callbar.css:38-39"},
+    {"hex": "#090b32", "token": "--apmidnight-blue", "roll": "--acb-dark (dark-fork bg) + ring-knappens focus-outline 3px", "antal": 2, "kalla_fil": "dist/ampy-callbar.css:49,288"},
+    {"hex": "#0a6e58", "token": null, "roll": "--acb-ghost-ink (6,2:1 på vitt; teal #00a991 2,97:1 förbjuden här)", "antal": 1, "kalla_fil": "dist/ampy-callbar.css:57"},
+    {"hex": "#0a8f7c", "token": null, "roll": "--acb-focus (4,01:1) — fokusring på gröna/dark-forken + hörnkort", "antal": 2, "kalla_fil": "dist/ampy-callbar.css:59,145"},
+    {"hex": "#5f6480", "token": null, "roll": "--acb-x-ink (dismiss-kryss, dark-fork)", "antal": 1, "kalla_fil": "dist/ampy-callbar.css:58"},
+    {"hex": "#3b3f59", "token": null, "roll": "hörnkortets ledtext (10,30:1)", "antal": 1, "kalla_fil": "dist/ampy-callbar.css:~428"},
+    {"hex": "rgba(9,11,50,.07) + rgba(9,11,50,.16)", "token": null, "roll": "hörnkortets skugga (--acbc-shadow + --acbc-lift, 'ett lager ovanpå')", "antal": 1, "kalla_fil": "dist/ampy-callbar.css:134-138"}
+  ],
+  "typografi": [
+    {"roll": "bar-pill text 'Ring eljouren'", "font": "Outfit (self-hostad woff2 i preview)", "size": "16px (ring) · grön/dark fork var(--aptext-s, 15px)", "px_desktop": null, "px_mobil": 16, "weight": 500, "lh": 1, "ls": "normal", "color": "#282a53", "kalla_fil": "dist/ampy-callbar.css:258, 63"},
+    {"roll": "bar-pill nummer", "font": "Outfit", "size": "16px", "px_desktop": null, "px_mobil": 16, "weight": 600, "lh": 1, "ls": "normal", "color": "#282a53", "font_variant": "tabular-nums (ÄGARGRIND: ej samplad; kostar 6,48 px bredd)", "kalla_fil": "dist/ampy-callbar.css:207-226"},
+    {"roll": "hörnkort ledtext 'Prata med en expert'", "font": "Outfit", "size": "14px", "px_desktop": 14, "px_mobil": null, "weight": 500, "lh": "20px (låst i px, inte faktor — pixelhöjd 128)", "ls": "normal", "color": "#3b3f59", "kalla_fil": "dist/ampy-callbar.css:~411-428"},
+    {"roll": "hörnkort verb 'Ring eljouren'", "font": "Outfit", "size": "16px", "px_desktop": 16, "px_mobil": null, "weight": 500, "lh": "18px", "ls": "normal", "color": "#282a53", "kalla_fil": "dist/ampy-callbar.css:~467"},
+    {"roll": "hörnkort nummer", "font": "Outfit", "size": "13px", "px_desktop": 13, "px_mobil": null, "weight": 600, "lh": "16px", "ls": "normal", "color": "#282a53", "font_variant": "tabular-nums", "kalla_fil": "dist/ampy-callbar.css:~468"},
+    {"roll": "ghost-genväg / dismiss (dark-fork)", "font": "Outfit", "size": "13px", "px_desktop": null, "px_mobil": 13, "weight": 600, "lh": 1, "ls": "normal", "color": "#0a6e58", "kalla_fil": "dist/ampy-callbar.css:~205-210"}
+  ],
+  "spacing": [
+    {"roll": "bar padding", "varde": "8px 12px max(env(safe-area-inset-bottom), 16px) — NAMNGIVEN AVVIKELSE (spec sa 8 nertill; 16 ger tap-centrum ≥45 px från underkant)", "px_desktop": null, "px_mobil": "8 / 12 / 16", "token": null, "kalla_fil": "dist/ampy-callbar.css:96-104"},
+    {"roll": "bar totalhöjd", "varde": "1 hairline + 8 + 58 pill + 16 = 83 px (uppmätt 83, body padding-bottom 83 → CLS 0)", "px_desktop": null, "px_mobil": 83, "token": null, "kalla_fil": "dist/ampy-callbar.css:145-155; uppmätt barRect.h 83, ctaCenterFromBottom 45"},
+    {"roll": "pill", "varde": "min-height 58, padding 11px 12px 11px 22px (ring), gap 14; grön fork 15px 20px gap 14", "px_desktop": null, "px_mobil": "366×58", "token": null, "kalla_fil": "dist/ampy-callbar.css:249, 167-170"},
+    {"roll": "ikonchip", "varde": "36×36, padding 10.5 10.5 8.5 8.5 (optisk mikro-centrering), glyf 17 px; grön fork ikon 24", "px_desktop": 36, "px_mobil": 36, "token": null, "kalla_fil": "dist/ampy-callbar.css:265-275"},
+    {"roll": "bar gap (pill ↔ ghost/kryss, dark-fork)", "varde": "10px; ghost min-h 44 padding 0 12; kryss 44×44", "px_desktop": null, "px_mobil": 10, "token": null, "kalla_fil": "dist/ampy-callbar.css:83, 203-218"},
+    {"roll": "hörnkort", "varde": "216×128 (dark 240), gutter 24 från höger+botten, padding 14px 16px 19px (optisk balans 19,92/20,00), ledtext mb 15", "px_desktop": "216×128", "px_mobil": null, "token": null, "kalla_fil": "dist/ampy-callbar.css:147-148, 377, 426"},
+    {"roll": "hörnkort-CTA", "varde": "182×58, padding 11 12 11 18, gap 10; verb/nummer staplade gap 2 (18+2+16 = 36 = interiören)", "px_desktop": "182×58", "px_mobil": null, "token": null, "kalla_fil": "dist/ampy-callbar.css:~431-468"},
+    {"roll": "sticky samtalskort (desktop, symptomblocket)", "varde": ".eb__aside position:sticky; top: calc(var(--acb-header-h, 88px) + 16px) = 104 px [GAP-9 header-offset ska mätas]", "px_desktop": 104, "px_mobil": null, "token": null, "kalla_fil": "dist/ampy-callbar.css:~314"}
+  ],
+  "container": [
+    {"roll": "bar", "varde": "position:fixed left 0 right 0 bottom 0, z-index 900 (under Bricks offcanvas 1001); ≤992 px", "kalla_fil": "dist/ampy-callbar.css:84-92"},
+    {"roll": "hörnkort", "varde": "position:fixed right 24 bottom 24 (variant .acb-card--left), z 900; ≥993 px", "kalla_fil": "dist/ampy-callbar.css:~352-360, 405"}
+  ],
+  "radier": [
+    {"roll": "ring-pill (bar + kort)", "varde": "16px", "px": 16, "token": null},
+    {"roll": "grön/dark fork-pill", "varde": "var(--apradius-m, 14px) → 14 i preview (ingen ap-token), 12 i produktion @1440 (fallback ≠ token)", "px": 14, "token": "--apradius-m (avvikande fallback)"},
+    {"roll": "hörnkort", "varde": "20px", "px": 20, "token": "= --apradius-l@1440 (statisk)"},
+    {"roll": "ikonchip", "varde": "50 %", "token": "--radius-circle"},
+    {"roll": "ghost fokus / kryss fokus", "varde": "6px / 8px", "px": "6 / 8", "token": null}
+  ],
+  "skuggor": [
+    {"roll": "bar-krom", "varde": "0 -4px 20px rgba(9,11,50,.10) + border-top 1px #e6ecf6", "token": null},
+    {"roll": "ring-pill", "varde": "inset 0 1px 0 rgba(255,255,255,.55), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,177,191,.55) · active inset 0 2px 6px rgba(9,11,50,.18)", "token": null},
+    {"roll": "ikonchip + ampyRing", "varde": "0 1px 3px rgba(9,11,50,.14) + pulserande 0 0 0 0→9px rgba(255,255,255,.65→0)", "token": null},
+    {"roll": "hörnkort", "varde": "0 10px 30px rgba(9,11,50,.07), 0 16px 40px rgba(9,11,50,.16)", "token": null},
+    {"roll": "grön fork", "varde": "0 10px 24px rgba(4,110,90,.32), inset 0 1px 0 rgba(255,255,255,.22); hover 0 14px 32px .40", "token": null}
+  ],
+  "rorelse": [
+    {"roll": "bar-inträde", "varde": "utan JS synlig direkt; .acb-js → translateY(110 %) + visibility hidden → .is-in translateY(0); transition transform .18s ease-out, visibility 0s .18s; failsafe 6 s; 400 ms kall period (.is-cold pointer-events none); .is-instant = 0 ms vid tangentbord/meny/dismiss", "kalla_fil": "dist/ampy-callbar.css:110-143"},
+    {"roll": "ampyRing (acb-ring)", "varde": "keyframes: box-shadow-ring 0 → 9 px vit .65 → 0 vid 55 % → 0 (sajtens @keyframes ampyRing, eget namn)", "kalla_fil": "dist/ampy-callbar.css:277-282"},
+    {"roll": "pill hover/active", "varde": "ring: saturate(1.08) brightness(1.02) + skuggbyte; grön: brightness(1.06), ALDRIG translateY på bottenfäst remsa; active brightness(.94) + inset", "kalla_fil": "dist/ampy-callbar.css:180-186, 283-287"},
+    {"roll": "hörnkort", "varde": "transition transform .18s ease-out, opacity .18s; .is-out translateY(100 % + 24) (finns men ägardirektiv: alltid synligt); CTA hover translateY(-1px) (grön) / skuggbyte (ring)", "kalla_fil": "dist/ampy-callbar.css:~380-404, 471"},
+    {"roll": "reduced-motion", "varde": "§11: transition none på bar/kort/CTA, ampyRing av", "kalla_fil": "dist/ampy-callbar.css §11"}
+  ],
+  "breakpoints": ["≤992 (baren tänds, samma sträng som .eb__grid-kollapsen)", "≥993 (bar display:none !important, hörnkort + sticky aside)", "≤480 (grön/dark fork 15 px/14 16 padding; ring oförändrad)", "320 = golv (5,89 px marginal), 314 = brytpunkt där gapet bottnar"],
+  "komponenter": [
+    {"namn": "mobil ring-bar .acb.acb--ring (M1 låst)", "anatomi": "fixed bottenremsa 83 px: vit krom, 1 px topphairline, lyftskugga; en enda pill 366×58 = sajtens btn-ring (gradient #b6f2ff→#5eb1bf, ink #282a53 16/500, nummer 600 tabular, 36 px vitt ikonchip med ampyRing-puls); body får 83 px bottenpadding server-side", "states": ["utan JS synlig", "acb-js dold → is-in", "is-cold 400 ms", "is-instant", "hover", "active", "focus-visible 3px navy", "hidden ≥993"], "html_ref": "preview/states/a-eljour.html (genererad ur dist/ampy-callbar.php)", "css_ref": "dist/ampy-callbar.css §1-3, §5b", "skarmdump_crop": "eljour-sticky-bar-mobile-viewport.png"},
+    {"namn": "ikonchip", "anatomi": "36 px cirkel rgba(255,255,255,.92), glyf 17 px #282a53, optiskt mikro-centrerad (10.5/10.5/8.5/8.5), skugga 0 1px 3px .14 + ampyRing", "states": ["puls", "reduced-motion"], "html_ref": ".acb__ic", "css_ref": "dist/ampy-callbar.css:265-282"},
+    {"namn": "desktop-hörnkort .acb-card", "anatomi": "216×128 vitt kort nere-höger (24/24), radie 20, ram #e6ecf6, dubbelskugga, padding 14/16/19; ledtext 14/500 lh 20 #3b3f59 'Prata med en expert'; ring-CTA 182×58 med verb 16/500 + nummer 13/600 staplade + ikonchip 36; alltid synligt, ingen inträdestrappa; variant --left; --dark 240 bred", "states": ["default", "hover", "active", "focus-visible", "is-out (oanvänd)", "hidden ≤992"], "html_ref": "preview/states/desktop.html", "css_ref": "dist/ampy-callbar.css §10", "skarmdump_crop": "eljour-sticky-bar-hornkort-viewport.png"},
+    {"namn": "sticky samtalskort (desktop)", "anatomi": ".eb__aside position:sticky top 104 (header 88 + 16) — symptomblockets vänsterkort följer med vid scroll", "states": ["sticky ≥993"], "html_ref": "preview/states/desktop.html", "css_ref": "dist/ampy-callbar.css §9"},
+    {"namn": "grön fork / dark fork (avstängda)", "anatomi": "§3 grön pill = byte-identisk med symptomblockets .eb__cta (146° #055a4b→#0a8169, 15 px/600 vit) · §5 dark = #090b32 + ghost-genväg 13/600 #0a6e58 + 44 px kryss; för geo (168 sidor), artikel (11), akut-service (3)", "states": ["off i koden tills rullningsordning"], "html_ref": "preview/states/dark-geo.html, dark-artikel.html", "css_ref": "dist/ampy-callbar.css §3-5"}
+  ],
+  "varianter": [
+    {"namn": "M2 (midnight ring), M3 (ring kant), riktning B, riktning C, mint-prick", "skillnad": "BORTTAGNA ur koden (omgång 3) — bara bevis i docs/proof/10-12-M*.png"},
+    {"namn": "desktop-vanster.html", "skillnad": "samma kort i vänster hörn (.acb-card--left) — öppet ägarval"},
+    {"namn": "a-eljour-puls.html", "skillnad": "mobil med symptomblockets egen CTA-puls synlig samtidigt (dubbel-CTA-scenariot, proof 82)"},
+    {"namn": "registry-calc.html / deny-thankyou.html", "skillnad": "baren på kalkylatorsida resp. avstängd på tack-sidan (deny-lista)"}
+  ],
+  "signaturenhet": "Baren uppfinner ingenting: den bär sajtens kanoniska ring-knapp (btn-ring-gradienten #b6f2ff→#5eb1bf med ampyRing-pulsen runt det vita ikonchipet) som en 83 px bottenremsa på vit krom, med tap-centrum exakt 45 px från underkanten — och på desktop ett 216×128-hörnkort som alltid är synligt.",
+  "defekter": [
+    "Fallback-drift i forkarna: --acb-radius var(--apradius-m, 14px) och --acb-label var(--aptext-s, 15px) ger 14 px/15 px i preview (inga ap-tokens laddade) men 12 px/14 px @1440 och 10,1/12,1 px @390 i produktion — bara ring-varianten är immun (16/16 explicit). Gäller grön/dark fork.",
+    "Fem färger utanför ap*: #5eb1bf (gradientslut), #282a53 (ink), #e6ecf6 (linje), #0a6e58/#0a8f7c (ghost/fokus), #3b3f59 (ledtext) — alla samplade ur symptomblocket/ring-kanonen, dvs. defekten ärvs, uppfinns inte.",
+    "tabular-nums på numret är INTE samplat ur kanonen (bryter §3:s 'byte-identisk'), ägargrind öppen (proof/44).",
+    "[GAP-9] --acb-header-h 88 px är antagen, inte mätt mot Bricks sticky-header; [GAP-1] jour-bemanning (irrelevant för ring-ytan men ej stängd); hörnval höger/vänster öppet.",
+    "Preview-headerns CTA-pill (#14e08a→#00d1a0, 'Gratis rådgivning') är mock-krom men läses som ytterligare ett grönt CTA-språk bredvid ring-pillen i samma viewport.",
+    "Two z-index-lager utan token (900 under Bricks 1001) och pixelhöjd låst med px-line-heights (medvetet) — inget av det kan uttryckas i ap*-skalan."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Allt i px — aldrig rem (temat sätter html 62.5 %, en rem-bar med 16 px-antagande blir 37,5 % för liten).",
+    "Tokens på wrappern .acb, aldrig :root; aldrig var(--cta-grad) från ett annat snippet (laddningsordning).",
+    "Utan JS: baren synlig. .acb-js sätts inline i wp_head före första paint; failsafe 6 s; body-padding printas server-side → CLS 0.",
+    "Kontrastgolv: vit text mot #0a8169 4,82:1 — knappen får aldrig göras ljusare; på ring-ytan MÅSTE texten vara #282a53 (vit = 1,23:1).",
+    "Tap-centrum ≥45 px från viewportens underkant (iOS gestremsa/URL-fält) → bottengutter 16, inte 8.",
+    "400 ms kall period efter inträde (ingen oavsiktlig uppringning); 0 ms reträtt vid tangentbord/meny.",
+    "Ingen translateY på en bottenfäst remsa; hover = brightness/saturate, inte nytt färgvärde.",
+    "Mint-prick förbjuden på ring-ytan (#55ff9a mot #b6f2ff 1,06:1) — ampyRing bär livstecknet.",
+    "Brytpunkt 992 px som exakt samma sträng som symptomblockets (inte 991.98); z 900 under Bricks offcanvas 1001.",
+    "Hörnkort: pixelhöjd 128 låst med px-line-heights (halvpixel-kanter på 1x-skärm annars); alltid synligt; flippa hörn med EN klass, stapla aldrig med chatt.",
+    "Ny CTA-text kräver 320-svep (golvet 320, brytpunkt 314)."
+  ]
+}

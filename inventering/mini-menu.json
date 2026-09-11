@@ -1,0 +1,383 @@
+{
+ "kalla": "mini-menu",
+ "status": "levererat (FluentSnippets [ampy_elfirma] + Bricks-JSON, paritetsverifierat) och installerat på live (site-css.css .ampy-elfirma, 63 regler); öppna [GAP]: URL:er (/laddboxar/ vs live /laddbox/), exakt CTA-färg",
+ "auktoritet": 2,
+ "ingang": "kallor/mini-menu/index.html (godkänd prototyp, 62.5%-rem) · fluentsnippets/preview/index.html (leverans i px, @container) · prototype.html (tidigare 'ljus glas-trio') · masterpiece.html (asymmetriskt) · evify-clone.html (1:1-referens)",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/mini-menu-desktop.png",
+  "inventering/skarmdumpar/mini-menu-mobile.png",
+  "inventering/skarmdumpar/mini-menu-delivery-desktop.png",
+  "inventering/skarmdumpar/mini-menu-delivery-mobile.png",
+  "inventering/skarmdumpar/mini-menu-prototype-glas-desktop.png",
+  "inventering/skarmdumpar/mini-menu-prototype-glas-mobile.png"
+ ],
+ "obs_brief": "Briefen kallar källan 'ljus glas-trio', men den levererade/live-versionen (index.html + fluentsnippets) är Evify-layouten: TRE MÖRKA fotokort med sky-blue pill. Den ljusa glas-trion är prototype.html (tidigare utforskning) — inventerad som variant nedan.",
+ "rem_bas": "index.html: html{font-size:62.5%}; leverans: px (@container + @media-fallback)",
+ "farger": [
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "roll": "--ap-navy: kortbas + aurora-gradienter rgba(9,11,50,.30/.56/.34/.62/.60) + skuggor",
+   "antal": "1 + 12 rgba",
+   "kalla_fil": "index.html :root, .pcard, .pcard__overlay, .pcard__body"
+  },
+  {
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "roll": "--ap-teal: fokusring rgba(0,169,145,.9), aurora-fallback .5/.44, ::selection .22",
+   "antal": "1 + 4",
+   "kalla_fil": "index.html"
+  },
+  {
+   "hex": "#5eb1bf",
+   "token": null,
+   "roll": "--ap-blue: CTA-pill bg 'Läs mer' (uppmätt rgb(94,177,191)) + glow rgba(94,177,191,.55/.6) — 'Ampy sky-blue (brandbook secondary), owner-picked'",
+   "antal": "1 + 3",
+   "kalla_fil": "index.html :root, .pcard__cta",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#74c2ce",
+   "token": null,
+   "roll": "--ap-blue-bright: CTA hover",
+   "antal": 1,
+   "kalla_fil": "index.html",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#1e1e1e",
+   "token": "--apdarkest-black",
+   "roll": "--ap-black: CTA-text",
+   "antal": 1,
+   "kalla_fil": ".pcard__cta"
+  },
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "roll": "--ap-offwhite: sidbakgrund",
+   "antal": 1,
+   "kalla_fil": "body"
+  },
+  {
+   "hex": "#0f123c",
+   "token": null,
+   "roll": "--ink: h2",
+   "antal": 1,
+   "kalla_fil": ".amp3__title",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#565e82",
+   "token": null,
+   "roll": "--ink-muted: lead",
+   "antal": 1,
+   "kalla_fil": ".amp3__lead",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#39c281",
+   "token": "--apemerald-flow",
+   "roll": "aurora laddbox rgba(57,194,129,.46)",
+   "antal": 1,
+   "kalla_fil": ".pcard--laddbox"
+  },
+  {
+   "hex": "#0d1350 / #06082a / #0d1145 / #0b0e38 / #05061f",
+   "token": null,
+   "roll": "per-kort aurora-fallback-gradienter (fem navy-nyanser)",
+   "antal": 5,
+   "kalla_fil": ".pcard--*__media",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "roll": "korttitel + body",
+   "antal": 2,
+   "kalla_fil": ".pcard__body"
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "h2 (.amp3__title)",
+   "font": "Outfit",
+   "size": "--fs-h2 clamp(2.8rem,2.3rem+1.1vw,3.8rem) = 28–38px",
+   "px_desktop": 38.0,
+   "px_mobil": 28.0,
+   "weight": 500,
+   "lh": 1.2,
+   "ls": "-0.38px",
+   "color": "rgb(15, 18, 60)",
+   "kalla_fil": ".amp3__title",
+   "not_": "500, lh 1.2, ls −.01em, max-w 600, balance; kommentar: 'guide-scale H2'"
+  },
+  {
+   "roll": "lead (.amp3__lead)",
+   "font": "Outfit",
+   "size": "--fs-lead clamp(1.7rem,1.62rem+.25vw,1.85rem) = 17–18.5px ('style guide --aptext-m')",
+   "px_desktop": 18.5,
+   "px_mobil": 17.18,
+   "weight": 300,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(86, 94, 130)",
+   "kalla_fil": ".amp3__lead",
+   "not_": "300, lh 1.5, --ink-muted, max-w 600, pretty"
+  },
+  {
+   "roll": "korttitel (.pcard__title)",
+   "font": "Outfit",
+   "size": "--fs-cardtitle clamp(2rem,1.5rem+1.1vw,3rem) = 20–30px",
+   "px_desktop": 30.0,
+   "px_mobil": 20.0,
+   "weight": 700,
+   "lh": 1.05,
+   "ls": "-0.66px",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".pcard__title",
+   "not_": "700, lh 1.05, ls −.022em, text-shadow 0 1px 24px rgba(0,0,0,.4)"
+  },
+  {
+   "roll": "CTA-pill 'Läs mer'",
+   "font": "Outfit",
+   "size": "--fs-sm clamp(1.4rem,1.3rem+.3vw,1.6rem) = 14–16px",
+   "px_desktop": 16.0,
+   "px_mobil": 14.17,
+   "weight": 700,
+   "lh": 1.6,
+   "ls": "0.16px",
+   "color": "rgb(30, 30, 30)",
+   "kalla_fil": ".pcard__cta",
+   "not_": "700, ls .01em, #1e1e1e på #5eb1bf, pill 999rem, padding 15/32 (mobil 14/28), pil-svg 17px"
+  },
+  {
+   "roll": "body (index)",
+   "font": "Outfit",
+   "size": "--fs-body clamp(1.6rem,1.5rem+.4vw,1.9rem) = 16–19px",
+   "px_desktop": 19,
+   "px_mobil": 16.56,
+   "weight": 400,
+   "lh": 1.6,
+   "color": "#0f123c",
+   "kalla_fil": "index.html body",
+   "not": "body 19px @1440 — större än alla andra källor (live 16)"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "section padding-block",
+   "varde": "clamp(6.4rem,4rem+6vw,11rem) → 110 @1440 / 64 @390",
+   "px_desktop": 110,
+   "px_mobil": 64,
+   "token": null,
+   "kalla_fil": ".amp3"
+  },
+  {
+   "roll": "wrap",
+   "varde": "max 132rem = 1320, padding-inline max(2.4rem, safe-area) = 24",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null,
+   "kalla_fil": ".amp3__wrap"
+  },
+  {
+   "roll": "head → grid",
+   "varde": "clamp(4.8rem,3rem+2vw,6.4rem) → 64 / 48",
+   "px_desktop": 64,
+   "px_mobil": 48,
+   "token": null,
+   "kalla_fil": ".amp3__grid"
+  },
+  {
+   "roll": "h2 → lead",
+   "varde": "--s-5 2.4rem = 24",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null,
+   "kalla_fil": ".amp3__lead"
+  },
+  {
+   "roll": "grid gap",
+   "varde": "3rem = 30 (Evify); mobil --s-5 24, max-w 44rem",
+   "px_desktop": 30,
+   "px_mobil": 24,
+   "token": null,
+   "kalla_fil": ".amp3__grid"
+  },
+  {
+   "roll": "kort",
+   "varde": "aspect 1/1: 404×404 @1440 (3 × 404 + 2 × 30 = 1272) / 342×342 @390",
+   "px_desktop": 404,
+   "px_mobil": 342,
+   "token": null,
+   "kalla_fil": ".pcard"
+  },
+  {
+   "roll": "kort body padding / gap",
+   "varde": "--s-5 24 / gap 24",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "token": null,
+   "kalla_fil": ".pcard__body"
+  },
+  {
+   "roll": "spacing-skala (lokal)",
+   "varde": "--s-2 8 · --s-3 12 · --s-4 16 · --s-5 24 · --s-6 32 · --s-7 48 · --s-8 64",
+   "token": null,
+   "kalla_fil": "index.html :root",
+   "not": "8-bas ≠ --apspace (fluid)"
+  }
+ ],
+ "container": [
+  {
+   "roll": "block",
+   "varde": "1320px (≠ sajtens 1280)",
+   "kalla_fil": ".amp3__wrap"
+  },
+  {
+   "roll": "rubrik/lead",
+   "varde": "600px",
+   "kalla_fil": ".amp3__title/.amp3__lead"
+  },
+  {
+   "roll": "mobil-grid",
+   "varde": "max 440px",
+   "kalla_fil": "@media 767"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "kort",
+   "varde": "--r-lg 2rem = 20px",
+   "token": "= --apradius-l (20 @1440; live 16.3 @390 men här fast 20)",
+   "kalla_fil": ".pcard"
+  },
+  {
+   "roll": "CTA-pill",
+   "varde": "--r-pill 999rem (uppmätt 9990px)",
+   "token": "= --apradius-full",
+   "kalla_fil": ".pcard__cta"
+  },
+  {
+   "roll": "glas-prototyp kort / glyph",
+   "varde": "22px / 14px",
+   "token": null,
+   "kalla_fil": "prototype.html .mm-card"
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "kort",
+   "varde": "--shadow-card: 0 16px 40px −12px rgba(9,11,50,.28), 0 4px 10px −4px rgba(9,11,50,.18)",
+   "token": null,
+   "kalla_fil": "index.html :root"
+  },
+  {
+   "roll": "kort hover",
+   "varde": "0 30px 60px −14px rgba(9,11,50,.38), 0 10px 20px −6px .22",
+   "token": null
+  },
+  {
+   "roll": "CTA",
+   "varde": "--shadow-blue 0 10px 24px −6px rgba(94,177,191,.55); hover 0 14px 30px −6px .6",
+   "token": null
+  },
+  {
+   "roll": "fokus",
+   "varde": "--ring 0 0 0 3px rgba(0,169,145,.9) + hover-skugga",
+   "token": null
+  },
+  {
+   "roll": "overlay",
+   "varde": "radial 125%/105% rgba(9,11,50,.30→.56); hover .34→.62; body-scrim ellipse 82%/56% .60→.30→0",
+   "token": null
+  },
+  {
+   "roll": "glas-prototyp",
+   "varde": "0 6px 16px −4px rgba(15,18,60,.1) …; hover 0 24px 50px −10px .18; glyph inset 0 0 0 1px rgba(0,169,145,.16)",
+   "token": null
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "kort hover",
+   "varde": "translateY(−4px) 280ms cubic-bezier(.2,.6,.2,1) (--normal/--ease); foto scale(1.08) 640ms --ease-out; overlay 420ms; titel −2px 220ms; CTA −2px + pil +3px 200ms, bg → #74c2ce"
+  },
+  {
+   "roll": "inträde",
+   "varde": "amp3-rise 520ms (opacity 0→1, 16px→0) med stagger .05/.12/.20/.28/.36"
+  },
+  {
+   "roll": "reduced-motion",
+   "varde": "*{animation:none;transition:none} !important"
+  }
+ ],
+ "breakpoints": [
+  "767px (3-up → 1 kolumn, Evify-identisk)",
+  "leverans: @container + @media-fallback"
+ ],
+ "komponenter": [
+  {
+   "namn": "produktväljare (3 fotokort)",
+   "anatomi": "centrerad h2 38/500 + lead 18.5/300 (max 600) → grid 3×1fr gap 30 → kort 1:1 radie 20 navy med foto-lager (bg-image + aurora-fallback), overlay radial .30→.56, body-scrim, titel 30/700 vit + pill 'Läs mer' sky-blue; hela kortet = länk; mobil 1 kolumn max 440",
+   "states": [
+    "default",
+    "hover/focus (lyft 4, foto 1.08, overlay djupare, CTA lyft, pil glider)",
+    "focus-visible ring teal",
+    "forced-colors",
+    "print (ren lista)"
+   ],
+   "html_ref": "index.html:172-210",
+   "css_ref": "index.html:45-165",
+   "skarmdump_crop": "mini-menu-desktop.png"
+  },
+  {
+   "namn": "CTA-pill 'Läs mer'",
+   "anatomi": "inline-flex gap 8, padding 15/32, pill, bg #5eb1bf, text #1e1e1e 16/700 ls .01em, pil 17px stroke 2.2, glow-skugga; hover #74c2ce",
+   "states": [
+    "default",
+    "hover"
+   ],
+   "css_ref": ".pcard__cta"
+  }
+ ],
+ "varianter": [
+  {
+   "namn": "prototype.html — ljus glas-trio (Dir A)",
+   "status": "tidigare utforskning, ej levererad",
+   "anatomi": "mörk hero ovanför (eyebrow 13.5/600 uppercase ls .16em mint, h1 44/800 lh 1.18 ls −.022em vit, lead 23/300); sedan sektion sky-mist med eyebrow teal + h2 44/800 #0f123c + lead 23/300 #565e82; 3 vita kort 368×301 radie 22 padding 36, skugga 0 6px 16px −4px rgba(15,18,60,.1), 4px teal topplinje som scaleX vid hover, glyph 64 radie 14 teal-tint rgba(0,169,145,.1) + inset-ring, titel 28/700, desc 16/400 #565e82, länk 16/600 'Se …' med pil; hover lyft −4 + skugga 0 24px 50px −10px .18",
+   "skarmdump": "mini-menu-prototype-glas-desktop.png"
+  },
+  {
+   "namn": "masterpiece.html",
+   "status": "tidigare, asymmetriskt konverteringsblock",
+   "anatomi": "dark tiles i 'pool of light', soft-light blend"
+  },
+  {
+   "namn": "evify-clone.html",
+   "status": "1:1-referens (inspiration)",
+   "anatomi": "Evify original"
+  }
+ ],
+ "signaturenhet": "Tre kvadratiska fotokort där hela kortet är länken och hovern är Hemsol-rörelsen (foto zoomar, overlay djupnar, pillen lyfter) — plus aurora-fallback så ett saknat foto aldrig ger en trasig ruta.",
+ "defekter": [
+  "Sjunde tokennamnrummet: --ap-navy/--ap-teal/--ap-blue/--ap-blue-bright/--ink/--ink-muted/--ap-black/--s-*/--r-*/--fs-* (kommentar: 'values match ampy-design-system/reference/tokens.css' — men live-tokens heter --ap<namn> utan bindestreck).",
+  "CTA-färgen #5eb1bf/#74c2ce (sky-blue 'brandbook secondary') saknar ap-token; README skriver samtidigt att pillen är teal #00a991→#1cc4af — README och kod säger olika (koden: #5eb1bf, 'owner-picked').",
+  "Egen typskala: body 19px @1440 (störst i biblioteket), h2 38 (500), lead 18.5, korttitel 30, pill 16/700 — fem clamp-formler som inte är ap-tokens trots kommentaren 'style guide --aptext-m'.",
+  "Egen spacing-skala (8-bas: 8/12/16/24/32/48/64) och container 1320 ≠ sajtens 1280.",
+  "Fem navy-nyanser i aurora-fallbacks (#0d1350, #06082a, #0d1145, #0b0e38, #05061f) utan tokens; ink-skalan #0f123c/#565e82 återigen.",
+  "Kortskuggan (0 16px 40px −12px rgba(9,11,50,.28) + …) är ännu en skugg-stil (≠ #bebebe-idiomet, ≠ CTA-stacken).",
+  "Lead-copyn 'Med över 3000 installationer per år …' — siffran ska ur ampy-foretagsdata ([FACT]-tagg saknas i markupen); README:s copy ('Elservice, laddbox eller batterilagring. Samma behöriga elektriker …') skiljer från index.html:s.",
+  "URL-GAP: /laddboxar/ vs live /laddbox/."
+ ],
+ "regler_som_ligger_i_koden": [
+  "Evify-layouten exakt (centrerad rubrik, 3 lika kvadrater, 30px gutter, 3-up ≥768)",
+  "hela kortet är länken; hover = Hemsol (zoom/djupna/lyft)",
+  "foto som bakgrundslager över aurora-fallback — aldrig trasig bild",
+  "body-scrim garanterar AA för vit titel över vilket foto som helst",
+  "aspect-ratio-fallback för iOS<15",
+  "forced-colors, print-läge, reduced-motion, safe-area-insets",
+  "leverans: @container + @media-fallback, px, scopad .ampy-elfirma"
+ ],
+ "matdata": "inventering/_probes/out/a1-mini-menu.json + a1-mini-menu-glas.json"
+}

@@ -1,0 +1,50 @@
+{
+  "file": "kallor/Elcentral-lead-magnet/preview/index.html",
+  "out": "inventering/_probes/elcentral-kollen.measure.json",
+  "scope": ".ampy-ec",
+  "cssVars": ["--focus-ring", "--bg-primary", "--bg-secondary", "--bg-subtle", "--bg-surface", "--text-primary", "--text-secondary", "--text-tertiary", "--text-info", "--text-success", "--action-primary", "--action-primary-strong", "--action-primary-strong-hover", "--action-tint", "--ampy-cta-gradient", "--ampy-cta-gradient-blue", "--ampy-cta-shadow", "--ampy-cta-fs", "--ampy-cta-radius", "--state-success", "--state-warning", "--state-error", "--border-default", "--border-tertiary", "--border-focus", "--pill-success-bg", "--pill-success-fg", "--pill-warning-bg", "--pill-warning-fg", "--pill-error-bg", "--pill-error-fg", "--pill-info-bg", "--pill-info-fg", "--accent-success", "--accent-warning", "--accent-error", "--accent-info", "--tint-success", "--tint-warning", "--tint-error", "--tint-info", "--tint-neutral", "--radius-sm", "--radius-md", "--radius-lg", "--shadow-sm", "--shadow-md", "--shadow-lg", "--fs-title", "--fs-display", "--ease-out", "--dur-fast", "--dur-base", "--dur-reveal", "--block-padding-y", "--ec-q-minh", "--rhythm-section", "--rhythm-group", "--rhythm-label"],
+  "roles": {
+    "root": ".ampy-ec",
+    "shell": ".ampy-ec__shell",
+    "rail": ".ampy-ec__rail",
+    "rail-heading": ".ampy-ec__rail-heading",
+    "rail-lead": ".ampy-ec__rail-lead",
+    "rail-bullets": ".ampy-ec__rail-bullets",
+    "rail-bullet": ".ampy-ec__rail-bullet",
+    "rail-bullet-icon": ".ampy-ec__rail-bullet-icon",
+    "rail-actions": ".ampy-ec__rail-actions",
+    "rail-contact": ".ampy-ec__rail-contact",
+    "rail-phone": ".ampy-ec__rail-phone",
+    "rail-contact-icon-svg": ".ampy-ec__rail-contact-icon svg",
+    "rail-stat": ".ampy-ec__rail-stat",
+    "rail-ask": ".ampy-ec__rail-ask",
+    "stage": ".ampy-ec__stage",
+    "block-start": ".ampy-ec__block.ampy-ec__start",
+    "crumb-start": ".ampy-ec__crumb--start",
+    "steps": ".ampy-ec__steps",
+    "step-dot": ".ampy-ec__steps span:not(.is-done):not(.is-current)",
+    "step-current": ".ampy-ec__steps span.is-current",
+    "start-illu": ".ampy-ec__start-illu",
+    "start-heading": ".ampy-ec__start-heading",
+    "start-cta": ".ampy-ec__start-cta",
+    "start-cta-svg": ".ampy-ec__start-cta svg",
+    "start-time": ".ampy-ec__start-time"
+  },
+  "states": [
+    {
+      "name": "cta-hover",
+      "actions": [{"hover": ".ampy-ec__start-cta"}, {"wait": 200}],
+      "roles": {"start-cta-hover": ".ampy-ec__start-cta:hover", "rail-contact-hover": ".ampy-ec__rail-contact"}
+    },
+    {
+      "name": "question-1",
+      "actions": [{"click": ".ampy-ec__start-cta"}, {"wait": 500}, {"hover": ".ampy-ec__option"}, {"wait": 200}, {"shot": "inventering/skarmdumpar/elcentral-kollen-{vp}-state-fraga.png"}],
+      "roles": {"block-q": ".ampy-ec__block", "crumb": ".ampy-ec__crumb", "steps": ".ampy-ec__steps", "step-done": ".ampy-ec__steps span.is-done", "step-current": ".ampy-ec__steps span.is-current", "step-todo": ".ampy-ec__steps span:not(.is-done):not(.is-current)", "crumb-back": ".ampy-ec__crumb-back", "crumb-restart": ".ampy-ec__crumb-restart", "q-title": ".ampy-ec__q-title", "q-subtitle": ".ampy-ec__q-subtitle", "options": ".ampy-ec__options", "option-hover": ".ampy-ec__option:hover", "option": ".ampy-ec__option:not(:hover)", "option-title": ".ampy-ec__option:not(:hover) .ampy-ec__option-title", "option-clarifier": ".ampy-ec__option-clarifier", "info": ".ampy-ec__info", "info-icon": ".ampy-ec__info-icon", "info-text": ".ampy-ec__info-text"}
+    },
+    {
+      "name": "question-multi",
+      "actions": [{"click": ".ampy-ec__option"}, {"wait": 500}, {"click": ".ampy-ec__option"}, {"wait": 500}, {"click": ".ampy-ec__option"}, {"wait": 500}, {"click": ".ampy-ec__option"}, {"wait": 500}, {"click": ".ampy-ec__option--multi"}, {"wait": 300}, {"shot": "inventering/skarmdumpar/elcentral-kollen-{vp}-state-fraga-multi.png"}],
+      "roles": {"q-title": ".ampy-ec__q-title", "option-multi": ".ampy-ec__option--multi:not(.is-selected)", "option-multi-selected": ".ampy-ec__option--multi.is-selected", "check": ".ampy-ec__option--multi:not(.is-selected) .ampy-ec__check", "check-selected": ".ampy-ec__option--multi.is-selected .ampy-ec__check", "cta-outline": ".ampy-ec__cta-primary--outline", "multi-hint": ".ampy-ec__multi-hint", "steps-done-count": ".ampy-ec__steps"}
+    }
+  ]
+}

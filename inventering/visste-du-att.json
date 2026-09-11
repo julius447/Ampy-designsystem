@@ -1,0 +1,73 @@
+{
+  "kalla": "visste-du-att",
+  "status": "redesign levererad som Bricks paste-JSON + token-bunden CSS (slutaudit GO; ägar-items kvar: webp, _cssCustom, ACF); lokal mapp utan git",
+  "auktoritet": 2,
+  "ingang": "/Users/juliuscallahan/Desktop/Claude Code/visste-du-att/index.html (prototyp) · visste-du-att.css (produktions-CSS) · visste-du-att.bricks.json (paste-JSON, byggd av build-bricks.js)",
+  "matmetod": "inventering/_probes/visste-du-att.mjs — mätt TVÅ gånger: (1) prototypen som den är, (2) samma sida med live global-variables.css injicerad sist (= produktionens tokenvärden) → _probes/out/visste-du-att.json",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/visste-du-att-desktop.png",
+    "inventering/skarmdumpar/visste-du-att-mobile.png",
+    "inventering/skarmdumpar/visste-du-att-prodtokens-desktop.png",
+    "inventering/skarmdumpar/visste-du-att-prodtokens-mobile.png"
+  ],
+  "farger": [
+    {"hex": "#f5f9ff", "token": "--apsky-mist", "roll": "sektionsbakgrund (via token)", "antal": 1, "kalla_fil": "visste-du-att.css:9"},
+    {"hex": "#090b32", "token": "--apmidnight-blue", "roll": "kortets bakgrund (via token) + blixtfilament i SVG", "antal": 3, "kalla_fil": "visste-du-att.css:19"},
+    {"hex": "#ffffff", "token": "--appure-white", "roll": "kortets text + H2 (via token)", "antal": 21, "kalla_fil": "visste-du-att.css:20,63"},
+    {"hex": "rgba(255,255,255,.82)", "token": "--appure-white-alfa (saknas)", "roll": "brödtext på mörkt", "antal": 2, "kalla_fil": "visste-du-att.css:73"},
+    {"hex": "#00a991", "token": "--apteal-core", "roll": "kicker 'Visste du att…' + blixt-glyf (via token); glow radial .42", "antal": 3, "kalla_fil": "visste-du-att.css:54"},
+    {"hex": "radial rgba(0,169,145,.42) @88 % 18 % + rgba(85,255,154,.18) @96 % 4 %", "token": "--apteal-core / --apneon-mint (alfa)", "roll": "brand-glow bakom lampan ('surface treatment, NOT a second device'); mobil: en radial .40 topp-centrerad", "antal": 1, "kalla_fil": "visste-du-att.css:35-40,100-102"},
+    {"hex": "rgba(9,11,50,.18)", "token": null, "roll": "--vda-shadow 0 1.2rem 4rem (kortskugga)", "antal": 1, "kalla_fil": "visste-du-att.css:14"},
+    {"hex": "#b6f2ff → #55ff9a → #00a991 (SVG-glas) · #cfe9e3/#a9d6cd/#8fc4ba/#79b3a8 (sockel)", "token": "--apcrystal-blue/--apneon-mint/--apteal-core · sockel utanför", "roll": "prototypens inline-lampa (produktion: Group-1592-1.png / Group-1592.png från uploads)", "antal": 1, "kalla_fil": "index.html:206-232; build-bricks.js:8-27"}
+  ],
+  "typografi": [
+    {"roll": "kicker 'Visste du att…'", "font": "Outfit (INTE laddad i prototypen — systemfont renderas)", "size": "var(--aptext-l) · ≤480 var(--aptext-m)", "px_desktop": "24 (prod) / 28 (prototyp)", "px_mobil": "16,1 (prod) / 17,1 (prototyp)", "weight": 500, "lh": 1.2, "ls": "0.005em (bara i index.html)", "color": "#00a991", "kalla_fil": "visste-du-att.css:50-56"},
+    {"roll": "h2", "font": "Outfit", "size": "var(--aptext-2xl)", "px_desktop": "36 (prod) / 48 (prototyp)", "px_mobil": "26,8 (prod) / 23,9 (prototyp)", "weight": 500, "lh": 1.2, "ls": "normal", "color": "#fff", "text_wrap": "balance", "kalla_fil": "visste-du-att.css:58-65"},
+    {"roll": "brödtext", "font": "Outfit", "size": "var(--aptext-m)", "px_desktop": 18, "px_mobil": "16,1 (prod) / 17,1 (prototyp)", "weight": 300, "lh": 1.5, "ls": "normal", "color": "rgba(255,255,255,.82)", "max_width": "54ch (608 px)", "kalla_fil": "visste-du-att.css:67-74"}
+  ],
+  "spacing": [
+    {"roll": "sektion padding", "varde": "var(--apspace-2xl) var(--apspace-l) · ≤992 --apspace-xl --apspace-m · ≤480 --apspace-l --apspace-s", "px_desktop": "79.2 / 39.6", "px_mobil": "21.5 / 13.3", "token": "--apspace-2xl/-l · -xl/-m · -l/-s", "kalla_fil": "visste-du-att.css:10,88,106"},
+    {"roll": "kort padding", "varde": "var(--apspace-2xl) · ≤992 --apspace-xl · ≤480 --apspace-l", "px_desktop": 79.2, "px_mobil": 21.5, "token": "--apspace-2xl/-xl/-l", "kalla_fil": "visste-du-att.css:23,93,107"},
+    {"roll": "kort grid", "varde": "minmax(0,1fr) clamp(16rem, 22vw, 26rem), gap --apspace-2xl · ≤992 flex kolumn, lampa först, gap --apspace-m", "px_desktop": "782 | 260, gap 79.2", "px_mobil": "staplat, gap 16.9", "token": "--apspace-2xl / --apspace-m", "kalla_fil": "visste-du-att.css:26-30,89-96"},
+    {"roll": "innehållsgap (kicker/h2/text)", "varde": "var(--apspace-s)", "px_desktop": 19.8, "px_mobil": 13.3, "token": "--apspace-s", "kalla_fil": "visste-du-att.css:47"},
+    {"roll": "lampa", "varde": "max-width 24rem · ≤992 12rem · ≤480 9.6rem", "px_desktop": 240, "px_mobil": 96, "token": null, "kalla_fil": "visste-du-att.css:80-85,98,108"}
+  ],
+  "container": [
+    {"roll": "kort max-width", "varde": "var(--apmax-screen-width, 128rem) = 1280", "kalla_fil": "visste-du-att.css:17"}
+  ],
+  "radier": [
+    {"roll": "kort", "varde": "var(--apradius-l)", "px_desktop": "20 (prod) / 19,76 (prototyp)", "px_mobil": 16.3, "token": "--apradius-l"}
+  ],
+  "skuggor": [
+    {"roll": "kort", "varde": "0 1.2rem 4rem rgba(9,11,50,.18) (--vda-shadow, egen)", "token": null}
+  ],
+  "rorelse": [
+    {"roll": "enter-view (prototyp/JS)", "varde": "kort opacity 0 + translateY(1.6rem) → .is-visible, .3s ease (IntersectionObserver threshold .25, runOnce); lampa +.08s delay scale .98→1; produktion: Bricks enterView fade", "kalla_fil": "index.html:78-84,138-146,258-270"},
+    {"roll": "reduced-motion", "varde": "animation none, opacity 1, transform none !important", "kalla_fil": "visste-du-att.css:115-118"}
+  ],
+  "breakpoints": ["992 (stapla, lampa överst)", "480 (mindre padding/lampa, kicker → aptext-m)", "prefers-reduced-motion"],
+  "komponenter": [
+    {"namn": "mörkt kort .visste-du-att__card", "anatomi": "midnight-kort 1280 radie 20 padding 79 med teal/mint-radialglow uppe-höger; grid text | lampa (260); mobil: lampa 96 px överst, vänsterställd text", "states": ["enter-view", "is-visible"], "html_ref": "index.html:168-236", "css_ref": "visste-du-att.css:13-40", "skarmdump_crop": "visste-du-att-desktop.png"},
+    {"namn": "kicker med blixt", "anatomi": "'Visste du att…' 24/500 teal + 18 px solid blixt-SVG (sanktionerat varumärkesmotiv)", "states": ["default"], "html_ref": "index.html:172-178", "css_ref": "visste-du-att.css:50-56"},
+    {"namn": "h2 + brödtext (ACF)", "anatomi": "{acf_did_you_know_heading} 36/500 vit balance; {acf_did_you_know_text} 18/300 .82 max 54ch", "states": ["default"], "html_ref": "index.html:181-186", "css_ref": "visste-du-att.css:58-74"},
+    {"namn": "lampa", "anatomi": "prototyp: inline-SVG med glas-gradient crystal-blue→neonmint→teal + navy blixtfilament + halo; produktion: Group-1592-1.png (+ mobil-src), 240 → 120 → 96 px, normal flow (absolut positionering och 'swing' borttagna)", "states": ["default"], "html_ref": "index.html:200-232", "css_ref": "visste-du-att.css:76-85"}
+  ],
+  "varianter": [],
+  "signaturenhet": "Det mörka midnight-kortet med en enda radial brand-glow bakom en lampa vars filament är Ampy-blixten — det ljusa, redaktionella 'Visste du att…'-registret på en mörk yta med kicker i teal.",
+  "defekter": [
+    "TOKENDRIFT I PROTOTYPEN: index.html speglar ap*-tokens med theme-style.css-värdena (--aptext-2xl 2.2→4.8rem, --aptext-l 1.8→2.8, --aptext-m 1.7→1.8, --apradius-l calc(0.4vw+1.4rem)) — inte global-variables/core-framework som vinner på live. Uppmätt: H2 48 px i prototypen mot 36 px med produktionens tokens @1440; kicker 28 mot 24; mobil H2 23,9 mot 26,8. Det pixelgodkända utseendet är alltså inte det som renderas i Bricks.",
+    "Prototypen laddar ingen Outfit (ingen @font-face/länk) — skärmdumparna visar systemfont; produktion ärver temats.",
+    "Egen skugga --vda-shadow rgba(9,11,50,.18) (fjärde skuggfamiljen) och alfa-vit .82 utan token.",
+    "Lampans sockelfärger (#cfe9e3 m.fl.) är prototyp-literaler; produktionens PNG (Group-1592) är inte inspekterad här (uploads-URL).",
+    "Kicker via --aptext-l (24 px) är större än brödtexten och nära H2:ns mobilstorlek — eyebrow-rollen saknar egen token.",
+    "Ägar-items öppna: webp-konvertering, _cssCustom-placering i Bricks, ACF-fälten."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Binder direkt till produktionens ap*-tokens (bakgrund, färg, radie, spacing, text) — ett av få block utan egen tokennamnrymd.",
+    "Grid på desktop / stack på mobil — ingen absolut positionering (lampan i normalt flöde, swing-animationen borttagen).",
+    "Glow är ytbehandling, inte en andra device; om-tunad per brytpunkt.",
+    "Brytpunkter = Bricks riktiga 992/768/480; reduced-motion dödar enter-view.",
+    "Innehållet ACF-drivet ({acf_did_you_know_heading/_text}); färska global-class-ID:n i paste-JSON så inklistring aldrig skriver över sajtens klasser.",
+    "Registret ljust/inbjudande (CLAUDE.md-regel 6: seriöst register här = defekt)."
+  ]
+}

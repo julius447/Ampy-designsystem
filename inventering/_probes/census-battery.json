@@ -1,0 +1,445 @@
+[
+ {
+  "farg": "rgb(0, 169, 145)",
+  "antal": 5,
+  "forsta": "Battery-calculator/index.html:32",
+  "skrivsatt": [
+   "rgb(0,169,145)",
+   "rgb(0, 169, 145)"
+  ],
+  "token": "--apteal-core",
+  "note": null
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.3)",
+  "antal": 4,
+  "forsta": "Battery-calculator/index.html:427",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.3)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 30 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(57, 194, 129)",
+  "antal": 3,
+  "forsta": "Battery-calculator/index.html:33",
+  "skrivsatt": [
+   "rgb(57,194,129)",
+   "rgb(57, 194, 129)"
+  ],
+  "token": "--apemerald-flow",
+  "note": null
+ },
+ {
+  "farg": "rgb(9, 11, 50)",
+  "antal": 2,
+  "forsta": "Battery-calculator/index.html:32",
+  "skrivsatt": [
+   "rgb(9,11,50)",
+   "rgb(9, 11, 50)"
+  ],
+  "token": "--apmidnight-blue",
+  "note": null
+ },
+ {
+  "farg": "rgb(240, 175, 56)",
+  "antal": 2,
+  "forsta": "Battery-calculator/index.html:44",
+  "skrivsatt": [
+   "rgb(240, 175, 56)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.25)",
+  "antal": 2,
+  "forsta": "Battery-calculator/index.html:258",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.25)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 25 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.4)",
+  "antal": 2,
+  "forsta": "Battery-calculator/index.html:1261",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.4)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 40 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(247, 249, 251)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:34",
+  "skrivsatt": [
+   "rgb(247, 249, 251)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(234, 239, 243)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:36",
+  "skrivsatt": [
+   "rgb(234, 239, 243)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(15, 18, 60)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:37",
+  "skrivsatt": [
+   "rgb(15, 18, 60)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(86, 94, 130)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:38",
+  "skrivsatt": [
+   "rgb(86, 94, 130)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(255, 255, 255)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:39",
+  "skrivsatt": [
+   "rgb(255, 255, 255)"
+  ],
+  "token": "--appure-white",
+  "note": null
+ },
+ {
+  "farg": "rgb(28, 196, 175)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:41",
+  "skrivsatt": [
+   "rgb(28, 196, 175)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(214, 76, 76)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:43",
+  "skrivsatt": [
+   "rgb(214, 76, 76)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.12)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:45",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.12)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.94)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:49",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.94)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 94 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.66)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:50",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.66)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 66 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.42)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:51",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.42)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 42 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.14)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:52",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.14)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 14 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.28)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:53",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.28)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 28 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.06)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:54",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.06)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 6 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(122, 208, 198)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:60",
+  "skrivsatt": [
+   "rgb(122, 208, 198)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(160, 184, 196)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:61",
+  "skrivsatt": [
+   "rgb(160, 184, 196)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(240, 175, 56, 0.18)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:71",
+  "skrivsatt": [
+   "rgba(240, 175, 56, 0.18)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.16)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:72",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.16)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 16 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.06)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:89",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.06)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.08)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:90",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.08)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.14)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:91",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.14)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.28)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:207",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.28)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 28 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(57, 194, 129, 0.16)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:208",
+  "skrivsatt": [
+   "rgba(57, 194, 129, 0.16)"
+  ],
+  "token": null,
+  "note": "= --apemerald-flow @ 16 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.35)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:509",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.35)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 35 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.2)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:604",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.2)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 20 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(214, 76, 76, 0.2)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:609",
+  "skrivsatt": [
+   "rgba(214, 76, 76, 0.2)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.34)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:851",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.34)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 34 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.18)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:891",
+  "skrivsatt": [
+   "rgba(0,169,145,0.18)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 18 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(57, 194, 129, 0.1)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:891",
+  "skrivsatt": [
+   "rgba(57,194,129,0.10)"
+  ],
+  "token": null,
+  "note": "= --apemerald-flow @ 10 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(240, 175, 56, 0.12)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:939",
+  "skrivsatt": [
+   "rgba(240, 175, 56, 0.12)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(240, 175, 56, 0.4)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:940",
+  "skrivsatt": [
+   "rgba(240, 175, 56, 0.4)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(57, 194, 129, 0.14)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:1001",
+  "skrivsatt": [
+   "rgba(57, 194, 129, 0.14)"
+  ],
+  "token": null,
+  "note": "= --apemerald-flow @ 14 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(57, 194, 129, 0.4)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:1002",
+  "skrivsatt": [
+   "rgba(57, 194, 129, 0.4)"
+  ],
+  "token": null,
+  "note": "= --apemerald-flow @ 40 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(214, 76, 76, 0.14)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:1005",
+  "skrivsatt": [
+   "rgba(214, 76, 76, 0.14)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(214, 76, 76, 0.4)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:1006",
+  "skrivsatt": [
+   "rgba(214, 76, 76, 0.4)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.08)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:1171",
+  "skrivsatt": [
+   "rgba(255,255,255,0.08)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 8 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.32)",
+  "antal": 1,
+  "forsta": "Battery-calculator/index.html:2740",
+  "skrivsatt": [
+   "rgba(255,255,255,0.32)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 32 % alpha (alpha-varianten finns inte som token)"
+ }
+]

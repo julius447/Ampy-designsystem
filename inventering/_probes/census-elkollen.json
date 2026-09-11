@@ -1,0 +1,422 @@
+[
+ {
+  "farg": "rgb(0, 0, 0)",
+  "antal": 5,
+  "forsta": "assets/behorighetskollen.css:825",
+  "skrivsatt": [
+   "#000"
+  ],
+  "token": "--appure-black",
+  "note": null
+ },
+ {
+  "farg": "rgb(255, 255, 255)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:33",
+  "skrivsatt": [
+   "#ffffff"
+  ],
+  "token": "--appure-white",
+  "note": null
+ },
+ {
+  "farg": "rgb(9, 11, 50)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:35",
+  "skrivsatt": [
+   "rgb(9, 11, 50)"
+  ],
+  "token": "--apmidnight-blue",
+  "note": null
+ },
+ {
+  "farg": "rgb(15, 110, 86)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:44",
+  "skrivsatt": [
+   "rgb(15, 110, 86)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(0, 169, 145)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:49",
+  "skrivsatt": [
+   "rgb(0, 169, 145)"
+  ],
+  "token": "--apteal-core",
+  "note": null
+ },
+ {
+  "farg": "rgb(116, 200, 138)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:67",
+  "skrivsatt": [
+   "rgb(116, 200, 138)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(4, 52, 44)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:68",
+  "skrivsatt": [
+   "rgb(4, 52, 44)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(135, 101, 7)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:402",
+  "skrivsatt": [
+   "rgb(135, 101, 7)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(122, 22, 35)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:407",
+  "skrivsatt": [
+   "rgb(122, 22, 35)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(186, 117, 23)",
+  "antal": 2,
+  "forsta": "assets/behorighetskollen.css:541",
+  "skrivsatt": [
+   "rgb(186, 117, 23)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(244, 245, 251)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:34",
+  "skrivsatt": [
+   "#f4f5fb"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(90, 93, 122)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:38",
+  "skrivsatt": [
+   "#5a5d7a"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(138, 141, 165)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:40",
+  "skrivsatt": [
+   "#8a8da5"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(104, 107, 128)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:41",
+  "skrivsatt": [
+   "rgb(104, 107, 128)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(10, 122, 191)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:43",
+  "skrivsatt": [
+   "rgb(10, 122, 191)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(0, 110, 94)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:50",
+  "skrivsatt": [
+   "rgb(0, 110, 94)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(0, 122, 105)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:51",
+  "skrivsatt": [
+   "rgb(0, 122, 105)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.25)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:52",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.25)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 25 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(54, 178, 92)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:57",
+  "skrivsatt": [
+   "rgb(54, 178, 92)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(245, 175, 25)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:58",
+  "skrivsatt": [
+   "rgb(245, 175, 25)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(214, 64, 64)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:59",
+  "skrivsatt": [
+   "rgb(214, 64, 64)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(227, 229, 237)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:61",
+  "skrivsatt": [
+   "#e3e5ed"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(235, 237, 243)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:62",
+  "skrivsatt": [
+   "#ebedf3"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(11, 13, 42, 0.04)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:91",
+  "skrivsatt": [
+   "rgba(11, 13, 42, 0.04)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(11, 13, 42, 0.06)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:92",
+  "skrivsatt": [
+   "rgba(11, 13, 42, 0.06)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(11, 13, 42, 0.1)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:93",
+  "skrivsatt": [
+   "rgba(11, 13, 42, 0.1)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(245, 201, 122)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:403",
+  "skrivsatt": [
+   "rgb(245, 201, 122)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(61, 42, 0)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:404",
+  "skrivsatt": [
+   "rgb(61, 42, 0)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(240, 149, 149)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:408",
+  "skrivsatt": [
+   "rgb(240, 149, 149)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(80, 19, 19)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:409",
+  "skrivsatt": [
+   "rgb(80, 19, 19)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.08)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1152",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.08)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 8 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(27, 132, 71)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1237",
+  "skrivsatt": [
+   "rgb(27, 132, 71)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(54, 178, 92, 0.08)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1237",
+  "skrivsatt": [
+   "rgba(54, 178, 92, 0.08)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(54, 178, 92, 0.1)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1237",
+  "skrivsatt": [
+   "rgba(54, 178, 92, 0.10)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(27, 132, 71, 0.45)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1237",
+  "skrivsatt": [
+   "rgba(27, 132, 71, 0.45)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(214, 64, 64, 0.07)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1238",
+  "skrivsatt": [
+   "rgba(214, 64, 64, 0.07)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(214, 64, 64, 0.06)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1238",
+  "skrivsatt": [
+   "rgba(214, 64, 64, 0.06)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(150, 40, 50, 0.4)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1238",
+  "skrivsatt": [
+   "rgba(150, 40, 50, 0.4)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(245, 175, 25, 0.09)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1239",
+  "skrivsatt": [
+   "rgba(245, 175, 25, 0.09)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(245, 175, 25, 0.08)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1239",
+  "skrivsatt": [
+   "rgba(245, 175, 25, 0.08)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(135, 101, 7, 0.4)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1239",
+  "skrivsatt": [
+   "rgba(135, 101, 7, 0.4)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(54, 178, 92, 0.14)",
+  "antal": 1,
+  "forsta": "assets/behorighetskollen.css:1374",
+  "skrivsatt": [
+   "rgba(54,178,92,0.14)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ }
+]

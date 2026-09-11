@@ -1,0 +1,130 @@
+{
+  "kalla": "testimonials-block",
+  "status": "V1 låst 2026-07-19 (delivery/) · index.html = 1:1-baslinjeklon av live-startsidan 2026-07-18",
+  "auktoritet": 1,
+  "ingang": "kallor/Testimonials-block/delivery/preview.html (V1, sanningskälla = delivery/ampy-testimonials.{css,js,php}) · kallor/Testimonials-block/index.html (baslinje = live)",
+  "matmetod": "inventering/_probes/testimonials-block.mjs → _probes/out/testimonials-block.json (getComputedStyle @1440/@390, html 62.5 %)",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/testimonials-block-desktop.png",
+    "inventering/skarmdumpar/testimonials-block-mobile.png",
+    "inventering/skarmdumpar/testimonials-block-live-baseline-desktop.png",
+    "inventering/skarmdumpar/testimonials-block-live-baseline-mobile.png"
+  ],
+  "farger": [
+    {"lager": "v1", "hex": "#090b32", "token": "--apmidnight-blue", "roll": "blockets textfärg, H2, badge-text (var(--apmidnight-blue, #090b32))", "antal": 55, "kalla_fil": "delivery/ampy-testimonials.css:21,36,88"},
+    {"lager": "v1", "hex": "rgba(9,11,50,0.68)", "token": "--apmidnight-blue (alfa, saknas som token)", "roll": "subline", "antal": 1, "kalla_fil": "delivery/ampy-testimonials.css:38"},
+    {"lager": "v1", "hex": "#0b0f30 → #2d516d 60 % (−27deg)", "token": null, "roll": "kortets gradient (verbatim från live) — utanför tokens", "antal": 24, "kalla_fil": "delivery/ampy-testimonials.css:51"},
+    {"lager": "v1", "hex": "#ffffff (.95 text · .72 datum · .14 avdelare)", "token": "--appure-white (alfa saknas)", "roll": "korttext, datum, divider", "antal": 432, "kalla_fil": "delivery/ampy-testimonials.css:52,63,66,70"},
+    {"lager": "v1", "hex": "#55ff9a", "token": "--apneon-mint", "roll": "citattecken (opacity .55) + kortens 5 stjärnor (fill)", "antal": 264, "kalla_fil": "delivery/ampy-testimonials.css:57,69"},
+    {"lager": "v1", "hex": "rgba(190,190,190,0.14)", "token": null, "roll": "kortskugga 0 0 16px 0", "antal": 24, "kalla_fil": "delivery/ampy-testimonials.css:53"},
+    {"lager": "v1", "hex": "#c7d3eb", "token": null, "roll": "inaktiv prick — utanför tokens", "antal": 3, "kalla_fil": "delivery/ampy-testimonials.css:76"},
+    {"lager": "v1", "hex": "#cfe9d9", "token": null, "roll": "aktiv pricks bakgrund — utanför tokens", "antal": 1, "kalla_fil": "delivery/ampy-testimonials.css:82"},
+    {"lager": "v1", "hex": "#1bd365 → #00ad48 (90deg)", "token": null, "roll": "prickens fyllning (--att-fill-a = var(--brightgreen) Bricks-palett, --att-fill-b) — utanför ap*", "antal": 1, "kalla_fil": "delivery/ampy-testimonials.css:16-17,85"},
+    {"lager": "v1", "hex": "#fbbc04", "token": null, "roll": "Google-badgens 5 stjärnor (Googles gula) + drop-shadow rgba(9,11,50,.55)", "antal": 5, "kalla_fil": "delivery/ampy-testimonials.css:97"},
+    {"lager": "v1", "hex": "#00a991", "token": "--apteal-core", "roll": "focus-visible outline 2px på prick och badge", "antal": 2, "kalla_fil": "delivery/ampy-testimonials.css:87,96"},
+    {"lager": "v1", "hex": "hsl(216 100% 98%) (--color-2)", "token": "≈ --apsky-mist #f5f9ff (color-2 = #f5f9ff, samma värde via Bricks-palett)", "roll": "sidbakgrund i preview (blocket är transparent)", "antal": 1, "kalla_fil": "delivery/preview.html:20"},
+    {"lager": "live", "hex": "#363636", "token": null, "roll": "H2-bas (Bricks body-färg)", "antal": 27, "kalla_fil": "styles.css (frontend body)"},
+    {"lager": "live", "hex": "#1bd365 → #33995c (--brightgreen → --color-5)", "token": null, "roll": "H2-ordet 'Ampy?' i gradient (background-clip)", "antal": 1, "kalla_fil": "styles.css .testimonial__heading"},
+    {"lager": "live", "hex": "#ffffff", "token": "--appure-white", "roll": "vitt bakgrundskort 900 px bakom slidern (dold på mobil) + korttext (var(--white))", "antal": 148, "kalla_fil": "styles.css .testimonial__white-bg, .testimonial__text-basic"},
+    {"lager": "live", "hex": "rgba(112,234,255,0.47)", "token": null, "roll": "kortets background-color under gradienten (osynlig, gradienten täcker)", "antal": 11, "kalla_fil": "styles.css .testimonial__testimonial-card"},
+    {"lager": "live", "hex": "#0b0f30 → #2d516d", "token": null, "roll": "kortgradient −27deg", "antal": 11, "kalla_fil": "styles.css .testimonial__testimonial-card"},
+    {"lager": "live", "hex": "#55ff9a", "token": "--apneon-mint", "roll": "ion-ios-star 19px", "antal": 55, "kalla_fil": "styles.css .brxe-e219b6.brxi-svuegk"},
+    {"lager": "live", "hex": "#00ad48", "token": null, "roll": "Splide-paginering (aktiv prick 70×10)", "antal": 1, "kalla_fil": "styles.css splide pagination"},
+    {"lager": "live", "hex": "rgba(190,190,190,.19 / .14)", "token": null, "roll": "skuggor på vitt kort / testimonial-kort", "antal": 12, "kalla_fil": "styles.css"}
+  ],
+  "typografi": [
+    {"lager": "v1", "roll": "h2", "font": "Outfit", "size": "var(--aptext-2xl) · ≤759 clamp(2.3rem, 6.4vw, 2.7rem)", "px_desktop": 36, "px_mobil": 24.96, "weight": 400, "lh": 1.15, "ls": "-0.01em", "color": "#090b32", "max_width": "72rem (720 px)", "kalla_fil": "delivery/ampy-testimonials.css:32-37,108"},
+    {"lager": "v1", "roll": "subline", "font": "Outfit", "size": "var(--aptext-m)", "px_desktop": 18, "px_mobil": "dold (display:none ≤759)", "weight": 300, "lh": "normal", "ls": "normal", "color": "rgba(9,11,50,.68)", "kalla_fil": "delivery/ampy-testimonials.css:38,109"},
+    {"lager": "v1", "roll": "korttext (citat)", "font": "Outfit", "size": "--att-card-text = clamp(1.7rem, calc(0.21vw + 1.63rem), 1.9rem)", "px_desktop": 19, "px_mobil": 17.12, "weight": 300, "lh": 1.5, "ls": "normal", "color": "rgba(255,255,255,.95)", "kalla_fil": "delivery/ampy-testimonials.css:18,63 (egen kurva mellan --aptext-m och --aptext-mm)"},
+    {"lager": "v1", "roll": "namn", "font": "Outfit", "size": "var(--aptext-ml)", "px_desktop": 22, "px_mobil": 20.12, "weight": 600, "lh": "normal", "ls": "normal", "color": "#fff", "kalla_fil": "delivery/ampy-testimonials.css:65"},
+    {"lager": "v1", "roll": "datum", "font": "Outfit", "size": "var(--aptext-xs)", "px_desktop": 12, "px_mobil": 10.12, "weight": 400, "lh": "normal", "ls": "normal", "color": "rgba(255,255,255,.72)", "kalla_fil": "delivery/ampy-testimonials.css:70"},
+    {"lager": "v1", "roll": "citattecken (dekor)", "font": "Outfit", "size": "5.6rem", "px_desktop": 56, "px_mobil": 56, "weight": 600, "lh": 1, "ls": "normal", "color": "#55ff9a @ .55", "kalla_fil": "delivery/ampy-testimonials.css:55-59 (box 2.4rem hög, margin-top −.4rem)"},
+    {"lager": "v1", "roll": "badge-text '5 av 5 Betyg på Google'", "font": "Outfit", "size": "var(--aptext-m) · ≤759 var(--aptext-sm)", "px_desktop": 18, "px_mobil": 14.12, "weight": "300, strong 600", "lh": "normal", "ls": "normal", "color": "#090b32", "kalla_fil": "delivery/ampy-testimonials.css:98-99,113"},
+    {"lager": "live", "roll": "h2", "font": "Outfit", "size": "var(--aptext-xl)", "px_desktop": 32, "px_mobil": 24.54, "weight": 400, "lh": 1.2, "ls": "normal", "color": "#363636 + 'Ampy?' gradient", "kalla_fil": "styles.css .testimonial__heading"},
+    {"lager": "live", "roll": "namn", "font": "Outfit", "size": "var(--aptext-l)", "px_desktop": 24, "px_mobil": 22.12, "weight": 600, "lh": 1.3, "ls": "normal", "color": "#fff", "kalla_fil": "styles.css .testimonial__name"},
+    {"lager": "live", "roll": "korttext", "font": "Outfit", "size": "var(--aptext-m)", "px_desktop": 18, "px_mobil": 16.12, "weight": 300, "lh": 1.7, "ls": "normal", "color": "#fff", "kalla_fil": "styles.css .testimonial__text-basic"},
+    {"lager": "live", "roll": "stjärna (ikonfont)", "font": "Ionicons ion-ios-star", "size": "19px", "px_desktop": 19, "px_mobil": 19, "weight": 400, "lh": 1, "ls": "normal", "color": "#55ff9a", "kalla_fil": "styles.css .brxe-e219b6.brxi-svuegk"}
+  ],
+  "spacing": [
+    {"lager": "v1", "roll": "sektion padding", "varde": "var(--apspace-2xl) var(--apspace-m) · tablett --apspace-xl --apspace-m · ≤759 --apspace-xl --apspace-s", "px_desktop": "79.2 / 28", "px_mobil": "27.3 / 13.3", "token": "--apspace-2xl/-m · --apspace-xl/-s", "kalla_fil": "delivery/ampy-testimonials.css:22,102,107"},
+    {"lager": "v1", "roll": "rubrikblock margin-bottom", "varde": "var(--apspace-l) · ≤759 3.2rem", "px_desktop": 39.6, "px_mobil": 32, "token": "--apspace-l / literal", "kalla_fil": "delivery/ampy-testimonials.css:31,110"},
+    {"lager": "v1", "roll": "h2 → subline", "varde": "var(--apspace-2xs)", "px_desktop": 9.9, "px_mobil": 8.3, "token": "--apspace-2xs", "kalla_fil": "delivery/ampy-testimonials.css:33"},
+    {"lager": "v1", "roll": "kort padding", "varde": "var(--apspace-m) var(--apspace-m) var(--apspace-l)", "px_desktop": "28 / 28 / 39.6", "px_mobil": "16.9 / 16.9 / 21.5", "token": "--apspace-m + --apspace-l", "kalla_fil": "delivery/ampy-testimonials.css:49"},
+    {"lager": "v1", "roll": "kort min-height", "varde": "360 · tablett 340 · ≤759 300", "px_desktop": 360, "px_mobil": 300, "token": null, "kalla_fil": "delivery/ampy-testimonials.css:48,103,111"},
+    {"lager": "v1", "roll": "kort gap (Splide)", "varde": "24px", "px_desktop": 24, "px_mobil": 24, "token": null, "kalla_fil": "delivery/ampy-testimonials.js:84"},
+    {"lager": "v1", "roll": "kortkropp padding", "varde": "var(--apspace-s) 0 · ≤759 var(--apspace-xs) 0", "px_desktop": 19.8, "px_mobil": 10.5, "token": "--apspace-s / --apspace-xs", "kalla_fil": "delivery/ampy-testimonials.css:62,112"},
+    {"lager": "v1", "roll": "namn mb / divider mb", "varde": "var(--apspace-2xs)", "px_desktop": 9.9, "px_mobil": 8.3, "token": "--apspace-2xs", "kalla_fil": "delivery/ampy-testimonials.css:65-66"},
+    {"lager": "v1", "roll": "stjärnor gap / meta gap", "varde": "0.3rem / 0.8rem", "px_desktop": "3 / 8", "px_mobil": "3 / 8", "token": null, "kalla_fil": "delivery/ampy-testimonials.css:67-68"},
+    {"lager": "v1", "roll": "nav margin-top + rating margin-top", "varde": "var(--apspace-s) vardera", "px_desktop": 19.8, "px_mobil": 13.3, "token": "--apspace-s", "kalla_fil": "delivery/ampy-testimonials.css:74,91"},
+    {"lager": "v1", "roll": "prickar", "varde": "24×6 (aktiv 44×6), gap 0.8rem, träffyta inset −1.2rem −0.4rem", "px_desktop": "24/44 × 6, gap 8", "px_mobil": "samma", "token": null, "kalla_fil": "delivery/ampy-testimonials.css:75-82"},
+    {"lager": "v1", "roll": "badge", "varde": "min-height 44, padding 0.8rem 1.2rem, gap 1.1rem", "px_desktop": "44 hög, 8/12, gap 11", "px_mobil": "samma", "token": null, "kalla_fil": "delivery/ampy-testimonials.css:92"},
+    {"lager": "live", "roll": "sektion padding", "varde": "var(--apspace-l) 0 · mobil --apspace-l/--apspace-xl + --apspace-3xs", "px_desktop": "39.6 / 0", "px_mobil": "21.5–27.3 / 6.6", "token": "--apspace-l/-xl/-3xs", "kalla_fil": "styles.css .brxe-rytvzu"},
+    {"lager": "live", "roll": "vitt bakgrundskort padding", "varde": "var(--apspace-2xl) 0", "px_desktop": 79.2, "px_mobil": "dolt", "token": "--apspace-2xl", "kalla_fil": "styles.css .testimonial__white-bg"},
+    {"lager": "live", "roll": "kort padding", "varde": "var(--apspace-m) · mobil --apspace-l vertikalt", "px_desktop": 28, "px_mobil": "21.5 / 16.9", "token": "--apspace-m / --apspace-l", "kalla_fil": "styles.css .testimonial__testimonial-card"},
+    {"lager": "live", "roll": "kort gap (Splide)", "varde": "25px", "px_desktop": 25, "px_mobil": 25 , "token": null, "kalla_fil": "index.html data-splide"},
+    {"lager": "live", "roll": "block row-gap (H2→slider→prickar)", "varde": "var(--apspace-m)", "px_desktop": 28, "px_mobil": 16.9, "token": "--apspace-m", "kalla_fil": "styles.css .testimonial__block"}
+  ],
+  "container": [
+    {"lager": "v1", "roll": "inner max-width", "varde": "1200px, margin auto; sektionen fullbredd med padding", "kalla_fil": "delivery/ampy-testimonials.css:27"},
+    {"lager": "v1", "roll": "rubrik max-width", "varde": "72rem = 720 px", "kalla_fil": "delivery/ampy-testimonials.css:31"},
+    {"lager": "live", "roll": "container", "varde": "1100px (Bricks default .brxe-container width) · vitt bakgrundskort 900 px absolut bakom · slider min-width 1200 (spiller utanför kortet med flit)", "kalla_fil": "styles.css .testimonial__container / __white-bg / __slider-nested"}
+  ],
+  "radier": [
+    {"lager": "v1", "roll": "kort", "varde": "var(--radius, 16px)", "px": 16, "token": "--radius (Core Framework-legacy 16px, ej ap*)"},
+    {"lager": "v1", "roll": "prick", "varde": "var(--apradius-full)", "px": 9990, "token": "--apradius-full"},
+    {"lager": "v1", "roll": "badge focus", "varde": "var(--apradius-full)", "token": "--apradius-full"},
+    {"lager": "live", "roll": "vitt bakgrundskort", "varde": "var(--apradius-l)", "px": 20, "token": "--apradius-l"},
+    {"lager": "live", "roll": "kort", "varde": "var(--radius)", "px": 16, "token": "--radius (legacy)"},
+    {"lager": "live", "roll": "paginering", "varde": "8px (Splide default)", "px": 8, "token": null}
+  ],
+  "skuggor": [
+    {"lager": "v1", "roll": "kort", "varde": "0 0 16px 0 rgba(190,190,190,.14)", "token": null},
+    {"lager": "v1", "roll": "badge-stjärna", "varde": "filter: drop-shadow(0 0 .5px rgba(9,11,50,.55))", "token": null},
+    {"lager": "live", "roll": "vitt bakgrundskort", "varde": "0 0 16px 0 rgba(190,190,190,.19)", "token": null},
+    {"lager": "live", "roll": "kort", "varde": "0 0 16px 0 rgba(190,190,190,.14)", "token": null}
+  ],
+  "rorelse": [
+    {"lager": "v1", "roll": "Splide", "varde": "v4.1.4 self-hostad; type loop om antal > perPage; perPage 3 (2 ≤1024, 1 ≤759); perMove 1; gap 24; autoplay interval 4000 ms, speed 500 ms; pauseOnHover + pauseOnFocus; arrows/pagination av; touch-paus", "kalla_fil": "delivery/ampy-testimonials.js:18,76-89"},
+    {"lager": "v1", "roll": "prick-tillväxt", "varde": "transition width .35s ease, background-color .35s ease; aktiv fylls via scaleX(rate) från Splides autoplay:playing (watchdog rAF >900 ms)", "kalla_fil": "delivery/ampy-testimonials.css:78; js:61,99,120-128"},
+    {"lager": "v1", "roll": "badge hover", "varde": "text-decoration underline, underline-offset 4px", "kalla_fil": "delivery/ampy-testimonials.css:95"},
+    {"lager": "v1", "roll": "reduced-motion", "varde": "JS: ingen autoplay, markören statisk full; CSS: prick transition none", "kalla_fil": "delivery/ampy-testimonials.js:36,78,94; css:117-119"},
+    {"lager": "live", "roll": "Splide (Bricks nested slider)", "varde": "type slide, height 50vh, gap 25, perPage 3 (2 ≤1024/767, 1 ≤478), speed 400, interval 3000, autoplay, pauseOnHover, pagination, rewind", "kalla_fil": "index.html data-splide"},
+    {"lager": "live", "roll": "prick", "varde": "transition transform .2s linear (Splide default)", "kalla_fil": "styles.css"},
+    {"lager": "live", "roll": "död kod", "varde": "inline-skript som ska dölja prickar ≥3 riktar .testimonial-carousel — matchar inget, dött på live", "kalla_fil": "index.html <script> i white-bg"}
+  ],
+  "breakpoints": ["v1: 1024 (2-upp), 759 (1-upp, subline dold, rubrik clamp), prefers-reduced-motion, print", "live: 1279, 1024, 991 (Bricks), 767, 478"],
+  "komponenter": [
+    {"lager": "v1", "namn": "sektion .ampy-testimonials", "anatomi": "transparent på sidbakgrund, padding --apspace-2xl/-m, inner 1200, Outfit 300 navy, overflow hidden, wrapper-scopad CSS", "states": ["default"], "html_ref": "delivery/preview.html:33", "css_ref": "delivery/ampy-testimonials.css:15-27"},
+    {"lager": "v1", "namn": "rubrikblock", "anatomi": "centrerad h2 36/400 lh 1.15 navy + subline 18/300 .68; max 720", "states": ["default", "≤759 subline dold"], "html_ref": "delivery/preview.html:35-38", "css_ref": "delivery/ampy-testimonials.css:31-38"},
+    {"lager": "v1", "namn": "omdömeskort .att-card", "anatomi": "384×394 (3-upp), min-h 360, radie 16, gradient −27° #0b0f30→#2d516d, skugga .14; topp: citattecken 56/600 neonmint .55 vänster + Google-G 22 höger; kropp vertikalt centrerad text 19/300 lh1.5 .95; fot: namn 22/600, 1px avdelare .14, 5 stjärnor 15 px neonmint + datum 12/400 .72 höger", "states": ["default", "hover = autoplay paus", "print = inverterat"], "html_ref": "delivery/ampy-testimonials.js kortbyggaren", "css_ref": "delivery/ampy-testimonials.css:46-70", "skarmdump_crop": "testimonials-block-desktop.png"},
+    {"lager": "v1", "namn": "prick-navigering .att-nav", "anatomi": "4 pillar 24×6 #c7d3eb, aktiv 44×6 #cfe9d9 med gradientfyllning #1bd365→#00ad48 som växer i takt med autoplay (index % 4); klickbara, osynlig träffyta 30 px hög", "states": ["default", "is-active", "focus-visible teal 2px"], "html_ref": "delivery/preview.html:42", "css_ref": "delivery/ampy-testimonials.css:73-87"},
+    {"lager": "v1", "namn": "Google-betyg .att-badge (enda CTA)", "anatomi": "länk till Google-profilen, 44 px hög, 5 gula stjärnor 18 px (#fbbc04) + '5 av 5' 600 + 'Betyg på Google' 300, 18 px navy; hover underline", "states": ["default", "hover", "focus-visible"], "html_ref": "delivery/preview.html:43-50", "css_ref": "delivery/ampy-testimonials.css:90-99"},
+    {"lager": "live", "namn": "vitt bakgrundskort .testimonial__white-bg", "anatomi": "900×496, radie 20, skugga .19, absolut bakom slidern som är 1200 bred → korten sticker ut 150 px på varje sida; dold på mobil", "states": ["default"], "html_ref": "index.html section.testimonial", "css_ref": "styles.css .testimonial__white-bg"},
+    {"lager": "live", "namn": "h2 med gradientord", "anatomi": "'Vad säger dina grannar om Ampy?' 32/400 #363636, 'Ampy?' i --brightgreen→--color-5-gradient", "states": ["default"], "html_ref": "index.html", "css_ref": "styles.css .testimonial__heading"},
+    {"lager": "live", "namn": "omdömeskort (Bricks nested slider)", "anatomi": "383×360, padding 28, radie 16, gradient; namn 24/600 (förnamn), text 18/300 lh1.7, 5 Ionicons-stjärnor 19 px neonmint, Google-G 25 px nere-höger; ingen datum, inget citattecken", "states": ["default"], "html_ref": "index.html .testimonial__testimonial-card", "css_ref": "styles.css .testimonial__testimonial-card"},
+    {"lager": "live", "namn": "Splide-paginering", "anatomi": "3–4 pillar 70×10 radie 8, aktiv #00ad48", "states": ["default", "is-active"], "html_ref": "index.html", "css_ref": "styles.css"}
+  ],
+  "varianter": [
+    {"namn": "redesign/a, redesign/b", "skillnad": "pekar på produktionsfilerna (commit 55a99c1) — inga egna stilar att inventera"}
+  ],
+  "signaturenhet": "De fyra prickarna där den aktiva fylls grönt i takt med autoplay (index % 4, självläkande via Splides autoplay:playing + rAF-watchdog) och den mörka gradientkortet med neonmint-citattecken och '5 av 5 · Betyg på Google'-raden som enda CTA.",
+  "defekter": [
+    "V1 färger utanför ap*: kortgradient #0b0f30/#2d516d, prickar #c7d3eb/#cfe9d9, fyllning #1bd365 (Bricks --brightgreen)/#00ad48, Google-gult #fbbc04; radie via legacy --radius 16 (inte --apradius-*).",
+    "V1 datum = --aptext-xs → 10,1 px på mobil (under läsbarhetsgräns); kortens text har en EGEN clamp (17→19) som inte är någon ap-token.",
+    "V1 rubrik byter till literal clamp(2.3rem,6.4vw,2.7rem) ≤759 och head-marginal 3.2rem literal — två av tre mobilvärden lämnar tokenskalan.",
+    "V1 'Ampy Testimonials'-sektionen bär ingen egen bakgrund → beror på sidans --color-2; blocket antar html 62.5 % (preview sätter body 10px/Times, blocket räddar sig med egen font-family).",
+    "LIVE: slidern (min-width 1200) spiller 150 px utanför det 900 px vita kortet på varje sida — avsiktligt look men markup-mässigt ett absolutpositionerat kort med height 100 %; dold helt på mobil.",
+    "LIVE: dött inline-skript (.testimonial-carousel matchar inget); Bricks-container 1100 px medan resten av sajten kör 1280.",
+    "LIVE: H2 32/400 (--aptext-xl) i #363636 med gradientord — avviker från V1:s 36/400 navy; namn 24/600 lh 1.3 mot V1 22/600; text lh 1.7 mot V1 1.5.",
+    "Candour-grind (README): '5 av 5' är statiskt och bryts tyst av första recensionen under 5★; datum härledda ur Googles relativa tidsstämplar."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Wrapper-scopad CSS under .ampy-testimonials (0,2,0), rör aldrig html/body, inga font-requests, Splide self-hostad (GDPR).",
+    "Loop bara om antal kort > perPage; annars slide utan autoplay; reduced-motion = ingen autoplay + statisk full markör.",
+    "Paus vid hover/fokus/touch; watchdog driver fyllningen om Splides timer tystnar >900 ms.",
+    "Kortens min-height 360/340/300 per breakpoint så raden är jämn (align-items stretch).",
+    "44 px träffytor (badge min-height, prickens ::before −1.2rem/−0.4rem, mindre nedåt så den inte stjäl badgens klick).",
+    "Print inverterar korten (vit bakgrund, #111 text, prickar dolda).",
+    "Endast en CTA i blocket: Google-badgen (länk, ny flik, rel noopener)."
+  ]
+}

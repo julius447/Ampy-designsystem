@@ -1,0 +1,29 @@
+{
+ "file": "kallor/Offer-accepted-preview/index.html",
+ "out": "inventering/_probes/out-offer-accepted.json",
+ "targets": [
+  {"roll":"root","sel":".oa"},
+  {"roll":"card","sel":".oa__card"},
+  {"roll":"section-head","sel":".oa__head"},
+  {"roll":"section-2","sel":".oa__section","nth":1},
+  {"roll":"check","sel":".oa__check"},
+  {"roll":"title","sel":".oa__title"},
+  {"roll":"ref-pill","sel":".oa__ref"},
+  {"roll":"next","sel":".oa__next"},
+  {"roll":"eyebrow","sel":".oa__eyebrow"},
+  {"roll":"steps","sel":".oa__steps"},
+  {"roll":"step","sel":".oa__step"},
+  {"roll":"step-after","sel":".oa__step","pseudo":"::after","props":["width","height","top","left","background-image"]},
+  {"roll":"node","sel":".oa__node"},
+  {"roll":"node-num","sel":".oa__node span"},
+  {"roll":"node-svg","sel":".oa__node svg"},
+  {"roll":"step-text","sel":".oa__step-text"},
+  {"roll":"step-small","sel":".oa__step-text small"},
+  {"roll":"trust","sel":".oa__trust"},
+  {"roll":"trust-item","sel":".oa__trust-item"},
+  {"roll":"stars-svg","sel":".oa__stars svg"},
+  {"roll":"contact","sel":".oa__contact"},
+  {"roll":"contact-a","sel":".oa__contact a"},
+  {"roll":"contact-a-focus","sel":".oa__contact a","focus":true}
+ ]
+}

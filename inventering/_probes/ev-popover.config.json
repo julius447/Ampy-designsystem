@@ -1,0 +1,19 @@
+{
+  "file": "kallor/EV-Caluclator/prototype/index.html",
+  "out": "inventering/_probes/ev-popover.measure.json",
+  "scope": ".ampy-calc",
+  "census": false,
+  "roles": {},
+  "states": [
+    {
+      "name": "tip-open",
+      "actions": [{"hover": "#ampyEvPctLabel + .ampy-calc__tip"}, {"wait": 400}, {"shot": "inventering/skarmdumpar/ev-kalkylator-{vp}-state-popover.png", "full": false}],
+      "roles": {"popover": ".ampy-calc__popover[data-open]", "popover-any": ".ampy-calc__popover", "tip-active": ".ampy-calc__tip[aria-expanded='true']"}
+    },
+    {
+      "name": "tip-click",
+      "actions": [{"click": "#ampyEvPctLabel + .ampy-calc__tip"}, {"wait": 400}, {"shot": "inventering/skarmdumpar/ev-kalkylator-{vp}-state-popover.png", "full": false}],
+      "roles": {"popover": ".ampy-calc__popover[data-open]", "tip-active": ".ampy-calc__tip[aria-expanded='true']"}
+    }
+  ]
+}

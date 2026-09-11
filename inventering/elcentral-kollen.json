@@ -1,0 +1,1237 @@
+{
+  "kalla": "elcentral-kollen",
+  "status": "live v2.26 (CSS ?v=2.26.1)",
+  "auktoritet": 1,
+  "ingang": "kallor/Elcentral-lead-magnet/index.html (meta-refresh → preview/index.html); blockläge preview/block.html; data data/elcentralkollen-data.json",
+  "css": "kallor/Elcentral-lead-magnet/assets/elcentralkollen.css (904 rader, BEM ampy-ec__*, tokens på .ampy-ec, fonter self-hostade Outfit 400-600 + Plus Jakarta Sans 500-700 via @font-face, 1rem=10px)",
+  "matmetod": "Playwright getComputedStyle 1440 + 390 (inventering/_probes/elcentral-kollen.config.json start/fråga/flerval; elcentral-verdict.config.json ?q=a2.c1.s1.j0.w4.h1.p0; elcentral-akut.config.json ?q=a3.c1.s1.j0.w3.h2.p4; elcentral-oklart.config.json ?q=a4.c3.s3.j2.w4.h4.p4), källcensus _probes/census-elcentral.json. OBS: preview/index.html bär ett fixed header-sim (66/76px) + QA-bar som INTE är verktyget",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/elcentral-kollen-desktop.png",
+    "inventering/skarmdumpar/elcentral-kollen-mobile.png",
+    "inventering/skarmdumpar/elcentral-kollen-desktop-state-fraga.png",
+    "inventering/skarmdumpar/elcentral-kollen-mobile-state-fraga.png",
+    "inventering/skarmdumpar/elcentral-kollen-desktop-state-fraga-multi.png",
+    "inventering/skarmdumpar/elcentral-kollen-desktop-state-besked.png",
+    "inventering/skarmdumpar/elcentral-kollen-mobile-state-besked.png",
+    "inventering/skarmdumpar/elcentral-kollen-desktop-state-besked-akut.png",
+    "inventering/skarmdumpar/elcentral-kollen-desktop-state-besked-oklart.png",
+    "inventering/skarmdumpar/elcentral-kollen-desktop-state-leadform.png",
+    "inventering/skarmdumpar/elcentral-kollen-block-desktop.png",
+    "inventering/skarmdumpar/elcentral-kollen-block-mobile.png"
+  ],
+  "typsnitt": {
+    "heading": "\"Plus Jakarta Sans\" 500-700 self-hostad (H1, frågerubrik, start-rubrik, eyebrow, pills, lead-etiketter, akut-label, findings-head)",
+    "body_ui": "\"Outfit\" 400-600 self-hostad (brödtext, options, knappar, rail-lead, bullets, gradient-CTA:erna)",
+    "laddning": "@font-face i CSS rad 12-31 med unicode-range (latin + latin-ext), 4 woff2 i assets/fonts/. 'Inga Google Fonts (invariant 5, GDPR)'",
+    "avvikelse": "två familjer (PJS för rubriker) mot Elkollen v7 som tog bort PJS"
+  },
+  "farger": [
+    {
+      "hex": "rgb(0, 169, 145)",
+      "token": "--apteal-core",
+      "roll": "--action-primary: bullet-ikoner, option hover/vald kant, check-bg, rail-fokus-outline (accent, ALDRIG text)",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:59"
+    },
+    {
+      "hex": "rgb(0, 122, 105)",
+      "token": null,
+      "roll": "--action-primary-strong: solid CTA-bg + kant, aktiv/done stegprick, textlänkar (readmore, cta-link, factnote-src), --border-focus, --focus-ring (.9)",
+      "antal_css": 3,
+      "antal_computed": "start-CTA, lead-submit, steps",
+      "kalla_fil": "assets/elcentralkollen.css:46-47,60,72",
+      "notering": "utanför tokens ('white-on ≈5.3:1 AA') — samma mörka teal som EV men annat värde än Energycalcs #00806e"
+    },
+    {
+      "hex": "rgb(0, 108, 93)",
+      "token": null,
+      "roll": "--action-primary-strong-hover: CTA hover, submit disabled",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:68",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(240, 250, 248)",
+      "token": null,
+      "roll": "--action-tint: vald option-bg, option active",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:69",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(9, 11, 50)",
+      "token": "--apmidnight-blue",
+      "roll": "--text-primary + --bg-surface (all mörk text; ingen mörk yta används i verktyget)",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:52-53"
+    },
+    {
+      "hex": "#5a5d7a rgb(90,93,122)",
+      "token": null,
+      "roll": "--text-secondary: rail-lead, bullets, hint, eyebrow, axis, clarifier, findings-text, readmore, consent",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:54",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "#8a8da5 rgb(138,141,165)",
+      "token": null,
+      "roll": "--text-tertiary: neutral pill-kant, finding-chevron, accent-neutral",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:55",
+      "notering": "utanför tokens (3.09:1 på bandet, dokumenterat)"
+    },
+    {
+      "hex": "#ffffff",
+      "token": "--appure-white",
+      "roll": "--bg-primary: kort, options, inputs, CTA-text, sticky-bar",
+      "antal_css": 4,
+      "kalla_fil": "assets/elcentralkollen.css:49"
+    },
+    {
+      "hex": "#f4f5fb rgb(244,245,251)",
+      "token": null,
+      "roll": "--bg-secondary: neutral pill-bg",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:50",
+      "notering": "utanför tokens (samma som Elkollens sidbakgrund)"
+    },
+    {
+      "hex": "#f7f8fc rgb(247,248,252)",
+      "token": null,
+      "roll": "--bg-subtle: info-ruta, option hover",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:51",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "#e3e5ed rgb(227,229,237)",
+      "token": null,
+      "roll": "--border-default: options, check, inputs, todo-stegprick, sticky-bar top, outline-CTA",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:73",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "#ebedf3 rgb(235,237,243)",
+      "token": null,
+      "roll": "--border-tertiary: kortkant, info-kant",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:74",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "linear-gradient(120deg, #55ff9a 0%, #5eb1bf 100%)",
+      "token": "--apneon-mint → utanför (#5eb1bf finns inte som token)",
+      "roll": "--ampy-cta-gradient: 'Kontakta oss' (1:1 med live .hero__btn / Picasso elements/buttons)",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:63"
+    },
+    {
+      "hex": "linear-gradient(141deg, #b6f2ff 0%, #5eb1bf 100%)",
+      "token": "--apcrystal-blue → utanför",
+      "roll": "--ampy-cta-gradient-blue: telefonknappen",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:64"
+    },
+    {
+      "hex": "#0d0d0d / #212121",
+      "token": null,
+      "roll": "gradient-CTA:ernas text/ikon (1:1 från live)",
+      "antal_css": 4,
+      "kalla_fil": "assets/elcentralkollen.css:212,227",
+      "notering": "utanför tokens (nära --apdarkest-black rgb(30,30,30))"
+    },
+    {
+      "hex": "rgba(241,241,241,.25) / .23",
+      "token": null,
+      "roll": "--ampy-cta-shadow (1:1 från live)",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:65,224",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgba(94,177,191,.28)",
+      "token": null,
+      "roll": "gradient-CTA hover-skugga",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:231",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(214,240,229) / rgb(6,71,55)",
+      "token": null,
+      "roll": "--pill-success bg/fg ('Låg risk')",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:78",
+      "notering": "utanför tokens; AA ≥6.8:1"
+    },
+    {
+      "hex": "rgb(250,233,197) / rgb(92,64,5)",
+      "token": null,
+      "roll": "--pill-warning bg/fg ('Förhöjd risk')",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:79",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(250,224,222) / rgb(124,32,32)",
+      "token": null,
+      "roll": "--pill-error bg/fg (ej sedd i de tre testade cellerna)",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:80",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(224,236,248) / rgb(17,82,135)",
+      "token": null,
+      "roll": "--pill-info bg/fg ('Med lastbalansering', 'Oklart')",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:81",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(15,110,86) / rgb(135,101,7) / rgb(122,22,35) / rgb(13,86,140)",
+      "token": null,
+      "roll": "--accent-success/warning/error/info: 4px accentstapel i dualstatus, finding-ikoner, akut-text, factnote-ikon",
+      "antal_css": 4,
+      "kalla_fil": "assets/elcentralkollen.css:85-88",
+      "notering": "utanför tokens; samma fyra som Elkollen"
+    },
+    {
+      "hex": "rgb(240,249,245) / rgb(252,247,234) / rgb(252,243,243) / rgb(242,247,251) / rgb(248,249,252)",
+      "token": null,
+      "roll": "--tint-success/warning/error/info/neutral: dualstatus-zonens bakgrund (viskarwash)",
+      "antal_css": 5,
+      "kalla_fil": "assets/elcentralkollen.css:92-96",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(252,237,238) + rgba(122,22,35,.38)",
+      "token": null,
+      "roll": "akut-rutan bg + kant",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:499",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgba(135,101,7,.05) / .22",
+      "token": null,
+      "roll": "factnote bg / kant (enda amber-accenten)",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:491",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgb(57,194,129) / rgb(245,175,25) / rgb(220,53,69)",
+      "token": "--apemerald-flow / null / null",
+      "roll": "--state-success/warning/error (deklarerade; success-token ej sedd i computed)",
+      "antal_css": 3,
+      "kalla_fil": "assets/elcentralkollen.css:70-72"
+    },
+    {
+      "hex": "rgb(15,110,86)",
+      "token": null,
+      "roll": "--text-success: finding--ok-ikon, share-nudge, lead-success-ikon",
+      "antal_css": 2,
+      "kalla_fil": "assets/elcentralkollen.css:58",
+      "notering": "utanför tokens"
+    },
+    {
+      "hex": "rgba(11,13,42,.04/.07/.10)",
+      "token": null,
+      "roll": "--shadow-sm/md/lg",
+      "antal_css": 3,
+      "kalla_fil": "assets/elcentralkollen.css:108-110",
+      "notering": "utanför tokens (egen navy rgb(11,13,42))"
+    },
+    {
+      "hex": "linear-gradient(180deg, #f5f9ff 0%, #f7fafd 34%, #ffffff 100%)",
+      "token": "--apsky-mist → --appure-white",
+      "roll": "blockläge: sektionsbandet (tonat mot /elservice/elcentral/)",
+      "antal_css": 1,
+      "kalla_fil": "assets/elcentralkollen.css:698"
+    }
+  ],
+  "typografi": [
+    {
+      "roll": "rail-heading (H1: Är din elcentral säker?)",
+      "font": "Plus Jakarta Sans",
+      "size": "clamp(3.2rem, 4vw, 4.4rem)",
+      "px_desktop": 44,
+      "px_mobil": 32,
+      "weight": 700,
+      "lh": 1.08,
+      "ls": "-0.02em",
+      "margin": "0 0 2rem (mobil: 0, centrerad)",
+      "kalla_fil": "assets/elcentralkollen.css:187-191",
+      "notering": "'1:1 med Elkollen hero__copy'"
+    },
+    {
+      "roll": "rail-lead",
+      "font": "Outfit",
+      "size": "1.8rem (≥1024: 2rem)",
+      "px_desktop": 20,
+      "px_mobil": 18,
+      "weight": 400,
+      "lh": "1.6 (mobil 1.55)",
+      "max_width": "46ch",
+      "color": "--text-secondary",
+      "kalla_fil": "assets/elcentralkollen.css:192-196,850"
+    },
+    {
+      "roll": "rail-bullet",
+      "font": "Outfit",
+      "size": "1.7rem",
+      "px_desktop": 17,
+      "px_mobil": "dold",
+      "weight": 500,
+      "lh": 1.45,
+      "color": "--text-secondary",
+      "ikon": "20px teal, margin-top .2rem",
+      "kalla_fil": "assets/elcentralkollen.css:199-201"
+    },
+    {
+      "roll": "rail-contact / rail-phone (gradient-CTA)",
+      "font": "Outfit",
+      "size": "--ampy-cta-fs = clamp(1.4rem, calc(0.21vw + 1.33rem), 1.6rem) (= --aptext-sm)",
+      "px_desktop": 16,
+      "px_mobil": 14.12,
+      "weight": 400,
+      "lh": 1,
+      "color": "#0d0d0d",
+      "kalla_fil": "assets/elcentralkollen.css:214-222"
+    },
+    {
+      "roll": "rail-stat (Elsäkerhetsverket registrerade 298…)",
+      "font": "Outfit",
+      "size": "var(--fs-14)",
+      "px_desktop": 14,
+      "px_mobil": 14,
+      "weight": 450,
+      "lh": 1.6,
+      "max_width": "46ch",
+      "kalla_fil": "assets/elcentralkollen.css:234"
+    },
+    {
+      "roll": "rail-ask (Hellre prata med en elektriker direkt?) mobil",
+      "font": "Outfit",
+      "size": "1.7rem",
+      "px_desktop": "dold",
+      "px_mobil": 17,
+      "weight": 500,
+      "lh": 1.4,
+      "kalla_fil": "assets/elcentralkollen.css:242"
+    },
+    {
+      "roll": "start-heading (Då sätter vi igång)",
+      "font": "Plus Jakarta Sans",
+      "size": "--fs-display = clamp(2rem, 1.7rem + 1vw, 2.8rem); ≥1024: clamp(2.8rem, 1.4rem + 2vw, 3.6rem)",
+      "px_desktop": 36,
+      "px_mobil": 20.9,
+      "weight": 700,
+      "lh": 1.15,
+      "ls": "-0.02em",
+      "max_width": "20ch",
+      "kalla_fil": "assets/elcentralkollen.css:286,862"
+    },
+    {
+      "roll": "start-time (Beräknad tid: 2 minuter)",
+      "font": "Outfit",
+      "size": "var(--fs-13)",
+      "px_desktop": 13,
+      "px_mobil": 13,
+      "weight": 400,
+      "kalla_fil": "assets/elcentralkollen.css:292"
+    },
+    {
+      "roll": "q-title (frågerubrik)",
+      "font": "Plus Jakarta Sans",
+      "size": "--fs-title = clamp(2rem, 1.8rem + .5vw, 2.4rem); ≥1024: clamp(2.6rem, 1.2rem + 1.8vw, 3.2rem)",
+      "px_desktop": 32,
+      "px_mobil": 20,
+      "weight": 600,
+      "lh": 1.25,
+      "ls": "-0.015em",
+      "max_width": "26ch",
+      "kalla_fil": "assets/elcentralkollen.css:364-369,853"
+    },
+    {
+      "roll": "q-subtitle",
+      "font": "Outfit",
+      "size": "--fs-13 (≥1024: --fs-15)",
+      "px_desktop": 15,
+      "px_mobil": 13,
+      "weight": 400,
+      "lh": 1.45,
+      "kalla_fil": "assets/elcentralkollen.css:370,854"
+    },
+    {
+      "roll": "option-title (svarsalternativ)",
+      "font": "Outfit",
+      "size": "--fs-15 (≥1024: --fs-18)",
+      "px_desktop": 18,
+      "px_mobil": 15,
+      "weight": 500,
+      "lh": 1.4,
+      "kalla_fil": "assets/elcentralkollen.css:384,857"
+    },
+    {
+      "roll": "option-clarifier",
+      "font": "Outfit",
+      "size": "--fs-13 (≥1024: --fs-15)",
+      "px_desktop": 15,
+      "px_mobil": 13,
+      "weight": 400,
+      "lh": 1.45,
+      "kalla_fil": "assets/elcentralkollen.css:385,858"
+    },
+    {
+      "roll": "info-text (i-ruta under frågan)",
+      "font": "Outfit",
+      "size": "--fs-13 (≥1024: --fs-15)",
+      "px_desktop": 15,
+      "px_mobil": 13,
+      "weight": 400,
+      "lh": 1.55,
+      "max_width": "62ch",
+      "kalla_fil": "assets/elcentralkollen.css:399,859"
+    },
+    {
+      "roll": "crumb-back (Tillbaka) / crumb-restart (Börja om)",
+      "font": "Outfit",
+      "size": "--fs-13 / --fs-12",
+      "px_desktop": "13 / 12",
+      "px_mobil": "13 / 12",
+      "weight": 400,
+      "color": "--text-secondary",
+      "kalla_fil": "assets/elcentralkollen.css:351-359"
+    },
+    {
+      "roll": "result-eyebrow (DITT BESKED)",
+      "font": "Plus Jakarta Sans",
+      "size": "var(--fs-12)",
+      "px_desktop": 12,
+      "px_mobil": 12,
+      "weight": 600,
+      "ls": "0.06em",
+      "transform": "uppercase",
+      "kalla_fil": "assets/elcentralkollen.css:404"
+    },
+    {
+      "roll": "statusrow-axis (Säkerhet / Redo)",
+      "font": "Outfit",
+      "size": "--fs-14 (≥1024: --fs-15)",
+      "px_desktop": 15,
+      "px_mobil": 14,
+      "weight": 500,
+      "lh": 1.3,
+      "min_width": "9rem",
+      "kalla_fil": "assets/elcentralkollen.css:427,873"
+    },
+    {
+      "roll": "pill (Låg risk / Förhöjd risk / Med lastbalansering / Oklart / Inget planerat)",
+      "font": "Plus Jakarta Sans",
+      "size": "clamp(1.4rem, 1.3rem + .4vw, 1.6rem) (≥1024: --fs-18)",
+      "px_desktop": 18,
+      "px_mobil": 14,
+      "weight": 600,
+      "lh": 1.2,
+      "ls": "-0.005em",
+      "kalla_fil": "assets/elcentralkollen.css:428-441,872"
+    },
+    {
+      "roll": "result-lede",
+      "font": "Outfit",
+      "size": "--fs-16 (≥1024: --fs-18)",
+      "px_desktop": 18,
+      "px_mobil": 16,
+      "weight": 400,
+      "lh": 1.55,
+      "max_width": "58ch / 54ch",
+      "kalla_fil": "assets/elcentralkollen.css:442,866"
+    },
+    {
+      "roll": "findings-head (Våra fynd)",
+      "font": "Plus Jakarta Sans",
+      "size": "var(--fs-14)",
+      "px_desktop": 14,
+      "px_mobil": 14,
+      "weight": 600,
+      "ls": "-0.01em",
+      "kalla_fil": "assets/elcentralkollen.css:449"
+    },
+    {
+      "roll": "finding-label / finding-detail p",
+      "font": "Outfit",
+      "size": "--fs-15 (≥1024: --fs-18)",
+      "px_desktop": 18,
+      "px_mobil": 15,
+      "weight": "500 / 400",
+      "lh": "1.5 / 1.6",
+      "kalla_fil": "assets/elcentralkollen.css:476,487,868"
+    },
+    {
+      "roll": "akut-label / akut-text",
+      "font": "PJS / Outfit",
+      "size": "--fs-13 / --fs-13 (≥1024: --fs-15)",
+      "px_desktop": "13 / 15",
+      "px_mobil": "13 / 13",
+      "weight": "700 / 400",
+      "color": "rgb(122,22,35) / --text-primary",
+      "kalla_fil": "assets/elcentralkollen.css:501-502,871"
+    },
+    {
+      "roll": "cta-primary (Starta testet / Få kostnadsfri rådgivning / Ring oss / Fortsätt)",
+      "font": "Outfit",
+      "size": "var(--fs-15)",
+      "px_desktop": 15,
+      "px_mobil": 15,
+      "weight": 600,
+      "lh": 1.3,
+      "min_height": 48,
+      "kalla_fil": "assets/elcentralkollen.css:555-570"
+    },
+    {
+      "roll": "cta-secondary",
+      "font": "ÄRVD = Arial (font-family saknas, ingen font:inherit)",
+      "size": "var(--fs-15)",
+      "px_desktop": 15,
+      "px_mobil": 15,
+      "weight": 500,
+      "kalla_fil": "assets/elcentralkollen.css:572-579",
+      "notering": "DEFEKT: renderas i systemets sans (Arial) — syns i besked-akut-skärmdumpen"
+    },
+    {
+      "roll": "readmore / readmore-link",
+      "font": "Outfit",
+      "size": "var(--fs-14)",
+      "px_desktop": 14,
+      "px_mobil": 14,
+      "weight": 400,
+      "color": "--text-secondary / rgb(0,122,105) understruken",
+      "kalla_fil": "assets/elcentralkollen.css:582-585"
+    },
+    {
+      "roll": "lead-title",
+      "font": "Plus Jakarta Sans",
+      "size": "var(--fs-20) (≤767: --fs-22? mätt 22 på mobil)",
+      "px_desktop": 20,
+      "px_mobil": 22,
+      "weight": 700,
+      "lh": 1.2,
+      "ls": "-0.01em",
+      "kalla_fil": "assets/elcentralkollen.css:511-512"
+    },
+    {
+      "roll": "lead-intro",
+      "font": "Outfit",
+      "size": "var(--fs-15)",
+      "px_desktop": 15,
+      "px_mobil": 15,
+      "weight": 400,
+      "lh": 1.55,
+      "max_width": "60ch / 52ch",
+      "kalla_fil": "assets/elcentralkollen.css:513"
+    },
+    {
+      "roll": "lead-label",
+      "font": "Plus Jakarta Sans",
+      "size": "var(--fs-13)",
+      "px_desktop": 13,
+      "px_mobil": 13,
+      "weight": 600,
+      "kalla_fil": "assets/elcentralkollen.css:516"
+    },
+    {
+      "roll": "lead-input",
+      "font": "Outfit",
+      "size": "var(--fs-16)",
+      "px_desktop": 16,
+      "px_mobil": 16,
+      "weight": 400,
+      "min_height": 52,
+      "kalla_fil": "assets/elcentralkollen.css:517"
+    },
+    {
+      "roll": "lead-error / lead-consent-note",
+      "font": "Outfit",
+      "size": "--fs-13 / --fs-12",
+      "px_desktop": "13 / 12",
+      "px_mobil": "13 / 12",
+      "weight": "500 / 400",
+      "color": "rgb(122,22,35) / --text-secondary",
+      "kalla_fil": "assets/elcentralkollen.css:522,530"
+    },
+    {
+      "roll": "blockhead-title (blockläge: Behöver din elcentral bytas?)",
+      "font": "Plus Jakarta Sans",
+      "size": "clamp(2.8rem, 1.6rem + 2.2vw, 4rem); ≥1024: clamp(2.4rem, calc(0.83vw + 2.13rem), 3.2rem) (= --aptext-xl)",
+      "px_desktop": 32,
+      "px_mobil": 28,
+      "weight": 700,
+      "lh": 1.12,
+      "ls": "-0.02em",
+      "kalla_fil": "assets/elcentralkollen.css:712-717,767"
+    },
+    {
+      "roll": "blockhead-lead",
+      "font": "Outfit",
+      "size": "--fs-18; ≥1024: clamp(1.8rem, calc(0.21vw + 1.73rem), 2rem) (= --aptext-mm)",
+      "px_desktop": 20,
+      "px_mobil": 18,
+      "weight": 400,
+      "lh": 1.6,
+      "max_width": "52rem / 60rem",
+      "kalla_fil": "assets/elcentralkollen.css:718-722,768-775"
+    },
+    {
+      "roll": "blockground (proveniensraden)",
+      "font": "Outfit",
+      "size": "var(--fs-13)",
+      "px_desktop": 13,
+      "px_mobil": 13,
+      "weight": 400,
+      "lh": 1.55,
+      "kalla_fil": "assets/elcentralkollen.css:725-734"
+    }
+  ],
+  "typskala_deklarerad": {
+    "fasta": "--fs-12 1.2 / --fs-13 1.3 / --fs-14 1.4 / --fs-15 1.5 / --fs-16 1.6 / --fs-18 1.8 / --fs-20 2.0 rem",
+    "fluida": "--fs-title clamp(2rem, 1.8rem + .5vw, 2.4rem); --fs-display clamp(2rem, 1.7rem + 1vw, 2.8rem); rail-heading clamp(3.2rem, 4vw, 4.4rem); desktopskalan (≥1024) skriver om q-title/start-heading/pill/lede en nivå upp",
+    "notering": "namngivna efter px (fs-13 = 13px) — 'token names that lie are a defect class' enligt Elkollen; --ampy-cta-fs och blocklägets titel/lead är 1:1 med --aptext-sm / --aptext-xl / --aptext-mm"
+  },
+  "spacing": [
+    {
+      "roll": "--space-1 … --space-13",
+      "varde": "0.4 / 0.6 / 0.8 / 1.0 / 1.2 / 1.4 / 1.6 / 1.8 / 2.0 / 2.2 / 2.4 / 2.8 / 3.2 rem",
+      "px_desktop": "4/6/8/10/12/14/16/18/20/22/24/28/32",
+      "px_mobil": "samma",
+      "token": null,
+      "kalla_fil": "assets/elcentralkollen.css:99-102",
+      "notering": "2px-steg, samma skala som Elkollen"
+    },
+    {
+      "roll": "--rhythm-section / --rhythm-group / --rhythm-label",
+      "varde": "24 (≥1024: 32) / 12 / 8",
+      "px_desktop": "32/12/8",
+      "px_mobil": "24/12/8",
+      "kalla_fil": "assets/elcentralkollen.css:104-106,864"
+    },
+    {
+      "roll": "shell padding",
+      "varde": "clamp(2.4rem, 4vw, 5.6rem) clamp(1.6rem, 4vw, 4rem) + safe-area",
+      "px_desktop": "56 / 40",
+      "px_mobil": "24 / 16",
+      "kalla_fil": "assets/elcentralkollen.css:160-167"
+    },
+    {
+      "roll": "shell grid",
+      "varde": "≥1024: minmax(36rem,44fr) minmax(46rem,56fr), gap 6.4rem; annars 1 kolumn gap 20 (mobil 16)",
+      "px_desktop": "499.8 / 636.2, gap 64",
+      "px_mobil": "1 kol, gap 16",
+      "kalla_fil": "assets/elcentralkollen.css:168-183,243-248"
+    },
+    {
+      "roll": "rail min-height",
+      "varde": "--ec-q-minh 56rem (rail-innehållet centreras i samma box på alla vyer)",
+      "px_desktop": 560,
+      "px_mobil": "display:contents",
+      "kalla_fil": "assets/elcentralkollen.css:39,178"
+    },
+    {
+      "roll": "kortpadding (--block-padding)",
+      "varde": "24 (≥1024: 32; ≤767: 20)",
+      "px_desktop": 32,
+      "px_mobil": 20,
+      "kalla_fil": "assets/elcentralkollen.css:118-119,338,848"
+    },
+    {
+      "roll": "kortets min-height (start + frågor)",
+      "varde": "--ec-q-minh 56rem (≤767: 60rem) — jämn höjd mellan steg",
+      "px_desktop": 560,
+      "px_mobil": 600,
+      "kalla_fil": "assets/elcentralkollen.css:39,338"
+    },
+    {
+      "roll": "crumb margin-bottom",
+      "varde": "24 (≤767: 20); start: 24 → 28 på desktop",
+      "px_desktop": 24,
+      "px_mobil": 20,
+      "kalla_fil": "assets/elcentralkollen.css:344,861"
+    },
+    {
+      "roll": "options gap",
+      "varde": "12 (≥1024: 14)",
+      "px_desktop": 14,
+      "px_mobil": 12,
+      "kalla_fil": "assets/elcentralkollen.css:372,855"
+    },
+    {
+      "roll": "option padding",
+      "varde": "14 16 (≥1024: 16 20)",
+      "px_desktop": "16/20",
+      "px_mobil": "14/16",
+      "kalla_fil": "assets/elcentralkollen.css:373-378,856"
+    },
+    {
+      "roll": "rail: heading→lead / lead→bullets / bullets→CTA / CTA→stat",
+      "varde": "20 / 28 / 28 / 16",
+      "px_desktop": "20/28/28/16",
+      "px_mobil": "0/10/…",
+      "kalla_fil": "assets/elcentralkollen.css:190,195,198,234"
+    },
+    {
+      "roll": "dualstatus padding / gap",
+      "varde": "18 18 18 16 (≤767: 14 14 14 12) / 14 (mobil 10); ≥1024 width fit-content min 42rem",
+      "px_desktop": "18/16, 14",
+      "px_mobil": "14/12, 10",
+      "kalla_fil": "assets/elcentralkollen.css:406-410,865"
+    },
+    {
+      "roll": "findings gap",
+      "varde": "14 (≥1024: 16)",
+      "px_desktop": 16,
+      "px_mobil": 14,
+      "kalla_fil": "assets/elcentralkollen.css:453,869"
+    },
+    {
+      "roll": "lead-grid",
+      "varde": "2 kol (≤767: 1), gap 20 14, margin-bottom 24",
+      "px_desktop": "278×2",
+      "px_mobil": "1 kol",
+      "kalla_fil": "assets/elcentralkollen.css:514,541"
+    },
+    {
+      "roll": "blockläge",
+      "varde": "band padding-block clamp(4.8rem, 6vw, 8rem); shell max 76rem centrerad, padding-inline clamp(1.6rem,4vw,2.4rem); blockhead margin-bottom clamp(2.8rem,3.2vw,4rem); ≥1280: grid minmax(0,1fr) 56rem gap 64 max 128rem",
+      "px_desktop": "80 / kort 560 kvadrat",
+      "px_mobil": "48",
+      "kalla_fil": "assets/elcentralkollen.css:687-710,781-800"
+    }
+  ],
+  "container": [
+    {
+      "roll": "shell max-width",
+      "varde": "128rem (1280px)",
+      "kalla_fil": "assets/elcentralkollen.css:161"
+    },
+    {
+      "roll": "blockläge shell",
+      "varde": "76rem (760px) centrerad; ≥1280 128rem tvåkolumn med kortet pinnat till 56rem kvadrat",
+      "kalla_fil": "assets/elcentralkollen.css:703-707,781-800"
+    },
+    {
+      "roll": "blockläge stage",
+      "varde": "max-width 63.6rem",
+      "kalla_fil": "assets/elcentralkollen.css:723"
+    },
+    {
+      "roll": "start-cta max-width",
+      "varde": "32rem; mobil/tablet CTA:er cap 44rem centrerade",
+      "kalla_fil": "assets/elcentralkollen.css:290,269"
+    },
+    {
+      "roll": "scroll-offset",
+      "varde": "--ec-scroll-offset 7.8rem (66px header + 12) / ≥993: 8.8rem",
+      "kalla_fil": "assets/elcentralkollen.css:303-313"
+    }
+  ],
+  "radier": [
+    {
+      "roll": "--radius-sm (crumb-knappar, check, tooltip/factnote/akut, share-knapp, fokus på länkar)",
+      "varde": "0.6rem = 6px",
+      "token": "--apradius-s (mobilvärdet)"
+    },
+    {
+      "roll": "--radius-md (options, dualstatus, info, CTA:er, lead-input, sekundär-CTA)",
+      "varde": "1.0rem = 10px",
+      "token": "--apradius-m (mobilvärdet 10px; desktop-token 12)"
+    },
+    {
+      "roll": "--radius-lg (kortet)",
+      "varde": "1.4rem = 14px",
+      "token": null
+    },
+    {
+      "roll": "--radius-full (pills, stegprickar, success-ikon)",
+      "varde": "999px",
+      "token": "--apradius-full"
+    },
+    {
+      "roll": "--ampy-cta-radius (gradient-CTA:erna)",
+      "varde": "1.6rem = 16px",
+      "token": "--radius-m 16px (live Bricks) / --apradius-l@mobil"
+    },
+    {
+      "roll": "hp/hero-illustration",
+      "varde": "11rem/12rem cirkel via SVG",
+      "token": null
+    }
+  ],
+  "skuggor": [
+    {
+      "roll": "--shadow-sm (option hover)",
+      "varde": "0 1px 2px rgba(11,13,42,.04)",
+      "token": null
+    },
+    {
+      "roll": "--shadow-md (kortet)",
+      "varde": "0 8px 28px rgba(11,13,42,.07)",
+      "token": null
+    },
+    {
+      "roll": "--shadow-lg (deklarerad, ej sedd)",
+      "varde": "0 14px 32px rgba(11,13,42,.1)",
+      "token": null
+    },
+    {
+      "roll": "--focus-ring (ALLA inputs + knappar)",
+      "varde": "0 0 0 3px rgba(0,122,105,.9) (höjd från .25 för WCAG 2.4.11)",
+      "token": null
+    },
+    {
+      "roll": "gradient-CTA",
+      "varde": "0 0 16px rgba(241,241,241,.25) / .23; hover 0 6px 20px rgba(94,177,191,.28) + translateY(-1px) + saturate(1.05)",
+      "token": null
+    },
+    {
+      "roll": "sticky-cta (mobil)",
+      "varde": "0 -8px 28px rgba(11,13,42,.10) + 1px --border-default top",
+      "token": null
+    },
+    {
+      "roll": "dualstatus",
+      "varde": "ingen kant/skugga — tint + 4px accentstapel ('not a card')",
+      "token": null
+    }
+  ],
+  "rorelse": [
+    {
+      "roll": "--dur-fast / --dur-base / --dur-reveal / --ease-out",
+      "varde": "120 / 220 / 300 ms / cubic-bezier(0.2,0.6,0.2,1)"
+    },
+    {
+      "roll": "stegbyte",
+      "varde": "@keyframes ec-in-fwd/back: opacity 0→1 + translateX(±10px)→0, 220ms, data-dir styr riktning"
+    },
+    {
+      "roll": "besked",
+      "varde": "dualstatus ec-rise (translateY(6px)) 300ms; findings ec-rise 220ms med --i·45ms stagger"
+    },
+    {
+      "roll": "stegprickar",
+      "varde": "background + width 220ms (aktiv 18→28px)"
+    },
+    {
+      "roll": "option hover",
+      "varde": "kant teal + bg subtle + translateY(-1px) + shadow-sm, 120ms; active scale .99 + tint"
+    },
+    {
+      "roll": "finding-chevron",
+      "varde": "rotate 180° 220ms"
+    },
+    {
+      "roll": "sticky-cta",
+      "varde": "translateY(110%)→0 260ms, opacity 200ms; ut 220/180ms"
+    },
+    {
+      "roll": "share-menu",
+      "varde": "@keyframes ec-pop"
+    },
+    {
+      "roll": "nav-scroll",
+      "varde": "scroll-margin-top = --ec-scroll-offset så nästa steg landar under den fixa headern"
+    },
+    {
+      "roll": "reduced-motion",
+      "varde": "animation none på block/dualstatus/finding/share-menu; transition none på steps/option/cta/stickycta"
+    }
+  ],
+  "breakpoints": [
+    "≥1024 (tvåpanel 44fr/56fr, desktop-skalan: kort padding 32, q-title 32, options 64/18px, pill 18, section-rytm 32, sticky-cta aldrig)",
+    "≥993 (scroll-offset 8.8rem)",
+    "≤1023 (rail display:contents; ordning H1 → lead → verktyg → 'Hellre prata…' → telefon → Kontakta → stat; CTA:er staplade 100 % med padding 22 24)",
+    "≤767 (kort padding 20, min-height 60rem, lead-grid 1 kol)",
+    "≤520 / ≤360 (finjustering)",
+    "blockläge: ≤1279 bullets dolda, ≥1280 tvåkolumn 1fr/56rem",
+    "hover:hover",
+    "prefers-reduced-motion",
+    "forced-colors"
+  ],
+  "komponenter": [
+    {
+      "namn": "shell (rail + stage)",
+      "anatomi": "grid 44fr/56fr gap 64 ≥1024 (rail 499.8 / stage 636.2 @1440 = 44/56 %), padding 56 40; rail top-aligned med min-height 560 och innehållet vertikalt centrerat; mobil: rail unwrap (display:contents) och delarna sorteras runt stage",
+      "states": [
+        "data-view start/question/result/lead"
+      ],
+      "html_ref": "elcentralkollen.js (byggs)",
+      "css_ref": "assets/elcentralkollen.css:160-183",
+      "matt": "1280×672 @1440; 390×1046 @390"
+    },
+    {
+      "namn": "rail (varumärkeskolumnen)",
+      "anatomi": "H1 PJS 700 44 | 32 (lh 1.08, ls −.02em) → lead Outfit 20 | 18 sekundär max 46ch → 3 trust-bullets (Outfit 500 17, 20px teal-ikon, gap 16; dolda på mobil) → två gradient-CTA:er (flex 1 1 0, padding 20 24 = 58px, radius 16, Outfit 400 16, ink #0d0d0d, label vänster / ikon 18 höger via space-between; Kontakta oss = 120° #55ff9a→#5eb1bf, telefon = 141° #b6f2ff→#5eb1bf; hover −1px + blå skugga + saturate) → stat-rad Outfit 450 14 max 46ch med osynlig länk. Mobil: centrerad H1/lead ovanför verktyget, 'Hellre prata med en elektriker direkt?' 17/500 + staplade CTA:er 60px (telefon först) + stat under",
+      "states": [
+        "default",
+        "CTA hover",
+        "CTA focus-visible outline 3px teal offset 3"
+      ],
+      "html_ref": "elcentralkollen.js",
+      "css_ref": "assets/elcentralkollen.css:185-280",
+      "matt": "CTA 239.9×58 @1440, 358×60 @390"
+    },
+    {
+      "namn": "block (kortet, alla steg)",
+      "anatomi": "bg vit, 1px #ebedf3, radius 14, padding 32 | 20, shadow-md, flex-kolumn; start + frågor min-height 560 | 600 (verdict/lead undantagna); ec-in-fwd/back vid stegbyte",
+      "states": [
+        "start",
+        "question",
+        "result",
+        "lead",
+        "data-dir fwd/back"
+      ],
+      "html_ref": "elcentralkollen.js:572-588",
+      "css_ref": "assets/elcentralkollen.css:322-338",
+      "matt": "636×560 start / 636×659 fråga / 636×937 besked @1440; 358×600 @390"
+    },
+    {
+      "namn": "start (slide 1)",
+      "anatomi": "centrerat: illustration 120 | 110px (SVG-cirkel med bock) → 'Då sätter vi igång' PJS 700 36 | 20.9 max 20ch → cta-primary--solid 'Starta testet' max 320 (48 hög, pil 16) → 'Beräknad tid: 2 minuter' Outfit 13 sekundär; desktop: centre-with-lift (padding-bottom 32)",
+      "states": [
+        "default",
+        "cta hover rgb(0,108,93)",
+        "focus-visible ring"
+      ],
+      "html_ref": "elcentralkollen.js:565-575",
+      "css_ref": "assets/elcentralkollen.css:282-293,860-863",
+      "matt": "CTA 320×48 @1440, 316×48 @390"
+    },
+    {
+      "namn": "crumb + steps (progress)",
+      "anatomi": "rad 44px: 7 stegprickar 18×4 radius full #e3e5ed, gap 6; done = color-mix(rgb(0,122,105) 70%, #fff) ≈ rgb(77,163,148); current = rgb(0,122,105) och 28px bred; höger 'Tillbaka' (pil 16 + Outfit 13 sekundär, 44 hög) ; verdict: 'Tillbaka' + 'Börja om' (12px) vänster med gap 16; numeral sr-only",
+      "states": [
+        "todo",
+        "is-done",
+        "is-current",
+        "hover rgb(0,122,105)"
+      ],
+      "html_ref": "elcentralkollen.js",
+      "css_ref": "assets/elcentralkollen.css:344-360",
+      "matt": "steps 172×4"
+    },
+    {
+      "namn": "question (q-title + options + info)",
+      "anatomi": "q-title PJS 600 32 | 20 max 26ch (+ ev. subtitle Outfit 15 | 13) → options-lista gap 14 | 12: option = knapp 100 %, min-height 64 | 56, padding 16 20 | 14 16, 1px #e3e5ed, radius 10, vit; title Outfit 500 18 | 15 (+ clarifier 15 | 13 sekundär); hover kant teal + bg #f7f8fc + lyft; vald kant teal + bg rgb(240,250,248); fokus ring 3px rgba(0,122,105,.9). Singelval avancerar automatiskt → info-ruta: bg #f7f8fc, 1px #ebedf3, radius 10, padding 12 14, 16px blå ikon rgb(13,86,140) + Outfit 15 | 13 sekundär max 62ch",
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "is-selected",
+        "focus-visible"
+      ],
+      "html_ref": "elcentralkollen.js:588-605",
+      "css_ref": "assets/elcentralkollen.css:364-399",
+      "matt": "option 570×64 @1440, 316×56 @390"
+    },
+    {
+      "namn": "option--multi (flerval, Q5/Q7)",
+      "anatomi": "som option men align flex-start, gap 14, med check-ruta 22×22 radius 6 1px #e3e5ed vänster (vald: teal bg + vit bock 15px) → multi-foot: cta-primary--outline 'Fortsätt' (transparent, 1px kant, 48 hög; aria-disabled men klickbar → visar sr-only-hint 'Välj minst ett alternativ')",
+      "states": [
+        "default",
+        "is-selected",
+        "aria-checked",
+        "Fortsätt aria-disabled/enabled"
+      ],
+      "html_ref": "elcentralkollen.js:607-625",
+      "css_ref": "assets/elcentralkollen.css:388-395,567-570",
+      "matt": "check 22×22; Fortsätt 570×48"
+    },
+    {
+      "namn": "dualstatus (2×2-besked = hjälten)",
+      "anatomi": "zon med viskar-tint per värsta nivå (success rgb(240,249,245) / warning rgb(252,247,234) / error rgb(252,243,243) / info rgb(242,247,251) / neutral rgb(248,249,252)), radius 10, padding 18 | 14, INGEN kant/skugga; 4px accentstapel vänster (rgb(15,110,86) / rgb(135,101,7) / rgb(122,22,35) / rgb(13,86,140) / tertiär) radius full; två staplade rader gap 14 | 10: axis 'Säkerhet'/'Redo' Outfit 500 15 | 14 min-width 90 + pill; ≥1024 width fit-content min 420. Eyebrow 'DITT BESKED' PJS 600 12 versal ovanför; ec-rise 300ms",
+      "states": [
+        "data-worst success/warning/error/info/neutral"
+      ],
+      "html_ref": "elcentralkollen.js",
+      "css_ref": "assets/elcentralkollen.css:404-427,865",
+      "matt": "420×123 @1440, 316×96 @390"
+    },
+    {
+      "namn": "pill (besked-pill)",
+      "anatomi": "inline-flex gap 8 | 6, padding 8 14 | 6 12, radius full, PJS 600 18 | 14 lh 1.2 ls −.005em, ikon 16 | 14 stroke 2.2; success bg rgb(214,240,229) fg rgb(6,71,55); warning rgb(250,233,197)/rgb(92,64,5); error rgb(250,224,222)/rgb(124,32,32); info rgb(224,236,248)/rgb(17,82,135); neutral bg #f4f5fb fg primär + 1px kant rgb(138,141,165)",
+      "states": [
+        "data-level success/warning/error/info/neutral"
+      ],
+      "html_ref": "elcentralkollen.js",
+      "css_ref": "assets/elcentralkollen.css:428-441,872",
+      "matt": "'Låg risk' 116.7×37.6 @1440, 94×29 @390; 'Inget planerat' 174×39.6"
+    },
+    {
+      "namn": "result-lede + findings",
+      "anatomi": "lede Outfit 18 | 16 primär max 54ch → 'Våra fynd' PJS 600 14 (+ ev. 'Visa alla' understruken 13) → lista gap 16 | 14: finding--foldable = rad-knapp min 44 (ikon 20 | 18 färgad per ok/warn/info + label Outfit 500 18 | 15 + chevron 18 tertiär) som fäller ut detail (indrag = ikon + 12, Outfit 18 | 15 sekundär max 62ch); ec-rise stagger 45ms",
+      "states": [
+        "finding--ok/warn/info",
+        "foldable is-open",
+        "hover chevron",
+        "focus-visible"
+      ],
+      "html_ref": "elcentralkollen.js",
+      "css_ref": "assets/elcentralkollen.css:442-488,866-869",
+      "matt": "finding 570×45"
+    },
+    {
+      "namn": "akut (röd ruta, först i DOM)",
+      "anatomi": "flex gap 10, bg rgb(252,237,238), 1px rgba(122,22,35,.38), radius 6, padding 14 16; ikon rgb(122,22,35) + label PJS 700 13 rgb(122,22,35) 'Kontrollera detta först' + text Outfit 15 | 13 primär max 62ch",
+      "states": [
+        "visas när bränd lukt/missfärgning"
+      ],
+      "html_ref": "elcentralkollen.js",
+      "css_ref": "assets/elcentralkollen.css:499-502",
+      "matt": "570×102 @1440"
+    },
+    {
+      "namn": "factnote (amber faktaruta, källa)",
+      "anatomi": "bg rgba(135,101,7,.05), 1px rgba(135,101,7,.22), radius 6, padding 10 12, ikon 16 rgb(135,101,7) + Outfit 13 | 15 sekundär + källänk rgb(0,122,105) understruken",
+      "states": [
+        "ej sedd i testade celler"
+      ],
+      "html_ref": "elcentralkollen.js",
+      "css_ref": "assets/elcentralkollen.css:491-497"
+    },
+    {
+      "namn": "cta-primary--solid / --outline / cta-secondary / cta-link / readmore",
+      "anatomi": "cta-primary: flex center gap 8, 100 %, padding 12, radius 10, Outfit 600 15, min-height 48, 1px kant; solid = bg+kant rgb(0,122,105) vit text (hover rgb(0,108,93)); outline = transparent; secondary = 1px #e3e5ed transparent (⚠ Arial), 500; tel-variant 'Ring oss' med telefonikon; cta-link = understruken textknapp 14/500 rgb(0,122,105) 44 hög; readmore 'Nyfiken på att läsa mer? Se mer om elcentraler' 14 centrerad",
+      "states": [
+        "default",
+        "hover",
+        "active scale .99",
+        "focus-visible ring",
+        "aria-disabled .5"
+      ],
+      "html_ref": "elcentralkollen.js:530-531,821-824",
+      "css_ref": "assets/elcentralkollen.css:555-614",
+      "matt": "570×48 @1440, 316×48 @390"
+    },
+    {
+      "namn": "share-row + share (dela)",
+      "anatomi": "högerställd rad: ev. share-nudge 12/500 grön vänster + 44×44 ikonknapp sekundär (⚠ Arial); meny share-menu med items + status-toast",
+      "states": [
+        "default",
+        "menu open",
+        "status data-visible"
+      ],
+      "html_ref": "elcentralkollen.js:973",
+      "css_ref": "assets/elcentralkollen.css:295-296,616-634",
+      "matt": "44×44"
+    },
+    {
+      "namn": "stickycta (mobil, ≤1023)",
+      "anatomi": "fixed bottom, bg vit, 1px top #e3e5ed, skugga uppåt, padding 14 16 (+safe-area), inner max 440; speglar kortets primära CTA; visas när beskedet läses, döljs när kontaktblocket under kortet kommer i vy; desktop display none !important",
+      "states": [
+        "hidden",
+        "is-visible"
+      ],
+      "html_ref": "elcentralkollen.js:668",
+      "css_ref": "assets/elcentralkollen.css:592-604",
+      "matt": "390×77 @390"
+    },
+    {
+      "namn": "lead (formulärsteget, ersätter beskedet i kortet)",
+      "anatomi": "'Tillbaka till beskedet' 13/500 → titel PJS 700 20 | 22 → intro Outfit 15 max 60ch → grid 2 kol (≤767: 1) gap 20 14: label PJS 600 13 med * + input 52 hög, padding 10 12, 1px #e3e5ed, radius 10, Outfit 16; fokus kant rgb(0,122,105) + ring 3px .9 → fel Outfit 500 13 rgb(122,22,35) ('Fyll i alla fält.') → submit cta-primary--solid 54 hög 100 % → samtyckesnot Outfit 12 centrerad sekundär med understruken länk (INGEN checkbox, ägarbeslut v2.17) → success: 56px cirkel tint-success + ikon 28 + h2 PJS 700 20 + p 15",
+      "states": [
+        "default",
+        "input focus",
+        "error",
+        "submit disabled",
+        "success"
+      ],
+      "html_ref": "elcentralkollen.js:840-870",
+      "css_ref": "assets/elcentralkollen.css:505-552",
+      "matt": "input 278×52 @1440, 316×52 @390; submit 570×54"
+    },
+    {
+      "namn": "blockläge [data-layout=block] (för /elservice/elcentral/)",
+      "anatomi": "sektionsband linear-gradient(#f5f9ff → #f7fafd 34% → #fff) padding-block 80 | 48; shell 760 centrerad; blockhead centrerad: titel PJS 700 32 | 28 (≥1024 = --aptext-xl) + lead Outfit 20 | 18 max 600 → samma kort (max 636) → blockground 13 sekundär; ≥1280: grid 1fr / 560px så kortet är en 560×560 kvadrat och copyn tar resten; rail-bullets dolda ≤1279",
+      "states": [
+        "som standalone"
+      ],
+      "html_ref": "preview/block.html",
+      "css_ref": "assets/elcentralkollen.css:687-800",
+      "matt": "kort 636×560 @1440 (mätt via block-desktop.png), 343×600 @390"
+    }
+  ],
+  "klassvokabular_ampy-ec": [
+    "ampy-ec",
+    "__shell",
+    "__rail",
+    "__rail-heading",
+    "__rail-lead",
+    "__rail-bullets",
+    "__rail-bullet",
+    "__rail-bullet-icon",
+    "__rail-bullet-link",
+    "__rail-actions",
+    "__rail-contact",
+    "__rail-contact-icon",
+    "__rail-phone",
+    "__rail-phone-icon",
+    "__rail-stat",
+    "__rail-stat-link",
+    "__rail-ask",
+    "__stage",
+    "__block",
+    "__start",
+    "__start-illu",
+    "__start-heading",
+    "__start-cta",
+    "__start-time",
+    "__crumb",
+    "__crumb--start",
+    "__crumb--result",
+    "__crumb-left",
+    "__crumb-back",
+    "__crumb-restart",
+    "__steps",
+    "__q-title",
+    "__q-subtitle",
+    "__options",
+    "__option",
+    "__option--multi",
+    "__option-body",
+    "__option-title",
+    "__option-clarifier",
+    "__check",
+    "__multi-foot",
+    "__multi-hint",
+    "__info",
+    "__info-icon",
+    "__info-text",
+    "__result",
+    "__result-eyebrow",
+    "__dualstatus",
+    "__dualstatus-accent",
+    "__dualstatus-rows",
+    "__statusrow",
+    "__statusrow-axis",
+    "__pill",
+    "__pill-icon",
+    "__result-lede",
+    "__findings-wrap",
+    "__findings-headrow",
+    "__findings-head",
+    "__findings-all",
+    "__findings",
+    "__finding",
+    "__finding--ok",
+    "__finding--warn",
+    "__finding--info",
+    "__finding--foldable",
+    "__finding-head",
+    "__finding-label",
+    "__finding-chevron",
+    "__finding-detail",
+    "__finding-icon",
+    "__finding-text",
+    "__factnote",
+    "__factnote-icon",
+    "__factnote-text",
+    "__factnote-src",
+    "__factnote-src-link",
+    "__akut",
+    "__akut-icon",
+    "__akut-label",
+    "__akut-text",
+    "__cta-primary",
+    "__cta-primary--solid",
+    "__cta-primary--outline",
+    "__cta-secondary",
+    "__cta-lead",
+    "__cta-link",
+    "__readmore",
+    "__readmore-link",
+    "__sticky-portal",
+    "__stickycta",
+    "__stickycta-inner",
+    "__share-row",
+    "__share-nudge",
+    "__share-anchor",
+    "__share",
+    "__share-menu",
+    "__share-item",
+    "__share-item-icon",
+    "__share-status",
+    "__pdf",
+    "__pdf-toggle",
+    "__pdf-form",
+    "__pdf-flabel",
+    "__pdf-input",
+    "__pdf-consent",
+    "__pdf-status",
+    "__hp",
+    "__lead",
+    "__lead-back",
+    "__lead-title",
+    "__lead-intro",
+    "__lead-grid",
+    "__lead-field",
+    "__lead-label",
+    "__lead-input",
+    "__lead-hp",
+    "__lead-error",
+    "__lead-submit",
+    "__lead-req",
+    "__lead-consent-note",
+    "__lead-success",
+    "__lead-success-icon",
+    "__blockhead",
+    "__blockhead-title",
+    "__blockhead-lead",
+    "__blockground",
+    "__noscript",
+    "__sr",
+    ".is-selected",
+    ".is-done",
+    ".is-current",
+    ".is-open",
+    ".is-visible",
+    ".is-shown"
+  ],
+  "signaturenhet": "Dualstatus-beskedet: två staplade rader 'Säkerhet [pill]' / 'Redo [pill]' i en viskartonad zon med 4px accentstapel (ingen kant, inget kort) — beskedet på två axlar ÄR hjälten, inte en siffra. Runt det: rail+stage-familjen (varumärkeskolumn med gradient-CTA:er 1:1 från live + vitt kort med fast höjd så stegbyten inte hoppar).",
+  "hantverk_att_bevara": [
+    "Rail/stage 44/56 med rail-innehållet centrerat i en 560px-box på alla vyer (rail hoppar aldrig)",
+    "Kortet håller samma min-height på start + frågor; stegbyten glider ±10px i rätt riktning",
+    "Mobil-ordningen H1 → lead → verktyg → 'Hellre prata…' → telefon → Kontakta → stat, via display:contents + order (inga DOM-kopior)",
+    "Pill-paletten: mörk-på-ljus med ≥6.8:1 och separata accent- (stapel/ikon) och tint- (zon) nivåer per verdict",
+    "En enda fokusring (--focus-ring 3px rgba(0,122,105,.9)) för alla inputs + knappar, mätt mot WCAG 2.4.11",
+    "Foldable findings: hela raden är träffytan (≥44), bara förklaringen fälls, inget lämnar DOM",
+    "Sticky-CTA på mobil som auto-döljs när kontaktblocket under kortet syns",
+    "Self-hostade fonter med unicode-range; forced-colors- och reduced-motion-block sist i filen (dokumenterad kaskadfälla)",
+    "Blockläget: samma kort, egen rubrik, band tonat exakt mot värdsidans rgb(245,249,255), kortet pinnat till en kvadrat ≥1280"
+  ],
+  "defekter": [
+    "cta-secondary och share-knappen saknar font-family → renderas i Arial (syns tydligt i besked-akut-skärmdumpen: 'Få kostnadsfri rådgivning' i annan font än 'Ring oss')",
+    "Två familjer (PJS + Outfit) mot Elkollen v7 som tog bort PJS — de två 'diagnostik'-verktygen har olika rubriktypsnitt",
+    "Två tealer: rgb(0,169,145) som accent och rgb(0,122,105) som knapp/länk — samma mörkning som EV men koden kallar den 'strong'; live-CTA:erna i rail är dessutom gradienter (#55ff9a→#5eb1bf) så kortet har tre olika 'primära' knappstilar (gradient-pill 58px / solid mörk teal 48px / outline)",
+    "Kortradius 14px matchar ingen token; radius 10 matchar --apradius-m bara på mobil",
+    "'Tillbaka' och 'Börja om' i verdict-crumb: olika storlek (13/12) och baseline-glapp — läses som 'TillbakaBörja om' i skärmdumpen",
+    "Egen navy rgb(11,13,42) i skuggorna, en fjärde midnatt i biblioteket",
+    "Gradient-CTA-höjden 58px (padding 20 24) skiljer sig från Picassos kanoniska ampy-btn 37.8px (padding --apspace-2xs) — 'samma' knapp finns i två höjder",
+    "Typskalans namn är px-värden (--fs-13) i stället för roller"
+  ],
+  "regler_som_ligger_i_koden": [
+    "color-scheme: light; text-size-adjust 100 %; overflow-x clip på rooten (Bricks-embed-skydd)",
+    "Inga Google Fonts (GDPR); fonter self-hostade med unicode-range",
+    "Tokens på .ampy-ec, aldrig :root; 1rem = 10px från html",
+    "En fokusring ≥3:1 mot vit på ALLT interaktivt; forced-colors-block sist",
+    "≥44px på alla tappbara mål (crumb, findings-rad, share, sticky, länkar med padding)",
+    "Kortet behåller sin höjd mellan steg (--ec-q-minh) → lugn scroll; scroll-margin-top mot fast header (66/76px)",
+    "Mobil: kontaktblocket (telefon + Kontakta) syns på VARJE vy — anti-lock-in",
+    "Ingen chevron på options — hela raden är affordansen; progress = bar only, numeral sr-only",
+    "Samtycke = knapptryck med not under CTA (ingen checkbox); honeypot; alla fält obligatoriska",
+    "Blockläge via [data-layout=block]: ingen egen rubrik i Bricks, blocket bär sin H2",
+    "Copy/data i JSON (data/elcentralkollen-data.json), aldrig i CSS/JS"
+  ],
+  "skillnad_mot_andra_block": "Syskon till Elkollen (samma rail/stage-hero, samma 2px-spacing, samma pill-/accent-/tint-logik, samma gradient-CTA-recept) men behåller Plus Jakarta Sans för rubriker, har dualstatus (2×2) i stället för trafikljus-board, tint-zon utan kant i stället för Elkollens board med kant + 6px sidostapel, 14px kortradius (Elkollen 14 också), fokusring .9 (Elkollen .25), och ett blockläge. Mot kalkylatorkitet: ljust-only (ingen midnattsyta), inga sliders, verdikt i stället för siffra."
+}

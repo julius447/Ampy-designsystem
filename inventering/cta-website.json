@@ -1,0 +1,335 @@
+{
+ "kalla": "cta-website",
+ "status": "levererat som bibliotek (v1.0.0): 3 CTA (ring / rådgivning / offert) + --block-modifier, delivery = ampy-cta-buttons.css (self-host Outfit 400/500) + PHP-shortcodes [ampy_cta_ring]/[ampy_cta_radgivning] + 2 Bricks-JSON + katalog-JSON",
+ "auktoritet": 1,
+ "ingang": "kallor/CTA-website/index.html (galleri, inlinar samma CSS) · ring-cta/ring-cta.css · radgivning-cta/radgivning-cta.css · offert-cta/offert-cta.css · delivery/ampy-cta-catalog.json",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/cta-website-desktop.png",
+  "inventering/skarmdumpar/cta-website-mobile.png"
+ ],
+ "rem_bas": "html 16px (ingen 62.5%) — biblioteket är medvetet px-baserat/portabelt",
+ "omfattning": "INTE ett fullt knappsystem: inga sekundär/tertiär-varianter, inga storlekar, ingen disabled/loading, ingen ikon-vänster-variant utöver ring-chippen, inga mörka/ljusa ytvarianter. Tre CTA:er med två gradienter och en --block-modifier. offert-cta och radgivning-cta är byte-identiska utom klassnamn/label/href.",
+ "farger": [
+  {
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "roll": "grön gradientstart (rådgivning/offert) 120deg",
+   "antal": 2,
+   "kalla_fil": "offert-cta.css:16; radgivning-cta.css:16"
+  },
+  {
+   "hex": "#b6f2ff",
+   "token": "--apcrystal-blue",
+   "roll": "blå gradientstart (ring)",
+   "antal": 1,
+   "kalla_fil": "ring-cta.css:16"
+  },
+  {
+   "hex": "#5eb1bf",
+   "token": null,
+   "roll": "gradientslut för ALLA tre (\"stål\"); glow rgba(94,177,191,.55/.65) på ring",
+   "antal": 3,
+   "kalla_fil": "*.css:16",
+   "utanfor_tokens": true,
+   "not": "= live Bricks --color-7 / site-css --ap-blue"
+  },
+  {
+   "hex": "hsl(237 35% 24%) = #282a53",
+   "token": null,
+   "roll": "knapptext 'mjuk navy' (uppmätt rgb(40,42,83)) + chip-ikon",
+   "antal": 3,
+   "kalla_fil": "*.css:14",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "roll": "focus-visible outline 3px; skuggfärg rgba(9,11,50,.06/.07/.14)",
+   "antal": 3,
+   "kalla_fil": "*.css:33"
+  },
+  {
+   "hex": "rgba(94,199,160,.45/.55) ≈ #5ec7a0",
+   "token": null,
+   "roll": "grön glow-skugga (rådgivning/offert)",
+   "antal": 2,
+   "kalla_fil": "offert-cta.css:20,30",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "rgba(255,255,255,.45/.5/.55/.65/.92)",
+   "token": "--appure-white (alfa)",
+   "roll": "inset-highlight, chip-bg .92, puls-ring .65",
+   "antal": 8,
+   "kalla_fil": "*.css"
+  },
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "roll": "galleri-bakgrund (demo)",
+   "antal": 1,
+   "kalla_fil": "index.html body"
+  },
+  {
+   "hex": "hsl(237 69% 12%) = #090c34",
+   "token": null,
+   "roll": "galleri-rubriker (demo) = Bricks --color-3",
+   "antal": 2,
+   "kalla_fil": "index.html h1/h2",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#363636 / #8a8fa3",
+   "token": null,
+   "roll": "galleri body-text / sub (demo)",
+   "antal": "1/4",
+   "kalla_fil": "index.html",
+   "utanfor_tokens": true
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "knapptext (alla tre)",
+   "font": "Outfit",
+   "size": "16px",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 500,
+   "lh": 1,
+   "ls": "normal",
+   "color": "hsl(237 35% 24%)",
+   "kalla_fil": "*.css:13",
+   "not": "ingen mobil-skalning; Hero-1 krymper samma knapp till 15.5/15px själv"
+  },
+  {
+   "roll": "galleri h1 (demo)",
+   "font": "Outfit",
+   "size": "28px",
+   "px_desktop": 28,
+   "px_mobil": 28,
+   "weight": 600,
+   "lh": "normal",
+   "color": "hsl(237 69% 12%)",
+   "kalla_fil": "index.html"
+  },
+  {
+   "roll": "galleri body (demo)",
+   "font": "Outfit",
+   "size": "16px",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 300,
+   "color": "#363636",
+   "kalla_fil": "index.html body"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "höjd",
+   "varde": "min-height 58px (uppmätt 58 på alla)",
+   "px_desktop": 58,
+   "px_mobil": 58,
+   "token": null,
+   "kalla_fil": "*.css:10"
+  },
+  {
+   "roll": "padding rådgivning/offert",
+   "varde": "11px 24px; --block 11px 22px",
+   "px_desktop": "11 24",
+   "token": null,
+   "kalla_fil": "offert-cta.css:10,41",
+   "not": "≠ --apbtn-space (14px 19.8px) och ≠ live Bricks-knapp (16/24)"
+  },
+  {
+   "roll": "padding ring",
+   "varde": "11px 30px 11px 12px (chip vänster); --block 11px 12px 11px 22px (chip höger)",
+   "px_desktop": "11 30 11 12",
+   "token": null,
+   "kalla_fil": "ring-cta.css:10,58"
+  },
+  {
+   "roll": "gap text↔ikon",
+   "varde": "16px (pil) / 14px (chip)",
+   "token": null,
+   "kalla_fil": "*.css:9"
+  },
+  {
+   "roll": "chip",
+   "varde": "36×36, ikon 17×17 optiskt flyttad translate(-1px,1px)",
+   "token": null,
+   "kalla_fil": "ring-cta.css:38-43"
+  },
+  {
+   "roll": "pil",
+   "varde": "16×16 svg, stroke 1.5",
+   "token": null,
+   "kalla_fil": "offert-cta.html"
+  },
+  {
+   "roll": "uppmätta bredder @1440",
+   "varde": "ring 227.6 · rådgivning 242.3 · offert 206.4 · --block 300 (slot-bredd)",
+   "token": null,
+   "kalla_fil": "a1-cta-website.json"
+  }
+ ],
+ "container": [
+  {
+   "roll": "galleri",
+   "varde": "max-width 1000px, kort 20px radie, slots 1fr/350px",
+   "kalla_fil": "index.html (demo)"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "knapp",
+   "varde": "16px (alla)",
+   "token": null,
+   "kalla_fil": "*.css:11",
+   "not": "= legacy --radius/--radius-m 16; ≠ --apradius-m 12 / -l 20"
+  },
+  {
+   "roll": "chip / puls-ring",
+   "varde": "50%",
+   "token": null,
+   "kalla_fil": "ring-cta.css:38,45"
+  },
+  {
+   "roll": "galleri-kort (demo)",
+   "varde": "20px; slot 14px",
+   "token": null,
+   "kalla_fil": "index.html"
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "rådgivning/offert vila",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45)",
+   "token": null,
+   "kalla_fil": "offert-cta.css:17-20"
+  },
+  {
+   "roll": "rådgivning/offert hover",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.5), 0 3px 6px rgba(9,11,50,.07), 0 16px 34px -8px rgba(94,199,160,.55)",
+   "token": null,
+   "kalla_fil": "offert-cta.css:27-30"
+  },
+  {
+   "roll": "ring vila",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.55), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,177,191,.55)",
+   "token": null,
+   "kalla_fil": "ring-cta.css:17-20"
+  },
+  {
+   "roll": "ring hover",
+   "varde": "inset .55, 0 3px 6px rgba(9,11,50,.07), 0 16px 34px -8px rgba(94,177,191,.65)",
+   "token": null,
+   "kalla_fil": "ring-cta.css:27-30"
+  },
+  {
+   "roll": "chip",
+   "varde": "0 1px 3px rgba(9,11,50,.14)",
+   "token": null,
+   "kalla_fil": "ring-cta.css:41"
+  },
+  {
+   "roll": "Hero-1:s kopia av samma knapp",
+   "varde": "0 2px 4px rgba(9,11,50,.10), 0 14px 32px -8px rgba(9,11,50,.40) — AVVIKER (navy-skugga i st.f. grön glow, starkare)",
+   "token": null,
+   "kalla_fil": "jämför hero-1.json"
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "hover",
+   "varde": "transform .16s ease, box-shadow .16s ease, filter .16s ease → translateY(-1.5px) + saturate(1.06|1.08) brightness(1.02)",
+   "kalla_fil": "*.css:21-26"
+  },
+  {
+   "roll": "pil",
+   "varde": "scale(1.18) .16s vid hover (glider aldrig)",
+   "kalla_fil": "offert-cta.css:36-37"
+  },
+  {
+   "roll": "puls-ring (ring)",
+   "varde": "ampyRing 2.8s cubic-bezier(.4,0,.4,1) infinite: box-shadow 0 0 0 0 → 0 0 0 9px rgba(255,255,255,.65→0) vid 55%",
+   "kalla_fil": "ring-cta.css:44-53"
+  },
+  {
+   "roll": "active",
+   "varde": "translateY(0) (ring: saturate(1.05))",
+   "kalla_fil": "*.css:32"
+  },
+  {
+   "roll": "reduced-motion",
+   "varde": "transition/transform none, puls av",
+   "kalla_fil": "*.css:45-48,62-65"
+  }
+ ],
+ "breakpoints": [
+  "820px (endast galleri-layout)"
+ ],
+ "komponenter": [
+  {
+   "namn": "btn-ring (primär ring-CTA)",
+   "anatomi": "inline-flex gap 14, min-h 58, padding 11/30/11/12, radie 16, bg 120deg #b6f2ff→#5eb1bf, text 16px 500 hsl(237 35% 24%), vit chip 36 (rgba .92) med lur-svg 17 + puls-ring ::after; --block: 100 %, chip till höger, padding 11/12/11/22",
+   "states": [
+    "default",
+    "hover (lyft −1.5, saturate 1.08)",
+    "active",
+    "focus-visible 3px #090b32 offset 3",
+    "reduced-motion"
+   ],
+   "html_ref": "ring-cta/ring-cta.html",
+   "css_ref": "ring-cta/ring-cta.css:8-65",
+   "skarmdump_crop": "cta-website-desktop.png rad 1"
+  },
+  {
+   "namn": "btn-radgivning (sekundär enligt README, gradient grön)",
+   "anatomi": "inline-flex gap 16, min-h 58, padding 11/24, radie 16, bg 120deg #55ff9a→#5eb1bf, text 16px 500, pil 16 höger; --block: 100 %, space-between, padding 11/22",
+   "states": [
+    "default",
+    "hover (lyft −1.5, saturate 1.06, pil 1.18)",
+    "active",
+    "focus-visible",
+    "reduced-motion"
+   ],
+   "html_ref": "radgivning-cta/radgivning-cta.html",
+   "css_ref": "radgivning-cta/radgivning-cta.css"
+  },
+  {
+   "namn": "btn-offert (primär offert)",
+   "anatomi": "identisk med btn-radgivning (diff = klassnamn, label 'Kostnadsfri offert', href /offert/)",
+   "states": [
+    "samma"
+   ],
+   "html_ref": "offert-cta/offert-cta.html",
+   "css_ref": "offert-cta/offert-cta.css"
+  },
+  {
+   "namn": "--block-modifier",
+   "anatomi": "width 100 %, justify space-between, text vänster / ikon höger, white-space normal",
+   "states": [],
+   "css_ref": "*.css --block"
+  }
+ ],
+ "signaturenhet": "Gradient-pillret med inset-highlight och färgad glow: samma skelett (58 px, radie 16, Outfit 500 16 px, mjuk navy-text) i två gradienter — blå (ring, med pulserande vit chip) och grön (offert/rådgivning, med pil som växer).",
+ "defekter": [
+  "Texten 'Primär/Sekundär' i README motsäger index.html: rådgivning kallas sekundär men har exakt samma design som primär offert — ingen visuell hierarki finns.",
+  "Biblioteket saknar sekundär-/tertiär-knapp, storlekar, disabled, ikon-vänster utan chip — headerns solid-teal-CTA och live Bricks pastellknappar (ROT/GT) finns inte här; sajten har därmed ≥4 knappformat utanför 'biblioteket'.",
+  "Hero-1 bär en egen kopia av btn-radgivning med annan skugga (navy .40 i st.f. grön glow .45) och mobilskalning (15.5/15px) som inte finns i biblioteket — 'kanoniska' knappen finns i två versioner.",
+  "Inga tokens: gradienterna, textfärgen hsl(237 35% 24%), #5eb1bf, glow-färgerna och radie 16 är hårdkodade; #b6f2ff/#55ff9a råkar = --apcrystal-blue/--apneon-mint men refereras inte.",
+  "Radie 16 ≠ ap-radieskalan (12/20); padding 11/24 ≠ --apbtn-space (14/19.8) ≠ live Bricks-knapp (16/24).",
+  "Telefonnumret 010-265 79 79 är hårdkodat som default-label i katalog + PHP (fakta-källa: ampy-foretagsdata).",
+  "Galleriet laddar Outfit från Google Fonts; leveransen self-hostar bara 400/500."
+ ],
+ "regler_som_ligger_i_koden": [
+  "portabel px-bas, inget 62.5%-beroende",
+  "gemensamt skelett: 58 px, radie 16, Outfit 500 16 px, navy-text, 3-lagers skugga",
+  "rollfärg: blå = ring, grön = offert/rådgivning",
+  "hover = lyft −1.5 px + mättnad, aldrig färgbyte; ikonen reagerar (puls/skala)",
+  "--block = fullbredd med ikon höger i staplad kontext",
+  "reduced-motion stänger allt",
+  "focus-visible 3px midnight outline offset 3"
+ ],
+ "matdata": "inventering/_probes/out/a1-cta-website.json"
+}

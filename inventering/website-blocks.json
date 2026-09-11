@@ -1,0 +1,660 @@
+{
+ "kalla": "website-blocks",
+ "status": "header v5 ägargodkänd (r3-feedback inarbetad), leverans = 3-fil FluentSnippets (styles.css scopad .ampy-hdr-root i px, engine.js, backend.php) + 3 Bricks-JSON; Hero-1 Documentation-mappen = kopia av Hero-1/delivery",
+ "auktoritet": 1,
+ "ingang": "kallor/Website-blocks/Header/index.html (prototyp med demo-scaffolding) · kallor/Website-blocks/Header/delivery/preview/index.html (paritetsförhandsvisning på fluentsnippets/styles.css)",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/website-blocks-desktop.png",
+  "inventering/skarmdumpar/website-blocks-mobile.png",
+  "inventering/skarmdumpar/website-blocks-desktop-mega-tjanster.png",
+  "inventering/skarmdumpar/website-blocks-desktop-mega-produkter.png",
+  "inventering/skarmdumpar/website-blocks-desktop-mega-losningar.png",
+  "inventering/skarmdumpar/website-blocks-mobile-drawer.png",
+  "inventering/skarmdumpar/website-blocks-mobile-drawer-open.png",
+  "inventering/skarmdumpar/website-blocks-delivery-desktop.png",
+  "inventering/skarmdumpar/website-blocks-delivery-mobile.png"
+ ],
+ "identitet": "Header-CSS:en i Website-blocks/Header/index.html är tecken-identisk med kallor/Hero-1/assets/header.css (enda skillnaden: demo-scaffolding-CSS tillagd). delivery/fluentsnippets/styles.css = samma värden ×10 i px, scopat .ampy-hdr-root, 6 self-host @font-face Outfit 300–800, ingen html{62.5%}.",
+ "rem_bas": "prototyp: html{font-size:62.5%} (1rem=10px); leverans: px",
+ "farger": [
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "roll": "--ap-offwhite: header-bar, mega-menyer, sidbakgrund",
+   "antal": 3,
+   "kalla_fil": "index.html :root --ap-offwhite"
+  },
+  {
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "roll": "--ap-teal: CTA bg, nav-tint rgba(0,169,145,.09)/hover .06, underline, go-pil, drawer-CTA, aktiv-färg",
+   "antal": "1 + 11 var + 6 rgba",
+   "kalla_fil": "index.html :root --ap-teal"
+  },
+  {
+   "hex": "#008d79",
+   "token": null,
+   "roll": "--ap-teal-hover (CTA hover/active)",
+   "antal": 1,
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "roll": "--ap-mint: pulse-dot på CTA",
+   "antal": 1,
+   "kalla_fil": "index.html :root"
+  },
+  {
+   "hex": "#39c281",
+   "token": "--apemerald-flow",
+   "roll": "--ap-green (definierad, 0 användningar)",
+   "antal": 0,
+   "kalla_fil": "index.html :root"
+  },
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "roll": "--ap-navy: burger-streck, focus-outline, dim rgba(9,11,50,.20), lösnings-kortens gradient rgba(9,11,50,.04→.84)",
+   "antal": "1 + 2 var + 5 rgba",
+   "kalla_fil": "index.html :root"
+  },
+  {
+   "hex": "#0f123c",
+   "token": null,
+   "roll": "--ink: text (nav, titlar, body); rgba(15,18,60,α) för skuggor/linjer (.06/.10/.14/.20/.25/.35)",
+   "antal": "1 + 4 var + 8 rgba",
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#565e82",
+   "token": null,
+   "roll": "--ink-muted: meny-länkar (uppmätt rgb(86,94,130))",
+   "antal": "1 + 4 var",
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#6a7190",
+   "token": null,
+   "roll": "--ink-faint: undertexter, eyebrow GUIDER & VERKTYG (uppmätt rgb(106,113,144))",
+   "antal": "1 + 3 var",
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#dbe4f0",
+   "token": null,
+   "roll": "--hairline: bar/mega border-bottom",
+   "antal": "1 + 3 var",
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "roll": "--ap-white: drawer bg, produkt-tile bg, CTA-text, kort-text",
+   "antal": 6,
+   "kalla_fil": "index.html"
+  },
+  {
+   "hex": "#14151a",
+   "token": null,
+   "roll": "drawer text (Evify-klon) uppmätt rgb(20,21,26)",
+   "antal": 5,
+   "kalla_fil": "index.html .acc__head/.m-item",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#d5d5dc",
+   "token": null,
+   "roll": "drawer hårlinjer",
+   "antal": 3,
+   "kalla_fil": "index.html",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#73757d",
+   "token": null,
+   "roll": "drawer eyebrow MENY (uppmätt rgb(115,117,125))",
+   "antal": 2,
+   "kalla_fil": "index.html",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#e7ecf4 / #3c4260 / #9a9aa0",
+   "token": null,
+   "roll": "burger-X-platta / X-ikon / produkt-pil",
+   "antal": "1/1/1",
+   "kalla_fil": "index.html",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "rgba(0,0,0,.2)",
+   "token": null,
+   "roll": "drawer sub-hårlinjer",
+   "antal": 2,
+   "kalla_fil": "index.html",
+   "utanfor_tokens": true
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "body",
+   "font": "Outfit",
+   "size": "1.6rem",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 300,
+   "lh": 1.5,
+   "color": "#0f123c",
+   "kalla_fil": "index.html body{}"
+  },
+  {
+   "roll": "nav-länk (.nav__link)",
+   "font": "Outfit",
+   "size": "1.8rem",
+   "px_desktop": 18.0,
+   "px_mobil": null,
+   "weight": 500,
+   "lh": "normal",
+   "ls": "normal",
+   "color": "#0f123c",
+   "kalla_fil": ".nav__link",
+   "not": "= 18px; ≠ live --apnav-link-size (14px)"
+  },
+  {
+   "roll": "header CTA (.cta)",
+   "font": "Outfit",
+   "size": "1.6rem / ≤992 1.5rem / ≤400 1.35rem / ≤374 1.3rem / ≤339 1.2rem",
+   "px_desktop": 16,
+   "px_mobil": 13.5,
+   "weight": 600,
+   "lh": 1.5,
+   "color": "#fff",
+   "kalla_fil": ".cta"
+  },
+  {
+   "roll": "mega kolumntitel (.mcol__title)",
+   "font": "Outfit",
+   "size": "1.8rem",
+   "px_desktop": 18.0,
+   "px_mobil": null,
+   "weight": 600,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(15, 18, 60)",
+   "kalla_fil": ".mcol__title"
+  },
+  {
+   "roll": "mega länk (.mitem)",
+   "font": "Outfit",
+   "size": "1.55rem",
+   "px_desktop": 15.5,
+   "px_mobil": null,
+   "weight": 400,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(86, 94, 130)",
+   "kalla_fil": ".mitem",
+   "not_": "undertext span 1.35rem --ink-faint"
+  },
+  {
+   "roll": "produkt-tile namn (.ptile__t strong)",
+   "font": "Outfit",
+   "size": "2.1rem",
+   "px_desktop": 21.0,
+   "px_mobil": null,
+   "weight": 600,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(15, 18, 60)",
+   "kalla_fil": ".ptile__t strong",
+   "not_": "em 1.5rem --ink-muted"
+  },
+  {
+   "roll": "eyebrow GUIDER & VERKTYG (.gzone__label)",
+   "font": "Outfit",
+   "size": "1.25rem",
+   "px_desktop": 12.5,
+   "px_mobil": null,
+   "weight": 600,
+   "lh": 1.5,
+   "ls": "1.75px",
+   "color": "rgb(106, 113, 144)",
+   "kalla_fil": ".gzone__label",
+   "not_": "uppercase, ls .14em (= 1.75px), 600"
+  },
+  {
+   "roll": "guide-länk (.gitem)",
+   "font": "Outfit",
+   "size": "1.6rem",
+   "px_desktop": 16.0,
+   "px_mobil": null,
+   "weight": 300,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(86, 94, 130)",
+   "kalla_fil": ".gitem"
+  },
+  {
+   "roll": "lösnings-kort h4",
+   "font": "Outfit",
+   "size": "2rem",
+   "px_desktop": 20.0,
+   "px_mobil": null,
+   "weight": 600,
+   "lh": 1.5,
+   "ls": "-0.2px",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".lcard h4",
+   "not_": "ls -.01em, text-shadow 0 1px 6px rgba(9,11,50,.5)"
+  },
+  {
+   "roll": "lösnings-kort p",
+   "font": "Outfit",
+   "size": "1.4rem",
+   "px_desktop": 14.0,
+   "px_mobil": null,
+   "weight": 400,
+   "lh": 1.35,
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".lcard p",
+   "not_": "lh 1.35"
+  },
+  {
+   "roll": "drawer eyebrow MENY",
+   "font": "Outfit",
+   "size": "1.1rem",
+   "px_desktop": 11.0,
+   "px_mobil": null,
+   "weight": 400,
+   "lh": 1.5,
+   "ls": "1.1px",
+   "color": "rgb(115, 117, 125)",
+   "kalla_fil": ".drawer__eyebrow",
+   "not_": "uppercase ls .1em, 400"
+  },
+  {
+   "roll": "drawer accordion-huvud",
+   "font": "Outfit",
+   "size": "1.9rem",
+   "px_desktop": 19.0,
+   "px_mobil": null,
+   "weight": 400,
+   "lh": "normal",
+   "ls": "normal",
+   "color": "rgb(20, 21, 26)",
+   "kalla_fil": ".acc__head"
+  },
+  {
+   "roll": "drawer sub-huvud",
+   "font": "Outfit",
+   "size": "1.8rem",
+   "px_desktop": 18.0,
+   "px_mobil": null,
+   "weight": 500,
+   "lh": "normal",
+   "ls": "normal",
+   "color": "rgb(20, 21, 26)",
+   "kalla_fil": ".acc--sub .acc__head"
+  },
+  {
+   "roll": "drawer leaf-länk (.m-item)",
+   "font": "Outfit",
+   "size": "1.6rem",
+   "px_desktop": 16.0,
+   "px_mobil": null,
+   "weight": 400,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(20, 21, 26)",
+   "kalla_fil": ".m-item"
+  },
+  {
+   "roll": "drawer CTA 'Ring en expert'",
+   "font": "Outfit",
+   "size": "1.8rem",
+   "px_desktop": 18.0,
+   "px_mobil": null,
+   "weight": 600,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".drawer__cta"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "header höjd",
+   "varde": "--header-h 7.6rem; ≤992 6.6rem",
+   "px_desktop": 76,
+   "px_mobil": 66,
+   "token": null,
+   "kalla_fil": ":root"
+  },
+  {
+   "roll": "container inner padding",
+   "varde": "--wrap 2.8rem; ≤560 1.6rem; ≤339 1.2rem",
+   "px_desktop": 28,
+   "px_mobil": 16,
+   "token": null,
+   "kalla_fil": ":root"
+  },
+  {
+   "roll": "nav gap / länk-padding",
+   "varde": "gap 1rem; padding 0 2.6rem; chevron gap .8rem",
+   "px_desktop": "10 / 26 / 8",
+   "token": null,
+   "kalla_fil": ".nav, .nav__link"
+  },
+  {
+   "roll": "höger-grupp gap",
+   "varde": "1.6rem",
+   "px_desktop": 16,
+   "token": null,
+   "kalla_fil": ".hdr__right"
+  },
+  {
+   "roll": "CTA",
+   "varde": "höjd 4.8rem padding 0 2.6rem; ≤992 4.2rem/1.9rem; ≤400 4.4rem/1.5rem; ≤339 4rem/1rem",
+   "px_desktop": "48 / 26",
+   "px_mobil": "44 / 15",
+   "token": null,
+   "kalla_fil": ".cta"
+  },
+  {
+   "roll": "mega inner padding",
+   "varde": "3.6rem var(--wrap), row-gap 3.2rem; lösningar 4rem topp/botten gap 2rem",
+   "px_desktop": "36 28 / 40",
+   "token": null,
+   "kalla_fil": ".mega__in"
+  },
+  {
+   "roll": "mega kolumn",
+   "varde": "padding-right 2.4rem, +.mcol padding-left 2.4rem + border-left 1px --line",
+   "px_desktop": 24,
+   "token": null,
+   "kalla_fil": ".mcol"
+  },
+  {
+   "roll": "mega länk-padding",
+   "varde": ".7rem 1.1rem, radie --r-sm",
+   "px_desktop": "7 11",
+   "token": null,
+   "kalla_fil": ".mitem"
+  },
+  {
+   "roll": "produkt-tile",
+   "varde": "padding 1.4rem gap 2rem, bild 17×12.4rem radie --r-md; gzone 26rem bred, padding-left 3rem margin-left 2.4rem",
+   "px_desktop": "14 / 20 / 170×124",
+   "token": null,
+   "kalla_fil": ".ptile, .gzone"
+  },
+  {
+   "roll": "lösnings-kort",
+   "varde": "min-height 23rem, text-padding 2rem, go 3.6rem cirkel",
+   "px_desktop": "230 / 20 / 36",
+   "token": null,
+   "kalla_fil": ".lcard"
+  },
+  {
+   "roll": "drawer",
+   "varde": "width min(100%,44rem); eyebrow padding 3.2rem 2rem .8rem; list padding 0 2rem; acc-head padding 1.5rem 0; leaf 1rem 0 1rem 3.8rem; foot 2rem; CTA höjd 5.6rem",
+   "px_mobil": "440 / 32 20 8 / 15 / 10 0 10 38 / 56",
+   "token": null,
+   "kalla_fil": ".drawer*"
+  },
+  {
+   "roll": "burger",
+   "varde": "4.6rem × 4.6rem, streck 2.4×.3rem gap .5rem",
+   "px_mobil": 46,
+   "token": null,
+   "kalla_fil": ".burger"
+  }
+ ],
+ "container": [
+  {
+   "roll": "header container",
+   "varde": "--container 128rem = 1280px",
+   "kalla_fil": ":root"
+  },
+  {
+   "roll": "produkter-mega",
+   "varde": "max-width 104rem = 1040px (centrerat kluster)",
+   "kalla_fil": ".mega--products .mega__in"
+  },
+  {
+   "roll": "mega ≥1700",
+   "varde": "min(100vw,148rem) centrerad med radie 0 0 2rem 2rem",
+   "kalla_fil": "@media (min-width:1700px)"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "CTA",
+   "varde": "--r-btn 1.5rem = 15px",
+   "token": null
+  },
+  {
+   "roll": "--r-sm",
+   "varde": ".8rem = 8px (meny-länk hover)",
+   "token": null
+  },
+  {
+   "roll": "--r-md",
+   "varde": "1.4rem = 14px (produktbild, burger-platta)",
+   "token": null
+  },
+  {
+   "roll": "--r-lg",
+   "varde": "2rem = 20px (produkt-tile, lösnings-kort, mega-hörn ≥1700)",
+   "token": "= --apradius-l (20px @1440) råkar stämma"
+  },
+  {
+   "roll": "go-knapp",
+   "varde": "50%",
+   "token": null
+  },
+  {
+   "roll": "burger-streck",
+   "varde": "3px",
+   "token": null
+  },
+  {
+   "roll": "focus-visible",
+   "varde": ".6rem",
+   "token": null
+  },
+  {
+   "roll": "produkt-thumb (drawer)",
+   "varde": "1rem",
+   "token": null
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "header-bar",
+   "varde": "0 4px 14px -10px rgba(15,18,60,.14) + 1px #dbe4f0 border-bottom",
+   "token": null,
+   "kalla_fil": ".hdr"
+  },
+  {
+   "roll": "CTA",
+   "varde": "0 .4rem 1.2rem -.5rem rgba(0,169,145,.5)",
+   "token": null,
+   "kalla_fil": ".cta"
+  },
+  {
+   "roll": "pulse-dot",
+   "varde": "box-shadow-ring keyframes 0→3px 6px→6px 9px rgba(85,255,154,.4/.55/0)",
+   "token": null,
+   "kalla_fil": "@keyframes cta_dot"
+  },
+  {
+   "roll": "mega",
+   "varde": "0 22px 36px -28px rgba(15,18,60,.20)",
+   "token": null,
+   "kalla_fil": ".mega"
+  },
+  {
+   "roll": "produkt-bild",
+   "varde": "0 .4rem 1.2rem -.6rem rgba(15,18,60,.14) + 1px --line-soft",
+   "token": null,
+   "kalla_fil": ".ptile__img"
+  },
+  {
+   "roll": "lösnings-kort",
+   "varde": "0 .8rem 2.4rem -1rem rgba(15,18,60,.25); hover 0 1.6rem 3.6rem -1.2rem .35",
+   "token": null,
+   "kalla_fil": ".lcard"
+  },
+  {
+   "roll": "dim",
+   "varde": "rgba(9,11,50,.20) fullskärm",
+   "token": null,
+   "kalla_fil": ".dim"
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "--t",
+   "varde": ".2s ease-out (26 användningar: bg, border, opacity, transform)"
+  },
+  {
+   "roll": "pulse-dot",
+   "varde": "cta_dot 1.6s ease-in-out infinite"
+  },
+  {
+   "roll": "mega öppna/stäng",
+   "varde": "opacity .2s + visibility-fördröjning; hover-timers per item i JS"
+  },
+  {
+   "roll": "lösnings-kort hover",
+   "varde": "translateY(-.4rem) .25s, bild scale(1.05) .45s, go bg→teal + translateX(.3rem)"
+  },
+  {
+   "roll": "produkt-tile hover",
+   "varde": "bg rgba(0,169,145,.06), go opacity .35→1 + translateX(.3rem)"
+  },
+  {
+   "roll": "drawer",
+   "varde": "translateX(100%)→0 .2s; accordion max-height .28s ease-out; burger-X scale_in .3s"
+  },
+  {
+   "roll": "reduced-motion",
+   "varde": "*{animation:none;transition:none} !important"
+  }
+ ],
+ "breakpoints": [
+  "1700px (min: mega centreras)",
+  "1080px (lösningar 2 kolumner)",
+  "993px/992px (nav→burger, header 66)",
+  "560px (logo 100, wrap 16)",
+  "400px",
+  "374px",
+  "339px"
+ ],
+ "komponenter": [
+  {
+   "namn": "header-bar",
+   "anatomi": "fixed 76px (66 mobil) sky-mist, 1px #dbe4f0 + mjuk skugga; container 1280 padding 28; logo 130px (100/84/76); nav centrerad; höger: CTA + burger (≤992)",
+   "states": [
+    "menu-open (seam bort)",
+    "scrolled (ingen förändring uppmätt: 76px kvar)"
+   ],
+   "html_ref": "index.html header.hdr",
+   "css_ref": "index.html <style> .hdr*",
+   "skarmdump_crop": "website-blocks-desktop.png"
+  },
+  {
+   "namn": "nav-länk",
+   "anatomi": "18px 500 ink, höjd 100%, padding 0 26, chevron 13px .55; open/hover: bg rgba(0,169,145,.09) + 2px teal border-bottom, chevron roterar 180",
+   "states": [
+    "default",
+    "hover (hover:hover-gated)",
+    "open"
+   ],
+   "css_ref": ".nav__link"
+  },
+  {
+   "namn": "header-CTA solid teal + pulse-dot",
+   "anatomi": "48px hög, padding 0 26, radie 15, 16px 600 vit, bg #00a991, teal-glow-skugga; ::after 10px mint-prick under mitten som pulserar; hover #008d79 (ingen rörelse)",
+   "states": [
+    "default",
+    "hover"
+   ],
+   "css_ref": ".cta"
+  },
+  {
+   "namn": "mega Tjänster",
+   "anatomi": "fullbredd sky-mist-ark under baren, 4 kolumner (grid) med 1px --line mellan; kolumntitel ikon 22px + 18px 600; länkar 15.5px 400 --ink-muted padding 7/11 radie 8, hover teal + tint; Populärt-kolumn med 13.5px undertexter",
+   "states": [
+    "open"
+   ],
+   "css_ref": ".mega--services",
+   "skarmdump_crop": "website-blocks-desktop-mega-tjanster.png"
+  },
+  {
+   "namn": "mega Produkter",
+   "anatomi": "centrerat kluster 1040: 2 produkt-tiles (bild 170×124 radie 14 vit + 1px linje + skugga, namn 21px 600, em 15px muted, go-pil teal .35) + gzone 260 med eyebrow 12.5px 600 uppercase ls .14em + 4 länkar 16px",
+   "states": [
+    "open",
+    "tile hover"
+   ],
+   "css_ref": ".mega--products",
+   "skarmdump_crop": "website-blocks-desktop-mega-produkter.png"
+  },
+  {
+   "namn": "mega Lösningar",
+   "anatomi": "4 foto-kort 291×230 radie 20, gradient 183deg rgba(9,11,50,.04→.84) .92, h4 20px 600 vit + p 14px vit, go-cirkel 36 glas (rgba(255,255,255,.16) + blur 4 + 1px .25)",
+   "states": [
+    "open",
+    "hover (lyft −4px, bild 1.05, go teal)"
+   ],
+   "css_ref": ".mega--solutions",
+   "skarmdump_crop": "website-blocks-desktop-mega-losningar.png"
+  },
+  {
+   "namn": "mobil-drawer (Evify-mönster)",
+   "anatomi": "höger ark 440 max vit, eyebrow MENY 11px uppercase #73757d, platta accordions 19px 400 #14151a med 1px #d5d5dc, sub-accordions med ikon 24px + 18px 500, leaf-länkar 16px indrag 38; produkt-rader thumb 50 radie 10; foot 'Ring en expert' 56px teal radie 15 18px 600; burger→X-platta #e7ecf4 radie 14",
+   "states": [
+    "closed",
+    "open",
+    "acc open",
+    "sub open"
+   ],
+   "css_ref": ".drawer*, .acc*, .m-*",
+   "skarmdump_crop": "website-blocks-mobile-drawer-open.png"
+  },
+  {
+   "namn": "demo-scaffolding (INTE design)",
+   "anatomi": ".demo h1 med teal-highlight 'berättar sanningen' + filler-block — prototypens sidinnehåll, ska strippas (PORT-NOTES 10)",
+   "css_ref": "index.html .demo"
+  }
+ ],
+ "signaturenhet": "Sky-mist-arket: header och mega-meny läser som EN yta i sidans bakgrundsfärg (#f5f9ff) skild från innehållet bara av en hårlinje och en mjuk skugga — plus den pulserande mint-pricken under CTA:n.",
+ "defekter": [
+  "Eget tokennamnrum (--ap-navy/--ap-teal/--ink/--r-*/--t) i stället för sajtens --ap*-tokens; PORT-NOTES 5 föreslår ytterligare ett prefix (--aphdr-) — tre namnrum för samma färger.",
+  "Ink-skalan #0f123c/#565e82/#6a7190 och hårlinjen #dbe4f0 saknar motsvarighet i de 101 ap-tokens; drawern använder en fjärde skala (#14151a/#d5d5dc/#73757d/#9a9aa0) ärvd från Evify-klonen.",
+  "nav-länk 18px vs live --apnav-link-size 14px; header-CTA 16px/600 radie 15 vs CTA-website-knapparna (radie 16, 500) och live Bricks-knappar (radie 12/20) — tre knappformat.",
+  "--ap-green #39c281 definieras men används inte.",
+  "Google Fonts-laddning i prototyp + preview (GDPR-notering finns); leverans self-hostar.",
+  "Skalan är rem på 62.5%-bas i prototypen och px i leveransen — samma värden men två källor att hålla i synk.",
+  "Scroll-tighten (HemSol-modellen i README) syns inte i CSS/mätning: headern är 76px före och efter scroll."
+ ],
+ "regler_som_ligger_i_koden": [
+  "fixed header, body padding-top = header-h",
+  "hover bara på (hover:hover) and (pointer:fine)",
+  "reduced-motion nollar animation/transition",
+  "focus-visible 3px navy outline radie .6rem",
+  "iOS: safe-area-insets, dvh+vh, scroll-lock",
+  "mega-menyer stängs på Escape/klick utanför; aria-expanded/aria-controls",
+  "≥1700: mega centreras till 1480 med rundade nederhörn",
+  "≤992: nav→burger+drawer; ≤560 logo 100; ≤374 logo 84; ≤339 logo 76"
+ ],
+ "matdata": "inventering/skarmdumpar/website-blocks-states.json (öppna tillstånd) + inventering/_probes/out/a1-hero-1.json (header i vila)"
+}

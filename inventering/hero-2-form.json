@@ -1,0 +1,546 @@
+{
+ "kalla": "hero-2-form",
+ "status": "design GO / blocker: lead-endpoint (ENDPOINT, PATCH-berikning, honeypot, consent-tidsstämpel); produktionskoden = bricks/ampy-offert-form.html (V2 'en skärm, ingen wizard' + 'Fler detaljer (valfritt)'-utfäll); V1 'kontakt först' beskrivs i README men index-harnessen laddar produktionskoden",
+ "auktoritet": 2,
+ "ingang": "kallor/Hero-2-form/index.html (harness med iframe + path-resolver) → bricks/ampy-offert-form.html?path=/laddbox/nacka (produktionskod: CSS scopad .aof + markup + globalt script)",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/hero-2-form-desktop.png",
+  "inventering/skarmdumpar/hero-2-form-mobile.png",
+  "inventering/skarmdumpar/hero-2-form-desktop-error.png",
+  "inventering/skarmdumpar/hero-2-form-mobile-error.png",
+  "inventering/skarmdumpar/hero-2-form-eljour-desktop.png",
+  "inventering/skarmdumpar/hero-2-form-eljour-mobile.png",
+  "inventering/skarmdumpar/hero-2-form-harness-desktop.png",
+  "inventering/skarmdumpar/hero-2-form-harness-mobile.png"
+ ],
+ "rem_bas": "html 16px; allt i px; tokens scopade till .aof (aldrig :root)",
+ "farger": [
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "roll": "--mid: kortets bas-bg + gradientstart (156.51deg #090B32 −33% → #5EB1BF 111%, opacity .76)",
+   "antal": 2,
+   "kalla_fil": "bricks/ampy-offert-form.html .aof, .card::before"
+  },
+  {
+   "hex": "#5eb1bf",
+   "token": null,
+   "roll": "--sea: glas-gradientens slut",
+   "antal": 2,
+   "kalla_fil": ".aof, .card::before",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "roll": "--neon1: submit-gradientstart (282.84deg 20 %)",
+   "antal": 1,
+   "kalla_fil": ".btn-primary"
+  },
+  {
+   "hex": "#00ffda",
+   "token": null,
+   "roll": "--neon2: submit-gradientslut (86 %) — 'finns inte i Ampys tokenlista' (Hero_2-alternatives dödade den)",
+   "antal": 1,
+   "kalla_fil": ".btn-primary",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#b6f2ff",
+   "token": "--apcrystal-blue",
+   "roll": "--crystal (definierad, 0 användningar)",
+   "antal": 0,
+   "kalla_fil": ".aof"
+  },
+  {
+   "hex": "#bfe9fb",
+   "token": null,
+   "roll": "--lightblue: vald segment-knapp (uppmätt rgb(191,233,251))",
+   "antal": 1,
+   "kalla_fil": ".seg button[aria-checked=true]",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "roll": "--teal: fokusring rgba(0,169,145,.5) 3px, FEL-ring 0 0 0 2px teal (fel visas i teal, inte rött), consent checked, done-cirkel",
+   "antal": "1 + 5 var",
+   "kalla_fil": ".inp:focus, .fld.err .inp, .consent input:checked"
+  },
+  {
+   "hex": "#1e1e1e",
+   "token": "--apdarkest-black",
+   "roll": "--ink: segment- och submit-text",
+   "antal": 1,
+   "kalla_fil": ".aof"
+  },
+  {
+   "hex": "#333333",
+   "token": "--apcharcoal-gray",
+   "roll": "--charcoal: input-text + select-pil",
+   "antal": 2,
+   "kalla_fil": ".inp, select"
+  },
+  {
+   "hex": "#b2b2b2",
+   "token": null,
+   "roll": "--gray (placeholder)",
+   "antal": 1,
+   "kalla_fil": ".aof",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#7fe9d3",
+   "token": null,
+   "roll": "länkfärg (integritetspolicy), req-markering, chip-ikon, done-länk — ljus teal",
+   "antal": 6,
+   "kalla_fil": ".consent a, .gchip .ic, label .req",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#bff3e6",
+   "token": null,
+   "roll": "hjälp-/feltext",
+   "antal": 1,
+   "kalla_fil": ".help",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#042b24",
+   "token": null,
+   "roll": "bock-färg i checked consent + done-ikon",
+   "antal": 2,
+   "kalla_fil": ".consent input:checked::after",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "rgba(181,181,181,.14)",
+   "token": null,
+   "roll": "kortskugga 0 0 38px (≈ #b5b5b5, kusin till #bebebe-idiomet)",
+   "antal": 1,
+   "kalla_fil": ".card",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "rgba(255,255,255,.13/.18/.08/.32/.06/.5/.34)",
+   "token": null,
+   "roll": "glas-chip bg/kant, disclosure bg/dashed kant, consent-box bg/kant, upload-kant",
+   "antal": 7,
+   "kalla_fil": ".gchip, .disc, .consent, .upload"
+  },
+  {
+   "hex": "#0a0c1e / #16203f",
+   "token": null,
+   "roll": "PREVIEW-host-bakgrund (radial) — ej produkt",
+   "antal": 2,
+   "kalla_fil": ".aof-host",
+   "utanfor_tokens": true
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "titel (.title)",
+   "font": "Outfit",
+   "size": "27px / ≤600 24px lh 1.2",
+   "px_desktop": 27.0,
+   "px_mobil": 24.0,
+   "weight": 400,
+   "lh": 1.25,
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "bricks/ampy-offert-form.html .title",
+   "not_": "400-vikt (Hero_2-alternatives Z ändrade till 700)"
+  },
+  {
+   "roll": "subtitle",
+   "font": "Outfit",
+   "size": "15px / ≥601 14px",
+   "px_desktop": 14.0,
+   "px_mobil": 15.0,
+   "weight": 300,
+   "lh": 1.3,
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".subtitle",
+   "not_": "300-vikt, opacity .9"
+  },
+  {
+   "roll": "segment-knapp (Privat/BRF/Företag)",
+   "font": "Outfit",
+   "size": "17px / ≥601 16px",
+   "px_desktop": 16.0,
+   "px_mobil": 17.0,
+   "weight": 500,
+   "lh": "normal",
+   "color": "rgb(30, 30, 30)",
+   "kalla_fil": ".seg button",
+   "not_": "h 44, radie 14, vit; vald --lightblue + 500"
+  },
+  {
+   "roll": "låst tjänst-chip (.gchip)",
+   "font": "Outfit",
+   "size": "15px / ≥601 14px",
+   "px_desktop": 14.0,
+   "px_mobil": 15.0,
+   "weight": 400,
+   "lh": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".gchip"
+  },
+  {
+   "roll": "label",
+   "font": "Outfit",
+   "size": "14px lh 18 / ≥601 13px lh 16",
+   "px_desktop": 13.0,
+   "px_mobil": 14.0,
+   "weight": 400,
+   "lh": 1.23,
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".aof label.l",
+   "not_": "margin-bottom 6/5; ingen asterisk-stil mätt (req 12px #7fe9d3 i CSS)"
+  },
+  {
+   "roll": "input",
+   "font": "Outfit",
+   "size": "17px / ≥601 16px; h 48 → 52 ≤600 → 44 ≥601",
+   "px_desktop": 16.0,
+   "px_mobil": 17.0,
+   "weight": 400,
+   "lh": "normal",
+   "color": "rgb(51, 51, 51)",
+   "kalla_fil": ".inp",
+   "not_": "radie 14, padding 0 16, vit, text #333, ingen kant; textarea 78/62 h"
+  },
+  {
+   "roll": "disclosure-knapp 'Fler detaljer (valfritt)'",
+   "font": "Outfit",
+   "size": "15px / ≥601 14px",
+   "px_desktop": 14.0,
+   "px_mobil": 15.0,
+   "weight": 400,
+   "lh": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".disc>button",
+   "not_": "h 46/42, dashed 1px vit .32, bg vit .08, radie 14"
+  },
+  {
+   "roll": "consent-text",
+   "font": "Outfit",
+   "size": "12.5px / ≥601 12px",
+   "px_desktop": 12.0,
+   "px_mobil": 12.5,
+   "weight": 400,
+   "lh": 1.45,
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": ".consent span",
+   "not_": "opacity .82; box 21×21 radie 6, 1.5px vit .5; checked teal + bock #042b24"
+  },
+  {
+   "roll": "submit (.btn-primary)",
+   "font": "Outfit",
+   "size": "19px / ≥601 18px; h 52 → 54 ≤600 → 46 ≥601",
+   "px_desktop": 18.0,
+   "px_mobil": 19.0,
+   "weight": 500,
+   "lh": "normal",
+   "color": "rgb(30, 30, 30)",
+   "kalla_fil": ".btn, .btn-primary",
+   "not_": "500-vikt, radie 14, gradient 282.84deg #55ff9a 20% → #00ffda 86%, text #1e1e1e; disabled .6"
+  },
+  {
+   "roll": "done h2 / p",
+   "font": "Outfit",
+   "size": "23px / 15px",
+   "px_desktop": 23,
+   "px_mobil": 23,
+   "weight": 400,
+   "kalla_fil": ".done"
+  },
+  {
+   "roll": "noform (eljour: 'Akut elfel? Ring oss direkt på …')",
+   "font": "Outfit",
+   "size": "15px lh 1.5",
+   "px_desktop": 15,
+   "px_mobil": 15,
+   "weight": 400,
+   "color": "rgba(255,255,255,.85), länk #7fe9d3",
+   "kalla_fil": ".noform (dashed 1px vit .3, radie 20, padding 24)"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "kort padding",
+   "varde": "28px (bas) / ≤600 24px 20px / ≥601 22px",
+   "px_desktop": 22,
+   "px_mobil": "24 20",
+   "token": null,
+   "kalla_fil": ".card"
+  },
+  {
+   "roll": "kort max-width",
+   "varde": "470px (mobil none)",
+   "px_desktop": 470,
+   "px_mobil": 374,
+   "token": null,
+   "kalla_fil": ".aof"
+  },
+  {
+   "roll": "group / fld / row2",
+   "varde": "16 / 10 / gap 10 (≥601: 12 / 8 / 8)",
+   "px_desktop": "12 / 8",
+   "px_mobil": "16 / 10",
+   "token": null,
+   "kalla_fil": ".group, .fld, .row2"
+  },
+  {
+   "roll": "label → fält",
+   "varde": "6px (≥601 5px)",
+   "token": null,
+   "kalla_fil": "label.l"
+  },
+  {
+   "roll": "consent margin-top / submit margin-top",
+   "varde": "14 / 18 (≥601 12 / 14)",
+   "token": null,
+   "kalla_fil": ".consent, .btn"
+  },
+  {
+   "roll": "segment gap",
+   "varde": "12 (≥601 10)",
+   "token": null,
+   "kalla_fil": ".seg"
+  },
+  {
+   "roll": "input padding",
+   "varde": "0 16; textarea 12 16",
+   "token": null,
+   "kalla_fil": ".inp"
+  },
+  {
+   "roll": "uppmätt korthöjd",
+   "varde": "470×585.7 @1440 · 374×832.5 @390",
+   "token": null,
+   "kalla_fil": "a1 states.json"
+  }
+ ],
+ "container": [
+  {
+   "roll": "formkort",
+   "varde": "max-width 470px",
+   "kalla_fil": ".aof"
+  },
+  {
+   "roll": "harness iframe",
+   "varde": "max 1000px / mobil 390px",
+   "kalla_fil": "index.html (granskning)"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "kort",
+   "varde": "27px / ≤600 22px",
+   "token": null,
+   "kalla_fil": ".card",
+   "not": "27 finns i ingen skala"
+  },
+  {
+   "roll": "fält, segment, chip, disclosure, submit, upload",
+   "varde": "14px (alla)",
+   "token": null,
+   "kalla_fil": ".inp, .seg button, .gchip, .disc>button, .btn, .upload",
+   "not": "README säger 'vita pill-fält (radie 16)' — koden säger 14"
+  },
+  {
+   "roll": "consent-box",
+   "varde": "6px",
+   "token": null
+  },
+  {
+   "roll": "noform",
+   "varde": "20px",
+   "token": null
+  },
+  {
+   "roll": "payload (preview)",
+   "varde": "10px",
+   "token": null
+  },
+  {
+   "roll": "done-ikon",
+   "varde": "50%",
+   "token": null
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "kort",
+   "varde": "0 0 38px rgba(181,181,181,.14) + backdrop-filter blur(30px)",
+   "token": null,
+   "kalla_fil": ".card"
+  },
+  {
+   "roll": "input focus",
+   "varde": "0 0 0 3px rgba(0,169,145,.5)",
+   "token": null,
+   "kalla_fil": ".inp:focus"
+  },
+  {
+   "roll": "input error",
+   "varde": "0 0 0 2px #00a991 (teal, inte rött)",
+   "token": null,
+   "kalla_fil": ".fld.err .inp"
+  },
+  {
+   "roll": "consent focus",
+   "varde": "0 0 0 3px rgba(0,169,145,.45)",
+   "token": null
+  },
+  {
+   "roll": "segment focus",
+   "varde": "outline 2px teal offset 2",
+   "token": null
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "input",
+   "varde": "box-shadow .15s"
+  },
+  {
+   "roll": "segment",
+   "varde": ".15s"
+  },
+  {
+   "roll": "submit",
+   "varde": ".18s"
+  },
+  {
+   "roll": "reduced-motion",
+   "varde": "@media (prefers-reduced-motion) finns (trunkerad i läsningen)"
+  }
+ ],
+ "breakpoints": [
+  "600px (max) / 601px (min) — @media i produktionskoden (README: 'produktion ska använda @media (max-width:480px)' — koden använder 600)"
+ ],
+ "komponenter": [
+  {
+   "namn": "glas-kort (.card)",
+   "anatomi": "470 max, radie 27 (22 mobil), padding 22/24-20, bg #090b32 + ::before 156.51deg #090B32→#5EB1BF opacity .76, blur(30px), skugga 0 0 38px rgba(181,181,181,.14)",
+   "states": [],
+   "html_ref": "bricks/ampy-offert-form.html",
+   "css_ref": ".aof .card",
+   "skarmdump_crop": "hero-2-form-desktop.png"
+  },
+  {
+   "namn": "segment-väljare (Privat/BRF/Företag)",
+   "anatomi": "3 knappar flex 1, h 44, radie 14, vit 16–17px 400 #1e1e1e; vald: #bfe9fb + 500; aria-checked",
+   "states": [
+    "default",
+    "checked",
+    "focus-visible"
+   ],
+   "css_ref": ".aof .seg"
+  },
+  {
+   "namn": "låst tjänst-chip (.gchip)",
+   "anatomi": "glas-rad rgba(255,255,255,.13) + 1px .18, radie 14, padding 9/13 (11/14 mobil), bock-ikon 18 #7fe9d3 + 'Laddbox i Nacka'",
+   "states": [],
+   "css_ref": ".aof .gchip"
+  },
+  {
+   "namn": "fält (.fld > label.l + .inp)",
+   "anatomi": "label 13/14px vit (opt .7, req 12px #7fe9d3); input 44/52 h radie 14 vit #333 16/17px; textarea 62/78; select med inline-svg-pil #333; row2 = två fält i rad (mobil staplas)",
+   "states": [
+    "default",
+    "focus (3px teal .5)",
+    "error (2px teal + help #bff3e6)",
+    "disabled"
+   ],
+   "css_ref": ".aof .fld, .inp"
+  },
+  {
+   "namn": "disclosure 'Fler detaljer (valfritt)'",
+   "anatomi": "h 42/46, dashed 1px vit .32, bg vit .08, radie 14, 14/15px, chevron; body: beskrivning/tidsram/bilder(upload dashed 1.5px, 50/58 h)/org.nr",
+   "states": [
+    "closed",
+    "open"
+   ],
+   "css_ref": ".aof .disc, .upload"
+  },
+  {
+   "namn": "consent",
+   "anatomi": "custom checkbox 21×21 radie 6 (1.5px vit .5, bg vit .06); checked teal med bock; text 12/12.5px .82 + länk #7fe9d3",
+   "states": [
+    "unchecked",
+    "checked",
+    "focus",
+    "error (help under)"
+   ],
+   "css_ref": ".aof .consent"
+  },
+  {
+   "namn": "submit 'Boka rådgivning'",
+   "anatomi": "100 %, h 46/54, radie 14, 18/19px 500 #1e1e1e, gradient 282.84deg #55ff9a→#00ffda, margin-top 14/18",
+   "states": [
+    "default",
+    "disabled .6"
+   ],
+   "css_ref": ".aof .btn-primary"
+  },
+  {
+   "namn": "noform (eljour-sidor)",
+   "anatomi": "'Akut elfel? Ring oss direkt på 010-265 79 79.' i dashed glasruta radie 20 — Ring-först i stället för formulär",
+   "states": [],
+   "css_ref": ".aof .noform",
+   "skarmdump_crop": "hero-2-form-eljour-mobile.png"
+  },
+  {
+   "namn": "done-state",
+   "anatomi": "teal cirkel 56 med bock #042b24, h2 23/400, p 15/300 .85, payload-ruta (preview)",
+   "states": [],
+   "css_ref": ".aof .done"
+  }
+ ],
+ "varianter": [
+  {
+   "namn": "V1 'Kontakt först' (2 skärmar)",
+   "status": "beskriven i README (skärm 1 = sann submit + lead_id, skärm 2 = berikning via PATCH); ej i produktionskoden",
+   "anatomi": "progress + två skärmar"
+  },
+  {
+   "namn": "V2 'En skärm, ingen wizard'",
+   "status": "REKOMMENDERAD default = bricks/ampy-offert-form.html",
+   "anatomi": "minimala fält + disclosure + en submit"
+  },
+  {
+   "namn": "BRF/ · Företag/ · Privatperson/ · Mobil/ (PDF)",
+   "status": "designreferens = nuvarande live-formulär (Figma-export)",
+   "anatomi": "Group 15xx.pdf"
+  },
+  {
+   "namn": "Hero2 Form Documentation/",
+   "status": "leveranspaket (bricks-css/markup/script, PHP-endpoint, SQL-migration, 6 agent-dokument)",
+   "anatomi": "kopia av produktionskoden"
+  }
+ ],
+ "signaturenhet": "Per-sida-resolvern: samma formulär läser URL-pathen och förvalet kundtyp, låser tjänsten som en glas-chip ('Laddbox i Nacka') och byter till Ring-först på eljour-sidor. Minsta ringbara lead = namn + telefon + postnummer + GDPR.",
+ "defekter": [
+  "Submit-gradienten 282.84deg #55ff9a→#00ffda (bevarad från live) är en annan handlingsgradient än bibliotekets 120deg #55ff9a→#5eb1bf; Hero_2-alternatives kallar den 'DÖD' — två godkända källor med olika submit.",
+  "Radie 14 på allt (README säger 16) och kort 27/22 — tredje radiesystemet (bibliotek 16, ap 12/20, header 15).",
+  "Fel visas i teal (samma färg som fokus/success) — ingen felfärg i systemet; Hero_2-alternatives införde #e24b4a/#e5484d.",
+  "Egna tokennamn (--mid/--sea/--neon1/--neon2/--crystal/--lightblue/--teal/--ink/--charcoal/--gray/--white) — femte namnrummet för samma palett; --crystal oanvänd; #00ffda, #bfe9fb, #7fe9d3, #bff3e6, #b2b2b2, #042b24 saknar tokens.",
+  "Glas-gradient 156.51deg #090B32 −33% → #5EB1BF 111% med opacity .76 = live-formulärets yta (ur 'CSS kod Formulär.md'); Hero_2-alternatives Z dömde ut den ('#468096 finns inte i paletten', kant 1,2:1) — konflikt kvar mellan källorna.",
+  "Brytpunkt 600/601 i koden vs README:s 480 — och harnessen växlar mobil via iframe-bredd.",
+  "Kortskugga rgba(181,181,181,.14) = ännu en grå-skugga-variant (live #bebebe .19/.4, Main_CTA .4).",
+  "Google Fonts-länk kvar (PREVIEW ONLY), font-path '/wp-content/themes/ampy/fonts/Outfit.woff2' är [VERIFY PATH]-gissad; ENDPOINT/PREVIEW-flaggor är blockers; copy '[VERIFY] behörig elektriker / oftast inom en arbetsdag' mot ampy-foretagsdata."
+ ],
+ "regler_som_ligger_i_koden": [
+  "minsta lead: namn + telefon + postnummer + GDPR + honeypot; allt annat valfritt och blockerar aldrig submit",
+  "tjänst + kundtyp känns av kontexten (data-ampy-path, ?path bara i PREVIEW)",
+  "eljour = Ring-först (noform)",
+  "input ≥16 px (iOS-zoom)",
+  "consent innan submit, policy_version + consent_at på servern",
+  "tokens scopade till .aof, aldrig :root",
+  "noll utropstecken i copy (candour) — men titeln 'Få kostnadsfri rådgivning!' har ett",
+  "@media 600/601, reduced-motion"
+ ],
+ "matdata": "inventering/skarmdumpar/hero-2-form-states.json"
+}

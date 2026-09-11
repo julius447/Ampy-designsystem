@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+_shots/
+kallor/
+inventering/skarmdumpar/
+inventering/_probes/out/

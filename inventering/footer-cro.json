@@ -1,0 +1,373 @@
+{
+ "kalla": "footer-cro",
+ "status": "baslinje = 1:1-klon av live-footern (42/42 computed values identiska, auktoritet 1); tre riktningar A/B/C byggda 2026-09-02, väntar ägarval (B rekommenderad); v2.html = ersatt första förslag",
+ "auktoritet": "baslinje 1, riktningar 3",
+ "ingang": "kallor/Footer-CRO-/index.html (router) → baseline.html (css/tokens.css + css/baseline.css) · riktning-a/ · riktning-b/ · riktning-c/ · v2.html",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/footer-cro-desktop.png",
+  "inventering/skarmdumpar/footer-cro-mobile.png",
+  "inventering/skarmdumpar/footer-cro-baseline-desktop.png",
+  "inventering/skarmdumpar/footer-cro-baseline-mobile.png",
+  "inventering/skarmdumpar/footer-cro-riktning-a-desktop.png",
+  "inventering/skarmdumpar/footer-cro-riktning-a-mobile.png",
+  "inventering/skarmdumpar/footer-cro-riktning-b-desktop.png",
+  "inventering/skarmdumpar/footer-cro-riktning-b-mobile.png",
+  "inventering/skarmdumpar/footer-cro-riktning-c-desktop.png",
+  "inventering/skarmdumpar/footer-cro-riktning-c-mobile.png"
+ ],
+ "rem_bas": "html{font-size:62.5%} (css/tokens.css, 'som i produktion'); tokens.css = 17 ap*-tokens kopierade EXAKT från live + --space-m/-l (Bricks-defaults 24/36 px fasta) + --ap-teal-live rgb(0,168,143)",
+ "farger": [
+  {
+   "hex": "#70becb → #bbf5ff → #b6f2ff → #70becb",
+   "token": "#b6f2ff = --apcrystal-blue; #70becb/#bbf5ff saknas",
+   "roll": "prefooter-gradient −51deg (live)",
+   "antal": 1,
+   "kalla_fil": "css/baseline.css:11",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#00011e → #090b32",
+   "token": "#090b32 = --apmidnight-blue; #00011e saknas",
+   "roll": "footer-gradient −17deg (live) + inset-skugga #010033",
+   "antal": 1,
+   "kalla_fil": "css/baseline.css:43-44",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#01021f",
+   "token": null,
+   "roll": "footer-bar bg (uppmätt rgb(1,2,31))",
+   "antal": 1,
+   "kalla_fil": "css/baseline.css:130",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#010033",
+   "token": null,
+   "roll": "inset-skugga 0 8px 8px",
+   "antal": 1,
+   "kalla_fil": "css/baseline.css:44",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "rgb(0,168,143) = #00a88f",
+   "token": "≈ --apteal-core (Bricks --color-15)",
+   "roll": "--ap-teal-live: Google-betyg + stjärnor",
+   "antal": "1 + 2 var",
+   "kalla_fil": "css/tokens.css:38",
+   "utanfor_tokens": true,
+   "not": "live använder Bricks-palettens --color-15, inte --apteal-core"
+  },
+  {
+   "hex": "#1e1e1e",
+   "token": "--apdarkest-black",
+   "roll": "prefooter h3",
+   "antal": 1,
+   "kalla_fil": "css/baseline.css:19"
+  },
+  {
+   "hex": "#363636",
+   "token": null,
+   "roll": "prefooter h4 + länkar (Bricks body-default)",
+   "antal": 2,
+   "kalla_fil": "css/baseline.css:31,37",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "roll": "all footer-text/ikoner",
+   "antal": 8,
+   "kalla_fil": "css/baseline.css"
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "prefooter sektionsrubrik (h3)",
+   "font": "Outfit",
+   "size": "var(--aptext-xl) = 32→24.5 (mobil weight 500)",
+   "px_desktop": 32.0,
+   "px_mobil": 24.54,
+   "weight": 600,
+   "lh": "normal",
+   "color": "rgb(30, 30, 30)",
+   "kalla_fil": "css/baseline.css:16-21"
+  },
+  {
+   "roll": "prefooter kolumnrubrik (h4)",
+   "font": "Outfit",
+   "size": "var(--aptext-mm) = 20→18.1; @478 --aptext-ml",
+   "px_desktop": 20.0,
+   "px_mobil": 20.12,
+   "weight": 500,
+   "lh": "normal",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "css/baseline.css:28-32"
+  },
+  {
+   "roll": "prefooter länk",
+   "font": "Outfit",
+   "size": "var(--aptext-sm) = 16→14.1",
+   "px_desktop": 16.0,
+   "px_mobil": 14.12,
+   "weight": 300,
+   "lh": "normal",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "css/baseline.css:34-38"
+  },
+  {
+   "roll": "footer brand-text",
+   "font": "Outfit",
+   "size": "16px fast, lh 1.4, max-w 85%",
+   "px_desktop": 16.0,
+   "px_mobil": 16.0,
+   "weight": 300,
+   "lh": 1.4,
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "css/baseline.css:64-71",
+   "not_": "enda fasta px-storleken: skalar inte på mobil"
+  },
+  {
+   "roll": "footer kolumnrubrik",
+   "font": "Outfit",
+   "size": "var(--aptext-l) = 24→22.1",
+   "px_desktop": 24.0,
+   "px_mobil": 22.12,
+   "weight": 500,
+   "lh": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "css/baseline.css:120"
+  },
+  {
+   "roll": "footer länk / kontaktrad",
+   "font": "Outfit",
+   "size": "var(--aptext-sm) = 16→14.1, weight 400 (prefooter-länkar 300)",
+   "px_desktop": 16.0,
+   "px_mobil": 14.12,
+   "weight": 400,
+   "lh": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "css/baseline.css:122,125"
+  },
+  {
+   "roll": "Google-betyg '5.0'",
+   "font": "Plus Jakarta Sans",
+   "size": "var(--aptext-sm), Plus Jakarta Sans 800 uppercase lh 0",
+   "px_desktop": 16.0,
+   "px_mobil": 14.12,
+   "weight": 800,
+   "lh": "0px",
+   "color": "rgb(0, 168, 143)",
+   "kalla_fil": "css/baseline.css:98-105",
+   "not_": "ENDA förekomsten av Plus Jakarta Sans i biblioteket (Bricks-arv); riktning A/B/C byter till Outfit '5,0 på Google'"
+  },
+  {
+   "roll": "footer-bar copyright",
+   "font": "Outfit",
+   "size": "var(--aptext-xs) = 12→10.1",
+   "px_desktop": 12.0,
+   "px_mobil": 10.12,
+   "weight": 400,
+   "lh": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "css/baseline.css:138"
+  },
+  {
+   "roll": "footer-bar policy-länkar",
+   "font": "Outfit",
+   "size": "14px fast",
+   "px_desktop": 14.0,
+   "px_mobil": 14.0,
+   "weight": 400,
+   "lh": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "css/baseline.css:140"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "prefooter padding",
+   "varde": "var(--apspace-xl) var(--apspace-l) var(--apspace-l)",
+   "px_desktop": "56 39.6 39.6",
+   "px_mobil": "27.3 21.5 21.5",
+   "token": "--apspace-xl/-l",
+   "kalla_fil": "css/baseline.css:12"
+  },
+  {
+   "roll": "prefooter row-gap / grid margin-bottom",
+   "varde": "var(--space-m) 24px fast / var(--space-l) 36px fast (Bricks legacy)",
+   "px_desktop": "24 / 36",
+   "px_mobil": "24 / 36",
+   "token": "--space-m/-l (legacy, här som fasta px)",
+   "kalla_fil": "css/baseline.css:14,25"
+  },
+  {
+   "roll": "prefooter grid",
+   "varde": "repeat(5,1fr) gap 0; @767 1fr 1fr gap --apspace-s; @478 1fr gap 20",
+   "px_desktop": "5 × 256",
+   "px_mobil": "1 kol",
+   "token": null,
+   "kalla_fil": "css/baseline.css:22-26"
+  },
+  {
+   "roll": "block row-gap / li padding",
+   "varde": "--apspace-xs / --apspace-3xs",
+   "px_desktop": "14 / 7",
+   "px_mobil": "10.5 / 6.6",
+   "token": "--apspace-xs/-3xs",
+   "kalla_fil": "css/baseline.css:27,33"
+  },
+  {
+   "roll": "footer padding",
+   "varde": "var(--apspace-2xl) var(--apspace-l)",
+   "px_desktop": "79.2 39.6",
+   "px_mobil": "34.8 21.5",
+   "token": "--apspace-2xl/-l",
+   "kalla_fil": "css/baseline.css:46"
+  },
+  {
+   "roll": "footer kolumner",
+   "varde": "brand 30 % (384) · links 60 % (768) flex-end gap 60px 50px, kolumner 30 %/kontakt 50 %; @991 65 % gap 20; @767 100 % kolumn",
+   "px_desktop": "384 / 768",
+   "token": null,
+   "kalla_fil": "css/baseline.css:56-119"
+  },
+  {
+   "roll": "sociala ikoner",
+   "varde": "a padding --apspace-2xs (9.9) höger/topp/botten → 53.8 h; svg 20; gap --apspace-2xs; @478 gap --apspace-m",
+   "px_desktop": "53.8 h",
+   "px_mobil": "50.6 h",
+   "token": "--apspace-2xs",
+   "kalla_fil": "css/baseline.css:72-83"
+  },
+  {
+   "roll": "Google-rad",
+   "varde": "G-ikon 29 + 4, column-gap 10/5/4, stjärnor 18",
+   "px_desktop": "29 / 18",
+   "token": null,
+   "kalla_fil": "css/baseline.css:86-107"
+  },
+  {
+   "roll": "footer-bar",
+   "varde": "bar padding --apspace-4xs --apspace-l; container padding --apspace-s --apspace-l; @478 --apspace-l 0",
+   "px_desktop": "5.2 39.6 / 19.8 39.6 → 68 h",
+   "px_mobil": "→ 126.9 h",
+   "token": "--apspace-4xs/-s/-l",
+   "kalla_fil": "css/baseline.css:130-140"
+  },
+  {
+   "roll": "logo",
+   "varde": "130×37, max-width 50 %",
+   "px_desktop": "130×37",
+   "token": null,
+   "kalla_fil": "css/baseline.css:63",
+   "not": "= headerns 130px"
+  }
+ ],
+ "container": [
+  {
+   "roll": "container",
+   "varde": "1280px",
+   "kalla_fil": "css/tokens.css --container"
+  },
+  {
+   "roll": "brand-text",
+   "varde": "max-width 85 %",
+   "kalla_fil": ".footer__text"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "inga",
+   "varde": "0 — footern har inga rundade element (baslinje)",
+   "token": null
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "footer topp",
+   "varde": "inset 0 8px 8px #010033",
+   "token": null,
+   "kalla_fil": "css/baseline.css:44"
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "inga (baslinje)",
+   "varde": "—; tokens.css definierar --ease cubic-bezier(.2,.6,.2,1) för riktningarna"
+  }
+ ],
+ "breakpoints": [
+  "991px (tablet_portrait)",
+  "767px (mobile_landscape)",
+  "478px (mobile_portrait) — Bricks-brytpunkterna"
+ ],
+ "komponenter": [
+  {
+   "namn": "prefooter 'Populära kategorier'",
+   "anatomi": "ljusblå diagonal gradient, h3 32/600 #1e1e1e, 5-kolumns grid (Elinstallation · Laddboxar · Batterilagring · Områden · Lösningar) h4 20/500 + länkar 16/300 #363636",
+   "states": [],
+   "html_ref": "baseline.html:20-60",
+   "css_ref": "css/baseline.css:9-38",
+   "skarmdump_crop": "footer-cro-baseline-desktop.png topp"
+  },
+  {
+   "namn": "footer (mörk zon)",
+   "anatomi": "navy-gradient med inset-skugga; brand 30 % (logo 130×37, text 16/300 85 %, 5 sociala ikoner 20px, Google-rad 5.0 + 5 teal-stjärnor i Plus Jakarta Sans 800) + 3 länkkolumner (Mer om Ampy · Kundtjänst · 'Få en kostnadsfri konsultation!' med adress/e-post/telefon + ikoner 16×18) h 24/500, länkar 16/400",
+   "states": [],
+   "html_ref": "baseline.html:62-120",
+   "css_ref": "css/baseline.css:41-127"
+  },
+  {
+   "namn": "footer-bar",
+   "anatomi": "#01021f, copyright 12px vänster, 3 policy-länkar 14px höger med gap --apspace-l; @767 kolumn centrerad",
+   "states": [],
+   "css_ref": "css/baseline.css:130-140"
+  }
+ ],
+ "varianter": [
+  {
+   "namn": "Riktning A — 'Rättad baslinje'",
+   "status": "byggd, ej vald",
+   "anatomi": "dagens IA, mätbara defekter rättade: telefonrad 'Du kan även ringa oss på 010-265 79 79.' överst i prefootern + hårlinje, Google-raden 'G 5,0 på Google ★★★★★' i Outfit vit (ej Plus Jakarta/teal), kontaktrader ikon-linjerade, minmax(0,1fr)-grid",
+   "skarmdump": "footer-cro-riktning-a-desktop.png"
+  },
+  {
+   "namn": "Riktning B — 'Speglad meny' ★ rekommenderad",
+   "status": "byggd, väntar ägarval",
+   "anatomi": "prefootern speglar headerns taxonomi ('Hitta rätt': Tjänster · Produkter (Laddboxar/Solcellsbatterier) · Lösningar · Elektriker nära dig); mörk zon: Mer om Ampy · Avdrag 2026 · Gratis rådgivning (kontakt); footer-bar '© 2026 Ampy Nordic AB' + 3 länkar; samma href-mängd",
+   "skarmdump": "footer-cro-riktning-b-desktop.png"
+  },
+  {
+   "namn": "Riktning C — 'Kontakt först'",
+   "status": "byggd, ej vald",
+   "anatomi": "ljus zon = handlingszon: telefonrad + kontaktblock utan ram (spår 1–2: Kontakta oss, tel, e-post, adress, 5,0) + Hitta rätt (spår 3–5); mörk zon slank: varumärke · Mer om Ampy · Avdrag 2026 · Följ oss",
+   "skarmdump": "footer-cro-riktning-c-desktop.png"
+  },
+  {
+   "namn": "v2.html",
+   "status": "ersatt första förslag",
+   "anatomi": "—"
+  }
+ ],
+ "signaturenhet": "Två-zons-footern: ljus diagonal cyan-gradient ('Populära kategorier') ovanpå en mörk navy-gradient med inset-skugga och en nästan svart bar — sajtens enda gradient-ytor i pastell-cyan.",
+ "defekter": [
+  "Prefooter-gradientens #70becb/#bbf5ff och footer-gradientens #00011e/#01021f/#010033 saknar tokens — fyra 'nästan-navy' till (utöver #090b32).",
+  "Google-betyget renderas i Plus Jakarta Sans 800 uppercase lh 0 — enda stället på sajten med det typsnittet; färgen är Bricks --color-15 (#00a88f), inte --apteal-core (#00a991) — riktningarna byter till Outfit/vit men det är ett ägarval som väntar.",
+  "Blandade enheter i samma block: --apspace-* (fluid) för det mesta, men --space-m/-l (Bricks legacy 24/36 px fasta), brand-text 16px fast, policy 14px fast, kolumn-gap 60px 50px fast.",
+  "Sociala ikonernas padding på ankaret (9.9px) ger 53.8px-höga träffytor som styr hela kolumnhöjden (201px) — layouthöjd av misstag.",
+  "Prefooter-grid gap 0 (kolumner 256 utan spalt) och h4 hoppar UPP i storlek på mobil (--aptext-mm → --aptext-ml @478).",
+  "Text #363636 och #1e1e1e i prefootern utan tokens; rubriken 'Få en kostnadsfri konsultation!' bär ett '!'.",
+  "Shape divider i Bricks-JSON får fill:none av temat → renderar ingenting (död kod på live).",
+  "Adress Västbergavägen 25, 126 30 Hägersten — [GAP] mot Solna enligt minnesnoten; org.nr saknas i footern; '5.0' hårdkodat."
+ ],
+ "regler_som_ligger_i_koden": [
+  "Bricks-brytpunkter 991/767/478",
+  "container 1280 + --apspace-l sidopadding",
+  "fluid ap-tokens för storlek/avstånd, Bricks-legacy för gap",
+  "order-baserad omflödning (brand 1, links 2, google 3)",
+  "informationen identisk över baslinje/v2/riktningar — bara designen skiljer",
+  "riktningar: ingen ny sida, samma href-mängd; telefonrad överst (godkänd)"
+ ],
+ "matdata": "inventering/_probes/out/a1-footer-cro.json"
+}

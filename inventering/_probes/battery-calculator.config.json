@@ -1,0 +1,45 @@
+{
+  "file": "kallor/Battery-calculator/index.html",
+  "out": "inventering/_probes/battery-calculator.measure.json",
+  "scope": ".ampy-calc",
+  "cssVars": ["--action-primary", "--on-surface-text-faint", "--chart-stream-1", "--chart-stream-2", "--chart-stream-3", "--chart-stream-4", "--chart-line-loss", "--chart-line-profit", "--chart-zone-loss", "--chart-zone-profit", "--fs-4xl", "--fs-2xl"],
+  "before": [{"key": "overflow", "evalStore": "(() => { const w = document.documentElement.clientWidth; const out = []; document.querySelectorAll('body *').forEach(el => { const r = el.getBoundingClientRect(); if (r.right > w + 1 && r.width > 0) out.push({ sel: el.className && String(el.className).slice(0, 60) || el.tagName, right: Math.round(r.right), w: Math.round(r.width) }); }); return { clientWidth: w, scrollWidth: document.documentElement.scrollWidth, offenders: out.slice(0, 8) }; })()"}],
+  "roles": {
+    "h1": ".ampy-calc__header h1, .ampy-calc__header .ampy-calc__t-2xl",
+    "card-input": ".ampy-calc__card:not(.ampy-calc__card--surface)",
+    "card-surface": ".ampy-calc__card--surface",
+    "hero15-value": ".ampy-calc__hero15-value",
+    "hero15-unit": ".ampy-calc__hero15-unit",
+    "trio-value": ".ampy-calc__trio-value",
+    "streams-bar": ".ampy-calc__streams-bar",
+    "streams-segment-1": ".ampy-calc__streams-segment:nth-child(1)",
+    "streams-segment-2": ".ampy-calc__streams-segment:nth-child(2)",
+    "streams-segment-3": ".ampy-calc__streams-segment:nth-child(3)",
+    "streams-segment-4": ".ampy-calc__streams-segment:nth-child(4)",
+    "streams-summary": ".ampy-calc__streams-summary",
+    "chart": ".ampy-calc__chart",
+    "chart-end-value": ".ampy-calc__chart-corner--end-value",
+    "chart-today": ".ampy-calc__chart-corner--today",
+    "chart-end-axis": ".ampy-calc__chart-corner--end-axis",
+    "be-dot": ".ampy-calc__be-dot",
+    "be-line": ".ampy-calc__be-line",
+    "be-caption": ".ampy-calc__be-caption",
+    "be-time": ".ampy-calc__be-time",
+    "chart-svg-path-loss": ".ampy-calc__chart-plot svg path[stroke]:nth-of-type(1)",
+    "toggle-active": ".ampy-calc__toggle-option[aria-pressed='true']",
+    "segmented-active": ".ampy-calc__segmented-option[aria-pressed='true']",
+    "stepper": ".ampy-calc__stepper",
+    "btn-primary": ".ampy-calc__btn--primary",
+    "email-input": ".ampy-calc__card--surface .ampy-calc__input",
+    "email-btn": ".ampy-calc__btn--outline, .ampy-calc__btn--secondary",
+    "btn-link": ".ampy-calc__btn-link",
+    "disclosure-summary": ".ampy-calc__disclosure-summary"
+  },
+  "states": [
+    {
+      "name": "svg",
+      "actions": [{"key": "svg", "evalStore": "(() => { const svg = document.querySelector('.ampy-calc__chart-plot svg'); if (!svg) return null; return [...svg.querySelectorAll('path, line, circle, polygon')].slice(0, 12).map(n => ({ tag: n.tagName, cls: n.getAttribute('class'), stroke: n.getAttribute('stroke') || getComputedStyle(n).stroke, sw: n.getAttribute('stroke-width') || getComputedStyle(n).strokeWidth, fill: n.getAttribute('fill') || getComputedStyle(n).fill, dash: n.getAttribute('stroke-dasharray') })); })()"}, {"click": ".ampy-calc__streams-summary"}, {"wait": 300}],
+      "roles": {"streams-legend": ".ampy-calc__streams-legend", "stream-row": ".ampy-calc__stream-row", "stream-dot": ".ampy-calc__stream-dot", "stream-name": ".ampy-calc__stream-name", "stream-value": ".ampy-calc__stream-value", "stream-pct": ".ampy-calc__stream-pct"}
+    }
+  ]
+}

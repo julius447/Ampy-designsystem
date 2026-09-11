@@ -1,0 +1,111 @@
+{
+  "kalla": "fotobedomningen",
+  "status": "v2 'Avslutskortet' (.afk) byggd + granskad, ersätter v1 helt; go/no-go = den dubbla bilduppladdningen (.aof i Hero_2); previewens markup = bytes ur dist/afk-backend.php",
+  "auktoritet": 2,
+  "ingang": "kallor/Fotobed-mning-CRO-/v2/preview/index.html (alla vyer) · _vy-m-elcentral.html (390) · _vy-d-elcentral.html (1280) · _vy-m-kvitto.html · v1 i kallor/Fotobed-mning-CRO-/preview/index.html (ersatt)",
+  "matmetod": "inventering/_probes/fotobedomningen.mjs → _probes/out/fotobedomningen.json (px-CSS, previewens body låst till 390 resp. 1280 px)",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/fotobedomningen-mobile.png",
+    "inventering/skarmdumpar/fotobedomningen-desktop.png",
+    "inventering/skarmdumpar/fotobedomningen-desktopvy-desktop.png",
+    "inventering/skarmdumpar/fotobedomningen-kvitto-mobile.png",
+    "inventering/skarmdumpar/fotobedomningen-alla-vyer-desktop.png",
+    "inventering/skarmdumpar/fotobedomningen-v1-desktop.png"
+  ],
+  "farger": [
+    {"hex": "#f5f9ff", "token": "--apsky-mist", "roll": "--afk-band: sektionsband + de fyra kalla staplarnas bakgrund (två ytor totalt: #fff + #f5f9ff)", "antal": 5, "kalla_fil": "v2/dist/afk-styles.css:~20"},
+    {"hex": "#ffffff", "token": "--appure-white", "roll": "--afk-yta: kortet / högerkortet, vald stapel", "antal": 2, "kalla_fil": "v2/dist/afk-styles.css:~21"},
+    {"hex": "#090b32", "token": "--apmidnight-blue", "roll": "--afk-ink: eyebrow, H2-svar, staplarnas text, fokusring 3 px (19,00:1), Ring-knapp (solid)", "antal": 11, "kalla_fil": "v2/dist/afk-styles.css:~22"},
+    {"hex": "#3b3f59", "token": null, "roll": "--afk-ink-body: brödtext, H2-fråga, etiketter (10,29:1) — utanför tokens (samma som eljour-block)", "antal": 58, "kalla_fil": "v2/dist/afk-styles.css:~23"},
+    {"hex": "#5f6480", "token": null, "roll": "--afk-ink-soft: ansvar/candour/GDPR/akut-rad (5,80:1) OCH --afk-kant: KONTROLLKANT på fält (1.4.11 ≥3:1)", "antal": 11, "kalla_fil": "v2/dist/afk-styles.css:~24,26"},
+    {"hex": "#e6ecf6", "token": null, "roll": "--afk-linje: kortram + dekorativa avdelare (1,19:1 — aldrig kontrollgräns)", "antal": 4, "kalla_fil": "v2/dist/afk-styles.css:~25"},
+    {"hex": "#00a991", "token": "--apteal-core", "roll": "--afk-teal: endast linjeglyf (info-ikoner) alltid redundant mot text; aldrig text/UI-kant (2,96:1); progress-linje; Ring-chip", "antal": 11, "kalla_fil": "v2/dist/afk-styles.css:~27"},
+    {"hex": "#0a8f7c", "token": null, "roll": "--afk-teal-dark: meningsbärande glyf (eyebrow-kamera, foto-chip, kvitto-bock) 3,58:1 mot tinten", "antal": 7, "kalla_fil": "v2/dist/afk-styles.css:~28"},
+    {"hex": "#e3f6f1", "token": null, "roll": "--afk-teal-tint: foto-chip 36 px, kvitto-bock 40 px, router-rad vald", "antal": 2, "kalla_fil": "v2/dist/afk-styles.css:~29"},
+    {"hex": "#b3261e / #fdeceb", "token": null, "roll": "--afk-fel: felmeddelande + invalid-kant (6,54:1); akut-varningsikon", "antal": 3, "kalla_fil": "v2/dist/afk-styles.css:~30-31"},
+    {"hex": "#282a53", "token": null, "roll": "--afk-cta-ink: submit-text (5,51:1 mot gradientens mörkaste)", "antal": 5, "kalla_fil": "v2/dist/afk-styles.css:~32"},
+    {"hex": "linear-gradient(120deg, #55ff9a 0%, #5eb1bf 100%)", "token": "#55ff9a = --apneon-mint · #5eb1bf utanför", "roll": "--afk-cta-grad: submiten = blockets ENDA gradient (samplad ur ampy-cta-buttons.css:91-125, 'naken pil, inget vitt chip, ingen puls')", "antal": 1, "kalla_fil": "v2/dist/afk-styles.css:~33"},
+    {"hex": "rgba(9,11,50,.04/.07/.10)", "token": null, "roll": "--afk-skugga-kort: 0 1px 2px + 0 10px 30px + 0 24px 56px −20px", "antal": 1, "kalla_fil": "v2/dist/afk-styles.css:~38"},
+    {"hex": "inset rgba(255,255,255,.45) + rgba(9,11,50,.06) + rgba(94,199,160,.45)", "token": null, "roll": "--afk-skugga-handling: submitens skugga (hover .5/.07/.55)", "antal": 1, "kalla_fil": "v2/dist/afk-styles.css:~39-40"},
+    {"hex": "rgba(9,11,50,.06)", "token": null, "roll": "progress-spår + ikonknapp hover", "antal": 2, "kalla_fil": "v2/dist/afk-styles.css"}
+  ],
+  "typografi": [
+    {"roll": "eyebrow 'Fotobedömning'", "font": "Outfit (Google Fonts i preview; dist bär ingen @font-face)", "size": "15px", "px_desktop": 15, "px_mobil": 15, "weight": 600, "lh": "20px", "ls": "0.02em", "color": "#090b32 + kamera-glyf 16 px #0a8f7c", "kalla_fil": "v2/dist/afk-styles.css:~72-78"},
+    {"roll": "h2 (fråga + svar)", "font": "Outfit", "size": "28px · ≥900 cqi 36px", "px_desktop": 36, "px_mobil": 28, "weight": "fråga 300 (#3b3f59) · svar 500 (#090b32)", "lh": "1.18 / 1.15 desktop", "ls": "-0.015em", "color": "tvåfärgad", "text_wrap": "balance; svar max 22ch desktop", "kalla_fil": "v2/dist/afk-styles.css:~79-84, ~330-332"},
+    {"roll": "lead (endast desktop)", "font": "Outfit", "size": "18px", "px_desktop": 18, "px_mobil": "dold", "weight": 300, "lh": 1.55, "ls": "normal", "color": "#3b3f59", "max_width": "440px", "kalla_fil": "v2/dist/afk-styles.css:~333-337"},
+    {"roll": "info-rad (löften)", "font": "Outfit", "size": "17px", "px_desktop": 17, "px_mobil": 17, "weight": 400, "lh": 1.45, "ls": "normal", "color": "#3b3f59", "kalla_fil": "v2/dist/afk-styles.css:~95"},
+    {"roll": "akut-rad + ansvar + candour + GDPR + fel", "font": "Outfit", "size": "15px", "px_desktop": 15, "px_mobil": 15, "weight": "400 (akut/fel) · 300 (ansvar/candour/gdpr)", "lh": 1.5, "ls": "normal", "color": "#5f6480 / #b3261e", "kalla_fil": "v2/dist/afk-styles.css:~97, ~176, ~190, ~215"},
+    {"roll": "telefonnummer i akut-rad", "font": "Outfit", "size": "15px", "px_desktop": 15, "px_mobil": 15, "weight": 600, "lh": 1.5, "ls": "normal", "color": "#090b32", "träffyta": "43,75 px via padding 11 + negativ margin", "kalla_fil": "v2/dist/afk-styles.css:~99-105"},
+    {"roll": "guide-rubrik 'Så blir bilden användbar'", "font": "Outfit", "size": "15px", "px_desktop": 15, "px_mobil": 15, "weight": 600, "lh": "normal", "ls": "normal", "color": "#090b32", "kalla_fil": "v2/dist/afk-styles.css:~140"},
+    {"roll": "stapel (foto + input)", "font": "Outfit", "size": "17px", "px_desktop": 17, "px_mobil": 17, "weight": "400 (stapeltext 500)", "lh": 1.2, "ls": "normal", "color": "#090b32, placeholder #5f6480", "kalla_fil": "v2/dist/afk-styles.css:~150-158, ~170"},
+    {"roll": "fältetikett", "font": "Outfit", "size": "15px", "px_desktop": 15, "px_mobil": 15, "weight": 500, "lh": "20px", "ls": "normal", "color": "#3b3f59", "kalla_fil": "v2/dist/afk-styles.css:~181-184"},
+    {"roll": "submit 'Skicka och bli uppringd'", "font": "Outfit", "size": "16px", "px_desktop": 16, "px_mobil": 16, "weight": 500, "lh": 1, "ls": "normal", "color": "#282a53", "kalla_fil": "v2/dist/afk-styles.css:~196-207"},
+    {"roll": "kvitto-rubrik 'Tack. Din bild är inskickad.'", "font": "Outfit", "size": "20px", "px_desktop": 20, "px_mobil": 20, "weight": 500, "lh": 1.3, "ls": "normal", "color": "#090b32", "kalla_fil": "v2/dist/afk-styles.css:~270"},
+    {"roll": "kvitto-ref / kvitto-namn / vald-rad", "font": "Outfit", "size": "15px", "px_desktop": 15, "px_mobil": 15, "weight": "400 / 500 / 500+300", "lh": "normal", "ls": "normal", "color": "#5f6480 / #090b32", "kalla_fil": "v2/dist/afk-styles.css:~236-238, ~272-275"}
+  ],
+  "spacing": [
+    {"roll": "sektion padding", "varde": "40px 16px 48px (mobil + desktop)", "px_desktop": "40 / 16 / 48", "px_mobil": "40 / 16 / 48", "token": null, "kalla_fil": "v2/dist/afk-styles.css:~45"},
+    {"roll": "kort (mobil)", "varde": "max-width 358, padding 24px 20px, ram 1 px #e6ecf6", "px_desktop": null, "px_mobil": "358 bred, 24/20", "token": null, "kalla_fil": "v2/dist/afk-styles.css:~64-70"},
+    {"roll": "desktop-grid (≥900 cqi)", "varde": "kortet blir grid minmax(360px,480px) minmax(0,1fr), column-gap clamp(32px, 3.5cqi, 48px) = 43,7 @1280; vänster = eyebrow/H2/lead/info, höger = formulärkort padding 32", "px_desktop": "480 | 724, gap 43.7", "px_mobil": null, "token": null, "kalla_fil": "v2/dist/afk-styles.css:~318-345"},
+    {"roll": "eyebrow → H2 → info", "varde": "eyebrow h 20 mb 8; H2 mb 12; lead mb 20 (desktop); info padding 14 0, row-gap 10, mb 16", "px_desktop": "8 / 12 / 20 / 14+10", "px_mobil": "8 / 12 / 14+10", "token": null, "kalla_fil": "v2/dist/afk-styles.css:~72-96"},
+    {"roll": "glyf-kolumn", "varde": "grid 26px 1fr, column-gap 13, glyf-ruta 25 hög (ikon 22)", "px_desktop": "26 + 13", "px_mobil": "26 + 13", "token": null, "kalla_fil": "v2/dist/afk-styles.css:~92-94"},
+    {"roll": "FEM STAPLAR", "varde": "fotoruta 52 (padding 0 16 0 8, chip 36) · 3 fält 52 (padding 0 16) · submit 58 (padding 11 22) — uppmätt 52/52/52/52/58", "px_desktop": "52×4 + 58", "px_mobil": "52×4 + 58", "token": null, "kalla_fil": "v2/dist/afk-styles.css:~149-160, ~196-200; uppmätt extra.staplar"},
+    {"roll": "fält-rytm", "varde": "foto mb 8, ansvar mb 16, fält mb 14, etikett mb 6, fel mt 6, submit mb 14, candour mb 10; desktop fältpar namn+telefon i 2 kolumner gap 20", "px_desktop": "8/16/14/6/14/10, par-gap 20", "px_mobil": "8/16/14/6/14/10", "token": null, "kalla_fil": "v2/dist/afk-styles.css:~161-215"},
+    {"roll": "vald stapel", "varde": "52 → 68 hög (användarinitierat, ingen CLS), thumb 40 radie 10, ikonknapp 44, progress 3 px", "px_desktop": 68, "px_mobil": 68, "token": null, "kalla_fil": "v2/dist/afk-styles.css:~222-260"},
+    {"roll": "scroll-margin", "varde": "96 px ('mot den 83 px höga sticky call-baren')", "px_desktop": 96, "px_mobil": 96, "token": null, "kalla_fil": "v2/dist/afk-styles.css:~50"}
+  ],
+  "container": [
+    {"roll": "kort max-width", "varde": "358 mobil · 1280 desktop (≥900 cqi); container-type inline-size på .afk", "kalla_fil": "v2/dist/afk-styles.css:~41-43, ~322"}
+  ],
+  "radier": [
+    {"roll": "radiestege (semantisk)", "varde": "999 chip/pill · 12 fält (--afk-r-in) · 16 handling (--afk-r-handling) · 20 kort (--afk-r-kort); chip 10, thumb 10", "px": "999 / 12 / 16 / 20 / 10", "token": "12 = --apradius-m@1440 · 20 = --apradius-l@1440 · 16 saknas"}
+  ],
+  "skuggor": [
+    {"roll": "kort", "varde": "0 1px 2px rgba(9,11,50,.04), 0 10px 30px rgba(9,11,50,.07), 0 24px 56px -20px rgba(9,11,50,.10)", "token": null},
+    {"roll": "submit (blockets ENDA på en kontroll)", "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.06), 0 10px 26px -6px rgba(94,199,160,.45); hover .5/.07/.55 + translateY(-1.5px)", "token": null},
+    {"roll": "fält", "varde": "ingen (1 px kant #5f6480 bär formen)", "token": null}
+  ],
+  "rorelse": [
+    {"roll": "tak", "varde": "300 ms totalt, 160 ms på handlingsytor: fält border/bg .16s, submit transform/box-shadow/filter .16s (hover −1.5 px, saturate 1.06, pil scale 1.18), router-glyf rotate .16s, progress width 200ms linear, kvitto-puls afkPuls 2.8s (opacity 1→.55)", "kalla_fil": "v2/dist/afk-styles.css:~158, ~204, ~253, ~282, ~286-296"},
+    {"roll": "hover-guard", "varde": "@media (hover:hover) för fält/submit/ikonknapp", "kalla_fil": "v2/dist/afk-styles.css:~286"}
+  ],
+  "breakpoints": ["@container afk (min-width: 900px) → tvåkolumns kort", "hover:hover", "(ingen viewport-@media för layout)"],
+  "komponenter": [
+    {"namn": "band + kort .afk/.afk__kort", "anatomi": "sky-mist-band 40/16/48; vitt kort 358 radie 20 ram #e6ecf6 tredelad skugga padding 24/20; desktop: kortet löses upp i grid — vänsterpanel utan yta + högerkort padding 32", "states": ["mobil", "≥900 cqi"], "html_ref": "v2/preview/_vy-m-elcentral.html", "css_ref": "v2/dist/afk-styles.css:~41-70, ~318-345", "skarmdump_crop": "fotobedomningen-mobile.png"},
+    {"namn": "eyebrow + tvåfärgad H2", "anatomi": "'Fotobedömning' 15/600 med teal-dark kamera; H2 28/36: fråga 300 grå + svar 500 navy ('Osäker på elcentralen? Du får besked av en behörig elektriker.')", "states": ["default"], "html_ref": "afk__eyebrow, afk__h2", "css_ref": "v2/dist/afk-styles.css:~72-86"},
+    {"namn": "info-rader (löften + akut)", "anatomi": "mellan två hårlinjer: klocka + '24 timmar', bock + 'besked även om…', röd varningstriangel + akut-rad 15 px med fet telefonlänk (43,75 px träffyta) + '112'", "states": ["default"], "html_ref": "afk__info", "css_ref": "v2/dist/afk-styles.css:~88-105"},
+    {"namn": "guide 'Så blir bilden användbar' + säkerhetsrad", "anatomi": "15/600 rubrik + 3 bock-punkter 17/400 + varningstriangel med fet 'Skruva aldrig loss någonting…'", "states": ["default"], "html_ref": "afk__guide, afk__sakerhet", "css_ref": "v2/dist/afk-styles.css:~139-147"},
+    {"namn": "fotoruta (stapel 1)", "anatomi": "52 px kall stapel #f5f9ff, 1 px kant #5f6480, radie 12, teal-tint chip 36 radie 10 med kamera #0a8f7c, 'Fota elcentralen' 17/500; dold file-input; focus-within navy 3 px; vald: 68 px vit med thumb 40 + två rader + 44 px kryssknapp + 3 px progress", "states": ["default", "hover (vit + navy kant)", "focus-within", "--vald", "--laddar", "--fel + retry"], "html_ref": "afk__stapel--foto", "css_ref": "v2/dist/afk-styles.css:~149-176, ~222-268"},
+    {"namn": "fält ×3 (staplar 2–4)", "anatomi": "etikett 15/500 + 52 px input (samma stapel), fel 15/400 röd + invalid-kant; desktop: namn + telefon som par", "states": ["default", "hover", "focus-visible", "aria-invalid"], "html_ref": "afk__falt", "css_ref": "v2/dist/afk-styles.css:~178-194"},
+    {"namn": "submit (stapel 5, 'den tända')", "anatomi": "58 px, radie 16, neonmint→#5eb1bf-gradient, text #282a53 16/500, naken pil 20 px höger; enda gradient/skugga/rörelse", "states": ["default", "hover", "active", "focus-visible", "aria-busy"], "html_ref": "afk__submit", "css_ref": "v2/dist/afk-styles.css:~196-210"},
+    {"namn": "candour + GDPR", "anatomi": "15/300 #5f6480: 'En bild säger mycket, men inte allt…' + GDPR-rad med understruken integritetspolicy-länk", "states": ["default"], "html_ref": "afk__candour, afk__gdpr", "css_ref": "v2/dist/afk-styles.css:~212-217"},
+    {"namn": "kvitto (resultatkort)", "anatomi": "samma kort: bock 40 px teal-tint, 'Tack. Din bild är inskickad.' 20/500, 'Ärende A7K2Q9' 15/400, en löftesrad mellan hårlinjer, candour-text; Ring-knapp solid navy 58 med teal-chip (ingen gradient — 'EN handlingsgradient')", "states": ["kvitto"], "html_ref": "v2/preview/_vy-m-kvitto.html", "css_ref": "v2/dist/afk-styles.css:~262-284", "skarmdump_crop": "fotobedomningen-kvitto-mobile.png"},
+    {"namn": "igenkänningsrouter (K0, ortssidor)", "anatomi": "details/summary + 56 px rader med kontrollkant, aria-pressed = navy kant + teal-tint", "states": ["kollapsad", "open", "aria-pressed"], "html_ref": "v2/preview/_vy-m-geo.html", "css_ref": "v2/dist/afk-styles.css:~106-137"}
+  ],
+  "varianter": [
+    {"namn": "v1 (preview/index.html i repots rot)", "skillnad": "ERSATT — '22 av 33 deklarationer under 15 px', sju skuggade kort, teal som UI-kant; 13 705 px lång preview med overflow-x", "docH": "13705 / —"},
+    {"namn": "_vy-m-spotlights (K3), _vy-m-geo (K0 router), _vy-fel-*", "skillnad": "samma CSS, andra löftesklasser/fotoobjekt/fellägen", "docH": null}
+  ],
+  "signaturenhet": "Fem staplar, en tänd: fotorutan + tre fält är fyra identiska kalla 52 px-staplar (#f5f9ff, 1 px #5f6480, radie 12); submiten är den femte — 58 px, radie 16, blockets enda gradient, enda skugga, enda rörelse. Konverteringen bärs helt i kortet (bild + namn + telefon + adress + kvitto), utan överlämning till MainContact.",
+  "defekter": [
+    "Egen tokenrymd --afk-* med literaler; träffar mot ap*: sky-mist, white, midnight, teal-core, neon-mint — resten (#3b3f59, #5f6480, #e6ecf6, #0a8f7c, #e3f6f1, #b3261e, #282a53, #5eb1bf) delas med eljour-block/sticky-bar men finns inte i paletten.",
+    "#5f6480 används både som mjuk textfärg OCH som kontrollkant — en färg, två semantiker.",
+    "Radie 16 (handling) och 10 (chip/thumb) saknas i ap-skalan; 12/20 matchar bara @1440.",
+    "H2 28/36 med vikt 300+500 i samma rubrik — sjätte H2-storleken i urvalet (36 desktop, men 28 mobil mot familjens 26,8/certificates 26,8/eljour 26).",
+    "Brödtext 17/400 lh 1.45 (löften) + 15/300 lh 1.5 (noter) — ännu en textskala; desktop-lead 18/300 lh 1.55.",
+    "Google Fonts i preview; UA-default h2 font-weight 700 ligger kvar på h2-elementet (spännen sätter 300/500, så inget syns).",
+    "Desktop-vyn är låst till 1280 px body i previewen — blocket har ingen egen max-width-yta ovanför 1280 (vänsterpanelens ~200 px tomma bandyta noterad i CSS-kommentar).",
+    "[GAP] dubbel bilduppladdning (.aof i Hero_2) är go/no-go; REST-endpoint /wp-json/ampy-afk/v1; elektriker-signering av löftesklasser."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Noll deklarationer under 15 px; två ytor (#fff, #f5f9ff); radiestege med semantik 999/12/16/20.",
+    "Teal endast som linjeglyf, alltid redundant mot text — aldrig text, aldrig UI-kant (2,96:1); kontrollkant #5f6480 (5,80:1) eftersom #e6ecf6 är 1,19:1.",
+    "Fokusring #090b32 3 px (19,00:1), aldrig #55ff9a mot vitt (1,30:1); tvåtonsring på mörk Ring-knapp.",
+    "px överallt, aldrig rem; @container, aldrig viewport-@media för layout; wrapper-scopade tokens; :where()-resets så zonmarginaler inte kollapsar.",
+    "Tak 300 ms rörelse, 160 ms på handlingsytor; hover bara på hover:hover.",
+    "EN handlingsgradient per block — Ring-knappen i kvittot är solid midnight.",
+    "Fungerar utan JS (riktig submit) och blir bättre med; file-input dold utan display:none (tangentbordsfokus).",
+    "Generiskhet via tre axlar (tjänst-slug 23 rader, löftesklass K0–K4, fotoobjekt 8) — ingen tyst fallback; okänd slug renderar ingenting.",
+    "scroll-margin 96 px mot sticky call-baren; 43,75–44 px träffytor; candour-text under submiten på alla vyer."
+  ]
+}

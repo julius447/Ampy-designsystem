@@ -1,0 +1,119 @@
+{
+  "kalla": "article-template",
+  "status": "levererad artikelmall (React + Vite + Tailwind, 21 komponenter) + Bricks-överlämning för tabellen (handover-ampy-tabell/); klonen = repots läge (187 lokala filer okommitterade enligt briefen)",
+  "auktoritet": 2,
+  "ingang": "kallor/ampy-article-template/index.html (Vite-entry — byggd i scratchpad, INTE i kallor/) · src/index.css · tailwind.config.js · handover-ampy-tabell/ampy-tabell.css",
+  "matmetod": "kopia → /scratchpad/article-build, npm install + vite build --base ./ → inventering/_probes/article-template.mjs på dist/ (root 16 px, Tailwind) → _probes/out/article-template.json",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/article-template-desktop.png",
+    "inventering/skarmdumpar/article-template-mobile.png",
+    "inventering/skarmdumpar/article-template-desktop-topp.png",
+    "inventering/skarmdumpar/article-template-desktop-mitt.png",
+    "inventering/skarmdumpar/article-template-desktop-faq.png"
+  ],
+  "farger": [
+    {"hex": "#090b32", "token": "--apmidnight-blue", "roll": "Tailwind navy-900/DEFAULT: rubriker, hero-bakgrund, footer, mörka ytor", "antal": 270, "kalla_fil": "tailwind.config.js navy"},
+    {"hex": "#f5f9ff", "token": "--apsky-mist", "roll": "cloud-100: sidbakgrund", "antal": 4, "kalla_fil": "tailwind.config.js cloud; src/index.css body"},
+    {"hex": "#55ff9a", "token": "--apneon-mint", "roll": "ampy-300: primärknapp 'Få offert', TOC-aktiv-kant, verifierad-badge, footer-H4", "antal": 4, "kalla_fil": "tailwind.config.js ampy"},
+    {"hex": "#326afd", "token": null, "roll": "electric-500 'Primary blue — links, secondary CTAs, accents' — FINNS INTE I AMPYS PALETT (länkar, TOC-ikon, tabellrubrik, brand-*)", "antal": 73, "kalla_fil": "tailwind.config.js electric/brand; src/index.css a"},
+    {"hex": "#1a1d2e", "token": null, "roll": "brödtext i artikel (p, li, tabellceller) — utanför tokens (nära --apdeepest-blue #0e0f15/--apmidnight-blue men ≠)", "antal": 68, "kalla_fil": "src/index.css p, .article-body p"},
+    {"hex": "#141a47 / #2a3268 / #6b78a3 / #a4adc9 / #d2d6e8 / #eef0f8", "token": null, "roll": "navy-700/500/300/200/100/50: sekundär text, TOC-länkar (#2a3268), byline (#6b78a3), citattecken (#a4adc9)", "antal": 153, "kalla_fil": "tailwind.config.js navy-skalan"},
+    {"hex": "#eaf0fb / #dde5f4", "token": null, "roll": "cloud-200/300: kortramar, bildplatshållare (15×), takeaways-bg", "antal": 15, "kalla_fil": "tailwind.config.js cloud"},
+    {"hex": "#ebfff3 / #0a9e48 / #2ee378 / #15c45c", "token": null, "roll": "ampy-50/600/400/500: verifierad-badge bg/text, hover på knapp, gradient-slut", "antal": 8, "kalla_fil": "tailwind.config.js ampy/verified"},
+    {"hex": "#5eb1bf", "token": null, "roll": "teal-500 'Secondary teal' (samma blågröna som ROT-GT/certificates) — inte --apteal-core", "antal": 0, "kalla_fil": "tailwind.config.js teal"},
+    {"hex": "#ffffff", "token": "--appure-white", "roll": "kort, header, TOC, tabell", "antal": 27, "kalla_fil": "computed"},
+    {"hex": "#dbe4f3", "token": null, "roll": "::selection", "antal": 1, "kalla_fil": "src/index.css"},
+    {"hex": "linear-gradient(135deg, #326afd, #55ff9a) · (135deg, #090b32, #1842c2 60%, #15c45c)", "token": null, "roll": ".ampy-gradient / .ampy-gradient-dark (utilities)", "antal": 0, "kalla_fil": "src/index.css utilities"},
+    {"hex": "#e7edf7 / #d7e0ef / #fafcff", "token": null, "roll": "Bricks-tabellens linjer + huvudbakgrund", "antal": 3, "kalla_fil": "handover-ampy-tabell/ampy-tabell.css"}
+  ],
+  "typografi": [
+    {"roll": "body", "font": "Outfit (Google Fonts 300–900)", "size": "16px", "px_desktop": 16, "px_mobil": 16, "weight": 400, "lh": 1.65, "ls": "normal", "color": "#090b32", "kalla_fil": "src/index.css body"},
+    {"roll": "h1 (hero, på navy)", "font": "Outfit", "size": "text-4xl lg:text-5xl", "px_desktop": 48, "px_mobil": 36, "weight": 800, "lh": "1.0 (48 px) / 1.08", "ls": "-0.025em (−1,2 px)", "color": "#fff + drop-shadow", "kalla_fil": "src/index.css h1; ArticleHero.jsx"},
+    {"roll": "hero-intro", "font": "Outfit", "size": "20px / 16px", "px_desktop": 20, "px_mobil": 16, "weight": 400, "lh": "1.4 / 1.625", "ls": "normal", "color": "rgba(255,255,255,.85)", "max_width": "672px", "kalla_fil": "ArticleHero.jsx"},
+    {"roll": "h2 (artikel)", "font": "Outfit", "size": "text-2xl lg:text-3xl", "px_desktop": 30, "px_mobil": 24, "weight": 700, "lh": "1.2 / 1.333", "ls": "-0.015em", "color": "#090b32", "margin": "mt 48 mb 20, scroll-mt 112", "kalla_fil": "src/index.css .article-body h2"},
+    {"roll": "h2 'Populära artiklar'", "font": "Outfit", "size": "text-3xl lg:text-4xl", "px_desktop": 36, "px_mobil": 30, "weight": 700, "lh": 1.11, "ls": "-0.025em", "color": "#090b32", "kalla_fil": "RelatedArticles.jsx"},
+    {"roll": "h3 (artikel)", "font": "Outfit", "size": "text-xl", "px_desktop": 20, "px_mobil": 20, "weight": 600, "lh": 1.4, "ls": "-0.015em", "color": "#090b32", "margin": "mt 32 mb 12; grön vänsterkant 3 px i ContentSection", "kalla_fil": "src/index.css .article-body h3"},
+    {"roll": "h3 i kort (CTA-review 26/32, sektion 22/24, relaterade 17/17,5)", "font": "Outfit", "size": "literaler", "px_desktop": "32 / 24 / 17.5", "px_mobil": "26 / 22 / 17", "weight": "700 / 600 / 600", "lh": "1.4", "ls": "-0.025em", "color": "#090b32", "kalla_fil": "CTAReview.jsx, ContentSection.jsx, RelatedArticles.jsx"},
+    {"roll": "brödtext p", "font": "Outfit", "size": "1.125rem", "px_desktop": 18, "px_mobil": 18, "weight": 400, "lh": 1.7, "ls": "normal", "color": "#1a1d2e", "margin": "mb 20", "kalla_fil": "src/index.css .article-body p"},
+    {"roll": "listor ul/ol", "font": "Outfit", "size": "1.0625rem", "px_desktop": 17, "px_mobil": 17, "weight": 400, "lh": 1.625, "ls": "normal", "color": "#1a1d2e", "kalla_fil": "src/index.css .article-body ul/ol"},
+    {"roll": "länk i brödtext", "font": "Outfit", "size": "ärvd", "px_desktop": 18, "px_mobil": 18, "weight": 400, "lh": 1.7, "ls": "normal", "color": "#326afd, underline 1.5px offset 3 decoration electric-200", "kalla_fil": "src/index.css .article-body a"},
+    {"roll": "eyebrows (SNABBT SVAR, KEY TAKEAWAYS, PRO TIP, tabellrubrik, footer-H4)", "font": "Outfit", "size": "11–15px", "px_desktop": "11 / 15 / 18", "px_mobil": "samma", "weight": "700–800", "lh": "normal", "ls": "0.2–0.25em versal", "color": "#090b32 / #326afd / #55ff9a / white .6", "kalla_fil": "QuickAnswer.jsx, KeyTakeaways.jsx, ProTip.jsx, ComparisonTable.jsx, SiteFooter.jsx"},
+    {"roll": "TOC-länk", "font": "Outfit", "size": "15.5px", "px_desktop": 15.5, "px_mobil": 15.5, "weight": 500, "lh": 1.375, "ls": "normal", "color": "#2a3268 (aktiv: electric på #eef3ff-platta)", "kalla_fil": "TableOfContents.jsx"},
+    {"roll": "byline", "font": "Outfit", "size": "13px", "px_desktop": 13, "px_mobil": 13, "weight": "400, namn 600", "lh": "tight", "ls": "normal", "color": "#6b78a3 / #090b32", "kalla_fil": "AuthorBlock.jsx"},
+    {"roll": "citat (Quote)", "font": "Outfit", "size": "18px", "px_desktop": 18, "px_mobil": 17, "weight": 400, "lh": 1.6, "ls": "normal", "color": "#1a1d2e; citattecken 40/700 #a4adc9", "kalla_fil": "Quote.jsx"},
+    {"roll": "Bricks-tabell", "font": "Outfit", "size": "clamp(.875rem, .85rem + .12vw, .9rem) · thead .68rem", "px_desktop": "14.4 / 10.9", "px_mobil": "14 / 10.9", "weight": "400 / 600", "lh": 1.5, "ls": "thead .07em versal", "color": "#1a1d2e / #141a47", "kalla_fil": "handover-ampy-tabell/ampy-tabell.css"}
+  ],
+  "spacing": [
+    {"roll": "artikelmått", "varde": "innehållskolumn 704 px (max-w-article 760 i config men 2-kolumns-grid ger 704) + TOC 320 px sticky; container 1088", "px_desktop": "704 | 320", "px_mobil": "358", "token": null, "kalla_fil": "ArticleLayout.jsx; computed"},
+    {"roll": "h2-rytm", "varde": "mt 48 mb 20 (Tailwind mt-12 mb-5), scroll-mt 112", "px_desktop": "48 / 20", "px_mobil": "48 / 20", "token": null, "kalla_fil": "src/index.css"},
+    {"roll": "h3-rytm", "varde": "mt 32 mb 12", "px_desktop": "32 / 12", "px_mobil": "32 / 12", "token": null, "kalla_fil": "src/index.css"},
+    {"roll": "p-rytm", "varde": "mb 20; listor mb 20 space-y 8", "px_desktop": 20, "px_mobil": 20, "token": null, "kalla_fil": "src/index.css"},
+    {"roll": "kortpadding", "varde": "Snabbt svar 20–24/24; sektionskort 32/40; takeaways 32 (rounded-3xl); lead magnet 48; ComparisonTable 24", "px_desktop": "24–48", "px_mobil": "20–24", "token": null, "kalla_fil": "komponenter"},
+    {"roll": "kortmarginaler", "varde": "my-6/my-8/my-10/my-12 (24/32/40/48) beroende på komponent", "px_desktop": "24–48", "px_mobil": "24–48", "token": null, "kalla_fil": "komponenter"},
+    {"roll": "header", "varde": "topbar 36 + nav 66 = 102 px (65 mobil); breadcrumb padding 12", "px_desktop": 102, "px_mobil": 65, "token": null, "kalla_fil": "SiteNav.jsx"},
+    {"roll": "footer", "varde": "padding 56 0 32, mt 64", "px_desktop": "56 / 32", "px_mobil": "56 / 32", "token": null, "kalla_fil": "SiteFooter.jsx"},
+    {"roll": "Bricks-tabell", "varde": "max-width 44rem (704), margin 3rem auto, cellpadding 1rem", "px_desktop": "704 / 48 / 16", "px_mobil": "48 / 16", "token": null, "kalla_fil": "handover-ampy-tabell/ampy-tabell.css"}
+  ],
+  "container": [
+    {"roll": "sidcontainer", "varde": "1088 px (Tailwind max-w + px), artikel 704 + TOC 320 (gap 64)", "kalla_fil": "computed nav/breadcrumb 1088; article-body 704"}
+  ],
+  "radier": [
+    {"roll": "kort (rounded-2xl)", "varde": "16px (1rem)", "px": 16, "antal": 12, "token": "legacy --radius 16 / ej ap*"},
+    {"roll": "lead magnet / takeaways (rounded-3xl)", "varde": "24px", "px": 24, "antal": 1, "token": "≈ --radius-l 24 (legacy)"},
+    {"roll": "pill/knapp/avatar", "varde": "9999px", "px": 9999, "antal": 57, "token": "--apradius-full"},
+    {"roll": "TOC-länk / små", "varde": "8px, 6px, 12px", "px": "8 / 6 / 12", "antal": "10 / 4 / 5", "token": "8 = --apradius-s@1440, 12 = --apradius-m@1440"},
+    {"roll": "Bricks-tabell ytterram", "varde": "16px", "px": 16, "token": null}
+  ],
+  "skuggor": [
+    {"roll": "shadow-card", "varde": "0 1px 2px rgba(9,11,50,.04), 0 4px 12px rgba(9,11,50,.06)", "token": null},
+    {"roll": "shadow-cardLg", "varde": "0 4px 16px rgba(9,11,50,.06), 0 12px 32px rgba(9,11,50,.08)", "token": null},
+    {"roll": "glow / glowGreen (fokus)", "varde": "0 0 0 4px rgba(50,106,253,.12) / 0 0 0 4px rgba(85,255,154,.20)", "token": null},
+    {"roll": "Tailwind-defaults", "varde": "shadow-sm (rgba(0,0,0,.05)) på 8 element, ring-1 cloud-300 på kort", "token": null}
+  ],
+  "rorelse": [
+    {"roll": "fadeUp", "varde": "0.4s ease-out (opacity 0→1, translateY 8→0)", "kalla_fil": "tailwind.config.js"},
+    {"roll": "länkar/knappar", "varde": "transition-colors 150ms, transition-all 200ms; hover bg-ampy-400 / electric-600", "kalla_fil": "src/index.css"},
+    {"roll": "reading progress", "varde": "top-bar 3 px gradient (blå→grön) som följer scroll", "kalla_fil": "ReadingProgress.jsx"},
+    {"roll": "scroll-behavior", "varde": "smooth (html) — ingen reduced-motion-regel", "kalla_fil": "src/index.css"}
+  ],
+  "breakpoints": ["Tailwind sm 640 / lg 1024 (h1 36→48, h2 24→30, 2-kolumnsgrid från lg)"],
+  "komponenter": [
+    {"namn": "SiteNav (sticky)", "anatomi": "topbar: Google 5.0 ★★★★★ '— Baserat på 200+ omdömen' + telefon; nav 66 px: logo, Tjänster/Produkter/Lösningar, telefon, 'Få offert'-pill neonmint", "states": ["sticky"], "html_ref": "src/components/layout/SiteNav.jsx", "css_ref": "tailwind", "skarmdump_crop": "article-template-desktop-topp.png"},
+    {"namn": "Breadcrumb", "anatomi": "Hem › Solpaneler › kWp… 14 px, länkar electric", "states": ["default"], "html_ref": "Breadcrumb.jsx", "css_ref": "tailwind"},
+    {"namn": "ArticleHero", "anatomi": "navy-band 430 px med H1 48/800 vit + intro 20/400 .85 max 672 (bild-URL i data)", "states": ["default"], "html_ref": "ArticleHero.jsx", "css_ref": "tailwind"},
+    {"namn": "AuthorBlock (byline)", "anatomi": "tre överlappande avatarer (initialer på blå/navy/grön), 'Skriven av / Redigerad av / Faktagranskad av' 13 px, 'Verifierad av expert'-badge (ampy-50/600), uppdaterad-datum, lästid; border-y cloud-300", "states": ["default"], "html_ref": "AuthorBlock.jsx", "css_ref": "tailwind"},
+    {"namn": "TableOfContents (sticky, 320)", "anatomi": "vitt kort radie 16 ring cloud-300, rubrik 'Innehållsförteckning' med electric-ikon, länkar 15,5/500 navy-500, nested H3, aktiv = electric på #eef3ff-platta radie 8", "states": ["aktiv", "hover", "kollapsad mobil"], "html_ref": "TableOfContents.jsx", "css_ref": "tailwind"},
+    {"namn": "QuickAnswer 'SNABBT SVAR' (snabbfakta)", "anatomi": "vitt kort radie 16 med 4 px neonmint vänsterkant, bock i ampy-50-cirkel, eyebrow 15/800 .25em, H2 30/700, brödtext, integrerad KEY TAKEAWAYS-lista med numrerade punkter", "states": ["default"], "html_ref": "QuickAnswer.jsx + KeyTakeaways.jsx", "css_ref": "tailwind"},
+    {"namn": "ContentSection", "anatomi": "H2 30/700 mt 48 + valfri bild (aspect-video platshållare cloud-200 radie 16) + prose; H3 med 3 px neonmint vänsterkant", "states": ["default"], "html_ref": "ContentSection.jsx", "css_ref": "src/index.css .article-body"},
+    {"namn": "Quote", "anatomi": "citat 18/400 med 40/700 navy-200-citattecken, avatar + namn/titel under 1 px-linje", "states": ["default"], "html_ref": "Quote.jsx", "css_ref": "tailwind"},
+    {"namn": "ProTip (callout)", "anatomi": "vitt kort radie 16 ram cloud-300 padding 32/40, ikon + 'PRO TIP' 15/700 .22em centrerat, text 16 lh 1.65 max 58ch, knapp", "states": ["default"], "html_ref": "ProTip.jsx", "css_ref": "tailwind"},
+    {"namn": "ComparisonTable / TiltChart", "anatomi": "kort radie 16 shadow-card; huvud cloud-100 med eyebrow 11/800 electric + titel 16/700; tabell inuti; TiltChart = linjediagram (elproduktion vs lutning)", "states": ["default"], "html_ref": "ComparisonTable.jsx, TiltChart.jsx", "css_ref": "tailwind"},
+    {"namn": "LeadMagnet 'EN BERÄTTELSE FRÅN AMPY' / PersonalStory", "anatomi": "navy-kort radie 24 padding 48 med glow-blob, eyebrow 10/800 .25em navy-300, vit text, neonmint-accent", "states": ["default"], "html_ref": "LeadMagnet.jsx, PersonalStory.jsx", "css_ref": "tailwind"},
+    {"namn": "FAQ (accordion + FAQPage JSON-LD)", "anatomi": "H2 'Vanliga frågor' + rader i vitt kort med chevron; svar 14,5 px navy-500", "states": ["stängd", "öppen"], "html_ref": "FAQ.jsx", "css_ref": "tailwind", "skarmdump_crop": "article-template-desktop-faq.png"},
+    {"namn": "CTAReview (Google-recension)", "anatomi": "kort radie 24 padding 48, H3 32/700 'Tyckte du att artikeln var hjälpsam?', vit pill-knapp med ram", "states": ["default"], "html_ref": "CTAReview.jsx", "css_ref": "tailwind"},
+    {"namn": "ShareBar + RelatedArticles + SiteFooter", "anatomi": "delningsikoner; 'Populära artiklar' 36/700 + 3–4 kort 341 px radie 16 med bild + H3 17,5/600; navy-footer med H4 11/800 .2em neonmint", "states": ["default"], "html_ref": "ShareBar.jsx, RelatedArticles.jsx, SiteFooter.jsx", "css_ref": "tailwind"},
+    {"namn": "Bricks-tabell (handover)", "anatomi": "scopad .ampy-table: ram #d7e0ef radie 16, huvud #fafcff med 10,9 px versal .07em, celler 14,4 px lh 1.5 #1a1d2e, hårlinjer #e7edf7, scroll-wrapper; ingen JS", "states": ["default", "scroll ≤630"], "html_ref": "handover-ampy-tabell/ampy-tabell.html", "css_ref": "handover-ampy-tabell/ampy-tabell.css"}
+  ],
+  "varianter": [
+    {"namn": "bricks/tabell.html + bricks/rakneexempel.html", "skillnad": "Bricks Code-element-versioner av tabellen och räkneexemplet"}
+  ],
+  "signaturenhet": "Artikelskelettet: navy-hero med H1 48/800 → byline med 'Verifierad av expert' → 'SNABBT SVAR'-kort med neonmint-kant och numrerade key takeaways → 704 px prose bredvid sticky TOC → sektionskort, citat, PRO TIP, tabell/diagram, lead-magnet → FAQ med JSON-LD → recensions-CTA → relaterade artiklar. Ett komplett redaktionellt system, men på en egen Tailwind-palett.",
+  "defekter": [
+    "EGEN PALETT UTANFÖR AMPY: 'electric' #326afd (primär blå för länkar/accenter/tabellrubriker/brand-*) finns inte i ap*-tokens (73 användningar); brödtext #1a1d2e, navy-skalan (#141a47…#eef0f8), cloud-200/300, ampy-400/500/600 och 'teal' #5eb1bf är alla egna Tailwind-värden. Bara #090b32, #f5f9ff, #55ff9a, #fff matchar tokens.",
+    "Rot 16 px + Tailwind rem-skala (text-2xl = 24, text-3xl = 30, rounded-2xl = 16) — inkompatibelt med sajtens html 62.5 % och --aptext-*-clampar; inget värde är fluid.",
+    "H1 48/800 ls −0,025em och H2 30/700 — vikter 700/800 som inget annat block använder (familjen 450/550, Vår process max 500, live 400); Populära artiklar-H2 36/700 = tredje H2-storleken i samma mall.",
+    "Brödtext 18/400 lh 1.7 (#1a1d2e) — vikt 400 mot sajtens 300; listor 17 px; TOC 15,5; byline 13; tabell 14,4/10,9; eyebrows 10–11 px — sex textstorlekar under 16.",
+    "Google Fonts-request (Outfit 300–900) i index.html; header/footer är egna React-kopior av sajtens (inte Bricks-headern); 'Baserat på 200+ omdömen' + '5.0' är hårdkodade sociala bevis (candour-grind: [GAP] ej ägarbekräftat).",
+    "Ingen prefers-reduced-motion (fadeUp 0.4s + smooth scroll + progressbar alltid på); fokusringar via Tailwind-defaults.",
+    "Skuggor shadow-card/cardLg (rgba(9,11,50,.04/.06/.08)) + Tailwind shadow-sm (rgba(0,0,0,.05)) = femte skuggfamiljen; radie 16/24/8/6 utan ap-koppling.",
+    "Gradient-utilities blå→grön (#326afd→#55ff9a) och navy→#1842c2→#15c45c — färger utanför varumärket."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Datadriven mall: ett articleData-objekt driver hela sidan (meta, breadcrumb, hero, authors, TOC, quickAnswer, sections, faq, ctaReview, share, related).",
+    "Artikelmått 704 px + sticky TOC 320 på desktop; scroll-mt 112 under sticky header.",
+    "E-E-A-T-ytor inbyggda: byline med tre roller, 'Verifierad av expert', uppdaterad-datum, lästid, FAQPage JSON-LD.",
+    "Snabbt svar överst (TL;DR + key takeaways) före brödtexten; H3 markeras med grön vänsterkant.",
+    "Bricks-tabellen: scopad CSS under .ampy-table, klistras in en gång per sida, aldrig bredare än brödtexten (44rem), scroll-wrapper på smala skärmar, ingen JS.",
+    "Tailwind-namnrymd med brand-alias (brand-* → electric) för att äldre klasser ska fungera."
+  ]
+}

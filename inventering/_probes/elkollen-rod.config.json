@@ -1,0 +1,57 @@
+{
+  "file": "kallor/Elkollen/preview/hero.html",
+  "query": "?jobb=golvvarme",
+  "out": "inventering/_probes/elkollen-rod.measure.json",
+  "scope": ".elkollen-root",
+  "census": false,
+  "before": [{"wait": 700}, {"shot": "inventering/skarmdumpar/elkollen-{vp}-state-rod.png"}, {"key": "pseudo", "evalStore": "(() => { const b = document.querySelector('.ampy-bk__block[data-verdict]'); if (!b) return null; const g = (p) => { const cs = getComputedStyle(b, p); return { w: cs.width, h: cs.height, bg: cs.backgroundColor, bgi: cs.backgroundImage }; }; return { verdict: b.dataset.verdict, before: g('::before'), after: g('::after') }; })()"}],
+  "roles": {
+    "block-verdict": ".ampy-bk__block[data-verdict]",
+    "crumb": ".ampy-bk__crumb",
+    "crumb-back": ".ampy-bk__crumb-back",
+    "crumb-sep": ".ampy-bk__crumb-sep",
+    "crumb-job": ".ampy-bk__crumb-job",
+    "judgment": ".ampy-bk__judgment",
+    "badge": ".ampy-bk__badge",
+    "badge-svg": ".ampy-bk__badge svg",
+    "verdict-src": ".ampy-bk__verdict-src",
+    "summary": ".ampy-bk__summary",
+    "tabs": ".ampy-bk__tabs",
+    "tab": ".ampy-bk__tab[aria-selected='false']",
+    "tab-selected": ".ampy-bk__tab[aria-selected='true']",
+    "tab-body": ".ampy-bk__tab-body",
+    "row-do": ".ampy-bk__row--do",
+    "row-dont": ".ampy-bk__row--dont",
+    "row-icon": ".ampy-bk__row-icon",
+    "row-text": ".ampy-bk__row-text",
+    "tip": ".ampy-bk__tip",
+    "tip-icon": ".ampy-bk__tip-icon",
+    "caveat": ".ampy-bk__caveat",
+    "caveat-text": ".ampy-bk__caveat-text",
+    "consequence": ".ampy-bk__consequence-text",
+    "cta-zone": ".ampy-bk__cta-zone",
+    "cta-note": ".ampy-bk__cta-note",
+    "cta-solid": ".ampy-bk__cta-primary--solid",
+    "cta-primary": ".ampy-bk__cta-primary:not(.ampy-bk__cta-primary--solid)",
+    "cta-secondary": ".ampy-bk__cta-secondary",
+    "q-title": ".ampy-bk__q-title",
+    "option": ".ampy-bk__option",
+    "option-title": ".ampy-bk__option-title",
+    "option-clarifier": ".ampy-bk__option-clarifier",
+    "option-arrow": ".ampy-bk__option-arrow",
+    "info": ".ampy-bk__info",
+    "info-text": ".ampy-bk__info-text"
+  },
+  "states": [
+    {
+      "name": "tab2",
+      "actions": [{"click": ".ampy-bk__tab:nth-child(2)"}, {"wait": 300}],
+      "roles": {"tab-selected-2": ".ampy-bk__tab[aria-selected='true']", "tab-body-2": ".ampy-bk__tab-body", "tip": ".ampy-bk__tip", "tip-do": ".ampy-bk__tip--do", "tip-dont": ".ampy-bk__tip--dont", "tip-icon": ".ampy-bk__tip-icon", "tip-text": ".ampy-bk__tip-text", "consequence": ".ampy-bk__consequence-text"}
+    },
+    {
+      "name": "lead",
+      "actions": [{"click": ".ampy-bk__cta-primary--solid"}, {"wait": 500}, {"click": ".ampy-bk__lead-submit"}, {"wait": 300}, {"shot": "inventering/skarmdumpar/elkollen-{vp}-state-leadform.png"}],
+      "roles": {"lead-back": ".ampy-bk__lead-back", "lead-title": ".ampy-bk__lead-title", "lead-intro": ".ampy-bk__lead-intro", "lead-grid": ".ampy-bk__lead-grid", "lead-label": ".ampy-bk__lead-label", "lead-input": ".ampy-bk__lead-input", "lead-error": ".ampy-bk__lead-error:not([hidden])", "lead-submit": ".ampy-bk__lead-submit", "lead-fineprint": ".ampy-bk__lead-fineprint", "req": ".ampy-bk__req"}
+    }
+  ]
+}

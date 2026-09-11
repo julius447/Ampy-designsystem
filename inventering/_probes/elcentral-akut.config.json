@@ -1,0 +1,28 @@
+{
+  "file": "kallor/Elcentral-lead-magnet/preview/index.html",
+  "query": "?q=a3.c1.s1.j0.w3.h2.p4",
+  "out": "inventering/_probes/elcentral-akut.measure.json",
+  "scope": ".ampy-ec",
+  "census": false,
+  "before": [{"wait": 600}, {"shot": "inventering/skarmdumpar/elcentral-kollen-{vp}-state-besked-akut.png"}],
+  "roles": {
+    "dualstatus": ".ampy-ec__dualstatus",
+    "dualstatus-accent": ".ampy-ec__dualstatus-accent",
+    "pill-success": ".ampy-ec__pill[data-level='success']",
+    "pill-warning": ".ampy-ec__pill[data-level='warning']",
+    "pill-error": ".ampy-ec__pill[data-level='error']",
+    "pill-info": ".ampy-ec__pill[data-level='info']",
+    "pill-neutral": ".ampy-ec__pill[data-level='neutral']",
+    "akut": ".ampy-ec__akut",
+    "akut-label": ".ampy-ec__akut-label",
+    "akut-text": ".ampy-ec__akut-text",
+    "factnote": ".ampy-ec__factnote",
+    "factnote-text": ".ampy-ec__factnote-text",
+    "finding-icon-warn": ".ampy-ec__finding--warn .ampy-ec__finding-icon",
+    "cta-solid-tel": ".ampy-ec__block.ampy-ec__result a.ampy-ec__cta-primary--solid",
+    "cta-solid-btn": ".ampy-ec__block.ampy-ec__result button.ampy-ec__cta-primary--solid",
+    "cta-secondary": ".ampy-ec__cta-secondary",
+    "cta-lead": ".ampy-ec__cta-lead",
+    "cta-link": ".ampy-ec__cta-link"
+  }
+}

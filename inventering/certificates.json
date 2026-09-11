@@ -1,0 +1,99 @@
+{
+  "kalla": "certificates",
+  "status": "levererat, paritet (redesign/ = v2, ägarbeslut 2026-08-06 låst: bakgrund B 'Strömfält', 4 märken 2×2, ny copy) · index.html = 1:1-klon av live 2026-08-05 (0 diffar av 9 160 egenskaper)",
+  "auktoritet": 2,
+  "ingang": "kallor/Certificates/redesign/index.html (v2) · kallor/Certificates/index.html (baslinje = live) · delivery/preview/index.html (Chris-paketet, samma CSS)",
+  "matmetod": "inventering/_probes/certificates.mjs → _probes/out/certificates.json",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/certificates-desktop.png",
+    "inventering/skarmdumpar/certificates-mobile.png",
+    "inventering/skarmdumpar/certificates-live-baseline-desktop.png",
+    "inventering/skarmdumpar/certificates-live-baseline-mobile.png"
+  ],
+  "farger": [
+    {"lager": "v2+live", "hex": "linear-gradient(90deg, #090b32, #5eb1bf)", "token": "#090b32 = --apmidnight-blue · #5eb1bf utanför tokens (samma blågröna som connector-linjer/CTA-gradient i ROT-GT)", "roll": "sektionsbakgrund (identisk i båda; v2 mobil: 180deg navy 0–34 % → #5eb1bf 100 % för WCAG)", "antal": 1, "kalla_fil": "redesign/assets/css/certificates-v2.css:20-21,28; assets/css/08-certificates-global-classes.css .certificates.brxe-section"},
+    {"lager": "v2", "hex": "#b6f2ff (.30→0)", "token": "--apcrystal-blue", "roll": "våg 1 (SVG-gradient, 'Strömfält')", "antal": 1, "kalla_fil": "redesign/index.html:22-23"},
+    {"lager": "v2", "hex": "#ffffff (.26→0)", "token": "--appure-white", "roll": "våg 2", "antal": 1, "kalla_fil": "redesign/index.html:25-26"},
+    {"lager": "v2", "hex": "#8fd4e0 (.44→0)", "token": null, "roll": "våg 3 — utanför tokens", "antal": 1, "kalla_fil": "redesign/index.html:28-29"},
+    {"lager": "v2", "hex": "radial rgba(255,255,255,.10 → .04 → 0)", "token": null, "roll": "ljusglugg bakom korten (.cert__glow 62 % × 150 %)", "antal": 1, "kalla_fil": "redesign/assets/css/certificates-v2.css:52-63"},
+    {"lager": "v2+live", "hex": "#ffffff", "token": "--appure-white (v2 var(--white,#fff) = Bricks --white)", "roll": "rubrik + brödtext + kortbakgrund", "antal": 7, "kalla_fil": "certificates-v2.css:90,109; 08-…css .certificates__div"},
+    {"lager": "v2", "hex": "rgba(9,11,50,.10 / .10 / .07 inset)", "token": "--apmidnight-blue-alfa (saknas som token)", "roll": "kortskugga 0 2px 10px + 0 12px 34px + inre hårlinje 1px", "antal": 4, "kalla_fil": "certificates-v2.css:147-149"},
+    {"lager": "v2", "hex": "#fff outline + 0 0 0 6px #090b32", "token": "--apmidnight-blue", "roll": "tvåtonsring focus (WCAG 1.4.11, uppmätt värsta fall 4,36:1)", "antal": 4, "kalla_fil": "certificates-v2.css:158-170"},
+    {"lager": "live", "hex": "#ffffff (var(--white))", "token": "--appure-white via Bricks-palett", "roll": "6 vita kort 113,6×90,6", "antal": 6, "kalla_fil": "08-certificates-global-classes.css .certificates__div"},
+    {"lager": "live", "hex": "svg partner-section-overlay.svg (ljusblå toner)", "token": null, "roll": "vågen, absolut nere-höger, höjd 90 %, object-fit cover → klipps 1193×568 → 1193×319 (kantig)", "antal": 1, "kalla_fil": "08-…css .certificates__bg-image"}
+  ],
+  "typografi": [
+    {"lager": "v2", "roll": "h2", "font": "Outfit", "size": "var(--aptext-2xl, 36px)", "px_desktop": 36, "px_mobil": 26.76, "weight": 400, "lh": 1.2, "ls": "-0.01em", "color": "#fff", "text_wrap": "balance", "kalla_fil": "certificates-v2.css:86-100 (synkad mot 'Så funkar det' 36/400/1.2; uppmätt startsida: 40/500, 40/600, 38/500, 36/400, 36/400, gamla blocket 32/400)"},
+    {"lager": "v2", "roll": "p", "font": "Outfit", "size": "var(--aptext-m, 18px)", "px_desktop": 18, "px_mobil": 16.12, "weight": 300, "lh": "1.7 bas · 1.55 ≥901 · 1.6 ≤900", "ls": "normal", "color": "#fff", "max_width": "48ch (567,6 px) · 34ch mobil", "kalla_fil": "certificates-v2.css:114-135, 213-216"},
+    {"lager": "live", "roll": "h3 'Certifikat och partners'", "font": "Outfit", "size": "var(--aptext-xl)", "px_desktop": 32, "px_mobil": 24.54, "weight": 400, "lh": 1.3, "ls": "normal", "color": "#fff", "kalla_fil": "08-certificates-global-classes.css .certificates__heading"},
+    {"lager": "live", "roll": "p", "font": "Outfit", "size": "var(--aptext-m) desktop · mobil pekar på odefinierad --text-m → faller till body 14,12", "px_desktop": 18, "px_mobil": 14.12, "weight": 300, "lh": 1.7, "ls": "normal", "color": "#fff", "max_width": "75 %", "kalla_fil": "08-…css .certificates__text-basic (defekt dokumenterad i redesign/README.md §4)"}
+  ],
+  "spacing": [
+    {"lager": "v2", "roll": "sektion padding", "varde": "var(--apspace-xl) var(--apspace-xl) · ≤900 vertikalt var(--apspace-2xl) · ≤389 sidopadding 18px", "px_desktop": "56 / 56", "px_mobil": "34.8 / 27.3", "token": "--apspace-xl · --apspace-2xl", "kalla_fil": "certificates-v2.css:22,27,194"},
+    {"lager": "v2", "roll": "sektion margin", "varde": "var(--space-l, 36px) 0", "px_desktop": 36, "px_mobil": 30.1, "token": "--space-l (Core Framework-legacy)", "kalla_fil": "certificates-v2.css:28"},
+    {"lager": "v2", "roll": "inner gap text↔kort", "varde": "var(--apspace-m) · ≤900 var(--apspace-xl)", "px_desktop": 28, "px_mobil": 27.3, "token": "--apspace-m / --apspace-xl", "kalla_fil": "certificates-v2.css:74,204"},
+    {"lager": "v2", "roll": "h2 → p", "varde": "var(--apspace-xs)", "px_desktop": 14, "px_mobil": 10.5, "token": "--apspace-xs", "kalla_fil": "certificates-v2.css:115"},
+    {"lager": "v2", "roll": "kortgrid", "varde": "2 kolumner, column-gap var(--apspace-s) (≥ radien 20), row-gap 16px (20 spräcker höjdlåset), max-width 492 · mobil gap 16", "px_desktop": "19.8 / 16", "px_mobil": "16 / 16", "token": "--apspace-s + literal", "kalla_fil": "certificates-v2.css:126-134"},
+    {"lager": "v2", "roll": "kort", "varde": "236,1×113 (2,09:1), padding 16px 18px · mobil 159,7×96, padding 12px 14px", "px_desktop": "236×113", "px_mobil": "160×96", "token": null, "kalla_fil": "certificates-v2.css:137-145, 227-230"},
+    {"lager": "v2", "roll": "logotyphöjder (optisk massa)", "varde": "IN 35 · ESV 70 · ID06 43 · TH 28 (mobil 25/56/30/20)", "px_desktop": "35/70/43/28", "px_mobil": "25/56/30/20", "token": null, "kalla_fil": "certificates-v2.css:181-190, 235-240"},
+    {"lager": "v2", "roll": "blockhöjd (LÅST)", "varde": "354 px @1440 (dagens 354,58) · 456,9 @390", "px_desktop": 354, "px_mobil": 456.9, "token": null, "kalla_fil": "certificates-v2.css:8-12 (ägardirektiv)"},
+    {"lager": "live", "roll": "sektion padding", "varde": "var(--apspace-2xl) var(--apspace-xl)", "px_desktop": "79.2 / 56", "px_mobil": "34.8 / 27.3", "token": "--apspace-2xl / --apspace-xl", "kalla_fil": "08-…css .certificates.brxe-section"},
+    {"lager": "live", "roll": "sektion margin", "varde": "var(--space-l)", "px_desktop": 36, "px_mobil": 30.1, "token": "--space-l (legacy)", "kalla_fil": "08-…css"},
+    {"lager": "live", "roll": "container gap", "varde": "19.8 / 28 (row/col)", "px_desktop": "19.8 / 28", "px_mobil": "13.3 / 16.9", "token": "--apspace-s / --apspace-m", "kalla_fil": "computed .certificates__container"},
+    {"lager": "live", "roll": "h3 → p", "varde": "20px", "px_desktop": 20, "px_mobil": 0, "token": null, "kalla_fil": "computed"},
+    {"lager": "live", "roll": "kortgrid 3×2", "varde": "gap 15px, kort 113,6×90,6, padding var(--apspace-s) 19,8 · mobil 100,7×77,7 padding 13,3", "px_desktop": "15 / 16 rad", "px_mobil": "15 / 16", "token": "--apspace-s (kortpadding)", "kalla_fil": "08-…css .certificates__div + computed"},
+    {"lager": "live", "roll": "logotyper", "varde": "49×49 / 49×51 / 65×26 / 74×44 / 65×25 (max-width 60 %)", "px_desktop": "14–49 px synligt bläck", "px_mobil": "samma", "token": null, "kalla_fil": "08-…css img.certificates__logo[src*=…]"}
+  ],
+  "container": [
+    {"lager": "v2", "roll": "inner max-width", "varde": "var(--container-width, 1280px)", "kalla_fil": "certificates-v2.css:70"},
+    {"lager": "v2", "roll": "text/kort-kolumner", "varde": "flex 1 1 0 vardera, kort max 492 → text får överskottet (760 px @1440)", "kalla_fil": "certificates-v2.css:76-80,124-125"},
+    {"lager": "live", "roll": "container", "varde": "1280 (Bricks), textblock 626, grid 370,8", "kalla_fil": "computed"}
+  ],
+  "radier": [
+    {"lager": "v2", "roll": "kort", "varde": "var(--apradius-l, 20px)", "px_desktop": 20, "px_mobil": 16.34, "token": "--apradius-l"},
+    {"lager": "live", "roll": "kort", "varde": "var(--apradius-l)", "px_desktop": 20, "px_mobil": 16.34, "token": "--apradius-l"}
+  ],
+  "skuggor": [
+    {"lager": "v2", "roll": "kort", "varde": "0 2px 10px rgba(9,11,50,.10), 0 12px 34px rgba(9,11,50,.10), inset 0 0 0 1px rgba(9,11,50,.07)", "token": null},
+    {"lager": "v2", "roll": "kort hover", "varde": "0 4px 14px rgba(9,11,50,.13), 0 18px 44px rgba(9,11,50,.14) + translateY(-2px)", "token": null},
+    {"lager": "v2", "roll": "kort focus", "varde": "outline 3px #fff offset 3 + 0 0 0 6px #090b32 + hover-skuggor", "token": null},
+    {"lager": "live", "roll": "kort", "varde": "ingen", "token": null}
+  ],
+  "rorelse": [
+    {"lager": "v2", "roll": "kort hover", "varde": "transition transform .25s ease, box-shadow .25s ease (bara @media hover:hover + pointer:fine)", "kalla_fil": "certificates-v2.css:150-157"},
+    {"lager": "v2", "roll": "reduced-motion", "varde": "transition none, transform none", "kalla_fil": "certificates-v2.css:243-247"},
+    {"lager": "live", "roll": "enterView", "varde": "Bricks fadeIn-interaktioner på container/block/bg-image", "kalla_fil": "index.html data-interactions"}
+  ],
+  "breakpoints": ["v2: 1099/901 (balance-band), 900 (stapla, mobilgradient), 389 (18 px sidopadding), hover:hover, prefers-reduced-motion", "live: 780 (centrerad rubrik), Bricks 991/767/478"],
+  "komponenter": [
+    {"lager": "v2", "namn": "tillitssektion .cert", "anatomi": "fullbredd, 354 px hög (låst), gradient 90° navy→#5eb1bf, tre SVG-vågor med preserveAspectRatio=none (aldrig klippta), radial ljusglugg bakom korten, overflow hidden, isolation", "states": ["default"], "html_ref": "redesign/index.html:14-40", "css_ref": "certificates-v2.css:14-63", "skarmdump_crop": "certificates-desktop.png"},
+    {"lager": "v2", "namn": "intro (h2 + p)", "anatomi": "vit h2 36/400 lh1.2 balance + p 18/300 lh1.55 max 48ch; centrerad + 34ch på mobil", "states": ["default"], "html_ref": "redesign/index.html:42-43", "css_ref": "certificates-v2.css:76-135"},
+    {"lager": "v2", "namn": "märkeskort .cert__mark (×4)", "anatomi": "236×113 vit länk, radie 20, padding 16/18, tre-lagers skugga + 1px inre hårlinje, logotyp centrerad med bläck-normaliserad höjd (35/70/43/28); hover −2px; tvåtonsring focus; scroll-margin 96 (sticky call-bar)", "states": ["default", "hover", "focus-visible", "focus"], "html_ref": "redesign/index.html:48-74", "css_ref": "certificates-v2.css:137-190"},
+    {"lager": "v2", "namn": "märkesgrid .cert__marks", "anatomi": "ul 2×2, max 492, column-gap 19,8 (≥ radien), row-gap 16", "states": ["default"], "html_ref": "redesign/index.html:46", "css_ref": "certificates-v2.css:126-134"},
+    {"lager": "live", "namn": "sektion 'Certifikat och partners'", "anatomi": "gradient 90° + våg-SVG nere-höger 90 % hög (klippt), h3 32/400 + p 18/300 lh1.7 75 %, 3×2 vita kort 113,6×90,6 radie 20 utan skugga med 6 logotyper 14–49 px", "states": ["default", "enterView fadeIn"], "html_ref": "index.html:49", "css_ref": "assets/css/08-certificates-global-classes.css", "skarmdump_crop": "certificates-live-baseline-desktop.png"}
+  ],
+  "varianter": [
+    {"namn": "bakgrund A / C + copy-alternativ", "skillnad": "finns bara i git-historiken (178bfa0, 359ed7e) — ej i klonen (grunt)"},
+    {"namn": "delivery/preview/index.html + dist/ampy-certificates.{css,php,html}", "skillnad": "Chris-paketet av v2; samma CSS (paritet 24/24 enligt minnet), ej separat mätt"}
+  ],
+  "signaturenhet": "Den mörka navy→blågrön 90°-gradienten som yta med vita 'legitimationskort' i 2×2 vars logotyper är normaliserade på optisk bläckmassa (canvas-mätt), inte på boxhöjd — och en blockhöjd låst till 354 px där luft byttes mot kortyta.",
+  "defekter": [
+    "Gradientens ljusa ände #5eb1bf är utanför tokens och klarar bara 2,47:1 mot vit text — v2 löser mobilen med 180°-gradient men desktop-raden slutar i den ljusa änden (2,10:1 uppmätt vid 360 innan fixen).",
+    "Sektionsmarginal via legacy --space-l (36 px) — inte --apspace-*; row-gap 16 px literal (höjdlåset) medan column-gap är token.",
+    "Kortskuggan (rgba(9,11,50,.10/.10/.07)) är blockets egen tredje skuggfamilj (ROT-GT: rgba(15,18,60), testimonials: rgba(190,190,190)).",
+    "Länkfärgen på .cert__mark är UA-default rgb(0,0,238) (ingen text, men computed color = blå länk).",
+    "LIVE: h3 32/400 = minsta sektionsrubriken på startsidan; mobil-p 14,12 px pga odefinierad --text-m; vågen klipps (object-fit cover 568→319) och läses kantig; Rexel-länken 404; 6 logotyper med 14–40 px synligt bläck och inbyggd luft (Trygg-Hansa 68 % tom).",
+    "ID06-filen bär en svag ram som blåser upp bbox — [GAP] filen bör ersättas (certificates-v2.css:176-180).",
+    "[GAP] 'Över 3000 gånger om året' är ägargodkänd copy (README) men bär ingen [FACT]-tagg i markupen."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Blockhöjden är låst (354 px) — luft växlas mot kortyta i stället för att blocket växer.",
+    "Bakgrundsdekor som inline-SVG med preserveAspectRatio=none i 100 %×100 % så den aldrig kan klippas.",
+    "Kolumngap ≥ hörnradie (annars timglaskanal mellan korten).",
+    "Logotyper skalas på optisk massa (bläck-mätning i canvas), ett värde per logotyp, viewBox beskuren till bläcket.",
+    "Tvåtonsring (vit + navy) för fokus på gradientyta; hover bara på hover:hover/pointer:fine; reduced-motion respekteras.",
+    "Gradientparet bor på blocket (--cert-navy/--cert-teal), inte i :root, så en inklistring av bara CSS:en aldrig ger osynligt block.",
+    "Mobil vrider gradienten vertikalt så ljusänden hamnar bakom korten (WCAG 1.4.3).",
+    "Rubrik text-wrap:balance, brödtext INTE balance utom i bandet 901–1099 (ritad radbrytning via max-width 48ch)."
+  ]
+}

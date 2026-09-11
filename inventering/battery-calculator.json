@@ -1,0 +1,93 @@
+{
+  "kalla": "battery-calculator",
+  "status": "prototyp (v7 'slutgiltig', ej live)",
+  "auktoritet": 3,
+  "ingang": "kallor/Battery-calculator/index.html (enfil: CSS rad 28-1506, JS rad 1886-3234)",
+  "css": "inline <style> i index.html, BEM ampy-calc__*, tokens på .ampy-calc, Google Fonts (PJS/Outfit/JetBrains Mono), 1rem=10px — URSPRUNGET till LED/EV-kitet (LED:s CSS-huvud: 'matches Ampy's battery calculator')",
+  "matmetod": "Playwright getComputedStyle 1440 + 390 (inventering/_probes/battery-calculator.config.json → battery-calculator.measure.json) inkl. overflow-mätning och SVG-noder; källcensus _probes/census-battery.json. Inventerad BARA som belägg för streams-bar + break-even-kurvan (auktoritet 3)",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/battery-calculator-desktop.png",
+    "inventering/skarmdumpar/battery-calculator-mobile.png"
+  ],
+  "typsnitt": {"heading_ui": "Plus Jakarta Sans", "body": "Outfit", "mono": "JetBrains Mono", "laddning": "Google Fonts"},
+  "farger": [
+    {"hex": "rgb(0, 169, 145)", "token": "--apteal-core", "roll": "--action-primary + --chart-stream-1 (Stödtjänster) + --chart-line-profit (kurvan över noll, break-even-prick, slutvärde) — INTE mörkad", "antal_css": 5, "kalla_fil": "index.html:32,58,67"},
+    {"hex": "rgb(57, 194, 129)", "token": "--apemerald-flow", "roll": "--state-success + --chart-stream-2 (Spotpris-arbitrage)", "antal_css": 3, "kalla_fil": "index.html:33,59"},
+    {"hex": "rgb(122, 208, 198)", "token": null, "roll": "--chart-stream-3 (Effekttoppskapning) 'desaturated pale teal'", "antal_css": 1, "kalla_fil": "index.html:60", "notering": "utanför tokens (nära --apseafoam-mint rgb(92,197,182)? nej — egen)"},
+    {"hex": "rgb(160, 184, 196)", "token": null, "roll": "--chart-stream-4 (Ökad egenanvändning) 'cool neutral'", "antal_css": 1, "kalla_fil": "index.html:61", "notering": "utanför tokens"},
+    {"hex": "rgb(240, 175, 56)", "token": null, "roll": "--state-warning + --chart-line-loss (kurvan under noll, startprick); --chart-zone-loss .18", "antal_css": 3, "kalla_fil": "index.html:44,66,71", "notering": "utanför tokens"},
+    {"hex": "rgba(0, 169, 145, 0.16)", "token": null, "roll": "--chart-zone-profit (kurv-fyllning över noll)", "antal_css": 1, "kalla_fil": "index.html:72", "notering": "= --apteal-core @ 16 %"},
+    {"hex": "rgb(9, 11, 50)", "token": "--apmidnight-blue", "roll": "--bg-surface (resultatkort, e-postinput-bg)", "antal_css": 2, "kalla_fil": "index.html:32,35"},
+    {"hex": "rgb(15,18,60) / rgb(86,94,130) / rgb(247,249,251) / rgb(234,239,243) / rgba(15,18,60,.12)", "token": null, "roll": "samma near-miss-set som LED/EV", "antal_css": 5, "kalla_fil": "index.html:34-45", "notering": "utanför tokens"},
+    {"hex": "rgba(255,255,255,.42)", "token": null, "roll": "--on-surface-text-faint (ORIGINAL — LED/EV höjde till .55 efter WCAG-audit)", "antal_css": 1, "kalla_fil": "index.html:51", "notering": "= --appure-white @ 42 %"},
+    {"hex": "rgba(255,255,255,.32) + streckad 3,5", "token": null, "roll": "SVG nollinjen i payback-kurvan", "antal_css": 1, "kalla_fil": "index.html (JS)", "notering": "utanför tokens"},
+    {"hex": "rgba(255,255,255,.34)", "token": null, "roll": "be-line (streckad vertikal från break-even-pricken)", "antal_css": 1, "kalla_fil": "index.html:858"}
+  ],
+  "typografi": [
+    {"roll": "h1", "font": "Plus Jakarta Sans", "size": "var(--fs-2xl) (samma px-bugg som EV, vw-baserad)", "px_desktop": 25.03, "px_mobil": 22.19, "weight": 700, "kalla_fil": "index.html:105"},
+    {"roll": "hero15-number", "font": "Plus Jakarta Sans", "size": "var(--fs-4xl) clamp(4rem, 4rem + 3.5·((100vw−320px)/960), 7.5rem)", "px_desktop": 44.08, "px_mobil": 40.26, "weight": 700, "lh": 1.0, "ls": "-0.03em", "features": "tnum", "kalla_fil": "index.html:107", "notering": "BUGG: px-tillägg (4rem + 4.08px), avsett 75px"},
+    {"roll": "hero15-unit / trio-value", "font": "Plus Jakarta Sans", "size": "var(--fs-xl)", "px_desktop": 21.87, "px_mobil": 20.12, "weight": "500 / 700", "kalla_fil": "index.html"},
+    {"roll": "chart-corner--end-value (+293 087 kr)", "font": "JetBrains Mono", "size": "clamp(1.5rem, 1.5rem + 0.2vw, 1.7rem)", "px_desktop": 17, "px_mobil": 15.78, "weight": 700, "color": "--chart-line-profit (loss: amber)", "kalla_fil": "index.html:797-805"},
+    {"roll": "chart-corner--today / --end-axis (I dag / 15 år)", "font": "Plus Jakarta Sans", "size": "clamp(1.3rem, 1.3rem + 0.15vw, 1.5rem)", "px_desktop": 15, "px_mobil": 13.59, "weight": 500, "color": ".66", "kalla_fil": "index.html:807-815"},
+    {"roll": "be-caption (Återbetald) / be-time (2,4 år)", "font": "Plus Jakarta Sans", "size": "clamp(1.3rem, +0.1vw, 1.4rem) / clamp(1.3rem, +0.15vw, 1.5rem)", "px_desktop": "14 / 15", "px_mobil": "13.39 / 13.59", "weight": "500 / 700", "color": ".94 / teal", "kalla_fil": "index.html:867-880"},
+    {"roll": "streams-summary (Se fördelningen)", "font": "Outfit", "size": "var(--fs-sm)", "px_desktop": 12.23, "px_mobil": 12.01, "weight": 500, "color": ".66", "kalla_fil": "index.html"},
+    {"roll": "stream-name / stream-value / stream-pct", "font": "Outfit / JetBrains Mono / JetBrains Mono", "size": "--fs-sm / --fs-sm / --fs-xs", "px_desktop": "12.23 / 12.23 / 10.23", "px_mobil": "12 / 12 / 10", "weight": "500 / 600 / 400", "color": ".94 / .94 / .42", "kalla_fil": "index.html:699-716"},
+    {"roll": "btn--primary (Få en exakt offert)", "font": "Plus Jakarta Sans", "size": "var(--fs-md)", "px_desktop": 17.12, "px_mobil": 17.01, "weight": 600, "min_height": 56, "kalla_fil": "index.html"},
+    {"roll": "btn--outline (Maila kalkylen) / btn-link", "font": "PJS / Outfit", "size": "--fs-sm", "px_desktop": 12.23, "px_mobil": 12.01, "weight": "600 / 500", "color": "vit / rgb(0,169,145)", "kalla_fil": "index.html"}
+  ],
+  "typskala_deklarerad": {"formel": "clamp(MIN, calc(MIN + (MAX − MIN) * ((100vw − 320px) / 960)), MAX) — samma px-bugg som EV (vw i stället för cqi)", "matt": "--fs-md 17.12 / --fs-lg 18.27 / --fs-xl 21.87 / --fs-2xl 25.03 / --fs-4xl 44.08 @1440"},
+  "spacing": [
+    {"roll": "--spacing-xs … 2xl", "varde": "0.5 / 0.75 / 1 / 1.5 / 2 / 3 rem", "px_desktop": "5/7.5/10/15/20/30", "token": null, "kalla_fil": "index.html:75-80"},
+    {"roll": "kort padding / gap", "varde": "20 / 15 (≤600: 15)", "px_desktop": "20/15", "px_mobil": "15/15", "kalla_fil": "index.html"},
+    {"roll": "main grid", "varde": "5fr / 7fr gap 20 (512.5 / 717.5)", "px_desktop": "512.5/717.5", "px_mobil": "1 kolumn", "kalla_fil": "index.html"},
+    {"roll": "streams gap / legend", "varde": "10; legend 1 kol → 2 kol ≥600 (gap 7.5 15); rad padding 4 0, grid 12px 1fr auto", "px_desktop": "10", "kalla_fil": "index.html:667-716"},
+    {"roll": "chart", "varde": "aspect-ratio 2.5/1 (≤560: 1.45/1), min-height 320 (340), padding 10 10 5; topp-remsa 3.2rem, axelremsa 4.4rem, mellanrum 0.2rem", "px_desktop": "675×320", "px_mobil": "363×340", "kalla_fil": "index.html:735-780"}
+  ],
+  "container": [
+    {"roll": "max-width", "varde": "128rem", "kalla_fil": "index.html"},
+    {"roll": "mobil-overflow", "varde": "DEFEKT: inputkortet 394.9px brett i 390px viewport → scrollWidth 413 (overflowX true); orsak: kortet får 100 % + padding utan min-width 0-skydd i den här versionen", "kalla_fil": "measure: extra.overflow"}
+  ],
+  "radier": [
+    {"roll": "--radius-sm / md / lg / full", "varde": "6 / 12 / 20 / 999rem", "token": "--apradius-s@mobil / --apradius-m@desktop / --apradius-l@desktop / --apradius-full"},
+    {"roll": "chart", "varde": "12 (--radius-md)", "token": "--apradius-m@desktop"},
+    {"roll": "be-dot / stream-dot", "varde": "50 % / full (12×12)", "token": null}
+  ],
+  "skuggor": [
+    {"roll": "--shadow-sm/md/lg", "varde": "som LED (rgba(15,18,60,.06/.08/.14))", "token": null},
+    {"roll": "resultatkortets glöd", "varde": "identisk radial teal .28 / emerald .16", "token": null},
+    {"roll": "chart-bg", "varde": "rgba(255,255,255,.06) (--on-surface-subtle-bg)", "token": null}
+  ],
+  "rorelse": [
+    {"roll": "streams-segment", "varde": "width 300ms cubic-bezier(.2,0,.2,1)"},
+    {"roll": "reveal", "varde": "hero15 / trio / streams / chart-block (220ms) / cta-stack stagger"},
+    {"roll": "toggle/segmented/btn", "varde": "150ms som LED/EV"}
+  ],
+  "breakpoints": ["960 (grid)", "768", "600 (legend 2 kol, kortpadding, lead-grid)", "560 (chart 1.45:1, min-height 340, trio)"],
+  "komponenter": [
+    {"namn": "streams-bar (Fyra intäktskällor) — belägg för 'revenue streams bar'", "anatomi": "100 % × 24px, radius full, bg rgba(255,255,255,.06), overflow hidden, flex; fyra segment (teal rgb(0,169,145) / emerald rgb(57,194,129) / pale teal rgb(122,208,198) / cool neutral rgb(160,184,196)) med width ∝ andel, transition 300ms; under: details 'Se fördelningen' (Outfit 500 12 .66, chevron) som fäller ut legend: grid 1 → 2 kol ≥600, rad = 12px prick + namn Outfit 500 12 (.94, med small-rad .42) + värde mono 600 12 + procent mono 10 .42; rad--zero opacity .55", "states": ["default", "legend open", "row--zero"], "html_ref": "index.html:1711-1727", "css_ref": "index.html:667-717,1023-1035", "matt": "675.5×24 @1440 (segment 271 / 155 / 80 / 170), 362.9×24 @390"},
+    {"namn": "payback-kurva + break-even-markör — belägg för 'break-even chart'", "anatomi": "chart-block: head (evidence-label 'PAYBACK-KURVA') + chart: bg .06, radius 12, aspect 2.5:1 (mobil 1.45:1), min-height 320/340, padding 10 10 5; chart-inner = flex-kolumn: chart-top 32px (slutvärde mono 700 17 höger, teal / amber vid förlust) → chart-plot (SVG: streckad nollinje rgba(255,255,255,.32) 3,5; polygon zone-loss amber .18 + zone-profit teal .16; linje amber under noll → teal över noll; startprick amber / slutprick teal) → chart-axis 44px ('I dag' vänster, '15 år' höger, PJS 500 15 .66); be-marker: ETT HTML-element på --be-x (clamp 8–92 %) med be-dot 12px teal på --be-y-frac, be-line streckad 1px .34 ner till axelremsan, be-label centrerad ('Återbetald' PJS 500 14 .94 + '2,4 år' PJS 700 15 teal); states is-no-payback / is-no-be / is-be-early (döljer 'I dag')", "states": ["default", "is-loss (slutvärde amber)", "is-no-payback", "is-no-be", "is-be-early"], "html_ref": "index.html:1729-1760", "css_ref": "index.html:735-885,1420-1489", "matt": "675.5×320 @1440, 362.9×340 @390; be-dot 12; be-line 1×29"},
+    {"namn": "hero15 / trio (3 tiles) / toggle / segmented / stepper / selector / slider / lead-form (inline e-post + 'Maila kalkylen' outline) / btn-link / methodology", "anatomi": "samma kit som EV (identiska tokens och klasser); avviker: teal ej mörkad, faint .42, toggle-option 30px hög (ingen min-height 40), segment-option 33px (ingen min-height), stepper pill (bg subtle padding 3, knappar 36), e-postrad = input 48 + btn--outline 48 (1px .28)", "states": [], "html_ref": "index.html:1520-1885", "css_ref": "index.html:28-1506", "matt": "CTA 675.5×56; toggle-option 64×30; segment 112.6×33; stepper 118×42"}
+  ],
+  "signaturenhet": "Streams-bar + payback-kurva: en 24px stapel som delar upp årlig avkastning i fyra intäktskällor (teal → emerald → blek teal → kall neutral) och en SVG-kurva som byter färg från amber till teal vid nollgenomgången, med ett enda HTML-förankrat break-even-märke ('Återbetald · 2,4 år').",
+  "hantverk_att_bevara": [
+    "Chart-arkitekturen: tre remsor (topp = slutvärde, plot = bara SVG, axel = etiketter) så etiketter aldrig kolliderar med kurvan; break-even = ETT element på EN x-koordinat",
+    "Färgsignalen i kurvan (amber under noll → teal över) + låg-opacitetsfyllningar av samma tokens",
+    "Streams-bar med disciplinerad teal/grön-familj + kall neutral (inga varma toner) och legend på begäran",
+    "Etikett-typografi i clamp med små vw-lutningar (13→15px) — den enda skalan i filen som fungerar"
+  ],
+  "defekter": [
+    "Samma px-bugg i typskalan som EV (vw-baserad): hjälte 44px i stället för 75",
+    "Mobil: inputkortet 394.9px i 390px viewport → horisontell scroll (overflowX true)",
+    "--on-surface-text-faint .42 (LED/EV höjde till .55 efter WCAG-audit)",
+    "Toggle-option 30px och segment-option 33px höga — under 44px-golvet utan coarse-pointer-förstoring",
+    "Google Fonts; tre familjer; all CSS inline i HTML (1478 rader) — ej Bricks-redo som fil",
+    "Prototyp: ej live, auktoritet 3 — värden här får inte bli kanon, bara mönsterbelägg"
+  ],
+  "regler_som_ligger_i_koden": [
+    "Chart-palett: NO off-system warm tones i stream-färgerna (README)",
+    "Break-even-markören är ett HTML-element, kurvan mappas mot plot-ytans fulla höjd",
+    "Två fullvärdiga chart-layouter: desktop 2.5:1, mobil 1.45:1",
+    "Tokens scopade på .ampy-calc; 1rem=10px från html"
+  ],
+  "skillnad_mot_andra_block": "Ursprunget till ampy-calc-kitet. LED tog kitet och bytte streams/payback mot före/efter-staplar, rättade typskalan och höjde faint till .55; EV tog kitet, mörkade tealen, bytte till cqi (behöll buggen) och ersatte kurvan med månadspanelen. Battery är den enda med streams-bar + payback-kurva — de två devices som ampy-design-system-skillen nämner ('revenue streams bar', 'break-even chart')."
+}

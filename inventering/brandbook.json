@@ -1,0 +1,124 @@
+{
+  "kalla": "brandbook",
+  "namn": "Ampy Brandbook (6).pdf – 26 sidor, 2000×1125 – + LOGO/ (PNG-exporter, .ai)",
+  "status": "varumärkets grund; skrivet på engelska av byrå (stavfel 'Marck', 'Tipography', 'Aplications'); pdf daterad 2025-10-01",
+  "auktoritet": 1,
+  "auktoritet_not": "1 för logo/palett/typsnittsregler enligt briefen – men OBS: produktionsprimärfärgen teal #00a991 (--apteal-core) finns INTE i brandboken, och brandbokens primär cobalt #326afd finns inte i produktionens 101 ap*-tokens",
+  "ingang": "/Users/juliuscallahan/Desktop/Brandbook/Ampy Brandbook (6).pdf ; /Users/juliuscallahan/Desktop/Brandbook/LOGO/",
+  "skarmdumpar": [],
+  "sidkarta": {
+    "1": "omslag: vit wordmark på mesh-gradient midnight→cobalt→neon-mint→spring-green med tunna konturlinjer",
+    "2": "avdelare 01 LOGO (cobalt på midnight)",
+    "3": "Logo versions: Main Version (wordmark), Simple Marck [sic] (a+blixt), Glyph (blixt)",
+    "4": "Composition / Safe Zones: friyta = bokstaven a:s höjd/bredd; bokstavsmellanrum = 20 % av a:s bredd",
+    "5": "Incorrect Uses: 8 förbud",
+    "6": "avdelare 02 COLOURS (spring-green på sekundärteal)",
+    "7": "Primary Colours: #090b32, #326afd, #55ff9a, #f5f9ff (+ RGB/CMYK)",
+    "8": "Secondary Palette: #5eb1bf, #92ec47",
+    "9": "Correct Colours Applications: 9 godkända färgpar för wordmarken",
+    "10": "B&W Applications: svart på vitt / vit på svart (#1e1e1e-liknande)",
+    "11": "Gradients: 4 vertikala referensgradienter + regel",
+    "12": "avdelare 02 FONTS (dubbelnumrering: 02 igen)",
+    "13": "Main Tipography [sic]: OUTFIT, teckenuppsättning",
+    "14": "Tipography Aplications [sic]: Light / MEDIUM / BLACK med roller",
+    "15": "avdelare 03 GRAPHIC STYLE (neon-mint)",
+    "16": "Icons Style: solida, enkla (skiftnyckel, blixt, glödlampa, gnistor) i cobalt",
+    "17": "Photography Style: text + 6 exempelfoton (blixt, vägguttag, upplyst hus i skymning, elektriker i blå hjälm/skyddsglasögon, glödlampor)",
+    "18": "Shapes: härledda ur blixten eller bokstaven a; blixt i cobalt på neon-mint, a-monogram i midnight på neon-mint",
+    "19": "avdelare 03 GRAPHIC STYLE igen (spring-green) – dubblett",
+    "20": "Email Signatures: två varianter (cobalt / midnight) med blixt-form, porträtt i cirkel, wordmark i midnight resp. neon-mint",
+    "21": "Business Cards: vit med midnight-wordmark, cobalt-blixt",
+    "22": "Social Media: profilbild = bara simple mark eller main logo i godkänd färgvariant; post med blixt på mesh-gradient",
+    "23": "Presentations: midnight-slides, mesh-gradient-omslag, 'WHAT WE DO' med fyra neon-mint-ikoner",
+    "24": "More Applications: skåpbil (vit + cobalt-blixt), svart skjorta, klistermärken (cobalt / neon-mint) – 'CALL US: 010-265 79 79'",
+    "25": "More Applications: cobalt-hjälm med vit a-monogram, gatupratare 'WORK IN PROGRESS', broschyr 'TURN ON THE TRUST', mugg",
+    "26": "baksida: vit a-monogram på mesh-gradient"
+  },
+  "farger": [
+    {"namn": "Midnight (primär, mörk yta)", "hex": "#090b32", "rgb_tryckt": "9 11 59 (tryckfel – hex ger 9 11 50)", "cmyk": "100 96 46 61", "roll": "bakgrunder, nyckelytor, rubrik-/highlight-typografi, logons kärna", "token": "--apmidnight-blue", "sida": 7, "i_produktion": "ja – 198 filer i kallor/, 7 live-css-filer"},
+    {"namn": "Cobalt (primär)", "hex": "#326afd", "rgb_tryckt": "50 106 253", "cmyk": "83 59 0 0", "roll": "primär accent i brandboken: ikoner, blixt-former, hjälm, bil, skyltar, e-postsignatur", "token": null, "sida": 7, "i_produktion": "nej – 0 träffar i live-css, 0 i de fyra inventerade källorna (bara 2 filer i ampy-article-template); PNG-exporten AMPY-02 är #136cff, inte #326afd"},
+    {"namn": "Neon mint / 'spring-green' (primär)", "hex": "#55ff9a", "rgb_tryckt": "85 255 154", "cmyk": "67 0 71 0", "roll": "ljus accent: wordmark på midnight/cobalt, ytor, ikoner på midnight", "token": "--apneon-mint", "sida": 7, "i_produktion": "ja – 128 filer; live: primärknappens gradientstart (120deg #55ff9a→#5eb1bf); PNG-exporten AMPY-03 är #00ff8e"},
+    {"namn": "Sky mist (primär, ljus yta)", "hex": "#f5f9ff", "rgb_tryckt": "245 249 255", "cmyk": "5 1 0 0", "roll": "ljus bakgrund (brandbokens egna sidor), wordmark på mörkt", "token": "--apsky-mist", "sida": 7, "i_produktion": "ja – 160 filer; sajtens sidbakgrund"},
+    {"namn": "Sekundär teal", "hex": "#5eb1bf", "rgb_tryckt": "94 177 191", "cmyk": "70 4 26 0", "roll": "stödfärg: alternativa bakgrunder, grafiska element, ikoner, diagram, event", "token": null, "narmast_token": "--apseafoam-mint #5cc5b6 (inte samma)", "sida": 8, "i_produktion": "JA trots att den inte är ett ap*-token – 7 live-css-filer (primärknappens gradientslut, fokusringar på fält, aktiv tabb, --ap-blue-alias i site-css .ampy-elfirma) och 101 filer i kallor/ (bl.a. offertmallens .of-btn-primary i Booking-confirmation/assets/shared.css:848); PNG-exporten AMPY-06 är #37b2c0"},
+    {"namn": "Sekundär spring-green (lime)", "hex": "#92ec47", "rgb_tryckt": "146 236 71", "cmyk": "57 0 100 0", "roll": "stödfärg (samma text som ovan); avdelare s.19, gradient 2", "token": null, "sida": 8, "i_produktion": "nej – 0 träffar i live-css och 0 i kallor/; PNG-exporten AMPY-05 är #70ee00"},
+    {"namn": "Svart / vit (B&W)", "hex": "≈#1e1e1e / #ffffff (uppmätt i pdf-render, ej angivet i text)", "roll": "enfärgsapplikationer", "token": "--apdarkest-black / --appure-white (osäkert – ingen hex i boken)", "sida": 10, "i_produktion": "logo-PNG:erna i tre av fyra inventerade källor (main-form, booking, thank-you) är rent #000000, inte midnight"},
+    {"namn": "SAKNAS I BRANDBOKEN: Teal core", "hex": "#00a991", "roll": "produktionens primära åtgärdsfärg (--apteal-core) – förekommer inte på någon av de 26 sidorna", "token": "--apteal-core", "sida": null, "i_produktion": "ja – 137 filer, live-css 4 filer"},
+    {"namn": "SAKNAS I BRANDBOKEN: Emerald flow, seafoam, mint-surge, crystal-blue, aqua-frost, sublime-green, milk-white, gray-white, charcoal", "hex": "#39c281 #5cc5b6 #9de1ec #b6f2ff #ddf9fd #a0fbc9 #f5f5f5 #d9d9d9 #333333", "roll": "hela produktionens stödpalett saknar brandboksstöd", "token": "--apemerald-flow … --apcharcoal-gray", "sida": null, "i_produktion": "ja"}
+  ],
+  "farg_par_godkanda": [
+    "vit wordmark på midnight", "neon-mint på cobalt", "midnight på sekundärteal",
+    "cobalt på neon-mint", "midnight på spring-green (#92ec47)", "cobalt på sky-mist",
+    "midnight på cobalt", "midnight på sky-mist", "neon-mint på midnight"
+  ],
+  "gradienter": [
+    {"nr": 1, "beskrivning": "cobalt #326afd (topp) → midnight #090b32 (botten)", "sida": 11},
+    {"nr": 2, "beskrivning": "spring-green #92ec47 (topp) → cobalt #326afd (botten)", "sida": 11},
+    {"nr": 3, "beskrivning": "sekundärteal #5eb1bf (topp) → spring-green #92ec47 (botten)", "sida": 11},
+    {"nr": 4, "beskrivning": "neon-mint #55ff9a (topp) → midnight #090b32 (botten)", "sida": 11},
+    {"nr": "omslag/baksida", "beskrivning": "mesh: midnight + cobalt + neon-mint + spring-green med tunna vågiga konturlinjer (aurora-förlagan)", "sida": "1, 22, 23, 26"},
+    {"regel": "Gradients must be used exclusively with the brand's official colors; angle flexible; result should convey energy, dynamism, vibrancy, avoid dull combinations", "sida": 11},
+    {"observation": "ingen av de fyra inventerade källorna använder någon av de fyra referensgradienterna; produktionens aurora (sky-mist + teal/crystal-blue/sublime-green-radialer) är en ljus omtolkning av mesh-omslaget"}
+  ],
+  "typografi_regler": [
+    {"regel": "Main typography: OUTFIT (enda typsnittet i boken)", "sida": 13},
+    {"vikt": "Light", "css_weight": 300, "roll": "long or secondary text where a light and elegant look is desired, such as descriptions, notes, or footers", "sida": 14, "i_praktiken": "booking: beskrivningar/villkor/intro 300; main-form ingress 200 (lättare än boken), samtycke 300; tack-sidan ingress 400"},
+    {"vikt": "Medium", "css_weight": 500, "roll": "subtitles, highlights, and text blocks that need good readability while maintaining visual balance", "sida": 14, "i_praktiken": "main-form h2 500, etiketter 500; tack-sidan h1 500; booking faktatext 500"},
+    {"vikt": "Black", "css_weight": 900, "roll": "titles, headlines, or messages that require maximum impact and strong visual presence", "sida": 14, "i_praktiken": "INGEN av de fyra källorna använder 900 (eller 800/700) för rubriker: h1/h2 ligger på 500–600 (tack 500, booking 600, offer 600, main-form 500). Skill-referensen använder 800 (--w-black:800, inte 900). Brandbokens egna sidrubriker är satta i Outfit Light/Regular, inte Black."},
+    {"observation": "boken anger inga storlekar, radavstånd, spärrning eller skala – bara tre vikter och deras roller", "sida": 14},
+    {"observation": "utropstecken, versaler och 'POWER UP YOUR HOME'/'TURN ON THE TRUST' i BLACK versaler på applikationerna (s.22, 25) – en tung reklamröst som produktionen inte använder", "sida": "22, 25"}
+  ],
+  "logo_regler": [
+    {"regel": "tre lockups: Main Version (wordmark 'ampy' med blixt skuren i a:t), Simple Mark (a + blixt), Glyph (bar blixt)", "sida": 3},
+    {"regel": "friyta runt logon = bokstaven a:s höjd och bredd; ska vara fri från all annan grafik/typografi", "sida": 4},
+    {"regel": "bokstavsmellanrum = 20 % av a:s bredd", "sida": 4},
+    {"regel": "minsta storlek: ANGES INTE", "sida": null},
+    {"regel": "förbud (8): olika färger per bokstav; gradient/textur på logon; rotation/lutning; annat typsnitt; ändra enskilda bokstävers storlek; ändra komposition (avstånd/justering/proportion); disproportionerlig skalning; ta bort/ersätta blixten i a:t", "sida": 5},
+    {"regel": "profilbilder i sociala medier: bara simple mark eller main logo i godkänd färgvariant; inga foton/illustrationer/extra text/inofficiella versioner", "sida": 22},
+    {"regel": "godkända färgpar: 9 st (se farg_par_godkanda); B&W: svart på vitt, vit på svart", "sida": "9-10"},
+    {"observation": "boken visar wordmarken i midnight #090b32 (s.3) – men produktionens logo-PNG:er (Thank-you shared/assets/Ampy-logo.png 701×201 – samma mått som exporten AMPY-01 – samt main-form/booking ampy-logo-dark.png 1600×468 och LOGO/Ampy-nordic-ab-logotyp.png 1200×360) är rent svart #000000; sajtens header refererar wp-content/uploads/Ampy-logo.png (ej hämtad); den midnight-färgade exporten (LOGO/COLOURS/AMPY-01.png, #090b34) används inte av någon källa", "sida": 3},
+    {"observation": "ingen SVG-export finns – bara .ai (LOGOS.ai) och PNG; ampy-article-template/src/components/icons/AmpyLogo.jsx är en handgjord SVG-rekonstruktion (ej byråns vektor)", "sida": null}
+  ],
+  "ikoner_foto_former": [
+    {"regel": "ikoner: solida, så enkla som möjligt, inga onödiga detaljer eller komplexa streck (exempel: skiftnyckel, blixt, glödlampa, gnistor)", "sida": 16, "i_praktiken": "alla fyra källor använder LINJE-ikoner (stroke 1.6–3, fill none): main-form stegikoner, booking faktaglyfer, bockar – motsatsen till boken"},
+    {"regel": "foto: realistiskt, rent, professionellt, naturliga färger, bra ljus; klarhet/tillit/modernitet; ingen översaturering, inga artificiella filter; riktiga miljöer, människor i naturliga sammanhang, el-/energidetaljer", "sida": 17, "i_praktiken": "main-form: skymningshus med tänt ljus (matchar s.17:s husfoto) + platt mörk overlay .55; övriga källor fotolösa"},
+    {"regel": "former: härledda ur blixten eller bokstaven a; ramar/lyfter/kompletterar innehåll; inga förvrängningar, godtyckliga rotationer eller former utan ursprung i dessa element", "sida": 18, "i_praktiken": "ingen av de fyra källorna använder blixt-/a-former; skill-referensen använder en egen bolt.svg-vattenstämpel"},
+    {"regel": "klädsel i foto: blå arbetsjacka, blå hjälm, skyddsglasögon (bildexempel, ej text)", "sida": "17, 20, 23"}
+  ],
+  "ton": [
+    {"observation": "boken har inget tonalitets-/röstavsnitt; enda copyexemplen är engelska reklamfraser i versaler: 'POWER UP YOUR HOME', 'TURN ON THE TRUST', 'WORK IN PROGRESS', 'CALL US: 010-265 79 79'", "sida": "22, 24, 25"}
+  ],
+  "logofiler_kopierade": [
+    {"fil": "inventering/brand/ampy-wordmark-midnight-701x201.png", "kalla": "LOGO/COLOURS/AMPY-01.png", "farg_uppmatt": "#090b34 (≈ midnight)", "bbox": "38,17 → 586×150"},
+    {"fil": "inventering/brand/ampy-wordmark-black-1200x360.png", "kalla": "LOGO/Ampy-nordic-ab-logotyp.png", "farg_uppmatt": "#000000", "bbox": "65,30 → 1069×300"},
+    {"fil": "inventering/brand/ampy-wordmark-black-8082x2364-master.png", "kalla": "Ampy-logotype (HUBSPOT).png", "farg_uppmatt": "#000000", "bbox": "53,134 → 7988×2130 (samma teckning som produktionens ampy-logo-dark.png 1600×468)"},
+    {"fil": "inventering/brand/ampy-wordmark-white-2917x834.png", "kalla": "LOGO/B&W/Ampy logotype.png", "farg_uppmatt": "#ffffff", "bbox": "158,69 → 2601×695 (= kallor/Ampy-main-form/assets/ampy-logo-white.png, identiska mått)"},
+    {"fil": "inventering/brand/ampy-mark-midnight-201.png", "kalla": "LOGO/COLOURS/AMPY-07.png", "farg_uppmatt": "#090b34"},
+    {"fil": "inventering/brand/ampy-glyph-midnight-201.png", "kalla": "LOGO/COLOURS/AMPY-08.png", "farg_uppmatt": "#090b34"},
+    {"fil": "inventering/brand/ampy-mark-black-834.png", "kalla": "LOGO/B&W/Ampy-altnerative-logo.png", "farg_uppmatt": "#000000"},
+    {"fil": "inventering/brand/ampy-mark-white-834.png", "kalla": "LOGO/B&W/LOGOS-23.png", "farg_uppmatt": "#ffffff"},
+    {"fil": "inventering/brand/ampy-glyph-white-834.png", "kalla": "LOGO/B&W/LOGOS-24.png", "farg_uppmatt": "#ffffff"},
+    {"fil": "inventering/brand/ampy-glyph-black-201-favicon.png", "kalla": "LOGO/B&W/Ampy-favicon.png", "farg_uppmatt": "#000000"},
+    {"fil": "inventering/brand/ampy-wordmark-cobalt-701x201.png", "kalla": "LOGO/COLOURS/AMPY-02.png", "farg_uppmatt": "#136cff (≠ tryckt #326afd)"},
+    {"fil": "inventering/brand/ampy-wordmark-neonmint-701x201.png", "kalla": "LOGO/COLOURS/AMPY-03.png", "farg_uppmatt": "#00ff8e (≠ tryckt #55ff9a)"},
+    {"fil": "inventering/brand/ampy-wordmark-springgreen-701x201.png", "kalla": "LOGO/COLOURS/AMPY-05.png", "farg_uppmatt": "#70ee00 (≠ tryckt #92ec47)"},
+    {"fil": "inventering/brand/ampy-wordmark-secondaryteal-701x201.png", "kalla": "LOGO/COLOURS/AMPY-06.png", "farg_uppmatt": "#37b2c0 (≠ tryckt #5eb1bf)"}
+  ],
+  "logofiler_ej_kopierade": [
+    "LOGO/COLOURS/AMPY-04.png, AMPY-13/14.png (kontur-/outline-varianter i cobalt – ej i boken)",
+    "LOGO/COLOURS/AMPY-09…12, 15…18, LOGOS-21 (mark/glyph i cobalt, neon, lime, teal, svart)",
+    "LOGO/OTHERS/LOGOS-25…40 (svart wordmark med färgad blixt, kontur-wordmarks, svart mark med färgad blixt, färgade glyfer – ingen av dem finns i boken; s.5 förbjuder olika färger per bokstav, en färgad blixt i svart wordmark ligger nära gränsen)",
+    "Ampy-nordic-ab-official-logo.png (631×173, vit bakgrund utan alfa), Ampy-logotype.png (1200×1200 kvadrat), LOGO/B&W/Document.png (1200×1200 mark på vit)"
+  ],
+  "defekter": [
+    "produktionens primära färg teal #00a991 saknas helt i brandboken; brandbokens primära accent cobalt #326afd saknas helt i produktionen – boken och sajten delar bara midnight, neon-mint och sky-mist",
+    "brandbokens sekundärteal #5eb1bf lever i produktion (primärknappens gradient, fokusringar) men är inte ett ap*-token – och tidigare dokumentation kallar den 'frånvarande'",
+    "PNG-exporterna i LOGO/COLOURS har andra hex än boken anger (#136cff, #00ff8e, #70ee00, #37b2c0 vs #326afd, #55ff9a, #92ec47, #5eb1bf) – exporterna är inte färgsäkra",
+    "wordmarken i produktion är svart #000000, i boken midnight #090b32",
+    "RGB för midnight tryckt som '9 11 59' (hex = 50)",
+    "ingen minsta storlek, inga typstorlekar, ingen skala, inga radier/avstånd, inget tonavsnitt – boken täcker logo/färg/vikt/foto/former, inte UI",
+    "'Black' som rubrikvikt används inte i något byggt block (500–600 överallt); boken själv sätter sina rubriker i Light",
+    "ikonregeln 'solid' bryts konsekvent (alla byggda block använder linjeikoner)",
+    "dubbelnumrering (02 två gånger, 03 två gånger), stavfel ('Marck', 'Tipography', 'Aplications')",
+    "ingen vektorexport (SVG) – bara .ai och PNG"
+  ]
+}

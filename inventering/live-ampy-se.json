@@ -1,0 +1,2029 @@
+{
+ "kalla": "live-ampy-se",
+ "status": "live (ampy.se, hämtat 2026-09-11)",
+ "auktoritet": 1,
+ "ingang": "kallor/live-ampy-se/ (global-variables.css, theme-style.css, frontend.css, site-css.css, 4×post-*.css, inline-*.css, extracted-rot-live.html, extracted-gt-live.html, live-source-*.html)",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/live-ampy-se-desktop.png",
+  "inventering/skarmdumpar/live-ampy-se-mobile.png",
+  "inventering/skarmdumpar/live-ampy-se-rot-desktop.png",
+  "inventering/skarmdumpar/live-ampy-se-rot-mobile.png",
+  "inventering/skarmdumpar/live-ampy-se-gt-desktop.png",
+  "inventering/skarmdumpar/live-ampy-se-gt-mobile.png"
+ ],
+ "harness": "inventering/_probes/a1-live-rot.html + a1-live-gt.html (live-kaskaden återskapad i exakt ordning ur live-source-*.html; theme-style inlinad utan sina 18 fjärr-@font-face (CORS), Outfit variabel från kallor/Hero-1 sist)",
+ "rem_bas": "html{font-size:62.5%} (frontend.css, theme-style.css, core-framework-inline) -> 1rem = 10px. Alla px nedan mätta med getComputedStyle vid 1440 och 390.",
+ "kaskad_pa_live": [
+  "<style ampy-cc-vars>, <style ampy-cc-css>, <style fluent_snippet_14>",
+  "34-calculator-lead-magnet-css, 59-header-styling.css, 60-site-css.css (= site-css.css), frontend-light-layer.min.css (= frontend.css)",
+  "<style bricks-frontend-inline-css>, <style bricks-child-inline>, <style bricks-color-palettes-inline> (Bricks-paletten --color-2..30)",
+  "global-variables.min.css (= global-variables.css: 174 deklarationer, 101 unika ap*)",
+  "theme-style-ampy.min.css (= theme-style.css: 97 ap* + 18 @font-face Outfit 100–900 + Plus Jakarta Sans 200–800; 11 ap*-värden AVVIKER)",
+  "post-15042/15545/15096/15498.min.css (sid-CSS i @layer bricks)",
+  "<style bricks-global-custom-css-inline>, <style bricks-style-manager-inline> (paletten igen), <style bricks-frontend-inline-inline-css> (klass-CSS .rot__, .gron-teknik__ …), <style core-framework-frontend-inline> (html 62.5% + :root med de 101 ap* = global-variables-värdena -> ÅTERSTÄLLER theme-styles avvikelser), <style core-framework-inline-inline-css> (tom), <style core-framework-colors-classes-inline-inline-css> (tom), <style ampy-icons-subset>, <style bricks-splide-inline>"
+ ],
+ "tokens_live": [
+  {
+   "name": "--apmidnight-blue",
+   "value": "rgb(9,11,50)",
+   "value_first_decl_hex": "#090b32",
+   "computed": "rgb(9, 11, 50)"
+  },
+  {
+   "name": "--apteal-core",
+   "value": "rgb(0,169,145)",
+   "value_first_decl_hex": "#00a991",
+   "computed": "rgb(0, 169, 145)"
+  },
+  {
+   "name": "--apemerald-flow",
+   "value": "rgb(57,194,129)",
+   "value_first_decl_hex": "#39c281",
+   "computed": "rgb(57, 194, 129)"
+  },
+  {
+   "name": "--apseafoam-mint",
+   "value": "rgb(92,197,182)",
+   "value_first_decl_hex": "#5cc5b6",
+   "computed": "rgb(92, 197, 182)"
+  },
+  {
+   "name": "--apneon-mint",
+   "value": "rgb(85,255,154)",
+   "value_first_decl_hex": "#55ff9a",
+   "computed": "rgb(85, 255, 154)"
+  },
+  {
+   "name": "--apsublime-green",
+   "value": "rgb(160,251,201)",
+   "value_first_decl_hex": "#a0fbc9",
+   "computed": "rgb(160, 251, 201)"
+  },
+  {
+   "name": "--apmint-surge",
+   "value": "rgb(157,225,236)",
+   "value_first_decl_hex": "#9de1ec",
+   "computed": "rgb(157, 225, 236)"
+  },
+  {
+   "name": "--apcrystal-blue",
+   "value": "rgb(182,242,255)",
+   "value_first_decl_hex": "#b6f2ff",
+   "computed": "rgb(182, 242, 255)"
+  },
+  {
+   "name": "--apaqua-frost",
+   "value": "rgb(221,249,253)",
+   "value_first_decl_hex": "#ddf9fd",
+   "computed": "rgb(221, 249, 253)"
+  },
+  {
+   "name": "--appure-white",
+   "value": "rgb(255,255,255)",
+   "value_first_decl_hex": "#ffffff",
+   "computed": "rgb(255, 255, 255)"
+  },
+  {
+   "name": "--apsky-mist",
+   "value": "rgb(245,249,255)",
+   "value_first_decl_hex": "#f5f9ff",
+   "computed": "rgb(245, 249, 255)"
+  },
+  {
+   "name": "--apmilk-white",
+   "value": "rgb(245,245,245)",
+   "value_first_decl_hex": "#f5f5f5",
+   "computed": "rgb(245, 245, 245)"
+  },
+  {
+   "name": "--apmilk-white-5",
+   "value": "rgba(245,245,245,0.05)",
+   "computed": "rgba(245, 245, 245, 0.05)"
+  },
+  {
+   "name": "--apmilk-white-10",
+   "value": "rgba(245,245,245,0.1)",
+   "computed": "rgba(245, 245, 245, 0.1)"
+  },
+  {
+   "name": "--apmilk-white-20",
+   "value": "rgba(245,245,245,0.2)",
+   "computed": "rgba(245, 245, 245, 0.2)"
+  },
+  {
+   "name": "--apmilk-white-30",
+   "value": "rgba(245,245,245,0.3)",
+   "computed": "rgba(245, 245, 245, 0.3)"
+  },
+  {
+   "name": "--apmilk-white-40",
+   "value": "rgba(245,245,245,0.4)",
+   "computed": "rgba(245, 245, 245, 0.4)"
+  },
+  {
+   "name": "--apmilk-white-50",
+   "value": "rgba(245,245,245,0.5)",
+   "computed": "rgba(245, 245, 245, 0.5)"
+  },
+  {
+   "name": "--apmilk-white-60",
+   "value": "rgba(245,245,245,0.6)",
+   "computed": "rgba(245, 245, 245, 0.6)"
+  },
+  {
+   "name": "--apmilk-white-70",
+   "value": "rgba(245,245,245,0.7)",
+   "computed": "rgba(245, 245, 245, 0.7)"
+  },
+  {
+   "name": "--apmilk-white-80",
+   "value": "rgba(245,245,245,0.8)",
+   "computed": "rgba(245, 245, 245, 0.8)"
+  },
+  {
+   "name": "--apmilk-white-90",
+   "value": "rgba(245,245,245,0.9)",
+   "computed": "rgba(245, 245, 245, 0.9)"
+  },
+  {
+   "name": "--apgray-white",
+   "value": "rgb(217,217,217)",
+   "computed": "rgb(217, 217, 217)"
+  },
+  {
+   "name": "--apcharcoal-gray",
+   "value": "rgb(51,51,51)",
+   "computed": "rgb(51, 51, 51)"
+  },
+  {
+   "name": "--apdarkest-black",
+   "value": "rgb(30,30,30)",
+   "computed": "rgb(30, 30, 30)"
+  },
+  {
+   "name": "--apdarkest-black-5",
+   "value": "rgba(30,30,30,0.05)",
+   "computed": "rgba(30, 30, 30, 0.05)"
+  },
+  {
+   "name": "--apdarkest-black-10",
+   "value": "rgba(30,30,30,0.1)",
+   "computed": "rgba(30, 30, 30, 0.1)"
+  },
+  {
+   "name": "--apdarkest-black-20",
+   "value": "rgba(30,30,30,0.2)",
+   "computed": "rgba(30, 30, 30, 0.2)"
+  },
+  {
+   "name": "--apdarkest-black-30",
+   "value": "rgba(30,30,30,0.3)",
+   "computed": "rgba(30, 30, 30, 0.3)"
+  },
+  {
+   "name": "--apdarkest-black-40",
+   "value": "rgba(30,30,30,0.4)",
+   "computed": "rgba(30, 30, 30, 0.4)"
+  },
+  {
+   "name": "--apdarkest-black-50",
+   "value": "rgba(30,30,30,0.5)",
+   "computed": "rgba(30, 30, 30, 0.5)"
+  },
+  {
+   "name": "--apdarkest-black-60",
+   "value": "rgba(30,30,30,0.6)",
+   "computed": "rgba(30, 30, 30, 0.6)"
+  },
+  {
+   "name": "--apdarkest-black-70",
+   "value": "rgba(30,30,30,0.7)",
+   "computed": "rgba(30, 30, 30, 0.7)"
+  },
+  {
+   "name": "--apdarkest-black-80",
+   "value": "rgba(30,30,30,0.8)",
+   "computed": "rgba(30, 30, 30, 0.8)"
+  },
+  {
+   "name": "--apdarkest-black-90",
+   "value": "rgba(30,30,30,0.9)",
+   "computed": "rgba(30, 30, 30, 0.9)"
+  },
+  {
+   "name": "--apdeepest-blue",
+   "value": "rgb(14,15,21)",
+   "computed": "rgb(14, 15, 21)"
+  },
+  {
+   "name": "--appure-black",
+   "value": "rgb(0,0,0)",
+   "computed": "rgb(0, 0, 0)"
+  },
+  {
+   "name": "--appure-black-5",
+   "value": "rgba(0,0,0,0.05)",
+   "computed": "rgba(0, 0, 0, 0.05)"
+  },
+  {
+   "name": "--appure-black-10",
+   "value": "rgba(0,0,0,0.1)",
+   "computed": "rgba(0, 0, 0, 0.1)"
+  },
+  {
+   "name": "--appure-black-20",
+   "value": "rgba(0,0,0,0.2)",
+   "computed": "rgba(0, 0, 0, 0.2)"
+  },
+  {
+   "name": "--appure-black-30",
+   "value": "rgba(0,0,0,0.3)",
+   "computed": "rgba(0, 0, 0, 0.3)"
+  },
+  {
+   "name": "--appure-black-40",
+   "value": "rgba(0,0,0,0.4)",
+   "computed": "rgba(0, 0, 0, 0.4)"
+  },
+  {
+   "name": "--appure-black-50",
+   "value": "rgba(0,0,0,0.5)",
+   "computed": "rgba(0, 0, 0, 0.5)"
+  },
+  {
+   "name": "--appure-black-60",
+   "value": "rgba(0,0,0,0.6)",
+   "computed": "rgba(0, 0, 0, 0.6)"
+  },
+  {
+   "name": "--appure-black-70",
+   "value": "rgba(0,0,0,0.7)",
+   "computed": "rgba(0, 0, 0, 0.7)"
+  },
+  {
+   "name": "--appure-black-80",
+   "value": "rgba(0,0,0,0.8)",
+   "computed": "rgba(0, 0, 0, 0.8)"
+  },
+  {
+   "name": "--appure-black-90",
+   "value": "rgba(0,0,0,0.9)",
+   "computed": "rgba(0, 0, 0, 0.9)"
+  },
+  {
+   "name": "--apmin-screen-width",
+   "value": "320px",
+   "px_at_1440": 320,
+   "px_at_390": 320
+  },
+  {
+   "name": "--apmax-screen-width",
+   "value": "1280px",
+   "px_at_1440": 1280,
+   "px_at_390": 1280
+  },
+  {
+   "name": "--apspace-4xs",
+   "value": "clamp(0.52rem,calc(-0.03vw + 0.53rem),0.49rem)",
+   "px_at_1440": 5.19,
+   "px_at_390": 5.19
+  },
+  {
+   "name": "--apspace-3xs",
+   "value": "clamp(0.66rem,calc(0.05vw + 0.64rem),0.7rem)",
+   "px_at_1440": 7,
+   "px_at_390": 6.59
+  },
+  {
+   "name": "--apspace-2xs",
+   "value": "clamp(0.82rem,calc(0.18vw + 0.76rem),0.99rem)",
+   "px_at_1440": 9.89,
+   "px_at_390": 8.3
+  },
+  {
+   "name": "--apspace-xs",
+   "value": "clamp(1.02rem,calc(0.39vw + 0.9rem),1.4rem)",
+   "px_at_1440": 14,
+   "px_at_390": 10.52
+  },
+  {
+   "name": "--apspace-s",
+   "value": "clamp(1.28rem,calc(0.73vw + 1.05rem),1.98rem)",
+   "px_at_1440": 19.8,
+   "px_at_390": 13.34
+  },
+  {
+   "name": "--apspace-m",
+   "value": "clamp(1.6rem,calc(1.25vw + 1.2rem),2.8rem)",
+   "px_at_1440": 28,
+   "px_at_390": 16.88
+  },
+  {
+   "name": "--apspace-l",
+   "value": "clamp(2rem,calc(2.04vw + 1.35rem),3.96rem)",
+   "px_at_1440": 39.59,
+   "px_at_390": 21.45
+  },
+  {
+   "name": "--apspace-xl",
+   "value": "clamp(2.5rem,calc(3.23vw + 1.47rem),5.6rem)",
+   "px_at_1440": 56,
+   "px_at_390": 27.3
+  },
+  {
+   "name": "--apspace-2xl",
+   "value": "clamp(3.13rem,calc(4.99vw + 1.53rem),7.92rem)",
+   "px_at_1440": 79.19,
+   "px_at_390": 34.75
+  },
+  {
+   "name": "--apspace-3xl",
+   "value": "clamp(3.91rem,calc(7.59vw + 1.48rem),11.19rem)",
+   "px_at_1440": 111.89,
+   "px_at_390": 44.39
+  },
+  {
+   "name": "--apspace-4xl",
+   "value": "clamp(4.88rem,calc(11.4vw + 1.23rem),15.83rem)",
+   "px_at_1440": 158.3,
+   "px_at_390": 56.75
+  },
+  {
+   "name": "--aptext-xs",
+   "value": "clamp(1rem,calc(0.21vw + 0.93rem),1.2rem)",
+   "px_at_1440": 12,
+   "px_at_390": 10.11
+  },
+  {
+   "name": "--aptext-s",
+   "value": "clamp(1.2rem,calc(0.21vw + 1.13rem),1.4rem)",
+   "px_at_1440": 14,
+   "px_at_390": 12.11
+  },
+  {
+   "name": "--aptext-sm",
+   "value": "clamp(1.4rem,calc(0.21vw + 1.33rem),1.6rem)",
+   "px_at_1440": 16,
+   "px_at_390": 14.11
+  },
+  {
+   "name": "--aptext-m",
+   "value": "clamp(1.6rem,calc(0.21vw + 1.53rem),1.8rem)",
+   "px_at_1440": 18,
+   "px_at_390": 16.11,
+   "theme_style_css_value": "clamp(1.7rem,calc(0.1vw+1.67rem),1.8rem)",
+   "theme_style_px_1440": 18,
+   "theme_style_px_390": 17.08,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--aptext-mm",
+   "value": "clamp(1.8rem,calc(0.21vw + 1.73rem),2rem)",
+   "px_at_1440": 20,
+   "px_at_390": 18.11
+  },
+  {
+   "name": "--aptext-ml",
+   "value": "clamp(2rem,calc(0.21vw + 1.93rem),2.2rem)",
+   "px_at_1440": 22,
+   "px_at_390": 20.11
+  },
+  {
+   "name": "--aptext-l",
+   "value": "clamp(2.2rem,calc(0.21vw + 2.13rem),2.4rem)",
+   "px_at_1440": 24,
+   "px_at_390": 22.11,
+   "theme_style_css_value": "clamp(1.8rem,calc(1.04vw+1.47rem),2.8rem)",
+   "theme_style_px_1440": 28,
+   "theme_style_px_390": 18.75,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--aptext-lm",
+   "value": "clamp(2.2rem,calc(0.63vw + 2rem),2.8rem)",
+   "px_at_1440": 28,
+   "px_at_390": 22.45
+  },
+  {
+   "name": "--aptext-xl",
+   "value": "clamp(2.4rem,calc(0.83vw + 2.13rem),3.2rem)",
+   "px_at_1440": 32,
+   "px_at_390": 24.53,
+   "theme_style_css_value": "clamp(2rem,calc(1.67vw+1.47rem),3.6rem)",
+   "theme_style_px_1440": 36,
+   "theme_style_px_390": 21.2,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--aptext-2xl",
+   "value": "clamp(2.6rem,calc(1.04vw + 2.27rem),3.6rem)",
+   "px_at_1440": 36,
+   "px_at_390": 26.75,
+   "theme_style_css_value": "clamp(2.2rem,calc(2.71vw+1.33rem),4.8rem)",
+   "theme_style_px_1440": 48,
+   "theme_style_px_390": 23.86,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--aptext-2-5xl",
+   "value": "clamp(2.8rem,calc(1.25vw + 2.4rem),4rem)",
+   "px_at_1440": 40,
+   "px_at_390": 28.88,
+   "theme_style_css_value": "clamp(2.6rem,calc(2.92vw+1.67rem),5.4rem)",
+   "theme_style_px_1440": 54,
+   "theme_style_px_390": 28.08,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--aptext-3xl",
+   "value": "clamp(3rem,calc(1.88vw + 2.4rem),4.8rem)",
+   "px_at_1440": 48,
+   "px_at_390": 31.33,
+   "theme_style_css_value": "clamp(2.6rem,calc(3.54vw+1.47rem),6rem)",
+   "theme_style_px_1440": 60,
+   "theme_style_px_390": 28.5,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--aptext-3-5xl",
+   "value": "clamp(3.2rem,calc(2.08vw + 2.53rem),5.2rem)",
+   "px_at_1440": 52,
+   "px_at_390": 33.41
+  },
+  {
+   "name": "--aptext-4xl",
+   "value": "clamp(3.4rem,calc(2.71vw + 2.53rem),6rem)",
+   "px_at_1440": 60,
+   "px_at_390": 35.86,
+   "theme_style_css_value": "clamp(4rem,calc(3.65vw+2.83rem),7.5rem)",
+   "theme_style_px_1440": 75,
+   "theme_style_px_390": 42.53,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--aptext-5xl",
+   "value": "clamp(4rem,calc(3.75vw + 2.8rem),7.6rem)",
+   "px_at_1440": 76,
+   "px_at_390": 42.63
+  },
+  {
+   "name": "--aphero-title-size",
+   "value": "var(--aptext-4xl)",
+   "px_at_1440": 60,
+   "px_at_390": 35.86,
+   "theme_style_css_value": "clamp(4rem,calc(3.65vw+2.83rem),7.5rem)",
+   "theme_style_px_1440": 75,
+   "theme_style_px_390": 42.53,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--appost-title-size",
+   "value": "var(--aptext-2xl)",
+   "px_at_1440": 36,
+   "px_at_390": 26.75,
+   "theme_style_css_value": "clamp(2.2rem,calc(2.71vw+1.33rem),4.8rem)",
+   "theme_style_px_1440": 48,
+   "theme_style_px_390": 23.86,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--apnav-link-size",
+   "value": "var(--aptext-s)",
+   "px_at_1440": 14,
+   "px_at_390": 12.11
+  },
+  {
+   "name": "--apheader-space",
+   "value": "var(--apspace-s)",
+   "px_at_1440": 19.8,
+   "px_at_390": 13.34
+  },
+  {
+   "name": "--apbtn-space",
+   "value": "var(--apspace-xs) var(--apspace-s)",
+   "px_at_1440": "14px 19.8px",
+   "px_at_390": "10.521px 13.347px"
+  },
+  {
+   "name": "--apcard-space",
+   "value": "var(--apspace-s)",
+   "px_at_1440": 19.8,
+   "px_at_390": 13.34
+  },
+  {
+   "name": "--apfooter-space",
+   "value": "var(--apspace-s) var(--apspace-m)",
+   "px_at_1440": "19.8px 28px",
+   "px_at_390": "13.347px 16.875px"
+  },
+  {
+   "name": "--apcolumns-1",
+   "value": "repeat(1,minmax(0,1fr))"
+  },
+  {
+   "name": "--apcolumns-2",
+   "value": "repeat(2,minmax(0,1fr))"
+  },
+  {
+   "name": "--apcolumns-3",
+   "value": "repeat(3,minmax(0,1fr))"
+  },
+  {
+   "name": "--apcolumns-4",
+   "value": "repeat(4,minmax(0,1fr))"
+  },
+  {
+   "name": "--apcolumns-5",
+   "value": "repeat(5,minmax(0,1fr))"
+  },
+  {
+   "name": "--apcolumns-6",
+   "value": "repeat(6,minmax(0,1fr))"
+  },
+  {
+   "name": "--apcolumns-7",
+   "value": "repeat(7,minmax(0,1fr))"
+  },
+  {
+   "name": "--apcolumns-8",
+   "value": "repeat(8,minmax(0,1fr))"
+  },
+  {
+   "name": "--apradius-xs",
+   "value": "clamp(0.4rem,calc(0vw + 0.4rem),0.4rem)",
+   "px_at_1440": 4,
+   "px_at_390": 4
+  },
+  {
+   "name": "--apradius-s",
+   "value": "clamp(0.6rem,calc(0.21vw + 0.53rem),0.8rem)",
+   "px_at_1440": 8,
+   "px_at_390": 6.11,
+   "theme_style_css_value": "clamp(0.6rem,calc(-0.21vw+0.87rem),0.8rem)",
+   "theme_style_px_1440": 6,
+   "theme_style_px_390": 7.88,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--apradius-m",
+   "value": "clamp(1rem,calc(0.21vw + 0.93rem),1.2rem)",
+   "px_at_1440": 12,
+   "px_at_390": 10.11,
+   "theme_style_css_value": "clamp(1rem,calc(-0.21vw+1.27rem),1.2rem)",
+   "theme_style_px_1440": 10,
+   "theme_style_px_390": 11.88,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--apradius-l",
+   "value": "clamp(1.6rem,calc(0.42vw + 1.47rem),2rem)",
+   "px_at_1440": 20,
+   "px_at_390": 16.33,
+   "theme_style_css_value": "clamp(1.6rem,calc(-0.42vw+2.13rem),2rem)",
+   "theme_style_px_1440": 16,
+   "theme_style_px_390": 19.66,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--apradius-xl",
+   "value": "clamp(2.4rem,calc(0.83vw + 2.13rem),3.2rem)",
+   "px_at_1440": 32,
+   "px_at_390": 24.53,
+   "theme_style_css_value": "clamp(2.4rem,calc(-0.83vw+3.47rem),3.2rem)",
+   "theme_style_px_1440": 24,
+   "theme_style_px_390": 31.45,
+   "theme_style_note": "theme-style.css avviker, men core-framework-frontend-inline (laddas sist på live) återställer global-variables-värdet -> detta värde gäller"
+  },
+  {
+   "name": "--apradius-full",
+   "value": "999rem",
+   "px_at_1440": 9990,
+   "px_at_390": 9990
+  },
+  {
+   "name": "--apshadow-xs",
+   "value": "0 1px 2px var(--shadow-primary)",
+   "computed": "box-shadow: none (var(--shadow-primary) odefinierad -> hela deklarationen ogiltig)"
+  },
+  {
+   "name": "--apshadow-s",
+   "value": "0 1.5px 3px var(--shadow-primary)",
+   "computed": "box-shadow: none (var(--shadow-primary) odefinierad -> hela deklarationen ogiltig)"
+  },
+  {
+   "name": "--apshadow-m",
+   "value": "0 2px 6px var(--shadow-primary)",
+   "computed": "box-shadow: none (var(--shadow-primary) odefinierad -> hela deklarationen ogiltig)"
+  },
+  {
+   "name": "--apshadow-l",
+   "value": "0 3px 12px var(--shadow-primary)",
+   "computed": "box-shadow: none (var(--shadow-primary) odefinierad -> hela deklarationen ogiltig)"
+  },
+  {
+   "name": "--apshadow-xl",
+   "value": "0 6px 48px var(--shadow-primary)",
+   "computed": "box-shadow: none (var(--shadow-primary) odefinierad -> hela deklarationen ogiltig)"
+  }
+ ],
+ "tokens_live_antal": 101,
+ "tokens_legacy_core_framework": [
+  {
+   "name": "--space-xs",
+   "value": "clamp(0.90rem, calc(0.90rem + 0.0022 * (100vw - 380px)), 1.10rem)",
+   "px_at_1440": 11,
+   "px_at_390": 9.02
+  },
+  {
+   "name": "--space-s",
+   "value": "clamp(1.30rem, calc(1.30rem + 0.0033 * (100vw - 380px)), 1.60rem)",
+   "px_at_1440": 16,
+   "px_at_390": 13.03
+  },
+  {
+   "name": "--space-m",
+   "value": "clamp(2.00rem, calc(2.00rem + 0.0044 * (100vw - 380px)), 2.40rem)",
+   "px_at_1440": 24,
+   "px_at_390": 20.03
+  },
+  {
+   "name": "--space-l",
+   "value": "clamp(3.00rem, calc(3.00rem + 0.0067 * (100vw - 380px)), 3.60rem)",
+   "px_at_1440": 36,
+   "px_at_390": 30.06
+  },
+  {
+   "name": "--space-xl",
+   "value": "clamp(4.50rem, calc(4.50rem + 0.0100 * (100vw - 380px)), 5.40rem)",
+   "px_at_1440": 54,
+   "px_at_390": 45.09
+  },
+  {
+   "name": "--space-xxl",
+   "value": "clamp(6.80rem, calc(6.80rem + 0.0144 * (100vw - 380px)), 8.10rem)",
+   "px_at_1440": 81,
+   "px_at_390": 68.14
+  },
+  {
+   "name": "--space-section",
+   "value": "clamp(10.00rem, calc(10.00rem + 0.0222 * (100vw - 380px)), 12.00rem)",
+   "px_at_1440": 120,
+   "px_at_390": 100.22
+  },
+  {
+   "name": "--logo-width",
+   "value": "clamp(12.00rem, calc(12.00rem + 0.0889 * (100vw - 380px)), 20.00rem)",
+   "px_at_1440": 200,
+   "px_at_390": 120.88
+  },
+  {
+   "name": "--h1",
+   "value": "clamp(5.00rem, calc(5.00rem + 0.0133 * (100vw - 380px)), 6.20rem)",
+   "px_at_1440": 62,
+   "px_at_390": 50.13
+  },
+  {
+   "name": "--h2",
+   "value": "clamp(3.70rem, calc(3.70rem + 0.0111 * (100vw - 380px)), 4.70rem)",
+   "px_at_1440": 47,
+   "px_at_390": 37.11
+  },
+  {
+   "name": "--h3",
+   "value": "clamp(2.80rem, calc(2.80rem + 0.0078 * (100vw - 380px)), 3.50rem)",
+   "px_at_1440": 35,
+   "px_at_390": 28.06
+  },
+  {
+   "name": "--h4",
+   "value": "clamp(2.10rem, calc(2.10rem + 0.0056 * (100vw - 380px)), 2.60rem)",
+   "px_at_1440": 26,
+   "px_at_390": 21.05
+  },
+  {
+   "name": "--h5",
+   "value": "clamp(1.60rem, calc(1.60rem + 0.0044 * (100vw - 380px)), 2.00rem)",
+   "px_at_1440": 20,
+   "px_at_390": 16.03
+  },
+  {
+   "name": "--h6",
+   "value": "clamp(1.20rem, calc(1.20rem + 0.0033 * (100vw - 380px)), 1.50rem)",
+   "px_at_1440": 15,
+   "px_at_390": 12.03
+  },
+  {
+   "name": "--card-gap",
+   "value": "var(--space-m)",
+   "px_at_1440": 24,
+   "px_at_390": 20.03
+  },
+  {
+   "name": "--content-gap",
+   "value": "calc(var(--space-m) * 1.5)",
+   "px_at_1440": 36,
+   "px_at_390": 30.06
+  },
+  {
+   "name": "--container-gap",
+   "value": "var(--space-xxl)",
+   "px_at_1440": 81,
+   "px_at_390": 68.14
+  },
+  {
+   "name": "--padding-section",
+   "value": "var(--space-section) var(--space-m)",
+   "px_at_1440": "120px 24px",
+   "px_at_390": "100.222px 20.044px"
+  },
+  {
+   "name": "--offset",
+   "value": "80px",
+   "px_at_1440": 80,
+   "px_at_390": 80
+  },
+  {
+   "name": "--text-line-height",
+   "value": "calc(10px + 2ex)",
+   "px_at_1440": 18.97,
+   "px_at_390": 18.97
+  },
+  {
+   "name": "--heading-line-height",
+   "value": "calc(7px + 2ex)",
+   "px_at_1440": 15.97,
+   "px_at_390": 15.97
+  },
+  {
+   "name": "--text-font-weight",
+   "value": "400"
+  },
+  {
+   "name": "--heading-font-weight",
+   "value": "600"
+  },
+  {
+   "name": "--text-color",
+   "value": "var(--base)"
+  },
+  {
+   "name": "--heading-color",
+   "value": "var(--base-ultra-dark)"
+  },
+  {
+   "name": "--radius",
+   "value": "16px",
+   "px_at_1440": 16,
+   "px_at_390": 16
+  },
+  {
+   "name": "--radius-inside",
+   "value": "calc(var(--radius) * 0.5)",
+   "px_at_1440": 8,
+   "px_at_390": 8
+  },
+  {
+   "name": "--radius-outside",
+   "value": "calc(var(--radius) * 1.4)",
+   "px_at_1440": 22.39,
+   "px_at_390": 22.39
+  },
+  {
+   "name": "--radius-btn",
+   "value": ".3em",
+   "px_at_1440": 3,
+   "px_at_390": 3
+  },
+  {
+   "name": "--radius-pill",
+   "value": "9999px",
+   "px_at_1440": 9999,
+   "px_at_390": 9999
+  },
+  {
+   "name": "--radius-circle",
+   "value": "50%"
+  },
+  {
+   "name": "--radius-s",
+   "value": "12px",
+   "px_at_1440": 12,
+   "px_at_390": 12
+  },
+  {
+   "name": "--radius-m",
+   "value": "16px",
+   "px_at_1440": 16,
+   "px_at_390": 16
+  },
+  {
+   "name": "--radius-l",
+   "value": "24px",
+   "px_at_1440": 24,
+   "px_at_390": 24
+  },
+  {
+   "name": "--radius-xl",
+   "value": "36px",
+   "px_at_1440": 36,
+   "px_at_390": 36
+  },
+  {
+   "name": "--border-color",
+   "value": "var(--base-light)"
+  },
+  {
+   "name": "--container-width",
+   "value": "1280px",
+   "px_at_1440": 1280,
+   "px_at_390": 1280
+  },
+  {
+   "name": "--container-min-width",
+   "value": "380px",
+   "px_at_1440": 380,
+   "px_at_390": 380
+  },
+  {
+   "name": "--max-width",
+   "value": "980px",
+   "px_at_1440": 980,
+   "px_at_390": 980
+  },
+  {
+   "name": "--max-width-m",
+   "value": "840px",
+   "px_at_1440": 840,
+   "px_at_390": 840
+  },
+  {
+   "name": "--max-width-s",
+   "value": "640px",
+   "px_at_1440": 640,
+   "px_at_390": 640
+  },
+  {
+   "name": "--min-height",
+   "value": "340px",
+   "px_at_1440": 340,
+   "px_at_390": 340
+  },
+  {
+   "name": "--min-height-section",
+   "value": "540px",
+   "px_at_1440": 540,
+   "px_at_390": 540
+  },
+  {
+   "name": "--min-viewport",
+   "value": "360"
+  },
+  {
+   "name": "--max-viewport",
+   "value": "1600"
+  },
+  {
+   "name": "--base-font",
+   "value": "10"
+  },
+  {
+   "name": "--clamp-unit",
+   "value": "1vw",
+   "px_at_1440": 14.39,
+   "px_at_390": 3.89
+  }
+ ],
+ "tokens_grid_namn": [
+  "--grid-gap",
+  "--grid-gap-s",
+  "--grid-1",
+  "--grid-2",
+  "--grid-3",
+  "--grid-4",
+  "--grid-5",
+  "--grid-6",
+  "--grid-7",
+  "--grid-8",
+  "--grid-9",
+  "--grid-10",
+  "--grid-11",
+  "--grid-12",
+  "--grid-1-2",
+  "--grid-1-3",
+  "--grid-1-4",
+  "--grid-2-1",
+  "--grid-2-3",
+  "--grid-2-4",
+  "--grid-3-1",
+  "--grid-3-2",
+  "--grid-3-4",
+  "--grid-4-1",
+  "--grid-4-2",
+  "--grid-4-3"
+ ],
+ "tokens_theme_style_extra": [
+  {
+   "name": "--aptext-mmm",
+   "value": "clamp(2rem,calc(0.21vw + 1.93rem),2.2rem)",
+   "px_at_1440": 22,
+   "px_at_390": 20.11,
+   "note": "finns BARA i theme-style.css (ej i global-variables/core-framework-inline); används av live ROT/GT h3 (.brxe-34d975 font-size:var(--aptext-mmm))"
+  },
+  {
+   "name": "--cf-font-family--outfit",
+   "value": "'Outfit'"
+  },
+  {
+   "name": "--cf-font-family--plus-jakarta-sans",
+   "value": "'Plus Jakarta Sans'"
+  }
+ ],
+ "tokens_theme_style_avvikelser": [
+  {
+   "name": "--aptext-m",
+   "global_variables": "clamp(1.6rem,calc(0.21vw + 1.53rem),1.8rem)",
+   "theme_style": "clamp(1.7rem,calc(0.1vw+1.67rem),1.8rem)",
+   "gv_px": [
+    18,
+    16.11
+   ],
+   "ts_px": [
+    18,
+    17.08
+   ]
+  },
+  {
+   "name": "--aptext-l",
+   "global_variables": "clamp(2.2rem,calc(0.21vw + 2.13rem),2.4rem)",
+   "theme_style": "clamp(1.8rem,calc(1.04vw+1.47rem),2.8rem)",
+   "gv_px": [
+    24,
+    22.11
+   ],
+   "ts_px": [
+    28,
+    18.75
+   ]
+  },
+  {
+   "name": "--aptext-xl",
+   "global_variables": "clamp(2.4rem,calc(0.83vw + 2.13rem),3.2rem)",
+   "theme_style": "clamp(2rem,calc(1.67vw+1.47rem),3.6rem)",
+   "gv_px": [
+    32,
+    24.53
+   ],
+   "ts_px": [
+    36,
+    21.2
+   ]
+  },
+  {
+   "name": "--aptext-2xl",
+   "global_variables": "clamp(2.6rem,calc(1.04vw + 2.27rem),3.6rem)",
+   "theme_style": "clamp(2.2rem,calc(2.71vw+1.33rem),4.8rem)",
+   "gv_px": [
+    36,
+    26.75
+   ],
+   "ts_px": [
+    48,
+    23.86
+   ]
+  },
+  {
+   "name": "--aptext-2-5xl",
+   "global_variables": "clamp(2.8rem,calc(1.25vw + 2.4rem),4rem)",
+   "theme_style": "clamp(2.6rem,calc(2.92vw+1.67rem),5.4rem)",
+   "gv_px": [
+    40,
+    28.88
+   ],
+   "ts_px": [
+    54,
+    28.08
+   ]
+  },
+  {
+   "name": "--aptext-3xl",
+   "global_variables": "clamp(3rem,calc(1.88vw + 2.4rem),4.8rem)",
+   "theme_style": "clamp(2.6rem,calc(3.54vw+1.47rem),6rem)",
+   "gv_px": [
+    48,
+    31.33
+   ],
+   "ts_px": [
+    60,
+    28.5
+   ]
+  },
+  {
+   "name": "--aptext-4xl",
+   "global_variables": "clamp(3.4rem,calc(2.71vw + 2.53rem),6rem)",
+   "theme_style": "clamp(4rem,calc(3.65vw+2.83rem),7.5rem)",
+   "gv_px": [
+    60,
+    35.86
+   ],
+   "ts_px": [
+    75,
+    42.53
+   ]
+  },
+  {
+   "name": "--aphero-title-size",
+   "global_variables": "var(--aptext-4xl)",
+   "theme_style": "clamp(4rem,calc(3.65vw+2.83rem),7.5rem)",
+   "gv_px": [
+    60,
+    35.86
+   ],
+   "ts_px": [
+    75,
+    42.53
+   ]
+  },
+  {
+   "name": "--appost-title-size",
+   "global_variables": "var(--aptext-2xl)",
+   "theme_style": "clamp(2.2rem,calc(2.71vw+1.33rem),4.8rem)",
+   "gv_px": [
+    36,
+    26.75
+   ],
+   "ts_px": [
+    48,
+    23.86
+   ]
+  },
+  {
+   "name": "--apradius-s",
+   "global_variables": "clamp(0.6rem,calc(0.21vw + 0.53rem),0.8rem)",
+   "theme_style": "clamp(0.6rem,calc(-0.21vw+0.87rem),0.8rem)",
+   "gv_px": [
+    8,
+    6.11
+   ],
+   "ts_px": [
+    6,
+    7.88
+   ]
+  },
+  {
+   "name": "--apradius-m",
+   "global_variables": "clamp(1rem,calc(0.21vw + 0.93rem),1.2rem)",
+   "theme_style": "clamp(1rem,calc(-0.21vw+1.27rem),1.2rem)",
+   "gv_px": [
+    12,
+    10.11
+   ],
+   "ts_px": [
+    10,
+    11.88
+   ]
+  },
+  {
+   "name": "--apradius-l",
+   "global_variables": "clamp(1.6rem,calc(0.42vw + 1.47rem),2rem)",
+   "theme_style": "clamp(1.6rem,calc(-0.42vw+2.13rem),2rem)",
+   "gv_px": [
+    20,
+    16.33
+   ],
+   "ts_px": [
+    16,
+    19.66
+   ]
+  },
+  {
+   "name": "--apradius-xl",
+   "global_variables": "clamp(2.4rem,calc(0.83vw + 2.13rem),3.2rem)",
+   "theme_style": "clamp(2.4rem,calc(-0.83vw+3.47rem),3.2rem)",
+   "gv_px": [
+    32,
+    24.53
+   ],
+   "ts_px": [
+    24,
+    31.45
+   ]
+  }
+ ],
+ "tokens_saknas_i_theme_style": [
+  "--aptext-sm",
+  "--aptext-ml",
+  "--aptext-lm",
+  "--aptext-3-5xl",
+  "--aptext-5xl"
+ ],
+ "bricks_palett": {
+  "--white": {
+   "hsl": "hsl(0 0% 100%)",
+   "hex": "#ffffff",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-2": {
+   "hsl": "hsl(216 100% 98%)",
+   "hex": "#f5f9ff",
+   "antal_var_i_live_css": 10,
+   "narmast_ap": "= --apsky-mist #f5f9ff (identisk)"
+  },
+  "--color-3": {
+   "hsl": "hsl(237 69% 12%)",
+   "hex": "#090c34",
+   "antal_var_i_live_css": 16,
+   "narmast_ap": "≈ --apmidnight-blue #090b32 (ej identisk)"
+  },
+  "--color-4": {
+   "hsl": "hsl(0 0% 91%)",
+   "hex": "#e8e8e8",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-5": {
+   "hsl": "hsl(144 50% 40%)",
+   "hex": "#33995c",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-6": {
+   "hsl": "hsl(0 0% 74%)",
+   "hex": "#bdbdbd",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-7": {
+   "hsl": "hsl(189 43% 56%)",
+   "hex": "#5fb1bf",
+   "antal_var_i_live_css": 5,
+   "narmast_ap": "≈ #5eb1bf (site-css --ap-blue; hsl-avrundning ger #5fb1bf)"
+  },
+  "--color-8": {
+   "hsl": "hsl(0 0% 12%)",
+   "hex": "#1f1f1f",
+   "antal_var_i_live_css": 15,
+   "narmast_ap": "= #1f1f1f (nära --apdarkest-black #1e1e1e)"
+  },
+  "--color-9": {
+   "hsl": "hsl(80 100% 99%)",
+   "hex": "#fdfffa",
+   "antal_var_i_live_css": 2,
+   "narmast_ap": null
+  },
+  "--color-10": {
+   "hsl": "hsl(171 95% 41%)",
+   "hex": "#05ccae",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-11": {
+   "hsl": "hsl(185 66% 90%)",
+   "hex": "#d5f4f6",
+   "antal_var_i_live_css": 4,
+   "narmast_ap": null
+  },
+  "--color-12": {
+   "hsl": "hsl(144 50% 40%)",
+   "hex": "#33995c",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-13": {
+   "hsl": "hsl(191 100% 89%)",
+   "hex": "#c7f5ff",
+   "antal_var_i_live_css": 1,
+   "narmast_ap": "= #c7f5ff"
+  },
+  "--color-14": {
+   "hsl": "hsl(220 48% 22%)",
+   "hex": "#1d2f53",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-15": {
+   "hsl": "hsl(171 100% 33%)",
+   "hex": "#00a88f",
+   "antal_var_i_live_css": 54,
+   "narmast_ap": "≈ --apteal-core #00a991 (ej identisk)"
+  },
+  "--color-16": {
+   "hsl": "hsl(146 33% 92%)",
+   "hex": "#e4f1ea",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-17": {
+   "hsl": "hsl(0 0% 82%)",
+   "hex": "#d1d1d1",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-18": {
+   "hsl": "hsl(237 47% 20%)",
+   "hex": "#1b1d4b",
+   "antal_var_i_live_css": 6,
+   "narmast_ap": null
+  },
+  "--color-19": {
+   "hsl": "hsl(0 0% 92%)",
+   "hex": "#ebebeb",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-20": {
+   "hsl": "hsl(0 0% 20%)",
+   "hex": "#333333",
+   "antal_var_i_live_css": 27,
+   "narmast_ap": "= --apcharcoal-gray #333333"
+  },
+  "--color-21": {
+   "hsl": "hsl(144 100% 67%)",
+   "hex": "#57ff9a",
+   "antal_var_i_live_css": 4,
+   "narmast_ap": "≈ --apneon-mint #55ff9a"
+  },
+  "--color-22": {
+   "hsl": "hsl(144 50% 40%)",
+   "hex": "#33995c",
+   "antal_var_i_live_css": 5,
+   "narmast_ap": null
+  },
+  "--color-23": {
+   "hsl": "hsl(146 71% 93%)",
+   "hex": "#e0faeb",
+   "antal_var_i_live_css": 1,
+   "narmast_ap": null
+  },
+  "--color-24": {
+   "hsl": "hsl(237 50% 31%)",
+   "hex": "#282b77",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-25": {
+   "hsl": "hsl(171 95% 41%)",
+   "hex": "#05ccae",
+   "antal_var_i_live_css": 2,
+   "narmast_ap": null
+  },
+  "--color-26": {
+   "hsl": "hsl(191 100% 86%)",
+   "hex": "#b8f2ff",
+   "antal_var_i_live_css": 23,
+   "narmast_ap": "≈ --apcrystal-blue #b6f2ff (ej identisk)"
+  },
+  "--color-27": {
+   "hsl": "hsl(0 0% 85%)",
+   "hex": "#d9d9d9",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-28": {
+   "hsl": "hsl(0 0% 62%)",
+   "hex": "#9e9e9e",
+   "antal_var_i_live_css": 0,
+   "narmast_ap": null
+  },
+  "--color-29": {
+   "hsl": "hsl(192 100% 95%)",
+   "hex": "#e5faff",
+   "antal_var_i_live_css": 25,
+   "narmast_ap": "≈ --apaqua-frost #ddf9fd (ej identisk)"
+  },
+  "--color-30": {
+   "hsl": "hsl(0 0% 75%) / 0.45",
+   "hex": "#bfbfbf",
+   "antal_var_i_live_css": 2,
+   "narmast_ap": null
+  },
+  "--brightgreen": {
+   "hex": "#1bd365",
+   "antal_var_i_live_css": 4
+  },
+  "--blue": {
+   "hex": "#4b85fd",
+   "antal_var_i_live_css": 0
+  },
+  "--blueishwhite": {
+   "hex": "#eaf0fb"
+  },
+  "--bricks-color-otihgr": {
+   "hex": "#e4f1ea"
+  },
+  "--80%-white": {
+   "hex": "hsla(0,0%,100%,0.8)"
+  }
+ },
+ "lokala_variabler_i_site_css": {
+  "--ap-white": "#ffffff",
+  "--ap-navy": "#090b32",
+  "--ap-blue": "#5eb1bf",
+  "--ap-black": "#1e1e1e",
+  "--ap-blue-bright": "#74c2ce",
+  "--ink": "#0f123c",
+  "--shadow-card": "0 16px 40px -12px rgba(9,11,50,.28)",
+  "--ring": "0 0 0 3px rgba(0,169,145,.9)",
+  "--ease": "cubic-bezier(.2,.6,.2,1)",
+  "not": "scopade på .ampy-elfirma (mini-menu) / .ampy-testimonials — INTE del av de 101 ap*-tokens (bindestreck ap- vs ap)"
+ },
+ "ampy_cc_vars": {
+  "scope": "#ampy-cc (cookie-consent)",
+  "--bg": "#FFFFFF",
+  "--bd": "#E4EAF4",
+  "--ink": "#090B32",
+  "--muted": "#595D78",
+  "--pbg": "#090B32",
+  "--sbg": "#EAF0FB",
+  "--ton": "#1BD365",
+  "--focus": "#1BD365",
+  "--rc": "16px",
+  "--rb": "10px",
+  "--ff": "'Outfit', sans-serif"
+ },
+ "farger": [
+  {
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "roll": "primär teal (rgb(0,169,145))",
+   "antal_site_css": 7,
+   "kalla_fil": "global-variables.css (deklareras 2×: hex sedan rgb)"
+  },
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "roll": "midnattsblå text/bg; rå hex i GT-knappen (.brxe-53d9d5 color:#090b32)",
+   "antal_site_css": 4,
+   "kalla_fil": "global-variables.css; c62dff051f08.post-15545.min.css"
+  },
+  {
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "roll": "accent",
+   "antal_site_css": 3,
+   "kalla_fil": "global-variables.css"
+  },
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "roll": "sektionsbakgrund ROT/GT (.brxe-rclikf/.brxe-premwr background-color:#f5f9ff som rå hex)",
+   "antal_site_css": 1,
+   "kalla_fil": "ecab9ecf510c.post-15498.min.css; c62dff051f08.post-15545.min.css"
+  },
+  {
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "roll": "kort-bg (.rot__container / .brxe-bd4b6f)",
+   "antal_site_css": 21,
+   "kalla_fil": "inline-elcentral.css"
+  },
+  {
+   "hex": "#363636",
+   "token": null,
+   "roll": "body-textfärg (Bricks default, frontend.css body{color:#363636}) = uppmätt p/h3-färg rgb(54,54,54)",
+   "antal": 1,
+   "kalla_fil": "frontend.css",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#1f1f1f",
+   "token": null,
+   "roll": "--color-8 (Bricks-palett) ROT-rubrikfärg",
+   "antal": 1,
+   "kalla_fil": "bricks-color-palettes-inline; inline-elcentral.css .rot__main-heading",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#333333",
+   "token": "--apcharcoal-gray",
+   "roll": "--color-20 (Bricks-palett) brödtext mobil i ROT/GT (uppmätt rgb(51,51,51) @390)",
+   "antal": 2,
+   "kalla_fil": "inline-elcentral.css .rot__text-basic",
+   "not": "värdet råkar vara = --apcharcoal-gray men refereras via Bricks-paletten"
+  },
+  {
+   "hex": "#5eb1bf",
+   "token": null,
+   "roll": "--color-7 ≈ hsl(189 43% 56%): ROT-rubrikens highlight (last-3 ord), hover-gradientslut på ROT-knappen, fokusring/checked-ring i formulär (fluent_snippet_14: box-shadow 0 0 0 2px #5EB1BF), hero-CTA-glow rgb(94 177 191)",
+   "antal": "site-css 1, post-15545 21, post-15498 18, inline 7",
+   "kalla_fil": "fluent_snippet_14-global-css-inline; post-*.css",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#c7f5ff",
+   "token": null,
+   "roll": "--color-13 hsl(191 100% 89%): ROT-knappens bg (uppmätt rgb(199,245,255)); hover-gradient start",
+   "antal": 1,
+   "kalla_fil": "ecab9ecf510c.post-15498.min.css .brxe-3061fc",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#e0faeb",
+   "token": null,
+   "roll": "--color-23 hsl(146 71% 93%): GT-knappens bg (uppmätt rgb(224,250,235))",
+   "antal": 1,
+   "kalla_fil": "c62dff051f08.post-15545.min.css .brxe-53d9d5",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#57ff9b",
+   "token": null,
+   "roll": "--color-21 hsl(144 100% 67%): GT-rubrikens gradientmitt (≈ --apneon-mint #55ff9a men inte samma)",
+   "antal": 1,
+   "kalla_fil": "inline-batterilagring.css .gron-teknik__gt-heading",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#339959",
+   "token": null,
+   "roll": "--color-22 hsl(144 50% 40%): GT-rubrikens gradientslut",
+   "antal": 1,
+   "kalla_fil": "inline-batterilagring.css",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#212121",
+   "token": null,
+   "roll": "ROT-knappens svg-stroke",
+   "antal": 1,
+   "kalla_fil": "ecab9ecf510c.post-15498.min.css .brxe-3061fc svg",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#1bd365",
+   "token": null,
+   "roll": "--brightgreen (Bricks-palett) + cookie-consent toggle/focus",
+   "antal": "site-css 1, inline 5",
+   "kalla_fil": "bricks-color-palettes-inline; ampy-cc-vars",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#4b85fd",
+   "token": null,
+   "roll": "--blue (Bricks-palett)",
+   "antal": 2,
+   "kalla_fil": "bricks-color-palettes-inline",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#bebebe",
+   "token": null,
+   "roll": "kortskugga: 0 0 16px 0 rgb(190 190 190 / .19) ×14 (dominant), /.4 ×8, /.36 ×4, /.14 ×2 — ROT-kortet uppmätt rgba(190,190,190,0.19) 0 0 16px",
+   "antal": 28,
+   "kalla_fil": "inline-elcentral.css (bricks-frontend-inline-inline-css), site-css.css",
+   "utanfor_tokens": true,
+   "not": "hex-strängen #bebebe finns 0 gånger i live-CSS; den lever som rgb(190 190 190 / α) och som Bricks _boxShadow hex i hero-1.bricks.json"
+  },
+  {
+   "hex": "#f1f1f1",
+   "token": null,
+   "roll": "alternativ kortskugga 0 0 16px 0 rgb(241 241 241 / .23–.25) ×16; 0 4px 16px 0 #f1f1f1 ×2",
+   "antal": 18,
+   "kalla_fil": "inline-*.css",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#00fe4a",
+   "token": null,
+   "roll": null,
+   "antal": 0,
+   "kalla_fil": null,
+   "not": "0 träffar i hela kallor/ (inkl. live-source-html) — inte en live-färg"
+  },
+  {
+   "hex": "#153236",
+   "token": null,
+   "roll": null,
+   "antal": 0,
+   "kalla_fil": null,
+   "not": "0 träffar i hela kallor/ — inte en live-färg"
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "body",
+   "font": "Outfit",
+   "size": "var(--aptext-sm)",
+   "px_desktop": 16,
+   "px_mobil": 14.12,
+   "weight": 300,
+   "lh": 1.7,
+   "ls": "normal",
+   "color": "#363636",
+   "kalla_fil": "theme-style.css body{font-size:var(--aptext-sm);font-family:\"Outfit\";font-weight:300}; frontend.css body{color:#363636;line-height:1.7}"
+  },
+  {
+   "roll": "h2 (tema-default)",
+   "font": "Outfit",
+   "size": "var(--aptext-2-5xl)",
+   "px_desktop": 40,
+   "px_mobil": 28.88,
+   "weight": 500,
+   "lh": 1.4,
+   "ls": "normal",
+   "kalla_fil": "theme-style.css h2{font-size:var(--aptext-2-5xl);font-weight:500}; frontend.css h1,h2{line-height:1.4}"
+  },
+  {
+   "roll": "h1 (tema-default, ingen egen regel)",
+   "font": "Outfit",
+   "size": "2.4em (Bricks frontend.css)",
+   "px_desktop": null,
+   "px_mobil": null,
+   "weight": null,
+   "lh": 1.4,
+   "kalla_fil": "frontend.css h1{font-size:2.4em}",
+   "not": "theme-style sätter ingen h1-storlek; --aphero-title-size (=--aptext-4xl 60/35.86px) finns som token men refereras inte i någon av live-filerna"
+  },
+  {
+   "roll": "h2 ROT-block (.rot__main-heading)",
+   "font": "Outfit",
+   "size": "var(--aptext-xl) / @480 var(--aptext-lm)",
+   "px_desktop": 32.0,
+   "px_mobil": 22.46,
+   "weight": 400,
+   "lh": 1.3,
+   "lh_mobil": 1.2,
+   "ls": "normal",
+   "color": "rgb(31, 31, 31)",
+   "kalla_fil": "inline-elcentral.css: font-size:var(--aptext-xl) lh 1.3 weight 400 color var(--color-8) max-width 70%; @480: var(--aptext-lm) lh 1.2"
+  },
+  {
+   "roll": "h2 GT-block (.gron-teknik__gt-heading)",
+   "font": "Outfit",
+   "size": "var(--aptext-xl) / @480 var(--aptext-lm)",
+   "px_desktop": 32.0,
+   "px_mobil": 22.46,
+   "weight": 400,
+   "lh": 1.3,
+   "lh_mobil": 1.2,
+   "ls": "normal",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "inline-batterilagring.css: gradient-text linear-gradient(90deg,var(--color-8) 30%,var(--color-21) 60%,var(--color-22))"
+  },
+  {
+   "roll": "h3 process-steg (.rot__heading / .brxe-34d975)",
+   "font": "Outfit",
+   "size": "var(--aptext-mmm) / @480 var(--aptext-mm)",
+   "px_desktop": 22.0,
+   "px_mobil": 18.12,
+   "weight": 400,
+   "lh": 1.3,
+   "lh_mobil": 1.0,
+   "ls": "normal",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "ecab9ecf510c.post-15498.min.css .brxe-34d975{font-size:var(--aptext-mmm);font-weight:400}; @480 var(--aptext-mm) weight 500 lh 1"
+  },
+  {
+   "roll": "p ROT-steg (.rot__text-basic)",
+   "font": "Outfit",
+   "size": "var(--aptext-m) / @480 var(--aptext-sm)",
+   "px_desktop": 18.0,
+   "px_mobil": 14.12,
+   "weight": 300,
+   "lh": 1.7,
+   "lh_mobil": 1.4,
+   "ls": "normal",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "inline-elcentral.css .rot__text-basic{font-size:var(--aptext-m);font-weight:300;margin-top:10px}; @480 var(--aptext-sm) lh 1.4 color var(--color-20)"
+  },
+  {
+   "roll": "p GT-steg (.gron-teknik__text-basic)",
+   "font": "Outfit",
+   "size": "var(--aptext-sm)",
+   "px_desktop": 16.0,
+   "px_mobil": 14.12,
+   "weight": 300,
+   "lh": 1.7,
+   "lh_mobil": 1.4,
+   "ls": "normal",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "inline-batterilagring.css .gron-teknik__text-basic{font-size:var(--aptext-sm);font-weight:300}"
+  },
+  {
+   "roll": "knapp ROT (.bricks-button)",
+   "font": "Outfit",
+   "size": "var(--aptext-sm)",
+   "px_desktop": 16.0,
+   "px_mobil": 14.12,
+   "weight": 500,
+   "lh": 1.7,
+   "lh_mobil": 1.7,
+   "ls": "0.5px",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "ecab9ecf510c.post-15498.min.css .brxe-3061fc{font-weight:500;font-size:var(--aptext-sm)}; frontend.css .bricks-button{letter-spacing:.5px}"
+  },
+  {
+   "roll": "h1 live-startsida (.home-hero__heading)",
+   "font": "Outfit",
+   "size": "clamp(36px,4.6vw,60px)",
+   "px_desktop": 60,
+   "px_mobil": 36,
+   "weight": 700,
+   "lh": 1.07,
+   "ls": "-0.018em",
+   "color": "#fff",
+   "kalla_fil": "site-css.css .home-hero__heading:not(#_)",
+   "not": "px räknade ur clamp (4.6vw@1440=66.2 -> 60; @390=17.9 -> 36); ej renderad här — se hero-1"
+  },
+  {
+   "roll": "lead live-startsida (.home-hero__text)",
+   "font": "Outfit",
+   "size": "clamp(17px,1.55vw,22px)",
+   "px_desktop": 22,
+   "px_mobil": 17,
+   "weight": 400,
+   "lh": 1.58,
+   "color": "rgb(255 255 255 / .92)",
+   "kalla_fil": "site-css.css"
+  },
+  {
+   "roll": "CTA live-startsida (.home-hero__cta)",
+   "font": "Outfit",
+   "size": "16px",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 500,
+   "lh": 1,
+   "kalla_fil": "site-css.css .home-hero__cta:not(#_){min-height:58px;padding:11px 26px;border-radius:16px;color:hsl(237 35% 24%)}"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "section padding (tema-default .brxe-section)",
+   "varde": "var(--apspace-l) alla sidor",
+   "px_desktop": 39.59,
+   "px_mobil": 21.45,
+   "token": "--apspace-l",
+   "kalla_fil": "theme-style.css .brxe-section"
+  },
+  {
+   "roll": "ROT section padding @480",
+   "varde": "padding-inline var(--space-xs) (LEGACY-token)",
+   "px_desktop": null,
+   "px_mobil": 9.02,
+   "token": "--space-xs (legacy Core Framework, ej ap*)",
+   "kalla_fil": "ecab9ecf510c.post-15498.min.css .brxe-rclikf"
+  },
+  {
+   "roll": "ROT kort-padding",
+   "varde": "padding var(--apspace-3xl)? (uppmätt 111.9px @1440) / @480 44.4px 13.03px (padding-inline var(--space-s))",
+   "px_desktop": 111.9,
+   "px_mobil": "44.4 / 13.03",
+   "token": "--apspace-3xl (111.89px) + legacy --space-s",
+   "kalla_fil": "inline-elcentral.css .rot__container"
+  },
+  {
+   "roll": "GT kort-padding",
+   "varde": "var(--apspace-xl) alla sidor",
+   "px_desktop": 56,
+   "px_mobil": 27.3,
+   "token": "--apspace-xl",
+   "kalla_fil": "inline-batterilagring.css .gron-teknik__container"
+  },
+  {
+   "roll": "kort row-gap",
+   "varde": "var(--apspace-l) / @480 var(--apspace-xl)",
+   "px_desktop": 39.59,
+   "px_mobil": 27.3,
+   "token": "--apspace-l / --apspace-xl",
+   "kalla_fil": ".brxe-da4944, .brxe-bd4b6f"
+  },
+  {
+   "roll": "process-grid gap",
+   "varde": "ROT var(--apspace-s) · GT var(--apspace-m); @1024 --apspace-xl; @780 --apspace-m; @480 --apspace-3xl",
+   "px_desktop": "19.8 (ROT) / 28 (GT)",
+   "px_mobil": 44.39,
+   "token": "--apspace-s/-m/-xl/-3xl",
+   "kalla_fil": ".brxe-9c49e5 / .brxe-fsqnmp",
+   "not": "samma komponent, två olika gap-tokens på desktop"
+  },
+  {
+   "roll": "steg row-gap ikon→text",
+   "varde": "var(--apspace-s)",
+   "px_desktop": 19.8,
+   "px_mobil": 13.34,
+   "token": "--apspace-s",
+   "kalla_fil": ".brxe-6031ca"
+  },
+  {
+   "roll": "steg mobil kolumn-gap",
+   "varde": "@780 var(--apspace-s) · @480 var(--space-xs) (LEGACY)",
+   "px_mobil": 9.02,
+   "token": "--space-xs legacy",
+   "kalla_fil": ".brxe-6031ca @480"
+  },
+  {
+   "roll": "knapp padding",
+   "varde": "var(--space-s) var(--space-m) (LEGACY-tokens) -> uppmätt 16px 24px @1440, 13.03px 20.04px @390",
+   "px_desktop": "16 24",
+   "px_mobil": "13.03 20.04",
+   "token": "--space-s/--space-m (legacy) — INTE --apbtn-space (14px 19.8px)",
+   "kalla_fil": ".brxe-3061fc / .brxe-53d9d5"
+  },
+  {
+   "roll": "knapp margin-top @480",
+   "varde": "var(--apspace-l)",
+   "px_mobil": 21.45,
+   "token": "--apspace-l",
+   "kalla_fil": ".brxe-3061fc @480"
+  },
+  {
+   "roll": "p margin-top",
+   "varde": "10px / @480 8px",
+   "px_desktop": 10,
+   "px_mobil": 8,
+   "token": null,
+   "kalla_fil": ".rot__text-basic"
+  },
+  {
+   "roll": "ikon negativ margin",
+   "varde": "margin-top:-15px",
+   "token": null,
+   "kalla_fil": ".rot__process-item.brxe-div, .rot__icon.brxe-div"
+  }
+ ],
+ "container": [
+  {
+   "roll": "max-width (Core Framework)",
+   "varde": "1280px",
+   "kalla_fil": "global-variables.css --container-width; theme-style.css .brxe-container{width:1280px}; --apmax-screen-width:1280px"
+  },
+  {
+   "roll": "Bricks default container",
+   "varde": "1100px",
+   "kalla_fil": "frontend.css .brxe-container{width:1100px} (överskrivs av theme-style 1280px)"
+  },
+  {
+   "roll": "innehållsbredder",
+   "varde": "--max-width 980px / --max-width-m 840px / --max-width-s 640px",
+   "kalla_fil": "global-variables.css"
+  },
+  {
+   "roll": "min-width",
+   "varde": "--container-min-width 380px; --apmin-screen-width 320px",
+   "kalla_fil": "global-variables.css"
+  },
+  {
+   "roll": "rubrik max-width i ROT/GT",
+   "varde": "70% (@480 100%)",
+   "kalla_fil": ".rot__main-heading"
+  },
+  {
+   "roll": "steg max-width",
+   "varde": "80% (@1024 100%)",
+   "kalla_fil": ".brxe-6031ca"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "kort (ROT/GT container)",
+   "varde": "var(--apradius-l)",
+   "px_desktop": 20,
+   "px_mobil": 16.34,
+   "token": "--apradius-l",
+   "kalla_fil": ".rot__container, .brxe-bd4b6f"
+  },
+  {
+   "roll": "knapp ROT",
+   "varde": "var(--apradius-l)",
+   "px_desktop": 20,
+   "px_mobil": 16.34,
+   "token": "--apradius-l",
+   "kalla_fil": ".brxe-3061fc"
+  },
+  {
+   "roll": "knapp GT",
+   "varde": "var(--radius-s) (LEGACY = 12px fast)",
+   "px_desktop": 12,
+   "px_mobil": 12,
+   "token": "--radius-s legacy",
+   "kalla_fil": ".brxe-53d9d5",
+   "not": "samma komponent, två olika radie-tokens"
+  },
+  {
+   "roll": "live hero-CTA",
+   "varde": "16px",
+   "token": null,
+   "kalla_fil": "site-css.css .home-hero__cta"
+  },
+  {
+   "roll": "live hero floating banner",
+   "varde": "22px",
+   "token": null,
+   "kalla_fil": "site-css.css .home-hero__floating-banner"
+  },
+  {
+   "roll": "Bricks .circle",
+   "varde": "100px",
+   "token": null,
+   "kalla_fil": "frontend.css .bricks-button.circle"
+  },
+  {
+   "roll": "tema radie-tokens (ap)",
+   "varde": "xs 4 / s 8→6.11 / m 12→10.11 / l 20→16.33 / xl 32→24.53 / full 999rem (=9990px)",
+   "token": "--apradius-*",
+   "kalla_fil": "global-variables.css"
+  },
+  {
+   "roll": "legacy radie-tokens",
+   "varde": "--radius 16 / -s 12 / -m 16 / -l 24 / -xl 36 / -btn .3em / -pill 9999px / -inside 8 / -outside 22.4",
+   "token": "--radius*",
+   "kalla_fil": "global-variables.css"
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "kort (dominant idiom)",
+   "varde": "0 0 16px 0 rgb(190 190 190 / .19)",
+   "antal": 14,
+   "token": null,
+   "kalla_fil": "inline-*.css (bricks-frontend-inline-inline-css)"
+  },
+  {
+   "roll": "kort variant",
+   "varde": "0 0 16px 0 rgba(190,190,190,.4) / .36 / .14",
+   "antal": 14,
+   "token": null,
+   "kalla_fil": "inline-*.css"
+  },
+  {
+   "roll": "kort ljus variant",
+   "varde": "0 0 16px 0 rgb(241 241 241 / .23–.25); 0 4px 16px 0 #f1f1f1",
+   "antal": 18,
+   "token": null,
+   "kalla_fil": "inline-*.css"
+  },
+  {
+   "roll": "live hero-CTA",
+   "varde": "inset 0 1px 0 rgb(255 255 255 / .45), 0 2px 4px rgb(9 11 50 / .10), 0 14px 32px -8px rgb(9 11 50 / .40)",
+   "token": null,
+   "kalla_fil": "site-css.css"
+  },
+  {
+   "roll": "hero-produktknapp (teal-glow)",
+   "varde": "inset 0 1px 0 rgb(255 255 255 / .55), 0 2px 4px rgb(9 11 50 / .06), 0 10px 26px -6px rgb(94 177 191 / .55) !important",
+   "antal": 9,
+   "token": null,
+   "kalla_fil": "inline-*.css"
+  },
+  {
+   "roll": "tema-tokens --apshadow-xs..xl",
+   "varde": "0 1px 2px / 0 1.5px 3px / 0 2px 6px / 0 3px 12px / 0 6px 48px var(--shadow-primary)",
+   "token": "--apshadow-*",
+   "kalla_fil": "global-variables.css",
+   "computed": "none — --shadow-primary är aldrig definierad (30 referenser, 0 definitioner) -> tokens ogiltiga"
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "tab-knapp",
+   "varde": "all 0.3s ease; hover translateY(-2px)",
+   "kalla_fil": "fluent_snippet_14-global-css-inline"
+  },
+  {
+   "roll": "live hero-CTA",
+   "varde": "transform .16s ease, box-shadow .16s ease, filter .16s ease; hover translateY(-1.5px) saturate(1.06) brightness(1.02)",
+   "kalla_fil": "site-css.css"
+  },
+  {
+   "roll": "mini-menu kort",
+   "varde": "transform 280ms var(--ease), box-shadow 280ms var(--ease) med --ease cubic-bezier(.2,.6,.2,1)",
+   "kalla_fil": "site-css.css .ampy-elfirma"
+  },
+  {
+   "roll": "ROT-knapp hover",
+   "varde": "background-image linear-gradient(145deg,#c7f5ff 50%,#5eb1bf 100%) (ingen transition deklarerad)",
+   "kalla_fil": ".brxe-3061fc:hover"
+  },
+  {
+   "roll": "block-inträde",
+   "varde": "Bricks interaction enterView -> fadeIn (GT: 0.3s), runOnce, hidden-on-load",
+   "kalla_fil": "extracted-*.html data-interactions"
+  }
+ ],
+ "breakpoints": [
+  "frontend_css: 1320px",
+  "frontend_css: 767px",
+  "frontend_css: 478px",
+  "site_css: 1200px",
+  "site_css: 992px/991px",
+  "site_css: 769px/768px/767px",
+  "site_css: 760px/759px",
+  "site_css: 561px/560px",
+  "site_css: 478px",
+  "post_css_block: 1024px",
+  "post_css_block: 780px",
+  "post_css_block: 480px",
+  "post_css_block: 320px",
+  "not: Bricks-blocken bryter på 1024/780/480; site-css på 992/768/560; ingen gemensam skala"
+ ],
+ "komponenter": [
+  {
+   "namn": "process-block (ROT/GT) — 'tre steg'",
+   "anatomi": "section bg #f5f9ff (--apsky-mist rå) > container 1280 vit kort radie --apradius-l, ROT: bg-svg overlay (programmatic-bg-overlay-blue.svg) + skugga 0 0 16px rgba(190,190,190,.19), GT: Vector-2-2.svg 80% nere höger; h2 400 centrerad max-w 70% med gradient/highlight; 3-kolumns grid (1fr×3) justify-items center; steg = ikon 95×95 (desktop) / 55×55 (mobil, separat img) + h3 + p; knapp",
+   "states": [
+    "enterView fadeIn"
+   ],
+   "html_ref": "extracted-rot-live.html, extracted-gt-live.html",
+   "css_ref": "ecab9ecf510c.post-15498.min.css / c62dff051f08.post-15545.min.css + inline-*.css bricks-frontend-inline-inline-css",
+   "skarmdump_crop": "live-ampy-se-rot-desktop.png"
+  },
+  {
+   "namn": "knapp, ljus pastell (Bricks .bricks-button)",
+   "anatomi": "inline-flex gap 30px (ROT gap:120px överskriver), padding var(--space-s) var(--space-m) = 16/24px, weight 500, --aptext-sm 16px, letter-spacing .5px, ROT: bg --color-13 #c7f5ff radie --apradius-l 20px text #363636 svg-stroke #212121; GT: bg --color-23 #e0faeb radie --radius-s 12px text #090b32 + pil-svg 16×16 stroke #090b32; höjd 59.2px; @480 width 100%, justify space-between",
+   "states": [
+    "default",
+    "hover (ROT: gradient #c7f5ff→#5eb1bf; GT: ingen)"
+   ],
+   "html_ref": "extracted-*.html a.bricks-button",
+   "css_ref": "post-*.css .brxe-3061fc / .brxe-53d9d5"
+  },
+  {
+   "namn": "gradient-rubrik (data-highlight)",
+   "anatomi": "h2 med -webkit-background-clip:text + linear-gradient; JS (data-highlight='last-3') wrappar sista 3 orden i span med gradienten och nollar rubrikens; GT saknar data-highlight -> hela rubriken gradient",
+   "states": [],
+   "html_ref": "extracted-rot-live.html h2[data-highlight]",
+   "css_ref": "inline-*.css .rot__main-heading / [data-highlight].has-gradient-highlight"
+  },
+  {
+   "namn": "live hero (startsidan, .home-hero__*)",
+   "anatomi": "floating-banner radie 22px padding 0 clamp(24px,5vw,84px) med midnatts-gradientoverlay (98deg .68→.02 + 0deg .38→0); block max-w 880 gap 18; h1 clamp(36,4.6vw,60) 700 lh1.07 ls-.018em vit; text clamp(17,1.55vw,22) 400 lh1.58; CTA min-h 58 padding 11/26 radie 16 vit-glas m. skuggstack",
+   "states": [
+    "hover translateY(-1.5px)"
+   ],
+   "css_ref": "site-css.css rad 1 (53 regler)",
+   "not": "detta är Hero-1 som den ligger på live — jämförs i hero-1.md"
+  },
+  {
+   "namn": "produktväljare (.ampy-elfirma) live",
+   "anatomi": "kort aspect 1/1 radie 20px bg --ap-navy skugga --shadow-card; CTA pill 999px padding 15/32 bg --ap-blue #5eb1bf text --ap-black",
+   "css_ref": "site-css.css (63 regler)",
+   "not": "= mini-menu som installerad; jämförs i mini-menu.md"
+  },
+  {
+   "namn": "omdömesslider (.ampy-testimonials) live",
+   "anatomi": "89 regler i site-css.css",
+   "css_ref": "site-css.css",
+   "not": "inventeras av annan agent (Testimonials-block)"
+  },
+  {
+   "namn": "formulär (Bricks .brxe-form) live-fixar",
+   "anatomi": "input focus: border #5EB1BF + 0 0 0 3px rgba(94,177,191,.2); checked radio/checkbox: 0 0 0 2px #5EB1BF; label-title --aptext-m 400, subtitle --aptext-xs .8",
+   "css_ref": "fluent_snippet_14-global-css-inline"
+  }
+ ],
+ "signaturenhet": "Tokensystemet självt: 101 ap*-tokens i Core Framework (färg ×46, space ×11, text ×15, radie ×6, skugga ×5, kolumner ×8, alias ×7, screen ×2) på 10px-rem, fluid clamp() 320→1280. Live-blocken använder dem BLANDAT med legacy --space-*/--radius-*, Bricks-paletten --color-N och råa hex.",
+ "defekter": [
+  "ap-färgtokens används nästan inte på live: 36 var()-referenser (alla med hex-fallback, i de nya blocken) mot 202 var(--color-N) (Bricks-paletten) och ~265 råa hex/rgb för samma färger. --color-15 (#00a88f) och --color-3 (#090c34) är NÄSTAN teal-core/midnight men inte samma värden.",
+  "--shadow-primary refereras 30× men definieras aldrig -> alla fem --apshadow-* beräknas till 'none' (mätt). Sajtens riktiga kortskugga är en rå 0 0 16px rgb(190 190 190 / .19) (#bebebe).",
+  "Färgtokens deklareras två gånger i global-variables.css (hex, sedan rgb) — 47 dubbletter, samma värden.",
+  "theme-style.css avviker i 11 ap*-värden (--aptext-m/l/xl/2xl/2-5xl/3xl/4xl större, --apradius-s/m/l/xl med NEGATIV vw-lutning = radien krymper på desktop) och saknar --aptext-sm/-ml/-lm/-3-5xl/-5xl; core-framework-frontend-inline återställer global-variables-värdena sist, så avvikelserna är döda på de två sidorna — men lever om en sida saknar inline-blocket.",
+  "--aptext-mmm finns bara i theme-style.css (inte i global-variables/core-framework-inline) men används av live h3 -> beroende av theme-style.",
+  "--apspace-4xs: clamp(0.52rem, calc(-0.03vw + 0.53rem), 0.49rem) — min > max (5.2 > 4.9) -> clamp låser på 5.19px, lutningen är meningslös.",
+  "Två parallella spacing-system: --apspace-* (11 steg) och legacy --space-* (7 steg, annan kurva 380→1600) används i samma block (knapp-padding = --space-s/--space-m, inte --apbtn-space).",
+  "Två parallella radie-system: --apradius-* (fluid) och --radius-* (fasta 12/16/24/36) + --radius-pill 9999px + --apradius-full 999rem; ROT-knappen tar --apradius-l (20px), GT-knappen --radius-s (12px).",
+  "Bricks-paletten (--color-2..30, --brightgreen, --blue) är ett tredje färgsystem: knappbakgrunder (--color-13, --color-23), rubrikfärg (--color-8 #1f1f1f) och gradienter (--color-21/22) går utanför de 46 ap-färgerna; #5eb1bf (--color-7) är sajtens de facto fokus-/highlight-färg utan ap-token.",
+  "Body-textfärg #363636 kommer från Bricks default (frontend.css), inte från en ap-token; theme-style sätter Outfit 300 utan fallback-stack.",
+  "Sektionsbakgrund #f5f9ff skrivs som rå hex i post-CSS trots att --apsky-mist finns.",
+  "Legacy heading-tokens --h1..--h6 (62→50px … 15→12px) och --logo-width är definierade men refereras inte i någon live-fil (0 var(--h1) träffar).",
+  "Ingen h1-storlek i temat: h1 ärver Bricks 2.4em; startsidans hero sätter egen clamp(36px,4.6vw,60px).",
+  "#00fe4a, #153236, Bricolage Grotesque: 0 träffar i live-CSS/-HTML — finns inte på live (Plus Jakarta Sans är däremot laddad i 7 vikter men refereras bara i theme-style @font-face + inline 9×)."
+ ],
+ "regler_som_ligger_i_koden": [
+  "html font-size 62.5% (10px rem) — allt i rem/clamp utgår från det",
+  "fluid clamp() mellan 320 och 1280 px (--apmin/-max-screen-width)",
+  "container 1280px, section-padding --apspace-l",
+  "body Outfit 300 --aptext-sm, headings Outfit 400–500 (h2 --aptext-2-5xl 500)",
+  "Bricks-interaktion: block fadeIn vid enterView, runOnce",
+  "gradient-text via -webkit-background-clip + JS-wrap av sista N ord (data-highlight)",
+  "block-brytpunkter 1024/780/480; mobil = steg i rad (ikon vänster 55px) + knapp 100%",
+  "ikoner: separata desktop (95px) och mobil (55px) SVG-bilder, css-filter"
+ ],
+ "matdata": {
+  "rot": "inventering/_probes/out/a1-live-rot.json",
+  "gt": "inventering/_probes/out/a1-live-gt.json",
+  "tokens": "inventering/_probes/out/a1-tokens-live.json"
+ },
+ "fargtoken_anvandning_live": {
+  "var(--ap<farg>)": "36 referenser totalt (alla med hex-fallback: var(--apmidnight-blue,#090b32) 15, var(--apneon-mint,#55ff9a) 11, var(--apteal-core,#00a991) 10) — enbart i de nya blocken (hero, elfirma, testimonials, kalkylatorer)",
+  "var(--color-N)": "202 referenser (Bricks-paletten) — de Bricks-byggda blocken",
+  "ra_hex": "#090b32 ×51, #55ff9a ×37, #00a991 ×14, #39c281 ×1, #5cc5b6 ×1; rgb(9 11 50 / α)/rgb(0 169 145 / α) ×162",
+  "slutsats": "Sajtens färger sätts i praktiken av Bricks-paletten + råa hex; de 46 ap-färgtokens är definierade men i stort sett oanvända av Bricks-blocken."
+ },
+ "tokenanvandning_live": {
+  "var(--apspace-": 1482,
+  "var(--aptext-": 447,
+  "var(--space- (legacy)": 324,
+  "var(--color-": 202,
+  "var(--apradius-": 120,
+  "var(--radius- (legacy)": 63,
+  "var(--radius)": 6,
+  "var(--apshadow-": 5,
+  "var(--h1..h6)": 0,
+  "var(--logo-width)": 0,
+  "var(--aphero-title-size)": 0,
+  "var(--apbtn-space)": 0,
+  "var(--padding-section)": 0,
+  "var(--container-width)": 0
+ }
+}

@@ -1,0 +1,554 @@
+{
+ "kalla": "hero-1",
+ "status": "ägargodkänd (\"PERFEKTION\"), r6 2026-07-19; leveranspaket delivery/ 1:1 i px; ligger på live som .home-hero__* i site-css.css",
+ "auktoritet": 1,
+ "ingang": "kallor/Hero-1/index.html (prototyp, header v5 + hero B) · kallor/Hero-1/delivery/preview/index.html (leverans-paritet) · delivery/hero-1.css (scopad .ampy-hero1, px)",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/hero-1-desktop.png",
+  "inventering/skarmdumpar/hero-1-mobile.png",
+  "inventering/skarmdumpar/hero-1-delivery-desktop.png",
+  "inventering/skarmdumpar/hero-1-delivery-mobile.png"
+ ],
+ "rem_bas": "html{font-size:62.5%} (header.css) -> 1rem = 10px i prototypen; delivery/hero-1.css är i px (\"WordPress kör inte 62.5%-rem-basen\")",
+ "farger": [
+  {
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "roll": "fokus-outline CTA, stjärnor (A-varianten), header-CTA bg (som --ap-teal)",
+   "antal": "style.css 2 + var 3; header.css 1 + var(--ap-teal) 11",
+   "kalla_fil": "assets/style.css:25,97,126; assets/header.css:13,71"
+  },
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "roll": "h1-färg (A-variant), alla veil-gradienter rgba(9,11,50,α) (α .68/.46/.38/.12/.10/.02), skuggor",
+   "antal": "2 + 20 rgba-varianter",
+   "kalla_fil": "assets/style.css:26,44,216-217,81-92"
+  },
+  {
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "roll": "CTA-gradientstart (120deg #55ff9a→#5eb1bf); header pulse-dot",
+   "antal": 3,
+   "kalla_fil": "assets/style.css:71; header.css:76"
+  },
+  {
+   "hex": "#5eb1bf",
+   "token": null,
+   "roll": "CTA-gradientslut (\"steel\"), = live --color-7 / site-css --ap-blue",
+   "antal": 2,
+   "kalla_fil": "assets/style.css:71; delivery/hero-1.css --ap-steel",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "roll": "sidbakgrund/section bg (header --ap-offwhite)",
+   "antal": "2 + 3",
+   "kalla_fil": "assets/style.css:28; header.css:14"
+  },
+  {
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "roll": "h1, stjärnor, proof-text på foto",
+   "antal": 6,
+   "kalla_fil": "assets/style.css:230,247,262"
+  },
+  {
+   "hex": "#1e1e1e",
+   "token": "--apdarkest-black",
+   "roll": "lead-färg A-variant rgba(30,30,30,.82); proof .72/.78",
+   "antal": 1,
+   "kalla_fil": "assets/style.css:29,52,114,128"
+  },
+  {
+   "hex": "hsl(237 35% 24%) = #282a53",
+   "token": null,
+   "roll": "CTA-textfärg (mjuk navy) — uppmätt rgb(40,42,83)",
+   "antal": 1,
+   "kalla_fil": "assets/style.css:72",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#0f123c",
+   "token": null,
+   "roll": "--ink: body-textfärg + header-text (uppmätt body color rgb(15,18,60))",
+   "antal": 1,
+   "kalla_fil": "assets/header.css:15",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#565e82 / #6a7190",
+   "token": null,
+   "roll": "--ink-muted / --ink-faint (mega-menyns länkar)",
+   "antal": 2,
+   "kalla_fil": "assets/header.css:15",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#dbe4f0",
+   "token": null,
+   "roll": "--hairline: headerns underkant",
+   "antal": 1,
+   "kalla_fil": "assets/header.css:17",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#008d79",
+   "token": null,
+   "roll": "--ap-teal-hover (header-CTA hover)",
+   "antal": 1,
+   "kalla_fil": "assets/header.css:13",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#14151a / #d5d5dc / #73757d / #9a9aa0 / #e7ecf4 / #3c4260",
+   "token": null,
+   "roll": "mobil-drawer (Evify-klon): text, hårlinjer, eyebrow, pil, burger-X-platta",
+   "antal": "5/3/2/1/1/1",
+   "kalla_fil": "assets/header.css:190-230",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#FFC107/#FF3D00/#4CAF50/#1976D2",
+   "token": null,
+   "roll": "Google-ikonens fyra färger (inline svg)",
+   "antal": 1,
+   "kalla_fil": "index.html:274",
+   "utanfor_tokens": true
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "h1 (.hero__h1)",
+   "font": "Outfit",
+   "size": "clamp(36px, 4.6vw, 60px); 993–1200: clamp(38px,4.4vw,46px); 561–992: clamp(38px,6.2vw,50px); ≤560: 36px",
+   "px_desktop": 60.0,
+   "px_mobil": 36.0,
+   "weight": 700,
+   "lh": 1.07,
+   "ls": "-1.08px",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "assets/style.css:38-46",
+   "note": "text-wrap:balance; explicit <br> efter 'hemmet,' visas ≥993"
+  },
+  {
+   "roll": "lead (.hero__sub, B-variant)",
+   "font": "Outfit",
+   "size": "clamp(17px, 1.55vw, 22px); 561–992: clamp(16px,2.3vw,19px); ≤560: 15.5px lh 1.55",
+   "px_desktop": 22.0,
+   "px_mobil": 15.5,
+   "weight": 400,
+   "lh": 1.58,
+   "ls": "normal",
+   "color": "rgba(255, 255, 255, 0.92)",
+   "kalla_fil": "assets/style.css:48-55,234",
+   "note": "A-varianten: weight 300 rgba(30,30,30,.82) max-width 54ch; B: 400 vit .92 + text-shadow 0 1px 12px rgba(9,11,50,.35)"
+  },
+  {
+   "roll": "CTA (.btn-cta)",
+   "font": "Outfit",
+   "size": "16px; ≤992: 15.5px; ≤560: 15px",
+   "px_desktop": 16.0,
+   "px_mobil": 15.0,
+   "weight": 500,
+   "lh": 1.0,
+   "ls": "0.08px",
+   "color": "rgb(40, 42, 83)",
+   "kalla_fil": "assets/style.css:62-103"
+  },
+  {
+   "roll": "proof-rad (.vb2__proof)",
+   "font": "Outfit",
+   "size": "14.5px; ≤560: 13.5px",
+   "px_desktop": 14.5,
+   "px_mobil": 13.5,
+   "weight": 400,
+   "lh": 1.0,
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "assets/style.css:236-249",
+   "note": "strong 700; text-shadow 0 1px 8px rgba(9,11,50,.45)"
+  },
+  {
+   "roll": "header nav-länk (.nav__link)",
+   "font": "Outfit",
+   "size": "1.8rem = 18px",
+   "px_desktop": 18.0,
+   "px_mobil": 18.0,
+   "weight": 500,
+   "lh": "normal",
+   "ls": "normal",
+   "color": "rgb(15, 18, 60)",
+   "kalla_fil": "assets/header.css:56-59"
+  },
+  {
+   "roll": "header CTA (.cta)",
+   "font": "Outfit",
+   "size": "1.6rem = 16px; ≤992: 1.5rem; ≤400: 1.35rem",
+   "px_desktop": 16.0,
+   "px_mobil": 13.5,
+   "weight": 600,
+   "lh": 1.5,
+   "ls": "normal",
+   "color": "rgb(255, 255, 255)",
+   "kalla_fil": "assets/header.css:71-75"
+  },
+  {
+   "roll": "body (header.css)",
+   "font": "Outfit",
+   "size": "1.6rem",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 300,
+   "lh": 1.5,
+   "color": "#0f123c",
+   "kalla_fil": "assets/header.css:25-26"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "section padding (.vb2__section)",
+   "varde": "clamp(12px,1.6vw,20px) clamp(14px,2vw,26px) clamp(20px,2.6vw,30px); ≤992: 10px 10px 16px",
+   "px_desktop": "20 26 30",
+   "px_mobil": "10 10 16",
+   "token": null,
+   "kalla_fil": "assets/style.css:190-192"
+  },
+  {
+   "roll": "content padding-x (.vb2__content)",
+   "varde": "0 clamp(24px,5vw,84px); 561–992: clamp(30px,6vw,60px); ≤560: 0 24px 7vh",
+   "px_desktop": 72,
+   "px_mobil": "24 / bottom 59.08",
+   "token": null,
+   "kalla_fil": "assets/style.css:227,280,298"
+  },
+  {
+   "roll": "h1→lead",
+   "varde": "margin-top 18px; ≤560: 14px",
+   "px_desktop": 18,
+   "px_mobil": 14,
+   "token": null,
+   "kalla_fil": "assets/style.css:53,303"
+  },
+  {
+   "roll": "lead→CTA",
+   "varde": "margin-top 32px; ≤560: 26px",
+   "px_desktop": 32,
+   "px_mobil": 26,
+   "token": null,
+   "kalla_fil": "assets/style.css:67,102"
+  },
+  {
+   "roll": "CTA padding",
+   "varde": "11px 26px; ≤992: 10px 24px; ≤560: 9px 22px",
+   "px_desktop": "11 26",
+   "px_mobil": "9 22",
+   "token": null,
+   "kalla_fil": "assets/style.css:69,99,102"
+  },
+  {
+   "roll": "CTA gap text→pil",
+   "varde": "16px / 14px / 12px",
+   "token": null,
+   "kalla_fil": "assets/style.css:66"
+  },
+  {
+   "roll": "proof position",
+   "varde": "right clamp(24px,3vw,44px) bottom clamp(20px,3vh,32px); ≤560: left 24px bottom 20px, kolumn gap 9px",
+   "px_desktop": "right 43.2 bottom 30",
+   "px_mobil": "left 24 bottom 20",
+   "token": null,
+   "kalla_fil": "assets/style.css:239-240,304-312"
+  },
+  {
+   "roll": "proof gap",
+   "varde": "14px (g-row gap 9px, stars gap 2.5px)",
+   "token": null,
+   "kalla_fil": "assets/style.css:243,253,261"
+  },
+  {
+   "roll": "header höjd",
+   "varde": "--header-h 7.6rem = 76px; ≤992: 6.6rem = 66px",
+   "px_desktop": 76,
+   "px_mobil": 66,
+   "token": null,
+   "kalla_fil": "assets/header.css:21,214"
+  },
+  {
+   "roll": "header inner padding",
+   "varde": "--wrap 2.8rem = 28px; ≤560: 1.6rem",
+   "px_desktop": 28,
+   "px_mobil": 16,
+   "token": null,
+   "kalla_fil": "assets/header.css:21,220"
+  },
+  {
+   "roll": "nav-länk padding",
+   "varde": "0 2.6rem, gap .8rem",
+   "px_desktop": 26,
+   "token": null,
+   "kalla_fil": "assets/header.css:56"
+  },
+  {
+   "roll": "header CTA",
+   "varde": "höjd 4.8rem=48px padding 0 2.6rem; ≤992: 4.2rem/1.9rem; ≤400: 4.4rem/1.5rem",
+   "px_desktop": "48 h, 26 x",
+   "px_mobil": "44 h, 15 x",
+   "token": null,
+   "kalla_fil": "assets/header.css:71,216,222"
+  },
+  {
+   "roll": "mega-meny padding",
+   "varde": "3.6rem var(--wrap), row-gap 3.2rem; lösningar 4rem",
+   "token": null,
+   "kalla_fil": "assets/header.css:109,153"
+  }
+ ],
+ "container": [
+  {
+   "roll": "hero frame max-width",
+   "varde": "1700px (bredare än sajtens 1280)",
+   "kalla_fil": "assets/style.css:196"
+  },
+  {
+   "roll": "hero frame höjd",
+   "varde": "calc(100svh − var(--header-h) − 48px), min 620 max 950; ≤992: min 520, −26px",
+   "kalla_fil": "assets/style.css:198-200"
+  },
+  {
+   "roll": "content max-width",
+   "varde": "880px (993–1200: 720; 561–992: 640; ≤560: none)",
+   "kalla_fil": "assets/style.css:228"
+  },
+  {
+   "roll": "header container",
+   "varde": "--container 128rem = 1280px",
+   "kalla_fil": "assets/header.css:21"
+  },
+  {
+   "roll": "mega-meny bredd ≥1700",
+   "varde": "min(100vw,148rem) centrerad, radie 0 0 2rem 2rem",
+   "kalla_fil": "assets/header.css:236-239"
+  },
+  {
+   "roll": "mobil-drawer",
+   "varde": "min(100%,44rem)",
+   "kalla_fil": "assets/header.css:178"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "hero frame",
+   "varde": "22px; ≤992: 18px",
+   "token": null,
+   "kalla_fil": "assets/style.css:201,272",
+   "not": "matchar ingen ap-radie (--apradius-l 20, -xl 32); närmast legacy --radius-l 24"
+  },
+  {
+   "roll": "CTA",
+   "varde": "16px",
+   "token": null,
+   "kalla_fil": "assets/style.css:70",
+   "not": "= legacy --radius/--radius-m 16; --apradius-m är 12"
+  },
+  {
+   "roll": "header CTA",
+   "varde": "--r-btn 1.5rem = 15px",
+   "token": null,
+   "kalla_fil": "assets/header.css:19"
+  },
+  {
+   "roll": "header radier",
+   "varde": "--r-sm .8rem=8 · --r-md 1.4rem=14 · --r-lg 2rem=20",
+   "token": null,
+   "kalla_fil": "assets/header.css:19"
+  },
+  {
+   "roll": "A-variant kort",
+   "varde": "32px (≤992: 28px), bild --hero-radius 24px",
+   "token": null,
+   "kalla_fil": "assets/style.css:30,149"
+  },
+  {
+   "roll": "lösnings-kort go-knapp",
+   "varde": "50%, 3.6rem",
+   "token": null,
+   "kalla_fil": "assets/header.css:167"
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "CTA",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.45), 0 2px 4px rgba(9,11,50,.10), 0 14px 32px -8px rgba(9,11,50,.40)",
+   "token": null,
+   "kalla_fil": "assets/style.css:80-83"
+  },
+  {
+   "roll": "CTA hover",
+   "varde": "inset 0 1px 0 rgba(255,255,255,.5), 0 3px 6px rgba(9,11,50,.12), 0 18px 38px -8px rgba(9,11,50,.46)",
+   "token": null,
+   "kalla_fil": "assets/style.css:89-92"
+  },
+  {
+   "roll": "header bar",
+   "varde": "0 4px 14px -10px rgba(15,18,60,.14) + border-bottom 1px #dbe4f0",
+   "token": null,
+   "kalla_fil": "assets/header.css:44"
+  },
+  {
+   "roll": "header CTA",
+   "varde": "0 .4rem 1.2rem -.5rem rgba(0,169,145,.5) (teal-glow)",
+   "token": null,
+   "kalla_fil": "assets/header.css:73"
+  },
+  {
+   "roll": "mega-meny",
+   "varde": "0 22px 36px -28px rgba(15,18,60,.20)",
+   "token": null,
+   "kalla_fil": "assets/header.css:102"
+  },
+  {
+   "roll": "lösnings-kort",
+   "varde": "0 .8rem 2.4rem -1rem rgba(15,18,60,.25); hover 0 1.6rem 3.6rem -1.2rem .35",
+   "token": null,
+   "kalla_fil": "assets/header.css:155-157"
+  },
+  {
+   "roll": "A-variant kort (--shadow-card)",
+   "varde": "0 24px 64px rgba(9,11,50,.10), 0 4px 16px rgba(9,11,50,.06)",
+   "token": null,
+   "kalla_fil": "assets/style.css:31"
+  },
+  {
+   "roll": "text-shadow lead/proof",
+   "varde": "0 1px 12px rgba(9,11,50,.35) / 0 1px 8px rgba(9,11,50,.45)",
+   "token": null,
+   "kalla_fil": "assets/style.css:234,248"
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "CTA hover",
+   "varde": "transform .16s ease, box-shadow .16s ease, filter .16s ease → translateY(-1.5px) saturate(1.06) brightness(1.02); pil scale(1.18); active translateY(0)",
+   "kalla_fil": "assets/style.css:84-96"
+  },
+  {
+   "roll": "header --t",
+   "varde": ".2s ease-out (26 användningar)",
+   "kalla_fil": "assets/header.css:20"
+  },
+  {
+   "roll": "header CTA pulse-dot",
+   "varde": "::after 1rem mint-prick, cta_dot 1.6s ease-in-out infinite (box-shadow-ring 0→6px 9px)",
+   "kalla_fil": "assets/header.css:76-82"
+  },
+  {
+   "roll": "mega-meny",
+   "varde": "opacity var(--t), visibility 0s .2s",
+   "kalla_fil": "assets/header.css:106"
+  },
+  {
+   "roll": "lösnings-kort",
+   "varde": "transform/box-shadow .25s ease-out, bild scale(1.05) .45s",
+   "kalla_fil": "assets/header.css:157-160"
+  },
+  {
+   "roll": "drawer",
+   "varde": "translateX(100%)→0, .2s; accordion max-height .28s ease-out",
+   "kalla_fil": "assets/header.css:180,199"
+  },
+  {
+   "roll": "reduced-motion",
+   "varde": "*{animation:none!important;transition:none!important}",
+   "kalla_fil": "assets/header.css:241; delivery/hero-1.css:196"
+  }
+ ],
+ "breakpoints": [
+  "hero: 1200px (993–1200 tablet-band)",
+  "hero: 993px/992px",
+  "hero: 561px/560px",
+  "header: 1700px (min)",
+  "header: 1080px",
+  "header: 993px/992px",
+  "header: 560px",
+  "header: 400px",
+  "header: 374px",
+  "header: 339px"
+ ],
+ "komponenter": [
+  {
+   "namn": "hero-B (inramad foto-hero)",
+   "anatomi": "section sky-mist > frame 1700 max, 22px radie, 100svh−header−48, min 620/max 950 > <img> object-fit cover 62% 60% + veil (98deg midnatt .68→.02 + 0deg .38→0) > content 880 max, vänster, vertikalt centrerad: h1 60px 700 vit + lead 22px 400 vit .92 + CTA; proof absolut nere höger",
+   "states": [
+    "hover CTA"
+   ],
+   "html_ref": "index.html:257-291",
+   "css_ref": "assets/style.css:190-326",
+   "skarmdump_crop": "hero-1-desktop.png"
+  },
+  {
+   "namn": "CTA gradient (.btn-cta = CTA-website radgivning-mönstret)",
+   "anatomi": "inline-flex gap 16, min-h 58 (uppmätt 58×248), padding 11/26, radie 16, bg linear-gradient(120deg,#55ff9a,#5eb1bf), text hsl(237 35% 24%) 16px 500 lh 1 ls .005em, pil 16px svg, skuggstack inset-highlight + 2 navy-skuggor; ≤992 54h/15.5px; ≤560 52h/15px",
+   "states": [
+    "default",
+    "hover (−1.5px, saturate, pil 1.18)",
+    "active",
+    "focus-visible 3px teal outline offset 3"
+   ],
+   "html_ref": "index.html:262-265",
+   "css_ref": "assets/style.css:62-103"
+  },
+  {
+   "namn": "proof-rad (Google 5,0 + stjärnor | volym)",
+   "anatomi": "14.5px vit, G-ikon 16px + '5,0 på Google' (strong 700) + 5 stjärnor 13.5px vita gap 2.5 + separator 1×15 vit .45 + 'Över 3 000 installationer per år'; ≤560: kolumn, sep 26×1",
+   "states": [
+    "hover underline"
+   ],
+   "html_ref": "index.html:267-290",
+   "css_ref": "assets/style.css:236-265,304-314"
+  },
+  {
+   "namn": "header v5 (samma CSS som Website-blocks/Header)",
+   "anatomi": "fixed 76px sky-mist bar, border-bottom #dbe4f0 + skugga; logo 130px (≤560 100, ≤374 84, ≤339 76); nav centrerad 18px 500 ink, hover/open teal-tint bg + 2px teal underline; CTA solid teal 48h radie 15 16px 600 vit + pulserande mint-prick; mega-menyer fullbredd sky-mist (4 kolumner / produkt-tiles 170×124 / 4 lösnings-kort 230 min-h); ≤992 burger 46px + drawer 440 Evify-mönster",
+   "states": [
+    "open",
+    "hover (hover:hover-gated)",
+    "drawer-open"
+   ],
+   "html_ref": "index.html:17-254",
+   "css_ref": "assets/header.css",
+   "skarmdump_crop": "hero-1-desktop.png topp"
+  }
+ ],
+ "varianter": [
+  {
+   "namn": "A — 'Kortet, evolverat'",
+   "status": "bortvald (CSS kvar i style.css:136-183)",
+   "anatomi": "vitt kort 1280 radie 32, grid 1.04fr/.96fr, foto höger med 24px inset radie 24, --shadow-card"
+  }
+ ],
+ "signaturenhet": "Den inramade foto-heron: bilden ligger i en 22px-rundad ram med vit 'safety line' (section-padding) runt, midnattsblå veil-gradient från vänster, vit text-stack, och proof-raden nere i bildens hörn. Plus den kanoniska gradient-CTA:n (#55ff9a→#5eb1bf).",
+ "defekter": [
+  "Tokens är lokala kopior: style.css definierar --apteal-core/--apmidnight-blue/--apneon-mint/--apsky-mist/--apdarkest-black själv (hex) och header.css ett helt eget namnrum (--ap-navy/--ap-teal/--ink/--r-*) — inget läser sajtens global-variables.",
+  "Alla mått i px/clamp(px) — ingen --apspace/--aptext/--apradius används; radie 22/16/15/20/14/8 matchar inga ap-radier (--apradius-m 12, -l 20, -xl 32).",
+  "Två textfärger för 'ink': #0f123c (header/body) och #090b32 (midnight) — nästan lika, olika tokens.",
+  "CTA-textfärgen hsl(237 35% 24%) (#282a53) och gradientslutet #5eb1bf saknar tokens; #5eb1bf är sajtens tredje 'teal'.",
+  "Proof-siffrorna ('5,0 på Google', 'Över 3 000 installationer per år') är hårdkodade i markupen — [GAP] mot ampy-foretagsdata (ägarbekräftelse 5,0 öppen enligt minnet).",
+  "Header-prototypen laddar Outfit via Google Fonts i Website-blocks men self-hostar i Hero-1 (två font-vägar).",
+  "Body-textstorlek 1.6rem/300 i header.css skiljer från live-temat (--aptext-sm 16px/300 — samma värde @1440 men live krymper till 14,1 på mobil, prototypen inte).",
+  "Hero-frame max-width 1700 > sajtens 1280-container: heron är det enda blocket som går utanför containern (fullbredds-direktivet 2026-08-14 gör det legitimt men bredden är inte tokeniserad)."
+ ],
+ "regler_som_ligger_i_koden": [
+  "fullbredd (frame 1700) med vit safety-line",
+  "H1 en färg, paragraf en färg (ägarregel i style.css-huvudet)",
+  "EN CTA per hero, gradient-CTA:n från CTA-website",
+  "text-wrap:balance på h1; explicit <br> bara ≥993",
+  "hover-cues gated på (hover:hover) and (pointer:fine)",
+  "reduced-motion nollar allt",
+  "focus-visible: 3px teal outline (hero) / 3px navy (header)",
+  "svh-baserad hero-höjd med min/max-lås",
+  "fem brytpunktsband: ≥1201 / 993–1200 / 561–992 / ≤560 (+ header 400/374/339)"
+ ],
+ "matdata": "inventering/_probes/out/a1-hero-1.json"
+}

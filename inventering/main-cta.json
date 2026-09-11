@@ -1,0 +1,394 @@
+{
+ "kalla": "main-cta",
+ "status": "produktionsklar, version B LÅST (B1-linjering vald av ägaren); delivery = ampy-main-cta.css (scopad .ampy-mcta, px, @container-brytpunkter, self-host Outfit) + PHP-shortcode [ampy_main_cta] + 2 Bricks-JSON; öppet: self-host-fonter, bild-URL:er, [GAP] 60-sekunderslöftet",
+ "auktoritet": 2,
+ "ingang": "kallor/Main_CTA/index.html (version B) · delivery/preview.html · ab/ (A, B1, B2, B3, C)",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/main-cta-desktop.png",
+  "inventering/skarmdumpar/main-cta-mobile.png",
+  "inventering/skarmdumpar/main-cta-delivery-desktop.png",
+  "inventering/skarmdumpar/main-cta-delivery-mobile.png"
+ ],
+ "rem_bas": "index.html: html{font-size:62.5%} (rem = 10px); delivery: px",
+ "farger": [
+  {
+   "hex": "hsl(237 69% 12%) = #090c34",
+   "token": null,
+   "roll": "--midnight: h2-färg (uppmätt rgb(9,12,52)), focus-outline",
+   "antal": "1 + 3 var",
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true,
+   "not": "= Bricks --color-3, INTE --apmidnight-blue #090b32 (2 enheter blå-diff)"
+  },
+  {
+   "hex": "hsl(171 95% 41%) = #05cbaf",
+   "token": null,
+   "roll": "--teal-bright: gradientstart i rubriken (uppmätt fallback rgb(5,204,174))",
+   "antal": "1 + 3 var",
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true,
+   "not": "= Bricks --color-10/--color-25; ≠ --apteal-core"
+  },
+  {
+   "hex": "hsl(171 100% 33%) = #00a88f",
+   "token": null,
+   "roll": "--teal (definierad, 0 användningar)",
+   "antal": 0,
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true,
+   "not": "= Bricks --color-15 ≈ --apteal-core"
+  },
+  {
+   "hex": "hsl(189 43% 56%) = #5eb1bf",
+   "token": null,
+   "roll": "--blue: gradientslut i rubriken; ring-gradientens slut",
+   "antal": "1 + 1 var + 1 hex",
+   "kalla_fil": "index.html :root, .btn-ring",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#363636",
+   "token": null,
+   "roll": "--ink: body + brödtext (Bricks-default)",
+   "antal": 1,
+   "kalla_fil": "index.html :root",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "roll": "--section-bg",
+   "antal": 1,
+   "kalla_fil": "index.html :root"
+  },
+  {
+   "hex": "#ffffff",
+   "token": "--appure-white",
+   "roll": "kort-bg, chip .92, inset-highlight",
+   "antal": 4,
+   "kalla_fil": "index.html"
+  },
+  {
+   "hex": "#b6f2ff",
+   "token": "--apcrystal-blue",
+   "roll": "ring-gradientstart",
+   "antal": 1,
+   "kalla_fil": "index.html .btn-ring"
+  },
+  {
+   "hex": "hsl(237 35% 24%)",
+   "token": null,
+   "roll": "knapptext",
+   "antal": 2,
+   "kalla_fil": "index.html .btn-ring",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "rgba(190,190,190,.4) = #bebebe",
+   "token": null,
+   "roll": "kortskugga 0 0 16px (live-idiomet)",
+   "antal": 1,
+   "kalla_fil": "index.html .mcta__card",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "rgba(9,11,50,α)",
+   "token": "--apmidnight-blue (alfa)",
+   "roll": "foto-skugga .26, knapp-skuggor .06/.07/.14",
+   "antal": 5,
+   "kalla_fil": "index.html"
+  },
+  {
+   "hex": "rgba(94,177,191,.55/.65)",
+   "token": null,
+   "roll": "blå glow på knappen",
+   "antal": 2,
+   "kalla_fil": "index.html",
+   "utanfor_tokens": true
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "h2 (.mcta__h)",
+   "font": "Outfit",
+   "size": "clamp(2.8rem, 1.25vw + 2.4rem, 4rem) = 28–40px; 768–1024: clamp(2.6rem,2.2vw+1.2rem,3.2rem); ≤767: clamp(2.4rem,5.5vw,3rem) lh 1.16 centrerad; ≤360: 2.2rem",
+   "px_desktop": 40.0,
+   "px_mobil": 24.0,
+   "weight": 500,
+   "lh": 1.1,
+   "ls": "-0.4px",
+   "color": "rgb(9, 12, 52)",
+   "kalla_fil": "index.html .mcta__h",
+   "not_": "lh 1.1, ls -.01em; .grad-span gradient 90deg teal-bright 15% → blue 85% med box-decoration-break clone; forcerad <br> ≥1300"
+  },
+  {
+   "roll": "brödtext (.mcta__p)",
+   "font": "Outfit",
+   "size": "clamp(1.6rem, .21vw + 1.53rem, 1.8rem) = 16–18px (= --aptext-m-formeln!)",
+   "px_desktop": 18.0,
+   "px_mobil": 16.12,
+   "weight": 300,
+   "lh": 1.6,
+   "ls": "normal",
+   "color": "rgb(54, 54, 54)",
+   "kalla_fil": "index.html .mcta__p",
+   "not_": "lh 1.6, max-width 52ch, weight 300"
+  },
+  {
+   "roll": "ring-CTA",
+   "font": "Outfit",
+   "size": "1.6rem = 16px",
+   "px_desktop": 16.0,
+   "px_mobil": 16.0,
+   "weight": 500,
+   "lh": 1.0,
+   "ls": "normal",
+   "color": "rgb(40, 42, 83)",
+   "kalla_fil": "index.html .btn-ring",
+   "not_": "= CTA-website btn-ring 1:1"
+  },
+  {
+   "roll": "body",
+   "font": "Outfit",
+   "size": "(ärvd) 10px-rem, weight 300",
+   "px_desktop": 10,
+   "px_mobil": 10,
+   "weight": 300,
+   "color": "#363636",
+   "kalla_fil": "index.html body",
+   "not": "body har ingen font-size → 1rem = 10px; allt sätts per element"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "section padding",
+   "varde": "clamp(28px,4vw,56px) clamp(16px,3vw,40px)",
+   "px_desktop": "56 40",
+   "px_mobil": "28 16",
+   "token": null,
+   "kalla_fil": ".mcta"
+  },
+  {
+   "roll": "kort padding",
+   "varde": "clamp(28px,3.2vw,48px) clamp(28px,4.5vw,72px); 768–1024: clamp(28,3vw,36)/clamp(28,3.5vw,40); ≤767: 20px 20px 28px",
+   "px_desktop": "46.08 64.8",
+   "px_mobil": "20 20 28",
+   "token": null,
+   "kalla_fil": ".mcta__card"
+  },
+  {
+   "roll": "kort grid",
+   "varde": "1fr 400px, gap clamp(24px,3vw,48px); 768–1024: minmax(0,1fr) clamp(260px,34vw,320px); ≤767: 1fr gap 20",
+   "px_desktop": "gap 43.2",
+   "px_mobil": "gap 20",
+   "token": null,
+   "kalla_fil": ".mcta__card"
+  },
+  {
+   "roll": "text-stack gap",
+   "varde": "16px; CTA margin-top 12px (var 8)",
+   "px_desktop": 16,
+   "token": null,
+   "kalla_fil": ".mcta__text, .mcta__action"
+  },
+  {
+   "roll": "knapp",
+   "varde": "min-h 58, padding 11/30/11/12 (mobil 11/12/11/22 chip höger), gap 14",
+   "px_desktop": 58,
+   "px_mobil": 58,
+   "token": null,
+   "kalla_fil": ".btn-ring"
+  },
+  {
+   "roll": "foto",
+   "varde": "80 % av 400-kolumnen = 320×366 (aspect 320/366), object-position 50% 46%; ≤767: container min(92%,360px) → 292.5×334.6",
+   "px_desktop": "320×366",
+   "px_mobil": "292.5×334.6",
+   "token": null,
+   "kalla_fil": ".mcta__media .photo"
+  },
+  {
+   "roll": "vågor",
+   "varde": "bgwave 44 % bredd nere-höger (offset = kort-padding), overlay-våg 50 % av media (≤767 60 %)",
+   "token": null,
+   "kalla_fil": ".mcta__bgwave, .mcta__wave"
+  }
+ ],
+ "container": [
+  {
+   "roll": "kort",
+   "varde": "min(1280px,100%)",
+   "kalla_fil": ".mcta__card"
+  },
+  {
+   "roll": "brödtext",
+   "varde": "max-width 52ch",
+   "kalla_fil": ".mcta__p"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "kort + foto (--radius-l)",
+   "varde": "clamp(16px,1.4vw,20px) → 20 @1440, 16 @390",
+   "token": null,
+   "kalla_fil": ":root --radius-l",
+   "not": "egen lokal --radius-l som råkar ge samma som --apradius-l @1440 (20) men 16 vs 16.33 @390"
+  },
+  {
+   "roll": "knapp (--radius-m)",
+   "varde": "16px",
+   "token": null,
+   "kalla_fil": ":root --radius-m",
+   "not": "lokalt namn krockar med live legacy --radius-m (16) — samma värde"
+  },
+  {
+   "roll": "chip",
+   "varde": "50%",
+   "token": null
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "kort",
+   "varde": "0 0 16px rgba(190,190,190,.4)",
+   "token": null,
+   "kalla_fil": ".mcta__card"
+  },
+  {
+   "roll": "foto",
+   "varde": "0 18px 40px -20px rgba(9,11,50,.26) + border 1px rgba(255,255,255,.55)",
+   "token": null,
+   "kalla_fil": ".mcta__media .photo"
+  },
+  {
+   "roll": "knapp",
+   "varde": "= CTA-website ring (inset .55 / 0 2px 4px .06 / 0 10px 26px -6px rgba(94,177,191,.55))",
+   "token": null,
+   "kalla_fil": ".btn-ring"
+  },
+  {
+   "roll": "chip",
+   "varde": "0 1px 3px rgba(9,11,50,.14)",
+   "token": null
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "knapp hover",
+   "varde": ".16s ease lyft −1.5 / saturate 1.08",
+   "kalla_fil": ".btn-ring"
+  },
+  {
+   "roll": "puls-ring",
+   "varde": "mctaRing 2.8s infinite (samma som ampyRing)",
+   "kalla_fil": "@keyframes mctaRing"
+  },
+  {
+   "roll": "reduced-motion",
+   "varde": "puls av, transition none",
+   "kalla_fil": "@media"
+  },
+  {
+   "roll": "block-inträde",
+   "varde": "ingen (JS-fritt block)",
+   "kalla_fil": "README"
+  }
+ ],
+ "breakpoints": [
+  "1300px (min: forcerad radbrytning)",
+  "1024–768px (fluid bildkolumn)",
+  "767px (stackat, bild överst)",
+  "360px (rubrikgolv)",
+  "delivery: samma fyra som @container ampy-mcta"
+ ],
+ "komponenter": [
+  {
+   "namn": "CTA-band (kort med text + porträtt)",
+   "anatomi": "sky-mist-sektion > vitt kort 1280 radie 20 skugga #bebebe .4 > grid 1fr/400: vänster h2 40px 500 midnight med gradient-span + p 18px 300 52ch + ring-CTA; höger porträtt 320×366 radie 20 med ljusring + fallskugga och overlay-våg nere-höger; bg-våg (Vector-3) 44 % bakom; ≤767 stackat: bild överst (max 360), allt centrerat, CTA fullbredd chip höger",
+   "states": [
+    "hover CTA"
+   ],
+   "html_ref": "index.html:206-236",
+   "css_ref": "index.html:36-197",
+   "skarmdump_crop": "main-cta-desktop.png"
+  },
+  {
+   "namn": "gradient-rubrik (.grad)",
+   "anatomi": "span med background-clip:text, 90deg hsl(171 95% 41%) 15% → hsl(189 43% 56%) 85%, box-decoration-break clone; fallbacks för @supports not, forced-colors, print",
+   "states": [],
+   "css_ref": "index.html:66-84"
+  },
+  {
+   "namn": "ring-CTA",
+   "anatomi": "= CTA-website btn-ring verbatim (58 h, radie 16, blå gradient, vit chip 36 + puls); mobil row-reverse fullbredd",
+   "states": [
+    "default",
+    "hover",
+    "active",
+    "focus-visible 3px midnight",
+    "forced-colors border"
+   ],
+   "css_ref": "index.html:95-140"
+  },
+  {
+   "namn": "porträtt-figur",
+   "anatomi": "figure 400 bred flex-end, img 80 % aspect 320/366 radie 20, border 1px vit .55, skugga 0 18px 40px -20px rgba(9,11,50,.26); overlay.svg våg 50 % nere-höger z2",
+   "states": [],
+   "css_ref": "index.html:148-171"
+  }
+ ],
+ "varianter": [
+  {
+   "namn": "A",
+   "status": "arkiverad (ab/a/)",
+   "anatomi": "med betygsrad '5,0 på Google' (G-ikon + 5 stjärnor) under knappen — borttagen i B för att den konkurrerade med CTA:n"
+  },
+  {
+   "namn": "B1",
+   "status": "VALD = index.html",
+   "anatomi": "tät vänsterlinje: rubrik, paragraf, CTA på samma vänsterkant"
+  },
+  {
+   "namn": "B2",
+   "status": "ej vald",
+   "anatomi": "kantlinjerad mot fotot"
+  },
+  {
+   "namn": "B3",
+   "status": "ej vald",
+   "anatomi": "centrerad kolumn"
+  },
+  {
+   "namn": "C",
+   "status": "efter audit-feedback, ej vald",
+   "anatomi": "se ab/index.html"
+  },
+  {
+   "namn": "design-history/baseline-klon + redesign va/vb/vc + cta-lab + cta-textfarg",
+   "status": "historik",
+   "anatomi": "baslinjeklon av live-blocket (tokens.css) och tre redesign-riktningar → CTA-labbet där ring-CTA:n föddes"
+  }
+ ],
+ "signaturenhet": "Ett enda konverteringsmål (telefonen): gradient-rubriken 'inom 60 sekunder!' + ring-CTA:n med pulserande chip + Edvin-porträttet med vågen som klipper in över nedre hörnet.",
+ "defekter": [
+  "Fyra lokala färgtokens i hsl som NÄSTAN är ap-färger: --midnight hsl(237 69% 12%) = #090c34 ≠ #090b32; --teal-bright hsl(171 95% 41%) ≠ --apteal-core; --teal (= --color-15) definieras men används inte; --blue = #5eb1bf utan ap-token. Blocket kopierar Bricks-paletten, inte ap-tokens.",
+  "Lokala --radius-l/--radius-m skuggar live-temats legacy-tokens med samma namn (andra värden: clamp(16,1.4vw,20) vs fast 24).",
+  "Brödtexten återuppfinner --aptext-m:s exakta formel (clamp(1.6rem,.21vw+1.53rem,1.8rem)) i stället för att referera token.",
+  "Kortskuggan är live-idiomet rgba(190,190,190,.4) rå — inte tokeniserad; fotoskuggan är en egen tredje skugg-stil.",
+  "'inom 60 sekunder!' är ett operativt löfte utan verifiering ([GAP] i README); telefonnumret hårdkodat.",
+  "Gradient-rubrikens kontrast ~2:1 (ägaraccepterad varumärkesrendering) — dokumenterad avvikelse.",
+  "Google Fonts i prototypen; leveransen har hårdkodade /wp-content/uploads/ampy/fonts/-sökvägar (öppen punkt).",
+  "Mobil: knappen byter grammatik (chip höger, fullbredd) — en tredje knappvariant jämfört med bibliotekets --block (samma sak men implementerad lokalt igen)."
+ ],
+ "regler_som_ligger_i_koden": [
+  "ETT konverteringsmål per block — ingen sekundär knapp, ingen betygsrad",
+  "rubrik/paragraf/CTA på samma vänsterkant (B1)",
+  "gradient bara på det meningsbärande spannet, aldrig hela rubriken",
+  "forcerad radbrytning bara ≥1300",
+  "stackat läge: bild överst med tak, allt centrerat, CTA fullbredd med ikon höger",
+  "fallbacks: @supports not background-clip, forced-colors, print, reduced-motion",
+  "JS-fritt",
+  "delivery bryter mot container-bredd (@container), inte viewport"
+ ],
+ "matdata": "inventering/_probes/out/a1-main-cta.json"
+}

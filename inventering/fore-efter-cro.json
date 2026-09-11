@@ -1,0 +1,108 @@
+{
+  "kalla": "fore-efter-cro",
+  "status": "klart — riktning A 'Reglaget' vald av ägaren 2026-08-17, kodgranskad (nio defekter rättade, commit 4a9eac0); bilderna är illustrationer tills fotobiblioteket finns; ACF-gruppen levererad",
+  "auktoritet": 2,
+  "ingang": "kallor/f-re-efter-CRO-/index.html (genererad av build.py ur dist/02-fore-efter.php; läser dist/01-fore-efter.css + dist/03-fore-efter.js) · no-js.html",
+  "matmetod": "inventering/_probes/fore-efter-cro.mjs → _probes/out/fore-efter-cro.json (px-tokens, root 16 px i preview — blocket är rem-fritt)",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/fore-efter-cro-desktop.png",
+    "inventering/skarmdumpar/fore-efter-cro-mobile.png",
+    "inventering/skarmdumpar/fore-efter-cro-nojs-desktop.png",
+    "inventering/skarmdumpar/fore-efter-cro-nojs-mobile.png"
+  ],
+  "farger": [
+    {"hex": "#00a991", "token": "--apteal-core", "roll": "--ampyfe-teal: reglagets fyllda spår, fokusring, bakgrundens radiala teal-dis (.055)", "antal": 4, "kalla_fil": "dist/01-fore-efter.css:24,~62,~300,~330"},
+    {"hex": "#090b32", "token": "--apmidnight-blue", "roll": "--ampyfe-midnatt: text, H2, understrykning, handtagsikon, FÖRE-chip (.82), ledtråd (.82), tumkant", "antal": 32, "kalla_fil": "dist/01-fore-efter.css:25"},
+    {"hex": "#55ff9a", "token": "--apneon-mint", "roll": "--ampyfe-gron: EFTER-chippet ('vårgrönt — brandbokens primär')", "antal": 2, "kalla_fil": "dist/01-fore-efter.css:26"},
+    {"hex": "#f5f9ff", "token": "--apsky-mist", "roll": "--ampyfe-dis: sektionsbakgrund + radial-gradient(120% 70% at 50% -12%, rgba(0,169,145,.055), transparent 62%)", "antal": 1, "kalla_fil": "dist/01-fore-efter.css:27,~58-61"},
+    {"hex": "#eaeef5", "token": null, "roll": "ramens bakgrund under bilderna — utanför tokens", "antal": 2, "kalla_fil": "dist/01-fore-efter.css:~118"},
+    {"hex": "rgba(9,11,50,.04/.06/.05)", "token": null, "roll": "--ampyfe-skugga-kort (egen tredelad skugga; kommentaren: ärver inte sajtens #bebebe-defekt)", "antal": 2, "kalla_fil": "dist/01-fore-efter.css:~50-53"},
+    {"hex": "inset 0 0 0 1px rgba(9,11,50,.07)", "token": null, "roll": "ramens inre hårlinje (::after)", "antal": 2, "kalla_fil": "dist/01-fore-efter.css:~130"},
+    {"hex": "#ffffff", "token": "--appure-white", "roll": "sömlinje 2 px, handtag 52 px, reglagets tumme", "antal": 4, "kalla_fil": "dist/01-fore-efter.css"},
+    {"hex": "rgba(9,11,50,.18) + rgba(9,11,50,.28)", "token": null, "roll": "sömlinjens skugga 0 0 0 1px + 0 0 22px", "antal": 2, "kalla_fil": "dist/01-fore-efter.css:~172"},
+    {"hex": "rgba(9,11,50,.32)", "token": null, "roll": "handtagets skugga 0 3px 16px (+ ring border rgba(255,255,255,.55) inset −5)", "antal": 2, "kalla_fil": "dist/01-fore-efter.css:~184"},
+    {"hex": "rgba(9,11,50,.82) + blur(8/10px)", "token": null, "roll": "ledtråd + FÖRE-chip: glas (backdrop-filter blur + saturate 150 %, ram rgba(255,255,255,.16))", "antal": 4, "kalla_fil": "dist/01-fore-efter.css:~206-215, ~245-250"},
+    {"hex": "rgba(9,11,50,.22)", "token": null, "roll": "reglagets ofyllda spår", "antal": 2, "kalla_fil": "dist/01-fore-efter.css:~278"},
+    {"hex": "rgba(9,11,50,.78)", "token": null, "roll": "taglinen", "antal": 1, "kalla_fil": "dist/01-fore-efter.css:~330"},
+    {"hex": "rgba(9,11,50,.09)", "token": null, "roll": "no-js: ramens bakgrund mellan staplade bilder (gap 4)", "antal": 0, "kalla_fil": "dist/01-fore-efter.css --nojs"}
+  ],
+  "typografi": [
+    {"roll": "h2", "font": "Outfit (Google Fonts i preview)", "size": "--ampyfe-text-rubrik = clamp(24px, calc(0.83vw + 21.3px), 32px) (= --aptext-xl i px)", "px_desktop": 32, "px_mobil": 24.54, "weight": 400, "lh": 1.2, "ls": "normal", "color": "#090b32", "text_wrap": "balance", "text_align": "center", "kalla_fil": "dist/01-fore-efter.css:36-42 (UPPMÄTT 2026-08-17 på /elservice/elcentral/: 8 av 16 H2:or kör --aptext-xl/400/1.2/normal — content-block, faq, services-loop, visste-du-att, ce-block, footer-seo; temats h2 = aptext-2-5xl/500 men varje block skriver över) · ~66-76"},
+    {"roll": "h2-accent", "font": "Outfit", "size": "ärvd", "px_desktop": 32, "px_mobil": 24.54, "weight": 400, "lh": 1.2, "ls": "normal", "color": "#090b32", "dekor": "::after-linje 0.075em hög, bottom −0.04em, radie full, nowrap", "kalla_fil": "dist/01-fore-efter.css:~78-90"},
+    {"roll": "chip FÖRE/EFTER", "font": "Outfit", "size": "--ampyfe-text-s = clamp(12px, 0.21vw + 11.3px, 14px)", "px_desktop": 14, "px_mobil": 12.12, "weight": 600, "lh": 1, "ls": "0.12em (0.08em ≤420 cqi)", "text_transform": "uppercase", "color": "#fff på navy .82 / #090b32 på #55ff9a", "kalla_fil": "dist/01-fore-efter.css:~228-256"},
+    {"roll": "ledtråd 'Dra för att jämföra'", "font": "Outfit", "size": "--ampyfe-text-s", "px_desktop": 14, "px_mobil": 12.12, "weight": 400, "lh": 1, "ls": "normal", "color": "#fff", "kalla_fil": "dist/01-fore-efter.css:~198-218"},
+    {"roll": "tagline", "font": "Outfit", "size": "--ampyfe-text-m = clamp(16px, 0.21vw + 15.3px, 18px) (= --aptext-m)", "px_desktop": 18, "px_mobil": 16.12, "weight": 400, "lh": 1.45, "ls": "normal", "color": "rgba(9,11,50,.78)", "max_width": "62ch", "kalla_fil": "dist/01-fore-efter.css:~318-333 (kommentar: 'När H2:an gick från 40/500 till 32/400 låg taglinen på 22 px för nära')"},
+    {"roll": "sektionens basfont", "font": "Outfit", "size": "ärvd (16 px i preview)", "px_desktop": 16, "px_mobil": 16, "weight": 300, "lh": "normal", "ls": "normal", "color": "#090b32", "kalla_fil": "dist/01-fore-efter.css:~62-65"}
+  ],
+  "spacing": [
+    {"roll": "sektion padding", "varde": "var(--ampyfe-space-2xl) var(--ampyfe-space-s) = clamp(31.3px, 4.99vw + 15.3px, 79.2px) clamp(12.8px, 0.73vw + 10.5px, 19.8px)", "px_desktop": "79.2 / 19.8", "px_mobil": "34.8 / 13.3", "token": "= --apspace-2xl / --apspace-s i px", "kalla_fil": "dist/01-fore-efter.css:~57"},
+    {"roll": "h2 margin-bottom", "varde": "var(--ampyfe-space-l) = clamp(20px, 2.04vw + 13.5px, 39.6px)", "px_desktop": 39.6, "px_mobil": 21.5, "token": "= --apspace-l i px", "kalla_fil": "dist/01-fore-efter.css:~67"},
+    {"roll": "par-grid", "varde": "repeat(2, minmax(0,1fr)), gap var(--ampyfe-space-m) = 28 · ≤680 cqi: 1 kolumn, gap --ampyfe-space-l", "px_desktop": "626 | 626, gap 28", "px_mobil": "1 kol, gap 21.5", "token": "= --apspace-m / --apspace-l", "kalla_fil": "dist/01-fore-efter.css:~92-97, ~400"},
+    {"roll": "ram", "varde": "aspect-ratio 1/1 → 626×626 @1440, 363×363 @390; ensamt par max 620 centrerat", "px_desktop": 626, "px_mobil": 363.3, "token": null, "kalla_fil": "dist/01-fore-efter.css:~112-117"},
+    {"roll": "chip-position", "varde": "top/left(/right) var(--ampyfe-space-xs) = 14 (10.5); padding 8px 15px (7 12 ≤420 cqi)", "px_desktop": "14; 8/15 → 32 hög", "px_mobil": "10.5; 7/12 → 28 hög", "token": "= --apspace-xs", "kalla_fil": "dist/01-fore-efter.css:~224-233"},
+    {"roll": "handtag", "varde": "52 px (46 ≤420 cqi), ikon 23 (20), ring −5 px", "px_desktop": 52, "px_mobil": 46, "token": null, "kalla_fil": "dist/01-fore-efter.css:~176-195, ~404"},
+    {"roll": "ledtråd", "varde": "top calc(50% + 46px) (40), left clamp(102px, pos, 100% − 102px) (94), padding 7px 14px", "px_desktop": "28 hög", "px_mobil": "26 hög", "token": null, "kalla_fil": "dist/01-fore-efter.css:~198-204"},
+    {"roll": "reglage", "varde": "höjd 44 (tryckyta), spår 6 px, tumme 26 px + 2 px kant, margin-top var(--ampyfe-space-2xs) = 9.9 (8.3)", "px_desktop": "44 / 6 / 26", "px_mobil": "samma", "token": "= --apspace-2xs", "kalla_fil": "dist/01-fore-efter.css:~258-312"},
+    {"roll": "tagline margin-top", "varde": "var(--ampyfe-space-l)", "px_desktop": 39.6, "px_mobil": 21.5, "token": "= --apspace-l", "kalla_fil": "dist/01-fore-efter.css:~320"},
+    {"roll": "startposition", "varde": "--ampyfe-pos 35 % (@property, initial-value 35%)", "px_desktop": "35 %", "px_mobil": "35 %", "token": null, "kalla_fil": "dist/01-fore-efter.css:17-22"}
+  ],
+  "container": [
+    {"roll": "inner max-width", "varde": "1280px, margin auto", "kalla_fil": "dist/01-fore-efter.css:~66"},
+    {"roll": "container queries", "varde": "wrapper container 'ampyfe' (≤680 staplar), varje figur container 'ampyfefig' (≤420 krymper handtag/ledtråd/chip); @supports-fallback 720/520 vw", "kalla_fil": "dist/01-fore-efter.css:~396-430"}
+  ],
+  "radier": [
+    {"roll": "ram", "varde": "--ampyfe-radie-l = clamp(16px, 0.42vw + 14.7px, 20px)", "px_desktop": 20, "px_mobil": 16.34, "token": "= --apradius-l i px"},
+    {"roll": "--ampyfe-radie-m (deklarerad, oanvänd i mätningen)", "varde": "clamp(10px, 0.21vw + 9.3px, 12px)", "px_desktop": 12, "px_mobil": 10.1, "token": "= --apradius-m i px"},
+    {"roll": "chip, ledtråd, handtag, tumme, spår, understrykning", "varde": "--ampyfe-radie-full 9990px", "token": "= --apradius-full"}
+  ],
+  "skuggor": [
+    {"roll": "ram (--ampyfe-skugga-kort)", "varde": "0 1px 2px rgba(9,11,50,.04), 0 8px 20px rgba(9,11,50,.06), 0 24px 48px rgba(9,11,50,.05) + inset hårlinje .07", "token": null},
+    {"roll": "sömlinje", "varde": "0 0 0 1px rgba(9,11,50,.18), 0 0 22px rgba(9,11,50,.28)", "token": null},
+    {"roll": "handtag", "varde": "0 3px 16px rgba(9,11,50,.32) · fokus + 0 0 0 4px teal", "token": null},
+    {"roll": "chip", "varde": "0 2px 10px rgba(9,11,50,.18)", "token": null},
+    {"roll": "reglagets tumme", "varde": "0 2px 6px rgba(9,11,50,.3)", "token": null}
+  ],
+  "rorelse": [
+    {"roll": "sömmen", "varde": "--ampyfe-pos som @property <percentage>; .ar-mjuk: transition --ampyfe-pos 260ms cubic-bezier(.22,.61,.36,1) (tangentbord/klick) — ALDRIG under drag", "kalla_fil": "dist/01-fore-efter.css:17-22, ~350"},
+    {"roll": "ledtråd", "varde": "opacity .25s ease → 0 när .ar-vidrord", "kalla_fil": "dist/01-fore-efter.css:~216-219"},
+    {"roll": "reduced-motion", "varde": "transition none på .ar-mjuk och ledtråd", "kalla_fil": "dist/01-fore-efter.css:~440"},
+    {"roll": "interaktion (JS)", "varde": "pointer-drag på ramen (touch-action pan-y pinch-zoom, cursor ew-resize), range-input som tillgänglig grund, 44 px tryckyta", "kalla_fil": "dist/03-fore-efter.js"}
+  ],
+  "breakpoints": ["@container ampyfe ≤680 (stapla)", "@container ampyfefig ≤420 (mindre handtag/chip)", "@supports not container: ≤720 / ≤520 vw", "prefers-reduced-motion", "noscript-läge"],
+  "komponenter": [
+    {"namn": "sektion .ampy-foreefter", "anatomi": "sky-mist + teal-dis radial, padding 79/20, inner 1280, Outfit 300 navy, container-type inline-size", "states": ["default", "--nojs"], "html_ref": "index.html:22", "css_ref": "dist/01-fore-efter.css:~24-65"},
+    {"namn": "H2 med understruken accent", "anatomi": "'Så ser det ut när vi har [bytt en elcentral]' 32/400 lh 1.2 centrerad balance; accenten nowrap med 0.075em navy-linje (::after)", "states": ["default"], "html_ref": "index.html:27", "css_ref": "dist/01-fore-efter.css:~66-90"},
+    {"namn": "före/efter-ram (×2)", "anatomi": "kvadrat 626 (363), radie 20, #eaeef5, tredelad skugga + inre hårlinje; EFTER = basskikt, FÖRE ovanpå klippt med clip-path inset(0 calc(100% − pos) 0 0); chip-lager klipps spegelvänt", "states": ["default", "drag", "fokus", "nojs staplad"], "html_ref": "index.html:29-56", "css_ref": "dist/01-fore-efter.css:~112-165", "skarmdump_crop": "fore-efter-cro-desktop.png"},
+    {"namn": "chip FÖRE / EFTER", "anatomi": "pill 14/600 .12em versal; FÖRE navy .82 glas (blur 10 + saturate 150 %, ram vit .16) uppe-vänster; EFTER neonmint med navy text uppe-höger; klipps med sömmen", "states": ["default"], "html_ref": "index.html:39,45", "css_ref": "dist/01-fore-efter.css:~224-256"},
+    {"namn": "sömlinje + handtag", "anatomi": "2 px vit linje med dubbelskugga; 52 px vit cirkel med ‹› 23 px navy, skugga .32, tunn vit ring −5 px; fokusring 4 px teal via :has(reglage:focus-visible)", "states": ["default", "focus-visible"], "html_ref": "index.html:48-51", "css_ref": "dist/01-fore-efter.css:~166-197"},
+    {"namn": "ledtråd 'Dra för att jämföra'", "anatomi": "glaspill navy .82 blur 8, 14/400, 46 px under handtaget, clampad 102 px från kanterna; tonar ut vid första beröring", "states": ["default", "ar-vidrord"], "html_ref": "index.html:52", "css_ref": "dist/01-fore-efter.css:~198-219"},
+    {"namn": "reglage (input range)", "anatomi": "44 px hög, spår 6 px tvåfärgat (navy .22 → teal från pos), tumme 26 vit med 2 px navy-kant; fokus outline 3 px teal offset 4; aria-label + describedby", "states": ["default", "focus-visible"], "html_ref": "index.html:55-56", "css_ref": "dist/01-fore-efter.css:~258-316"},
+    {"namn": "tagline", "anatomi": "18/400 lh 1.45 navy .78, max 62ch, centrerad — blockets avslutande mening (ersatte bildtexter per par)", "states": ["default"], "html_ref": "index.html (efter paret)", "css_ref": "dist/01-fore-efter.css:~318-333"},
+    {"namn": "no-js-läge", "anatomi": "ramen blir static grid gap 4 med FÖRE över EFTER; söm/handtag/ledtråd/reglage dolda", "states": ["noscript"], "html_ref": "no-js.html", "css_ref": "dist/01-fore-efter.css --nojs"}
+  ],
+  "varianter": [
+    {"namn": "B 'Bevisparet' (wireframes/b-bevisparet.html)", "skillnad": "avförd 2026-08-17 — historik"},
+    {"namn": "C 'Journalen' (wireframes/c-journalen.html, -stapel)", "skillnad": "avförd — historik"},
+    {"namn": "a-reglaget-nojs", "skillnad": "wireframens no-js-variant"}
+  ],
+  "signaturenhet": "Två kvadratiska före/efter-ramar sida vid sida med varsin söm: FÖRE klipps med clip-path via en @property-driven --ampyfe-pos, chipsen klipps spegelvänt så en helt dragen söm tar sin etikett med sig, och ett range-input under ramen är den tillgängliga grunden. 0 asks, en H2, allt läsbart utan JS.",
+  "defekter": [
+    "Egen tokennamnrymd --ampyfe-* som SPEGLAR ap*-kurvorna i px (text-s/m/ml/rubrik, space-2xs…2xl, radie-m/l) — värdena är identiska med --aptext-*/--apspace-*/--apradius-* men frikopplade (medvetet: 'px, inte rem').",
+    "H2 = 32/400 (--aptext-xl-kurvan) med hänvisning till att 8 av 16 live-H2:or kör så — ROT-GT-familjen och certificates v2 valde 36 (--aptext-2xl) med hänvisning till andra referensblock. Två 'rätta mål' i två leveranser samma vecka.",
+    "Ramens #eaeef5 och de sex skuggvärdena (rgba(9,11,50,…)) är blockets egna; skuggkommentaren avvisar uttryckligen sajtens #bebebe.",
+    "Glas (backdrop-filter blur 8/10 + saturate) på chip + ledtråd — enda blocket i mitt urval med blur-glas; ingen token.",
+    "Google Fonts i preview (produktion ärver temats Outfit).",
+    "Reglagets computed font är Arial 13.33 (UA-default på input) — ingen text visas, men font ärvs inte.",
+    "[GAP] bilderna är illustrationer; blocket vägrar rendera osignerade par (ACF-grind); fotobibliotek saknas (live-koll 2026-08-16: 0 före/efter-bilder)."
+  ],
+  "regler_som_ligger_i_koden": [
+    "0 asks, EN H2, ingen eyebrow/ingress; variationen bor i ACF, aldrig i mallen (22 tjänstesidor).",
+    "Renderingskontraktet: båda bilderna som riktiga <img> med width/height, synliga utan JS; reglaget är enhancement.",
+    "px, inte rem (ärver aldrig värdinnans rotstorlek); tokens på wrappern; inga globala resets; BEM under .ampy-foreefter.",
+    "@container, inte viewport — blocket och varje par mäter sin egen bredd (överlever smal Bricks-kolumn).",
+    "Kvadratisk 1:1, samma aspekt på båda bilderna; samma ram, samma ljus — bara jobbet skiljer.",
+    "Ramen äger pekaren (img pointer-events none), touch-action pan-y pinch-zoom, ingen touchmove-blockering.",
+    "Transition på sömmen bara vid tangentbord/klick (.ar-mjuk), aldrig under drag.",
+    "Endast riktiga Ampy-jobb: inga AI-bilder, ingen stock, ingen iscensättning."
+  ]
+}

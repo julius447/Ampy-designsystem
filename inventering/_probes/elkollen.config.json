@@ -1,0 +1,44 @@
+{
+  "file": "kallor/Elkollen/preview/hero.html",
+  "out": "inventering/_probes/elkollen.measure.json",
+  "scope": ".elkollen-root",
+  "cssVars": ["--pg-bg", "--pg-ink", "--pg-ink-2", "--pg-teal", "--pg-teal-strong"],
+  "roles": {
+    "root": ".elkollen-root",
+    "hero": ".hero",
+    "wrap": ".wrap",
+    "hero-grid": ".hero__grid",
+    "hero-h1": ".hero__h1",
+    "hero-h1-key": ".hero__h1-key",
+    "hero-sub": ".hero__sub",
+    "hero-trust-li": ".hero__trust li",
+    "hero-trust-svg": ".hero__trust svg",
+    "hero-actions": ".hero__actions",
+    "hero-btn-primary": ".hero__btn--primary",
+    "hero-btn-secondary": ".hero__btn--secondary",
+    "hero-btn-svg": ".hero__btn--primary svg",
+    "hero-foot-ask": ".hero__foot-ask",
+    "bk": ".ampy-bk",
+    "block": ".ampy-bk__block",
+    "entry-title": ".ampy-bk__entry-title",
+    "roomgrid": ".ampy-bk__roomgrid",
+    "roomtile": ".ampy-bk__roomtile",
+    "roomtile-chip": ".ampy-bk__roomtile-chip",
+    "roomtile-chip-svg": ".ampy-bk__roomtile-chip svg",
+    "roomtile-label": ".ampy-bk__roomtile-label",
+    "roomtile-sub": ".ampy-bk__roomtile-sub",
+    "source-line": ".ampy-bk__source-line"
+  },
+  "states": [
+    {
+      "name": "tile-hover",
+      "actions": [{"hover": ".ampy-bk__roomtile"}, {"wait": 200}],
+      "roles": {"roomtile-hover": ".ampy-bk__roomtile:hover", "roomtile-chip-hover": ".ampy-bk__roomtile:hover .ampy-bk__roomtile-chip"}
+    },
+    {
+      "name": "joblist",
+      "actions": [{"click": ".ampy-bk__roomtile"}, {"wait": 500}, {"hover": ".ampy-bk__job-row"}, {"wait": 200}, {"shot": "inventering/skarmdumpar/elkollen-{vp}-state-jobblista.png"}],
+      "roles": {"crumb": ".ampy-bk__crumb", "crumb-back": ".ampy-bk__crumb-back", "crumb-sep": ".ampy-bk__crumb-sep", "crumb-job": ".ampy-bk__crumb-job", "list-subtitle": ".ampy-bk__list-subtitle", "search": ".ampy-bk__search", "search-input": ".ampy-bk__search-input", "joblist": ".ampy-bk__joblist", "job-row-hover": ".ampy-bk__job-row:hover", "job-row": ".ampy-bk__job-row:not(:hover)", "job-row-icon": ".ampy-bk__job-row-icon", "job-row-label": ".ampy-bk__job-row-label", "job-row-arrow": ".ampy-bk__job-row-arrow", "joblist-hint": ".ampy-bk__joblist-hint"}
+    }
+  ]
+}

@@ -1,0 +1,917 @@
+{
+ "url": "http://localhost:8731/kallor/Elkollen/preview/hero.html?jobb=byta-vagguttag",
+ "viewports": {
+  "desktop": {
+   "errors": [],
+   "extra": {
+    "pseudo": null
+   },
+   "docHeight": 1032,
+   "roles": {
+    "block-verdict": {
+     "selector": ".ampy-bk__block[data-verdict]",
+     "missing": true
+    },
+    "crumb": {
+     "selector": ".ampy-bk__crumb",
+     "tag": "div",
+     "text": "Tillbaka·Byta vägguttag",
+     "rect": {
+      "x": 718,
+      "y": 145,
+      "w": 559,
+      "h": 44
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "margin": "0px 0px 14px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "558.953px",
+     "height": "44px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "crumb-back": {
+     "selector": ".ampy-bk__crumb-back",
+     "tag": "button",
+     "text": "Tillbaka",
+     "rect": {
+      "x": 718,
+      "y": 145,
+      "w": 73.6,
+      "h": 44
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "500",
+     "lineHeight": "21px",
+     "color": "rgb(90, 93, 122)",
+     "padding": "6px 0px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "borderRadius": "6px",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "color 0.15s",
+     "width": "73.625px",
+     "height": "44px",
+     "minHeight": "44px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    },
+    "crumb-sep": {
+     "selector": ".ampy-bk__crumb-sep",
+     "tag": "span",
+     "text": "·",
+     "rect": {
+      "x": 799.7,
+      "y": 156.5,
+      "w": 1.8,
+      "h": 21
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "lineHeight": "21px",
+     "color": "rgb(104, 107, 128)",
+     "border": "0px none rgb(104, 107, 128)",
+     "borderTop": "0px none rgb(104, 107, 128)",
+     "borderColor": "rgb(104, 107, 128)",
+     "outline": "rgb(104, 107, 128) none 3px",
+     "transition": "all",
+     "width": "1.82812px",
+     "height": "21px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(104, 107, 128)",
+     "backgroundColor": "transparent"
+    },
+    "crumb-job": {
+     "selector": ".ampy-bk__crumb-job",
+     "tag": "span",
+     "text": "Byta vägguttag",
+     "rect": {
+      "x": 809.5,
+      "y": 156.5,
+      "w": 97.1,
+      "h": 21
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "600",
+     "lineHeight": "21px",
+     "color": "rgb(9, 11, 50)",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "97.0625px",
+     "height": "21px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "judgment": {
+     "selector": ".ampy-bk__judgment",
+     "missing": true
+    },
+    "badge": {
+     "selector": ".ampy-bk__badge",
+     "missing": true
+    },
+    "badge-svg": {
+     "selector": ".ampy-bk__badge svg",
+     "missing": true
+    },
+    "verdict-src": {
+     "selector": ".ampy-bk__verdict-src",
+     "missing": true
+    },
+    "summary": {
+     "selector": ".ampy-bk__summary",
+     "missing": true
+    },
+    "tabs": {
+     "selector": ".ampy-bk__tabs",
+     "missing": true
+    },
+    "tab": {
+     "selector": ".ampy-bk__tab[aria-selected='false']",
+     "missing": true
+    },
+    "tab-selected": {
+     "selector": ".ampy-bk__tab[aria-selected='true']",
+     "missing": true
+    },
+    "tab-body": {
+     "selector": ".ampy-bk__tab-body",
+     "missing": true
+    },
+    "row-do": {
+     "selector": ".ampy-bk__row--do",
+     "missing": true
+    },
+    "row-dont": {
+     "selector": ".ampy-bk__row--dont",
+     "missing": true
+    },
+    "row-icon": {
+     "selector": ".ampy-bk__row-icon",
+     "missing": true
+    },
+    "row-text": {
+     "selector": ".ampy-bk__row-text",
+     "missing": true
+    },
+    "tip": {
+     "selector": ".ampy-bk__tip",
+     "missing": true
+    },
+    "tip-icon": {
+     "selector": ".ampy-bk__tip-icon",
+     "missing": true
+    },
+    "caveat": {
+     "selector": ".ampy-bk__caveat",
+     "missing": true
+    },
+    "caveat-text": {
+     "selector": ".ampy-bk__caveat-text",
+     "missing": true
+    },
+    "consequence": {
+     "selector": ".ampy-bk__consequence-text",
+     "missing": true
+    },
+    "cta-zone": {
+     "selector": ".ampy-bk__cta-zone",
+     "missing": true
+    },
+    "cta-note": {
+     "selector": ".ampy-bk__cta-note",
+     "missing": true
+    },
+    "cta-solid": {
+     "selector": ".ampy-bk__cta-primary--solid",
+     "missing": true
+    },
+    "cta-primary": {
+     "selector": ".ampy-bk__cta-primary:not(.ampy-bk__cta-primary--solid)",
+     "missing": true
+    },
+    "cta-secondary": {
+     "selector": ".ampy-bk__cta-secondary",
+     "missing": true
+    },
+    "q-title": {
+     "selector": ".ampy-bk__q-title",
+     "tag": "p",
+     "text": "Vad gäller för ditt uttag?",
+     "rect": {
+      "x": 718,
+      "y": 203,
+      "w": 559,
+      "h": 28.6
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "22px",
+     "fontWeight": "600",
+     "lineHeight": "28.6px",
+     "letterSpacing": "-0.22px",
+     "color": "rgb(9, 11, 50)",
+     "margin": "0px 0px 20px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "558.953px",
+     "height": "28.5938px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "option": {
+     "selector": ".ampy-bk__option",
+     "tag": "button",
+     "text": "Jag byter ett befintligt, på samma platsSamma sorts uttag, p",
+     "rect": {
+      "x": 718,
+      "y": 251.6,
+      "w": 559,
+      "h": 78.9
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(255, 255, 255)",
+     "padding": "16px",
+     "gap": "12px",
+     "rowGap": "12px",
+     "columnGap": "12px",
+     "borderRadius": "10px",
+     "border": "1px solid rgb(235, 237, 243)",
+     "borderTop": "1px solid rgb(235, 237, 243)",
+     "borderColor": "rgb(235, 237, 243)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "border-color 0.15s, background 0.15s, transform 0.15s",
+     "width": "558.953px",
+     "height": "78.8906px",
+     "minHeight": "72px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "option-title": {
+     "selector": ".ampy-bk__option-title",
+     "tag": "span",
+     "text": "Jag byter ett befintligt, på samma plats",
+     "rect": {
+      "x": 735,
+      "y": 268.6,
+      "w": 495,
+      "h": 21.6
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "16px",
+     "fontWeight": "600",
+     "lineHeight": "21.6px",
+     "color": "rgb(9, 11, 50)",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "494.953px",
+     "height": "21.5938px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "option-clarifier": {
+     "selector": ".ampy-bk__option-clarifier",
+     "tag": "span",
+     "text": "Samma sorts uttag, på samma plats",
+     "rect": {
+      "x": 735,
+      "y": 293.2,
+      "w": 495,
+      "h": 20.3
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "lineHeight": "20.3px",
+     "color": "rgb(90, 93, 122)",
+     "margin": "3px 0px 0px",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "all",
+     "width": "494.953px",
+     "height": "20.2969px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    },
+    "option-arrow": {
+     "selector": ".ampy-bk__option-arrow",
+     "tag": "span",
+     "text": "",
+     "rect": {
+      "x": 1242,
+      "y": 282,
+      "w": 18,
+      "h": 18
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(90, 93, 122)",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "all",
+     "width": "18px",
+     "height": "18px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    },
+    "info": {
+     "selector": ".ampy-bk__info",
+     "tag": "div",
+     "text": "Lagen skiljer på att byta något befintligt och att installer",
+     "rect": {
+      "x": 718,
+      "y": 441.4,
+      "w": 559,
+      "h": 66
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(244, 245, 251)",
+     "padding": "12px 14px",
+     "gap": "10px",
+     "rowGap": "10px",
+     "columnGap": "10px",
+     "borderRadius": "10px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "558.953px",
+     "height": "66px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "info-text": {
+     "selector": ".ampy-bk__info-text",
+     "tag": "p",
+     "text": "Lagen skiljer på att byta något befintligt och att installer",
+     "rect": {
+      "x": 758,
+      "y": 453.4,
+      "w": 505,
+      "h": 42
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "lineHeight": "21px",
+     "color": "rgb(90, 93, 122)",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "all",
+     "width": "504.953px",
+     "height": "42px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    }
+   },
+   "states": {
+    "tab2": {
+     "error": "TimeoutError: page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.ampy-bk__tab:nth-child(2)')\n"
+    },
+    "lead": {
+     "error": "TimeoutError: page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.ampy-bk__cta-primary--solid')\n"
+    }
+   }
+  },
+  "mobile": {
+   "errors": [],
+   "extra": {
+    "pseudo": null
+   },
+   "docHeight": 876,
+   "roles": {
+    "block-verdict": {
+     "selector": ".ampy-bk__block[data-verdict]",
+     "missing": true
+    },
+    "crumb": {
+     "selector": ".ampy-bk__crumb",
+     "tag": "div",
+     "text": "Tillbaka·Byta vägguttag",
+     "rect": {
+      "x": 33,
+      "y": 209.4,
+      "w": 324,
+      "h": 44
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "margin": "-10px 0px 14px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "324px",
+     "height": "44px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "crumb-back": {
+     "selector": ".ampy-bk__crumb-back",
+     "tag": "button",
+     "text": "Tillbaka",
+     "rect": {
+      "x": 33,
+      "y": 209.4,
+      "w": 73.6,
+      "h": 44
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "500",
+     "lineHeight": "21px",
+     "color": "rgb(90, 93, 122)",
+     "padding": "6px 0px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "borderRadius": "6px",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "color 0.15s",
+     "width": "73.625px",
+     "height": "44px",
+     "minHeight": "44px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    },
+    "crumb-sep": {
+     "selector": ".ampy-bk__crumb-sep",
+     "tag": "span",
+     "text": "·",
+     "rect": {
+      "x": 114.6,
+      "y": 220.9,
+      "w": 1.8,
+      "h": 21
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "lineHeight": "21px",
+     "color": "rgb(104, 107, 128)",
+     "border": "0px none rgb(104, 107, 128)",
+     "borderTop": "0px none rgb(104, 107, 128)",
+     "borderColor": "rgb(104, 107, 128)",
+     "outline": "rgb(104, 107, 128) none 3px",
+     "transition": "all",
+     "width": "1.82812px",
+     "height": "21px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(104, 107, 128)",
+     "backgroundColor": "transparent"
+    },
+    "crumb-job": {
+     "selector": ".ampy-bk__crumb-job",
+     "tag": "span",
+     "text": "Byta vägguttag",
+     "rect": {
+      "x": 124.5,
+      "y": 220.9,
+      "w": 97.1,
+      "h": 21
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "600",
+     "lineHeight": "21px",
+     "color": "rgb(9, 11, 50)",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "97.0625px",
+     "height": "21px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "judgment": {
+     "selector": ".ampy-bk__judgment",
+     "missing": true
+    },
+    "badge": {
+     "selector": ".ampy-bk__badge",
+     "missing": true
+    },
+    "badge-svg": {
+     "selector": ".ampy-bk__badge svg",
+     "missing": true
+    },
+    "verdict-src": {
+     "selector": ".ampy-bk__verdict-src",
+     "missing": true
+    },
+    "summary": {
+     "selector": ".ampy-bk__summary",
+     "missing": true
+    },
+    "tabs": {
+     "selector": ".ampy-bk__tabs",
+     "missing": true
+    },
+    "tab": {
+     "selector": ".ampy-bk__tab[aria-selected='false']",
+     "missing": true
+    },
+    "tab-selected": {
+     "selector": ".ampy-bk__tab[aria-selected='true']",
+     "missing": true
+    },
+    "tab-body": {
+     "selector": ".ampy-bk__tab-body",
+     "missing": true
+    },
+    "row-do": {
+     "selector": ".ampy-bk__row--do",
+     "missing": true
+    },
+    "row-dont": {
+     "selector": ".ampy-bk__row--dont",
+     "missing": true
+    },
+    "row-icon": {
+     "selector": ".ampy-bk__row-icon",
+     "missing": true
+    },
+    "row-text": {
+     "selector": ".ampy-bk__row-text",
+     "missing": true
+    },
+    "tip": {
+     "selector": ".ampy-bk__tip",
+     "missing": true
+    },
+    "tip-icon": {
+     "selector": ".ampy-bk__tip-icon",
+     "missing": true
+    },
+    "caveat": {
+     "selector": ".ampy-bk__caveat",
+     "missing": true
+    },
+    "caveat-text": {
+     "selector": ".ampy-bk__caveat-text",
+     "missing": true
+    },
+    "consequence": {
+     "selector": ".ampy-bk__consequence-text",
+     "missing": true
+    },
+    "cta-zone": {
+     "selector": ".ampy-bk__cta-zone",
+     "missing": true
+    },
+    "cta-note": {
+     "selector": ".ampy-bk__cta-note",
+     "missing": true
+    },
+    "cta-solid": {
+     "selector": ".ampy-bk__cta-primary--solid",
+     "missing": true
+    },
+    "cta-primary": {
+     "selector": ".ampy-bk__cta-primary:not(.ampy-bk__cta-primary--solid)",
+     "missing": true
+    },
+    "cta-secondary": {
+     "selector": ".ampy-bk__cta-secondary",
+     "missing": true
+    },
+    "q-title": {
+     "selector": ".ampy-bk__q-title",
+     "tag": "p",
+     "text": "Vad gäller för ditt uttag?",
+     "rect": {
+      "x": 33,
+      "y": 267.4,
+      "w": 324,
+      "h": 26
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "20px",
+     "fontWeight": "600",
+     "lineHeight": "26px",
+     "letterSpacing": "-0.2px",
+     "color": "rgb(9, 11, 50)",
+     "margin": "0px 0px 16px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "324px",
+     "height": "26px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "option": {
+     "selector": ".ampy-bk__option",
+     "tag": "button",
+     "text": "Jag byter ett befintligt, på samma platsSamma sorts uttag, p",
+     "rect": {
+      "x": 33,
+      "y": 309.4,
+      "w": 324,
+      "h": 92.3
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(255, 255, 255)",
+     "padding": "14px 16px",
+     "gap": "12px",
+     "rowGap": "12px",
+     "columnGap": "12px",
+     "borderRadius": "10px",
+     "border": "1px solid rgb(235, 237, 243)",
+     "borderTop": "1px solid rgb(235, 237, 243)",
+     "borderColor": "rgb(235, 237, 243)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "border-color 0.15s, background 0.15s, transform 0.15s",
+     "width": "324px",
+     "height": "92.3438px",
+     "minHeight": "64px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "option-title": {
+     "selector": ".ampy-bk__option-title",
+     "tag": "span",
+     "text": "Jag byter ett befintligt, på samma plats",
+     "rect": {
+      "x": 50,
+      "y": 324.4,
+      "w": 260,
+      "h": 40.5
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "15px",
+     "fontWeight": "600",
+     "lineHeight": "20.25px",
+     "color": "rgb(9, 11, 50)",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "260px",
+     "height": "40.5px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "option-clarifier": {
+     "selector": ".ampy-bk__option-clarifier",
+     "tag": "span",
+     "text": "Samma sorts uttag, på samma plats",
+     "rect": {
+      "x": 50,
+      "y": 367.9,
+      "w": 260,
+      "h": 18.8
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "13px",
+     "fontWeight": "400",
+     "lineHeight": "18.85px",
+     "color": "rgb(90, 93, 122)",
+     "margin": "3px 0px 0px",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "all",
+     "width": "260px",
+     "height": "18.8438px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    },
+    "option-arrow": {
+     "selector": ".ampy-bk__option-arrow",
+     "tag": "span",
+     "text": "",
+     "rect": {
+      "x": 322,
+      "y": 346.5,
+      "w": 18,
+      "h": 18
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(90, 93, 122)",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "all",
+     "width": "18px",
+     "height": "18px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    },
+    "info": {
+     "selector": ".ampy-bk__info",
+     "tag": "div",
+     "text": "Lagen skiljer på att byta något befintligt och att installer",
+     "rect": {
+      "x": 33,
+      "y": 522.1,
+      "w": 324,
+      "h": 87
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(244, 245, 251)",
+     "padding": "12px 14px",
+     "gap": "10px",
+     "rowGap": "10px",
+     "columnGap": "10px",
+     "borderRadius": "10px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "324px",
+     "height": "87px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "info-text": {
+     "selector": ".ampy-bk__info-text",
+     "tag": "p",
+     "text": "Lagen skiljer på att byta något befintligt och att installer",
+     "rect": {
+      "x": 73,
+      "y": 534.1,
+      "w": 270,
+      "h": 63
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "400",
+     "lineHeight": "21px",
+     "color": "rgb(90, 93, 122)",
+     "border": "0px none rgb(90, 93, 122)",
+     "borderTop": "0px none rgb(90, 93, 122)",
+     "borderColor": "rgb(90, 93, 122)",
+     "outline": "rgb(90, 93, 122) none 3px",
+     "transition": "all",
+     "width": "270px",
+     "height": "63px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(90, 93, 122)",
+     "backgroundColor": "transparent"
+    }
+   },
+   "states": {
+    "tab2": {
+     "error": "TimeoutError: page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.ampy-bk__tab:nth-child(2)')\n"
+    },
+    "lead": {
+     "error": "TimeoutError: page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.ampy-bk__cta-primary--solid')\n"
+    }
+   }
+  }
+ }
+}

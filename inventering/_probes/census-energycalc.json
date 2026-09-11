@@ -1,0 +1,713 @@
+[
+ {
+  "farg": "rgb(255, 255, 255)",
+  "antal": 29,
+  "forsta": "vB/tool.css:122",
+  "skrivsatt": [
+   "#fff"
+  ],
+  "token": "--appure-white",
+  "note": null
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.08)",
+  "antal": 4,
+  "forsta": "vB/tool.css:155",
+  "skrivsatt": [
+   "rgba(255,255,255,.08)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 8 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.06)",
+  "antal": 4,
+  "forsta": "vB/tool.css:365",
+  "skrivsatt": [
+   "rgba(255,255,255,.06)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 6 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(255, 138, 138)",
+  "antal": 4,
+  "forsta": "vB/tool.css:524",
+  "skrivsatt": [
+   "#ff8a8a"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.12)",
+  "antal": 3,
+  "forsta": "vB/tool.css:66",
+  "skrivsatt": [
+   "rgba(255,255,255,.12)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 12 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.05)",
+  "antal": 3,
+  "forsta": "vB/tool.css:456",
+  "skrivsatt": [
+   "rgba(255,255,255,.05)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 5 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(0, 169, 145)",
+  "antal": 2,
+  "forsta": "vB/tool.css:26",
+  "skrivsatt": [
+   "#00a991"
+  ],
+  "token": "--apteal-core",
+  "note": null
+ },
+ {
+  "farg": "rgba(85, 255, 154, 0.3)",
+  "antal": 2,
+  "forsta": "vB/tool.css:67",
+  "skrivsatt": [
+   "rgba(85,255,154,.30)"
+  ],
+  "token": null,
+  "note": "= --apneon-mint @ 30 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(85, 255, 154, 0.1)",
+  "antal": 2,
+  "forsta": "vB/tool.css:86",
+  "skrivsatt": [
+   "rgba(85,255,154,.10)"
+  ],
+  "token": null,
+  "note": "= --apneon-mint @ 10 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(227, 233, 245)",
+  "antal": 2,
+  "forsta": "vB/tool.css:199",
+  "skrivsatt": [
+   "#e3e9f5"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.28)",
+  "antal": 2,
+  "forsta": "vB/tool.css:203",
+  "skrivsatt": [
+   "rgba(9,11,50,.28)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 28 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(242, 251, 248)",
+  "antal": 2,
+  "forsta": "vB/tool.css:239",
+  "skrivsatt": [
+   "#f2fbf8"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.5)",
+  "antal": 2,
+  "forsta": "vB/tool.css:334",
+  "skrivsatt": [
+   "rgba(9,11,50,.5)",
+   "rgba(9,11,50,.50)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 50 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0)",
+  "antal": 2,
+  "forsta": "vB/tool.css:566",
+  "skrivsatt": [
+   "rgba(9,11,50,0)"
+  ],
+  "token": null,
+  "note": "transparent"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.16)",
+  "antal": 2,
+  "forsta": "vB/tool.css:580",
+  "skrivsatt": [
+   "rgba(255,255,255,.16)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 16 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.55)",
+  "antal": 2,
+  "forsta": "vB/tool.css:593",
+  "skrivsatt": [
+   "rgba(9,11,50,.55)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 55 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(25, 195, 158)",
+  "antal": 1,
+  "forsta": "vB/tool.css:26",
+  "skrivsatt": [
+   "#19c39e"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(0, 196, 167)",
+  "antal": 1,
+  "forsta": "vB/tool.css:26",
+  "skrivsatt": [
+   "#00c4a7"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(9, 11, 50)",
+  "antal": 1,
+  "forsta": "vB/tool.css:27",
+  "skrivsatt": [
+   "#090b32"
+  ],
+  "token": "--apmidnight-blue",
+  "note": null
+ },
+ {
+  "farg": "rgb(245, 249, 255)",
+  "antal": 1,
+  "forsta": "vB/tool.css:27",
+  "skrivsatt": [
+   "#f5f9ff"
+  ],
+  "token": "--apsky-mist",
+  "note": null
+ },
+ {
+  "farg": "rgb(30, 30, 30)",
+  "antal": 1,
+  "forsta": "vB/tool.css:27",
+  "skrivsatt": [
+   "#1e1e1e"
+  ],
+  "token": "--apdarkest-black",
+  "note": null
+ },
+ {
+  "farg": "rgb(81, 96, 122)",
+  "antal": 1,
+  "forsta": "vB/tool.css:27",
+  "skrivsatt": [
+   "#51607a"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(225, 232, 244)",
+  "antal": 1,
+  "forsta": "vB/tool.css:28",
+  "skrivsatt": [
+   "#e1e8f4"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(215, 222, 235)",
+  "antal": 1,
+  "forsta": "vB/tool.css:28",
+  "skrivsatt": [
+   "#d7deeb"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(159, 225, 203)",
+  "antal": 1,
+  "forsta": "vB/tool.css:28",
+  "skrivsatt": [
+   "#9fe1cb"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(85, 255, 154)",
+  "antal": 1,
+  "forsta": "vB/tool.css:28",
+  "skrivsatt": [
+   "#55ff9a"
+  ],
+  "token": "--apneon-mint",
+  "note": null
+ },
+ {
+  "farg": "rgb(124, 134, 176)",
+  "antal": 1,
+  "forsta": "vB/tool.css:28",
+  "skrivsatt": [
+   "#7c86b0"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(12, 16, 64)",
+  "antal": 1,
+  "forsta": "vB/tool.css:29",
+  "skrivsatt": [
+   "#0c1040"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(17, 22, 63)",
+  "antal": 1,
+  "forsta": "vB/tool.css:29",
+  "skrivsatt": [
+   "#11163f"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(93, 202, 165)",
+  "antal": 1,
+  "forsta": "vB/tool.css:29",
+  "skrivsatt": [
+   "#5dcaa5"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(174, 184, 212)",
+  "antal": 1,
+  "forsta": "vB/tool.css:29",
+  "skrivsatt": [
+   "#aeb8d4"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(138, 147, 181)",
+  "antal": 1,
+  "forsta": "vB/tool.css:30",
+  "skrivsatt": [
+   "#8a93b5"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(233, 239, 248)",
+  "antal": 1,
+  "forsta": "vB/tool.css:30",
+  "skrivsatt": [
+   "#e9eff8"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(240, 180, 41)",
+  "antal": 1,
+  "forsta": "vB/tool.css:30",
+  "skrivsatt": [
+   "#f0b429"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(124, 134, 176, 0.38)",
+  "antal": 1,
+  "forsta": "vB/tool.css:31",
+  "skrivsatt": [
+   "rgba(124,134,176,.38)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(139, 149, 189)",
+  "antal": 1,
+  "forsta": "vB/tool.css:33",
+  "skrivsatt": [
+   "#8b95bd"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(240, 180, 41, 0.16)",
+  "antal": 1,
+  "forsta": "vB/tool.css:33",
+  "skrivsatt": [
+   "rgba(240,180,41,.16)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(111, 123, 176)",
+  "antal": 1,
+  "forsta": "vB/tool.css:33",
+  "skrivsatt": [
+   "#6f7bb0"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(219, 228, 242)",
+  "antal": 1,
+  "forsta": "vB/tool.css:64",
+  "skrivsatt": [
+   "#dbe4f2"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.06)",
+  "antal": 1,
+  "forsta": "vB/tool.css:70",
+  "skrivsatt": [
+   "rgba(9,11,50,.06)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 6 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.04)",
+  "antal": 1,
+  "forsta": "vB/tool.css:70",
+  "skrivsatt": [
+   "rgba(9,11,50,.04)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 4 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.12)",
+  "antal": 1,
+  "forsta": "vB/tool.css:71",
+  "skrivsatt": [
+   "rgba(9,11,50,.12)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 12 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.07)",
+  "antal": 1,
+  "forsta": "vB/tool.css:71",
+  "skrivsatt": [
+   "rgba(9,11,50,.07)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 7 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.2)",
+  "antal": 1,
+  "forsta": "vB/tool.css:72",
+  "skrivsatt": [
+   "rgba(9,11,50,.20)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 20 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.1)",
+  "antal": 1,
+  "forsta": "vB/tool.css:72",
+  "skrivsatt": [
+   "rgba(9,11,50,.10)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 10 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.42)",
+  "antal": 1,
+  "forsta": "vB/tool.css:73",
+  "skrivsatt": [
+   "rgba(0,169,145,.42)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 42 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.28)",
+  "antal": 1,
+  "forsta": "vB/tool.css:74",
+  "skrivsatt": [
+   "rgba(0,169,145,.28)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 28 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 196, 167, 0.22)",
+  "antal": 1,
+  "forsta": "vB/tool.css:85",
+  "skrivsatt": [
+   "rgba(0,196,167,.22)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.4)",
+  "antal": 1,
+  "forsta": "vB/tool.css:87",
+  "skrivsatt": [
+   "rgba(9,11,50,.40)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 40 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(238, 242, 249)",
+  "antal": 1,
+  "forsta": "vB/tool.css:175",
+  "skrivsatt": [
+   "#eef2f9"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.18)",
+  "antal": 1,
+  "forsta": "vB/tool.css:201",
+  "skrivsatt": [
+   "rgba(9,11,50,.18)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 18 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(0, 128, 110)",
+  "antal": 1,
+  "forsta": "vB/tool.css:285",
+  "skrivsatt": [
+   "#00806e"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(240, 244, 251)",
+  "antal": 1,
+  "forsta": "vB/tool.css:305",
+  "skrivsatt": [
+   "#f0f4fb"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.02)",
+  "antal": 1,
+  "forsta": "vB/tool.css:365",
+  "skrivsatt": [
+   "rgba(255,255,255,.02)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 2 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(85, 255, 154, 0.55)",
+  "antal": 1,
+  "forsta": "vB/tool.css:368",
+  "skrivsatt": [
+   "rgba(85,255,154,.55)"
+  ],
+  "token": null,
+  "note": "= --apneon-mint @ 55 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 196, 167, 0.06)",
+  "antal": 1,
+  "forsta": "vB/tool.css:368",
+  "skrivsatt": [
+   "rgba(0,196,167,.06)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(159, 225, 203, 0.2)",
+  "antal": 1,
+  "forsta": "vB/tool.css:373",
+  "skrivsatt": [
+   "rgba(159,225,203,.20)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.03)",
+  "antal": 1,
+  "forsta": "vB/tool.css:379",
+  "skrivsatt": [
+   "rgba(255,255,255,.03)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 3 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(159, 225, 203, 0.34)",
+  "antal": 1,
+  "forsta": "vB/tool.css:410",
+  "skrivsatt": [
+   "rgba(159,225,203,.34)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(0, 184, 158)",
+  "antal": 1,
+  "forsta": "vB/tool.css:455",
+  "skrivsatt": [
+   "#00b89e"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.18)",
+  "antal": 1,
+  "forsta": "vB/tool.css:463",
+  "skrivsatt": [
+   "rgba(255,255,255,.18)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 18 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.04)",
+  "antal": 1,
+  "forsta": "vB/tool.css:526",
+  "skrivsatt": [
+   "rgba(255,255,255,.04)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 4 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.94)",
+  "antal": 1,
+  "forsta": "vB/tool.css:565",
+  "skrivsatt": [
+   "rgba(9,11,50,.94)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 94 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.82)",
+  "antal": 1,
+  "forsta": "vB/tool.css:565",
+  "skrivsatt": [
+   "rgba(9,11,50,.82)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 82 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.66)",
+  "antal": 1,
+  "forsta": "vB/tool.css:566",
+  "skrivsatt": [
+   "rgba(9,11,50,.66)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 66 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.1)",
+  "antal": 1,
+  "forsta": "vB/tool.css:568",
+  "skrivsatt": [
+   "rgba(255,255,255,.10)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 10 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 0, 0, 0.4)",
+  "antal": 1,
+  "forsta": "vB/tool.css:578",
+  "skrivsatt": [
+   "rgba(0,0,0,.4)"
+  ],
+  "token": "--appure-black-40",
+  "note": null
+ },
+ {
+  "farg": "rgba(0, 0, 0, 0.25)",
+  "antal": 1,
+  "forsta": "vB/tool.css:597",
+  "skrivsatt": [
+   "rgba(0,0,0,.25)"
+  ],
+  "token": null,
+  "note": "= --appure-black @ 25 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.92)",
+  "antal": 1,
+  "forsta": "vB/tool.css:666",
+  "skrivsatt": [
+   "rgba(9,11,50,.92)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 92 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.8)",
+  "antal": 1,
+  "forsta": "vB/tool.css:666",
+  "skrivsatt": [
+   "rgba(9,11,50,.80)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 80 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(9, 11, 50, 0.74)",
+  "antal": 1,
+  "forsta": "vB/tool.css:667",
+  "skrivsatt": [
+   "rgba(9,11,50,.74)"
+  ],
+  "token": null,
+  "note": "= --apmidnight-blue @ 74 % alpha (alpha-varianten finns inte som token)"
+ }
+]

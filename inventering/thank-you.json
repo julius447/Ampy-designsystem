@@ -1,0 +1,120 @@
+{
+  "kalla": "thank-you",
+  "namn": "Tack-sidan efter /offert – v1 FINAL (riktning A 'Samlat kort') + implementationspaketet",
+  "status": "v1 FINAL överlämnad (Thank-you-Offer-accepted/v1) · implementationspaket levererat (Thank-you-implementation = samma design i px, scopat .ampy-tack)",
+  "auktoritet": 2,
+  "ingang": "kallor/Thank-you-Offer-accepted/v1/index.html (implementation: kallor/Thank-you-implementation/index.html)",
+  "css": "v1/styles.css (108 rader) + shared/tokens.css (= global-variables.css ordagrant, verifierat med diff); implementation/styles.css (134 rader, px, inga tokens)",
+  "rotstorlek": "v1: html{font-size:62.5%} (1rem = 10px) – kravet i BRIEF §4; implementation: 16px-rot, allt i px",
+  "font": "Outfit 400/500/600/700 via Google Fonts (produktion: sajtens Outfit). v1 binder 17 gånger till riktiga --ap*-tokens (aptext-sm ×3, aptext-m ×2, apspace-s ×2, apradius-full ×2, aptext-xs/-xl/-2-5xl, apspace-m/-2xs, apsky-mist, apradius-xl/-l/-m) – den enda av de fyra källorna som gör det.",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/thank-you-desktop.png",
+    "inventering/skarmdumpar/thank-you-mobile.png",
+    "inventering/skarmdumpar/thank-you-implementation-desktop.png",
+    "inventering/skarmdumpar/thank-you-implementation-mobile.png"
+  ],
+  "farger": [
+    {"hex": "#f5f9ff", "token": "--apsky-mist", "roll": "sidbakgrund (bakom aurora-gradienterna)", "antal": 1, "kalla_fil": "v1/styles.css:23"},
+    {"hex": "#00a991", "token": "--apteal-core", "roll": "bockens streck (#00A991, 12px), fokusring 3px, divider-stop @.35, ghost-hover bg @.08, aurora-radial @.12/.08, knappskugga @.30/.38", "antal": 9, "kalla_fil": "v1/styles.css:9,19,22,73,83,86,93,95; v1/index.html:25"},
+    {"hex": "#55ff9a", "token": "--apneon-mint", "roll": "bockens disk fill @.2 (#55FF9A) + halo radial @.30→0", "antal": 3, "kalla_fil": "v1/index.html:24; v1/styles.css:53"},
+    {"hex": "#b6f2ff", "token": "--apcrystal-blue", "roll": "aurora-radial uppe höger @.48 + aurora-top.svg stop", "antal": 2, "kalla_fil": "v1/styles.css:20; v1/assets/aurora-top.svg"},
+    {"hex": "#a0fbc9", "token": "--apsublime-green", "roll": "aurora-radial nere höger @.28 + aurora-bottom.svg stop", "antal": 2, "kalla_fil": "v1/styles.css:21; v1/assets/aurora-bottom.svg"},
+    {"hex": "#5cc5b6", "token": "--apseafoam-mint", "roll": "aurora-SVG:ernas tealstop (5cc5b6 → 00a991 → 5cc5b6)", "antal": 4, "kalla_fil": "v1/assets/aurora-*.svg (inlinade i implementation/index.html:16-17)"},
+    {"hex": "#ffffff", "token": "--appure-white", "roll": "knapptext; kortets glas rgba(255,255,255,.72), kant .9, inset-highlight .6; diskens stroke .18", "antal": 6, "kalla_fil": "v1/styles.css:40-43,81; v1/index.html:24"},
+    {"hex": "#090b32", "token": "--apmidnight-blue", "roll": "bara som skuggfärg: kortskugga rgba(9,11,50,.12) och --shadow-primary rgba(9,11,50,.10)", "antal": 2, "kalla_fil": "v1/styles.css:7,43"},
+    {"hex": "#0b1030", "token": null, "roll": "bläck (--ink): rubrik, strong – utanför tokens (2 nyanser från midnight #090b32)", "antal": 1, "kalla_fil": "v1/styles.css:8"},
+    {"hex": "rgba(11,16,48,0.62)", "token": null, "roll": "mjukt bläck (--ink-soft): ingress, betygstext, ghost-länk – utanför tokens", "antal": 1, "kalla_fil": "v1/styles.css:8"},
+    {"hex": "rgba(11,16,48,0.44)", "token": null, "roll": "--ink-faint definierad, aldrig använd", "antal": 0, "kalla_fil": "v1/styles.css:8"},
+    {"hex": "#018271", "token": null, "roll": "--teal-deep: knappgradientens mörka stop, ghost-hover text, cta-eyebrow – utanför tokens", "antal": 2, "kalla_fil": "v1/styles.css:9,77,82,93"},
+    {"hex": "#00b89c", "token": null, "roll": "knappgradientens ljusa stop (135deg #00b89c→#018271) – utanför tokens", "antal": 1, "kalla_fil": "v1/styles.css:82"},
+    {"hex": "#f6b53d", "token": null, "roll": "stjärnguld (--gold) – utanför tokens", "antal": 1, "kalla_fil": "v1/styles.css:9,69"}
+  ],
+  "typografi": [
+    {"roll": "h1 (hero__title)", "font": "Outfit", "size": "var(--aptext-2-5xl); ≤520px var(--aptext-xl)", "px_desktop": 40, "px_mobil": 24.54, "weight": 500, "lh": 1.14, "ls": "-0.018em", "color": "#0b1030", "extra": "white-space:nowrap + <br> på desktop; text-wrap:balance på mobil", "kalla_fil": "v1/styles.css:62,99"},
+    {"roll": "ingress (hero__sub)", "font": "Outfit", "size": "var(--aptext-m)", "px_desktop": 18, "px_mobil": 16.12, "weight": 400, "lh": 1.5, "ls": "normal", "color": "rgba(11,16,48,.62)", "kalla_fil": "v1/styles.css:63,100"},
+    {"roll": "betygstext (5 av 5 · Betyg på Google)", "font": "Outfit", "size": "var(--aptext-sm)", "px_desktop": 16, "px_mobil": 14.12, "weight": 400, "weight_strong": 600, "lh": 1, "ls": "normal", "color": "rgba(11,16,48,.62); strong #0b1030", "kalla_fil": "v1/styles.css:70-71"},
+    {"roll": "primärknapp", "font": "Outfit", "size": "var(--aptext-sm)", "px_desktop": 16, "px_mobil": 14.12, "weight": 600, "lh": "normal", "ls": "normal", "color": "#fff", "kalla_fil": "v1/styles.css:81"},
+    {"roll": "ghost-länk (Till startsidan)", "font": "Outfit", "size": "var(--aptext-sm)", "px_desktop": 16, "px_mobil": 14.12, "weight": 500, "lh": "normal", "ls": "normal", "color": "rgba(11,16,48,.62); hover #018271", "kalla_fil": "v1/styles.css:91-93"},
+    {"roll": "cta-eyebrow (CSS finns, används inte i markupen)", "font": "Outfit", "size": "var(--aptext-xs)", "px_desktop": 12, "px_mobil": 10.11, "weight": 600, "lh": "normal", "ls": "0.14em uppercase", "color": "#018271", "kalla_fil": "v1/styles.css:77"},
+    {"roll": "body (v1)", "font": "Outfit", "size": "ärver html 10px – ingen body-storlek satt", "px_desktop": 10, "px_mobil": 10, "weight": 400, "lh": "normal", "ls": "normal", "color": "#0b1030", "kalla_fil": "v1/styles.css:14-17"}
+  ],
+  "spacing": [
+    {"roll": "sida (main) padding", "varde": "clamp(2.4rem, 4vw, 4.8rem) var(--apspace-m)", "px_desktop": "48 / 28", "px_mobil": "24 / 16.9", "token": "--apspace-m (horisontellt)", "kalla_fil": "v1/styles.css:33"},
+    {"roll": "kort ↔ ghost-länk (main gap)", "varde": "clamp(1.6rem, 2vw, 2rem)", "px_desktop": 20, "px_mobil": 16, "token": null, "kalla_fil": "v1/styles.css:32"},
+    {"roll": "kort padding", "varde": "clamp(3.2rem, 4.5vw, 5.2rem) clamp(2.8rem, 4vw, 5.6rem); ≤520px 3.6rem 2.4rem", "px_desktop": "52 / 56", "px_mobil": "36 / 24", "token": null, "kalla_fil": "v1/styles.css:45,98"},
+    {"roll": "kort gap (block↔block)", "varde": "clamp(1.8rem, 2.4vw, 2.4rem); ≤520px 2rem", "px_desktop": 24, "px_mobil": 20, "token": null, "kalla_fil": "v1/styles.css:39,98"},
+    {"roll": "intro gap (bock↔rubrikblock)", "varde": "clamp(1.6rem, 2.2vw, 2.2rem)", "px_desktop": 22, "px_mobil": 16, "token": null, "kalla_fil": "v1/styles.css:47"},
+    {"roll": "rubrik↔ingress", "varde": "var(--apspace-s)", "px_desktop": 19.8, "px_mobil": 13.3, "token": "--apspace-s", "kalla_fil": "v1/styles.css:61"},
+    {"roll": "bockens storlek", "varde": "clamp(8.8rem, 11vw, 10.4rem) kvadrat; halo inset 6%", "px_desktop": 104, "px_mobil": 88, "token": null, "kalla_fil": "v1/styles.css:50-52"},
+    {"roll": "betygsrad", "varde": "gap .3rem .7rem; stjärnor 1.6rem, gap .3rem", "px_desktop": "3×7 / 16 / 3", "px_mobil": "samma", "token": null, "kalla_fil": "v1/styles.css:67-69"},
+    {"roll": "divider", "varde": "6rem × 1px", "px_desktop": "60×1", "px_mobil": "60×1", "token": null, "kalla_fil": "v1/styles.css:73"},
+    {"roll": "primärknapp padding", "varde": "1.4rem 2.8rem; gap .8rem; ikon 1.4×1.3rem → uppmätt 251×48 / 231×46", "px_desktop": "14 / 28 → h48", "px_mobil": "14 / 28 → h46", "token": null, "kalla_fil": "v1/styles.css:78-87"},
+    {"roll": "ghost-länk padding", "varde": "var(--apspace-2xs) var(--apspace-s) → uppmätt 136×40 / 112×35 (implementation: 9px 16px)", "px_desktop": "9.9 / 19.8", "px_mobil": "8.3 / 13.3", "token": "--apspace-2xs / --apspace-s", "kalla_fil": "v1/styles.css:91-92; implementation/styles.css:113"},
+    {"roll": "aurora-hörn (fixed)", "varde": "topp höger clamp(20rem, 30vw, 40rem); botten vänster clamp(15rem, 22vw, 28rem); opacity .8", "px_desktop": "400 / 280", "px_mobil": "200 / 150", "token": null, "kalla_fil": "v1/styles.css:27-29"}
+  ],
+  "container": [
+    {"roll": "kortets max-width", "varde": "52rem (520px) – uppmätt 520×534 @1440, 356×419 @390", "kalla_fil": "v1/styles.css:37"},
+    {"roll": "sidan", "varde": "min-height 100vh/100dvh, flex-centrerad kolumn (kort + ghost som en grupp)", "kalla_fil": "v1/styles.css:31-33"}
+  ],
+  "radier": [
+    {"roll": "kort", "varde": "var(--apradius-xl) = 32px; ≤520px var(--apradius-l) = 16.3px", "token": "--apradius-xl / --apradius-l"},
+    {"roll": "primärknapp / ghost", "varde": "var(--apradius-full)", "token": "--apradius-full"},
+    {"roll": "fokusring-radie", "varde": "var(--apradius-m) = 12px", "token": "--apradius-m"},
+    {"roll": "bock-disk / halo", "varde": "50% (rect rx=75 i 174-viewBox)", "token": null}
+  ],
+  "skuggor": [
+    {"roll": "kort (glas)", "varde": "0 3rem 7rem rgba(9,11,50,.12), inset 0 1px 0 rgba(255,255,255,.6); backdrop-filter blur(16px) saturate(1.1)", "token": null},
+    {"roll": "primärknapp", "varde": "0 1rem 2.4rem rgba(0,169,145,.3); hover 0 1.6rem 3rem rgba(0,169,145,.38)", "token": null},
+    {"roll": "--shadow-primary", "varde": "satt lokalt till rgba(9,11,50,.10) så --apshadow-* skulle fungera – men --apshadow-* används aldrig", "token": null},
+    {"roll": "fokus", "varde": "outline 3px solid #00a991, offset 3px (a:focus-visible)", "token": "--apteal-core"}
+  ],
+  "rorelse": [
+    {"roll": "tokens", "varde": "--ease cubic-bezier(.16,.84,.44,1); --ease-soft cubic-bezier(.33,1,.68,1)"},
+    {"roll": "disk in (disc-in)", "varde": "640ms --ease both: scale .62→1.05 (62%)→1, opacity 0→1"},
+    {"roll": "bock ritas (tick)", "varde": "stroke-dasharray 120 → dashoffset 120→0, 560ms --ease, delay 300ms"},
+    {"roll": "halo", "varde": "4s --ease-soft infinite: scale .8→1.4, opacity 0→.8→0 (pulserar för evigt)"},
+    {"roll": "knapp hover", "varde": "translateY(-2px) + skugga, 200ms; pil translateX(3px)"},
+    {"roll": "ghost hover", "varde": "color/background 180ms"},
+    {"roll": "reduced-motion", "varde": "disk/bock/halo animation none, bock synlig (dashoffset 0), halo statisk opacity .5 scale 1.1; knapp/ghost utan transition"},
+    {"roll": "implementation extra", "varde": "script.js: IntersectionObserver (35 %) klonar SVG:n så bocken ritas om när blocket scrollas in; hoppar över vid reduced-motion"}
+  ],
+  "breakpoints": ["520px (kort: mindre padding/radie, h1 → aptext-xl, br dolda, text-wrap balance)"],
+  "komponenter": [
+    {"namn": "sidskal med aurora", "anatomi": "body: sky-mist + 4 radial-gradienter (teal .12 uppe vänster, crystal-blue .48 uppe höger, sublime-green .28 nere höger, teal .08 nere vänster), background-attachment fixed; två fixerade SVG-hörn (topp höger 400px, botten vänster 280px, opacity .8) med samma palett", "states": ["default"], "html_ref": "v1/index.html:15-16", "css_ref": "v1/styles.css:14-29", "skarmdump_crop": "thank-you-desktop.png"},
+    {"namn": "glaskort", "anatomi": "max 520, rgba(255,255,255,.72) + 1px kant .9 + inset-highlight, blur(16px) saturate(1.1), radie 32 (16 mobil), padding 52/56 (36/24 mobil), gap 24, centrerat innehåll", "states": ["default"], "html_ref": "v1/index.html:19", "css_ref": "v1/styles.css:36-46,98", "skarmdump_crop": "thank-you-desktop.png"},
+    {"namn": "animerad bock", "anatomi": "104px (88 mobil): SVG viewBox 174 med disk (fill neon-mint .2, vit stroke 24 @.18) + bock (teal, stroke 12, round caps) + pulserande halo (neon-mint radial); aria-hidden", "states": ["disc-in", "tick", "halo loop", "reduced-motion"], "html_ref": "v1/index.html:21-27", "css_ref": "v1/styles.css:49-58,104-107", "skarmdump_crop": "thank-you-desktop.png"},
+    {"namn": "hero (h1 + ingress)", "anatomi": "h1 40px/500 ls -.018em lh 1.14 med tvingad radbrytning + '!' (ägarbeslut), ingress 18px/400 ink-soft; gap apspace-s", "states": ["desktop nowrap", "mobil balance"], "html_ref": "v1/index.html:28-31", "css_ref": "v1/styles.css:60-63,99-101", "skarmdump_crop": "thank-you-desktop.png"},
+    {"namn": "betygsrad", "anatomi": "5 guldstjärnor 16px (#f6b53d) role=img med aria-label + '5 av 5 · Betyg på Google' 16px; strong 600", "states": ["default"], "html_ref": "v1/index.html:34-45", "css_ref": "v1/styles.css:66-71", "skarmdump_crop": "thank-you-desktop.png"},
+    {"namn": "hårlinje-divider", "anatomi": "60×1px, gradient transparent→teal .35→transparent", "states": ["default"], "html_ref": "v1/index.html:47", "css_ref": "v1/styles.css:73", "skarmdump_crop": "thank-you-desktop.png"},
+    {"namn": "primärknapp (pill, gradient)", "anatomi": "inline-flex, padding 14/28, 16px/600 vit, gradient 135deg #00b89c→#018271, teal-skugga, pil-SVG 14×13 (fill currentColor); uppmätt 251×48", "states": ["default", "hover (-2px, större skugga, pil +3px)", "focus-visible (3px teal outline)"], "html_ref": "v1/index.html:49-53", "css_ref": "v1/styles.css:76-88,95", "skarmdump_crop": "thank-you-desktop.png"},
+    {"namn": "ghost-länk", "anatomi": "textlänk 16px/500 ink-soft i pill med padding apspace-2xs/-s, under kortet; hover teal-deep på teal .08", "states": ["default", "hover", "focus-visible"], "html_ref": "v1/index.html:56", "css_ref": "v1/styles.css:90-93", "skarmdump_crop": "thank-you-desktop.png"}
+  ],
+  "signaturenhet": "Den ritade tealbocken med pulserande neon-mint-halo på ett glaskort över en sky-mist-aurora – bekräftelsen som hjälte, inte en 'nästa steg'-lista.",
+  "defekter": [
+    "BRIEF.md (LÅST) kräver 3-stegsstegen 'Så här händer det nu', tillitsraden '3 000+ installationer' och 'Medan du väntar'-etiketten – v1 FINAL saknar alla tre (omtag A 'Samlat kort'); .cta-eyebrow-CSS ligger kvar utan markup",
+    "BRIEF §2 länkar 'Utforska våra eltjänster' till https://ampy.se/elinstallation/ ⚑ – byggd v1 länkar till https://ampy.se/elservice",
+    "bläck #0b1030 / rgba(11,16,48,x) i stället för --apmidnight-blue #090b32 / --apdarkest-black – ett eget nära-midnight-bläck utanför tokens (delas med offer-accepted och booking)",
+    "knappgradienten #00b89c→#018271 och --teal-deep #018271 ligger utanför tokens (briefens 'måste lösa till teal' uppfylls i andan, inte i token)",
+    "stjärnguld #f6b53d utanför tokens (main-form: #ffc24b)",
+    "--shadow-primary definieras lokalt men --apshadow-* används inte; kortskuggan är en egen rgba(9,11,50,.12)",
+    "v1 sätter ingen body-storlek: ostylad text skulle bli 10px (html 62.5%)",
+    "h1 white-space:nowrap + hårdkodad <br> på desktop – bryter om copyn byts",
+    "implementation ≠ v1 på två punkter: ghost-padding fast 9/16px (v1 fluid 8–10/13–20) och betygsraden flyttad in i intro-blocket (+38px block); i övrigt ≤1px",
+    "halo-animationen loopar för evigt (4s infinite) – enda oändliga rörelsen i de fyra källorna",
+    "Google Fonts-request i den fristående sidan (README: produktionen använder sajtens Outfit)"
+  ],
+  "regler_som_ligger_i_koden": [
+    "html 62.5% (v1) så ap*-tokens räknar rätt; implementationen översätter till px och kräver ingen rot",
+    "EN signaturrörelse (bocken) + halo; allt annat statiskt; prefers-reduced-motion gör allt synligt utan rörelse",
+    "kort + ghost centreras som en grupp så 'Till startsidan' alltid är i viewport (ingen skroll)",
+    "kortet täcker inte viewporten: BRIEF §4 'sidan/kortet ska täcka hela skärmen' tolkades som fullskärms-aurora + centrerat kort",
+    "dekorativ konst aria-hidden; stjärnorna har aria-label; a:focus-visible 3px teal",
+    "implementation: scopat .ampy-tack, aurora-SVG inlinade (inga bildfiler), min-height 100vh → blank/canvas-mall i Bricks"
+  ],
+  "varianter": [
+    {"namn": "v2 (riktning 2)", "skillnad": "alternativ art direction, ej vald – ej inventerad"},
+    {"namn": "v3 (riktning 3)", "skillnad": "alternativ art direction, ej vald – ej inventerad"},
+    {"namn": "current/baseline", "skillnad": "den tidigare live-sidan (före-baslinje) – ej inventerad"},
+    {"namn": "deliver/ (FluentSnippets + Bricks-JSON)", "skillnad": "ampy-tack.css och ampy-tack.js är byte-identiska med Thank-you-implementation/styles.css + script.js (verifierat med diff); markup-filen saknar hero-blocket som index.html har"}
+  ]
+}

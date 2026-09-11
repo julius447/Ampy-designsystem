@@ -1,0 +1,20 @@
+{
+ "file": "kallor/Ampy-main-form/index.html",
+ "out": "inventering/_probes/out-main-form-states.json",
+ "setup": "(()=>{const f=document.querySelector('[data-validate=forenamn]');f.classList.add('has-error');f.querySelector('input').classList.add('is-invalid');document.querySelector('#mf_efternamn').classList.add('is-valid');document.getElementById('mfError').classList.add('show');document.getElementById('mfAddrManual').click();const l=document.getElementById('mfAddrList');l.innerHTML='<button type=button class=\"mf-addr__opt active\"><svg viewBox=\"0 0 24 24\"></svg><span><mark>Sveav</mark>ägen 1 <small>111 57 Stockholm</small></span></button><button type=button class=\"mf-addr__opt\"><span>Sveavägen 2</span></button>';l.classList.add('show');})()",
+ "targets": [
+  {"roll":"input-invalid","sel":"#mf_forenamn"},
+  {"roll":"input-valid","sel":"#mf_efternamn"},
+  {"roll":"feedback-shown","sel":"[data-validate=forenamn] .mf-feedback"},
+  {"roll":"feedback-svg","sel":"[data-validate=forenamn] .mf-feedback svg"},
+  {"roll":"error-shown","sel":".mf-error"},
+  {"roll":"error-strong","sel":".mf-error strong"},
+  {"roll":"manual-fields-shown","sel":".mf-manual-fields"},
+  {"roll":"manual-field-label","sel":"#mf_postnummer"},
+  {"roll":"addr-list","sel":".mf-addr__list"},
+  {"roll":"addr-opt","sel":".mf-addr__opt"},
+  {"roll":"addr-opt-active","sel":".mf-addr__opt.active"},
+  {"roll":"addr-opt-mark","sel":".mf-addr__opt mark"},
+  {"roll":"addr-opt-small","sel":".mf-addr__opt small"}
+ ]
+}

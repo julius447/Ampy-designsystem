@@ -1,0 +1,107 @@
+{
+  "kalla": "eljour-block",
+  "status": "'sajtens bästa block 23/25' · v3 produktionsblock (index.html = kanon, bricks/ = extraherad CSS/JS/HTML) · ägargrindad före go-live (13 symptommappningar, 'Jour öppen just nu', pris)",
+  "auktoritet": 1,
+  "ingang": "kallor/Eljour-block/index.html",
+  "matmetod": "inventering/_probes/eljour-block.mjs (första akut-raden 'Laddboxen blir varm' expanderad före mätning) → _probes/out/eljour-block.json; html 62.5 %",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/eljour-block-desktop.png",
+    "inventering/skarmdumpar/eljour-block-mobile.png"
+  ],
+  "farger": [
+    {"hex": "#f5f9ff", "token": "--apsky-mist", "roll": "--bg sidbakgrund (sektionen är transparent)", "antal": 1, "kalla_fil": "index.html:13"},
+    {"hex": "#ffffff", "token": "--appure-white", "roll": "--surface: samtalskortet + symptomlistan", "antal": 2, "kalla_fil": "index.html:13"},
+    {"hex": "#090b32", "token": "--apmidnight-blue", "roll": "--ink: H2, symptometiketter, fet text", "antal": 56, "kalla_fil": "index.html:13"},
+    {"hex": "#3b3f59", "token": null, "roll": "--ink-body: brödtext (body, lead, trust, risk) — utanför tokens", "antal": 94, "kalla_fil": "index.html:13"},
+    {"hex": "#5f6480", "token": null, "roll": "--ink-soft: chevron, Elsäkerhetsverket-noten — utanför tokens", "antal": 28, "kalla_fil": "index.html:13"},
+    {"hex": "#00a991", "token": "--apteal-core", "roll": "--teal: trust-ikoner, statuspuls, fokus på rader", "antal": 17, "kalla_fil": "index.html:14"},
+    {"hex": "#0a8f7c", "token": null, "roll": "--teal-dark: CTA focus-outline — utanför tokens", "antal": 1, "kalla_fil": "index.html:14"},
+    {"hex": "#0a6e58", "token": null, "roll": "--teal-pill: 'Jour öppen just nu'-text + 'Se fler tecken' — utanför tokens", "antal": 2, "kalla_fil": "index.html:14"},
+    {"hex": "#e3f6f1", "token": null, "roll": "--teal-tint: statuspillens bakgrund — utanför tokens", "antal": 1, "kalla_fil": "index.html:14"},
+    {"hex": "#e6ecf6", "token": null, "roll": "--line: kortramar + radavdelare — utanför tokens", "antal": 16, "kalla_fil": "index.html:14"},
+    {"hex": "#fdeceb / #b3261e / #e24b4a / #f0b9b3", "token": null, "roll": "Akut-nivån: tagg-bg / tagg-text + säkerhetsrutans text / prick / säkerhetsrutans ram — utanför tokens (Material-röd)", "antal": 48, "kalla_fil": "index.html:15"},
+    {"hex": "#fff4e0 / #8a5800 / #e3a008", "token": null, "roll": "Varning-nivån: tagg-bg / tagg-text / prick — utanför tokens (amber)", "antal": 20, "kalla_fil": "index.html:16"},
+    {"hex": "linear-gradient(146deg, #055a4b 0%, #08735f 52%, #0a8169 100%)", "token": null, "roll": "--cta-grad: den gröna Ring-knappen (mörk teal, INTE --apteal-core) — utanför tokens", "antal": 2, "kalla_fil": "index.html:17"},
+    {"hex": "rgba(4,110,90,.32)", "token": null, "roll": "--cta-shadow 0 1rem 2.4rem + inset 0 1px 0 rgba(255,255,255,.22) + ram rgba(255,255,255,.12)", "antal": 2, "kalla_fil": "index.html:18,41-43"},
+    {"hex": "#55ff9a", "token": "--apneon-mint", "roll": "'live'-pulsprick på CTA (endast mobil)", "antal": 1, "kalla_fil": "index.html:51-53"},
+    {"hex": "rgba(9,11,50,.07)", "token": null, "roll": "--shadow-card 0 1rem 3rem (kort + lista)", "antal": 2, "kalla_fil": "index.html:21"},
+    {"hex": "#fafcff / #fbfdff", "token": null, "roll": "rad hover / öppen rad — utanför tokens", "antal": 2, "kalla_fil": "index.html:101-103"}
+  ],
+  "typografi": [
+    {"roll": "h2 (delad: fråga + instruktion)", "font": "Outfit (Google Fonts i preview; self-hostad i produktion enligt README)", "size": "clamp(2.6rem, 3.3vw, 3.6rem)", "px_desktop": 36, "px_mobil": 26, "weight": 500, "lh": 1.15, "ls": "-0.015em", "color": "#090b32", "max_width": "30ch, centrerad", "kalla_fil": "index.html:33-35"},
+    {"roll": "symptomrad (knapp)", "font": "Outfit", "size": "clamp(1.7rem, 1.9vw, 1.9rem)", "px_desktop": 19, "px_mobil": 17, "weight": 500, "lh": "normal", "ls": "normal", "color": "#090b32", "kalla_fil": "index.html:97-100"},
+    {"roll": "nivåtagg (Akut/Varning)", "font": "Outfit", "size": "1.2rem", "px_desktop": 12, "px_mobil": 12, "weight": 600, "lh": "normal", "ls": "normal", "color": "#b3261e / #8a5800", "kalla_fil": "index.html:106"},
+    {"roll": "risktext (panel)", "font": "Outfit", "size": "1.7rem", "px_desktop": 17, "px_mobil": 17, "weight": 400, "lh": 1.6, "ls": "normal", "color": "#3b3f59, b = #090b32 600", "max_width": "62ch", "kalla_fil": "index.html:117-118"},
+    {"roll": "säkerhetsruta", "font": "Outfit", "size": "1.5rem", "px_desktop": 15, "px_mobil": 15, "weight": 400, "lh": 1.5, "ls": "normal", "color": "#b3261e", "max_width": "62ch", "kalla_fil": "index.html:119-124"},
+    {"roll": "CTA 'Ring eljouren 010-265 79 79'", "font": "Outfit", "size": "clamp(1.5rem, 1.4vw, 1.75rem) · ≤480 1.5rem", "px_desktop": 17.5, "px_mobil": 15, "weight": 600, "lh": 1.1, "ls": "normal", "color": "#fff", "kalla_fil": "index.html:40-44,158"},
+    {"roll": "statuspill 'Jour öppen just nu'", "font": "Outfit", "size": "1.3rem", "px_desktop": 13, "px_mobil": 13, "weight": 600, "lh": "normal", "ls": "normal", "color": "#0a6e58", "kalla_fil": "index.html:62-64"},
+    {"roll": "samtalskortets lead", "font": "Outfit", "size": "1.55rem", "px_desktop": 15.5, "px_mobil": 15.5, "weight": "400, b 600", "lh": 1.5, "ls": "normal", "color": "#3b3f59 / #090b32", "kalla_fil": "index.html:69-70"},
+    {"roll": "trust-punkter", "font": "Outfit", "size": "1.5rem", "px_desktop": 15, "px_mobil": 15, "weight": 400, "lh": 1.4, "ls": "normal", "color": "#3b3f59", "kalla_fil": "index.html:73-75"},
+    {"roll": "Elsäkerhetsverket-noten (stat)", "font": "Outfit", "size": "1.3rem", "px_desktop": 13, "px_mobil": 13, "weight": "400, b 600 (#3b3f59)", "lh": 1.55, "ls": "normal", "color": "#5f6480", "kalla_fil": "index.html:79-82"},
+    {"roll": "'Se fler tecken (6)'", "font": "Outfit", "size": "1.5rem", "px_desktop": 15, "px_mobil": 15, "weight": 600, "lh": "normal", "ls": "normal", "color": "#0a6e58", "kalla_fil": "index.html:134-136"}
+  ],
+  "spacing": [
+    {"roll": "sektion padding", "varde": "clamp(2.8rem, 5vw, 6.4rem) clamp(1.6rem, 4vw, 4rem)", "px_desktop": "64 / 40", "px_mobil": "28 / 16", "token": null, "kalla_fil": "index.html:29"},
+    {"roll": "rubrik margin-bottom", "varde": "clamp(2.4rem, 3vw, 3.6rem)", "px_desktop": 36, "px_mobil": 24, "token": null, "kalla_fil": "index.html:32"},
+    {"roll": "grid", "varde": "minmax(0,4fr) minmax(0,6fr), column-gap clamp(2rem, 3vw, 4rem) · ≤992 display:block", "px_desktop": "496 | 744, gap 40", "px_mobil": "staplat, lista margin 20 0", "token": null, "kalla_fil": "index.html:19,57,146-149"},
+    {"roll": "samtalskort padding + inre gap", "varde": "clamp(2rem, 2.4vw, 2.8rem); gap 1.6rem", "px_desktop": "28 / 16", "px_mobil": "20 / 16", "token": null, "kalla_fil": "index.html:60-61"},
+    {"roll": "statuspill", "varde": "padding .5rem 1.1rem, gap .8rem, puls .9rem", "px_desktop": "5/11, 26 hög", "px_mobil": "samma", "token": null, "kalla_fil": "index.html:62-66"},
+    {"roll": "trust-lista", "varde": "padding 1.8rem 0, ram 1px över+under, gap 1.6rem; li grid 2.6rem 1fr col-gap 1.3rem; ikon 2.1rem", "px_desktop": "18 / 16 / 26+13", "px_mobil": "samma", "token": null, "kalla_fil": "index.html:72-77"},
+    {"roll": "CTA", "varde": "padding 1.5rem 2rem, min-height 5.8rem, gap 1.4rem, ikon 2.4rem · ≤480 padding 1.4rem 1.6rem", "px_desktop": "58 hög, 15/20", "px_mobil": "58 hög, 14/16", "token": null, "kalla_fil": "index.html:39-48"},
+    {"roll": "symptomrad", "varde": "padding clamp(1.8rem, 2vw, 2.2rem) clamp(1.8rem, 2.4vw, 2.6rem), gap 1.3rem, prick 1rem, chevron 2.2rem", "px_desktop": "22 / 26 → 68 hög", "px_mobil": "18 / 18 → 60 hög", "token": null, "kalla_fil": "index.html:97-104"},
+    {"roll": "nivåtagg", "varde": "padding .45rem 1.1rem", "px_desktop": "4.5 / 11, 24 hög", "px_mobil": "samma", "token": null, "kalla_fil": "index.html:106"},
+    {"roll": "panel", "varde": "padding .4rem clamp(1.8rem,2.4vw,2.6rem) clamp(2rem,2.4vw,2.6rem), gap 1.4rem; in-panel CTA max 34rem; säkerhetsruta padding 1.2rem 1.4rem gap 1.1rem", "px_desktop": "4 / 26 / 26, gap 14; CTA 340", "px_mobil": "4 / 18 / 20", "token": null, "kalla_fil": "index.html:112-127"},
+    {"roll": "'Se fler'-knapp", "varde": "padding 1.8rem 1.6rem, gap .8rem, ikon 1.8rem", "px_desktop": "55 hög", "px_mobil": "55 hög", "token": null, "kalla_fil": "index.html:132-136"}
+  ],
+  "container": [
+    {"roll": "wrap max-width", "varde": "--eb-max 128rem = 1280 px (= Hero-2)", "kalla_fil": "index.html:19,30"}
+  ],
+  "radier": [
+    {"roll": "kort + lista (--r-l)", "varde": "2rem", "px": 20, "token": "= --apradius-l@1440 (statisk)"},
+    {"roll": "CTA (--r)", "varde": "1.4rem", "px": 14, "token": null},
+    {"roll": "säkerhetsruta (--r-s)", "varde": "1rem", "px": 10, "token": null},
+    {"roll": "pill/tagg", "varde": "99rem", "px": 990, "token": "≈ --apradius-full"},
+    {"roll": "prick/puls", "varde": "50 %", "token": "--radius-circle"}
+  ],
+  "skuggor": [
+    {"roll": "kort + lista (--shadow-card)", "varde": "0 1rem 3rem rgba(9,11,50,.07)", "token": null},
+    {"roll": "CTA", "varde": "0 1rem 2.4rem rgba(4,110,90,.32), inset 0 1px 0 rgba(255,255,255,.22); hover 0 1.4rem 3.2rem rgba(4,110,90,.40)", "token": null}
+  ],
+  "rorelse": [
+    {"roll": "--m", "varde": ".3s ease på panel (grid-template-rows 0fr→1fr), chevron rotate 180, radbakgrund, CTA transform/box-shadow; CTA hover translateY(-1px)", "kalla_fil": "index.html:19,44,109-112"},
+    {"roll": "statuspuls", "varde": "eb-pulse 2s ease-out infinite (scale 1→2, opacity .55→0)", "kalla_fil": "index.html:65-68"},
+    {"roll": "CTA-puls (mobil)", "varde": "eb-cta-pulse 2s ease-out infinite (scale 1→2.6, opacity .6→0), neonmint-prick 1rem på knappens nederkant", "kalla_fil": "index.html:51-54"},
+    {"roll": "reduced-motion", "varde": "transition none på panel/chevron/CTA/more-svg; pulser display:none", "kalla_fil": "index.html:161-164"}
+  ],
+  "breakpoints": ["992 (stapla, status centrerad, mobil-not, CTA-puls på)", "480 (CTA 15 px)", "prefers-reduced-motion"],
+  "komponenter": [
+    {"namn": "delad rubrik", "anatomi": "två block-spann i en h2: 'Är något fel med elen?' / 'Tryck på det du upplever.' 36/500 lh 1.15 ls −.015em centrerad, max 30ch", "states": ["default"], "html_ref": "index.html:171", "css_ref": "index.html:32-35"},
+    {"namn": "samtalskort .eb__call (vänster, 4fr)", "anatomi": "vitt kort radie 20, ram #e6ecf6, skugga .07, padding 28; statuspill med puls → lead 15,5 → trust-lista 4 punkter med teal-ikoner mellan två 1px-linjer → grön CTA; ej sticky (ingen position:sticky i koden)", "states": ["default"], "html_ref": "index.html:176-191", "css_ref": "index.html:59-77", "skarmdump_crop": "eljour-block-desktop.png"},
+    {"namn": "statuspill 'Jour öppen just nu'", "anatomi": "inline pill #e3f6f1, text 13/600 #0a6e58, teal puls 9 px", "states": ["default", "reduced-motion"], "html_ref": "index.html:177", "css_ref": "index.html:62-68"},
+    {"namn": "CTA 'Ring eljouren 010-265 79 79' (tel:)", "anatomi": "full bredd, 58 hög, radie 14, mörkgrön gradient 146°, vit ram .12, inset-highlight, grön skugga; text 17,5/600 + fet nummer, telefonikon 24 höger; mobil: neonmint-puls under kanten", "states": ["default", "hover −1px", "focus-visible 2px #0a8f7c", "≤480 15 px"], "html_ref": "index.html:188-191", "css_ref": "index.html:38-54"},
+    {"namn": "Elsäkerhetsverket-stat", "anatomi": "13/400 lh 1.55 #5f6480 med fet '1 800 elrelaterade bränder' (#3b3f59 600) + 'Källa: Elsäkerhetsverket'; två DOM-kopior (desktop under kortet, mobil under listan)", "states": ["default"], "html_ref": "index.html:193,198", "css_ref": "index.html:79-83"},
+    {"namn": "symptomlista .eb__list (höger, 6fr)", "anatomi": "vit kort radie 20 ram + skugga, 13 rader (7 synliga + 'Se fler tecken (6)'), 1px avdelare; rad = 10 px nivåprick + etikett 19/500 + tagg 12/600 pill + chevron 22; öppen rad bg #fbfdff", "states": ["default", "hover #fafcff", "aria-expanded", "focus-visible teal −2px", "is-open (alla 13)"], "html_ref": "index.html:196 (JS-renderad)", "css_ref": "index.html:93-136"},
+    {"namn": "nivåprick + tagg", "anatomi": "Akut: prick #e24b4a, tagg #fdeceb/#b3261e · Varning: prick #e3a008, tagg #fff4e0/#8a5800", "states": ["akut", "varn"], "html_ref": "JS SYMPTOMS sev", "css_ref": "index.html:110-111"},
+    {"namn": "symptompanel", "anatomi": "grid-rows 0fr→1fr; risktext 17/400 lh 1.6 max 62ch med fet kärna; röd säkerhetsruta (#fdeceb, ram #f0b9b3, radie 10, flamikon 20) med 112/1177-länkar; in-panel CTA max 340; inert när stängd", "states": ["stängd (inert)", "öppen"], "html_ref": "JS render", "css_ref": "index.html:113-128"},
+    {"namn": "'Se fler tecken (6)'", "anatomi": "full bredd knapp 55 hög, 15/600 #0a6e58, chevron 18 roterar; visar .eb__item--more", "states": ["default", "hover", "is-open"], "html_ref": "JS moreLi", "css_ref": "index.html:131-139"}
+  ],
+  "signaturenhet": "Symptom-ackordeonen med tvånivåkalibrering (Akut röd / Varning amber) där varje panel leder till samtalet — plus samtalskortet med 'Jour öppen just nu'-pulsen och den mörkgröna Ring-knappen med neonmint-puls på mobil. Ingen form; konverteringen är telefonsamtalet.",
+  "defekter": [
+    "Egen tokennamnrymd (--bg/--ink/--teal…) med literaler; bara 5 av 20 färger matchar ap* (sky-mist, white, midnight, teal-core, neon-mint). Brödtextbläcket #3b3f59 och #5f6480 är en tredje/fjärde 'body-färg' bredvid #333/#363636/#0f123c.",
+    "Den gröna CTA-gradienten (#055a4b→#0a8169) är en mörk teal som inte finns i paletten — sajtens primär-CTA (hero_2) är neonmint→#5eb1bf med mörk text; två CTA-språk.",
+    "Statuspill-, tagg- och säkerhetsfärger (Material-röd #b3261e, amber #8a5800) är blockets egna; ingen semantisk 'akut/varning'-token finns i ap*.",
+    "Radie 14 (CTA) och 10 (säkerhetsruta) ligger utanför ap-skalan (12/20); 20 matchar bara --apradius-l vid 1440 (statisk rem, inte clamp).",
+    "Spacing är literal rem/clamp utan koppling till --apspace-*; Google Fonts-request i preview (README kräver self-hostad Outfit i produktion).",
+    "Samtalskortet är inte sticky trots 'sticky call-panel' i minnesanteckningen — koden saknar position:sticky.",
+    "Candour-flagga i koden: 'Se fler'-ordningen gömmer de akuta symptom vars paneler bär 112/1177-vägledningen; 'Jour öppen just nu' kräver 24/7-bemanning."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Konverteringen är samtalet: tel:-CTA i kortet OCH i varje panel; 112/1177 före oss vid brand/skada.",
+    "Ett öppet symptom åt gången; stängda paneler får inert; aria-expanded/aria-controls; fokus-ringar på allt.",
+    "Längdkontroll: 7 synliga + 'Se fler tecken (N)' på båda viewports (VISIBLE=7).",
+    "Röst: du-tilltal, inga '!', inga superlativ, inga tankstreck, 'kan/bör' på säkerhet; varje siffra med källa (Elsäkerhetsverket).",
+    "Mobil-only 'live'-puls på CTA (desktop skulle få två pulser); reduced-motion släcker pulser och transitions.",
+    "Leverantörsneutral dataLayer ampy_ej_symptom_select / ampy_ej_cta_call_click (Consent Mode v2 före go-live).",
+    "Container 1280 (= Hero-2); inga externa requests i produktion; self-hostad Outfit."
+  ]
+}

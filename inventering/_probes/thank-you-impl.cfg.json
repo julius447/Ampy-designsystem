@@ -1,0 +1,140 @@
+{
+ "file": "kallor/Thank-you-implementation/index.html",
+ "out": "inventering/_probes/out-thank-you-impl.json",
+ "targets": [
+  {
+   "roll": "body",
+   "sel": "body"
+  },
+  {
+   "roll": "aurora-top",
+   "sel": ".ampy-tack__aurora--top"
+  },
+  {
+   "roll": "aurora-bottom",
+   "sel": ".ampy-tack__aurora--bottom"
+  },
+  {
+   "roll": "page",
+   "sel": ".ampy-tack"
+  },
+  {
+   "roll": "card",
+   "sel": ".ampy-tack__card"
+  },
+  {
+   "roll": "intro",
+   "sel": ".ampy-tack__intro"
+  },
+  {
+   "roll": "check",
+   "sel": ".ampy-tack__check"
+  },
+  {
+   "roll": "check-svg",
+   "sel": ".ampy-tack__check-svg"
+  },
+  {
+   "roll": "check-halo",
+   "sel": ".ampy-tack__halo"
+  },
+  {
+   "roll": "check-disc",
+   "sel": ".ampy-tack__disc",
+   "props": [
+    "fill",
+    "fill-opacity",
+    "stroke",
+    "stroke-opacity",
+    "stroke-width",
+    "animation"
+   ]
+  },
+  {
+   "roll": "check-tick",
+   "sel": ".ampy-tack__tick",
+   "props": [
+    "stroke",
+    "stroke-width",
+    "stroke-dasharray",
+    "stroke-dashoffset",
+    "animation"
+   ]
+  },
+  {
+   "roll": "hero",
+   "sel": ".ampy-tack__hero"
+  },
+  {
+   "roll": "h1",
+   "sel": ".ampy-tack__title"
+  },
+  {
+   "roll": "sub",
+   "sel": ".ampy-tack__sub"
+  },
+  {
+   "roll": "proof",
+   "sel": ".ampy-tack__proof"
+  },
+  {
+   "roll": "stars",
+   "sel": ".ampy-tack__stars"
+  },
+  {
+   "roll": "star-svg",
+   "sel": ".ampy-tack__stars svg"
+  },
+  {
+   "roll": "rating-txt",
+   "sel": ".ampy-tack__ratingtext"
+  },
+  {
+   "roll": "rating-strong",
+   "sel": ".ampy-tack__ratingtext strong"
+  },
+  {
+   "roll": "divider",
+   "sel": ".ampy-tack__divider",
+   "props": [
+    "width",
+    "height",
+    "background-image",
+    "background-color",
+    "margin-top",
+    "margin-bottom"
+   ]
+  },
+  {
+   "roll": "cta-wrap",
+   "sel": ".ampy-tack__cta-wrap"
+  },
+  {
+   "roll": "cta",
+   "sel": ".ampy-tack__cta"
+  },
+  {
+   "roll": "cta-hover",
+   "sel": ".ampy-tack__cta",
+   "hover": true
+  },
+  {
+   "roll": "cta-focus",
+   "sel": ".ampy-tack__cta",
+   "focus": true
+  },
+  {
+   "roll": "cta-svg",
+   "sel": ".ampy-tack__cta svg"
+  },
+  {
+   "roll": "ghost",
+   "sel": ".ampy-tack__ghost"
+  },
+  {
+   "roll": "ghost-hover",
+   "sel": ".ampy-tack__ghost",
+   "hover": true
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "file": "kallor/Picasso/elements/buttons/preview.html",
+  "out": "inventering/_probes/picasso.measure.json",
+  "scope": "body",
+  "census": false,
+  "roles": {"btn-primary": ".ampy-btn--primary", "btn-phone": ".ampy-btn--phone", "icon": ".ampy-btn__icon", "row": ".ampy-cta-row"}
+}

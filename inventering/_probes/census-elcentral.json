@@ -1,0 +1,577 @@
+[
+ {
+  "farg": "rgb(255, 255, 255)",
+  "antal": 4,
+  "forsta": "assets/elcentralkollen.css:49",
+  "skrivsatt": [
+   "#ffffff",
+   "#fff"
+  ],
+  "token": "--appure-white",
+  "note": null
+ },
+ {
+  "farg": "rgb(0, 122, 105)",
+  "antal": 3,
+  "forsta": "assets/elcentralkollen.css:46",
+  "skrivsatt": [
+   "rgb(0,122,105)",
+   "rgb(0, 122, 105)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(11, 13, 42, 0.1)",
+  "antal": 3,
+  "forsta": "assets/elcentralkollen.css:110",
+  "skrivsatt": [
+   "rgba(11, 13, 42, 0.1)",
+   "rgba(11, 13, 42, 0.10)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(13, 13, 13)",
+  "antal": 3,
+  "forsta": "assets/elcentralkollen.css:212",
+  "skrivsatt": [
+   "#0d0d0d"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(9, 11, 50)",
+  "antal": 2,
+  "forsta": "assets/elcentralkollen.css:52",
+  "skrivsatt": [
+   "rgb(9, 11, 50)"
+  ],
+  "token": "--apmidnight-blue",
+  "note": null
+ },
+ {
+  "farg": "rgb(138, 141, 165)",
+  "antal": 2,
+  "forsta": "assets/elcentralkollen.css:55",
+  "skrivsatt": [
+   "#8a8da5"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(15, 110, 86)",
+  "antal": 2,
+  "forsta": "assets/elcentralkollen.css:58",
+  "skrivsatt": [
+   "rgb(15, 110, 86)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(0, 169, 145)",
+  "antal": 2,
+  "forsta": "assets/elcentralkollen.css:59",
+  "skrivsatt": [
+   "rgb(0, 169, 145)",
+   "#00a991"
+  ],
+  "token": "--apteal-core",
+  "note": null
+ },
+ {
+  "farg": "rgb(94, 177, 191)",
+  "antal": 2,
+  "forsta": "assets/elcentralkollen.css:63",
+  "skrivsatt": [
+   "#5eb1bf"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(245, 249, 255)",
+  "antal": 2,
+  "forsta": "assets/elcentralkollen.css:689",
+  "skrivsatt": [
+   "rgb(245,249,255)",
+   "#f5f9ff"
+  ],
+  "token": "--apsky-mist",
+  "note": null
+ },
+ {
+  "farg": "rgba(0, 122, 105, 0.9)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:47",
+  "skrivsatt": [
+   "rgba(0, 122, 105, 0.9)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(244, 245, 251)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:50",
+  "skrivsatt": [
+   "#f4f5fb"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(247, 248, 252)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:51",
+  "skrivsatt": [
+   "#f7f8fc"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(90, 93, 122)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:54",
+  "skrivsatt": [
+   "#5a5d7a"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(10, 122, 191)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:57",
+  "skrivsatt": [
+   "rgb(10, 122, 191)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(85, 255, 154)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:63",
+  "skrivsatt": [
+   "#55ff9a"
+  ],
+  "token": "--apneon-mint",
+  "note": null
+ },
+ {
+  "farg": "rgb(182, 242, 255)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:64",
+  "skrivsatt": [
+   "#b6f2ff"
+  ],
+  "token": "--apcrystal-blue",
+  "note": null
+ },
+ {
+  "farg": "rgba(241, 241, 241, 0.25)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:65",
+  "skrivsatt": [
+   "rgba(241, 241, 241, 0.25)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(0, 108, 93)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:68",
+  "skrivsatt": [
+   "rgb(0, 108, 93)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(240, 250, 248)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:69",
+  "skrivsatt": [
+   "rgb(240, 250, 248)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(57, 194, 129)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:70",
+  "skrivsatt": [
+   "rgb(57, 194, 129)"
+  ],
+  "token": "--apemerald-flow",
+  "note": null
+ },
+ {
+  "farg": "rgb(245, 175, 25)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:71",
+  "skrivsatt": [
+   "rgb(245, 175, 25)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(220, 53, 69)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:72",
+  "skrivsatt": [
+   "rgb(220, 53, 69)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(227, 229, 237)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:73",
+  "skrivsatt": [
+   "#e3e5ed"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(235, 237, 243)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:74",
+  "skrivsatt": [
+   "#ebedf3"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(214, 240, 229)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:78",
+  "skrivsatt": [
+   "rgb(214, 240, 229)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(6, 71, 55)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:78",
+  "skrivsatt": [
+   "rgb(6, 71, 55)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(250, 233, 197)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:79",
+  "skrivsatt": [
+   "rgb(250, 233, 197)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(92, 64, 5)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:79",
+  "skrivsatt": [
+   "rgb(92, 64, 5)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(250, 224, 222)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:80",
+  "skrivsatt": [
+   "rgb(250, 224, 222)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(124, 32, 32)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:80",
+  "skrivsatt": [
+   "rgb(124, 32, 32)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(224, 236, 248)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:81",
+  "skrivsatt": [
+   "rgb(224, 236, 248)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(17, 82, 135)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:81",
+  "skrivsatt": [
+   "rgb(17, 82, 135)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(135, 101, 7)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:86",
+  "skrivsatt": [
+   "rgb(135, 101, 7)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(122, 22, 35)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:87",
+  "skrivsatt": [
+   "rgb(122, 22, 35)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(13, 86, 140)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:88",
+  "skrivsatt": [
+   "rgb(13, 86, 140)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(240, 249, 245)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:92",
+  "skrivsatt": [
+   "rgb(240, 249, 245)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(252, 247, 234)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:93",
+  "skrivsatt": [
+   "rgb(252, 247, 234)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(252, 243, 243)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:94",
+  "skrivsatt": [
+   "rgb(252, 243, 243)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(242, 247, 251)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:95",
+  "skrivsatt": [
+   "rgb(242, 247, 251)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(248, 249, 252)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:96",
+  "skrivsatt": [
+   "rgb(248, 249, 252)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(11, 13, 42, 0.04)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:108",
+  "skrivsatt": [
+   "rgba(11, 13, 42, 0.04)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(11, 13, 42, 0.07)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:109",
+  "skrivsatt": [
+   "rgba(11, 13, 42, 0.07)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(241, 241, 241, 0.23)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:224",
+  "skrivsatt": [
+   "rgba(241, 241, 241, 0.23)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(33, 33, 33)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:227",
+  "skrivsatt": [
+   "#212121"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(94, 177, 191, 0.28)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:231",
+  "skrivsatt": [
+   "rgba(94, 177, 191, 0.28)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(77, 163, 148)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:349",
+  "skrivsatt": [
+   "rgb(77, 163, 148)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(135, 101, 7, 0.05)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:491",
+  "skrivsatt": [
+   "rgba(135, 101, 7, 0.05)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(135, 101, 7, 0.22)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:491",
+  "skrivsatt": [
+   "rgba(135, 101, 7, 0.22)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(122, 22, 35, 0.38)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:499",
+  "skrivsatt": [
+   "rgba(122, 22, 35, 0.38)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(252, 237, 238)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:499",
+  "skrivsatt": [
+   "rgb(252, 237, 238)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(240, 242, 249)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:690",
+  "skrivsatt": [
+   "#f0f2f9"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(247, 250, 253)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:695",
+  "skrivsatt": [
+   "#f7fafd"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(30, 30, 30)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:763",
+  "skrivsatt": [
+   "#1e1e1e"
+  ],
+  "token": "--apdarkest-black",
+  "note": null
+ },
+ {
+  "farg": "rgb(51, 51, 51)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:764",
+  "skrivsatt": [
+   "#333333"
+  ],
+  "token": "--apcharcoal-gray",
+  "note": null
+ },
+ {
+  "farg": "rgba(11, 13, 42, 0.03)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:805",
+  "skrivsatt": [
+   "rgba(11, 13, 42, 0.03)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(228, 231, 240)",
+  "antal": 1,
+  "forsta": "assets/elcentralkollen.css:806",
+  "skrivsatt": [
+   "#e4e7f0"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ }
+]

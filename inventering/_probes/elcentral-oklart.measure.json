@@ -1,0 +1,473 @@
+{
+ "url": "http://localhost:8667/kallor/Elcentral-lead-magnet/preview/index.html?q=a4.c3.s3.j2.w4.h4.p4",
+ "viewports": {
+  "desktop": {
+   "errors": [],
+   "extra": {},
+   "docHeight": 1049,
+   "roles": {
+    "dualstatus": {
+     "selector": ".ampy-ec__dualstatus",
+     "tag": "div",
+     "text": "SäkerhetOklartRedoInget planerat",
+     "rect": {
+      "x": 716.8,
+      "y": 249,
+      "w": 420,
+      "h": 125.2
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(242, 247, 251)",
+     "padding": "18px 18px 18px 16px",
+     "margin": "0px 0px 24px",
+     "gap": "14px",
+     "rowGap": "14px",
+     "columnGap": "14px",
+     "borderRadius": "10px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "animation": "0.3s cubic-bezier(0.2, 0.6, 0.2, 1) both ec-rise",
+     "width": "420px",
+     "height": "125.188px",
+     "maxWidth": "100%",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "dualstatus-accent": {
+     "selector": ".ampy-ec__dualstatus-accent",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 732.8,
+      "y": 267,
+      "w": 4,
+      "h": 89.2
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(13, 86, 140)",
+     "borderRadius": "999px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "4px",
+     "height": "89.1875px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "pill-success": {
+     "selector": ".ampy-ec__pill[data-level='success']",
+     "missing": true
+    },
+    "pill-warning": {
+     "selector": ".ampy-ec__pill[data-level='warning']",
+     "missing": true
+    },
+    "pill-error": {
+     "selector": ".ampy-ec__pill[data-level='error']",
+     "missing": true
+    },
+    "pill-info": {
+     "selector": ".ampy-ec__pill[data-level='info']",
+     "tag": "span",
+     "text": "Oklart",
+     "rect": {
+      "x": 852.8,
+      "y": 267,
+      "w": 106.3,
+      "h": 37.6
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "18px",
+     "fontWeight": "600",
+     "lineHeight": "21.6px",
+     "letterSpacing": "-0.09px",
+     "color": "rgb(17, 82, 135)",
+     "backgroundColor": "rgb(224, 236, 248)",
+     "padding": "8px 14px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "borderRadius": "999px",
+     "border": "0px none rgb(17, 82, 135)",
+     "borderTop": "0px none rgb(17, 82, 135)",
+     "borderColor": "rgb(17, 82, 135)",
+     "outline": "rgb(17, 82, 135) none 3px",
+     "transition": "all",
+     "width": "106.25px",
+     "height": "37.5938px",
+     "maxWidth": "100%",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(17, 82, 135)"
+    },
+    "pill-neutral": {
+     "selector": ".ampy-ec__pill[data-level='neutral']",
+     "tag": "span",
+     "text": "Inget planerat",
+     "rect": {
+      "x": 852.8,
+      "y": 316.6,
+      "w": 173.9,
+      "h": 39.6
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "18px",
+     "fontWeight": "600",
+     "lineHeight": "21.6px",
+     "letterSpacing": "-0.09px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(244, 245, 251)",
+     "padding": "8px 14px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "borderRadius": "999px",
+     "border": "1px solid rgb(138, 141, 165)",
+     "borderTop": "1px solid rgb(138, 141, 165)",
+     "borderColor": "rgb(138, 141, 165)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "173.891px",
+     "height": "39.5938px",
+     "maxWidth": "100%",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "akut": {
+     "selector": ".ampy-ec__akut",
+     "missing": true
+    },
+    "akut-label": {
+     "selector": ".ampy-ec__akut-label",
+     "missing": true
+    },
+    "akut-text": {
+     "selector": ".ampy-ec__akut-text",
+     "missing": true
+    },
+    "factnote": {
+     "selector": ".ampy-ec__factnote",
+     "missing": true
+    },
+    "factnote-text": {
+     "selector": ".ampy-ec__factnote-text",
+     "missing": true
+    },
+    "finding-icon-warn": {
+     "selector": ".ampy-ec__finding--warn .ampy-ec__finding-icon",
+     "missing": true
+    },
+    "cta-solid-tel": {
+     "selector": ".ampy-ec__block.ampy-ec__result a.ampy-ec__cta-primary--solid",
+     "missing": true
+    },
+    "cta-solid-btn": {
+     "selector": ".ampy-ec__block.ampy-ec__result button.ampy-ec__cta-primary--solid",
+     "missing": true
+    },
+    "cta-secondary": {
+     "selector": ".ampy-ec__cta-secondary",
+     "tag": "button",
+     "text": "Få kostnadsfri rådgivning",
+     "rect": {
+      "x": 716.8,
+      "y": 800.6,
+      "w": 570.2,
+      "h": 48
+     },
+     "fontFamily": "Arial",
+     "fontSize": "15px",
+     "fontWeight": "500",
+     "color": "rgb(9, 11, 50)",
+     "padding": "12px",
+     "margin": "0px 0px 12px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "borderRadius": "10px",
+     "border": "1px solid rgb(227, 229, 237)",
+     "borderTop": "1px solid rgb(227, 229, 237)",
+     "borderColor": "rgb(227, 229, 237)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "border-color 0.12s cubic-bezier(0.2, 0.6, 0.2, 1), background 0.12s cubic-bezier(0.2, 0.6, 0.2, 1)",
+     "width": "570.172px",
+     "height": "48px",
+     "minHeight": "48px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "cta-lead": {
+     "selector": ".ampy-ec__cta-lead",
+     "missing": true
+    },
+    "cta-link": {
+     "selector": ".ampy-ec__cta-link",
+     "missing": true
+    }
+   },
+   "states": {}
+  },
+  "mobile": {
+   "errors": [],
+   "extra": {},
+   "docHeight": 1384,
+   "roles": {
+    "dualstatus": {
+     "selector": ".ampy-ec__dualstatus",
+     "tag": "div",
+     "text": "SäkerhetOklartRedoInget planerat",
+     "rect": {
+      "x": 37,
+      "y": 347.3,
+      "w": 316,
+      "h": 97.6
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(242, 247, 251)",
+     "padding": "14px 14px 14px 12px",
+     "margin": "0px 0px 24px",
+     "gap": "10px",
+     "rowGap": "10px",
+     "columnGap": "10px",
+     "borderRadius": "10px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "animation": "0.3s cubic-bezier(0.2, 0.6, 0.2, 1) both ec-rise",
+     "width": "316px",
+     "height": "97.5938px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "dualstatus-accent": {
+     "selector": ".ampy-ec__dualstatus-accent",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 49,
+      "y": 361.3,
+      "w": 4,
+      "h": 69.6
+     },
+     "fontFamily": "Outfit, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "fontSize": "10px",
+     "fontWeight": "400",
+     "lineHeight": "15px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(13, 86, 140)",
+     "borderRadius": "999px",
+     "border": "0px none rgb(9, 11, 50)",
+     "borderTop": "0px none rgb(9, 11, 50)",
+     "borderColor": "rgb(9, 11, 50)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "4px",
+     "height": "69.5938px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "pill-success": {
+     "selector": ".ampy-ec__pill[data-level='success']",
+     "missing": true
+    },
+    "pill-warning": {
+     "selector": ".ampy-ec__pill[data-level='warning']",
+     "missing": true
+    },
+    "pill-error": {
+     "selector": ".ampy-ec__pill[data-level='error']",
+     "missing": true
+    },
+    "pill-info": {
+     "selector": ".ampy-ec__pill[data-level='info']",
+     "tag": "span",
+     "text": "Oklart",
+     "rect": {
+      "x": 143,
+      "y": 361.3,
+      "w": 86.2,
+      "h": 28.8
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "600",
+     "lineHeight": "16.8px",
+     "letterSpacing": "-0.07px",
+     "color": "rgb(17, 82, 135)",
+     "backgroundColor": "rgb(224, 236, 248)",
+     "padding": "6px 12px",
+     "gap": "6px",
+     "rowGap": "6px",
+     "columnGap": "6px",
+     "borderRadius": "999px",
+     "border": "0px none rgb(17, 82, 135)",
+     "borderTop": "0px none rgb(17, 82, 135)",
+     "borderColor": "rgb(17, 82, 135)",
+     "outline": "rgb(17, 82, 135) none 3px",
+     "transition": "all",
+     "width": "86.2031px",
+     "height": "28.7969px",
+     "maxWidth": "100%",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(17, 82, 135)"
+    },
+    "pill-neutral": {
+     "selector": ".ampy-ec__pill[data-level='neutral']",
+     "tag": "span",
+     "text": "Inget planerat",
+     "rect": {
+      "x": 143,
+      "y": 400.1,
+      "w": 139.3,
+      "h": 30.8
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "600",
+     "lineHeight": "16.8px",
+     "letterSpacing": "-0.07px",
+     "color": "rgb(9, 11, 50)",
+     "backgroundColor": "rgb(244, 245, 251)",
+     "padding": "6px 12px",
+     "gap": "6px",
+     "rowGap": "6px",
+     "columnGap": "6px",
+     "borderRadius": "999px",
+     "border": "1px solid rgb(138, 141, 165)",
+     "borderTop": "1px solid rgb(138, 141, 165)",
+     "borderColor": "rgb(138, 141, 165)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "all",
+     "width": "139.25px",
+     "height": "30.7969px",
+     "maxWidth": "100%",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)"
+    },
+    "akut": {
+     "selector": ".ampy-ec__akut",
+     "missing": true
+    },
+    "akut-label": {
+     "selector": ".ampy-ec__akut-label",
+     "missing": true
+    },
+    "akut-text": {
+     "selector": ".ampy-ec__akut-text",
+     "missing": true
+    },
+    "factnote": {
+     "selector": ".ampy-ec__factnote",
+     "missing": true
+    },
+    "factnote-text": {
+     "selector": ".ampy-ec__factnote-text",
+     "missing": true
+    },
+    "finding-icon-warn": {
+     "selector": ".ampy-ec__finding--warn .ampy-ec__finding-icon",
+     "missing": true
+    },
+    "cta-solid-tel": {
+     "selector": ".ampy-ec__block.ampy-ec__result a.ampy-ec__cta-primary--solid",
+     "missing": true
+    },
+    "cta-solid-btn": {
+     "selector": ".ampy-ec__block.ampy-ec__result button.ampy-ec__cta-primary--solid",
+     "missing": true
+    },
+    "cta-secondary": {
+     "selector": ".ampy-ec__cta-secondary",
+     "tag": "button",
+     "text": "Få kostnadsfri rådgivning",
+     "rect": {
+      "x": 37,
+      "y": 928.1,
+      "w": 316,
+      "h": 48
+     },
+     "fontFamily": "Arial",
+     "fontSize": "15px",
+     "fontWeight": "500",
+     "color": "rgb(9, 11, 50)",
+     "padding": "12px",
+     "margin": "0px 0px 12px",
+     "gap": "8px",
+     "rowGap": "8px",
+     "columnGap": "8px",
+     "borderRadius": "10px",
+     "border": "1px solid rgb(227, 229, 237)",
+     "borderTop": "1px solid rgb(227, 229, 237)",
+     "borderColor": "rgb(227, 229, 237)",
+     "outline": "rgb(9, 11, 50) none 3px",
+     "transition": "border-color 0.12s cubic-bezier(0.2, 0.6, 0.2, 1), background 0.12s cubic-bezier(0.2, 0.6, 0.2, 1)",
+     "width": "316px",
+     "height": "48px",
+     "minHeight": "48px",
+     "maxWidth": "440px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(9, 11, 50)",
+     "backgroundColor": "transparent"
+    },
+    "cta-lead": {
+     "selector": ".ampy-ec__cta-lead",
+     "missing": true
+    },
+    "cta-link": {
+     "selector": ".ampy-ec__cta-link",
+     "missing": true
+    }
+   },
+   "states": {}
+  }
+ }
+}

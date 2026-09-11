@@ -1,0 +1,16 @@
+import { serve } from './lib.mjs';
+import { chromium } from '../../tools/node_modules/playwright/index.mjs';
+import { resolve } from 'path';
+import { fileURLToPath } from 'url'; const repo = resolve(fileURLToPath(new URL('.', import.meta.url)), '../..');
+const distRoot = '/private/tmp/claude-501/-Users-juliuscallahan-Desktop-Claude-Code/99d99428-a3f5-43ec-9ad9-e358153dd420/scratchpad/article-build/dist';
+const srv = await serve(distRoot); const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
+await page.goto(srv.url('index.html'), { waitUntil: 'networkidle' }); await page.waitForTimeout(1200);
+await page.screenshot({ path: resolve(repo, 'inventering/skarmdumpar/article-template-desktop-topp.png') });
+const y = await page.evaluate(() => { const h = [...document.querySelectorAll('h2')].find(x => /Vanliga frågor/.test(x.textContent)); return h ? h.getBoundingClientRect().top + scrollY - 900 : 0; });
+await page.evaluate((y) => scrollTo(0, y), y); await page.waitForTimeout(500);
+await page.screenshot({ path: resolve(repo, 'inventering/skarmdumpar/article-template-desktop-faq.png') });
+const y2 = await page.evaluate(() => { const h = [...document.querySelectorAll('h3')].find(x => /Räkna ut kWp/.test(x.textContent)); return h ? h.getBoundingClientRect().top + scrollY - 200 : 0; });
+await page.evaluate((y) => scrollTo(0, y), y2); await page.waitForTimeout(500);
+await page.screenshot({ path: resolve(repo, 'inventering/skarmdumpar/article-template-desktop-mitt.png') });
+await browser.close(); srv.server.close();

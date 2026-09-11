@@ -1,0 +1,117 @@
+{
+  "kalla": "picasso",
+  "status": "referensbibliotek (inspiration, ej kanon) + 5 Ampy-byggen",
+  "auktoritet": 3,
+  "ingang": "kallor/Picasso/README.md (index) → components/<name>/README.md + preview.html; elements/buttons/",
+  "matmetod": "Katalogläsning (146 filer, 9 komponentmappar + elements/). Bara de fem Ampy-byggena inventerade som rader; externa referenser listade med namn/URL utan mätning. Picassos kanoniska knappar mätta med inventering/_probes/picasso.config.json → picasso.measure.json (renderade från elements/buttons/preview.html)",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/picasso-desktop.png",
+    "inventering/skarmdumpar/picasso-mobile.png",
+    "inventering/skarmdumpar/picasso-main-form-desktop.png",
+    "inventering/skarmdumpar/picasso-main-form-mobile.png"
+  ],
+  "ampy_byggen": [
+    {
+      "namn": "elements/buttons — Ampy CTA-knappdatabas (cta-primary 'Kontakta oss' + cta-phone)",
+      "vag": "kallor/Picasso/elements/buttons/ (README, buttons.html, buttons.css, tokens.css, cta-primary.bricks.json, cta-phone.bricks.json, icons/, preview.html)",
+      "status": "kanonisk atom, 'referenseras, regenereras aldrig'; verifierad i webbläsare; 1:1 med live Bricks-element 076d6b + 395b4f (global klass main-cta-__button)",
+      "matt_1440_390": "cta-primary 196.5×37.8 | 272.9×42.8; cta-phone 205.5×37.8 | 272.9×42.8; padding var(--apspace-2xs) var(--space-m) = 9.9px 24px | 13.3px 21.5px; gap var(--apspace-l) = 39.6 | 21.5; font Outfit 400 var(--aptext-sm) = 16 | 14.12px lh 1; ink #0d0d0d; radius --radius-m 16px; ikon --aptext-m 18 | 16; rad-gap 2rem, mobil ≤640 staplad 100 %",
+      "tokens": "gradient primär linear-gradient(120deg,#55ff9a 0%,#5eb1bf 100%); phone linear-gradient(141deg,#b6f2ff 0%,#5eb1bf 100%); skugga 0 0 16px rgba(241,241,241,.25/.23); hover translateY(-1px) + 0 6px 20px rgba(94,177,191,.28) + saturate(1.05); fokus outline 3px #00a991 offset 3; README flaggar själv: gradienterna använder #55ff9a/#5eb1bf/#b6f2ff, inte kanonisk teal #00a991",
+      "konflikt": "Elkollen hero__btn och Elcentral rail-CTA:er kör SAMMA recept men padding 2rem 2.4rem → 58px höga (Picasso 37.8px) och justify space-between (Picasso center); 'samma knapp' finns alltså i två höjder i biblioteket"
+    },
+    {
+      "namn": "components/main-form/ampy-redesign — /offert-formulärets redesign (trust-panel vänster / form höger)",
+      "vag": "kallor/Picasso/components/main-form/ampy-redesign/ (index.html, css/styles.css, js/app.js, delivery/bricks/ampy-mainform.bricks.json, delivery/fluentsnippets/{backend.php, engine.js, styles.css, fonts/}, delivery/preview/)",
+      "status": "design GO (samma bygge som kallor/Ampy-main-form — inventeras fullt av agent 4); byggd via /ampy med candour-gate; mock-adress-sök + submit-fallback flaggade; lead-webhook n8nflows.ampy.se/webhook/Kontakt",
+      "matt_1440_390": "renderad: 1440×1000 / 390×1336 (skärmdump picasso-main-form-*.png), ej mätt här",
+      "tokens": "navy-aurora-panel med riktiga tokens, submit i kanonisk teal #00a991 (ersatte live #57f1a1), Outfit self-hostad i delivery/fluentsnippets/fonts/",
+      "konflikt": "två kopior av samma bygge (Picasso + Ampy-main-form-repot) — vilken som är sanningen måste ägaren låsa"
+    },
+    {
+      "namn": "components/main-cta — Main CTA-bandet (baslinjeklon 1:1 + tre redesigner)",
+      "vag": "kallor/Picasso/components/main-cta/ (main-cta.bricks.json, build/{index.html, styles.css, tokens.css, assets/}, redesign/{index.html, va/, vb/, vc/, cta-lab/, cta-textfarg/})",
+      "status": "build/ = verifierad 1:1-klon av live (computed-style/geometri-diff 1440 + 375), publik spegel julius447/Main-CTA-block; redesign va/vb/vc väntar ägarval (= kallor/Main_CTA, inventeras av annan agent)",
+      "matt_1440_390": "ej mätt här",
+      "tokens": "sektion bg #f5f9ff (Color #20 = --apsky-mist); kort radius --apradius-l, padding --apspace-l/--apspace-2xl; rubrik --aptext-2-5xl/500 med teal→blå textgradient (hsl(171 95% 41%) → hsl(189 43% 56%)); text --aptext-m/300 lh 1.6; Google-stjärnor teal #00a991; behållen live-quirk: odefinierad --text-m ≤478px",
+      "konflikt": "textgradientens teal hsl(171 95% 41%) ≈ #05cba9 är inte --apteal-core"
+    },
+    {
+      "namn": "components/testimonials — omdömesslidern (baslinje 1:1 + delivery + redesign a/b)",
+      "vag": "kallor/Picasso/components/testimonials/ (testimonials.bricks.json, build/, delivery/{ampy-testimonials.css/js/php, bricks.json, docs/01-05}, redesign/{a, b, shared/})",
+      "status": "V1 låst (= kallor/Testimonials-block, inventeras av annan agent); delivery = FluentSnippets-paket med 5 docs",
+      "matt_1440_390": "ej mätt här",
+      "tokens": "kort: gradient #0b0f30 → #2d516d (−27°), min 360×360; namn --aptext-l/600, citat --aptext-m; stjärnor #55ff9a (--apneon-mint) 19px; rubrik --aptext-xl/400 med grön textgradient (--brightgreen #1BD365 → --color-5); paginering aktiv #00ad48 / idle #c7d3eb; README flaggar 'green→teal token drift' + troligt dött hide-dots-skript",
+      "konflikt": "#0b0f30/#2d516d/#1BD365/#00ad48/#c7d3eb finns inte i tokens"
+    },
+    {
+      "namn": "components/hero/ampy — Hero 1 (startsidans hero, avkodad Bricks-JSON)",
+      "vag": "kallor/Picasso/components/hero/ampy/ (README.md, hero-1.bricks.json) + components/hero/docs/strategy.md",
+      "status": "avkodad referens till kallor/Hero-1 (ägargodkänd, inventeras av agent 1); ingen egen rendering i Picasso",
+      "matt_1440_390": "ej mätt här",
+      "tokens": "enligt hero-1.bricks.json (ej öppnad i denna inventering)",
+      "konflikt": null
+    },
+    {
+      "namn": "components/main-form/ampy — Ampys nuvarande /offert-formulär (verbatim Bricks-JSON)",
+      "vag": "kallor/Picasso/components/main-form/ampy/current-form.bricks.json + README.md",
+      "status": "baslinje (live-formuläret) för redesignen — sjätte Ampy-artefakten, noteras för fullständighet",
+      "matt_1440_390": "ej renderbar (Bricks-JSON)",
+      "tokens": "submit bright green #57f1a1 (live), 'Få en kostnadsfri konsultation!' med utropstecken",
+      "konflikt": "#57f1a1 utanför tokens (nära --apneon-mint #55ff9a)"
+    }
+  ],
+  "externa_referenser": [
+    {"namn": "hemsol-header", "kalla": "hemsol.se (produktions-header: desktop mega-meny + mobil drawer), verbatim extraherad", "vag": "components/hemsol-header/ (preview.html, src/header.html|css|js, design-tokens.css, buttons.css, screenshots/)", "anvands_for": "Ampys header-redesign"},
+    {"namn": "evify-header", "kalla": "evify.se (CodyHouse Mega Navigation + Bootstrap 4), riktiga produktionsfiler", "vag": "components/evify-header/ (preview.html, src/header.html, mega-nav.css, vendor/)", "anvands_for": "header-redesign"},
+    {"namn": "mini-menu/evify + mini-menu/hemsol", "kalla": "evify.se (3 bildkort + pill-CTA) och hemsol.se (3 bildtiles med hover-länk)", "vag": "components/mini-menu/{evify,hemsol}/ (preview.html, src/)", "anvands_for": "Ampys block 2 / produktväljare (kallor/mini-menu)"},
+    {"namn": "main-form/svea", "kalla": "sveasolar.se/sv-se/fri-offert (Trustpilot-bevis + 3-stegs 'vad händer sen' + adress-autocomplete + flerval, från __NEXT_DATA__); exakt CSS = [GAP] (runtime styled-components)", "vag": "components/main-form/svea/ (src/form.html, global-chunks.css, data/next-data.form.json), reference/svea-fri-offert.full.html", "anvands_for": "/offert-redesign"},
+    {"namn": "main-form/evify", "kalla": "evify.se/offert/ (chip-formulär, live-validering, in-place success, review-slider), riktig HTML/CSS/JS", "vag": "components/main-form/evify/ (preview.html, src/form.html|css|js, vendor/base-extract.css), reference/evify-offert.full.html", "anvands_for": "/offert-redesign"},
+    {"namn": "hero/evify", "kalla": "evify.se hero (en värdemening + dubbel Trustpilot/Google-ratingbox), verifierad i webbläsare", "vag": "components/hero/evify/ (preview.html, src/hero.html|css)", "anvands_for": "Ampys ultimata hero"},
+    {"namn": "hero/laddboxkillarna", "kalla": "laddboxkillarna.se hero (fullbleed-foto + primär/ghost-CTA + erbjudandenotis)", "vag": "components/hero/laddboxkillarna/src/", "anvands_for": "hero-referens"},
+    {"namn": "hero/hemsol", "kalla": "hemsol.se split-hero (värde + logotypvägg vänster, 3-knappars produktväljare höger)", "vag": "components/hero/hemsol/src/", "anvands_for": "hero-referens"}
+  ],
+  "farger": [
+    {"hex": "linear-gradient(120deg, #55ff9a 0%, #5eb1bf 100%)", "token": "start --apneon-mint; #5eb1bf utanför tokens", "roll": "cta-primary bg (kanonisk live-knapp)", "antal": 1, "kalla_fil": "elements/buttons/buttons.css:26"},
+    {"hex": "linear-gradient(141deg, #b6f2ff 0%, #5eb1bf 100%)", "token": "start --apcrystal-blue; #5eb1bf utanför", "roll": "cta-phone bg", "antal": 1, "kalla_fil": "elements/buttons/buttons.css:31"},
+    {"hex": "#0d0d0d / #212121", "token": null, "roll": "knapptext / telefonikonens stroke", "antal": 2, "kalla_fil": "elements/buttons/buttons.css:19,34", "notering": "utanför tokens (nära --apdarkest-black rgb(30,30,30))"},
+    {"hex": "rgba(241,241,241,.25) / rgba(94,177,191,.28)", "token": null, "roll": "knappglöd / hover-skugga", "antal": 2, "kalla_fil": "elements/buttons/buttons.css:20-22", "notering": "utanför tokens"},
+    {"hex": "hsl(171 100% 33%) = #00a991", "token": "--apteal-core", "roll": "--color-15: fokus-outline, rating-stjärnor i main-cta", "antal": 1, "kalla_fil": "elements/buttons/tokens.css:11"}
+  ],
+  "typografi": [
+    {"roll": "ampy-btn (kanonisk CTA)", "font": "Outfit", "size": "var(--aptext-sm) = clamp(1.4rem, calc(0.21vw + 1.33rem), 1.6rem)", "px_desktop": 16, "px_mobil": 14.12, "weight": 400, "lh": 1, "kalla_fil": "elements/buttons/buttons.css:17-18"}
+  ],
+  "spacing": [
+    {"roll": "ampy-btn padding", "varde": "var(--apspace-2xs) var(--space-m) (mobil ≤640: var(--apspace-s) var(--apspace-l))", "px_desktop": "9.9 / 24", "px_mobil": "13.3 / 21.5", "token": "--apspace-2xs / --space-m (Bricks' egna --space-m, inte --apspace-m)", "kalla_fil": "elements/buttons/buttons.css:15,38"},
+    {"roll": "ampy-btn gap (label → ikon)", "varde": "var(--apspace-l)", "px_desktop": 39.6, "px_mobil": 21.5, "token": "--apspace-l", "kalla_fil": "elements/buttons/buttons.css:14"},
+    {"roll": "cta-row gap", "varde": "2rem (mobil --apspace-xs)", "px_desktop": 20, "px_mobil": 10, "kalla_fil": "elements/buttons/buttons.css:7,37"}
+  ],
+  "container": [],
+  "radier": [{"roll": "ampy-btn", "varde": "var(--radius-m) = 16px (Bricks-token, INTE --apradius-m)", "token": "--radius-m 16px; = --apradius-l@mobil"}],
+  "skuggor": [{"roll": "ampy-btn", "varde": "0 0 16px rgba(241,241,241,.25) (phone .23); hover 0 6px 20px rgba(94,177,191,.28)", "token": null}],
+  "rorelse": [{"roll": "ampy-btn hover", "varde": "transform .15s ease, box-shadow .15s ease, filter .15s ease; translateY(-1px) + saturate(1.05)"}],
+  "breakpoints": ["640px (knapprad staplas 100 %)"],
+  "komponenter": [
+    {"namn": "ampy-btn--primary (Kontakta oss)", "anatomi": "inline-flex center, gap 39.6, padding 9.9 24, radius 16, gradient 120° grön→blå, Outfit 400 16, ink #0d0d0d, ikon Arrow-up-right 18px höger, glöd .25", "states": ["default", "hover", "focus-visible outline 3px teal"], "html_ref": "elements/buttons/buttons.html", "css_ref": "elements/buttons/buttons.css:10-27", "matt": "196.5×37.8 @1440, 272.9×42.8 @390"},
+    {"namn": "ampy-btn--phone (010-26 57 979)", "anatomi": "som primär men gradient 141° ljusblå→blå, Phone-call-ikon stroke #212121, glöd .23; dynamiskt nummer {acf_site_phone_number_local}", "states": ["default", "hover", "focus-visible"], "html_ref": "elements/buttons/buttons.html", "css_ref": "elements/buttons/buttons.css:29-34", "matt": "205.5×37.8 @1440, 272.9×42.8 @390"}
+  ],
+  "signaturenhet": "Biblioteket i sig: verbatim-extraherade konkurrentkomponenter (Hemsol, Evify, Svea, Laddboxkillarna) sida vid sida med Ampys egna 1:1-baslinjer — och elements/buttons som den enda 'atomdatabas' som finns (två knappar, paste-ready Bricks-JSON + CSS + HTML).",
+  "hantverk_att_bevara": [
+    "Principen 'referensera, regenerera aldrig' för atomer (elements/) med alla format en build behöver (Bricks-JSON, CSS, HTML, tokens, preview)",
+    "Baslinjeklonerna (main-cta/build, testimonials/build) verifierade med computed-style/geometri-diff mot live innan redesign",
+    "Konkurrentreferenser som riktig kod (inte skärmdumpar) med README som säger vad som är [GAP]"
+  ],
+  "defekter": [
+    "Knappdatabasens gradienter (#55ff9a/#5eb1bf/#b6f2ff) är inte kanonisk teal — README flaggar det själv som 'single point of change' när paletten konsolideras",
+    "Samma knapp finns i två höjder: Picasso 37.8px (padding --apspace-2xs) vs Elkollen/Elcentral 58px (padding 2rem 2.4rem) — båda kallar sig '1:1 med live'",
+    "Bricks-tokens (--radius-m, --space-m) och ap-tokens (--apspace-2xs, --aptext-sm) blandas i samma knapp",
+    "Ampy-byggena i Picasso dubblerar repon (main-form ↔ Ampy-main-form, main-cta ↔ Main_CTA, testimonials ↔ Testimonials-block, hero/ampy ↔ Hero-1) — fyra potentiella sanningar per block",
+    "Inga skärmdumpar i evify-header/assets/screenshots (.gitkeep) trots README-löfte"
+  ],
+  "regler_som_ligger_i_koden": [
+    "Komponenter under components/ = hela sektioner; elements/ = atomer; externa = inspiration, kopieras aldrig rakt av",
+    "Varje komponent: README + preview.html som faktiskt renderar + riktig HTML/CSS/JS",
+    "Bricks-JSON som 'bricksCopiedElements' klistras rakt in i Bricks-canvasen",
+    "tokens.css i elements/buttons antar html{font-size:62.5%}"
+  ],
+  "skillnad_mot_andra_block": "Inte ett block utan biblioteket bakom flera block. Det viktigaste för designsystemet: (1) den kanoniska CTA-knappen är en gradient-pill i Outfit 400 på 38px — inte kitets teal-fyllda 48–56px-knapp och inte diagnostikernas 58px-variant av samma gradient; (2) tre ap-token-rena baslinjer (main-cta, testimonials, hero-1) visar hur live faktiskt använder --aptext-*/--apspace-*/--apradius-*, till skillnad från alla kalkylatorer som har egna skalor."
+}

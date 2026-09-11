@@ -1,0 +1,32 @@
+{
+ "file": "kallor/Booking-confirmation/riktning-b-dagen/index.html",
+ "out": "inventering/_probes/out-booking-open.json",
+ "setup": "(()=>{document.getElementById('omboka-btn').click();document.querySelector('.of-material').open=true;document.querySelector('.of-legal').open=true;const t=document.getElementById('b-varfor-om');t.setAttribute('aria-invalid','true');const s=document.getElementById('b-omboka-status');s.textContent='Skriv varför tiden inte passar.';s.classList.add('is-block');})()",
+ "targets": [
+  {"roll":"btn-expanded","sel":"#omboka-btn"},
+  {"roll":"panel-open","sel":"#omboka-panel"},
+  {"roll":"panel-h3","sel":"#omboka-panel h3"},
+  {"roll":"p-hint","sel":"#omboka-panel .p-hint"},
+  {"roll":"two","sel":".bk-two"},
+  {"roll":"field","sel":"#omboka-panel .bk-field"},
+  {"roll":"field-label","sel":"#omboka-panel .bk-field label"},
+  {"roll":"input-date","sel":"#b-datum"},
+  {"roll":"input-date-focus","sel":"#b-datum","focus":true},
+  {"roll":"select","sel":"#b-fonster"},
+  {"roll":"textarea","sel":"#b-varfor-om"},
+  {"roll":"textarea-placeholder","sel":"#b-varfor-om","pseudo":"::placeholder"},
+  {"roll":"btn-send","sel":"#omboka-panel .of-btn-send"},
+  {"roll":"btn-send-hover","sel":"#omboka-panel .of-btn-send","hover":true},
+  {"roll":"btn-send-svg","sel":"#omboka-panel .of-btn-send svg"},
+  {"roll":"status-block","sel":"#b-omboka-status"},
+  {"roll":"material-open","sel":".of-material"},
+  {"roll":"material-ul","sel":".of-material ul"},
+  {"roll":"material-li","sel":".of-material li"},
+  {"roll":"material-li-before","sel":".of-material li","pseudo":"::before","props":["width","height","background-color","border-radius","top","left"]},
+  {"roll":"m-arrow-open","sel":".of-material .m-arrow","props":["transform","color","transition"]},
+  {"roll":"legal-open","sel":".of-legal"},
+  {"roll":"l-body","sel":".l-body"},
+  {"roll":"l-unique","sel":".l-unique"},
+  {"roll":"terms-link","sel":".of-terms-link"}
+ ]
+}

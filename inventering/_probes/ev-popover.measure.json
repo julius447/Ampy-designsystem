@@ -1,0 +1,241 @@
+{
+ "url": "http://localhost:8845/kallor/EV-Caluclator/prototype/index.html",
+ "viewports": {
+  "desktop": {
+   "errors": [],
+   "extra": {},
+   "docHeight": 1000,
+   "roles": {},
+   "states": {
+    "tip-open": {
+     "popover": {
+      "selector": ".ampy-calc__popover[data-open]",
+      "tag": "div",
+      "text": "Hur stor del av din laddning du gör publikt idag i stället f",
+      "rect": {
+       "x": 93,
+       "y": 478,
+       "w": 280,
+       "h": 72.5
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "18.85px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "rgb(9, 11, 50)",
+      "padding": "8px 12px",
+      "borderRadius": "6px",
+      "boxShadow": "rgba(15, 18, 60, 0.18) 0px 4px 12px 0px",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "opacity 0.15s cubic-bezier(0.2, 0, 0.2, 1), transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), visibility 0.15s cubic-bezier(0.2, 0, 0.2, 1)",
+      "width": "280px",
+      "height": "72.5312px",
+      "maxWidth": "280px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "left",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)"
+     },
+     "popover-any": {
+      "selector": ".ampy-calc__popover",
+      "tag": "div",
+      "text": "Hur stor del av din laddning du gör publikt idag i stället f",
+      "rect": {
+       "x": 93,
+       "y": 478,
+       "w": 280,
+       "h": 72.5
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "18.85px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "rgb(9, 11, 50)",
+      "padding": "8px 12px",
+      "borderRadius": "6px",
+      "boxShadow": "rgba(15, 18, 60, 0.18) 0px 4px 12px 0px",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "opacity 0.15s cubic-bezier(0.2, 0, 0.2, 1), transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), visibility 0.15s cubic-bezier(0.2, 0, 0.2, 1)",
+      "width": "280px",
+      "height": "72.5312px",
+      "maxWidth": "280px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "left",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)"
+     },
+     "tip-active": {
+      "selector": ".ampy-calc__tip[aria-expanded='true']",
+      "tag": "button",
+      "text": "i",
+      "rect": {
+       "x": 225.1,
+       "y": 560.3,
+       "w": 16,
+       "h": 16
+      },
+      "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "700",
+      "lineHeight": "15px",
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(0, 125, 107)",
+      "padding": "1px 6px",
+      "margin": "0px 0px 0px 5px",
+      "borderRadius": "9990px",
+      "border": "1px solid rgb(0, 125, 107)",
+      "borderTop": "1px solid rgb(0, 125, 107)",
+      "borderColor": "rgb(0, 125, 107)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "background 0.15s, color 0.15s, border-color 0.15s",
+      "width": "16px",
+      "height": "16px",
+      "opacity": "1",
+      "display": "flex",
+      "textAlign": "center",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)"
+     }
+    },
+    "tip-click": {
+     "popover": {
+      "selector": ".ampy-calc__popover[data-open]",
+      "missing": true
+     },
+     "tip-active": {
+      "selector": ".ampy-calc__tip[aria-expanded='true']",
+      "missing": true
+     }
+    }
+   }
+  },
+  "mobile": {
+   "errors": [],
+   "extra": {},
+   "docHeight": 1678,
+   "roles": {},
+   "states": {
+    "tip-open": {
+     "popover": {
+      "selector": ".ampy-calc__popover[data-open]",
+      "tag": "div",
+      "text": "Hur stor del av din laddning du gör publikt idag i stället f",
+      "rect": {
+       "x": 12,
+       "y": 457,
+       "w": 280,
+       "h": 72.5
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "18.85px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "rgb(9, 11, 50)",
+      "padding": "8px 12px",
+      "borderRadius": "6px",
+      "boxShadow": "rgba(15, 18, 60, 0.18) 0px 4px 12px 0px",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "opacity 0.15s cubic-bezier(0.2, 0, 0.2, 1), transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), visibility 0.15s cubic-bezier(0.2, 0, 0.2, 1)",
+      "width": "280px",
+      "height": "72.5312px",
+      "maxWidth": "280px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "left",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)"
+     },
+     "popover-any": {
+      "selector": ".ampy-calc__popover",
+      "tag": "div",
+      "text": "Hur stor del av din laddning du gör publikt idag i stället f",
+      "rect": {
+       "x": 12,
+       "y": 457,
+       "w": 280,
+       "h": 72.5
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "18.85px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "rgb(9, 11, 50)",
+      "padding": "8px 12px",
+      "borderRadius": "6px",
+      "boxShadow": "rgba(15, 18, 60, 0.18) 0px 4px 12px 0px",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "opacity 0.15s cubic-bezier(0.2, 0, 0.2, 1), transform 0.15s cubic-bezier(0.2, 0, 0.2, 1), visibility 0.15s cubic-bezier(0.2, 0, 0.2, 1)",
+      "width": "280px",
+      "height": "72.5312px",
+      "maxWidth": "280px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "left",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)"
+     },
+     "tip-active": {
+      "selector": ".ampy-calc__tip[aria-expanded='true']",
+      "tag": "button",
+      "text": "i",
+      "rect": {
+       "x": 140.8,
+       "y": 539.1,
+       "w": 16,
+       "h": 16
+      },
+      "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "700",
+      "lineHeight": "15px",
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(0, 125, 107)",
+      "padding": "1px 6px",
+      "margin": "0px 0px 0px 5px",
+      "borderRadius": "9990px",
+      "border": "1px solid rgb(0, 125, 107)",
+      "borderTop": "1px solid rgb(0, 125, 107)",
+      "borderColor": "rgb(0, 125, 107)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "background 0.15s, color 0.15s, border-color 0.15s",
+      "width": "16px",
+      "height": "16px",
+      "opacity": "1",
+      "display": "flex",
+      "textAlign": "center",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)"
+     }
+    },
+    "tip-click": {
+     "popover": {
+      "selector": ".ampy-calc__popover[data-open]",
+      "missing": true
+     },
+     "tip-active": {
+      "selector": ".ampy-calc__tip[aria-expanded='true']",
+      "missing": true
+     }
+    }
+   }
+  }
+ }
+}

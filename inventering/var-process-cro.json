@@ -1,0 +1,120 @@
+{
+  "kalla": "var-process-cro",
+  "status": "väntar riktningsval (A rekommenderad) + fem GAP-signaturer · v2 = hantverksomtag efter ägarens dom ('AI-slop, låg finess, klumpigt', commit 0514b27) för A och C · ingen baslinjeklon av dagens block i repot (mätvärdena 1 165–1 200 px @390 kommer ur LEVERANS.md)",
+  "auktoritet": 3,
+  "ingang": "kallor/V-r-process-CRO-/index.html (genomgång) · v2/a-rail.html (fullt inventerad) · v2/c-tid.html · a-rail.html / b-cards.html / c-tid.html (v1) · v2/BYGGSPEC-v2.md",
+  "matmetod": "inventering/_probes/var-process-cro.mjs → _probes/out/var-process-cro.json (html 62.5 %, självhostad Outfit)",
+  "skarmdumpar": [
+    "inventering/skarmdumpar/var-process-cro-desktop.png",
+    "inventering/skarmdumpar/var-process-cro-mobile.png",
+    "inventering/skarmdumpar/var-process-cro-v2-c-tid-desktop.png",
+    "inventering/skarmdumpar/var-process-cro-v2-c-tid-mobile.png",
+    "inventering/skarmdumpar/var-process-cro-v1-a-rail-desktop.png",
+    "inventering/skarmdumpar/var-process-cro-v1-a-rail-mobile.png",
+    "inventering/skarmdumpar/var-process-cro-v1-b-cards-desktop.png",
+    "inventering/skarmdumpar/var-process-cro-v1-b-cards-mobile.png",
+    "inventering/skarmdumpar/var-process-cro-v1-c-tid-desktop.png",
+    "inventering/skarmdumpar/var-process-cro-v1-c-tid-mobile.png"
+  ],
+  "farger": [
+    {"lager": "v2", "hex": "#090b32", "token": "--apmidnight-blue", "roll": "--apr-ink: H2, etiketter, chip, siffror, överlämningslänk ('ALDRIG #010328')", "antal": 30, "kalla_fil": "v2/ampy-process.css:14"},
+    {"lager": "v2", "hex": "rgba(9,11,50,.72)", "token": "--apmidnight-blue-alfa (saknas)", "roll": "--apr-ink-72: brödtext, bevisrad, tidsstämpel (7,7:1 på #f5f9ff och vitt)", "antal": 12, "kalla_fil": "v2/ampy-process.css:15"},
+    {"lager": "v2", "hex": "rgba(9,11,50,.14)", "token": null, "roll": "--apr-hair: blockets ENDA hairline (räls, medaljongring, bevisavdelare, C-radlinjer)", "antal": 8, "kalla_fil": "v2/ampy-process.css:16"},
+    {"lager": "v2", "hex": "#00a991", "token": "--apteal-core", "roll": "--apr-teal: ENDA teal-användningen = öppningsmarkören på steg 1 (2 px ring / C: 2 px topplinje); hover-understrykning; fokus. Aldrig som text (mätt 2,80:1)", "antal": 3, "kalla_fil": "v2/ampy-process.css:17,~88,~100"},
+    {"lager": "v2", "hex": "#f5f9ff", "token": "--apsky-mist", "roll": "--apr-surface: sektionsyta", "antal": 1, "kalla_fil": "v2/ampy-process.css:18"},
+    {"lager": "v2", "hex": "#ffffff", "token": "--appure-white", "roll": "--apr-card: kortet + medaljonger", "antal": 5, "kalla_fil": "v2/ampy-process.css:19"},
+    {"lager": "v2", "hex": "0 0 16px 0 rgba(190,190,190,.19)", "token": null, "roll": "--apr-shadow: 'EN skugga, husets — samma som MainCTA och testimonials' (kort + medaljonger)", "antal": 5, "kalla_fil": "v2/ampy-process.css:20"},
+    {"lager": "v2", "hex": "rgba(9,11,50,.32)", "token": null, "roll": "understrykning på ROT-länk i brödtext (1 px, offset 4)", "antal": 1, "kalla_fil": "v2/ampy-process.css:~72"},
+    {"lager": "v2", "hex": "rgba(9,11,50,.10)", "token": null, "roll": "bevisradens avdelare ≤479 (26×1)", "antal": 1, "kalla_fil": "v2/ampy-process.css:~175"},
+    {"lager": "v2", "hex": "var(--eljour-emergency-green, #0f7a3d)", "token": null, "roll": "--jour-varianten: steg 1-ringen i jourgrön", "antal": 0, "kalla_fil": "v2/ampy-process.css:~160"},
+    {"lager": "v1", "hex": "#00a991 fylld medaljong 40 px (A) · inset 3px teal (B-kort, C-tid)", "token": "--apteal-core", "roll": "v1: teal som fyllning/kant på steg 1 — v2:s diagnos: 'accentbudgeten inverterad'", "antal": 4, "kalla_fil": "ampy-process.css"},
+    {"lager": "v1", "hex": "rgba(9,11,50,.55/.12/.08/.14/.07)", "token": null, "roll": "v1: fem alfavärden för linjer/ringar (v2: en)", "antal": 5, "kalla_fil": "ampy-process.css:18-23"}
+  ],
+  "typografi": [
+    {"lager": "v2", "roll": "h2 'Vad som händer sen'", "font": "Outfit (självhostad)", "size": "--apr-h2 28px · ≥992 40px", "px_desktop": 40, "px_mobil": 28, "weight": 500, "lh": "1.05 desktop / 1.1 mobil", "ls": "-0.018em desktop / -0.012em mobil", "color": "#090b32", "text_align": "left", "kalla_fil": "v2/ampy-process.css:~50, ~205 (BYGGSPEC §2: skala ×2,35 från 17; 30 px mobil sprängde tre rader @360 → 28)"},
+    {"lager": "v2", "roll": "stegrubrik h3 __label", "font": "Outfit", "size": "--apr-label 19px · ≥992 22px", "px_desktop": 22, "px_mobil": 19, "weight": 500, "lh": 1.2, "ls": "-0.006em desktop", "color": "#090b32", "kalla_fil": "v2/ampy-process.css:~58"},
+    {"lager": "v2", "roll": "löfteschip __chip (inline i brödtexten)", "font": "Outfit", "size": "17px", "px_desktop": 17, "px_mobil": 17, "weight": 500, "lh": "1.5 (ärvd)", "ls": "0", "color": "#090b32", "kalla_fil": "v2/ampy-process.css:~63"},
+    {"lager": "v2", "roll": "brödtext __body", "font": "Outfit", "size": "--apr-body 17px (ändras ALDRIG över brytpunkten — 'HemSols verifierade lag')", "px_desktop": 17, "px_mobil": 17, "weight": 300, "lh": 1.5, "ls": "0", "color": "rgba(9,11,50,.72)", "max_width": "--apr-measure 27em = 459 px (64 tecken; 'ch ljuger i Outfit: 1ch = 0,659em')", "kalla_fil": "v2/ampy-process.css:~64-68"},
+    {"lager": "v2", "roll": "tidsstämpel __time (C)", "font": "Outfit", "size": "11px · ≥992 12px", "px_desktop": 12, "px_mobil": 11, "weight": 500, "lh": 1.45, "ls": "+0.09em / +0.08em desktop", "text_transform": "uppercase", "color": "rgba(9,11,50,.72) (steg 1: #090b32)", "font_variant": "tabular-nums", "kalla_fil": "v2/ampy-process.css:~118-124"},
+    {"lager": "v2", "roll": "siffra __num (A)", "font": "Outfit", "size": "13px", "px_desktop": 13, "px_mobil": 13, "weight": 500, "lh": 1, "ls": "0", "color": "#090b32", "kalla_fil": "v2/ampy-process.css:~84"},
+    {"lager": "v2", "roll": "bevisrad __trust", "font": "Outfit", "size": "14.5px · ≥992 14px", "px_desktop": 14, "px_mobil": "dold (<768)", "weight": 400, "lh": 1, "ls": "0", "color": "rgba(9,11,50,.72)", "kalla_fil": "v2/ampy-process.css:~128-136 ('Hero-1:s uppmätta proof-vikt')"},
+    {"lager": "v2", "roll": "överlämning __handoff 'Berätta vad som behöver göras →'", "font": "Outfit", "size": "17px", "px_desktop": 17, "px_mobil": 17, "weight": 500, "lh": 1.2, "ls": "+0.005em", "color": "#090b32", "kalla_fil": "v2/ampy-process.css:~140-152 (48 px träffyta: 13+22+13)"},
+    {"lager": "v2", "roll": "not / lanes", "font": "Outfit", "size": "15px", "px_desktop": 15, "px_mobil": 15, "weight": 300, "lh": 1.5, "ls": "0", "color": "rgba(9,11,50,.72)", "max_width": "30em / 27em", "kalla_fil": "v2/ampy-process.css:~76, ~165"},
+    {"lager": "v1", "roll": "h2 'Så funkar det'", "font": "Outfit", "size": "28px · desktop min(--aptext-2xl, 40px)", "px_desktop": 40, "px_mobil": 28, "weight": 500, "lh": 1.15, "ls": "-0.01em", "color": "#090b32", "kalla_fil": "ampy-process.css (v2-spec: no-op-clampen ger 36 px i produktion mot 40 i beviset)"},
+    {"lager": "v1", "roll": "ingress __sub", "font": "Outfit", "size": "15px · 16px desktop", "px_desktop": 16, "px_mobil": 15, "weight": 400, "lh": 1.45, "ls": "normal", "color": "rgba(9,11,50,.72)", "kalla_fil": "ampy-process.css"},
+    {"lager": "v1", "roll": "label / chip / num / time", "font": "Outfit", "size": "19–20 / 13 / 17 (B 28–36) / 13–14", "px_desktop": "20 / 13 / 17 / 14", "px_mobil": "19 / 13 / 17 / 13", "weight": "600 på alla fyra (v2: 'fem roller på 600 gör H2:ans 500 till blockets lättaste feta')", "lh": "1.25 / 1.25 / 1 / 1.3", "ls": "normal (time .04em)", "color": "#090b32 / .72", "kalla_fil": "ampy-process.css"},
+    {"lager": "v1", "roll": "brödtext", "font": "Outfit", "size": "17px · desktop 17,87 (A) / 16 (B, C)", "px_desktop": "17.87 / 16", "px_mobil": "17 / 15", "weight": 300, "lh": 1.45, "ls": "normal", "color": "rgba(9,11,50,.72)", "kalla_fil": "ampy-process.css"}
+  ],
+  "spacing": [
+    {"lager": "v2", "roll": "rytmstege", "varde": "10 · 20 · 28 · 40 · 56 · 80 ('ap-ladderns 2xs/s/m/l/xl/2xl-positioner hårdkodade i px'); zon/syskon-kvot 2,0 (40/20 mobil, 56/28 desktop)", "px_desktop": "10/28/56/80", "px_mobil": "10/20/40", "token": "= --apspace-2xs/s/m/l/xl/2xl @1440 avrundade", "kalla_fil": "v2/BYGGSPEC-v2.md §3"},
+    {"lager": "v2", "roll": "sektion padding", "varde": "24px 20px 28px · ≥992 56px 40px 80px · ≤479 sidopadding 0 (kortet går kant i kant)", "px_desktop": "56 / 40 / 80", "px_mobil": "24 / 0 / 28", "token": null, "kalla_fil": "v2/ampy-process.css:~34, ~170, ~195"},
+    {"lager": "v2", "roll": "kort padding", "varde": "32px 24px 36px · ≤479 32px 20px 36px · ≥992 40px 80px 48px", "px_desktop": "40 / 80 / 48", "px_mobil": "32 / 20 / 36", "token": null, "kalla_fil": "v2/ampy-process.css:~45, ~199"},
+    {"lager": "v2", "roll": "desktop-grid", "varde": "minmax(0,32%) minmax(0,1fr), column-gap 56, rader auto 1fr: rubrik+bevis+brygga vänster (358 px), stegen höger (706 px)", "px_desktop": "358 | 706, gap 56", "px_mobil": "staplat", "token": null, "kalla_fil": "v2/ampy-process.css:~199-210"},
+    {"lager": "v2", "roll": "H2 → stegen", "varde": "margin-bottom 40 (mobil); desktop: stegen ligger bredvid", "px_desktop": null, "px_mobil": 40, "token": null, "kalla_fil": "v2/ampy-process.css:~54"},
+    {"lager": "v2", "roll": "steg ↔ steg (--apr-gap)", "varde": "20 · ≥992 28", "px_desktop": 28, "px_mobil": 20, "token": null, "kalla_fil": "v2/ampy-process.css:~26, ~194"},
+    {"lager": "v2", "roll": "etikett → brödtext (--apr-joint)", "varde": "10 (ersätter v1:s 5/4/3)", "px_desktop": 10, "px_mobil": 10, "token": null, "kalla_fil": "v2/ampy-process.css:~27,~61"},
+    {"lager": "v2", "roll": "räls (A)", "varde": "medaljong 24 px, indrag 40, linje 1 px vid x=12 från medaljong+10 till nästa −10; medaljong top −1 px (19×1,2−24)/2, desktop +1 px", "px_desktop": "24 / 40", "px_mobil": "24 / 40", "token": null, "kalla_fil": "v2/ampy-process.css:~80-104"},
+    {"lager": "v2", "roll": "tid-kolumn (C)", "varde": "88 px + gap 16 mobil · desktop clamp(148px, 12vw, 172px) + söm 24 + off 32, radpadding 20 0", "px_desktop": "172 / 57", "px_mobil": "88 / 16", "token": null, "kalla_fil": "v2/ampy-process.css:~108-116, ~226-250"},
+    {"lager": "v2", "roll": "bevisrad", "varde": "avdelare 1×15 margin 0 14; mobil 26×1 margin 10 0; aside margin-top 40 desktop", "px_desktop": "14", "px_mobil": "dold", "token": null, "kalla_fil": "v2/ampy-process.css:~128-138"},
+    {"lager": "v2", "roll": "överlämning", "varde": "margin-top --apr-gap (20/28), padding-block 13 → 48 px träffyta, gap 9, pil 18", "px_desktop": "28 / 48", "px_mobil": "20 / 48", "token": null, "kalla_fil": "v2/ampy-process.css:~140-158"},
+    {"lager": "v2", "roll": "blockhöjd @390 (utan preview-bar)", "varde": "A 790 (sektion 707) · C 760 — kravet ≤780 (v1: A 633 / B 560 / C 545; dagens block 1 165–1 200)", "px_desktop": null, "px_mobil": "707 / 760", "token": null, "kalla_fil": "uppmätt secH; README"},
+    {"lager": "v1", "roll": "sektion padding", "varde": "40px 20px + padding-bottom var(--apspace-2xl, 48px) (=31,4 @390 / 72,7 @1440 — 'beviset visar 48 och produktionen 79,2')", "px_desktop": "56 / 40 / 72.7", "px_mobil": "40 / 20 / 31.4", "token": "--apspace-2xl", "kalla_fil": "ampy-process.css:37-43"},
+    {"lager": "v1", "roll": "v1 rytm", "varde": "steg-gap 28, medaljong 40, indrag 56, sub mb 28/36, label mb 5/4/3 — '24 godtyckliga tal'", "px_desktop": "28", "px_mobil": "28", "token": null, "kalla_fil": "ampy-process.css"}
+  ],
+  "container": [
+    {"lager": "v2", "roll": "kort max-width", "varde": "1280px ('delar vänsterkant med MainCTA/MainContact')", "kalla_fil": "v2/ampy-process.css:~44"},
+    {"lager": "v2", "roll": "kort ≤479", "varde": "kant i kant (radie 0, sektionens sidopadding 0)", "kalla_fil": "v2/ampy-process.css:~195-199"}
+  ],
+  "radier": [
+    {"lager": "v2", "roll": "kort", "varde": "16px · ≥992 20px", "px_desktop": 20, "px_mobil": "16 (0 ≤479)", "token": "= --apradius-l@1440 / legacy --radius 16"},
+    {"lager": "v2", "roll": "medaljong", "varde": "999px", "token": "--apradius-full"},
+    {"lager": "v1", "roll": "B-kort", "varde": "min(--apradius-l, 20px) → 19,5 / 16", "px_desktop": 19.48, "px_mobil": 16.03, "token": "--apradius-l"}
+  ],
+  "skuggor": [
+    {"lager": "v2", "roll": "kort + medaljong", "varde": "0 0 16px 0 rgba(190,190,190,.19) — husets (MainCTA/testimonials/ROT-kort)", "token": null},
+    {"lager": "v2", "roll": "medaljong ring", "varde": "inset 0 0 0 1px rgba(9,11,50,.14); steg 1: inset 0 0 0 2px #00a991", "token": null},
+    {"lager": "v1", "roll": "B-kort", "varde": "inset 3px 0 0 #00a991 + 0 2px 6px rgba(9,11,50,.08), ram 1px rgba(9,11,50,.07)", "token": null}
+  ],
+  "rorelse": [
+    {"lager": "v2", "roll": "ingen", "varde": "'Noll rörelse i default'; hover = teal-understrykning på överlämning/ROT-länk; reduced-motion: animation/transition none; renderingskontrakt opacity/visibility/transform !important (enterView-skydd)", "kalla_fil": "v2/ampy-process.css:~36-39, ~262"}
+  ],
+  "breakpoints": ["≤479 (kant i kant, bevisrad kolumn)", "≥768 (bevisrad synlig)", "≥992 (masthead-grid, 40 px H2, gap 28)", "prefers-reduced-motion", "forced-colors", "print"],
+  "komponenter": [
+    {"lager": "v2", "namn": "processkort .ampy-process__inner", "anatomi": "vitt kort 1280, radie 20 (16), husets skugga, padding 40/80/48; desktop 32 %/1fr-grid: masthead (H2 + bevisrad + överlämning) vänster, stegen höger", "states": ["default", "≤479 kant i kant"], "html_ref": "v2/a-rail.html:14-52", "css_ref": "v2/ampy-process.css:~43-48, ~199-212", "skarmdump_crop": "var-process-cro-desktop.png"},
+    {"lager": "v2", "namn": "H2 'Vad som händer sen'", "anatomi": "40/500 lh 1.05 ls −.018em vänsterställd (28/1.1/−.012 mobil); ingen ingress (v1:s __sub struken)", "states": ["default"], "html_ref": "v2/a-rail.html:17", "css_ref": "v2/ampy-process.css:~50-55"},
+    {"lager": "v2", "namn": "räls-steg (A) ×4", "anatomi": "24 px vit medaljong med 13/500-siffra + 1 px hairline-ring (steg 1: 2 px teal), 1 px lodrät räls i samma spår med 10 px fog; h3 22/500 + brödtext 17/300 .72 där löftet är inline-chip 17/500 ('Oftast inom en arbetsdag.')", "states": ["default"], "html_ref": "v2/a-rail.html:21-41", "css_ref": "v2/ampy-process.css:~56-104"},
+    {"lager": "v2", "namn": "bevisrad __trust", "anatomi": "'Registrerat elinstallationsföretag | Ansvarsförsäkrad' 14/400 .72 med 1×15 hairline-avdelare; dold <768", "states": ["≥768"], "html_ref": "v2/a-rail.html:44-47", "css_ref": "v2/ampy-process.css:~126-138"},
+    {"lager": "v2", "namn": "överlämning __handoff", "anatomi": "textlänk 17/500 + 18 px pil, 48 px träffyta, understrykning tänds teal vid hover/fokus; mål #main-contact, data-cta process_to_form", "states": ["default", "hover", "focus-visible"], "html_ref": "v2/a-rail.html:48-51", "css_ref": "v2/ampy-process.css:~140-158"},
+    {"lager": "v2", "namn": "tid-steg (C) ×4", "anatomi": "tidsstämpel 12/500 versal .08em högerställd i 148–172 px kolumn, 1 px lodrät söm, steg 1 med 2 px teal-sträcka; mobil 88 px kolumn + 1 px radlinjer, steg 1 2 px teal topplinje", "states": ["default"], "html_ref": "v2/c-tid.html", "css_ref": "v2/ampy-process.css:~106-124, ~226-256"}
+  ],
+  "varianter": [
+    {"namn": "v2 A — Tidslinjen (rekommenderad)", "skillnad": "masthead-grid, lodrät räls, 24 px medaljonger, 40/500-H2; @390 sektion 707 px", "docH": "1000 / 844 (sektion 606,6 / 707,4)"},
+    {"namn": "v2 C — Tidsstämplad lista", "skillnad": "samma masthead; tidskolumn + söm i stället för räls; @390 760 px", "docH": "sektion 617,1 / 760,4"},
+    {"namn": "v1 A — Tidslinjen", "skillnad": "H2 40/500 lh 1.15 + ingress 16/400; 4 kolumner à 296 med 40 px teal-fylld medaljong 1 + vågrät hairline; label 20/600, chip 13/600, body 17,87/300 lh 1.45; 'Börja med steg 1 →'; @390 633 px", "docH": "sektion 477 / 633,5"},
+    {"namn": "v1 B — Kompaktkort", "skillnad": "4 vita kort 305×172 radie 19,5 med inset 3 px teal-kant, 36/600-siffra, body 16/300; mobil 2×2 à 170; @390 560 px", "docH": "sektion 489,9 / 560,1"},
+    {"namn": "v1 C — Tidsstämplad lista", "skillnad": "grid 742 | 490, tidsstämpel 14/600 versal med 3 px teal-kant, label 20/600 mb 3, trust 15/300; @390 545 px", "docH": "sektion 590,6 / 545,1"},
+    {"namn": "a-rail-fallback.html / grind-antiteater.html / varianter.html", "skillnad": "vad som skeppas utan GAP-signaturer · anti-teater-grinden (all brödtext dold) · sex intent-varianter (eljour, produkt, magnet, B2B, laddbox, /kontakt/)", "docH": null}
+  ],
+  "signaturenhet": "v2: en mörk 40/500-masthead till vänster om fyra steg på en 1 px räls där den ENDA tealen är öppningsringen på steg 1, löftet är ett inline-chip i vikt 500 i en 17/300-brödtext, och blocket slutar i en textlänk (ingen knapp) som lämnar över till formuläret. Sex teckengrader, tre vikter, fyra radavstånd, en hairline, en skugga, en rytmstege.",
+  "defekter": [
+    "Ingen baslinjeklon av dagens 'Så funkar det'-block i repot — bara mätvärden i LEVERANS.md (1 165–1 200 px @390, tre live-buggar: copy-paste, #010328, enterView-opacity).",
+    "v2 hårdkodar ap-stegen i px (10/20/28/40/56/80 = 2xs…2xl @1440) — tokentroget i värde, frikopplat i namn, och kurvorna platta (28 desktop = 20 mobil sätts per breakpoint, inte clamp).",
+    "H2 40/500 lh 1.05 ls −.018em — ett FEMTE H2-mål i mitt urval (live 32/400, familjen 36/450, certificates 36/400, före/efter 32/400) med belägg i 'HemSol'/'Hero-1'-lagar i stället för blockmätning.",
+    "Brödtext 17/300 — ett nytt basvärde (ap-skalan har 16/18 som --aptext-m-ändpunkter; 17 motiveras med Outfits x-höjd) — konflikt med familjens 'paragrafstandard = --aptext-m'.",
+    "Husets skugga rgba(190,190,190,.19) adopteras medvetet (v1 hade fem alfa/fyra tjocklekar) — samma skugga som ROT-GT-live/testimonials, men den som ROT-GT-familjen och före/efter uttryckligen förkastade.",
+    "v1: no-op-clampen min(var(--aptext-2xl,40px),40px) ger 36 px i produktion mot 40 i beviset; padding-bottom var(--apspace-2xl,48px) ger 48 i beviset och 79,2 i produktion (BYGGSPEC §2–3).",
+    "Bevisraden dold <768 ('mobilen har inte höjden') — det uppmätta blockhöjdstaket 780 vann över trust-innehållet.",
+    "[GAP] 1, 2, 3, 4, 12 (löfteschippen: 'inom en arbetsdag', 'kostnadsfri offert', 'ingen bindning', 'avdraget redan gjort') — utan signaturer får chippen inte renderas (a-rail-fallback: 1,5 av 4 husägarfrågor besvarade)."
+  ],
+  "regler_som_ligger_i_koden": [
+    "Sex teckengrader (17 bas ×1,15/1,29/1,76/2,35, ×0,88/0,65), tre vikter 300/400/500 (aldrig 600/700 som layoutvikt), fyra line-heights (1,05–1,1 / 1,2 / 1,45–1,5 / 1), tre letter-spacings (−.018em stor grad, +.005em liten 500, +.09em versaler ≥.08em).",
+    "Brödtexten ändras aldrig över brytpunkten; bara rubriker krymper.",
+    "Radlängd i em, aldrig ch (1ch = 0,659em i Outfit → 52ch renderar 80 tecken); 27em = 64 tecken @17.",
+    "En rytmstege 10·20·28·40·56·80; en fog per relation; zon/syskon-kvot 2,0; botten ≈ 1,5× toppen.",
+    "En hairline rgba(9,11,50,.14) i en tjocklek; en skugga; teal bara som öppningsmarkör, aldrig text (2,80:1).",
+    "Renderingskontraktet: opacity/visibility/transform !important (enterView får aldrig gömma blocket), noll JS, noll rörelse, noll bilder.",
+    "px, inte rem (rem driftar i FluentSnippets); brytpunkter = Bricks riktiga 992/768/480; wrapper-scopad.",
+    "Blockhöjd ≤780 px @390 (arbetsordern); anti-teater-grinden: rubriker + chips ska ensamma besvara 4 av 4 husägarfrågor.",
+    "Överlämningen är en textlänk, inte en knapp — MainContact-formuläret under är sidans ask."
+  ]
+}

@@ -1,0 +1,2749 @@
+{
+ "url": "http://localhost:8871/kallor/Battery-calculator/index.html",
+ "viewports": {
+  "desktop": {
+   "errors": [],
+   "extra": {
+    "overflow": {
+     "clientWidth": 1440,
+     "scrollWidth": 1440,
+     "offenders": []
+    },
+    "svg": [
+     {
+      "tag": "line",
+      "cls": null,
+      "stroke": "rgba(255,255,255,0.32)",
+      "sw": "1",
+      "fill": "rgb(0, 0, 0)",
+      "dash": "3,5"
+     },
+     {
+      "tag": "polygon",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-zone-loss)",
+      "dash": null
+     },
+     {
+      "tag": "polygon",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-zone-profit)",
+      "dash": null
+     },
+     {
+      "tag": "circle",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-line-loss)",
+      "dash": null
+     },
+     {
+      "tag": "circle",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-line-profit)",
+      "dash": null
+     }
+    ]
+   },
+   "docHeight": 1087,
+   "cssVars": {
+    "--action-primary": "rgb(0, 169, 145)",
+    "--on-surface-text-faint": "rgba(255, 255, 255, 0.42)",
+    "--chart-stream-1": "rgb(0, 169, 145)",
+    "--chart-stream-2": "rgb(57, 194, 129)",
+    "--chart-stream-3": "rgb(122, 208, 198)",
+    "--chart-stream-4": "rgb(160, 184, 196)",
+    "--chart-line-loss": "rgb(240, 175, 56)",
+    "--chart-line-profit": "rgb(0, 169, 145)",
+    "--chart-zone-loss": "rgba(240, 175, 56, 0.18)",
+    "--chart-zone-profit": "rgba(0, 169, 145, 0.16)",
+    "--fs-4xl": "clamp(4rem,   calc(4rem + (7.5 - 4) * ((100vw - 320px) / 960)),    7.5rem)",
+    "--fs-2xl": "clamp(2.2rem, calc(2.2rem + (4.8 - 2.2) * ((100vw - 320px) / 960)), 4.8rem)"
+   },
+   "roles": {
+    "h1": {
+     "selector": ".ampy-calc__header h1, .ampy-calc__header .ampy-calc__t-2xl",
+     "tag": "h1",
+     "text": "Vad tjänar du på ett solcellsbatteri?",
+     "rect": {
+      "x": 95,
+      "y": 28,
+      "w": 800,
+      "h": 30
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "25.0333px",
+     "fontWeight": "700",
+     "lineHeight": "30.04px",
+     "letterSpacing": "-0.3755px",
+     "color": "rgb(15, 18, 60)",
+     "border": "0px none rgb(15, 18, 60)",
+     "borderTop": "0px none rgb(15, 18, 60)",
+     "borderColor": "rgb(15, 18, 60)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "800px",
+     "height": "30.0312px",
+     "maxWidth": "800px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)",
+     "backgroundColor": "transparent"
+    },
+    "card-input": {
+     "selector": ".ampy-calc__card:not(.ampy-calc__card--surface)",
+     "tag": "div",
+     "text": "Vad du köper Batterimodell Dyness Stack100 Pro Modulär kapac",
+     "rect": {
+      "x": 95,
+      "y": 88,
+      "w": 512.5,
+      "h": 702.8
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(15, 18, 60)",
+     "backgroundColor": "rgb(247, 249, 251)",
+     "padding": "20px",
+     "gap": "15px",
+     "rowGap": "15px",
+     "columnGap": "15px",
+     "borderRadius": "20px",
+     "boxShadow": "rgba(15, 18, 60, 0.06) 0px 1px 2px 0px",
+     "border": "1px solid rgba(15, 18, 60, 0.12)",
+     "borderTop": "1px solid rgba(15, 18, 60, 0.12)",
+     "borderColor": "rgba(15, 18, 60, 0.12)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "512.5px",
+     "height": "702.812px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)"
+    },
+    "card-surface": {
+     "selector": ".ampy-calc__card--surface",
+     "tag": "div",
+     "text": "Tjänar in på 15 år 293 087kr Ren vinst över 15 år — invester",
+     "rect": {
+      "x": 627.5,
+      "y": 88,
+      "w": 717.5,
+      "h": 902.5
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(9, 11, 50)",
+     "backgroundImage": "radial-gradient(120% 60% at 90% -10%, rgba(0, 169, 145, 0.28), rgba(0, 0, 0, 0) 60%), radial-gradient(80% 50% at -10% 110%, rgba(57, 194, 129, 0.16), rgba(0, 0, 0, 0) 60%)",
+     "padding": "20px",
+     "gap": "15px",
+     "rowGap": "15px",
+     "columnGap": "15px",
+     "borderRadius": "20px",
+     "boxShadow": "rgba(15, 18, 60, 0.14) 0px 16px 40px 0px",
+     "border": "1px solid rgba(0, 0, 0, 0)",
+     "borderTop": "1px solid rgba(0, 0, 0, 0)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "717.5px",
+     "height": "902.453px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box, border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "hero15-value": {
+     "selector": ".ampy-calc__hero15-value",
+     "tag": "span",
+     "text": "293 087kr",
+     "rect": {
+      "x": 648.5,
+      "y": 132.4,
+      "w": 675.5,
+      "h": 44.1
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "44.0833px",
+     "fontWeight": "700",
+     "lineHeight": "44.0833px",
+     "letterSpacing": "-1.3225px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgb(255, 255, 255)",
+     "gap": "12px",
+     "rowGap": "12px",
+     "columnGap": "12px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "675.5px",
+     "height": "44.0781px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "hero15-unit": {
+     "selector": ".ampy-calc__hero15-unit",
+     "tag": "span",
+     "text": "kr",
+     "rect": {
+      "x": 817.8,
+      "y": 153.4,
+      "w": 19.4,
+      "h": 21.9
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "21.8667px",
+     "fontWeight": "500",
+     "lineHeight": "21.8667px",
+     "letterSpacing": "-0.218667px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "width": "19.4062px",
+     "height": "21.8594px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "trio-value": {
+     "selector": ".ampy-calc__trio-value",
+     "tag": "span",
+     "text": "56 135kr",
+     "rect": {
+      "x": 648.5,
+      "y": 234.5,
+      "w": 215.2,
+      "h": 26.2
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "21.8667px",
+     "fontWeight": "700",
+     "lineHeight": "26.24px",
+     "letterSpacing": "-0.328px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgb(255, 255, 255)",
+     "gap": "6px",
+     "rowGap": "6px",
+     "columnGap": "6px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "215.156px",
+     "height": "26.2188px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "streams-bar": {
+     "selector": ".ampy-calc__streams-bar",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 648.5,
+      "y": 335,
+      "w": 675.5,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgba(255, 255, 255, 0.06)",
+     "borderRadius": "9990px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "675.5px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-1": {
+     "selector": ".ampy-calc__streams-segment:nth-child(1)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 648.5,
+      "y": 335,
+      "w": 271,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "271.016px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-2": {
+     "selector": ".ampy-calc__streams-segment:nth-child(2)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 919.5,
+      "y": 335,
+      "w": 155,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(57, 194, 129)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "155.016px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-3": {
+     "selector": ".ampy-calc__streams-segment:nth-child(3)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 1074.5,
+      "y": 335,
+      "w": 79.6,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(122, 208, 198)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "79.6094px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-4": {
+     "selector": ".ampy-calc__streams-segment:nth-child(4)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 1154.1,
+      "y": 335,
+      "w": 169.8,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(160, 184, 196)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "169.828px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-summary": {
+     "selector": ".ampy-calc__streams-summary",
+     "tag": "summary",
+     "text": "Se fördelningen",
+     "rect": {
+      "x": 648.5,
+      "y": 377.5,
+      "w": 675.5,
+      "h": 28.3
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "12.2333px",
+     "fontWeight": "500",
+     "lineHeight": "18.35px",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "padding": "5px 0px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "width": "675.5px",
+     "height": "28.3438px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "chart": {
+     "selector": ".ampy-calc__chart",
+     "tag": "div",
+     "text": "+293 087 kr I dag 15 år Återbetald 2,4 år",
+     "rect": {
+      "x": 648.5,
+      "y": 446.6,
+      "w": 675.5,
+      "h": 320
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgba(255, 255, 255, 0.06)",
+     "padding": "10px 10px 5px",
+     "borderRadius": "12px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "675.5px",
+     "height": "320px",
+     "minHeight": "320px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "chart-end-value": {
+     "selector": ".ampy-calc__chart-corner--end-value",
+     "tag": "span",
+     "text": "+293 087 kr",
+     "rect": {
+      "x": 1201.8,
+      "y": 456.6,
+      "w": 112.2,
+      "h": 20.4
+     },
+     "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace",
+     "fontSize": "17px",
+     "fontWeight": "700",
+     "lineHeight": "20.4px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgb(0, 169, 145)",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "all",
+     "width": "112.203px",
+     "height": "20.3906px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)",
+     "backgroundColor": "transparent"
+    },
+    "chart-today": {
+     "selector": ".ampy-calc__chart-corner--today",
+     "tag": "span",
+     "text": "I dag",
+     "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "15px",
+     "fontWeight": "500",
+     "lineHeight": "18px",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "opacity": "1",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "chart-end-axis": {
+     "selector": ".ampy-calc__chart-corner--end-axis",
+     "tag": "span",
+     "text": "15 år",
+     "rect": {
+      "x": 1282.6,
+      "y": 743.6,
+      "w": 31.4,
+      "h": 18
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "15px",
+     "fontWeight": "500",
+     "lineHeight": "18px",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "width": "31.4219px",
+     "height": "18px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "be-dot": {
+     "selector": ".ampy-calc__be-dot",
+     "tag": "span",
+     "text": "",
+     "rect": {
+      "x": 757.9,
+      "y": 673.5,
+      "w": 12,
+      "h": 12
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "borderRadius": "50%",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "12px",
+     "height": "12px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "be-line": {
+     "selector": ".ampy-calc__be-line",
+     "tag": "span",
+     "text": "",
+     "rect": {
+      "x": 763.4,
+      "y": 686.5,
+      "w": 1,
+      "h": 29.2
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) rgba(255, 255, 255, 0.34)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "1px",
+     "height": "29.1719px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "be-caption": {
+     "selector": ".ampy-calc__be-caption",
+     "tag": "span",
+     "text": "Återbetald",
+     "rect": {
+      "x": 727.9,
+      "y": 727.3,
+      "w": 72,
+      "h": 16.1
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "14px",
+     "fontWeight": "500",
+     "lineHeight": "16.1px",
+     "color": "rgba(255, 255, 255, 0.94)",
+     "border": "0px none rgba(255, 255, 255, 0.94)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+     "borderColor": "rgba(255, 255, 255, 0.94)",
+     "outline": "rgba(255, 255, 255, 0.94) none 3px",
+     "transition": "all",
+     "width": "71.9531px",
+     "height": "16.0938px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)",
+     "backgroundColor": "transparent"
+    },
+    "be-time": {
+     "selector": ".ampy-calc__be-time",
+     "tag": "span",
+     "text": "2,4 år",
+     "rect": {
+      "x": 743.3,
+      "y": 744.4,
+      "w": 41.1,
+      "h": 17.3
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "15px",
+     "fontWeight": "700",
+     "lineHeight": "17.25px",
+     "color": "rgb(0, 169, 145)",
+     "margin": "1px 0px 0px",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "all",
+     "width": "41.1094px",
+     "height": "17.25px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)",
+     "backgroundColor": "transparent"
+    },
+    "chart-svg-path-loss": {
+     "selector": ".ampy-calc__chart-plot svg path[stroke]:nth-of-type(1)",
+     "missing": true
+    },
+    "toggle-active": {
+     "selector": ".ampy-calc__toggle-option[aria-pressed='true']",
+     "tag": "button",
+     "text": "Ja",
+     "rect": {
+      "x": 442.5,
+      "y": 461.2,
+      "w": 64,
+      "h": 30.3
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "12.2333px",
+     "fontWeight": "600",
+     "lineHeight": "18.35px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "padding": "6px 10px",
+     "borderRadius": "9990px",
+     "boxShadow": "rgba(15, 18, 60, 0.06) 0px 1px 2px 0px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "background 0.15s, color 0.15s, box-shadow 0.15s",
+     "width": "64px",
+     "height": "30.3438px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "segmented-active": {
+     "selector": ".ampy-calc__segmented-option[aria-pressed='true']",
+     "tag": "button",
+     "text": "SE3",
+     "rect": {
+      "x": 353.3,
+      "y": 540.5,
+      "w": 112.6,
+      "h": 33.3
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "12.2333px",
+     "fontWeight": "600",
+     "lineHeight": "18.35px",
+     "color": "rgb(0, 169, 145)",
+     "backgroundColor": "rgb(247, 249, 251)",
+     "padding": "7.5px 5px",
+     "borderRadius": "6px",
+     "boxShadow": "rgba(15, 18, 60, 0.06) 0px 1px 2px 0px",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "background 0.15s, color 0.15s, box-shadow 0.15s",
+     "width": "112.625px",
+     "height": "33.3438px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)"
+    },
+    "stepper": {
+     "selector": ".ampy-calc__stepper",
+     "tag": "div",
+     "text": "− 2 +",
+     "rect": {
+      "x": 468.5,
+      "y": 636.2,
+      "w": 118,
+      "h": 42
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(15, 18, 60)",
+     "backgroundColor": "rgb(234, 239, 243)",
+     "padding": "3px",
+     "borderRadius": "9990px",
+     "border": "0px none rgb(15, 18, 60)",
+     "borderTop": "0px none rgb(15, 18, 60)",
+     "borderColor": "rgb(15, 18, 60)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "118px",
+     "height": "42px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)"
+    },
+    "btn-primary": {
+     "selector": ".ampy-calc__btn--primary",
+     "tag": "button",
+     "text": "Få en exakt offert",
+     "rect": {
+      "x": 648.5,
+      "y": 808.6,
+      "w": 675.5,
+      "h": 56
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "600",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "padding": "10px 20px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "borderRadius": "12px",
+     "boxShadow": "rgba(15, 18, 60, 0.08) 0px 4px 12px 0px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "opacity 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s, transform 0.15s",
+     "width": "675.5px",
+     "height": "56px",
+     "minHeight": "56px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "email-input": {
+     "selector": ".ampy-calc__card--surface .ampy-calc__input",
+     "tag": "input",
+     "text": "",
+     "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "400",
+     "lineHeight": "25.675px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(9, 11, 50)",
+     "padding": "7.5px 10px",
+     "borderRadius": "12px",
+     "border": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderTop": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderColor": "rgba(255, 255, 255, 0.28)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "border-color 0.15s, box-shadow 0.15s",
+     "width": "100%",
+     "minHeight": "48px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "email-btn": {
+     "selector": ".ampy-calc__btn--outline, .ampy-calc__btn--secondary",
+     "tag": "button",
+     "text": "Maila kalkylen",
+     "rect": {
+      "x": 1210.5,
+      "y": 883.1,
+      "w": 113.5,
+      "h": 48
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "12.2333px",
+     "fontWeight": "600",
+     "lineHeight": "18.35px",
+     "color": "rgb(255, 255, 255)",
+     "padding": "7.5px 15px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "borderRadius": "12px",
+     "border": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderTop": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderColor": "rgba(255, 255, 255, 0.28)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "opacity 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s, transform 0.15s",
+     "width": "113.484px",
+     "height": "48px",
+     "minHeight": "48px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "btn-link": {
+     "selector": ".ampy-calc__btn-link",
+     "tag": "a",
+     "text": "Läs mer om Dyness Stack100 Pro",
+     "rect": {
+      "x": 885.6,
+      "y": 941.1,
+      "w": 201.4,
+      "h": 28.3
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "12.2333px",
+     "fontWeight": "500",
+     "lineHeight": "18.35px",
+     "color": "rgb(0, 169, 145)",
+     "padding": "5px 0px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "color 0.15s",
+     "width": "201.375px",
+     "height": "28.3438px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)",
+     "backgroundColor": "transparent"
+    },
+    "disclosure-summary": {
+     "selector": ".ampy-calc__disclosure-summary",
+     "tag": "summary",
+     "text": "Avancerat — förfina kalkylen",
+     "rect": {
+      "x": 116,
+      "y": 724.2,
+      "w": 470.5,
+      "h": 35.7
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "17.1167px",
+     "fontWeight": "600",
+     "lineHeight": "25.675px",
+     "color": "rgb(15, 18, 60)",
+     "padding": "5px 0px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "border": "0px none rgb(15, 18, 60)",
+     "borderTop": "0px none rgb(15, 18, 60)",
+     "borderColor": "rgb(15, 18, 60)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "470.5px",
+     "height": "35.6562px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)",
+     "backgroundColor": "transparent"
+    }
+   },
+   "census": {
+    "rgb(15, 18, 60)": {
+     "n": 139,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(86, 94, 130)": {
+     "n": 91,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(255, 255, 255)": {
+     "n": 72,
+     "roller": [
+      "text"
+     ],
+     "token": "--appure-white",
+     "note": null
+    },
+    "rgb(234, 239, 243)": {
+     "n": 26,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(0, 169, 145)": {
+     "n": 25,
+     "roller": [
+      "text",
+      "border",
+      "bg"
+     ],
+     "token": "--apteal-core",
+     "note": null
+    },
+    "rgba(255, 255, 255, 0.94)": {
+     "n": 24,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 94 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(255, 255, 255, 0.66)": {
+     "n": 19,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 66 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(15, 18, 60, 0.12)": {
+     "n": 16,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(247, 249, 251)": {
+     "n": 8,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(255, 255, 255, 0.42)": {
+     "n": 7,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 42 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(255, 255, 255, 0.28)": {
+     "n": 7,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 28 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgb(214, 76, 76)": {
+     "n": 7,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(9, 11, 50)": {
+     "n": 6,
+     "roller": [
+      "bg"
+     ],
+     "token": "--apmidnight-blue",
+     "note": null
+    },
+    "rgb(57, 194, 129)": {
+     "n": 6,
+     "roller": [
+      "bg",
+      "text"
+     ],
+     "token": "--apemerald-flow",
+     "note": null
+    },
+    "rgba(255, 255, 255, 0.14)": {
+     "n": 5,
+     "roller": [
+      "bg",
+      "border"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 14 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgb(240, 175, 56)": {
+     "n": 4,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(255, 255, 255, 0.06)": {
+     "n": 3,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 6 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgb(128, 128, 128)": {
+     "n": 2,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(122, 208, 198)": {
+     "n": 2,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(160, 184, 196)": {
+     "n": 2,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(57, 194, 129, 0.14)": {
+     "n": 2,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "= --apemerald-flow @ 14 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(57, 194, 129, 0.4)": {
+     "n": 2,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "= --apemerald-flow @ 40 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(240, 175, 56, 0.12)": {
+     "n": 1,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(240, 175, 56, 0.4)": {
+     "n": 1,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(214, 76, 76, 0.14)": {
+     "n": 1,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(214, 76, 76, 0.4)": {
+     "n": 1,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    }
+   },
+   "states": {
+    "svg": {
+     "streams-legend": {
+      "selector": ".ampy-calc__streams-legend",
+      "tag": "div",
+      "text": "Stödtjänster9 341 kr40%Spotpris-arbitrage5 343 kr23%Effektto",
+      "rect": {
+       "x": 648.5,
+       "y": 413.3,
+       "w": 675.5,
+       "h": 60.2
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "17.1167px",
+      "fontWeight": "400",
+      "lineHeight": "25.675px",
+      "color": "rgb(255, 255, 255)",
+      "margin": "7.5px 0px 0px",
+      "gap": "7.5px 15px",
+      "rowGap": "7.5px",
+      "columnGap": "15px",
+      "border": "0px none rgb(255, 255, 255)",
+      "borderTop": "0px none rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "all",
+      "width": "675.5px",
+      "height": "60.1875px",
+      "opacity": "1",
+      "display": "grid",
+      "gridTemplateColumns": "330.25px 330.25px",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)",
+      "backgroundColor": "transparent"
+     },
+     "stream-row": {
+      "selector": ".ampy-calc__stream-row",
+      "tag": "div",
+      "text": "Stödtjänster9 341 kr40%",
+      "rect": {
+       "x": 648.5,
+       "y": 413.3,
+       "w": 330.3,
+       "h": 26.3
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "17.1167px",
+      "fontWeight": "400",
+      "lineHeight": "25.675px",
+      "color": "rgb(255, 255, 255)",
+      "padding": "4px 0px",
+      "gap": "7.5px",
+      "rowGap": "7.5px",
+      "columnGap": "7.5px",
+      "border": "0px none rgb(255, 255, 255)",
+      "borderTop": "0px none rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "all",
+      "width": "330.25px",
+      "height": "26.3438px",
+      "opacity": "1",
+      "display": "grid",
+      "gridTemplateColumns": "12px 220.125px 83.125px",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)",
+      "backgroundColor": "transparent"
+     },
+     "stream-dot": {
+      "selector": ".ampy-calc__stream-dot",
+      "tag": "span",
+      "text": "",
+      "rect": {
+       "x": 648.5,
+       "y": 420.5,
+       "w": 12,
+       "h": 12
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "17.1167px",
+      "fontWeight": "400",
+      "lineHeight": "25.675px",
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(0, 169, 145)",
+      "borderRadius": "9990px",
+      "border": "0px none rgb(255, 255, 255)",
+      "borderTop": "0px none rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "all",
+      "width": "12px",
+      "height": "12px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)"
+     },
+     "stream-name": {
+      "selector": ".ampy-calc__stream-name",
+      "tag": "span",
+      "text": "Stödtjänster",
+      "rect": {
+       "x": 668,
+       "y": 417.3,
+       "w": 220.1,
+       "h": 18.3
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "12.2333px",
+      "fontWeight": "500",
+      "lineHeight": "18.35px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "all",
+      "width": "220.125px",
+      "height": "18.3438px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "transparent"
+     },
+     "stream-value": {
+      "selector": ".ampy-calc__stream-value",
+      "tag": "span",
+      "text": "9 341 kr40%",
+      "rect": {
+       "x": 895.6,
+       "y": 417.3,
+       "w": 83.1,
+       "h": 18.3
+      },
+      "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace",
+      "fontSize": "12.2333px",
+      "fontWeight": "600",
+      "lineHeight": "18.35px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "all",
+      "width": "83.125px",
+      "height": "18.3438px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "right",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "transparent"
+     },
+     "stream-pct": {
+      "selector": ".ampy-calc__stream-pct",
+      "tag": "span",
+      "text": "40%",
+      "rect": {
+       "x": 960.3,
+       "y": 420.3,
+       "w": 18.4,
+       "h": 13
+      },
+      "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace",
+      "fontSize": "10.2333px",
+      "fontWeight": "400",
+      "lineHeight": "15.35px",
+      "color": "rgba(255, 255, 255, 0.42)",
+      "margin": "0px 0px 0px 6px",
+      "border": "0px none rgba(255, 255, 255, 0.42)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.42)",
+      "borderColor": "rgba(255, 255, 255, 0.42)",
+      "outline": "rgba(255, 255, 255, 0.42) none 3px",
+      "transition": "all",
+      "opacity": "1",
+      "display": "inline",
+      "textAlign": "right",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.42)",
+      "backgroundColor": "transparent"
+     }
+    }
+   }
+  },
+  "mobile": {
+   "errors": [],
+   "extra": {
+    "overflow": {
+     "clientWidth": 390,
+     "scrollWidth": 413,
+     "offenders": [
+      {
+       "sel": "ampy-calc__card",
+       "right": 413,
+       "w": 395
+      },
+      {
+       "sel": "ampy-calc__tier ampy-calc__tier--primary",
+       "right": 397,
+       "w": 363
+      },
+      {
+       "sel": "ampy-calc__tier-label",
+       "right": 397,
+       "w": 363
+      },
+      {
+       "sel": "ampy-calc__field ampy-calc__field--prominent",
+       "right": 397,
+       "w": 363
+      },
+      {
+       "sel": "ampy-calc__field-label-tiny",
+       "right": 397,
+       "w": 363
+      },
+      {
+       "sel": "ampy-calc__selector",
+       "right": 397,
+       "w": 363
+      },
+      {
+       "sel": "ampy-calc__selector-button ampy-calc__selector-button--promi",
+       "right": 397,
+       "w": 363
+      },
+      {
+       "sel": "ampy-calc__field ampy-calc__field--prominent",
+       "right": 397,
+       "w": 363
+      }
+     ]
+    },
+    "svg": [
+     {
+      "tag": "line",
+      "cls": null,
+      "stroke": "rgba(255,255,255,0.32)",
+      "sw": "1",
+      "fill": "rgb(0, 0, 0)",
+      "dash": "3,5"
+     },
+     {
+      "tag": "polygon",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-zone-loss)",
+      "dash": null
+     },
+     {
+      "tag": "polygon",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-zone-profit)",
+      "dash": null
+     },
+     {
+      "tag": "circle",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-line-loss)",
+      "dash": null
+     },
+     {
+      "tag": "circle",
+      "cls": null,
+      "stroke": "none",
+      "sw": "1px",
+      "fill": "var(--chart-line-profit)",
+      "dash": null
+     }
+    ]
+   },
+   "docHeight": 1954,
+   "cssVars": {
+    "--action-primary": "rgb(0, 169, 145)",
+    "--on-surface-text-faint": "rgba(255, 255, 255, 0.42)",
+    "--chart-stream-1": "rgb(0, 169, 145)",
+    "--chart-stream-2": "rgb(57, 194, 129)",
+    "--chart-stream-3": "rgb(122, 208, 198)",
+    "--chart-stream-4": "rgb(160, 184, 196)",
+    "--chart-line-loss": "rgb(240, 175, 56)",
+    "--chart-line-profit": "rgb(0, 169, 145)",
+    "--chart-zone-loss": "rgba(240, 175, 56, 0.18)",
+    "--chart-zone-profit": "rgba(0, 169, 145, 0.16)",
+    "--fs-4xl": "clamp(4rem,   calc(4rem + (7.5 - 4) * ((100vw - 320px) / 960)),    7.5rem)",
+    "--fs-2xl": "clamp(2.2rem, calc(2.2rem + (4.8 - 2.2) * ((100vw - 320px) / 960)), 4.8rem)"
+   },
+   "roles": {
+    "h1": {
+     "selector": ".ampy-calc__header h1, .ampy-calc__header .ampy-calc__t-2xl",
+     "tag": "h1",
+     "text": "Vad tjänar du på ett solcellsbatteri?",
+     "rect": {
+      "x": 18,
+      "y": 23,
+      "w": 354,
+      "h": 53.3
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "22.1896px",
+     "fontWeight": "700",
+     "lineHeight": "26.6275px",
+     "letterSpacing": "-0.332844px",
+     "color": "rgb(15, 18, 60)",
+     "border": "0px none rgb(15, 18, 60)",
+     "borderTop": "0px none rgb(15, 18, 60)",
+     "borderColor": "rgb(15, 18, 60)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "354px",
+     "height": "53.25px",
+     "maxWidth": "800px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "left",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)",
+     "backgroundColor": "transparent"
+    },
+    "card-input": {
+     "selector": ".ampy-calc__card:not(.ampy-calc__card--surface)",
+     "tag": "div",
+     "text": "Vad du köper Batterimodell Dyness Stack100 Pro Modulär kapac",
+     "rect": {
+      "x": 18,
+      "y": 96.3,
+      "w": 394.9,
+      "h": 688.8
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(15, 18, 60)",
+     "backgroundColor": "rgb(247, 249, 251)",
+     "padding": "15px",
+     "gap": "15px",
+     "rowGap": "15px",
+     "columnGap": "15px",
+     "borderRadius": "20px",
+     "boxShadow": "rgba(15, 18, 60, 0.06) 0px 1px 2px 0px",
+     "border": "1px solid rgba(15, 18, 60, 0.12)",
+     "borderTop": "1px solid rgba(15, 18, 60, 0.12)",
+     "borderColor": "rgba(15, 18, 60, 0.12)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "394.891px",
+     "height": "688.812px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)"
+    },
+    "card-surface": {
+     "selector": ".ampy-calc__card--surface",
+     "tag": "div",
+     "text": "Tjänar in på 15 år 293 087kr Ren vinst över 15 år — invester",
+     "rect": {
+      "x": 18,
+      "y": 805.1,
+      "w": 394.9,
+      "h": 1058.2
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(9, 11, 50)",
+     "backgroundImage": "radial-gradient(120% 60% at 90% -10%, rgba(0, 169, 145, 0.28), rgba(0, 0, 0, 0) 60%), radial-gradient(80% 50% at -10% 110%, rgba(57, 194, 129, 0.16), rgba(0, 0, 0, 0) 60%)",
+     "padding": "15px",
+     "gap": "15px",
+     "rowGap": "15px",
+     "columnGap": "15px",
+     "borderRadius": "20px",
+     "boxShadow": "rgba(15, 18, 60, 0.14) 0px 16px 40px 0px",
+     "border": "1px solid rgba(0, 0, 0, 0)",
+     "borderTop": "1px solid rgba(0, 0, 0, 0)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "394.891px",
+     "height": "1058.16px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box, border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "hero15-value": {
+     "selector": ".ampy-calc__hero15-value",
+     "tag": "span",
+     "text": "293 087kr",
+     "rect": {
+      "x": 34,
+      "y": 844.1,
+      "w": 362.9,
+      "h": 40.3
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "40.2552px",
+     "fontWeight": "700",
+     "lineHeight": "40.2552px",
+     "letterSpacing": "-1.20766px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgb(255, 255, 255)",
+     "gap": "12px",
+     "rowGap": "12px",
+     "columnGap": "12px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "362.891px",
+     "height": "40.25px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "hero15-unit": {
+     "selector": ".ampy-calc__hero15-unit",
+     "tag": "span",
+     "text": "kr",
+     "rect": {
+      "x": 189.6,
+      "y": 862.1,
+      "w": 17.9,
+      "h": 20.1
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "20.1167px",
+     "fontWeight": "500",
+     "lineHeight": "20.1167px",
+     "letterSpacing": "-0.201167px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "width": "17.8594px",
+     "height": "20.1094px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "trio-value": {
+     "selector": ".ampy-calc__trio-value",
+     "tag": "span",
+     "text": "56 135kr",
+     "rect": {
+      "x": 34,
+      "y": 959.7,
+      "w": 362.9,
+      "h": 24.1
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "20.1167px",
+     "fontWeight": "700",
+     "lineHeight": "24.14px",
+     "letterSpacing": "-0.30175px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgb(255, 255, 255)",
+     "margin": "2px 0px 0px",
+     "gap": "6px",
+     "rowGap": "6px",
+     "columnGap": "6px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "362.891px",
+     "height": "24.125px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "streams-bar": {
+     "selector": ".ampy-calc__streams-bar",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 34,
+      "y": 1193.7,
+      "w": 362.9,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgba(255, 255, 255, 0.06)",
+     "borderRadius": "9990px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "362.891px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-1": {
+     "selector": ".ampy-calc__streams-segment:nth-child(1)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 34,
+      "y": 1193.7,
+      "w": 145.6,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "145.594px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-2": {
+     "selector": ".ampy-calc__streams-segment:nth-child(2)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 179.6,
+      "y": 1193.7,
+      "w": 83.3,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(57, 194, 129)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "83.2812px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-3": {
+     "selector": ".ampy-calc__streams-segment:nth-child(3)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 262.9,
+      "y": 1193.7,
+      "w": 42.8,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(122, 208, 198)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "42.7656px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-segment-4": {
+     "selector": ".ampy-calc__streams-segment:nth-child(4)",
+     "tag": "div",
+     "text": "",
+     "rect": {
+      "x": 305.6,
+      "y": 1193.7,
+      "w": 91.2,
+      "h": 24
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(160, 184, 196)",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "width 0.3s cubic-bezier(0.2, 0, 0.2, 1)",
+     "width": "91.2344px",
+     "height": "24px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "streams-summary": {
+     "selector": ".ampy-calc__streams-summary",
+     "tag": "summary",
+     "text": "Se fördelningen",
+     "rect": {
+      "x": 34,
+      "y": 1236.2,
+      "w": 362.9,
+      "h": 28
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "12.0146px",
+     "fontWeight": "500",
+     "lineHeight": "18.0219px",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "padding": "5px 0px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "width": "362.891px",
+     "height": "28.0156px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "chart": {
+     "selector": ".ampy-calc__chart",
+     "tag": "div",
+     "text": "+293 087 kr I dag 15 år Återbetald 2,4 år",
+     "rect": {
+      "x": 34,
+      "y": 1304.7,
+      "w": 362.9,
+      "h": 340
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgba(255, 255, 255, 0.06)",
+     "padding": "10px 10px 5px",
+     "borderRadius": "12px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "362.891px",
+     "height": "340px",
+     "minHeight": "340px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "chart-end-value": {
+     "selector": ".ampy-calc__chart-corner--end-value",
+     "tag": "span",
+     "text": "+293 087 kr",
+     "rect": {
+      "x": 282.7,
+      "y": 1314.7,
+      "w": 104.2,
+      "h": 18.9
+     },
+     "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace",
+     "fontSize": "15.78px",
+     "fontWeight": "700",
+     "lineHeight": "18.936px",
+     "fontFeatureSettings": "\"lnum\", \"tnum\"",
+     "color": "rgb(0, 169, 145)",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "all",
+     "width": "104.156px",
+     "height": "18.9375px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)",
+     "backgroundColor": "transparent"
+    },
+    "chart-today": {
+     "selector": ".ampy-calc__chart-corner--today",
+     "tag": "span",
+     "text": "I dag",
+     "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "13.585px",
+     "fontWeight": "500",
+     "lineHeight": "16.302px",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "opacity": "1",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "chart-end-axis": {
+     "selector": ".ampy-calc__chart-corner--end-axis",
+     "tag": "span",
+     "text": "15 år",
+     "rect": {
+      "x": 358.4,
+      "y": 1623.4,
+      "w": 28.5,
+      "h": 16.3
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "13.585px",
+     "fontWeight": "500",
+     "lineHeight": "16.302px",
+     "color": "rgba(255, 255, 255, 0.66)",
+     "border": "0px none rgba(255, 255, 255, 0.66)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.66)",
+     "borderColor": "rgba(255, 255, 255, 0.66)",
+     "outline": "rgba(255, 255, 255, 0.66) none 3px",
+     "transition": "all",
+     "width": "28.4531px",
+     "height": "16.2812px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.66)",
+     "backgroundColor": "transparent"
+    },
+    "be-dot": {
+     "selector": ".ampy-calc__be-dot",
+     "tag": "span",
+     "text": "",
+     "rect": {
+      "x": 93.1,
+      "y": 1548.3,
+      "w": 12,
+      "h": 12
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "borderRadius": "50%",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "12px",
+     "height": "12px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "be-line": {
+     "selector": ".ampy-calc__be-line",
+     "tag": "span",
+     "text": "",
+     "rect": {
+      "x": 98.6,
+      "y": 1561.3,
+      "w": 1,
+      "h": 32.4
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255) rgb(255, 255, 255) rgb(255, 255, 255) rgba(255, 255, 255, 0.34)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "all",
+     "width": "1px",
+     "height": "32.3906px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "be-caption": {
+     "selector": ".ampy-calc__be-caption",
+     "tag": "span",
+     "text": "Återbetald",
+     "rect": {
+      "x": 64.7,
+      "y": 1607.7,
+      "w": 68.8,
+      "h": 15.4
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "13.39px",
+     "fontWeight": "500",
+     "lineHeight": "15.3985px",
+     "color": "rgba(255, 255, 255, 0.94)",
+     "border": "0px none rgba(255, 255, 255, 0.94)",
+     "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+     "borderColor": "rgba(255, 255, 255, 0.94)",
+     "outline": "rgba(255, 255, 255, 0.94) none 3px",
+     "transition": "all",
+     "width": "68.8125px",
+     "height": "15.3906px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)",
+     "backgroundColor": "transparent"
+    },
+    "be-time": {
+     "selector": ".ampy-calc__be-time",
+     "tag": "span",
+     "text": "2,4 år",
+     "rect": {
+      "x": 80.5,
+      "y": 1624.1,
+      "w": 37.2,
+      "h": 15.6
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "13.585px",
+     "fontWeight": "700",
+     "lineHeight": "15.6228px",
+     "color": "rgb(0, 169, 145)",
+     "margin": "1px 0px 0px",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "all",
+     "width": "37.2188px",
+     "height": "15.6094px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)",
+     "backgroundColor": "transparent"
+    },
+    "chart-svg-path-loss": {
+     "selector": ".ampy-calc__chart-plot svg path[stroke]:nth-of-type(1)",
+     "missing": true
+    },
+    "toggle-active": {
+     "selector": ".ampy-calc__toggle-option[aria-pressed='true']",
+     "tag": "button",
+     "text": "Ja",
+     "rect": {
+      "x": 252.9,
+      "y": 462,
+      "w": 64,
+      "h": 30
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "12.0146px",
+     "fontWeight": "600",
+     "lineHeight": "18.0219px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "padding": "6px 10px",
+     "borderRadius": "9990px",
+     "boxShadow": "rgba(15, 18, 60, 0.06) 0px 1px 2px 0px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "background 0.15s, color 0.15s, box-shadow 0.15s",
+     "width": "64px",
+     "height": "30.0156px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "segmented-active": {
+     "selector": ".ampy-calc__segmented-option[aria-pressed='true']",
+     "tag": "button",
+     "text": "SE3",
+     "rect": {
+      "x": 217.4,
+      "y": 540.5,
+      "w": 85.7,
+      "h": 33
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "12.0146px",
+     "fontWeight": "600",
+     "lineHeight": "18.0219px",
+     "color": "rgb(0, 169, 145)",
+     "backgroundColor": "rgb(247, 249, 251)",
+     "padding": "7.5px 5px",
+     "borderRadius": "6px",
+     "boxShadow": "rgba(15, 18, 60, 0.06) 0px 1px 2px 0px",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "background 0.15s, color 0.15s, box-shadow 0.15s",
+     "width": "85.7188px",
+     "height": "33.0156px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)"
+    },
+    "stepper": {
+     "selector": ".ampy-calc__stepper",
+     "tag": "div",
+     "text": "− 2 +",
+     "rect": {
+      "x": 278.9,
+      "y": 635.6,
+      "w": 118,
+      "h": 42
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(15, 18, 60)",
+     "backgroundColor": "rgb(234, 239, 243)",
+     "padding": "3px",
+     "borderRadius": "9990px",
+     "border": "0px none rgb(15, 18, 60)",
+     "borderTop": "0px none rgb(15, 18, 60)",
+     "borderColor": "rgb(15, 18, 60)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "118px",
+     "height": "42px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)"
+    },
+    "btn-primary": {
+     "selector": ".ampy-calc__btn--primary",
+     "tag": "button",
+     "text": "Få en exakt offert",
+     "rect": {
+      "x": 34,
+      "y": 1686.7,
+      "w": 362.9,
+      "h": 56
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "600",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(0, 169, 145)",
+     "padding": "10px 20px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "borderRadius": "12px",
+     "boxShadow": "rgba(15, 18, 60, 0.08) 0px 4px 12px 0px",
+     "border": "0px none rgb(255, 255, 255)",
+     "borderTop": "0px none rgb(255, 255, 255)",
+     "borderColor": "rgb(255, 255, 255)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "opacity 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s, transform 0.15s",
+     "width": "362.891px",
+     "height": "56px",
+     "minHeight": "56px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "email-input": {
+     "selector": ".ampy-calc__card--surface .ampy-calc__input",
+     "tag": "input",
+     "text": "",
+     "rect": {
+      "x": 0,
+      "y": 0,
+      "w": 0,
+      "h": 0
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "400",
+     "lineHeight": "25.5109px",
+     "color": "rgb(255, 255, 255)",
+     "backgroundColor": "rgb(9, 11, 50)",
+     "padding": "7.5px 10px",
+     "borderRadius": "12px",
+     "border": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderTop": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderColor": "rgba(255, 255, 255, 0.28)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "border-color 0.15s, box-shadow 0.15s",
+     "width": "100%",
+     "minHeight": "48px",
+     "opacity": "1",
+     "display": "block",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)"
+    },
+    "email-btn": {
+     "selector": ".ampy-calc__btn--outline, .ampy-calc__btn--secondary",
+     "tag": "button",
+     "text": "Maila kalkylen",
+     "rect": {
+      "x": 284.9,
+      "y": 1761.2,
+      "w": 112,
+      "h": 48
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "12.0146px",
+     "fontWeight": "600",
+     "lineHeight": "18.0219px",
+     "color": "rgb(255, 255, 255)",
+     "padding": "7.5px 15px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "borderRadius": "12px",
+     "border": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderTop": "1px solid rgba(255, 255, 255, 0.28)",
+     "borderColor": "rgba(255, 255, 255, 0.28)",
+     "outline": "rgb(255, 255, 255) none 3px",
+     "transition": "opacity 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s, transform 0.15s",
+     "width": "112.016px",
+     "height": "48px",
+     "minHeight": "48px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "center",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(255, 255, 255)",
+     "backgroundColor": "transparent"
+    },
+    "btn-link": {
+     "selector": ".ampy-calc__btn-link",
+     "tag": "a",
+     "text": "Läs mer om Dyness Stack100 Pro",
+     "rect": {
+      "x": 116.3,
+      "y": 1819.2,
+      "w": 198.2,
+      "h": 28
+     },
+     "fontFamily": "Outfit, system-ui, sans-serif",
+     "fontSize": "12.0146px",
+     "fontWeight": "500",
+     "lineHeight": "18.0219px",
+     "color": "rgb(0, 169, 145)",
+     "padding": "5px 0px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "border": "0px none rgb(0, 169, 145)",
+     "borderTop": "0px none rgb(0, 169, 145)",
+     "borderColor": "rgb(0, 169, 145)",
+     "outline": "rgb(0, 169, 145) none 3px",
+     "transition": "color 0.15s",
+     "width": "198.188px",
+     "height": "28.0156px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(0, 169, 145)",
+     "backgroundColor": "transparent"
+    },
+    "disclosure-summary": {
+     "selector": ".ampy-calc__disclosure-summary",
+     "tag": "summary",
+     "text": "Avancerat — förfina kalkylen",
+     "rect": {
+      "x": 34,
+      "y": 723.6,
+      "w": 362.9,
+      "h": 35.5
+     },
+     "fontFamily": "\"Plus Jakarta Sans\", system-ui, sans-serif",
+     "fontSize": "17.0073px",
+     "fontWeight": "600",
+     "lineHeight": "25.5109px",
+     "color": "rgb(15, 18, 60)",
+     "padding": "5px 0px",
+     "gap": "5px",
+     "rowGap": "5px",
+     "columnGap": "5px",
+     "border": "0px none rgb(15, 18, 60)",
+     "borderTop": "0px none rgb(15, 18, 60)",
+     "borderColor": "rgb(15, 18, 60)",
+     "outline": "rgb(15, 18, 60) none 3px",
+     "transition": "all",
+     "width": "362.891px",
+     "height": "35.5px",
+     "opacity": "1",
+     "display": "flex",
+     "textAlign": "start",
+     "WebkitBackgroundClip": "border-box",
+     "WebkitTextFillColor": "rgb(15, 18, 60)",
+     "backgroundColor": "transparent"
+    }
+   },
+   "census": {
+    "rgb(15, 18, 60)": {
+     "n": 139,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(86, 94, 130)": {
+     "n": 91,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(255, 255, 255)": {
+     "n": 72,
+     "roller": [
+      "text"
+     ],
+     "token": "--appure-white",
+     "note": null
+    },
+    "rgb(234, 239, 243)": {
+     "n": 26,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(0, 169, 145)": {
+     "n": 25,
+     "roller": [
+      "text",
+      "border",
+      "bg"
+     ],
+     "token": "--apteal-core",
+     "note": null
+    },
+    "rgba(255, 255, 255, 0.94)": {
+     "n": 24,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 94 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(255, 255, 255, 0.66)": {
+     "n": 19,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 66 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(15, 18, 60, 0.12)": {
+     "n": 16,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(247, 249, 251)": {
+     "n": 8,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(255, 255, 255, 0.42)": {
+     "n": 7,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 42 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(255, 255, 255, 0.28)": {
+     "n": 7,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 28 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgb(214, 76, 76)": {
+     "n": 7,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(9, 11, 50)": {
+     "n": 6,
+     "roller": [
+      "bg"
+     ],
+     "token": "--apmidnight-blue",
+     "note": null
+    },
+    "rgb(57, 194, 129)": {
+     "n": 6,
+     "roller": [
+      "bg",
+      "text"
+     ],
+     "token": "--apemerald-flow",
+     "note": null
+    },
+    "rgba(255, 255, 255, 0.14)": {
+     "n": 5,
+     "roller": [
+      "bg",
+      "border"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 14 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgb(240, 175, 56)": {
+     "n": 4,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(255, 255, 255, 0.06)": {
+     "n": 3,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "= --appure-white @ 6 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgb(128, 128, 128)": {
+     "n": 2,
+     "roller": [
+      "text"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(122, 208, 198)": {
+     "n": 2,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgb(160, 184, 196)": {
+     "n": 2,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(57, 194, 129, 0.14)": {
+     "n": 2,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "= --apemerald-flow @ 14 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(57, 194, 129, 0.4)": {
+     "n": 2,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "= --apemerald-flow @ 40 % alpha (alpha-varianten finns inte som token)"
+    },
+    "rgba(240, 175, 56, 0.12)": {
+     "n": 1,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(240, 175, 56, 0.4)": {
+     "n": 1,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(214, 76, 76, 0.14)": {
+     "n": 1,
+     "roller": [
+      "bg"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    },
+    "rgba(214, 76, 76, 0.4)": {
+     "n": 1,
+     "roller": [
+      "border"
+     ],
+     "token": null,
+     "note": "utanför tokens"
+    }
+   },
+   "states": {
+    "svg": {
+     "streams-legend": {
+      "selector": ".ampy-calc__streams-legend",
+      "tag": "div",
+      "text": "Stödtjänster9 341 kr40%Spotpris-arbitrage5 343 kr23%Effektto",
+      "rect": {
+       "x": 27,
+       "y": 443.7,
+       "w": 362.9,
+       "h": 119.1
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "17.0073px",
+      "fontWeight": "400",
+      "lineHeight": "25.5109px",
+      "color": "rgb(255, 255, 255)",
+      "margin": "7.5px 0px 0px",
+      "gap": "5px",
+      "rowGap": "5px",
+      "columnGap": "5px",
+      "border": "0px none rgb(255, 255, 255)",
+      "borderTop": "0px none rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "all",
+      "width": "362.891px",
+      "height": "119.062px",
+      "opacity": "1",
+      "display": "grid",
+      "gridTemplateColumns": "362.891px",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)",
+      "backgroundColor": "transparent"
+     },
+     "stream-row": {
+      "selector": ".ampy-calc__stream-row",
+      "tag": "div",
+      "text": "Stödtjänster9 341 kr40%",
+      "rect": {
+       "x": 27,
+       "y": 443.7,
+       "w": 362.9,
+       "h": 26
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "17.0073px",
+      "fontWeight": "400",
+      "lineHeight": "25.5109px",
+      "color": "rgb(255, 255, 255)",
+      "padding": "4px 0px",
+      "gap": "7.5px",
+      "rowGap": "7.5px",
+      "columnGap": "7.5px",
+      "border": "0px none rgb(255, 255, 255)",
+      "borderTop": "0px none rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "all",
+      "width": "362.891px",
+      "height": "26.0156px",
+      "opacity": "1",
+      "display": "grid",
+      "gridTemplateColumns": "12px 254.203px 81.6875px",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)",
+      "backgroundColor": "transparent"
+     },
+     "stream-dot": {
+      "selector": ".ampy-calc__stream-dot",
+      "tag": "span",
+      "text": "",
+      "rect": {
+       "x": 27,
+       "y": 450.7,
+       "w": 12,
+       "h": 12
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "17.0073px",
+      "fontWeight": "400",
+      "lineHeight": "25.5109px",
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(0, 169, 145)",
+      "borderRadius": "9990px",
+      "border": "0px none rgb(255, 255, 255)",
+      "borderTop": "0px none rgb(255, 255, 255)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outline": "rgb(255, 255, 255) none 3px",
+      "transition": "all",
+      "width": "12px",
+      "height": "12px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgb(255, 255, 255)"
+     },
+     "stream-name": {
+      "selector": ".ampy-calc__stream-name",
+      "tag": "span",
+      "text": "Stödtjänster",
+      "rect": {
+       "x": 46.5,
+       "y": 447.7,
+       "w": 254.2,
+       "h": 18
+      },
+      "fontFamily": "Outfit, system-ui, sans-serif",
+      "fontSize": "12.0146px",
+      "fontWeight": "500",
+      "lineHeight": "18.0219px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "all",
+      "width": "254.203px",
+      "height": "18.0156px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "start",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "transparent"
+     },
+     "stream-value": {
+      "selector": ".ampy-calc__stream-value",
+      "tag": "span",
+      "text": "9 341 kr40%",
+      "rect": {
+       "x": 308.2,
+       "y": 447.7,
+       "w": 81.7,
+       "h": 18
+      },
+      "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace",
+      "fontSize": "12.0146px",
+      "fontWeight": "600",
+      "lineHeight": "18.0219px",
+      "color": "rgba(255, 255, 255, 0.94)",
+      "border": "0px none rgba(255, 255, 255, 0.94)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.94)",
+      "borderColor": "rgba(255, 255, 255, 0.94)",
+      "outline": "rgba(255, 255, 255, 0.94) none 3px",
+      "transition": "all",
+      "width": "81.6875px",
+      "height": "18.0156px",
+      "opacity": "1",
+      "display": "block",
+      "textAlign": "right",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.94)",
+      "backgroundColor": "transparent"
+     },
+     "stream-pct": {
+      "selector": ".ampy-calc__stream-pct",
+      "tag": "span",
+      "text": "40%",
+      "rect": {
+       "x": 371.9,
+       "y": 450.7,
+       "w": 18,
+       "h": 13
+      },
+      "fontFamily": "\"JetBrains Mono\", ui-monospace, monospace",
+      "fontSize": "10.0146px",
+      "fontWeight": "400",
+      "lineHeight": "15.0219px",
+      "color": "rgba(255, 255, 255, 0.42)",
+      "margin": "0px 0px 0px 6px",
+      "border": "0px none rgba(255, 255, 255, 0.42)",
+      "borderTop": "0px none rgba(255, 255, 255, 0.42)",
+      "borderColor": "rgba(255, 255, 255, 0.42)",
+      "outline": "rgba(255, 255, 255, 0.42) none 3px",
+      "transition": "all",
+      "opacity": "1",
+      "display": "inline",
+      "textAlign": "right",
+      "WebkitBackgroundClip": "border-box",
+      "WebkitTextFillColor": "rgba(255, 255, 255, 0.42)",
+      "backgroundColor": "transparent"
+     }
+    }
+   }
+  }
+ }
+}

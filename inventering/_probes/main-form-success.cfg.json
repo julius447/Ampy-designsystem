@@ -1,0 +1,14 @@
+{
+ "file": "kallor/Ampy-main-form/index.html",
+ "out": "inventering/_probes/out-main-form-success.json",
+ "setup": "(()=>{document.getElementById('mfForm').classList.add('is-hidden');document.getElementById('mfSuccess').classList.add('show');document.getElementById('mfSubmit').classList.add('is-loading');})()",
+ "targets": [
+  {"roll":"success","sel":".mf-success"},
+  {"roll":"success-ico","sel":".mf-success__ico"},
+  {"roll":"success-ico-svg","sel":".mf-success__ico svg"},
+  {"roll":"success-h","sel":".mf-success__h"},
+  {"roll":"success-p","sel":".mf-success__p"},
+  {"roll":"success-meta","sel":".mf-success__meta"},
+  {"roll":"spinner","sel":".mf-submit__spin"}
+ ]
+}

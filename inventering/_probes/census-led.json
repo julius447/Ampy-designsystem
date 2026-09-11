@@ -1,0 +1,362 @@
+[
+ {
+  "farg": "rgb(0, 169, 145)",
+  "antal": 4,
+  "forsta": "Led-kalkylator/styles.css:21",
+  "skrivsatt": [
+   "rgb(0, 169, 145)"
+  ],
+  "token": "--apteal-core",
+  "note": null
+ },
+ {
+  "farg": "rgb(57, 194, 129)",
+  "antal": 2,
+  "forsta": "Led-kalkylator/styles.css:23",
+  "skrivsatt": [
+   "rgb(57, 194, 129)"
+  ],
+  "token": "--apemerald-flow",
+  "note": null
+ },
+ {
+  "farg": "rgb(240, 175, 56)",
+  "antal": 2,
+  "forsta": "Led-kalkylator/styles.css:25",
+  "skrivsatt": [
+   "rgb(240, 175, 56)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.06)",
+  "antal": 2,
+  "forsta": "Led-kalkylator/styles.css:35",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.06)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 6 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(57, 194, 129, 0.16)",
+  "antal": 2,
+  "forsta": "Led-kalkylator/styles.css:132",
+  "skrivsatt": [
+   "rgba(57, 194, 129, 0.16)"
+  ],
+  "token": null,
+  "note": "= --apemerald-flow @ 16 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.25)",
+  "antal": 2,
+  "forsta": "Led-kalkylator/styles.css:169",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.25)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 25 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.3)",
+  "antal": 2,
+  "forsta": "Led-kalkylator/styles.css:247",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.3)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 30 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(28, 196, 175, 0.4)",
+  "antal": 2,
+  "forsta": "Led-kalkylator/styles.css:389",
+  "skrivsatt": [
+   "rgba(28, 196, 175, 0.4)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(247, 249, 251)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:15",
+  "skrivsatt": [
+   "rgb(247, 249, 251)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(9, 11, 50)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:16",
+  "skrivsatt": [
+   "rgb(9, 11, 50)"
+  ],
+  "token": "--apmidnight-blue",
+  "note": null
+ },
+ {
+  "farg": "rgb(234, 239, 243)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:17",
+  "skrivsatt": [
+   "rgb(234, 239, 243)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(15, 18, 60)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:18",
+  "skrivsatt": [
+   "rgb(15, 18, 60)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(86, 94, 130)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:19",
+  "skrivsatt": [
+   "rgb(86, 94, 130)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(255, 255, 255)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:20",
+  "skrivsatt": [
+   "rgb(255, 255, 255)"
+  ],
+  "token": "--appure-white",
+  "note": null
+ },
+ {
+  "farg": "rgb(28, 196, 175)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:22",
+  "skrivsatt": [
+   "rgb(28, 196, 175)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(214, 76, 76)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:24",
+  "skrivsatt": [
+   "rgb(214, 76, 76)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.12)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:26",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.12)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.94)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:30",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.94)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 94 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.66)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:31",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.66)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 66 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.55)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:32",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.55)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 55 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.14)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:33",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.14)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 14 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.28)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:34",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.28)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 28 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgb(122, 208, 198)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:40",
+  "skrivsatt": [
+   "rgb(122, 208, 198)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgb(160, 184, 196)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:41",
+  "skrivsatt": [
+   "rgb(160, 184, 196)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(240, 175, 56, 0.18)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:45",
+  "skrivsatt": [
+   "rgba(240, 175, 56, 0.18)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.16)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:46",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.16)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 16 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.06)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:54",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.06)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.08)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:55",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.08)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(15, 18, 60, 0.14)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:56",
+  "skrivsatt": [
+   "rgba(15, 18, 60, 0.14)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.28)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:131",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.28)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 28 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.2)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:290",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.2)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 20 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(0, 169, 145, 0.35)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:328",
+  "skrivsatt": [
+   "rgba(0, 169, 145, 0.35)"
+  ],
+  "token": null,
+  "note": "= --apteal-core @ 35 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(255, 255, 255, 0.05)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:360",
+  "skrivsatt": [
+   "rgba(255, 255, 255, 0.05)"
+  ],
+  "token": null,
+  "note": "= --appure-white @ 5 % alpha (alpha-varianten finns inte som token)"
+ },
+ {
+  "farg": "rgba(28, 196, 175, 0.35)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:363",
+  "skrivsatt": [
+   "rgba(28, 196, 175, 0.35)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(214, 76, 76, 0.16)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:368",
+  "skrivsatt": [
+   "rgba(214, 76, 76, 0.16)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ },
+ {
+  "farg": "rgba(214, 76, 76, 0.5)",
+  "antal": 1,
+  "forsta": "Led-kalkylator/styles.css:391",
+  "skrivsatt": [
+   "rgba(214, 76, 76, 0.5)"
+  ],
+  "token": null,
+  "note": "utanför tokens"
+ }
+]

@@ -1,0 +1,59 @@
+{
+  "file": "kallor/Elcentral-lead-magnet/preview/index.html",
+  "query": "?q=a2.c1.s1.j0.w4.h1.p0",
+  "out": "inventering/_probes/elcentral-verdict.measure.json",
+  "scope": ".ampy-ec",
+  "census": false,
+  "before": [{"wait": 600}, {"shot": "inventering/skarmdumpar/elcentral-kollen-{vp}-state-besked.png"}],
+  "roles": {
+    "block-result": ".ampy-ec__block.ampy-ec__result",
+    "crumb-result": ".ampy-ec__crumb--result",
+    "crumb-restart": ".ampy-ec__crumb-restart",
+    "result-eyebrow": ".ampy-ec__result-eyebrow",
+    "dualstatus": ".ampy-ec__dualstatus",
+    "dualstatus-accent": ".ampy-ec__dualstatus-accent",
+    "statusrow-axis": ".ampy-ec__statusrow-axis",
+    "pill-success": ".ampy-ec__pill[data-level='success']",
+    "pill-warning": ".ampy-ec__pill[data-level='warning']",
+    "pill-error": ".ampy-ec__pill[data-level='error']",
+    "pill-info": ".ampy-ec__pill[data-level='info']",
+    "pill-neutral": ".ampy-ec__pill[data-level='neutral']",
+    "pill-svg": ".ampy-ec__pill svg",
+    "result-lede": ".ampy-ec__result-lede",
+    "findings-head": ".ampy-ec__findings-head",
+    "findings": ".ampy-ec__findings",
+    "finding": ".ampy-ec__finding",
+    "finding-icon-ok": ".ampy-ec__finding--ok .ampy-ec__finding-icon",
+    "finding-icon-warn": ".ampy-ec__finding--warn .ampy-ec__finding-icon",
+    "finding-icon-info": ".ampy-ec__finding--info .ampy-ec__finding-icon",
+    "finding-label": ".ampy-ec__finding-label",
+    "finding-text": ".ampy-ec__finding-text",
+    "finding-chevron": ".ampy-ec__finding-chevron",
+    "factnote": ".ampy-ec__factnote",
+    "factnote-text": ".ampy-ec__factnote-text",
+    "akut": ".ampy-ec__akut",
+    "cta-lead": ".ampy-ec__cta-lead",
+    "cta-solid": ".ampy-ec__block.ampy-ec__result .ampy-ec__cta-primary--solid",
+    "cta-secondary": ".ampy-ec__cta-secondary",
+    "cta-link": ".ampy-ec__cta-link",
+    "readmore": ".ampy-ec__readmore",
+    "readmore-link": ".ampy-ec__readmore-link",
+    "share-row": ".ampy-ec__share-row",
+    "share-nudge": ".ampy-ec__share-nudge",
+    "share": ".ampy-ec__share",
+    "stickycta": ".ampy-ec__stickycta",
+    "stickycta-btn": ".ampy-ec__stickycta .ampy-ec__cta-primary"
+  },
+  "states": [
+    {
+      "name": "lead-open",
+      "actions": [{"click": ".ampy-ec__block.ampy-ec__result button.ampy-ec__cta-primary--solid"}, {"wait": 500}, {"click": ".ampy-ec__lead-submit"}, {"wait": 300}, {"shot": "inventering/skarmdumpar/elcentral-kollen-{vp}-state-leadform.png"}],
+      "roles": {"block-lead": ".ampy-ec__block.ampy-ec__lead", "lead-back": ".ampy-ec__lead-back", "lead-title": ".ampy-ec__lead-title", "lead-intro": ".ampy-ec__lead-intro", "lead-grid": ".ampy-ec__lead-grid", "lead-label": ".ampy-ec__lead-label", "lead-input": ".ampy-ec__lead-input", "lead-error": ".ampy-ec__lead-error:not([hidden])", "lead-submit": ".ampy-ec__lead-submit", "lead-consent-note": ".ampy-ec__lead-consent-note", "lead-consent-a": ".ampy-ec__lead-consent-note a"}
+    },
+    {
+      "name": "lead-focus",
+      "actions": [{"focus": ".ampy-ec__lead-input"}, {"wait": 100}],
+      "roles": {"lead-input-focus": ".ampy-ec__lead-input:focus"}
+    }
+  ]
+}

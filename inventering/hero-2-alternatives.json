@@ -1,0 +1,657 @@
+{
+ "kalla": "hero-2-alternatives",
+ "status": "slutversion v18 (S/G/Z/E), leverans i dist/ (FluentSnippets, verbatim) + bricks/; lanseringsgrindar: AMPY_LEAD_WEBHOOK null, mint-gradientens #5eb1bf (GAP 21), laddbox-pris, header-pill (GAP 19/20), 'Vardagar 07-17' (GAP)",
+ "auktoritet": 2,
+ "ingang": "kallor/Hero_2-alternatives/index.html (routersida) → preview/index.html → preview/scen-{s,g,z,e}-1440.html (riktiga shortcodes renderade, vendorad header som QA-kontext); visa-*-mobil.html = iframe-ram runt scen-*-390.html",
+ "skarmdumpar": [
+  "inventering/skarmdumpar/hero-2-alternatives-desktop.png",
+  "inventering/skarmdumpar/hero-2-alternatives-mobile.png",
+  "inventering/skarmdumpar/hero-2-alternatives-s-desktop.png",
+  "inventering/skarmdumpar/hero-2-alternatives-s-mobile.png",
+  "inventering/skarmdumpar/hero-2-alternatives-g-desktop.png",
+  "inventering/skarmdumpar/hero-2-alternatives-g-mobile.png",
+  "inventering/skarmdumpar/hero-2-alternatives-z-desktop.png",
+  "inventering/skarmdumpar/hero-2-alternatives-z-mobile.png",
+  "inventering/skarmdumpar/hero-2-alternatives-e-desktop.png",
+  "inventering/skarmdumpar/hero-2-alternatives-e-mobile.png"
+ ],
+ "rem_bas": "html 16px; dist är px genomgående ('aldrig rem — sajtens html{62.5%} är en värdsideregel som inte kan levereras'); tokens sitter på wrappern, aldrig :root; @container (ampyhero) i stället för @media",
+ "systemet_i_primitiverna": {
+  "token_dna": {
+   "--ap-navy": "#090b32 ('ALDRIG #010328 (livedefekt)')",
+   "--ap-navy-soft": "#17204a",
+   "--ap-mist": "#f5f9ff",
+   "--ap-white": "#ffffff",
+   "--ap-teal": "#00a991",
+   "--ap-teal-dark": "#0a8f7c (focus på ljus yta)",
+   "--ap-mint": "#55ff9a",
+   "--ap-emerald": "#39c281",
+   "--ap-grad-action": "linear-gradient(120deg,#55ff9a 0%,#5eb1bf 100%) — 'DEN ENDA HANDLINGSGRADIENTEN', GAP 21: #5eb1bf på legacy-listan, teal-alternativ utkommenterat",
+   "--ap-ink-strong": "#ffffff",
+   "--ap-ink": "#dbe3ec (~13:1 på navy)",
+   "--ap-ink-soft": "#c9d4e0",
+   "--ap-ink-quiet": "#aeb9c6",
+   "--ap-placeholder": "#8a97a6",
+   "--ap-hairline": "rgba(255,255,255,.14)",
+   "--ap-error": "#e5484d",
+   "--ap-r-card": "20px (= --apradius-l)",
+   "--ap-r-field": "12px",
+   "--ap-r-btn": "14px",
+   "--ap-r-pill": "999px",
+   "--ap-field-h": "56px mobil / 52px ≥768",
+   "--ap-btn-h": "56px / 52px",
+   "--ap-motion": ".18s (tak 300 ms)",
+   "--ampy-scrim-bastant": "180deg rgba(9,11,50,.58→.60→.82) + 98deg .28→.05 (kontrastmätt ≥4,75:1 för vit text)",
+   "--ampy-scrim-latt": "180deg rgba(9,11,50,.06→.22)"
+  },
+  "typskala": {
+   "ampy-h1": "34/700 ≤767 · 40/700 768–1199 · 48/700 ≥1200 · lh 1.07 · ls −.008em (V6, var −.018) · balance <768, wrap+pretty ≥768 · SOLID vit (ingen textgradient) · --pa-ljus = navy",
+   "ampy-lead": "16/400/25 · 17/400/27 · 20/400/32 (V6: 18→20 desktop) · rgba(255,255,255,.92) · --pa-ljus #40506a",
+   "regel": "scopade typöverrider i hjältefilerna är förbjudna"
+  },
+  "knappar": {
+   "ampy-btn (bas)": "min-h 56/52, padding 0 24, radie 14, 17px 600 lh 1.1, transition .18s",
+   "ampy-btn--mint": "width 100 %, --ap-grad-action, text navy, hover brightness 1.06 + −1px",
+   "btn-ring / ampy-btn--ring": "VERBATIM CTA-website (58 h, radie 16, blå gradient, vit chip, puls)",
+   "btn-radgivning / ampy-btn--radgivning": "VERBATIM CTA-website (58 h, radie 16, grön gradient, pil ↗ skala 1.18) — V6: naturlig bredd på alla bredder, fullbredd kräver --block",
+   "ampy-btn--emergency": "eljour: width 100 %, 146deg #055a4b→#08735f→#0a8169, 1px vit .12 kant, skugga 0 10px 24px rgba(4,110,90,.32), vit 17px 600; hover ljusnar INTE (4.5:1)",
+   "ampy-btn--ghost": "rgba(255,255,255,.10) + 1px .40 kant, vit",
+   "ampy-link-quiet": "48 px träffyta, 15px 500 --ap-ink, hover teal underline",
+   "hgf-call": "tyst samtalsrad: hårlinjer topp/botten, ikon 20 teal, nummer 17/600 vit, sub 13 --ap-ink-quiet"
+  },
+  "falt": {
+   "ampy-field__label": "14px 600 lh 20 --ap-ink; ingen asterisk ('(valfritt)' märks)",
+   "ampy-field__input": "h 56/52, padding 0 16, vit, 1px rgba(255,255,255,.16), radie 12, 16px 400 navy; focus 2px teal + 0 0 0 3px rgba(0,169,145,.18) (padding 15 = noll hopp); invalid 1.5px #e5484d",
+   "ampy-field__help/err": "13px; err #ffb4b6",
+   "ampy-field__receipt / ampy-chip": "pill 999, rgba(0,169,145,.12) + 1px .35, #7fe9d4 13px 600, h 30"
+  },
+  "proof": {
+   "ampy-trustrow": "12px 500 vit .88, ikon 18 teal, '·'-separator",
+   "ampy-grow": "VERBATIM Hero-1: 14.5px, G-ikon 16, '5,0' strong, stjärnor 13.5 gap 2.5, sep 1×15, volymrad; ≤560 kolumn 13.5px sep 26×1; V7: ALLA stjärnor guld #FBBC04 på alla ytor (ägardirektiv 2026-08-06, upphäver Hero-1:s vita)"
+  },
+  "breadcrumb": "13px 500 lh 18 --ap-ink-soft, '›' 8px gap, aria-current --ap-ink-strong; egen rad överst: 20 topp mobil / 40 @768 / 48 @≥1200"
+ },
+ "farger": [
+  {
+   "hex": "#090b32",
+   "token": "--apmidnight-blue",
+   "roll": "--ap-navy: hjälteyta S/G/E, focus-outline, scrim rgba(9,11,50,α)",
+   "antal": "prim 3, s 0, g 2, z 1, e 1 + var --ap-navy 10",
+   "kalla_fil": "dist/ampy-hero-primitives.css:66"
+  },
+  {
+   "hex": "#1b1d4b",
+   "token": null,
+   "roll": "HERO-Z hjälteyta (uppmätt rgb(27,29,75)) — 'Z-navy'",
+   "antal": 1,
+   "kalla_fil": "dist/ampy-hero-z.css",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#16183f",
+   "token": null,
+   "roll": "HERO-Z formkortets yta (+160deg vit .07→.02 dager, 1px vit .14 kant)",
+   "antal": 1,
+   "kalla_fil": "dist/ampy-hero-z.css:262",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#17204a",
+   "token": null,
+   "roll": "--ap-navy-soft (glasyta, definierad i primitiverna)",
+   "antal": 1,
+   "kalla_fil": "primitives:67",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#00a991",
+   "token": "--apteal-core",
+   "roll": "--ap-teal: fokusringar, ikoner, chips, quiet-links",
+   "antal": "prim 1 + var 10; z 1; e 1",
+   "kalla_fil": "primitives:72"
+  },
+  {
+   "hex": "#55ff9a",
+   "token": "--apneon-mint",
+   "roll": "gradientstart, --ehe-glyph, pulsprick",
+   "antal": "prim 3, z 1, e 1",
+   "kalla_fil": "primitives:74"
+  },
+  {
+   "hex": "#5eb1bf",
+   "token": null,
+   "roll": "gradientslut (GAP 21 — legacy-listad men byggt med live-värdet)",
+   "antal": "prim 3, z 1",
+   "kalla_fil": "primitives:80",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#b6f2ff",
+   "token": "--apcrystal-blue",
+   "roll": "ring-gradientstart; Z --crystal",
+   "antal": 2,
+   "kalla_fil": "primitives, z"
+  },
+  {
+   "hex": "#39c281",
+   "token": "--apemerald-flow",
+   "roll": "--ap-emerald (definierad, 0 användningar)",
+   "antal": 0,
+   "kalla_fil": "primitives:75"
+  },
+  {
+   "hex": "#f5f9ff",
+   "token": "--apsky-mist",
+   "roll": "--ap-mist palettreset",
+   "antal": 1,
+   "kalla_fil": "primitives:68"
+  },
+  {
+   "hex": "#dbe3ec / #c9d4e0 / #aeb9c6 / #8a97a6",
+   "token": null,
+   "roll": "ink-skala på navy (ink / soft / quiet / placeholder) — uppmätt crumbs rgb(201,212,224)",
+   "antal": 4,
+   "kalla_fil": "primitives:83-88",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#fbbc04",
+   "token": null,
+   "roll": "Google-stjärnor guld (V7 alla ytor)",
+   "antal": 3,
+   "kalla_fil": "primitives:640-655",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#7fe9d4 / #bff3e6 / #ffb4b6 / #e5484d / #e24b4a",
+   "token": null,
+   "roll": "chip-ink / Z-hjälptext / feltext / fel-kant (två olika röda)",
+   "antal": "2/1/3/1/1",
+   "kalla_fil": "primitives, z",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#055a4b → #08735f → #0a8169",
+   "token": null,
+   "roll": "eljour-nödknappens mörkgröna gradient (live-värdet) + skugga rgba(4,110,90,.32)",
+   "antal": 1,
+   "kalla_fil": "dist/ampy-hero-eljour.css:24",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#0a6e58 / #e3f6f1 / #fdeceb / #b3261e / #fff4e0 / #8a5800 / #e3a008 / #eef1f6 / #4a5068 / #e6ecf4",
+   "token": null,
+   "roll": "eljour-specifika: pill-ink/-yta, akut-bg/-ink, varn-bg/-ink/-dot, grå-tint/-ink, trust-ink",
+   "antal": 10,
+   "kalla_fil": "dist/ampy-hero-eljour.css:96-144",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#1e1e1e / #333 / #b2b2b2 / #bfe9fb / #00ffda",
+   "token": "#1e1e1e = --apdarkest-black, #333 = --apcharcoal-gray",
+   "roll": "Z-kortets .aof-arv: submit-ink, input-text, placeholder-grå, lightblue, neon2 (#00ffda: 'finns inte i Ampys tokenlista', död men definierad)",
+   "antal": 5,
+   "kalla_fil": "dist/ampy-hero-z.css:278-280"
+  },
+  {
+   "hex": "#40506a",
+   "token": null,
+   "roll": "--pa-ljus lead-färg (E ljus yta)",
+   "antal": 1,
+   "kalla_fil": "primitives",
+   "utanfor_tokens": true
+  },
+  {
+   "hex": "#e6e6ea",
+   "token": null,
+   "roll": "HERO-G sekundär-pill kant?",
+   "antal": 1,
+   "kalla_fil": "dist/ampy-hero-g.css",
+   "utanfor_tokens": true
+  }
+ ],
+ "typografi": [
+  {
+   "roll": "h1 (.ampy-h1) — identisk S/G/Z/E",
+   "font": "Outfit",
+   "size": "34 / 40 / 48px per @container 768/1200",
+   "px_desktop": 48.0,
+   "px_mobil": 34.0,
+   "weight": 700,
+   "lh": 1.07,
+   "ls": "-0.008em (uppmätt −0.384px @48)",
+   "color": "#ffffff (E ljus: navy)",
+   "kalla_fil": "primitives:2b",
+   "not": "Hero-1 desktop 60 → 48 här ('en aning mindre än startsidans')"
+  },
+  {
+   "roll": "lead (.ampy-lead)",
+   "font": "Outfit",
+   "size": "16/25 · 17/27 · 20/32",
+   "px_desktop": 20.0,
+   "px_mobil": 16.0,
+   "weight": 400,
+   "lh": 1.6,
+   "ls": "normal",
+   "color": "rgba(255,255,255,.92)",
+   "kalla_fil": "primitives:2b"
+  },
+  {
+   "roll": "CTA rådgivning (S, G)",
+   "font": "Outfit",
+   "size": "16px",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 500,
+   "lh": 1,
+   "color": "hsl(237 35% 24%)",
+   "kalla_fil": "primitives:3a-bis",
+   "not": "uppmätt 242.3×58 = biblioteket exakt"
+  },
+  {
+   "roll": "CTA ring (Z, E)",
+   "font": "Outfit",
+   "size": "16px",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 500,
+   "lh": 1,
+   "color": "hsl(237 35% 24%)",
+   "kalla_fil": "primitives:3a-bis",
+   "not": "uppmätt 227.6×58 (Z) / 287.8×58 (E 'Ring eljouren …')"
+  },
+  {
+   "roll": "G sekundär-pill 'Våra laddboxar'",
+   "font": "Outfit",
+   "size": "16px",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 500,
+   "lh": 1.5,
+   "color": "#fff",
+   "kalla_fil": "dist/ampy-hero-g.css .ampy-hero-g__sek",
+   "not": "pill 999, padding 13/32 (mobil 11/28 + bg rgba(255,255,255,.06)), 175×50"
+  },
+  {
+   "roll": "E sekundär vit knapp 'Jag vill bli kontaktad'",
+   "font": "Outfit",
+   "size": "16px",
+   "px_desktop": 16,
+   "px_mobil": 16,
+   "weight": 500,
+   "lh": 1.1,
+   "color": "#090b32",
+   "kalla_fil": "dist/ampy-hero-eljour.css .ehe__cta-sec",
+   "not": "vit, radie 16, padding 11/28, 236×58, skugga 0 1px 2px rgba(9,11,50,.05) + rgba(15,18,60,.12)"
+  },
+  {
+   "roll": "breadcrumb (.ampy-crumbs)",
+   "font": "Outfit",
+   "size": "13px",
+   "px_desktop": 13,
+   "px_mobil": 13,
+   "weight": 500,
+   "lh": 1.38,
+   "color": "#c9d4e0 (G/E mobil: vit)",
+   "kalla_fil": "primitives:6"
+  },
+  {
+   "roll": "proof-rad (.ampy-grow)",
+   "font": "Outfit",
+   "size": "14.5px / ≤560 13.5px",
+   "px_desktop": 14.5,
+   "px_mobil": 13.5,
+   "weight": 400,
+   "lh": 1,
+   "color": "#fff",
+   "kalla_fil": "primitives:5b"
+  },
+  {
+   "roll": "Z formkort titel",
+   "font": "Outfit",
+   "size": "27px → 24 (trappan) / mobil min(24px, formel)",
+   "px_desktop": 24,
+   "px_mobil": 24,
+   "weight": 700,
+   "lh": 1.25,
+   "ls": "-0.008em",
+   "color": "#fff",
+   "kalla_fil": "dist/ampy-hero-z.css:291"
+  },
+  {
+   "roll": "Z formkort subtitle",
+   "font": "Outfit",
+   "size": "15px / ≤991 14px",
+   "px_desktop": 14,
+   "px_mobil": 15,
+   "weight": 400,
+   "lh": 1.3,
+   "color": "#fff .82",
+   "kalla_fil": "z.css:292"
+  },
+  {
+   "roll": "Z label",
+   "font": "Outfit",
+   "size": "14px lh 18 / ≤991 13/16",
+   "px_desktop": 13,
+   "px_mobil": 14,
+   "weight": 400,
+   "color": "#fff (asterisk vit)",
+   "kalla_fil": "z.css:313"
+  },
+  {
+   "roll": "Z input",
+   "font": "Outfit",
+   "size": "17px / ≤991 16px; h 44 (bas 48 → 52 ≤600 → 44 ≥601)",
+   "px_desktop": 16,
+   "px_mobil": 17,
+   "weight": 400,
+   "color": "#333 på vit, radie 10, padding 0 16, focus 0 0 0 3px rgba(0,169,145,.55)",
+   "kalla_fil": "z.css:321-325"
+  },
+  {
+   "roll": "Z submit",
+   "font": "Outfit",
+   "size": "19px, h 52 (uppmätt 48 desktop / 54 mobil)",
+   "px_desktop": 18,
+   "px_mobil": 19,
+   "weight": 600,
+   "color": "#1e1e1e på 120deg #55ff9a→#5eb1bf, radie 16",
+   "kalla_fil": "z.css:343-344"
+  },
+  {
+   "roll": "Z consent-rad",
+   "font": "Outfit",
+   "size": "12px",
+   "px_desktop": 12,
+   "px_mobil": 12,
+   "weight": 400,
+   "color": "vit, länk vit understruken, centrerad",
+   "kalla_fil": "z.css"
+  }
+ ],
+ "spacing": [
+  {
+   "roll": "hjälteram",
+   "varde": "S/G/E: yta 1424 bred (viewport − 2×8) radie 22, höjd 683.5 @1440; mobil 374×754 radie 18 (samma ram som Hero-1: 22/18)",
+   "px_desktop": "1424×683.5",
+   "px_mobil": "374×754",
+   "token": null,
+   "kalla_fil": "dist/ampy-hero-s.css, -g.css, -eljour.css"
+  },
+  {
+   "roll": "S text-padding",
+   "varde": "crumbs 48 32 0 48; mobil 0 24 + 7vh botten (59.08 = Hero-1:s formel)",
+   "px_desktop": 48,
+   "px_mobil": 24,
+   "token": null,
+   "kalla_fil": "s.css"
+  },
+  {
+   "roll": "G inner",
+   "varde": "48px 28px (container 1280); mobil 20 24",
+   "px_desktop": "48 28",
+   "px_mobil": "20 24",
+   "token": null,
+   "kalla_fil": "g.css"
+  },
+  {
+   "roll": "Z hero",
+   "varde": "40px 48px 22px; mobil 21.5 12 22; kort padding 20 alla ytor (V18), max-w 450, min-h 600",
+   "px_desktop": "40 48 22",
+   "px_mobil": "21.5 12 22",
+   "token": null,
+   "kalla_fil": "z.css"
+  },
+  {
+   "roll": "E inner",
+   "varde": "48 32 56 48; foto 460×528 margin-right 40",
+   "px_desktop": "48 32 56 48",
+   "token": null,
+   "kalla_fil": "eljour.css"
+  },
+  {
+   "roll": "Z fältrytm",
+   "varde": "fld margin-top 14 (V18), label→fält 5, group 10, submit margin-top 12, consent 18 under",
+   "token": null,
+   "kalla_fil": "z.css:294-345"
+  },
+  {
+   "roll": "breadcrumb rad",
+   "varde": "topp 20 mobil / 40 @768 / 48 @≥1200, ≥24 luft under",
+   "token": null,
+   "kalla_fil": "primitives:6"
+  },
+  {
+   "roll": "knapp-primitiver",
+   "varde": "ampy-btn padding 0 24, gap 10; bibliotekets 11/24 resp 11/30/11/12",
+   "token": null,
+   "kalla_fil": "primitives:3"
+  }
+ ],
+ "container": [
+  {
+   "roll": "hjälteytan",
+   "varde": "fullbredd minus 8px per sida (1424 @1440) — bredare än 1280",
+   "kalla_fil": "s/g/e css"
+  },
+  {
+   "roll": "G inner",
+   "varde": "1280",
+   "kalla_fil": "g.css"
+  },
+  {
+   "roll": "Z formkort",
+   "varde": "max-width 450, min-height 600",
+   "kalla_fil": "z.css:257-259"
+  },
+  {
+   "roll": "@container-brytpunkter",
+   "varde": "prim 560/768/1200 · S 767/768/1200 · G 560/561/767/768/992/1200 · Z 600/601/991/992/1200 · E 371/768/991/992/1200 (+@media 992)",
+   "kalla_fil": "dist/*.css"
+  }
+ ],
+ "radier": [
+  {
+   "roll": "hjälteram",
+   "varde": "22px / 18px mobil",
+   "token": null,
+   "not": "= Hero-1"
+  },
+  {
+   "roll": "--ap-r-card",
+   "varde": "20px (kommentar: = --apradius-l)",
+   "token": "--apradius-l (20 @1440)"
+  },
+  {
+   "roll": "--ap-r-btn",
+   "varde": "14px (ampy-btn) — men bibliotekets CTA:er 16px",
+   "token": null
+  },
+  {
+   "roll": "--ap-r-field",
+   "varde": "12px (ampy-field) — men Z-kortets input 10px",
+   "token": "--apradius-m (12)"
+  },
+  {
+   "roll": "--ap-r-pill",
+   "varde": "999px",
+   "token": "≈ --apradius-full"
+  },
+  {
+   "roll": "Z formkort",
+   "varde": "16.3px ('apradius-l @390') / uppmätt 20 desktop",
+   "token": null
+  },
+  {
+   "roll": "E foto",
+   "varde": "72px 28px (asymmetrisk)",
+   "token": null
+  },
+  {
+   "roll": "E sekundär",
+   "varde": "--r-m 16 / --r-s 10; mobilkort --ehe-kort-r 18",
+   "token": null
+  },
+  {
+   "roll": "G sekundär-pill",
+   "varde": "999px",
+   "token": null
+  }
+ ],
+ "skuggor": [
+  {
+   "roll": "Z formkort",
+   "varde": "0 28px 60px -28px rgba(0,0,0,.65) + border 1px rgba(255,255,255,.14)",
+   "token": null
+  },
+  {
+   "roll": "E foto",
+   "varde": "0 0 0 1px rgba(255,255,255,.12) + rgba(0,0,0,.6…)",
+   "token": null
+  },
+  {
+   "roll": "E sekundär vit",
+   "varde": "0 1px 2px rgba(9,11,50,.05), … rgba(15,18,60,.12)",
+   "token": null
+  },
+  {
+   "roll": "nödknapp",
+   "varde": "0 10px 24px rgba(4,110,90,.32) + inset 0 1px 0 rgba(255,255,255,.22); hover 0 14px 32px .40",
+   "token": null
+  },
+  {
+   "roll": "CTA:er",
+   "varde": "= CTA-website",
+   "token": null
+  },
+  {
+   "roll": "scrim",
+   "varde": "tokeniserad (--ampy-scrim-bastant/-latt) — enda tokeniserade 'skuggan' i biblioteket",
+   "token": null
+  }
+ ],
+ "rorelse": [
+  {
+   "roll": "--ap-motion",
+   "varde": ".18s (tak 300 ms enligt designsystem §4)"
+  },
+  {
+   "roll": "CTA:er",
+   "varde": ".16s ease (bibliotekets)"
+  },
+  {
+   "roll": "input focus",
+   "varde": "box-shadow .15s (Z) / border+shadow .18s (ampy-field)"
+  },
+  {
+   "roll": "puls-ring",
+   "varde": "ampyRing 2.8s"
+  },
+  {
+   "roll": "reduced-motion",
+   "varde": "CTA-transition/transform none, puls av"
+  }
+ ],
+ "breakpoints": [
+  "@container ampyhero 560 / 768 / 1200 (primitiver)",
+  "S 767/768/1200",
+  "G 560/561/767/768/992/1200",
+  "Z 600/601/991/992/1200",
+  "E 371/768/991/992/1200"
+ ],
+ "komponenter": [
+  {
+   "namn": "HERO-S (tjänstesidor, 22 st)",
+   "anatomi": "navy ram 22px; vänster: crumbs + h1 48/700 vit + lead 20/400 + rådgivnings-CTA (naturlig bredd) + proof-rad; höger: kvadratisk bild 619×619 med --ampy-scrim-latt; mobil: bild bakom text med --scrim-bastant, allt i ett kort 374×754",
+   "states": [
+    "hover CTA"
+   ],
+   "html_ref": "preview/scen-s-1440.html",
+   "css_ref": "dist/ampy-hero-s.css",
+   "skarmdump_crop": "hero-2-alternatives-s-desktop.png"
+  },
+  {
+   "namn": "HERO-G (ortsidor laddbox, 168 st)",
+   "anatomi": "foto-hero fullbredd (stenvägg) med scrim, inner 1280 padding 48/28: crumbs + h1 + lead + [rådgivnings-CTA + sekundär ghost-pill 'Våra laddboxar' 999px] + proof-rad; mobil samma stack",
+   "states": [
+    "hover"
+   ],
+   "html_ref": "preview/scen-g-1440.html",
+   "css_ref": "dist/ampy-hero-g.css",
+   "skarmdump_crop": "hero-2-alternatives-g-desktop.png"
+  },
+  {
+   "namn": "HERO-Z (elektriker i ort)",
+   "anatomi": "Z-navy (#1b1d4b) ram med tre vågor; vänster: crumbs + h1 + lead + ring-CTA + proof; höger: formkort 450×613 #16183f radie 20, titel 24/700 + subtitle 14, 5 fält (namn/tel/e-post/adress/meddelande) label 13 + input 44 h radie 10 vit, submit 48–52 h 19/600 gradient radie 16, consent 12px centrerad; mobil: kort under texten, sidhöjd 1520",
+   "states": [
+    "focus 0 0 0 3px teal .55",
+    "err 0 0 0 2px #e24b4a + #ffb4b6",
+    "disabled .6"
+   ],
+   "html_ref": "preview/scen-z-1440.html",
+   "css_ref": "dist/ampy-hero-z.css",
+   "skarmdump_crop": "hero-2-alternatives-z-desktop.png"
+  },
+  {
+   "namn": "HERO-E (eljour, 57 st)",
+   "anatomi": "navy ram, inner 48/32/56/48: crumbs + h1 + lead + [ring-CTA 'Ring eljouren 010-265 79 79' + vit sekundär 'Jag vill bli kontaktad' radie 16] + proof-rad med tredje segment 'Målsättning: på plats inom en timme'; höger: foto 460×528 radie 72/28 asymmetrisk; mobil: foto bakom, sky-mist yta 12/8 runt kortet",
+   "states": [
+    "hover"
+   ],
+   "html_ref": "preview/scen-e-1440.html",
+   "css_ref": "dist/ampy-hero-eljour.css",
+   "skarmdump_crop": "hero-2-alternatives-e-desktop.png"
+  },
+  {
+   "namn": "primitiver (delade)",
+   "anatomi": "ampy-h1 / ampy-lead / ampy-btn(--mint/--emergency/--ghost) / btn-ring / btn-radgivning / ampy-link-quiet / hgf-call / ampy-field(+prefix, receipt, echo) / ampy-chip / ampy-trustrow / ampy-grow / ampy-crumbs / ampy-scrim",
+   "states": [],
+   "css_ref": "dist/ampy-hero-primitives.css"
+  }
+ ],
+ "varianter": [
+  {
+   "namn": "v3-s / v4-s (preview/v3-s-*.html, v4-s-*.html)",
+   "status": "historik",
+   "anatomi": "tidigare S-iterationer"
+  },
+  {
+   "namn": "_v4g-kontrast, _v4z-langort, _v4e-lagen",
+   "status": "QA-scener",
+   "anatomi": "kontrast-/långt-ortnamn-/lager-prov"
+  },
+  {
+   "namn": "_rigg-*.html/php",
+   "status": "mätharness",
+   "anatomi": "levereras aldrig"
+  }
+ ],
+ "signaturenhet": "EN typskala (34/40/48 · 700 · 1.07) och EN handlingsgradient för fyra intents — plus scrim-tokens som gör vilken ACF-bild som helst läsbar. Z:s formkort på hjälten är systemets enda formulär-i-hero.",
+ "defekter": [
+  "Fjärde tokennamnrummet (--ap-navy/--ap-teal/--ap-ink*/--ap-r-*) på wrappern — samma färger som header (--ap-teal) och Hero-1 (--apteal-core) under tredje namnet; Z-kortet har ett femte (.aof-arvet: --mid/--sea/--neon1/--ink) och E ett sjätte (--ehe-*, --akut-*, --varn-*).",
+  "Tre navyer i ett system: #090b32 (S/G/E), #1b1d4b (Z-yta), #16183f (Z-kort) + #17204a (--ap-navy-soft).",
+  "Två radie-system inuti: primitiverna säger btn 14 / field 12 / card 20, men de faktiskt använda CTA:erna är 16, Z-input 10, Z-kort 16.3/20, E-foto 72/28.",
+  "Ink-skalan (#dbe3ec/#c9d4e0/#aeb9c6/#8a97a6) och felfärgerna (#e5484d vs #e24b4a, #ffb4b6) saknar ap-tokens; två olika röda.",
+  "#5eb1bf i handlingsgradienten är legacy-listad (GAP 21) men byggt med live-värdet; #00ffda och --ap-emerald definieras men används inte.",
+  "Hjälteytan är 1424 bred (fullbredd −8) och h1 48 — men Hero-1 är 1700/60: två hero-ramar med olika typskala på samma sajt.",
+  "Stjärnor guld #FBBC04 överallt (V7-direktiv) — motsäger Hero-1:s vita stjärnor på foto (ägargodkänd) → konflikt mellan två auktoritet-1/2-källor.",
+  "Submit-knappen i Z (19/600, h 52, --ink #1e1e1e) skiljer från bibliotekets CTA (16/500, 58 h, hsl-navy) trots kommentaren 'BIBLIOTEKETS handlingsgradient'.",
+  "Öppna lanseringsgrindar: webhook null, laddbox-pris 4 190 vs 'från ca 5 000', 'Vardagar 07-17', recensionsantal, header-pill."
+ ],
+ "regler_som_ligger_i_koden": [
+  "tokens på wrappern, aldrig :root; inga globala resets; px, aldrig rem",
+  "@container mot egen bredd, inte @media",
+  "EN H1-stil och EN paragrafstil i alla hjältar — scopade typöverrider förbjudna",
+  "EN handlingsgradient per block; allt annat ghost/textlänk/hairline",
+  "H1 solid vit — textgradient förbjuden i hjältar (lever bara på knappar)",
+  "scrim via token-pekare, aldrig lokalt omdefinierad gradient",
+  "balance <768, wrap+pretty ≥768",
+  "input ≥16px (iOS-zoom), focus utan hopp (padding-kompensation)",
+  "ingen asterisk; '(valfritt)' märks; hjälptext säger varför",
+  "honeypot aldrig display:none; consent före klick",
+  "reduced-motion; forced-colors; motion-tak 300 ms",
+  "ALLA Google-stjärnor guld (V7)"
+ ],
+ "matdata": "inventering/_probes/out/a1-hero-2-{s,g,z,e}.json + a1-hero-2-z-form.json"
+}
