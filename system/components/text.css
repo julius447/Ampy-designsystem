@@ -29,7 +29,6 @@
 
 /* ---------- Tag / badge / pill (elcentral __pill: fem nivåer, ikon 16, radie full) ---------- */
 .ampy-tag {
-  --_info-tint: rgb(224,236,248);      /* elcentralkollen.css:74 --pill-info-bg ; info-tint saknas i tokens (bara --ampy-info-ink), se bygglogg */
   display: inline-flex; align-items: center; gap: var(--ampy-space-inline-xs);
   padding: var(--ampy-space-2xs) var(--ampy-space-xs);                     /* elcentral 8/14 ; 2xs/xs = 9.9/14 -> 8.3/10.5 */
   border-radius: var(--ampy-radius-pill);
@@ -41,12 +40,15 @@
 .ampy-tag--lg { font-size: var(--ampy-text-body); }                                    /* elcentral desktopskala >= 1280: fs-18 */
 .ampy-tag--sm { font-size: var(--ampy-text-eyebrow); padding: 4.5px 11px; letter-spacing: 0; }   /* eljour __tag 12/600, .45rem 1.1rem */
 .ampy-tag--sm svg { width: 12px; height: 12px; }
-.ampy-tag--success { background: var(--ampy-success-tint); color: var(--ampy-success-ink); }
-.ampy-tag--warning { background: var(--ampy-warn-tint);    color: var(--ampy-warn-ink); }
-.ampy-tag--error   { background: var(--ampy-error-tint);   color: var(--ampy-error-ink); }
-.ampy-tag--info    { background: var(--_info-tint);        color: var(--ampy-info-ink); }
+.ampy-tag--success { background: var(--ampy-success-tint-strong); color: var(--ampy-success-ink); }   /* elcentral pill-bg rgb(214,240,229) (TOKENS-4): den ljusare --ampy-success-tint försvann i beskedzonen (granskning S2-7) */
+.ampy-tag--warning { background: var(--ampy-warn-tint-strong);    color: var(--ampy-warn-ink); }      /* elcentral rgb(250,233,197) */
+.ampy-tag--error   { background: var(--ampy-error-tint-strong);   color: var(--ampy-error-ink); }     /* elcentral rgb(250,224,222) */
+.ampy-tag--info    { background: var(--ampy-info-tint);    color: var(--ampy-info-ink); }                                   /* elcentralkollen.css:74 --pill-info-bg = --ampy-info-tint (TOKENS-4) */
 .ampy-tag--neutral { background: var(--ampy-bg-subtle);    color: var(--ampy-ink); border: 1px solid var(--ampy-line-strong); }   /* elcentral neutral: synlig kant */
 .ampy-tag--action  { background: var(--ampy-bg-tint-action); color: var(--ampy-action-strong); }                                  /* booking/offer ref-pill teal .08 */
+/* Interaktiv tagg (a/button, t.ex. --live som länk till jourens sida): härledd hover, ingen källa ritar den (granskning S2-10) */
+a.ampy-tag:hover, button.ampy-tag:hover, .ampy-tag.is-hover { text-decoration: underline; text-underline-offset: 2px; filter: brightness(.97); }
+a.ampy-tag, button.ampy-tag { cursor: pointer; text-decoration: none; border: 0; }
 /* Statuspill med puls (eljour __status "Jour öppen just nu": 13/600 teal-pill på teal-tint, prick 9 med puls 2 s) */
 .ampy-tag--live { background: var(--apteal-tint); color: var(--ampy-success-ink); }
 .ampy-tag__pulse { position: relative; width: 9px; height: 9px; border-radius: var(--ampy-radius-pill); background: var(--ampy-action); flex: 0 0 auto; }
@@ -64,8 +66,6 @@
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-tag--live    { background: rgba(0,169,145,.12); border: 1px solid rgba(0,169,145,.35); color: var(--ampy-on-dark); }
 
 /* ---------- Stat-trio (LED __trio): 3 kolumner, etikett / värde + enhet / undertext ---------- */
-.ampy-stat-trio, .ampy-readout {
-}
 .ampy-stat-trio {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto auto;
   grid-auto-flow: column; column-gap: var(--ampy-space-s); row-gap: 2px; align-items: baseline;   /* LED column-gap 15 (--spacing-lg) -> s 19.8/13.3 */
@@ -106,7 +106,7 @@
 }
 .ampy-source--plain { border-top: 0; padding-top: 0; }
 .ampy-source a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-.ampy-source a:hover { color: var(--ampy-ink); }
+.ampy-source a:hover, .ampy-source a.is-hover { color: var(--ampy-ink); text-decoration-thickness: 2px; }   /* .is-hover = dokumentationens spegling av hover (granskning S2-10) */
 .ampy-source svg { display: inline-block; width: 13px; height: 13px; vertical-align: -2px; opacity: .75; }     /* elkollen __verdict-src extern-ikon 1.3rem ; inline (base.css sätter svg block) */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) .ampy-source { color: var(--ampy-on-dark-faint); border-top-color: var(--ampy-on-dark-line); }
 
@@ -117,7 +117,7 @@
   font-family: var(--ampy-font); font-size: var(--_fs); font-weight: var(--ampy-w-ui); line-height: 1; color: var(--ampy-ink);
 }
 .ampy-proof__row { display: inline-flex; align-items: center; gap: 9px; color: inherit; text-decoration: none; }   /* hero-1 g-row gap 9 */
-.ampy-proof__row:hover .ampy-proof__label { text-decoration: underline; text-underline-offset: 3px; }
+.ampy-proof__row:hover .ampy-proof__label, .ampy-proof__row.is-hover .ampy-proof__label { text-decoration: underline; text-underline-offset: 3px; }
 .ampy-proof__icon { width: 16px; height: 16px; flex: 0 0 auto; }
 .ampy-proof__label { white-space: nowrap; }
 .ampy-proof strong { font-weight: var(--ampy-w-display); color: inherit; }
@@ -159,7 +159,7 @@
 .ampy-list--check li { display: flex; align-items: flex-start; gap: var(--ampy-space-xs); font-family: var(--ampy-font); font-size: var(--ampy-text-body); font-weight: var(--ampy-w-medium); line-height: 1.45; color: var(--ampy-ink-muted); }
 .ampy-list--check li > svg, .ampy-list__icon { flex: 0 0 auto; width: 20px; height: 20px; margin-top: 2px; color: var(--ampy-action); }
 .ampy-list--check a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
-.ampy-list--check a:hover { color: var(--ampy-ink); text-decoration-thickness: 2px; }
+.ampy-list--check a:hover, .ampy-list--check a.is-hover { color: var(--ampy-ink); text-decoration-thickness: 2px; }
 /* Kompakt (eljour __trust: 15/400 brödtext, ikon 21 i 26-kolumn, hårlinjer runt) */
 .ampy-list--check.ampy-list--compact { padding: var(--ampy-space-s) 0; border-top: 1px solid var(--ampy-line); border-bottom: 1px solid var(--ampy-line); }
 .ampy-list--check.ampy-list--compact li { font-size: var(--ampy-text-small); font-weight: var(--ampy-w-ui); line-height: 1.4; color: var(--ampy-ink-body); }

@@ -27,7 +27,7 @@
 
 /* ---------- Rot: container, kit-egna mått ---------- */
 .ampy-calc {
-  --_fine: var(--ampy-text-fine);                /* 13 px-golvet ur text.css (LED --fs-xs 13/12) */
+  --_fine: var(--ampy-text-fine);                /* 13 px-golvet, tokens.css --ampy-text-fine sedan 2026-09-12 (LED --fs-xs 13/12) */
   --_tip: 16px;                                   /* källa: styles.css:269 tip 1.6rem */
   --_tip-fs: 10px;                                /* källa: styles.css:270 font-size 1rem (10 px) */
   --_key: 60px;                                   /* källa: styles.css:401 compare-key 6rem (<= 560: 5rem) */
@@ -198,7 +198,7 @@
 .ampy-calc__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .ampy-calc__lead-fine { margin: 0; font-size: var(--_fine); color: var(--ampy-on-dark-faint); text-align: center; }
 .ampy-calc__lead-cancel { font: inherit; color: var(--ampy-on-dark-muted); text-decoration: underline; text-underline-offset: 2px; background: none; border: 0; padding: 0; cursor: pointer; }
-.ampy-calc__lead-cancel:hover { color: var(--ampy-on-dark); }
+.ampy-calc__lead-cancel:hover, .ampy-calc__lead-cancel.is-hover { color: var(--ampy-on-dark); }
 .ampy-calc__lead-cancel:focus-visible { outline: 2px solid var(--ampy-focus-on-dark); outline-offset: 2px; border-radius: 3px; }
 
 /* ---------- "Så har vi räknat" (LED styles.css:276-282, 335-343): eget vitt kort under resultatkortet ---------- */
@@ -241,7 +241,7 @@
 .ampy-calc__streams-details { border-top: 1px solid var(--ampy-on-dark-line); margin-top: var(--ampy-space-4xs); padding-top: var(--ampy-space-4xs); }
 .ampy-calc__streams-summary { display: flex; align-items: center; gap: var(--ampy-space-4xs); list-style: none; cursor: pointer; padding: var(--ampy-space-4xs) 0; min-height: 44px; font-family: var(--ampy-font); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); color: var(--ampy-on-dark-muted); }
 .ampy-calc__streams-summary::-webkit-details-marker { display: none; }
-.ampy-calc__streams-summary:hover { color: var(--ampy-on-dark); }
+.ampy-calc__streams-summary:hover, .ampy-calc__streams-summary.is-hover { color: var(--ampy-on-dark); }
 .ampy-calc__streams-summary svg { width: 14px; height: 14px; transition: transform var(--ampy-dur-fast) var(--ampy-ease); }
 .ampy-calc__streams-details[open] .ampy-calc__streams-summary svg { transform: rotate(180deg); }
 .ampy-calc__streams-summary:focus-visible { outline: 2px solid var(--ampy-focus-on-dark); outline-offset: 2px; border-radius: var(--ampy-radius-small); }
@@ -267,7 +267,7 @@
 .ampy-calc__chart-plot svg { display: block; width: 100%; height: 100%; overflow: visible; }
 .ampy-calc__chart-axis { position: relative; height: var(--_axis-h); margin-top: 2px; }
 .ampy-calc__chart-corner { position: absolute; pointer-events: none; white-space: nowrap; font-family: var(--ampy-font); line-height: 1.2; }
-.ampy-calc__chart-corner--end { top: 0; right: 0; font-size: clamp(15px, 0.2vw + 14px, 17px); font-weight: var(--ampy-w-display); color: var(--ampy-action); font-variant-numeric: tabular-nums; }   /* battery mono 700 15-17 teal ; teal-core som text på midnight 5,2:1 */
+.ampy-calc__chart-corner--end { top: 0; right: 0; font-size: clamp(16px, 0.2vw + 14px, 17px); font-weight: var(--ampy-w-display); color: var(--ampy-action); font-variant-numeric: tabular-nums; }   /* battery mono 700 clamp(15, 15+0.2vw, 17) teal ; teal core som TEXT på midnight (6,41:1) är tillåten per B21 för siffra >= 16 px där källan gör så: golvet höjt 15 -> 16 så regeln håller i alla bredder (fixrunda 2026-09-12) */
 .ampy-calc__chart-corner--end.is-loss { color: var(--ampy-warn); }
 .ampy-calc__chart-corner--today, .ampy-calc__chart-corner--axis-end { bottom: 0; font-size: var(--_fine); font-weight: var(--ampy-w-medium); color: var(--ampy-on-dark-muted); }
 .ampy-calc__chart-corner--today { left: 0; }
@@ -277,7 +277,7 @@
 .ampy-calc__be-line { position: absolute; top: calc(var(--_plot-top) + var(--_plot-h) * (1 - var(--_be-y, .5)) + 7px); bottom: var(--_plot-bot); left: 50%; width: 0; border-left: 1px dashed rgba(255,255,255,.34); transform: translateX(-50%); }   /* battery vit .34 streckad */
 .ampy-calc__be-label { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; white-space: nowrap; text-align: center; line-height: 1.15; }
 .ampy-calc__be-caption { font-family: var(--ampy-font); font-size: var(--_fine); font-weight: var(--ampy-w-medium); color: var(--ampy-on-dark-soft); }
-.ampy-calc__be-time { font-family: var(--ampy-font); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-display); color: var(--ampy-action); margin-top: 1px; }
+.ampy-calc__be-time { font-family: var(--ampy-font); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-display); color: var(--ampy-on-dark); margin-top: 1px; }   /* battery clamp(13, 13+0.15vw, 15) 700 teal: under B21:s 16 px-golv i alla bredder, därför vit (--ampy-on-dark, 17,4:1); teal bär pricken (__be-dot), inte texten (fixrunda 2026-09-12) */
 .ampy-calc__chart.is-no-payback .ampy-calc__chart-corner, .ampy-calc__chart.is-no-payback .ampy-calc__be, .ampy-calc__chart.is-no-be .ampy-calc__be { display: none; }
 .ampy-calc__chart.is-be-early .ampy-calc__chart-corner--today { display: none; }
 

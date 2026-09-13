@@ -36,9 +36,7 @@
    Avvikelser mot källorna: site/komponenter/falt.html "Avvikelser" + site/_bygglogg/S2.md.
    ============================================================================ */
 
-/* ---------- Gemensamma fältvärden (bara här, en gång) ---------- */
-:where(.ampy) {
-}
+/* Gemensamma fältvärden (--ampy-field-h 48, --ampy-field-fs 16, --ampy-field-track) ligger i tokens.css (flyttade 2026-09-12, granskning S2-2/TOKENS-1). */
 
 /* ---------- Fältgrupp: etikett -> kontroll -> hjälp/fel ---------- */
 .ampy-field { display: flex; flex-direction: column; gap: var(--ampy-space-3xs); min-width: 0; }   /* hero-2 gap 6, elcentral 8, LED 5 -> 3xs 7/6.6 */
@@ -50,9 +48,15 @@
 .ampy-field__req { color: var(--ampy-ink); }                                                              /* elcentral __lead-req: samma bläck, ingen röd asterisk */
 .ampy-field__opt { font-weight: var(--ampy-w-ui); color: var(--ampy-ink-faint); }                          /* LED __lead-optional "(valfritt)" */
 .ampy-field--inline { flex-direction: row; align-items: center; gap: var(--ampy-space-xs); }
-/* Fältgrid: två kolumner >= 600 (LED lead-grid 600, elcentral 767, main-form 768) */
-.ampy-fields { display: grid; grid-template-columns: 1fr; gap: var(--ampy-space-s) var(--ampy-space-xs); }   /* elcentral 20/14, main-form 20/32 */
-@media (min-width: 600px) { .ampy-fields { grid-template-columns: 1fr 1fr; } }
+/* Fältgrid: två kolumner när kitet är brett nog (LED lead-grid >= 600 viewport, elcentral 767, main-form 768).
+   Brytpunkten mäts på gridets EGEN bredd, inte på fönstret (granskning S2-5): ett smalt kit i ett brett fönster
+   får en kolumn. Ett grid kan inte läsa sin egen @container-fråga, därför intrinsic: minsta kolumn = max(26rem, halva
+   bredden minus gap) ger exakt 1 eller 2 kolumner, aldrig 3; två kolumner från ca 534 px gridbredd (= LED:s 600-viewport). */
+.ampy-fields {
+  display: grid; gap: var(--ampy-space-s) var(--ampy-space-xs);                                                   /* elcentral 20/14, main-form 20/32 */
+  grid-template-columns: repeat(auto-fit, minmax(max(26rem, calc(50% - var(--ampy-space-xs) / 2)), 1fr));
+  container-type: inline-size;                                                                                    /* chips, segment och select inne i gridet frågar gridets bredd */
+}
 .ampy-fields > .ampy-field--full, .ampy-fields > .ampy-fields__full { grid-column: 1 / -1; }
 
 /* ---------- Input (text / tel / e-post / nummer) ---------- */
@@ -165,16 +169,16 @@
 .ampy-check input.is-invalid, .ampy-check.is-error input, .ampy-check input[aria-invalid="true"] { border-color: var(--ampy-error); box-shadow: 0 0 0 2px rgba(179,38,30,.35); }   /* LED is-invalid: kant + ring .5 i felfärg */
 .ampy-check__text { flex: 1; min-width: 0; padding-top: 3px; }
 .ampy-check__text a { color: var(--ampy-action-strong); text-decoration: underline; text-underline-offset: 2px; }
-.ampy-check__text a:hover { color: var(--ampy-ink); }
+.ampy-check__text a:hover, .ampy-check__text a.is-hover { color: var(--ampy-ink); }
 .ampy-check--strong { font-size: var(--ampy-text-small); color: var(--ampy-ink); }   /* checkbox som val (inte finstilt samtycke) */
 /* Samtycke som textrad under knappen (mönstret i 4 källor: elcentral, energycalc, main-form, fotobedomningen; ägarbeslut v2.17) */
 .ampy-consent { margin: var(--ampy-space-xs) 0 0; font-family: var(--ampy-font); font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-ui); line-height: 1.55; color: var(--ampy-ink-muted); text-align: center; max-width: none; }   /* elcentral fs-12/400 -> fine 13 (en finstiltstorlek), se avvikelser */
 .ampy-consent a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-.ampy-consent a:hover { color: var(--ampy-ink); }
+.ampy-consent a:hover, .ampy-consent a.is-hover { color: var(--ampy-ink); }
 .ampy-consent--left { text-align: left; }
 
 /* ---------- Radio-chips / options (elcentral __option) ---------- */
-.ampy-chips { display: flex; flex-direction: column; gap: var(--ampy-space-xs); margin: 0; padding: 0; list-style: none; border: 0; min-width: 0; }   /* elcentral gap 12 (14 >= 1024) -> xs 14/10.5 */
+.ampy-chips { display: flex; flex-direction: column; gap: var(--ampy-space-xs); margin: 0; padding: 0; list-style: none; border: 0; min-width: 0; container-type: inline-size; }   /* elcentral gap 12 (14 >= 1024) -> xs 14/10.5 ; container: chipens desktopskala följer listans bredd, inte fönstret */
 .ampy-chips > legend { padding: 0; margin-bottom: var(--ampy-space-2xs); font-family: var(--ampy-font); font-size: var(--ampy-text-label); font-weight: var(--ampy-w-strong); color: var(--ampy-ink); }
 .ampy-chip {
   --_h: 56px;                                            /* elcentral min-height 5.6rem (6.4rem >= 1024) ; saknas i tokens */
@@ -186,12 +190,12 @@
   background: var(--ampy-bg-surface); border: 1px solid var(--ampy-line-strong); border-radius: var(--ampy-radius-field);   /* elcentral 1 px #e3e5ed radie md 10 -> line-strong + field 12/10.1 */
   transition: border-color var(--ampy-dur-fast) var(--ampy-ease), background-color var(--ampy-dur-fast) var(--ampy-ease), transform var(--ampy-dur-fast) var(--ampy-ease), box-shadow var(--ampy-dur-fast) var(--ampy-ease);
 }
-@media (min-width: 1024px) { .ampy-chip { --_h: 64px; font-size: var(--ampy-text-body); } }   /* elcentral desktopskala: 64 h, title fs-18 */
+@container (min-width: 40rem) { .ampy-chip { --_h: 64px; font-size: var(--ampy-text-body); } }   /* elcentral desktopskala (viewport >= 1024 = stage ca 560-640 bred): 64 h, title fs-18 ; mäts på .ampy-chips bredd (granskning S2-5) */
 .ampy-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }   /* riktig radio/checkbox, visuellt dold; chipet bär tillståndet */
 .ampy-chip__body { display: block; flex: 1; min-width: 0; }
 .ampy-chip__title { display: block; }
 .ampy-chip__clarifier { display: block; margin-top: 4px; font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-ui); line-height: 1.45; color: var(--ampy-ink-muted); }   /* elcentral clarifier fs-13 400 (fs-15 >= 1024) */
-@media (min-width: 1024px) { .ampy-chip__clarifier { font-size: var(--ampy-text-small); } }
+@container (min-width: 40rem) { .ampy-chip__clarifier { font-size: var(--ampy-text-small); } }
 .ampy-chip__arrow { flex: 0 0 auto; width: 16px; height: 16px; color: var(--ampy-ink-faint); margin-left: auto; }   /* elkollen option pil */
 @media (hover: hover) {
   .ampy-chip:hover, .ampy-chip.is-hover { border-color: var(--ampy-action); background: var(--ampy-bg-subtle); transform: translateY(-1px); box-shadow: var(--ampy-shadow-subtle); }   /* elcentral :379 */
@@ -232,7 +236,7 @@
 .ampy-segment {
   display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; padding: 4px;   /* LED 0.4rem/0.4rem */
   background: var(--ampy-field-track); border-radius: var(--ampy-radius-field);            /* LED rgb(234,239,243) radie md 12 */
-  min-width: 0;
+  min-width: 0; container-type: inline-size;                                                 /* optionernas trånga läge mäts på spåret, inte fönstret */
 }
 .ampy-segment__option, .ampy-segment > button, .ampy-segment > label {
   position: relative; min-height: 40px; min-width: 0;                                       /* LED option 4rem */
@@ -250,9 +254,9 @@
 }
 .ampy-segment__option:focus-visible, .ampy-segment > button:focus-visible, .ampy-segment > label:has(input:focus-visible) { outline: 0; box-shadow: var(--ampy-focus-ring); }   /* LED ring .3 -> --ampy-focus-ring */
 .ampy-segment__option:disabled, .ampy-segment[aria-disabled="true"] > *, .ampy-segment.is-disabled > * { opacity: .5; cursor: not-allowed; }
-@media (max-width: 380px) { .ampy-segment__option, .ampy-segment > button, .ampy-segment > label { padding-inline: 3px; font-size: var(--ampy-text-fine); } }   /* LED <= 380 */
+@container (max-width: 34rem) { .ampy-segment__option, .ampy-segment > button, .ampy-segment > label { padding-inline: 3px; font-size: var(--ampy-text-fine); } }   /* LED <= 380 viewport = spår ca 340 ; mäts på spårets bredd (granskning S2-5) */
 /* --pill: toggle med solid vald (EV AC/DC): pillspår, vald = solid teal-deep + vit text */
-.ampy-segment--pill { display: inline-grid; grid-auto-columns: auto; border-radius: var(--ampy-radius-pill); gap: 2px; }   /* EV gap 0.2rem */
+.ampy-segment--pill { display: inline-grid; grid-auto-columns: auto; border-radius: var(--ampy-radius-pill); gap: 2px; container-type: normal; }   /* EV gap 0.2rem ; inline-grid får ingen inline-size-containment (bredden kommer ur innehållet) */
 .ampy-segment--pill > :is(label, button, .ampy-segment__option) { border-radius: var(--ampy-radius-pill); min-width: 64px; padding-inline: var(--ampy-space-2xs); }   /* EV min-width 6.4rem, padding 6/10 */
 .ampy-segment--pill > [aria-pressed="true"], .ampy-segment--pill > label:has(input:checked), .ampy-segment--pill .is-selected { background: var(--ampy-action-strong); color: var(--ampy-action-on); box-shadow: var(--ampy-shadow-subtle); }   /* EV #007d6b + vit -> teal-deep */
 @media (pointer: coarse) { .ampy-segment--pill > :is(label, button, .ampy-segment__option) { min-height: 44px; } }   /* EV: >= 44 på touch */
@@ -303,7 +307,7 @@
 .ampy-range__tick.is-active, .ampy-range__tick[aria-current="true"] { color: var(--ampy-action-strong); font-weight: var(--ampy-w-display); }   /* LED aktiv teal 700 -> teal-deep (B5) */
 .ampy-range__tick:focus-visible { outline: 0; box-shadow: var(--ampy-focus-ring); }
 /* Värde ovanför reglaget (LED value-prominent: mono 700 28 + enhet 15 -> Outfit tabular) */
-.ampy-range-value { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--ampy-font); font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-display); line-height: 1.3; letter-spacing: -0.01em; color: var(--ampy-ink); font-variant-numeric: tabular-nums lining-nums; }
+.ampy-range-value { display: inline-flex; align-items: baseline; gap: 6px; font-family: var(--ampy-font); font-size: var(--ampy-text-mid); font-weight: var(--ampy-w-display); line-height: 1.3; letter-spacing: -0.01em; color: var(--ampy-ink); font-variant-numeric: tabular-nums lining-nums; }   /* LED value-prominent 28 -> 21 = --ampy-text-mid, samma rad som .ampy-calc__value (granskning S2-6) */
 .ampy-range-value__unit { font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); color: var(--ampy-ink-muted); letter-spacing: 0; }
 
 /* ---------- Stepper (energycalc .stepper) ---------- */
@@ -349,8 +353,6 @@
 .ampy-msg--row { display: flex; align-items: flex-start; gap: var(--ampy-space-2xs); }
 
 /* ---------- På mörk yta (LED lead-form på resultatkortet) ---------- */
-:where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) {
-}
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) :is(.ampy-field__label, .ampy-field > label) { color: var(--ampy-on-dark-soft); }   /* LED label on-surface-text .94 */
 :where(.ampy-on-dark, .ampy--dark, .ampy-section--dark, .ampy-card--dark, .ampy-frame, .ampy-band--dark) :is(.ampy-input, .ampy-textarea, .ampy-select) {
   background-color: rgba(255,255,255,.05); color: var(--ampy-on-dark); border-color: rgba(255,255,255,.28);   /* LED styles.css:359: vit .05, 1 px on-surface-border-strong .28 ; alfa-steg utan token */

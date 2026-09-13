@@ -8,13 +8,9 @@
 <link rel="stylesheet" href="../doc.css">
 <link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
 <style>
-  /* Lokala ds-klasser för den här sidan (S3). Aldrig i doc.css. */
-  .ds-main { min-width: 0; }
-  .ds-content--wide { max-width: 128rem; }
+  /* Lokala ds-klasser för den här sidan (S3). Aldrig i doc.css. Skalets klasser (.ds-main, .ds-content--wide, .ds-demo__label--over, .ds-toc) kommer från doc.css sedan fixrundan 2026-09-12. */
   .ds-demo--full.ds-demo--kit { padding: var(--ampy-space-m); }
   .ds-demo--full.ds-demo--kit.ds-demo--dark { padding: var(--ampy-space-m); }
-  .ds-demo__label--over { z-index: 2; }
-  .ds-demo--full > .ds-demo__label--over { top: 0.6rem; right: 1rem; }
   .ds-demo--frame { padding: var(--ampy-space-m); display: block; }
   .ds-demo--frame > * + * { margin-top: var(--ampy-space-s); }
   .ds-demo--frame.ds-demo--dark { color: var(--ampy-on-dark); }
@@ -27,9 +23,6 @@
   .ds-shot figcaption { grid-column: 1 / -1; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
   .ds-dep { border: 1px solid var(--ampy-line-strong); border-left: 4px solid var(--ampy-warn-ink); border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs) var(--ampy-space-s); margin: var(--ampy-space-xs) 0 var(--ampy-space-m); font-size: var(--ampy-text-small); color: var(--ampy-ink); background: var(--ampy-bg-surface); }
   .ds-dep strong { font-weight: var(--ampy-w-strong); }
-  .ds-toc { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 var(--ampy-space-m); padding: 0; list-style: none; }
-  .ds-toc a { display: inline-block; padding: 0.5rem 1.1rem; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-pill); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); text-decoration: none; background: var(--ampy-bg-surface); }
-  .ds-toc a:hover { color: var(--ampy-ink); border-color: var(--ampy-line-strong); }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   @media (max-width: 991px) { .ds-shot { grid-template-columns: 1fr; } }
 
@@ -90,9 +83,7 @@
       <h1 class="ds-h1">Diagnostik-kitet</h1>
       <p class="ds-lead">Rail plus stage: varumärkeskolumnen till vänster, det vita frågekortet till höger. Kunden svarar med tap-chips och får ett besked i ord, aldrig bara i färg. Kanon är Elcentral-kollen (dualstatus-matrisen) och Elkollen (trafikljus-boarden), båda auktoritet 1. Klassen är <code>.ampy-diag</code>.</p>
 
-<ul class="ds-toc">
-  <li><a href="#rail">Rail och stage</a></li><li><a href="#fraga">Frågekortet</a></li><li><a href="#dual">Besked: dualstatus</a></li><li><a href="#trafik">Besked: trafikljus</a></li><li><a href="#fynd">Fynd, dela, sticky, no-JS</a></li><li><a href="#block">Blockläge</a></li><li><a href="#paritet">Paritet</a></li><li><a href="#avvikelser">Avvikelser och drift</a></li>
-</ul>
+<nav class="ds-toc" aria-label="På den här sidan"><span>På den här sidan</span><ol><li><a href="#rail">Rail och stage</a></li><li><a href="#fraga">Frågekortet</a></li><li><a href="#dual">Dualstatus</a></li><li><a href="#trafik">Trafikljus-boarden</a></li><li><a href="#fynd">Fynd, dela, sticky-CTA, no-JS</a></li><li><a href="#block">Blockläge</a></li><li><a href="#hover">Hover-varianter</a></li><li><a href="#paritet">Paritet</a></li><li><a href="#avvikelser">Avvikelser och drift</a></li></ol></nav>
 
 <div class="ds-dep"><strong>Komponerat med S2:</strong> svarsalternativen är <code>.ampy-chips</code> / <code>.ampy-chip</code> (falt.css, radio-chips med kanon elcentral-kollen), pills är <code>.ampy-tag</code> (text.css), knapparna <code>.ampy-btn</code> (knappar.css), trust-listan <code>.ampy-list--check</code>, källraden <code>.ampy-source</code>. Kitet självt (diagnostik.css) äger skalet, railen, kortet, crumb och förlopp, frågetiteln, info-rutan, dualstatus-zonen, fynd, akut, factnote, trafikljus-boarden med tabbar och rader, dela, sticky-CTA, blockläget och no-JS-noten.</div>
 
@@ -674,6 +665,86 @@
       &lt;section class="ampy-diag__card ampy-diag__card--start"&gt;…&lt;/section&gt;
     &lt;/div&gt;
     &lt;p class="ampy-diag__blockground"&gt;Byggt på Elsäkerhetslagen och Elsäkerhetsverket. Ett ärligt besked, byggt på dina egna svar.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+<h2 class="ds-h2" id="hover">Hover-varianter</h2>
+<p class="ds-p">Varje element som svarar på hover har en statisk tvilling med klassen <code>.is-hover</code> (samma konvention som S2-sidorna), så att skärmdumpar och paritetsprober visar läget utan mus: tillbaka-länken, chipet (falt.css), fyndraden, fliken, källraden, dela-knappen och railens tre knappar (knappar.css). Ingen hover ändrar storlek eller position.</p>
+<p class="ds-source">Kanon: elcentral-kollen (elcentralkollen.css:344-359 crumb, 464-488 fynd, 618-633 dela), elkollen (behorighetskollen.css:488-560 flikar och källrad), falt.css chip, knappar.css. Tillagt i fixrundan 2026-09-12 (granskning S3-4).</p>
+
+<div class="ampy ds-demo ds-demo--full ds-demo--kit" id="ex-diag-hover" data-label="Alla hover-lägen i ett kort (.is-hover)"><span class="ds-demo__label ds-demo__label--over">Alla hover-lägen i ett kort (.is-hover)</span>
+<div class="ampy-diag ampy-diag--flush ampy-diag--solo" id="diag-hover">
+  <div class="ampy-diag__inner">
+    <section class="ampy-diag__card ampy-diag__card--q" aria-label="Hover-lägen">
+      <div class="ampy-diag__crumb">
+        <span class="ampy-diag__crumb-left"><ul class="ampy-diag__steps" aria-hidden="true"><li class="ampy-diag__step is-done"></li><li class="ampy-diag__step is-current"></li><li class="ampy-diag__step"></li></ul><span class="sr-only">Fråga 2 av 3</span></span>
+        <button type="button" class="ampy-diag__back is-hover"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg>Tillbaka i hover</button>
+      </div>
+      <h3 class="ampy-diag__q">Chip i hover, chip vald, chip i vila</h3>
+      <div class="ampy-chips" role="radiogroup" aria-label="Hover-exempel">
+        <button type="button" class="ampy-chip is-hover" role="radio" aria-checked="false"><span class="ampy-chip__body"><span class="ampy-chip__title">Före 1970</span><span class="ampy-chip__clarifier">i hover</span></span></button>
+        <button type="button" class="ampy-chip is-selected" role="radio" aria-checked="true"><span class="ampy-chip__body"><span class="ampy-chip__title">1970 till 1990</span><span class="ampy-chip__clarifier">vald</span></span></button>
+        <button type="button" class="ampy-chip" role="radio" aria-checked="false"><span class="ampy-chip__body"><span class="ampy-chip__title">Efter 2010</span></span></button>
+      </div>
+      <ul class="ampy-diag__findings" aria-label="Fynd">
+        <li class="ampy-diag__finding ampy-diag__finding--ok" style="--i: 0">
+          <button type="button" class="ampy-diag__finding-head is-hover" aria-expanded="false"><span class="ampy-diag__finding-icon"><svg width="20" height="20" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-diag__finding-label">Fyndrad i hover (chevronen mörknar)</span><svg class="ampy-diag__finding-chevron" width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></button>
+          <div class="ampy-diag__finding-detail" hidden><p>Förklaringen fälls ut här.</p></div>
+        </li>
+      </ul>
+      <div class="ampy-diag__tabs" role="tablist">
+        <button type="button" class="ampy-diag__tab" role="tab" aria-selected="true">Förklaring</button>
+        <button type="button" class="ampy-diag__tab is-hover" role="tab" aria-selected="false">Tips i hover</button>
+      </div>
+      <a class="ampy-diag__src is-hover" href="#"><span>Källrad i hover: Elsäkerhetslagen (2016:732) 27 §</span><svg width="13" height="13" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-up-right"/></svg></a>
+      <div class="ampy-diag__share-row" style="margin-top: var(--ampy-space-xs)">
+        <span class="ampy-diag__share-anchor"><button type="button" class="ampy-diag__share is-hover" aria-haspopup="menu" aria-label="Dela beskedet"><svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></button></span>
+        <span class="ampy-diag__share-nudge">Dela-knapp i hover</span>
+      </div>
+      <div class="ampy-diag__cta-zone" style="max-width: 420px; margin-top: var(--ampy-space-s)">
+        <a class="ampy-btn ampy-btn--block is-hover" href="#">Gradientknapp i hover <svg class="ampy-btn__icon" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-up-right"/></svg></a>
+        <a class="ampy-btn ampy-btn--ring ampy-btn--block ampy-link--tel is-hover" href="tel:+4610265797979"><span class="ampy-btn__chip"><svg width="17" height="17" aria-hidden="true"><use href="../../system/ikoner.svg#ik-phone"/></svg></span><span>Ringknapp i hover</span></a>
+        <button type="button" class="ampy-btn ampy-btn--secondary ampy-btn--compact is-hover">Solid knapp i hover</button>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+
+<div class="ds-code"><pre><code>&lt;div class="ampy-diag ampy-diag--flush ampy-diag--solo" id="diag-hover"&gt;
+  &lt;div class="ampy-diag__inner"&gt;
+    &lt;section class="ampy-diag__card ampy-diag__card--q" aria-label="Hover-lägen"&gt;
+      &lt;div class="ampy-diag__crumb"&gt;
+        &lt;span class="ampy-diag__crumb-left"&gt;&lt;ul class="ampy-diag__steps" aria-hidden="true"&gt;&lt;li class="ampy-diag__step is-done"&gt;&lt;/li&gt;&lt;li class="ampy-diag__step is-current"&gt;&lt;/li&gt;&lt;li class="ampy-diag__step"&gt;&lt;/li&gt;&lt;/ul&gt;&lt;span class="sr-only"&gt;Fråga 2 av 3&lt;/span&gt;&lt;/span&gt;
+        &lt;button type="button" class="ampy-diag__back is-hover"&gt;&lt;svg width="16" height="16" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-arrow-right"/&gt;&lt;/svg&gt;Tillbaka i hover&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;h3 class="ampy-diag__q"&gt;Chip i hover, chip vald, chip i vila&lt;/h3&gt;
+      &lt;div class="ampy-chips" role="radiogroup" aria-label="Hover-exempel"&gt;
+        &lt;button type="button" class="ampy-chip is-hover" role="radio" aria-checked="false"&gt;&lt;span class="ampy-chip__body"&gt;&lt;span class="ampy-chip__title"&gt;Före 1970&lt;/span&gt;&lt;span class="ampy-chip__clarifier"&gt;i hover&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type="button" class="ampy-chip is-selected" role="radio" aria-checked="true"&gt;&lt;span class="ampy-chip__body"&gt;&lt;span class="ampy-chip__title"&gt;1970 till 1990&lt;/span&gt;&lt;span class="ampy-chip__clarifier"&gt;vald&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;button type="button" class="ampy-chip" role="radio" aria-checked="false"&gt;&lt;span class="ampy-chip__body"&gt;&lt;span class="ampy-chip__title"&gt;Efter 2010&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;ul class="ampy-diag__findings" aria-label="Fynd"&gt;
+        &lt;li class="ampy-diag__finding ampy-diag__finding--ok" style="--i: 0"&gt;
+          &lt;button type="button" class="ampy-diag__finding-head is-hover" aria-expanded="false"&gt;&lt;span class="ampy-diag__finding-icon"&gt;&lt;svg width="20" height="20" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-check"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class="ampy-diag__finding-label"&gt;Fyndrad i hover (chevronen mörknar)&lt;/span&gt;&lt;svg class="ampy-diag__finding-chevron" width="18" height="18" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-chevron-down"/&gt;&lt;/svg&gt;&lt;/button&gt;
+          &lt;div class="ampy-diag__finding-detail" hidden&gt;&lt;p&gt;Förklaringen fälls ut här.&lt;/p&gt;&lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class="ampy-diag__tabs" role="tablist"&gt;
+        &lt;button type="button" class="ampy-diag__tab" role="tab" aria-selected="true"&gt;Förklaring&lt;/button&gt;
+        &lt;button type="button" class="ampy-diag__tab is-hover" role="tab" aria-selected="false"&gt;Tips i hover&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;a class="ampy-diag__src is-hover" href="#"&gt;&lt;span&gt;Källrad i hover: Elsäkerhetslagen (2016:732) 27 §&lt;/span&gt;&lt;svg width="13" height="13" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-arrow-up-right"/&gt;&lt;/svg&gt;&lt;/a&gt;
+      &lt;div class="ampy-diag__share-row" style="margin-top: var(--ampy-space-xs)"&gt;
+        &lt;span class="ampy-diag__share-anchor"&gt;&lt;button type="button" class="ampy-diag__share is-hover" aria-haspopup="menu" aria-label="Dela beskedet"&gt;&lt;svg class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"&gt;&lt;circle cx="18" cy="5" r="3"/&gt;&lt;circle cx="6" cy="12" r="3"/&gt;&lt;circle cx="18" cy="19" r="3"/&gt;&lt;path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/&gt;&lt;/svg&gt;&lt;/button&gt;&lt;/span&gt;
+        &lt;span class="ampy-diag__share-nudge"&gt;Dela-knapp i hover&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="ampy-diag__cta-zone" style="max-width: 420px; margin-top: var(--ampy-space-s)"&gt;
+        &lt;a class="ampy-btn ampy-btn--block is-hover" href="#"&gt;Gradientknapp i hover &lt;svg class="ampy-btn__icon" width="16" height="16" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-arrow-up-right"/&gt;&lt;/svg&gt;&lt;/a&gt;
+        &lt;a class="ampy-btn ampy-btn--ring ampy-btn--block ampy-link--tel is-hover" href="tel:+4610265797979"&gt;&lt;span class="ampy-btn__chip"&gt;&lt;svg width="17" height="17" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-phone"/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span&gt;Ringknapp i hover&lt;/span&gt;&lt;/a&gt;
+        &lt;button type="button" class="ampy-btn ampy-btn--secondary ampy-btn--compact is-hover"&gt;Solid knapp i hover&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 

@@ -5,7 +5,7 @@ sajtens riktiga CSS och brandboken) och konsoliderat till EN token-sanning. Klon
 komponent spårar till en källa. Där källorna säger olika står det som drift, och där bara ägaren kan
 avgöra står det som ett beslut (B1–B20).
 
-Sajten: https://julius447.github.io/Ampy-designsystem/
+Sajten: https://julius447.github.io/Design-Guide-Ampy/
 
 | Mapp | Innehåll |
 |---|---|

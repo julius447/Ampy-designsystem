@@ -8,9 +8,7 @@
 <link rel="stylesheet" href="../doc.css">
 <link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
 <style>
-  .ds-main { min-width: 0; }
   .ds-demo { row-gap: var(--ampy-space-s); }
-  .ds-demo--stack > :not(.ds-demo__label) { width: 100%; }
   .ds-demo__col { display: grid; gap: var(--ampy-space-xs); width: min(100%, 44rem); }
   .ds-demo__col--wide { width: min(100%, 64rem); }
   .ds-demo__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr)); gap: var(--ampy-space-s); width: 100%; align-items: start; }
@@ -19,8 +17,6 @@
   .ds-demo__item > div, .ds-demo__item > fieldset { width: 100%; }
   .ds-demo__tag { font-size: var(--ampy-text-eyebrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ampy-ink-faint); }
   .ds-demo--dark .ds-demo__tag { color: var(--ampy-on-dark-faint); }
-  .ds-demo--dark { color: var(--ampy-on-dark); }
-  :where(.ds-demo--dark) :where(p, li) { color: var(--ampy-on-dark-soft); }
   .ds-demo .is-focus:not(.ampy-input, .ampy-textarea, .ampy-select, .ampy-chip) { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
   .ds-demo--dark .is-focus { outline-color: var(--ampy-focus-on-dark); }
   .ds-shot { border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-card); overflow: hidden; background: var(--ampy-bg-surface); margin: var(--ampy-space-xs) 0 var(--ampy-space-2xs); }
@@ -30,9 +26,6 @@
   .ds-list { margin: 0 0 var(--ampy-space-xs); padding-left: 1.8rem; font-size: var(--ampy-text-body); line-height: 1.5; max-width: 68ch; }
   .ds-list li { margin-bottom: 0.5rem; }
   .ds-list--small { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
-  .ds-toc { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 var(--ampy-space-l); padding: 0; list-style: none; }
-  .ds-toc a { display: inline-block; padding: 0.5rem 1.1rem; border-radius: var(--ampy-radius-pill); border: 1px solid var(--ampy-line); background: var(--ampy-bg-surface); color: var(--ampy-ink-muted); text-decoration: none; font-size: var(--ampy-text-small); }
-  .ds-toc a:hover { color: var(--ampy-ink); border-color: var(--ampy-line-strong); }
   .ds-table td:first-child { color: var(--ampy-ink); font-weight: var(--ampy-w-medium); white-space: nowrap; }
   .ds-ok { color: var(--ampy-success-ink); font-weight: var(--ampy-w-medium); }
   .ds-dev { color: var(--ampy-warn-ink); }
@@ -43,31 +36,6 @@
 </style>
 </head>
 <body class="ds-body ampy">
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><!-- kopia av system/ikoner.svg (kanon) så att <use href="#ik-..."> fungerar även via file:// -->
-  
-  <symbol id="ik-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="ik-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M17 7H7M17 7v10"/></symbol>
-  <symbol id="ik-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.05 6A5 5 0 0 1 18 9.95M14.05 2a9 9 0 0 1 7.95 7.94M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-  <symbol id="ik-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
-  <symbol id="ik-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/></symbol>
-  <symbol id="ik-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
-  <symbol id="ik-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
-  <symbol id="ik-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
-  <symbol id="ik-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
-  <symbol id="ik-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H13l1-8.5Z"/></symbol>
-  <symbol id="ik-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1z"/></symbol>
-  <symbol id="ik-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
-  <symbol id="ik-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></symbol>
-  <symbol id="ik-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></symbol>
-  <symbol id="ik-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
-  <symbol id="ik-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
-  <symbol id="ik-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="m21 21-4.6-4.6"/></symbol>
-  <symbol id="ik-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="11" width="17" height="10" rx="2"/><path d="M7.5 11V7.5a4.5 4.5 0 0 1 9 0V11"/></symbol>
-  <symbol id="ik-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3.5 2"/></symbol>
-  <symbol id="ik-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-  <symbol id="ik-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m21 8-8 5.2a1.9 1.9 0 0 1-2 0L3 8"/></symbol>
-  <symbol id="ik-google" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C41.4 34.8 44 29.9 44 24c0-1.3-.1-2.6-.4-3.9z"/></symbol>
-</svg>
 <div class="ds-topbar">
   <a class="ds-brand" href="../index.html" style="margin:0"><span class="ds-brand__mark" aria-hidden="true"><img src="../brand/ampy-glyph-white-834.png" alt="" width="14" height="14"></span><span class="ds-brand__name">Ampy designsystem</span></a>
   <button class="ds-topbar__btn" type="button" data-ds-nav-toggle aria-expanded="false" aria-controls="ds-side">Meny</button>
@@ -122,9 +90,9 @@
       <h1 class="ds-h1">Fält och reglage</h1>
       <p class="ds-lead">Nio inputrecept i källorna blev ett: 48 px högt, radie 12, en kontrollkant som klarar 3:1, en fokusring. Samma språk för sökfält, select, textarea, checkbox, radio-chips, segment, slider och stepper. Fel i rött, aldrig i teal.</p>
       <p class="ds-source">Kanon: input <code>elcentral-kollen</code> (<code>assets/elcentralkollen.css:517-518</code>, konsoliderad till 48 h enligt komponentkartan); sökfält <code>elkollen</code> (<code>assets/behorighetskollen.css:716-770</code>) och adresslista <code>main-form</code> (<code>css/styles.css:174-196</code>); select <code>led-kalkylator</code> (<code>styles.css:285-290</code>) med pil ur <code>hero-2-form</code>; textarea <code>main-form</code> (:158-166); checkbox <code>led-kalkylator</code> (:365-393) och <code>elcentral-kollen</code> (:388-392); radio-chips <code>elcentral-kollen</code> (:372-392), rutnät <code>energycalc</code> (<code>vB/tool.css:220-243</code>); segment <code>led-kalkylator</code> (:249-259), toggle <code>ev-kalkylator</code> (<code>prototype/styles.css:439-456</code>); slider <code>led-kalkylator</code> (:216-236) som native range (<code>energycalc</code> :196-213); stepper <code>energycalc</code> (:234-246); hjälp och fel <code>hero-2-alternatives</code> (<code>dist/ampy-hero-primitives.css:525-526</code>) och elcentral (:522). Finns även i: elkollen, LED/EV/battery, energycalc, hero-2 Z, hero-2-form, main-form, booking, fotobedomningen (avvikelser längst ned). Blockbiblioteket: <a class="ds-a" href="../blockbibliotek.html#elcentral-kollen">Elcentral-kollen</a>, <a class="ds-a" href="../blockbibliotek.html#led-kalkylator">LED-kalkylatorn</a>, <a class="ds-a" href="../blockbibliotek.html#main-form">Huvudformuläret</a>.</p>
-      <ul class="ds-toc">
+      <nav class="ds-toc" aria-label="På den här sidan"><span>På den här sidan</span><ol>
         <li><a href="#input">Fält och input</a></li><li><a href="#sok">Sökfält</a></li><li><a href="#select">Select</a></li><li><a href="#textarea">Textarea</a></li><li><a href="#check">Checkbox och samtycke</a></li><li><a href="#chips">Radio-chips</a></li><li><a href="#segment">Segment</a></li><li><a href="#range">Slider</a></li><li><a href="#stepper">Stepper</a></li><li><a href="#hjalp">Hjälp och fel</a></li><li><a href="#anatomi">Anatomi</a></li><li><a href="#gor">Gör och gör inte</a></li><li><a href="#kod">Kod</a></li><li><a href="#avvikelser">Avvikelser</a></li>
-      </ul>
+      </ol></nav>
 
       <div class="ds-shot"><img src="../bilder/elcentral-kollen-desktop-state-leadform.jpg" alt="Källan: Elcentral-kollens formulärsteg med fyra fält, fel och solid knapp" loading="lazy"></div>
       <p class="ds-caption">Så här ser källan ut: Elcentral-kollens formulärsteg vid 1440 (fokus på fältet Namn, felraden "Fyll i alla fält", samtyckesnoten under knappen). Fälten nedan är klonen.</p>
@@ -136,7 +104,7 @@
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Default</span><div class="ampy-field "><label data-probe="label" class="ampy-field__label" for="i1">E-post</label><input class="ampy-input " id="i1" type="email" placeholder="namn@exempel.se" data-probe="input"></div></div>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible</span><div class="ampy-field "><label class="ampy-field__label" for="i2">E-post</label><input class="ampy-input is-focus" id="i2" type="email" placeholder="namn@exempel.se"></div></div>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Ifyllt</span><div class="ampy-field "><label class="ampy-field__label" for="i3">Telefon</label><input class="ampy-input ampy-input--tabular" id="i3" type="tel" placeholder="" value="070-123 45 67"></div></div>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><div class="ampy-field is-error"><label class="ampy-field__label" for="i4">Postnummer</label><input class="ampy-input " id="i4" type="text" placeholder="" value="12" aria-invalid="true" aria-describedby="i4-e"><p class="ampy-error" id="i4-e" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Postnumret har fem siffror.</p></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><div class="ampy-field is-error"><label class="ampy-field__label" for="i4">Postnummer</label><input class="ampy-input " id="i4" type="text" placeholder="" value="12" aria-invalid="true" aria-describedby="i4-e"><p class="ampy-error" id="i4-e" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg>Postnumret har fem siffror.</p></div></div>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Med hjälptext</span><div class="ampy-field "><label class="ampy-field__label" for="i5">Postnummer <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input " id="i5" type="text" placeholder="123 45" inputmode="numeric"><p class="ampy-help" id="i5-h">Så vi vet vilken elektriker som är närmast.</p></div></div>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Valfritt</span><div class="ampy-field "><label class="ampy-field__label" for="i6">Meddelande <span class="ampy-field__opt">(valfritt)</span></label><input class="ampy-input " id="i6" type="text" placeholder="Något vi bör veta?"></div></div>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><div class="ampy-field "><label class="ampy-field__label" for="i7">Kommun</label><input class="ampy-input " id="i7" type="text" placeholder="" value="Solna" disabled></div></div>
@@ -149,14 +117,14 @@
   <div class="ampy-field "><label class="ampy-field__label" for="g2">E-post <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input " id="g2" type="email" placeholder="namn@exempel.se" autocomplete="email"></div>
   <div class="ampy-field "><label class="ampy-field__label" for="g3">Telefon <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input ampy-input--tabular" id="g3" type="tel" placeholder="070-123 45 67" autocomplete="tel" inputmode="tel"></div>
   <div class="ampy-field "><label class="ampy-field__label" for="g4">Postnummer <span class="ampy-field__req" aria-hidden="true">*</span></label><input class="ampy-input ampy-input--tabular" id="g4" type="text" placeholder="123 45" inputmode="numeric" autocomplete="postal-code"><p class="ampy-help" id="g4-h">Så vi vet vilken elektriker som är närmast.</p></div>
-  <div class="ampy-field ampy-field--full"><button class="ampy-btn ampy-btn--secondary ampy-btn--block" type="button">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="#ik-arrow-right"/></svg></button><p class="ampy-consent">Genom att trycka på "Boka rådgivning" samtycker du till att Ampy behandlar dina personuppgifter enligt vår <a href="#">integritetspolicy</a>.</p></div>
+  <div class="ampy-field ampy-field--full"><button class="ampy-btn ampy-btn--secondary ampy-btn--block" type="button">Boka rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></button><p class="ampy-consent">Genom att trycka på "Boka rådgivning" samtycker du till att Ampy behandlar dina personuppgifter enligt vår <a href="#">integritetspolicy</a>.</p></div>
 </div></div>
       </div>
       <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
         <span class="ds-demo__label">Mörk yta (LED)</span>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Default</span><div class="ampy-field "><label class="ampy-field__label" for="d1">Namn</label><input class="ampy-input " id="d1" type="text" placeholder="Förnamn och efternamn"></div></div>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible (neon-mint)</span><div class="ampy-field "><label class="ampy-field__label" for="d2">E-post</label><input class="ampy-input is-focus" id="d2" type="email" placeholder="namn@exempel.se"></div></div>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><div class="ampy-field is-error"><label class="ampy-field__label" for="d3">Telefon</label><input class="ampy-input " id="d3" type="tel" placeholder="" value="07" aria-invalid="true"><p class="ampy-error" id="d3-e" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Skriv hela numret.</p></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><div class="ampy-field is-error"><label class="ampy-field__label" for="d3">Telefon</label><input class="ampy-input " id="d3" type="tel" placeholder="" value="07" aria-invalid="true"><p class="ampy-error" id="d3-e" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg>Skriv hela numret.</p></div></div>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><div class="ampy-field "><label class="ampy-field__label" for="d4">Kommun</label><input class="ampy-input " id="d4" type="text" placeholder="" value="Solna" disabled></div></div>
       </div>
 
@@ -164,14 +132,14 @@
       <p class="ds-p">Elkollens sökfält: ikonen 16 px till vänster i svag färg, fältet får vänsterpadding 40. Listan är huvudformulärets adress-combobox: vit, radie 12, skuggan raised, max 260 px hög, träffar med teal-markerad matchning och postnummer till höger. I dokumentationen visas listan statisk (<code>--static</code>); i drift ligger den absolut under fältet.</p>
       <div class="ampy ds-demo">
         <span class="ds-demo__label">Ljus yta</span>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Sökfält</span><div class="ampy-search"><svg class="ampy-search__icon" width="16" height="16" aria-hidden="true"><use href="#ik-search"/></svg><input class="ampy-input" id="s1" type="search" placeholder="Sök efter din adress" aria-label="Sök adress"></div></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Sökfält</span><div class="ampy-search"><svg class="ampy-search__icon" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-search"/></svg><input class="ampy-input" id="s1" type="search" placeholder="Sök efter din adress" aria-label="Sök adress"></div></div>
         <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Med lista öppen</span><div class="ampy-search">
-  <svg class="ampy-search__icon" width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg>
+  <svg class="ampy-search__icon" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg>
   <input class="ampy-input" id="s2" type="search" placeholder="Sök efter din adress" value="Storgatan 1" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="s2-list">
   <ul class="ampy-search__list ampy-search__list--static" id="s2-list" role="listbox">
-    <li><button class="ampy-search__opt is-active" type="button" role="option" aria-selected="true"><svg width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>, Solna</span><small>171 52</small></button></li>
-    <li><button class="ampy-search__opt" type="button" role="option"><svg width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>2, Sundbyberg</span><small>172 31</small></button></li>
-    <li><button class="ampy-search__opt" type="button" role="option"><svg width="16" height="16" aria-hidden="true"><use href="#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>4, Stockholm</span><small>114 51</small></button></li>
+    <li><button class="ampy-search__opt is-active" type="button" role="option" aria-selected="true"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>, Solna</span><small>171 52</small></button></li>
+    <li><button class="ampy-search__opt" type="button" role="option"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>2, Sundbyberg</span><small>172 31</small></button></li>
+    <li><button class="ampy-search__opt" type="button" role="option"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg><span><mark>Storgatan 1</mark>4, Stockholm</span><small>114 51</small></button></li>
   </ul>
 </div></div>
       </div>
@@ -224,7 +192,7 @@
         <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Default</span><label class="ampy-check"><input type="checkbox" data-probe="check"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
         <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Vald</span><label class="ampy-check"><input type="checkbox" checked><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
         <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Focus-visible</span><label class="ampy-check"><input type="checkbox" style="border-color:var(--ampy-action-strong);box-shadow:var(--ampy-focus-ring)"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
-        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Fel (samtycke saknas)</span><div class="ampy-check is-error"><input type="checkbox"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></div><p class="ampy-error"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Du behöver godkänna för att vi ska kunna ringa dig.</p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Fel (samtycke saknas)</span><div class="ampy-check is-error"><input type="checkbox"><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></div><p class="ampy-error"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg>Du behöver godkänna för att vi ska kunna ringa dig.</p></div>
         <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Som val (--strong)</span><label class="ampy-check ampy-check--strong ampy-check--center"><input type="checkbox" checked><span class="ampy-check__text">Jag vill ha offert på laddbox också</span></label></div>
         <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Disabled</span><label class="ampy-check"><input type="checkbox" disabled checked><span class="ampy-check__text">Jag godkänner att Ampy sparar mina uppgifter för att kunna återkomma med rådgivning. <a href="#">Integritetspolicy</a></span></label></div>
         <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Samtycke som textrad</span><button class="ampy-btn ampy-btn--secondary ampy-btn--block" type="button">Boka rådgivning</button><p class="ampy-consent">Genom att trycka på "Boka rådgivning" samtycker du till att Ampy behandlar dina personuppgifter enligt vår <a href="#">integritetspolicy</a>.</p></div>
@@ -240,33 +208,33 @@
       <div class="ampy ds-demo">
         <span class="ds-demo__label">Enkelval (auto-avancerar), ett valt</span>
         <div class="ds-form"><fieldset class="ampy-chips"><legend>Hur gammal är elcentralen?</legend>
-  <label data-probe="chip" class="ampy-chip  "><input type="radio" name="q1"><span class="ampy-chip__body"><span class="ampy-chip__title" data-probe="chip-title">Nyare än 10 år</span><span class="ampy-chip__clarifier">Automatsäkringar och jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
-  <label class="ampy-chip  "><input type="radio" name="q1" checked><span class="ampy-chip__body"><span class="ampy-chip__title">10 till 30 år</span><span class="ampy-chip__clarifier">Ofta automatsäkringar, ibland utan jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
-  <label class="ampy-chip  "><input type="radio" name="q1"><span class="ampy-chip__body"><span class="ampy-chip__title">Äldre än 30 år eller vet inte</span><span class="ampy-chip__clarifier">Porslinssäkringar är ett säkert tecken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+  <label data-probe="chip" class="ampy-chip  "><input type="radio" name="q1"><span class="ampy-chip__body"><span class="ampy-chip__title" data-probe="chip-title">Nyare än 10 år</span><span class="ampy-chip__clarifier">Automatsäkringar och jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1" checked><span class="ampy-chip__body"><span class="ampy-chip__title">10 till 30 år</span><span class="ampy-chip__clarifier">Ofta automatsäkringar, ibland utan jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1"><span class="ampy-chip__body"><span class="ampy-chip__title">Äldre än 30 år eller vet inte</span><span class="ampy-chip__clarifier">Porslinssäkringar är ett säkert tecken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label>
 </fieldset></div>
       </div>
       <div class="ampy ds-demo">
         <span class="ds-demo__label">Flerval (--multi) med Fortsätt</span>
         <div class="ds-form"><fieldset class="ampy-chips"><legend>Känner du igen något av det här hemma?</legend>
-  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2" checked><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Säkringar som löser ut ofta</span></span></label>
-  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag eller strömbrytare som blir varma</span></span></label>
-  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Lampor som flimrar</span></span></label>
-  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Inget av detta</span></span></label>
-</fieldset><div style="margin-top:var(--ampy-space-xs)"><button class="ampy-btn ampy-btn--ghost ampy-btn--compact ampy-btn--block" type="button">Fortsätt <svg class="ampy-btn__icon" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></button></div></div>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2" checked><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Säkringar som löser ut ofta</span></span></label>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag eller strömbrytare som blir varma</span></span></label>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Lampor som flimrar</span></span></label>
+  <label class="ampy-chip ampy-chip--multi "><input type="checkbox" name="q2"><span class="ampy-chip__check" aria-hidden="true"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Inget av detta</span></span></label>
+</fieldset><div style="margin-top:var(--ampy-space-xs)"><button class="ampy-btn ampy-btn--ghost ampy-btn--compact ampy-btn--block" type="button">Fortsätt <svg class="ampy-btn__icon" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></button></div></div>
       </div>
       <div class="ampy ds-demo">
         <span class="ds-demo__label">Tillstånd</span>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Hover</span><label class="ampy-chip  is-hover"><input type="radio" name="h1"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span><span class="ampy-chip__clarifier">Glappkontakt är den vanligaste orsaken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label></div>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible</span><label class="ampy-chip  is-focus"><input type="radio" name="h2"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span><span class="ampy-chip__clarifier">Glappkontakt är den vanligaste orsaken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label></div>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><label class="ampy-chip  "><input type="radio" disabled name="h3"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Hover</span><label class="ampy-chip  is-hover"><input type="radio" name="h1"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span><span class="ampy-chip__clarifier">Glappkontakt är den vanligaste orsaken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Focus-visible</span><label class="ampy-chip  is-focus"><input type="radio" name="h2"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span><span class="ampy-chip__clarifier">Glappkontakt är den vanligaste orsaken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Disabled</span><label class="ampy-chip  "><input type="radio" disabled name="h3"><span class="ampy-chip__body"><span class="ampy-chip__title">Uttag som blir varma</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label></div>
       </div>
       <div class="ampy ds-demo">
         <span class="ds-demo__label">Rutnät med ikonruta (--grid, energycalc)</span>
         <div class="ds-form"><fieldset class="ampy-chips ampy-chips--grid"><legend>Hur värmer du huset?</legend>
-  <label class="ampy-chip"><input type="checkbox" name="q3" checked><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-bolt"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Direktverkande el</span></span></label>
-  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-warning"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Luft-luftvärmepump</span></span></label>
-  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-clock"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Fjärrvärme</span></span></label>
-  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="#ik-map-pin"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Bergvärme</span></span></label>
+  <label class="ampy-chip"><input type="checkbox" name="q3" checked><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="../../system/ikoner.svg#ik-bolt"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Direktverkande el</span></span></label>
+  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Luft-luftvärmepump</span></span></label>
+  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="../../system/ikoner.svg#ik-clock"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Fjärrvärme</span></span></label>
+  <label class="ampy-chip"><input type="checkbox" name="q3"><span class="ampy-chip__check" aria-hidden="true"><svg width="12" height="12" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check"/></svg></span><span class="ampy-chip__icon" aria-hidden="true"><svg width="22" height="22" aria-hidden="true"><use href="../../system/ikoner.svg#ik-map-pin"/></svg></span><span class="ampy-chip__body"><span class="ampy-chip__title">Bergvärme</span></span></label>
   <label class="ampy-chip ampy-chip--quiet"><input type="checkbox" name="q3"><span class="ampy-chip__body"><span class="ampy-chip__title">Vet inte</span></span></label>
 </fieldset></div>
       </div>
@@ -282,9 +250,9 @@
       <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
         <span class="ds-demo__label">Mörk yta</span>
         <div class="ds-form"><fieldset class="ampy-chips"><legend>Hur gammal är elcentralen?</legend>
-  <label data-probe="chip" class="ampy-chip  "><input type="radio" name="q1d"><span class="ampy-chip__body"><span class="ampy-chip__title" data-probe="chip-title">Nyare än 10 år</span><span class="ampy-chip__clarifier">Automatsäkringar och jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
-  <label class="ampy-chip  "><input type="radio" name="q1d" checked><span class="ampy-chip__body"><span class="ampy-chip__title">10 till 30 år</span><span class="ampy-chip__clarifier">Ofta automatsäkringar, ibland utan jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
-  <label class="ampy-chip  "><input type="radio" name="q1d"><span class="ampy-chip__body"><span class="ampy-chip__title">Äldre än 30 år eller vet inte</span><span class="ampy-chip__clarifier">Porslinssäkringar är ett säkert tecken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="#ik-arrow-right"/></svg></label>
+  <label data-probe="chip" class="ampy-chip  "><input type="radio" name="q1d"><span class="ampy-chip__body"><span class="ampy-chip__title" data-probe="chip-title">Nyare än 10 år</span><span class="ampy-chip__clarifier">Automatsäkringar och jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1d" checked><span class="ampy-chip__body"><span class="ampy-chip__title">10 till 30 år</span><span class="ampy-chip__clarifier">Ofta automatsäkringar, ibland utan jordfelsbrytare</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label>
+  <label class="ampy-chip  "><input type="radio" name="q1d"><span class="ampy-chip__body"><span class="ampy-chip__title">Äldre än 30 år eller vet inte</span><span class="ampy-chip__clarifier">Porslinssäkringar är ett säkert tecken</span></span><svg class="ampy-chip__arrow" width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></label>
 </fieldset></div>
       </div>
 
@@ -337,27 +305,27 @@
       <div class="ampy ds-demo">
         <span class="ds-demo__label">Ljus yta</span>
         <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><div class="ampy-stepper" data-stepper>
-  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-minus"/></svg></button>
   <span class="ampy-stepper__value" aria-live="polite" data-probe="stepper-value">2</span>
-  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-plus"/></svg></button>
 </div></div>
         <div class="ds-demo__item"><span class="ds-demo__tag">Bunden ände (min)</span><div class="ampy-stepper" data-stepper>
-  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-minus"/></svg></button>
   <span class="ampy-stepper__value" aria-live="polite" data-probe="stepper-value">0</span>
-  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-plus"/></svg></button>
 </div></div>
         <div class="ds-demo__item"><span class="ds-demo__tag">Pill (--pill)</span><div class="ampy-stepper ampy-stepper--pill" data-stepper>
-  <button class="ampy-stepper__btn" type="button" aria-label="Färre"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-minus"/></svg></button>
   <span class="ampy-stepper__value" aria-live="polite">3</span>
-  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-plus"/></svg></button>
 </div></div>
       </div>
       <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
         <span class="ds-demo__label">Mörk yta</span>
         <div class="ds-demo__item"><span class="ds-demo__tag">Default</span><div class="ampy-stepper" data-stepper>
-  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="#ik-minus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Färre" data-probe="stepper-btn"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-minus"/></svg></button>
   <span class="ampy-stepper__value" aria-live="polite" data-probe="stepper-value">2</span>
-  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="#ik-plus"/></svg></button>
+  <button class="ampy-stepper__btn" type="button" aria-label="Fler"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-plus"/></svg></button>
 </div></div>
       </div>
 
@@ -366,16 +334,16 @@
       <div class="ampy ds-demo">
         <span class="ds-demo__label">Ljus yta</span>
         <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Hjälp</span><p class="ampy-help" data-probe="help">Så vi vet vilken elektriker som är närmast.</p></div>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><p class="ampy-error" role="alert" data-probe="error"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Fyll i alla fält.</p></div>
-        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande ok</span><p class="ampy-msg ampy-msg--ok ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-check-circle"/></svg><span>Tack. Vi ringer dig inom 24 timmar på vardagar.</span></p></div>
-        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande fel</span><p class="ampy-msg ampy-msg--err ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-warning"/></svg><span>Det gick inte att skicka. Ring oss på 010-265 79 79 så hjälper vi dig.</span></p></div>
-        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Info</span><p class="ampy-msg ampy-msg--info ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-info"/></svg><span>Värme och missfärgning är klassiska tecken på glappkontakt. Inget av detta? Det är ett bra svar.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><p class="ampy-error" role="alert" data-probe="error"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg>Fyll i alla fält.</p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande ok</span><p class="ampy-msg ampy-msg--ok ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check-circle"/></svg><span>Tack. Vi ringer dig inom 24 timmar på vardagar.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande fel</span><p class="ampy-msg ampy-msg--err ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg><span>Det gick inte att skicka. Ring oss på 010-265 79 79 så hjälper vi dig.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Info</span><p class="ampy-msg ampy-msg--info ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-info"/></svg><span>Värme och missfärgning är klassiska tecken på glappkontakt. Inget av detta? Det är ett bra svar.</span></p></div>
       </div>
       <div class="ampy ampy-on-dark ds-demo ds-demo--dark">
         <span class="ds-demo__label">Mörk yta</span>
-        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><p class="ampy-error" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="#ik-warning"/></svg>Fyll i alla fält.</p></div>
-        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande ok</span><p class="ampy-msg ampy-msg--ok ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-check-circle"/></svg><span>Tack. Vi ringer dig inom 24 timmar på vardagar.</span></p></div>
-        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande fel</span><p class="ampy-msg ampy-msg--err ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="#ik-warning"/></svg><span>Det gick inte att skicka. Ring oss i stället.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,30rem)"><span class="ds-demo__tag">Fel</span><p class="ampy-error" role="alert"><svg width="15" height="15" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg>Fyll i alla fält.</p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande ok</span><p class="ampy-msg ampy-msg--ok ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-check-circle"/></svg><span>Tack. Vi ringer dig inom 24 timmar på vardagar.</span></p></div>
+        <div class="ds-demo__item" style="width:min(100%,34rem)"><span class="ds-demo__tag">Meddelande fel</span><p class="ampy-msg ampy-msg--err ampy-msg--row"><svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-warning"/></svg><span>Det gick inte att skicka. Ring oss i stället.</span></p></div>
       </div>
 
       <h2 class="ds-h2" id="anatomi"><a class="ds-anchor" href="#anatomi">Anatomi</a></h2>
@@ -430,7 +398,7 @@
 
 &lt;!-- Sökfält --&gt;
 &lt;div class="ampy-search"&gt;
-  &lt;svg class="ampy-search__icon" aria-hidden="true"&gt;&lt;use href="/system/ikoner.svg#ik-search"/&gt;&lt;/svg&gt;
+  &lt;svg class="ampy-search__icon" aria-hidden="true"&gt;&lt;use href="system/ikoner.svg#ik-search"/&gt;&lt;/svg&gt;
   &lt;input class="ampy-input" type="search" placeholder="Sök efter din adress"&gt;
 &lt;/div&gt;
 

@@ -149,8 +149,8 @@
    ]
   },
   "site/blockbibliotek.html": {
-   "refs": 197,
-   "broken": 5,
+   "refs": 194,
+   "broken": 0,
    "external": 27,
    "anchorsMissing": 0,
    "imgNoAlt": [],
@@ -958,7 +958,7 @@
    ]
   },
   "site/komponenter/block.html": {
-   "refs": 308,
+   "refs": 310,
    "broken": 0,
    "external": 0,
    "anchorsMissing": 0,
@@ -966,8 +966,6 @@
    "title": "Block: Ampy designsystem",
    "h1": [
     "Block",
-    "Elektrikern som görditt hem redo för framtiden",
-    "Byta elcentral med fast pris och ROT-avdrag",
     "Imorgon,torsdag 17 september"
    ],
    "placeholders": [],
@@ -1233,10 +1231,6 @@
      "text": "Hero-1 (startsidan)"
     },
     {
-     "level": 1,
-     "text": "Elektrikern som görditt hem redo för framtiden"
-    },
-    {
      "level": 3,
      "text": "Anatomi"
     },
@@ -1251,10 +1245,6 @@
     {
      "level": 2,
      "text": "Hero-2 S/G/Z/E (tjänstesidor)"
-    },
-    {
-     "level": 1,
-     "text": "Byta elcentral med fast pris och ROT-avdrag"
     },
     {
      "level": 3,
@@ -1346,7 +1336,7 @@
     },
     {
      "level": 2,
-     "text": "Fotobedömningens kort och kvitto"
+     "text": "Fotobedömningens kort, formläge och kvitto"
     },
     {
      "level": 2,
@@ -1465,7 +1455,7 @@
    ]
   },
   "site/komponenter/diagnostik.html": {
-   "refs": 142,
+   "refs": 152,
    "broken": 0,
    "external": 0,
    "anchorsMissing": 0,
@@ -1567,6 +1557,14 @@
     {
      "level": 3,
      "text": "Då sätter vi igång"
+    },
+    {
+     "level": 2,
+     "text": "Hover-varianter"
+    },
+    {
+     "level": 3,
+     "text": "Chip i hover, chip vald, chip i vila"
     },
     {
      "level": 2,
@@ -1689,10 +1687,10 @@
    ]
   },
   "site/komponenter/index.html": {
-   "refs": 148,
+   "refs": 147,
    "broken": 0,
    "external": 0,
-   "anchorsMissing": 26,
+   "anchorsMissing": 0,
    "imgNoAlt": [],
    "title": "Alla komponenter: Ampy designsystem",
    "h1": [
@@ -1753,7 +1751,7 @@
    ]
   },
   "site/komponenter/knappar.html": {
-   "refs": 140,
+   "refs": 169,
    "broken": 0,
    "external": 0,
    "anchorsMissing": 0,
@@ -1794,15 +1792,11 @@
     },
     {
      "level": 2,
+     "text": "Ikoner i knappar och länkar"
+    },
+    {
+     "level": 2,
      "text": "Anatomi"
-    },
-    {
-     "level": 2,
-     "text": "Gör och gör inte"
-    },
-    {
-     "level": 2,
-     "text": "Kod"
     },
     {
      "level": 2,
@@ -1825,7 +1819,7 @@
    ]
   },
   "site/komponenter/text.html": {
-   "refs": 110,
+   "refs": 118,
    "broken": 0,
    "external": 0,
    "anchorsMissing": 0,
@@ -1894,14 +1888,6 @@
     },
     {
      "level": 2,
-     "text": "Gör och gör inte"
-    },
-    {
-     "level": 2,
-     "text": "Kod"
-    },
-    {
-     "level": 2,
      "text": "Avvikelser i blocken"
     }
    ],
@@ -1921,7 +1907,7 @@
    ]
   },
   "site/komponenter/verktyg.html": {
-   "refs": 62,
+   "refs": 69,
    "broken": 0,
    "external": 0,
    "anchorsMissing": 0,
@@ -2014,6 +2000,10 @@
     },
     {
      "level": 2,
+     "text": "Hover-varianter"
+    },
+    {
+     "level": 2,
      "text": "Paritet mot källan"
     },
     {
@@ -2045,15 +2035,14 @@
    ]
   },
   "site/komponenter/ytor.html": {
-   "refs": 79,
+   "refs": 75,
    "broken": 0,
    "external": 0,
    "anchorsMissing": 0,
    "imgNoAlt": [],
    "title": "Ytor och kort: Ampy designsystem",
    "h1": [
-    "Ytor och kort",
-    "Elinstallationer i hemmet, gjort ordentligt."
+    "Ytor och kort"
    ],
    "placeholders": [],
    "headings": [
@@ -2110,10 +2099,6 @@
      "text": "Navy-ram (hjälteram)"
     },
     {
-     "level": 1,
-     "text": "Elinstallationer i hemmet, gjort ordentligt."
-    },
-    {
      "level": 2,
      "text": "Avdelare"
     },
@@ -2144,14 +2129,6 @@
     {
      "level": 2,
      "text": "Anatomi"
-    },
-    {
-     "level": 2,
-     "text": "Gör och gör inte"
-    },
-    {
-     "level": 2,
-     "text": "Kod"
     },
     {
      "level": 2,
@@ -2634,58 +2611,7 @@
    ]
   }
  },
- "broken": [
-  {
-   "page": "site/blockbibliotek.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "../inventering/thank-you-implementation.md",
-   "tag": "a",
-   "text": "Inventering",
-   "inNav": false,
-   "why": "saknas: inventering/thank-you-implementation.md"
-  },
-  {
-   "page": "site/blockbibliotek.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "../inventering/thank-you-implementation.json",
-   "tag": "a",
-   "text": "JSON",
-   "inNav": false,
-   "why": "saknas: inventering/thank-you-implementation.json"
-  },
-  {
-   "page": "site/blockbibliotek.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "../inventering/offer-accepted.md",
-   "tag": "a",
-   "text": "Inventering",
-   "inNav": false,
-   "why": "saknas: inventering/offer-accepted.md"
-  },
-  {
-   "page": "site/blockbibliotek.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "../inventering/offer-accepted.json",
-   "tag": "a",
-   "text": "JSON",
-   "inNav": false,
-   "why": "saknas: inventering/offer-accepted.json"
-  },
-  {
-   "page": "site/blockbibliotek.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "../inventering/tidigare-dokumentation.json",
-   "tag": "a",
-   "text": "JSON",
-   "inNav": false,
-   "why": "saknas: inventering/tidigare-dokumentation.json"
-  }
- ],
+ "broken": [],
  "external": [
   {
    "page": "site/blockbibliotek.html",
@@ -2931,268 +2857,7 @@
    "inNav": false
   }
  ],
- "anchorsMissing": [
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "verktyg.html#tvapanel",
-   "tag": "a",
-   "text": "Kanon med driftTvåpanel-skalled-kalkylator (auk 1): 5fr/7fr,",
-   "inNav": false,
-   "why": "#tvapanel finns inte i site/komponenter/verktyg.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "verktyg.html#staplar",
-   "tag": "a",
-   "text": "Kanon med driftStaplar amber/teal (före/efter)led-kalkylator",
-   "inNav": false,
-   "why": "#staplar finns inte i site/komponenter/verktyg.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "verktyg.html#streams-bar",
-   "tag": "a",
-   "text": "Bara i en källaStreams-bar (intäktskällor)battery-calculator",
-   "inNav": false,
-   "why": "#streams-bar finns inte i site/komponenter/verktyg.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "verktyg.html#break-even",
-   "tag": "a",
-   "text": "Bara i en källaBreak-even-kurvabattery-calculator (auk 3). B",
-   "inNav": false,
-   "why": "#break-even finns inte i site/komponenter/verktyg.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "verktyg.html#sa-har-vi-raknat",
-   "tag": "a",
-   "text": "Kanon med driftSå har vi räknatled-kalkylator (auk 1) __meth",
-   "inNav": false,
-   "why": "#sa-har-vi-raknat finns inte i site/komponenter/verktyg.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "verktyg.html#lead-inline",
-   "tag": "a",
-   "text": "Kanon med driftLead-formulär inlineled-kalkylator (auk 1): e",
-   "inNav": false,
-   "why": "#lead-inline finns inte i site/komponenter/verktyg.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "verktyg.html#popover",
-   "tag": "a",
-   "text": "Kanon med driftPopover (dela)energycalc (auk 1) .share-pop.",
-   "inNav": false,
-   "why": "#popover finns inte i site/komponenter/verktyg.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "diagnostik.html#fragekort",
-   "tag": "a",
-   "text": "KanonFrågekort (stage)elcentral-kollen (auk 1): radie 14 (dr",
-   "inNav": false,
-   "why": "#fragekort finns inte i site/komponenter/diagnostik.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "diagnostik.html#dualstatus",
-   "tag": "a",
-   "text": "KanonBesked: dualstatus (2 gånger 2)elcentral-kollen (auk 1)",
-   "inNav": false,
-   "why": "#dualstatus finns inte i site/komponenter/diagnostik.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "diagnostik.html#trafikljus",
-   "tag": "a",
-   "text": "KanonBesked: trafikljus-boardelkollen (auk 1): 6 px sidostap",
-   "inNav": false,
-   "why": "#trafikljus finns inte i site/komponenter/diagnostik.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "diagnostik.html#dela",
-   "tag": "a",
-   "text": "Kanon med driftDelaelcentral-kollen (auk 1): 44 px ikonknapp",
-   "inNav": false,
-   "why": "#dela finns inte i site/komponenter/diagnostik.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "diagnostik.html#sticky-cta",
-   "tag": "a",
-   "text": "Kanon med driftSticky-CTA (mobil)elcentral-kollen (auk 1): f",
-   "inNav": false,
-   "why": "#sticky-cta finns inte i site/komponenter/diagnostik.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#hero-1",
-   "tag": "a",
-   "text": "KanonHero-1 (startsidan)hero-1 (auk 1), ägargodkänd. Inramad",
-   "inNav": false,
-   "why": "#hero-1 finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#hero-2",
-   "tag": "a",
-   "text": "KanonHero-2 S/G/Z/E (tjänstesidor)hero-2-alternatives (auk 2",
-   "inNav": false,
-   "why": "#hero-2 finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#mini-menu",
-   "tag": "a",
-   "text": "KanonMini-menu (produktväljare)mini-menu (auk 2): tre fotoko",
-   "inNav": false,
-   "why": "#mini-menu finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#rot-gt",
-   "tag": "a",
-   "text": "Kanon med driftROT/GT-kvittopanel och stegringarrot-gt-cro (",
-   "inNav": false,
-   "why": "#rot-gt finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#testimonials",
-   "tag": "a",
-   "text": "KanonTestimonial-kort och slidertestimonials-block (auk 1) V",
-   "inNav": false,
-   "why": "#testimonials finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#certifikat",
-   "tag": "a",
-   "text": "KanonCertifikat-badgecertificates (auk 2) v2: 236 gånger 113",
-   "inNav": false,
-   "why": "#certifikat finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#fore-efter",
-   "tag": "a",
-   "text": "KanonFöre/efterfore-efter-cro (auk 2): reglaget, clip-path, ",
-   "inNav": false,
-   "why": "#fore-efter finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#var-process",
-   "tag": "a",
-   "text": "Saknas i auk 1 till 2Vår processvar-process-cro (auk 3), vän",
-   "inNav": false,
-   "why": "#var-process finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#fotobedomningen",
-   "tag": "a",
-   "text": "KanonFotobedömning (Avslutskortet)fotobedomningen (auk 2) v2",
-   "inNav": false,
-   "why": "#fotobedomningen finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#visste-du-att",
-   "tag": "a",
-   "text": "KanonVisste du attvisste-du-att (auk 2): midnight-kort med k",
-   "inNav": false,
-   "why": "#visste-du-att finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#cta-band",
-   "tag": "a",
-   "text": "KanonCTA-band (Main CTA)main-cta (auk 2) B1: vitt kort, h2 4",
-   "inNav": false,
-   "why": "#cta-band finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#sticky-call-bar",
-   "tag": "a",
-   "text": "KanonSticky call-bareljour-sticky-bar (auk 2): 83 h remsa me",
-   "inNav": false,
-   "why": "#sticky-call-bar finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#bokning",
-   "tag": "a",
-   "text": "KanonBokningens sammanfattningskortbooking-confirmation (auk",
-   "inNav": false,
-   "why": "#bokning finns inte i site/komponenter/block.html"
-  },
-  {
-   "page": "site/komponenter/index.html",
-   "kind": "a",
-   "attr": "href",
-   "value": "block.html#bock",
-   "tag": "a",
-   "text": "KanonBekräftelse-bock (animerad)thank-you (auk 2): 104/88 px",
-   "inNav": false,
-   "why": "#bock finns inte i site/komponenter/block.html"
-  }
- ],
+ "anchorsMissing": [],
  "placeholders": [],
  "navDiff": [],
  "titles": {

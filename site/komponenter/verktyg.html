@@ -8,13 +8,9 @@
 <link rel="stylesheet" href="../doc.css">
 <link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
 <style>
-  /* Lokala ds-klasser för den här sidan (S3). Aldrig i doc.css. */
-  .ds-main { min-width: 0; }
-  .ds-content--wide { max-width: 128rem; }
+  /* Lokala ds-klasser för den här sidan (S3). Aldrig i doc.css. Skalets klasser (.ds-main, .ds-content--wide, .ds-demo__label--over, .ds-toc) kommer från doc.css sedan fixrundan 2026-09-12. */
   .ds-demo--full.ds-demo--kit { padding: var(--ampy-space-m); }
   .ds-demo--full.ds-demo--kit.ds-demo--dark { padding: var(--ampy-space-m); }
-  .ds-demo__label--over { z-index: 2; }
-  .ds-demo--full > .ds-demo__label--over { top: 0.6rem; right: 1rem; }
   .ds-demo--frame { padding: var(--ampy-space-m); display: block; }
   .ds-demo--frame > * + * { margin-top: var(--ampy-space-s); }
   .ds-demo--frame.ds-demo--dark { color: var(--ampy-on-dark); }
@@ -27,9 +23,6 @@
   .ds-shot figcaption { grid-column: 1 / -1; font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); }
   .ds-dep { border: 1px solid var(--ampy-line-strong); border-left: 4px solid var(--ampy-warn-ink); border-radius: var(--ampy-radius-field); padding: var(--ampy-space-xs) var(--ampy-space-s); margin: var(--ampy-space-xs) 0 var(--ampy-space-m); font-size: var(--ampy-text-small); color: var(--ampy-ink); background: var(--ampy-bg-surface); }
   .ds-dep strong { font-weight: var(--ampy-w-strong); }
-  .ds-toc { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 var(--ampy-space-m); padding: 0; list-style: none; }
-  .ds-toc a { display: inline-block; padding: 0.5rem 1.1rem; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-pill); font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); text-decoration: none; background: var(--ampy-bg-surface); }
-  .ds-toc a:hover { color: var(--ampy-ink); border-color: var(--ampy-line-strong); }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   @media (max-width: 991px) { .ds-shot { grid-template-columns: 1fr; } }
 
@@ -90,9 +83,7 @@
       <h1 class="ds-h1">Kalkylator-kitet</h1>
       <p class="ds-lead">Tvåpanel-verktyget som räknar åt kunden: vitt inputkort till vänster, mörkt resultatkort till höger. Kanon är LED-kalkylatorn (auktoritet 1); EV och batteri är samma kit med drift. Allt nedan är klassen <code>.ampy-calc</code> komponerad med systemets primitiver.</p>
 
-<ul class="ds-toc">
-  <li><a href="#skal">Tvåpanel-skalet</a></li><li><a href="#input">Inputkortet</a></li><li><a href="#resultat">Resultatkortet</a></li><li><a href="#lead">Inline-lead</a></li><li><a href="#tips">Tips-chip och popover</a></li><li><a href="#selector">Produktväljare</a></li><li><a href="#dela">Dela</a></li><li><a href="#battery">Streams-bar och break-even</a></li><li><a href="#paritet">Paritet</a></li><li><a href="#avvikelser">Avvikelser och drift</a></li>
-</ul>
+<nav class="ds-toc" aria-label="På den här sidan"><span>På den här sidan</span><ol><li><a href="#skal">Tvåpanel-skalet</a></li><li><a href="#input">Inputkortet</a></li><li><a href="#resultat">Resultatkortet</a></li><li><a href="#lead">Inline-lead</a></li><li><a href="#tips">Tips-chip och popover</a></li><li><a href="#selector">Produktväljare</a></li><li><a href="#dela">Dela</a></li><li><a href="#battery">Streams-bar och break-even</a></li><li><a href="#hover">Hover-varianter</a></li><li><a href="#paritet">Paritet</a></li><li><a href="#avvikelser">Avvikelser och drift</a></li></ol></nav>
 
 <div class="ds-dep"><strong>Komponerat med S2 (falt.css):</strong> segment (<code>.ampy-segment</code>), reglage med ticks (<code>.ampy-range-wrap</code>, <code>.ampy-range</code>, <code>.ampy-range__ticks</code>), select (<code>.ampy-select</code>), lead-fälten (<code>.ampy-fields</code>, <code>.ampy-field</code>, <code>.ampy-input</code>, <code>.ampy-error</code>), samtycke (<code>.ampy-check</code>), meddelanden (<code>.ampy-msg</code>) och hjälptext (<code>.ampy-help</code>) kommer från falt.css, inklusive deras mörka varianter. Kitet självt (verktyg.css) äger bara skalet, tier/fält-rytmen, tips-chipet, väljaren, det prominenta värdet, staplarna, lead-flödet runt fälten, metodkortet, dela och de två batteri-devices.</div>
 
@@ -153,8 +144,9 @@
       <select class="ampy-select" id="c1-kontext">
         <option>Snitt brinntid (12,0 h/dygn)</option>
         <option>Trapphus utan styrning (24,0 h/dygn)</option>
-        <option>Garage med närvarostyrning (6,0 h/dygn)</option>
-        <option>Kontor (9,0 h/dygn)</option>
+        <option>Trapphus med sensor (4,0 h/dygn)</option>
+        <option>Garage / förråd, utan styrning (24,0 h/dygn)</option>
+        <option>Tvättstuga / gemensamt (6,0 h/dygn)</option>
       </select>
     </div>
     <div class="ampy-calc__field ampy-calc__field--prominent">
@@ -305,8 +297,9 @@
       <select class="ampy-select" id="c3-kontext">
         <option>Snitt brinntid (12,0 h/dygn)</option>
         <option>Trapphus utan styrning (24,0 h/dygn)</option>
-        <option>Garage med närvarostyrning (6,0 h/dygn)</option>
-        <option>Kontor (9,0 h/dygn)</option>
+        <option>Trapphus med sensor (4,0 h/dygn)</option>
+        <option>Garage / förråd, utan styrning (24,0 h/dygn)</option>
+        <option>Tvättstuga / gemensamt (6,0 h/dygn)</option>
       </select>
     </div>
     <div class="ampy-calc__field ampy-calc__field--prominent">
@@ -383,8 +376,9 @@
       &lt;select class="ampy-select" id="c3-kontext"&gt;
         &lt;option&gt;Snitt brinntid (12,0 h/dygn)&lt;/option&gt;
         &lt;option&gt;Trapphus utan styrning (24,0 h/dygn)&lt;/option&gt;
-        &lt;option&gt;Garage med närvarostyrning (6,0 h/dygn)&lt;/option&gt;
-        &lt;option&gt;Kontor (9,0 h/dygn)&lt;/option&gt;
+        &lt;option&gt;Trapphus med sensor (4,0 h/dygn)&lt;/option&gt;
+        &lt;option&gt;Garage / förråd, utan styrning (24,0 h/dygn)&lt;/option&gt;
+        &lt;option&gt;Tvättstuga / gemensamt (6,0 h/dygn)&lt;/option&gt;
       &lt;/select&gt;
     &lt;/div&gt;
     &lt;div class="ampy-calc__field ampy-calc__field--prominent"&gt;
@@ -412,13 +406,14 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;&lt;/div&gt;</code></pre></div><p class="ds-caption">Tips-chipens popover öppnas på hover/fokus i exemplet; i produktion fäster JS den i body med fixed position (EV-mönstret).</p>
+<p class="ds-caption">Listan under "Var sitter belysningen?" är källans BRF-lista ordagrant (data.js:95-99, renderad av app.js:194 som "kontext (h/dygn)"): första och förvalda raden är "Snitt brinntid", de fyra platsraderna följer. Förvalet är kvar för att resultatkortets siffror räknades på 12 h/dygn; källans tankstreck i "Garage / förråd" är ersatt med komma (registret). Granskningen 2026-09-12 läste paret etikett/alternativ som en miss: det är källans eget par.</p>
 <h3 class="ds-h3" id="input-anatomi">Anatomi</h3>
 <div class="ds-table-wrap"><table class="ds-table"><thead><tr><th>Del</th><th>1440</th><th>390</th><th>Källa / token</th></tr></thead><tbody><tr><td>Tier-etikett</td><td>eyebrow 12 / 600 / .14em</td><td>12</td><td>LED 15/600/.08em, krymper till eyebrow-rollen (B19)</td></tr>
 <tr><td>Tier 2-avdelare</td><td>margin 14 + padding 14 + 1 px</td><td>10,5 + 10,5 + 1</td><td><code>--ampy-space-xs</code>, <code>--ampy-line</code> (LED 15 + 15)</td></tr>
-<tr><td>Fråga (tiny)</td><td>13 / 500 dämpad, gap 5</td><td>13</td><td><code>--ampy-fine</code>, <code>--ampy-space-4xs</code> (LED field-label-tiny 13/500)</td></tr>
+<tr><td>Fråga (tiny)</td><td>13 / 500 dämpad, gap 5</td><td>13</td><td><code>--ampy-text-fine</code> (tokens.css sedan 2026-09-12), <code>--ampy-space-4xs</code> (LED field-label-tiny 13/500)</td></tr>
 <tr><td>Fråga (stark)</td><td>14 / 600 ink</td><td>14</td><td><code>--ampy-text-label</code> (LED PJS 600 15)</td></tr>
 <tr><td>Tips-chip</td><td>16 × 16, 10/700, 1 px kant</td><td>16 (44 träffyta på touch)</td><td>kit-egen <code>--_tip</code> (LED 1.6rem), hover teal-deep + vit (B5)</td></tr>
-<tr><td>Prominent värde</td><td>28 / 700 tnum, enhet 16 / 500 dämpad</td><td>21 / 700, enhet 14,1</td><td>kit-egen <code>--_mid</code> = LED --fs-xl; enhet small (LED 15)</td></tr>
+<tr><td>Prominent värde</td><td>28 / 700 tnum, enhet 16 / 500 dämpad</td><td>21 / 700, enhet 14,1</td><td><code>--ampy-text-mid</code> (tokens.css, = LED --fs-xl 28 -> 21); enhet small (LED 15)</td></tr>
 <tr><td>Tick-etiketter</td><td>min-höjd 32, 13 tnum, aktiv teal-deep 700</td><td>samma</td><td>S2 <code>.ampy-range__tick</code> (LED 3.2rem, mono 13, aktiv teal-core: B5)</td></tr>
 <tr><td>Väljare</td><td>78 hög, ikonruta 56 radie 8, namn 18/600, meta 13</td><td>78, radie 6,1</td><td>LED 78 / 56 / radie 6, PJS 600 19</td></tr>
 <tr><td>Segment</td><td>spår 48 radie 12 padding 4, option 40 radie 8</td><td>48 / 40, radie 10,1 / 6,1</td><td>S2 <code>.ampy-segment</code> (LED 48/40, radie 12/6)</td></tr>
@@ -613,8 +608,9 @@
       <select class="ampy-select" id="c2-kontext">
         <option>Snitt brinntid (12,0 h/dygn)</option>
         <option>Trapphus utan styrning (24,0 h/dygn)</option>
-        <option>Garage med närvarostyrning (6,0 h/dygn)</option>
-        <option>Kontor (9,0 h/dygn)</option>
+        <option>Trapphus med sensor (4,0 h/dygn)</option>
+        <option>Garage / förråd, utan styrning (24,0 h/dygn)</option>
+        <option>Tvättstuga / gemensamt (6,0 h/dygn)</option>
       </select>
     </div>
     <div class="ampy-calc__field ampy-calc__field--prominent">
@@ -954,7 +950,96 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre></div><p class="ds-caption">Färger: linje amber → teal vid nollgenomgången, zoner i samma tokens i alfa (.18 / .16). Segment 3 och 4 (rgb(122,208,198) / rgb(160,184,196)) saknar token och står som kit-egna.</p>
+&lt;/div&gt;</code></pre></div><p class="ds-caption">Färger: linje amber → teal vid nollgenomgången, zoner i samma tokens i alfa (.18 / .16). Segment 3 och 4 (rgb(122,208,198) / rgb(160,184,196)) saknar token och står som kit-egna. Teal core som text (beslut B21, fixrunda 2026-09-12): slutvärdet "+293 087 kr" (<code>__chart-corner--end</code>) är i källan clamp(15, 15+0.2vw, 17) px teal på midnight; kitet behåller teal core men höjer golvet till 16 px så B21:s regel ("siffra >= 16 px på midnight, 6,41:1") håller i alla bredder. Tiden under "Återbetald" (<code>__be-time</code>) är i källan 13 till 15 px, under golvet i alla bredder, och är därför vit (<code>--ampy-on-dark</code>); teal bär pricken, inte texten.</p>
+
+<h2 class="ds-h2" id="hover">Hover-varianter</h2>
+<p class="ds-p">Varje element som svarar på hover har en statisk tvilling med klassen <code>.is-hover</code>, så att skärmdumpar och paritetsprober kan visa läget utan mus (samma konvention som S2-sidorna). Ljust: tips-chip, väljarknapp, listrad, CTA. Mörkt: dela-knapp, dela-rad, avbryt-länk, fällbar rubrik. Reglage, segment och chips hämtar sina hover-lägen från falt.css.</p>
+<p class="ds-source">Kanon: led-kalkylator (styles.css:161-206 väljare, 268-274 chip, 325-333 CTA), energycalc (vB/tool.css:467-491 dela). Tillagt i fixrundan 2026-09-12 (granskning S3-4).</p>
+
+<div class="ampy ds-demo ds-demo--full ds-demo--kit" id="ex-calc-hover" data-label="Ljust: chip, väljare, listrad, CTA i .is-hover"><span class="ds-demo__label ds-demo__label--over">Ljust: chip, väljare, listrad, CTA i .is-hover</span>
+<div class="ampy-calc ampy-calc--flush" id="calc-hover">
+  <div class="ampy-calc__field" style="padding-bottom: 88px">
+    <span class="ampy-calc__q">Tips-chip i hover <span class="ampy-calc__tipwrap"><button type="button" class="ampy-calc__tip is-hover" aria-describedby="tip-hover">i</button><span class="ampy-calc__popover" role="tooltip" id="tip-hover" data-open>Chipet får teal-deep-yta med vit text (5,27:1) i hover, fokus och när popovern är öppen.</span></span></span>
+  </div>
+  <div class="ampy-calc__field ampy-calc__field--prominent">
+    <span class="ampy-calc__q">Väljarknapp i hover</span>
+    <div class="ampy-calc__selector">
+      <button type="button" class="ampy-calc__selector-btn is-hover" aria-haspopup="listbox" aria-expanded="false">
+        <span class="ampy-calc__selector-img" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.3 1 2.5h6c0-1.2.3-1.7 1-2.5A6 6 0 0 0 12 3Z"/></svg></span>
+        <span class="ampy-calc__selector-text"><span class="ampy-calc__selector-name">Lysrör T8 2 × 36 W</span><span class="ampy-calc__selector-meta">Konventionellt driftdon, 84 W</span></span>
+        <svg class="ampy-calc__selector-chevron" width="20" height="20" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="ampy-calc__field">
+    <span class="ampy-calc__q">Listrad i hover (samma yta som vald)</span>
+    <ul class="ampy-calc__selector-list ampy-calc__selector-list--static" role="listbox" aria-label="Armaturtyp">
+      <li><button type="button" class="ampy-calc__selector-option" role="option"><span class="ampy-calc__selector-option-name">Lysrör T5 1 × 28 W</span><span class="ampy-calc__selector-option-meta">32 W</span></button></li>
+      <li><button type="button" class="ampy-calc__selector-option is-hover" role="option"><span class="ampy-calc__selector-option-name">Lysrör T8 2 × 36 W</span><span class="ampy-calc__selector-option-meta">84 W</span></button></li>
+    </ul>
+  </div>
+  <div class="ampy-calc__cta-stack" style="max-width: 360px">
+    <button class="ampy-btn ampy-btn--secondary ampy-calc__cta is-hover" type="button">CTA i hover <svg class="ampy-btn__icon" width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></button>
+  </div>
+</div>
+</div>
+
+<div class="ds-code"><pre><code>&lt;div class="ampy-calc ampy-calc--flush" id="calc-hover"&gt;
+  &lt;div class="ampy-calc__field" style="padding-bottom: 88px"&gt;
+    &lt;span class="ampy-calc__q"&gt;Tips-chip i hover &lt;span class="ampy-calc__tipwrap"&gt;&lt;button type="button" class="ampy-calc__tip is-hover" aria-describedby="tip-hover"&gt;i&lt;/button&gt;&lt;span class="ampy-calc__popover" role="tooltip" id="tip-hover" data-open&gt;Chipet får teal-deep-yta med vit text (5,27:1) i hover, fokus och när popovern är öppen.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="ampy-calc__field ampy-calc__field--prominent"&gt;
+    &lt;span class="ampy-calc__q"&gt;Väljarknapp i hover&lt;/span&gt;
+    &lt;div class="ampy-calc__selector"&gt;
+      &lt;button type="button" class="ampy-calc__selector-btn is-hover" aria-haspopup="listbox" aria-expanded="false"&gt;
+        &lt;span class="ampy-calc__selector-img" aria-hidden="true"&gt;&lt;svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.8 1 1.3 1 2.5h6c0-1.2.3-1.7 1-2.5A6 6 0 0 0 12 3Z"/&gt;&lt;/svg&gt;&lt;/span&gt;
+        &lt;span class="ampy-calc__selector-text"&gt;&lt;span class="ampy-calc__selector-name"&gt;Lysrör T8 2 × 36 W&lt;/span&gt;&lt;span class="ampy-calc__selector-meta"&gt;Konventionellt driftdon, 84 W&lt;/span&gt;&lt;/span&gt;
+        &lt;svg class="ampy-calc__selector-chevron" width="20" height="20" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-chevron-down"/&gt;&lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="ampy-calc__field"&gt;
+    &lt;span class="ampy-calc__q"&gt;Listrad i hover (samma yta som vald)&lt;/span&gt;
+    &lt;ul class="ampy-calc__selector-list ampy-calc__selector-list--static" role="listbox" aria-label="Armaturtyp"&gt;
+      &lt;li&gt;&lt;button type="button" class="ampy-calc__selector-option" role="option"&gt;&lt;span class="ampy-calc__selector-option-name"&gt;Lysrör T5 1 × 28 W&lt;/span&gt;&lt;span class="ampy-calc__selector-option-meta"&gt;32 W&lt;/span&gt;&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;button type="button" class="ampy-calc__selector-option is-hover" role="option"&gt;&lt;span class="ampy-calc__selector-option-name"&gt;Lysrör T8 2 × 36 W&lt;/span&gt;&lt;span class="ampy-calc__selector-option-meta"&gt;84 W&lt;/span&gt;&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="ampy-calc__cta-stack" style="max-width: 360px"&gt;
+    &lt;button class="ampy-btn ampy-btn--secondary ampy-calc__cta is-hover" type="button"&gt;CTA i hover &lt;svg class="ampy-btn__icon" width="18" height="18" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-arrow-right"/&gt;&lt;/svg&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+<div class="ampy ds-demo ds-demo--dark ampy-on-dark" id="ex-calc-hover-dark" data-label="Mörkt: dela, avbryt, fällbar rubrik i .is-hover"><span class="ds-demo__label ds-demo__label--over">Mörkt: dela, avbryt, fällbar rubrik i .is-hover</span>
+<div class="ampy-calc ampy-calc--flush" id="calc-hover-dark">
+  <div class="ampy-calc__share">
+    <div class="ampy-calc__share-pop ampy-calc__share-pop--static" role="menu" aria-label="Dela din kalkyl">
+      <button type="button" class="ampy-calc__share-act is-hover" role="menuitem"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-copy"/></svg><span>Rad i hover</span></button>
+      <a class="ampy-calc__share-act" role="menuitem" href="#"><svg width="18" height="18" aria-hidden="true"><use href="../../system/ikoner.svg#ik-mail"/></svg><span>Dela via mejl</span></a>
+    </div>
+    <button type="button" class="ampy-calc__share-btn is-hover" aria-haspopup="menu" aria-expanded="true">Dela-knapp i hover</button>
+  </div>
+  <p class="ampy-calc__lead-fine">Formuläret kan stängas: <button type="button" class="ampy-calc__lead-cancel is-hover">avbryt-länk i hover</button></p>
+  <details class="ampy-calc__streams-details" open>
+    <summary class="ampy-calc__streams-summary is-hover"><span>Fällbar rubrik i hover</span> <svg width="14" height="14" aria-hidden="true"><use href="../../system/ikoner.svg#ik-chevron-down"/></svg></summary>
+  </details>
+</div>
+</div>
+
+<div class="ds-code"><pre><code>&lt;div class="ampy-calc ampy-calc--flush" id="calc-hover-dark"&gt;
+  &lt;div class="ampy-calc__share"&gt;
+    &lt;div class="ampy-calc__share-pop ampy-calc__share-pop--static" role="menu" aria-label="Dela din kalkyl"&gt;
+      &lt;button type="button" class="ampy-calc__share-act is-hover" role="menuitem"&gt;&lt;svg width="18" height="18" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-copy"/&gt;&lt;/svg&gt;&lt;span&gt;Rad i hover&lt;/span&gt;&lt;/button&gt;
+      &lt;a class="ampy-calc__share-act" role="menuitem" href="#"&gt;&lt;svg width="18" height="18" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-mail"/&gt;&lt;/svg&gt;&lt;span&gt;Dela via mejl&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="ampy-calc__share-btn is-hover" aria-haspopup="menu" aria-expanded="true"&gt;Dela-knapp i hover&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;p class="ampy-calc__lead-fine"&gt;Formuläret kan stängas: &lt;button type="button" class="ampy-calc__lead-cancel is-hover"&gt;avbryt-länk i hover&lt;/button&gt;&lt;/p&gt;
+  &lt;details class="ampy-calc__streams-details" open&gt;
+    &lt;summary class="ampy-calc__streams-summary is-hover"&gt;&lt;span&gt;Fällbar rubrik i hover&lt;/span&gt; &lt;svg width="14" height="14" aria-hidden="true"&gt;&lt;use href="../../system/ikoner.svg#ik-chevron-down"/&gt;&lt;/svg&gt;&lt;/summary&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</code></pre></div>
+<p class="ds-caption">Hover ändrar aldrig storlek eller position (ingen layoutförskjutning): chipet och CTA:n byter yta, väljarknappen kanten, listraden och dela-raden bakgrund, textknapparna färg och understrykning. Källorna själva har inga hover-lägen på reglage och select.</p>
 
 <h2 class="ds-h2" id="paritet">Paritet mot källan</h2>
 <p class="ds-p">Kitets exempel ovan mätta i Chromium vid 1440 och 390, i en 1280-ram som motsvarar LED:s container, mot källans uppmätta värden i inventeringen.</p>
@@ -968,8 +1053,8 @@
 <tr><td>Rubrik (px)</td><td class="is-miss">34 / <strong>36</strong></td><td class="is-miss">24,2 / <strong>26,8</strong></td><td>h2-rollen 36/26,8 (LED PJS 34/24)</td></tr>
 <tr><td>Hjältesiffra (px)</td><td class="is-hit">56 / <strong>56</strong></td><td class="is-hit">38,3 / <strong>38,3</strong></td><td>--ampy-text-number = LED:s clamp</td></tr>
 <tr><td>Hjältesiffra radhöjd</td><td class="is-hit">56 / <strong>56</strong></td><td class="is-hit">38,3 / <strong>38,3</strong></td><td></td></tr>
-<tr><td>Enhet (px)</td><td class="is-hit">28 / <strong>28</strong></td><td class="is-hit">21,1 / <strong>21,1</strong></td><td>kit-egen --_mid = LED --fs-xl</td></tr>
-<tr><td>Trio-värde (px)</td><td class="is-hit">28 / <strong>28</strong></td><td class="is-hit">21,1 / <strong>21,1</strong></td><td>text.css --_mid</td></tr>
+<tr><td>Enhet (px)</td><td class="is-hit">28 / <strong>28</strong></td><td class="is-hit">21,1 / <strong>21,1</strong></td><td>--ampy-text-mid (tokens.css) = LED --fs-xl</td></tr>
+<tr><td>Trio-värde (px)</td><td class="is-hit">28 / <strong>28</strong></td><td class="is-hit">21,1 / <strong>21,1</strong></td><td>text.css --ampy-text-mid (samma token)</td></tr>
 <tr><td>Stapelspår höjd</td><td class="is-hit">24 / <strong>24</strong></td><td class="is-hit">24 / <strong>24</strong></td><td>signaturen: 24</td></tr>
 <tr><td>Stapel höjd</td><td class="is-hit">24 / <strong>24</strong></td><td class="is-hit">24 / <strong>24</strong></td><td></td></tr>
 <tr><td>Stapelnyckel bredd</td><td class="is-hit">60 / <strong>60</strong></td><td class="is-hit">50 / <strong>50</strong></td><td>60 / 50 (mobil: auto med min 50)</td></tr>
@@ -1006,7 +1091,7 @@
 <tr><td>B9 (glöd)</td><td>LED, EV, battery har identisk glöd (teal .28 / emerald .16); energycalc tre radialer + inset-highlight; visste-du-att en radial. Kitet: <code>.ampy-card--glow</code> är tillval på resultatkort, aldrig default på andra mörka ytor.</td></tr></tbody></table></div>
 <h3 class="ds-h3" id="tokens-brister">Brister i tokens.css som kitet stötte på</h3>
 <ul class="ds-p" style="padding-left:1.8rem">
-  <li>Ingen mellanstorlek 28 / 21 för prominent värde och hjälte-enhet (LED --fs-xl): kit-egen <code>--_mid</code> (samma i text.css).</li>
+  <li>Mellanstorleken 28 / 21 för prominent värde och hjälte-enhet (LED --fs-xl) saknades: rättad 2026-09-12 som <code>--ampy-text-mid</code> i tokens.css (kitets <code>--_mid</code> och text.css:s är borta). Kvar som kit-egna: zon-alfor, popover-skugga, chart-färg 3/4.</li>
   <li>Ingen felfärg för text på mörkt (falt.css valde #ffb4b6, kitet ärver den); tokens har bara <code>--ampy-error</code>.</li>
   <li>Ingen chip-yta för mörka popovers (#11163f) och inga chart-färger 3/4: kit-egna med källa.</li>
   <li>Container-brytpunkter finns bara som dokumentation (kan inte läsas i @container): 960 / 600 / 560 skrivna som literaler.</li>

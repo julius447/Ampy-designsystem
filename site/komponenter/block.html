@@ -9,36 +9,26 @@
 <link rel="stylesheet" href="../doc.css">
 <link rel="icon" href="../brand/ampy-glyph-black-201-favicon.png">
 <style>
-  /* Lokala ds-klasser för blocksidan (bara här, aldrig i doc.css) */
-  .ds-main { min-width: 0; }
-  .ds-toc { columns: 3; column-gap: var(--ampy-space-m); margin: 0 0 var(--ampy-space-l); padding: 0; list-style: none; font-size: var(--ampy-text-small); line-height: 1.5; }
-  .ds-toc li { break-inside: avoid; padding: 0.2rem 0; }
-  .ds-toc a { color: var(--ampy-ink-muted); text-decoration: none; }
-  .ds-toc a:hover { color: var(--ampy-action-strong); text-decoration: underline; }
+  /* Lokala ds-klasser för blocksidan (bara här, aldrig i doc.css). Skalet (.ds-main, .ds-demo--stack, .ds-two, .ds-status--2/--3, .ds-toc) kommer från doc.css sedan fixrundan 2026-09-12. */
   .ds-fig { margin: var(--ampy-space-xs) 0 var(--ampy-space-m); }
   .ds-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--ampy-line); border-radius: var(--ampy-radius-field); background: var(--ampy-bg-surface); }
   .ds-fig figcaption { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); margin-top: 0.6rem; }
   .ds-fig--pair { display: grid; grid-template-columns: 3fr 1fr; gap: var(--ampy-space-s); align-items: start; }
   .ds-fig--pair figure { margin: 0; }
   .ds-fig--sm { max-width: 56rem; }
-  .ds-status--2 { border-color: var(--ampy-ink-faint); color: var(--ampy-ink-muted); }
-  .ds-status--3 { border-color: var(--ampy-warn-ink); color: var(--ampy-warn-ink); }
   .ds-demo--full .ampy-band { padding: var(--ampy-space-xl) var(--ampy-space-m); }
   .ds-demo--full .ampy-section--demo { padding: var(--ampy-space-l) var(--ampy-space-m); }
   .ds-demo--full > .ampy-avdrag { border-radius: 0; box-shadow: none; border: 0; }
   .ds-demo--phone { max-width: 39rem; }
   .ds-demo--desk .ampy-cornercard { margin-left: auto; }
+  .ds-demo.ampy-aurora { background: var(--ampy-aurora-light); }
   .ds-note { font-size: var(--ampy-text-small); color: var(--ampy-ink-muted); background: var(--ampy-bg-subtle); border-radius: var(--ampy-radius-field); padding: var(--ampy-space-2xs) var(--ampy-space-xs); margin: 0 0 var(--ampy-space-s); }
   .ds-blk { padding-top: var(--ampy-space-m); border-top: 1px solid var(--ampy-line-strong); margin-top: var(--ampy-space-2xl); }
   .ds-blk:first-of-type { margin-top: 0; }
   .ds-blk .ds-h2 { margin-top: 0; }
-  @media (max-width: 991px) { .ds-toc { columns: 1; } .ds-fig--pair { grid-template-columns: 1fr; } }
-  @media (max-width: 991px) { .ds-fig--pair figure + figure { max-width: 22rem; } }
-  .ds-demo > * { min-width: 0; }
-  .ds-demo--stack { flex-wrap: nowrap; } /* brist i doc.css: column + wrap ger kolumnens bredd = innehållets max-content, rapporterad i _bygglogg/S4.md */
-  .ds-demo--stack > * { width: 100%; }
-  .ds-demo.ampy-aurora { background: var(--ampy-aurora-light); }
-
+  .ds-variant { display: grid; gap: var(--ampy-space-2xs); }
+  .ds-variant > .ds-demo__label--over { margin-bottom: 0; }
+  @media (max-width: 991px) { .ds-fig--pair { grid-template-columns: 1fr; } .ds-fig--pair figure + figure { max-width: 22rem; } }
 </style>
 </head>
 <body class="ds-body ampy">
@@ -97,33 +87,35 @@
       <p class="ds-lead">Sajtens byggda block, klonade från sin kanoniska källa och bundna till tokens. Varje block visas renderat med systemets klasser, med anatomi, källa, gör och gör inte, kod och de avvikelser som klonen gör mot källan.</p>
       <p class="ds-source"><code>konsolidering/komponenter-karta.md</code> (Block), <code>inventering/&lt;slug&gt;.md</code> + <code>.json</code>, källkoden i <code>kallor/</code>. CSS: <code>system/components/block.css</code>. Knappar, eyebrows, taggar, proof-rad, listor och kort kommer från S2:s filer (<code>knappar.css</code>, <code>text.css</code>, <code>ytor.css</code>).</p>
 
-      <p class="ds-p">Fullständiga kloner (pixelparitet mot källan är målet): processteg, kvittopanel, avdragsblock, testimonial-kort, certifikat-band, eljour, sticky call-bar, CTA-band, före/efter, visste du att, fotobedömningens kort, tidslinje, bokningskort. Förenklade skal (strukturen och måtten klonade, interaktion och innehåll trimmat): slider-skalet, header med EN mega-meny, footer, hero-1, hero-2 (S renderad, G/Z/E som bild), mini-menu, vår process, artikelkomponenterna. Status per block står i <a class="ds-a" href="../blockbibliotek.html">blockbiblioteket</a>.</p>
+      <p class="ds-p">Fullständiga kloner (pixelparitet mot källan är målet): processteg, kvittopanel, avdragsblock, testimonial-kort, certifikat-band, eljour, sticky call-bar, CTA-band, före/efter, visste du att, fotobedömningens kort och formläge, tidslinje, bokningskort, bekräftelse-bocken. Förenklade skal (strukturen och måtten klonade, interaktion och innehåll trimmat): slider-skalet, header med EN mega-meny, footer, hero-1, hero-2 (S renderad, G/Z/E som bild), mini-menu, vår process, artikelkomponenterna. Status per block står i <a class="ds-a" href="../blockbibliotek.html">blockbiblioteket</a>.</p>
 
-      <ul class="ds-toc">
-        <li><a href="#steg">Processteg med ringar</a></li>
+      <nav class="ds-toc" aria-label="På den här sidan"><span>På den här sidan</span><ol>
+        <li><a href="#process">Processteg</a></li>
         <li><a href="#kvitto">Kvittopanel</a></li>
         <li><a href="#avdrag">Avdragsblocket</a></li>
-        <li><a href="#testimonial">Testimonial-kort + slider</a></li>
-        <li><a href="#cert">Certifikat-band</a></li>
-        <li><a href="#eljour">Eljour: symptom + samtal</a></li>
-        <li><a href="#callbar">Sticky call-bar + hörnkort</a></li>
-        <li><a href="#ctaband">CTA-band</a></li>
+        <li><a href="#testimonials">Testimonial-kort + slider</a></li>
+        <li><a href="#certifikat">Certifikat-band</a></li>
+        <li><a href="#eljour">Eljour</a></li>
+        <li><a href="#sticky-call-bar">Sticky call-bar + hörnkort</a></li>
+        <li><a href="#cta-band">CTA-band</a></li>
         <li><a href="#header">Header + mega-meny</a></li>
         <li><a href="#footer">Footer</a></li>
-        <li><a href="#hero1">Hero-1</a></li>
-        <li><a href="#hero2">Hero-2 S/G/Z/E</a></li>
-        <li><a href="#picker">Mini-menu</a></li>
-        <li><a href="#ba">Före/efter</a></li>
-        <li><a href="#process">Vår process</a></li>
-        <li><a href="#afk">Fotobedömningens kort</a></li>
-        <li><a href="#vda">Visste du att</a></li>
+        <li><a href="#hero-1">Hero-1</a></li>
+        <li><a href="#hero-2">Hero-2 S/G/Z/E</a></li>
+        <li><a href="#mini-menu">Mini-menu</a></li>
+        <li><a href="#fore-efter">Före/efter</a></li>
+        <li><a href="#var-process">Vår process</a></li>
+        <li><a href="#fotobedomningen">Fotobedömningen</a></li>
+        <li><a href="#visste-du-att">Visste du att</a></li>
         <li><a href="#artikel">Artikelkomponenter</a></li>
-        <li><a href="#tidslinje">Tidslinje + bokningskort</a></li>
-      </ul>
+        <li><a href="#tidslinje">Tidslinje</a></li>
+        <li><a href="#bokning">Bokningskort</a></li>
+        <li><a href="#bock">Bekräftelse-bock</a></li>
+      </ol></nav>
 
       <!-- ================================================================ 1. STEG -->
       <section class="ds-blk" id="steg">
-        <h2 class="ds-h2">Processteg med ringar och connector</h2>
+        <h2 class="ds-h2" id="process">Processteg med ringar och connector</h2>
         <p class="ds-p">Tre steg i en kolumn: en ring per steg vars båge fylls en tredjedel, två tredjedelar och helt, i samma spår som linjen mellan stegen. Används i avdragsblocket på tjänstesidorna, alltid till vänster om kvittot.</p>
         <p class="ds-source">Kanon: rot-gt-cro (<code>designs/d2-kvittot-forst.html:163-217</code>, variant F, auktoritet 2). Finns även i: live ROT/GT-blocket (penselringar 95 px + JS-linjer, avvikelse: tre kolumner, ikon i st.f. båge), var-process v2 (medaljong 24 + 1 px räls), offer-accepted (gradientnoder 42, se <a class="ds-a" href="#tidslinje">tidslinjen</a>). <a class="ds-a" href="../blockbibliotek.html#rot-gt-cro">Blockbiblioteket</a></p>
 
@@ -215,8 +207,8 @@
       </section>
 
       <!-- ================================================================ 2. KVITTO -->
-      <section class="ds-blk" id="kvitto">
-        <h2 class="ds-h2">Kvittopanel "Så räknas ditt pris"</h2>
+      <section class="ds-blk">
+        <h2 class="ds-h2" id="kvitto">Kvittopanel "Så räknas ditt pris"</h2>
         <p class="ds-p">Avdragets räkning som ett kvitto: caps-rubrik, rader med prickade ledare, en offert-pill, ett avdragschip och en totalplatta. Läsbar på tre sekunder utan interaktion. Ljus som standard, mörk på ROT-blocket.</p>
         <p class="ds-source">Kanon: rot-gt-cro (<code>designs/d2-kvittot-forst.html:220-300</code>, auktoritet 2). Finns även i: booking-confirmation (kvittorader med dashed ledare + totalplatta, se <a class="ds-a" href="#tidslinje">bokningskortet</a>), rot-gt totalrad = S2:s <code>.ampy-price</code>.</p>
 
@@ -293,8 +285,8 @@
       </section>
 
       <!-- ================================================================ 3. AVDRAG -->
-      <section class="ds-blk" id="avdrag">
-        <h2 class="ds-h2">Avdragsblocket: H2, stegen och kvittot</h2>
+      <section class="ds-blk" id="rot-gt">
+        <h2 class="ds-h2" id="avdrag">Avdragsblocket: H2, stegen och kvittot</h2>
         <p class="ds-p">Blocket i position 2 på tjänstesidorna (efter heron): en H2 med understruken accent, stegen till vänster och kvittopanelen till höger, i ett fullbreddskort med tre ljusa vågor. Stegen och kvittot ovan monterade.</p>
         <p class="ds-source">Kanon: rot-gt-cro (<code>designs/d2-kvittot-forst.html:94-135</code> <code>.av-block</code> + <code>.av-grid</code>, auktoritet 2, 278 sidor mappade). Finns även i: live ROT/GT (vitt kort radie 20, husets skugga), designs/gt-produkt, gt-generisk, hemforsakring (samma skal, ljus panel).</p>
 
@@ -392,7 +384,7 @@
 
       <!-- ================================================================ 4. TESTIMONIAL -->
       <section class="ds-blk" id="testimonial">
-        <h2 class="ds-h2">Testimonial-kort och slider-skal</h2>
+        <h2 class="ds-h2" id="testimonials">Testimonial-kort och slider-skal</h2>
         <p class="ds-p">Mörka omdömeskort i en slider med fyra prickar och EN CTA: Google-betyget. Kortet är tredelat: citattecken och Google-G i toppen, texten vertikalt centrerad, namn, hårlinje, stjärnor och datum i foten.</p>
         <p class="ds-source">Kanon: testimonials-block (<code>delivery/ampy-testimonials.css:41-98</code>, V1 låst 2026-07-19, auktoritet 1). Finns även i: live-baslinjen (kort 383 x 360 utan datum, Bricks-paginering), picasso components/testimonials (samma). Citatets typografi: S2:s <code>.ampy-quote</code>. <a class="ds-a" href="../blockbibliotek.html#testimonials-block">Blockbiblioteket</a></p>
 
@@ -426,11 +418,11 @@
               <button class="ampy-slider__dot" type="button" aria-label="Omdöme 4"></button>
             </div>
             <div class="ampy-slider__rating">
-              <a class="ampy-slider__badge" href="#"><span class="ampy-slider__badge-stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span><span class="ampy-slider__badge-text"><strong>5 av 5</strong>Betyg på Google</span></a>
+              <a class="ampy-slider__badge" href="#"><span class="ampy-slider__badge-stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span><span class="ampy-slider__badge-text"><strong>5 av 5</strong>Betyg på Google</span> <span class="ampy-tag ampy-tag--neutral ampy-tag--sm">[GAP]</span></a>
             </div>
           </section>
         </div>
-        <p class="ds-caption">Skalet är statiskt: tre kort i grid (Splide perPage 3/2/1 i källan), prick 1 aktiv med fyllningen på 60 procent. Omdömena är riktiga recensioner ur V1:s datafil. "5 av 5" är [GAP] mot ampy-foretagsdata (candour-grind i källans README).</p>
+        <p class="ds-caption">Skalet är statiskt: tre kort i grid (Splide perPage 3/2/1 i källan), prick 1 aktiv med fyllningen på 60 procent. Omdömena är riktiga recensioner ur V1:s datafil. "5 av 5" är [GAP] mot ampy-foretagsdata (candour-grind i källans README): taggen står i exemplet.</p>
 
         <h3 class="ds-h3">Anatomi</h3>
         <div class="ds-table-wrap"><table class="ds-table">
@@ -510,7 +502,7 @@
 
       <!-- ================================================================ 5. CERT -->
       <section class="ds-blk" id="cert">
-        <h2 class="ds-h2">Certifikat-band</h2>
+        <h2 class="ds-h2" id="certifikat">Certifikat-band</h2>
         <p class="ds-p">Tillitsbandet under innehållet: gradientyta med tre vågor, rubrik och brödtext till vänster, fyra vita märkeskort i 2 x 2 till höger. Logotyperna är normaliserade på optisk bläckmassa, inte på boxhöjd.</p>
         <p class="ds-source">Kanon: certificates (<code>delivery/dist/ampy-certificates.css</code>, v2, auktoritet 2, paritet 24 av 24 bredder). Finns även i: live-baslinjen (sex kort 113 x 90 utan skugga, klippt våg). <a class="ds-a" href="../blockbibliotek.html#certificates">Blockbiblioteket</a></p>
 
@@ -614,8 +606,8 @@
       </section>
 
       <!-- ================================================================ 6. ELJOUR -->
-      <section class="ds-blk" id="eljour">
-        <h2 class="ds-h2">Eljour: symptomlista, samtalskort och nödknapp</h2>
+      <section class="ds-blk">
+        <h2 class="ds-h2" id="eljour">Eljour: symptomlista, samtalskort och nödknapp</h2>
         <p class="ds-p">Toppblocket på eljour-sidorna. Besökaren trycker på symptomet, får en ärlig riskförklaring och ett samtal till jouren. Inget formulär. Samtalskortet till vänster (status, löfte, fyra trust-punkter, CTA), symptomlistan till höger med två nivåer: Akut och Varning.</p>
         <p class="ds-source">Kanon: eljour-block (<code>index.html:12-140</code>, "sajtens bästa block 23/25", auktoritet 1). Finns även i: eljour-sticky-bar (gör samtalskortet sticky från 993 px, grön fork av knappen), hero-2 E (<code>ampy-btn--emergency</code>, samma gradient). Statuspill = S2:s <code>.ampy-tag--live</code>, trust-listan = <code>.ampy-list--check.ampy-list--compact</code>. <a class="ds-a" href="../blockbibliotek.html#eljour-block">Blockbiblioteket</a></p>
 
@@ -759,7 +751,7 @@
 
       <!-- ================================================================ 7. CALLBAR -->
       <section class="ds-blk" id="callbar">
-        <h2 class="ds-h2">Sticky call-bar (mobil) och hörnkort (desktop)</h2>
+        <h2 class="ds-h2" id="sticky-call-bar">Sticky call-bar (mobil) och hörnkort (desktop)</h2>
         <p class="ds-p">Den persistenta ring-affordansen på eljour-ytan: en fixed bottenremsa upp till 992 px med sajtens ring-knapp i fullbreddsläge, och ett 216 x 128-hörnkort från 993 px som alltid syns. Baren uppfinner ingenting: pillen är samplad ur ring-knappen.</p>
         <p class="ds-source">Kanon: eljour-sticky-bar (<code>dist/ampy-callbar.css</code>, M1 ring låst, auktoritet 2, hörnval öppet). Finns även i: elcentral-kollen <code>__stickycta</code> (77 h vit hylla med kortets solid-CTA, auto-döljs). Knappen = S2:s <code>.ampy-btn--ring.ampy-btn--block</code>. <a class="ds-a" href="../blockbibliotek.html#eljour-sticky-bar">Blockbiblioteket</a></p>
 
@@ -827,7 +819,7 @@
 
       <!-- ================================================================ 8. CTA-BAND -->
       <section class="ds-blk" id="ctaband">
-        <h2 class="ds-h2">CTA-band "Prata med en elektriker"</h2>
+        <h2 class="ds-h2" id="cta-band">CTA-band "Prata med en elektriker"</h2>
         <p class="ds-p">Det primära ring-bandet: vitt kort på sky-mist med rubrik, brödtext, EN ring-CTA med puls-chip och Edvins porträtt. Ett konverteringsmål (samtalet), inget formulär, ingen sekundär knapp.</p>
         <p class="ds-source">Kanon: main-cta (<code>delivery/ampy-main-cta.css</code>, version B låst, auktoritet 2). Finns även i: picasso components/main-cta (baslinjeklon + tre riktningar), Main-CTA-block (spegel, överspelad). Knappen = S2:s <code>.ampy-btn--ring</code>. <a class="ds-a" href="../blockbibliotek.html#main-cta">Blockbiblioteket</a></p>
 
@@ -910,8 +902,8 @@
       </section>
 
       <!-- ================================================================ 9. HEADER -->
-      <section class="ds-blk" id="header">
-        <h2 class="ds-h2">Header och mega-meny</h2>
+      <section class="ds-blk">
+        <h2 class="ds-h2" id="header">Header och mega-meny</h2>
         <p class="ds-p">Sajtens header v5: en 76 px bar i sidans egen färg med hårlinje under, logo 130, tre nav-länkar centrerade, solid teal-CTA med pulserande mint-prick. Öppen mega-meny är ett fullbredds-ark i samma färg (bar och ark läses som en yta, sömmen försvinner). Här visas skalet med Tjänster öppen; Produkter, Lösningar och mobil-drawern visas som bild.</p>
         <p class="ds-source">Kanon: website-blocks (<code>Header/index.html:20-140</code>, header godkänd, auktoritet 1; CSS:en är tecken-identisk med hero-1 <code>assets/header.css</code>). Finns även i: article SiteNav (egen React-kopia med topbar 36 + neonmint-pill = drift). CTA = S2:s <code>.ampy-btn--secondary.ampy-btn--compact</code>. <a class="ds-a" href="../blockbibliotek.html#website-blocks">Blockbiblioteket</a></p>
 
@@ -1029,8 +1021,8 @@
       </section>
 
       <!-- ================================================================ 10. FOOTER -->
-      <section class="ds-blk" id="footer">
-        <h2 class="ds-h2">Footer</h2>
+      <section class="ds-blk">
+        <h2 class="ds-h2" id="footer">Footer</h2>
         <p class="ds-p">Sajtens footer i tre zoner: ljus prefooter "Populära kategorier" på en cyan-gradient, mörk footer med logo, brand-text, sociala ikoner, Google-betyg och tre länkkolumner, och en nästan svart bar med copyright och policy-länkar. Klonen är baslinjen (= live); riktning B (speglad meny) är rekommenderad men inte vald.</p>
         <p class="ds-source">Kanon: footer-cro (<code>css/baseline.css</code>, 42 av 42 computed values identiska med live, auktoritet 1). Riktningar A, B, C (auktoritet 3) väntar ägarval. <a class="ds-a" href="../blockbibliotek.html#footer-cro">Blockbiblioteket</a></p>
 
@@ -1061,7 +1053,7 @@
                 </div>
                 <div class="ampy-footer__google">
                   <svg class="g" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg>
-                  <span class="ampy-footer__rating">5,0</span>
+                  <span class="ampy-footer__rating">5,0</span> <span class="ampy-tag ampy-tag--neutral ampy-tag--sm">[GAP]</span>
                   <span class="ampy-footer__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span>
                 </div>
                 <div class="ampy-footer__cols">
@@ -1085,7 +1077,7 @@
             </section>
           </footer>
         </div>
-        <p class="ds-caption">Adressen Hägersten mot Solna och "5,0" är [GAP] mot ampy-foretagsdata (candour-grind i källans ANALYS.md). Tre av källans fem sociala ikoner visas (Reddit och TikTok utelämnade i skalet).</p>
+        <p class="ds-caption">Adressen Hägersten mot Solna och "5,0" är [GAP] mot ampy-foretagsdata (candour-grind i källans ANALYS.md); taggen står i exemplet. Tre av källans fem sociala ikoner visas ur spriten (<code>ik-linkedin</code>, <code>ik-instagram</code>, <code>ik-facebook</code>; Reddit och TikTok utelämnade i skalet).</p>
 
         <h3 class="ds-h3">Anatomi</h3>
         <div class="ds-table-wrap"><table class="ds-table">
@@ -1181,31 +1173,31 @@
 
       <!-- ================================================================ 11. HERO-1 -->
       <section class="ds-blk" id="hero1">
-        <h2 class="ds-h2">Hero-1 (startsidan)</h2>
+        <h2 class="ds-h2" id="hero-1">Hero-1 (startsidan)</h2>
         <p class="ds-p">Startsidans hero, riktning B: inramad foto-hero med midnattsblå veil från vänster, H1 60/700 vit på två rader, lead 22/400, gradient-CTA och proof-raden nere till höger. Ägargodkänd ("PERFEKTION") och installerad live.</p>
         <p class="ds-source">Kanon: hero-1 (<code>assets/style.css:40-60, 190-265</code>, auktoritet 1). Finns även i: live site-css <code>.home-hero__*</code> (= Hero-1 installerad), picasso hero/ampy. Ramen = S2:s <code>.ampy-frame</code> (ytor.css); proof-raden = <code>.ampy-proof</code> (text.css). <a class="ds-a" href="../blockbibliotek.html#hero-1">Blockbiblioteket</a></p>
 
         <div class="ampy ds-demo ds-demo--full" data-code>
           <section class="ampy-hero1">
-            <div class="ampy-frame ampy-frame--short ampy-on-dark">
+            <div class="ampy-frame ampy-on-dark">
               <img class="ampy-frame__media" src="../bilder/block/hero1-bg.jpg" alt="" width="1400" height="1157">
               <div class="ampy-frame__veil" aria-hidden="true"></div>
               <div class="ampy-frame__content ampy-hero1__stack">
-                <h1 class="ampy-display">Elektrikern som gör<br>ditt hem redo för framtiden</h1>
-                <p class="ampy-lead">Elservice, laddbox och batterilagring, utfört av behöriga elektriker med fast pris och ROT eller grön teknik inräknat.</p>
+                <p class="ampy-display">Elinstallationer i hemmet,<br> gjort ordentligt.</p>
+                <p class="ampy-lead">Våra egna behöriga elektriker hjälper dig i hela Sverige, med allt från elfel och elcentraler till laddbox och batterilagring.</p>
                 <a class="ampy-btn ampy-btn--primary" href="#">Kostnadsfri rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-up-right"/></svg></a>
               </div>
               <div class="ampy-frame__foot">
                 <div class="ampy-proof">
-                  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google</span><span class="ampy-proof__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span></a>
+                  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google <span class="ampy-tag ampy-tag--neutral ampy-tag--sm">[GAP]</span></span><span class="ampy-proof__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span></a>
                   <span class="ampy-proof__sep" aria-hidden="true"></span>
-                  <span class="ampy-proof__vol">Över 3 000 installationer per år</span>
+                  <span class="ampy-proof__vol">Över <strong>3 000</strong> installationer per år <span class="ampy-tag ampy-tag--neutral ampy-tag--sm">[GAP]</span></span>
                 </div>
               </div>
             </div>
           </section>
         </div>
-        <p class="ds-caption">Renderad med <code>.ampy-frame--short</code> (360 till 520 px) i dokumentationen; i produktion är ramen 100svh minus header minus 48 (620 till 950 px). Proof-siffrorna "5,0" och "3 000" är [GAP] mot ampy-foretagsdata.</p>
+        <p class="ds-caption">Copyn är källans ordagrant (<code>kallor/Hero-1/index.html:268-269</code>, ägargodkänd), rubrikrollen bärs av <code>&lt;p class="ampy-display"&gt;</code> så sidan har en enda h1. Ramen kör produktionens höjd (100svh minus header minus 48, 620 till 950 px) så kompositionen läses som källan. Proof-siffrorna "5,0" och "3 000" står som i källan men är [GAP] mot ampy-foretagsdata: taggen sitter i exemplet tills siffrorna är signerade.</p>
 
         <h3 class="ds-h3">Anatomi</h3>
         <div class="ds-table-wrap"><table class="ds-table">
@@ -1224,7 +1216,7 @@
         <div class="ds-dodont">
           <div><strong>Gör</strong><ul>
             <li>Två veil-lager: läsbar vit text utan att döda fotot; mobilen byter riktning (nerifrån).</li>
-            <li>Radräkningen är verifierad per band: explicit radbrytning i H1 från 993 px.</li>
+            <li>Radräkningen är verifierad per band: explicit radbrytning i H1 från 993 px, under det bryter texten fritt (källans <code>br { display: none }</code>).</li>
             <li>Hover bara på (hover:hover) and (pointer:fine); reduced-motion respekteras.</li>
           </ul></div>
           <div><strong>Gör inte</strong><ul>
@@ -1269,7 +1261,7 @@
 
       <!-- ================================================================ 12. HERO-2 -->
       <section class="ds-blk" id="hero2">
-        <h2 class="ds-h2">Hero-2 S/G/Z/E (tjänstesidor)</h2>
+        <h2 class="ds-h2" id="hero-2">Hero-2 S/G/Z/E (tjänstesidor)</h2>
         <p class="ds-p">Herosystemet för 260 tjänste- och ortssidor: en navy-ram (radie 22, 1424 bred, 683 hög vid 1440) med breadcrumb, H1 48/700, lead 20, CTA och proof-rad. En hjälte per intent: S (tjänst, kvadratbild höger), G (ortsida laddbox, fullbredds-foto), Z (elektriker i ort, formkort), E (eljour, ring-CTA + vit sekundär). Här renderas S; de andra visas som bild.</p>
         <p class="ds-source">Kanon: hero-2-alternatives (<code>dist/ampy-hero-primitives.css</code> + <code>ampy-hero-s.css</code>, v18 slutversion, auktoritet 2, lanseringsgrindar öppna). Finns även i: hero-2-form (formkortets föregångare, underkänd glas .76). <a class="ds-a" href="../blockbibliotek.html#hero-2-alternatives">Blockbiblioteket</a></p>
 
@@ -1279,20 +1271,20 @@
               <img class="ampy-hero2__bg" src="../bilder/block/hero2-bg.webp" alt="" aria-hidden="true" width="1200" height="613">
               <nav class="ampy-hero2__crumbs" aria-label="Du är här"><a href="#">Hem</a><span aria-hidden="true">&#8250;</span><a href="#">Elservice</a><span aria-hidden="true">&#8250;</span><span>Byta elcentral</span></nav>
               <div class="ampy-hero2__body">
-                <h1 class="ampy-hero2__h1">Byta elcentral med fast pris och ROT-avdrag</h1>
-                <p class="ampy-hero2__lead">En behörig elektriker byter din elcentral, märker upp grupperna och sätter jordfelsbrytare. Du får priset innan du bestämmer dig.</p>
+                <p class="ampy-hero2__h1">Ny elcentral installerad med 30 % ROT-avdrag</p>
+                <p class="ampy-hero2__lead">Dags att byta ditt gamla proppskåp? Vi hjälper dig att uppgradera din elcentral till moderna automatsäkringar och kan även byta fasadmätarskåp för en säkrare och mer driftsäker elanläggning.</p>
                 <div class="ampy-hero2__actions"><a class="ampy-btn ampy-btn--primary" href="#">Kostnadsfri rådgivning <svg class="ampy-btn__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-up-right"/></svg></a></div>
                 <div class="ampy-proof">
-                  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google</span><span class="ampy-proof__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span></a>
+                  <a class="ampy-proof__row" href="#"><svg class="ampy-proof__icon" aria-hidden="true"><use href="../../system/ikoner.svg#ik-google"/></svg><span class="ampy-proof__label"><strong>5,0</strong> på Google <span class="ampy-tag ampy-tag--neutral ampy-tag--sm">[GAP]</span></span><span class="ampy-proof__stars" role="img" aria-label="5 av 5 stjärnor"><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg><svg><use href="../../system/ikoner.svg#ik-star"/></svg></span></a>
                   <span class="ampy-proof__sep" aria-hidden="true"></span>
-                  <span class="ampy-proof__vol">Över 3 000 installationer per år</span>
+                  <span class="ampy-proof__vol">Över <strong>3 000</strong> installationer per år <span class="ampy-tag ampy-tag--neutral ampy-tag--sm">[GAP]</span></span>
                 </div>
               </div>
               <div class="ampy-hero2__media"><img src="../bilder/block/hero2-foto.jpg" alt="Ny elcentral med märkta grupper" width="1000" height="666"></div>
             </div>
           </section>
         </div>
-        <p class="ds-caption">HERO-S vid dokumentationens bredd (kortet under 1200 px: bilden 46 procent). Vid 1440 är bilden 619 x 619 och H1 48 px; under 768 läggs bilden bakom texten med den bastanta scrimmen (kontrastmätt 4,75:1 mot helvit bild).</p>
+        <p class="ds-caption">HERO-S vid dokumentationens bredd (kortet under 1200 px: bilden 46 procent). Copyn är ägarens testcopy ordagrant ur <code>preview/v4-s-1440.html:328-334</code>; rubrikrollen bärs av <code>&lt;p class="ampy-hero2__h1"&gt;</code>. Vid 1440 är bilden 619 x 619 och H1 48 px; under 768 läggs bilden bakom texten med den bastanta scrimmen (kontrastmätt 4,75:1 mot helvit bild). Proof-siffrorna är [GAP] mot ampy-foretagsdata (taggen i exemplet).</p>
 
         <h3 class="ds-h3">Anatomi (primitiverna)</h3>
         <div class="ds-table-wrap"><table class="ds-table">
@@ -1302,7 +1294,7 @@
             <tr><td>H1</td><td>48 / 700 / 1.07 / -.008em</td><td>34 px</td><td><code>--ampy-text-h1</code> (31 till 48)</td></tr>
             <tr><td>Lead</td><td>20 / 400 / 1.6, 46ch</td><td>16 px</td><td>literal 20 (lead-token är 17 till 22, B18)</td></tr>
             <tr><td>Rytm</td><td>H1 till lead 18, lead till CTA 32, CTA till proof 44, proof-botten 52</td><td>14 / 26 / 24</td><td>hero-s §9</td></tr>
-            <tr><td>Crumbs</td><td>13 / 500 / 18, topp 20, sep 8 px</td><td>samma</td><td><code>--ampy-fine</code></td></tr>
+            <tr><td>Crumbs</td><td>13 / 500 / 18, topp 20, sep 8 px</td><td>samma</td><td><code>--ampy-text-fine</code></td></tr>
             <tr><td>S: bild</td><td>619 x 619, radie 20, lätt scrim</td><td>bakom, bastant scrim</td><td><code>--ampy-scrim-light/-strong</code></td></tr>
             <tr><td>G / Z / E</td><td>fullbredds-foto + ghost-pill / formkort 450 x 613 / foto 460 x 528 radie 72 och 28 + vit sekundär</td><td>staplat</td><td>se bilder</td></tr>
           </tbody>
@@ -1359,7 +1351,7 @@
 
       <!-- ================================================================ 13. MINI-MENU -->
       <section class="ds-blk" id="picker">
-        <h2 class="ds-h2">Mini-menu (produktväljaren under heron)</h2>
+        <h2 class="ds-h2" id="mini-menu">Mini-menu (produktväljaren under heron)</h2>
         <p class="ds-p">Startsidans block 2: centrerad rubrik och lead, tre kvadratiska fotokort (Elservice, Laddbox, Batterilagring) i navy med mörk radial-overlay, vit korttitel och en himmelsblå pill. Hover lyfter kortet, zoomar fotot och djupnar overlayen.</p>
         <p class="ds-source">Kanon: mini-menu (<code>fluentsnippets/ampy-elfirma.css</code>, levererad och installerad live som <code>.ampy-elfirma</code>, auktoritet 2). Varianter: <code>prototype.html</code> (ljus glas-trio: vita kort 368 x 301 radie 22, teal topplinje vid hover, h2 44/800), masterpiece, evify-clone. <a class="ds-a" href="../blockbibliotek.html#mini-menu">Blockbiblioteket</a></p>
 
@@ -1368,7 +1360,7 @@
             <div class="ampy-picker__wrap">
               <header class="ampy-picker__head">
                 <h2 class="ampy-picker__title" id="pk-title">Din elektriker för hela hemmet</h2>
-                <p class="ampy-picker__lead">Från felsökning och elcentral till laddbox och batteri. Behöriga elektriker, fast pris och avdraget inräknat.</p>
+                <p class="ampy-picker__lead">Med över <span class="ampy-tag ampy-tag--neutral ampy-tag--sm">[GAP]</span> installationer per år hjälper vi dig med elinstallationer, laddbox och batterilagring, allt under ett och samma tak.</p>
               </header>
               <div class="ampy-picker__grid">
                 <a class="ampy-picker__card ampy-on-dark" href="#"><span class="ampy-picker__media" style="background-image:url('../bilder/block/elservice.webp')"></span><span class="ampy-picker__overlay" aria-hidden="true"></span><span class="ampy-picker__body"><span class="ampy-picker__cardtitle">Elservice</span><span class="ampy-picker__cta">Läs mer <svg aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg></span></span></a>
@@ -1378,7 +1370,7 @@
             </div>
           </section>
         </div>
-        <p class="ds-caption">Fotot sätts per kort som <code>--photo</code>; saknas det visas aurora-fallbacken (on-brand gradient, aldrig trasig bild). Body-scrimmen bakom titeln garanterar AA för vit text över vilket foto som helst.</p>
+        <p class="ds-caption">Rubrik och lead är källans ordagrant (<code>kallor/mini-menu/index.html:162-163</code>); källans "över 3000" är utbytt mot en synlig [GAP]-tagg tills siffran är signerad i ampy-foretagsdata (candour-grinden), meningen är inte omskriven. Fotot sätts per kort som <code>--photo</code>; saknas det visas aurora-fallbacken (on-brand gradient, aldrig trasig bild). Body-scrimmen bakom titeln garanterar AA för vit text över vilket foto som helst.</p>
 
         <h3 class="ds-h3">Anatomi</h3>
         <div class="ds-table-wrap"><table class="ds-table">
@@ -1437,7 +1429,7 @@
 
       <!-- ================================================================ 14. FÖRE/EFTER -->
       <section class="ds-blk" id="ba">
-        <h2 class="ds-h2">Före/efter med reglage</h2>
+        <h2 class="ds-h2" id="fore-efter">Före/efter med reglage</h2>
         <p class="ds-p">Rent bevisblock: två kvadratiska ramar sida vid sida med varsin söm som besökaren drar. EN H2 med understruken accent, en avslutande tagline, 0 asks. Bilderna är riktiga <code>img</code> med mått, synliga utan JS; reglaget är ren förbättring.</p>
         <p class="ds-source">Kanon: fore-efter-cro (<code>dist/01-fore-efter.css</code>, riktning A "Reglaget" vald 2026-08-17, auktoritet 2). Bilderna är illustrationer tills fotobiblioteket finns ([GAP]). <a class="ds-a" href="../blockbibliotek.html#fore-efter-cro">Blockbiblioteket</a></p>
 
@@ -1548,8 +1540,8 @@
       </section>
 
       <!-- ================================================================ 15. VÅR PROCESS -->
-      <section class="ds-blk" id="process">
-        <h2 class="ds-h2">Vår process (baslinje, riktningsval väntar)</h2>
+      <section class="ds-blk">
+        <h2 class="ds-h2" id="var-process">Vår process (baslinje, riktningsval väntar)</h2>
         <p class="ds-note">Auktoritet 3. Tre riktningar byggda, v2 A "Tidslinjen" rekommenderad, ingen vald. Blocket ligger på 212 sidor i sin gamla form. Det här är v2 A som belägg för mönstret, inte kanon.</p>
         <p class="ds-p">"Vad som händer sen": ett vitt kort med rubriken och bevisraden till vänster (32 procent) och fyra räls-steg till höger. Steg 1 bär blockets enda teal (öppningsringen). Brödtexten börjar med ett löfteschip i medium vikt.</p>
         <p class="ds-source">Belägg: var-process-cro (<code>v2/ampy-process.css</code>, v2 A, auktoritet 3). Stegen finns även som ringar i rot-gt-cro (kanon för processteg) och som noder i offer-accepted. <a class="ds-a" href="../blockbibliotek.html#var-process-cro">Blockbiblioteket</a></p>
@@ -1631,7 +1623,7 @@
 
       <!-- ================================================================ 16. AFK -->
       <section class="ds-blk" id="afk">
-        <h2 class="ds-h2">Fotobedömningens kort och kvitto</h2>
+        <h2 class="ds-h2" id="fotobedomningen">Fotobedömningens kort, formläge och kvitto</h2>
         <p class="ds-p">Avslutskortet: eyebrow med kameraglyf, tvåfärgad H2 (frågan lätt, svaret medium), info-rader mellan hårlinjer, och i kvittoläget en bock på teal-tint, "Tack. Din bild är inskickad.", ärende-id, en löftesrad och ansvarsraden. Signaturdevisen i formläget är "fem staplar, en tänd" (S2:s fält).</p>
         <p class="ds-source">Kanon: fotobedomningen (<code>v2/dist/afk-styles.css</code>, v2 byggd, auktoritet 2, go/no-go = dubbel uppladdning). Formfälten dokumenteras i <a class="ds-a" href="falt.html">Fält och reglage</a>. <a class="ds-a" href="../blockbibliotek.html#fotobedomningen">Blockbiblioteket</a></p>
 
@@ -1722,7 +1714,7 @@
 
       <!-- ================================================================ 17. VISSTE DU ATT -->
       <section class="ds-blk" id="vda">
-        <h2 class="ds-h2">Visste du att (redaktionellt kort)</h2>
+        <h2 class="ds-h2" id="visste-du-att">Visste du att (redaktionellt kort)</h2>
         <p class="ds-p">Det lätta faktakortet: midnight-kort med teal-kicker och blixt, rubrik, kort brödtext och en glödlampa med Ampy-blixten som filament. Registret är lätt och inbjudande, inte allvarligt (CLAUDE.md regel 6). Ett av få block som binder direkt till produktionens ap-tokens.</p>
         <p class="ds-source">Kanon: visste-du-att (<code>visste-du-att.css</code> + Bricks paste-JSON, slutaudit GO, auktoritet 2). Mätningen visade att prototypen speglade fel tokenskala (H2 48 i prototypen, 36 i produktion). <a class="ds-a" href="../blockbibliotek.html#visste-du-att">Blockbiblioteket</a></p>
 
@@ -1796,8 +1788,8 @@
       </section>
 
       <!-- ================================================================ 18. ARTIKEL -->
-      <section class="ds-blk" id="artikel">
-        <h2 class="ds-h2">Artikelkomponenter</h2>
+      <section class="ds-blk">
+        <h2 class="ds-h2" id="artikel">Artikelkomponenter</h2>
         <p class="ds-p">Sex komponenter ur artikelmallen, konverterade från Tailwind-paletten till tokens: snabbfakta ("Snabbt svar" med takeaways), FAQ som details/summary, tabell (den scopade Bricks-tabellen), byline (E-E-A-T-skelettet), innehållsförteckning och callout (pro-tip och citat). Artikelmallens blå #326afd är utbytt mot text-teal (B1).</p>
         <p class="ds-source">Kanon: article-template (<code>src/</code> + <code>handover-ampy-tabell/ampy-tabell.css</code>, auktoritet 2, 187 filer okommitterade lokalt). Mallens hero, TOC-aktivering, JSON-LD och delning följer inte med. <a class="ds-a" href="../blockbibliotek.html#article-template">Blockbiblioteket</a></p>
 
@@ -1949,8 +1941,8 @@
       </section>
 
       <!-- ================================================================ 19. TIDSLINJE + BOKNING -->
-      <section class="ds-blk" id="tidslinje">
-        <h2 class="ds-h2">Tack-sidans tidslinje och bokningens sammanfattningskort</h2>
+      <section class="ds-blk">
+        <h2 class="ds-h2" id="tidslinje">Tack-sidans tidslinje och bokningens sammanfattningskort</h2><span id="bokning"></span><span id="bock"></span>
         <p class="ds-p">Tidslinjen "Så här går vi vidare": tre noder med gradient och vit inset-ring, en teal-linje nod till nod, rubrik 17/600 och en rad small. Bokningskortet: datumet som H1 med "Imorgon,"-prefix, två faktabrickor, arbetslista med bockar och beställningen som kvitto med totalplatta.</p>
         <p class="ds-source">Tidslinjen: offer-accepted (<code>styles.css:81-104</code> <code>.oa__steps</code>, auktoritet 3, det enda belägget; thank-you v1 FINAL saknar stegen trots låst brief). Bokningskortet: booking-confirmation (<code>assets/bokning.css</code> <code>.bk-*</code>, riktning B levererad, auktoritet 2). <a class="ds-a" href="../blockbibliotek.html#booking-confirmation">Blockbiblioteket</a></p>
 

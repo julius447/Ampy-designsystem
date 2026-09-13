@@ -1,12 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <!--
-    Ampy designsystem: ikonsprite (S2). EN familj för alla exempel.
+    Ampy designsystem: ikonsprite (S2). EN familj för alla exempel. 29 symboler (22 + 7 tillagda 2026-09-12, granskning S2-9).
     24-rutnät, stroke 1.75, runda ändar och hörn, fill none, stroke currentColor.
-    Undantag: ik-star (fylld, betygsstjärnor, källa hero-1 index.html:280) och ik-google (fasta färger, G-loggan i proof-raden).
-    Användning: <svg width="16" height="16" aria-hidden="true"><use href="../../system/ikoner.svg#ik-arrow-right"/></svg>
-    Kräver att sidan serveras över http (extern <use> blockeras på file:// i Chromium).
+    Undantag (fyllda): ik-star (betygsstjärnor, källa hero-1 index.html:280), ik-google (fasta färger, G-loggan i proof-raden),
+    ik-linkedin / ik-instagram / ik-facebook (varumärkesglyfer, fill currentColor, samma paths som footerns inline-SVG:er i block.html).
+    Användning: <svg width="16" height="16" aria-hidden="true"><use href="system/ikoner.svg#ik-arrow-right"/></svg>  (sökvägen relativ sajtroten;
+    från site/komponenter/ blir den ../../system/ikoner.svg). Kräver http och samma origin (extern <use> blockeras på file:// i Chromium).
     Källor: pilen = cta-website offert-cta.html (16-rutnät M4.7 11.3 11.3 4.7 ... skalad x1.5), luren = ring-cta.html (lur med två ljudbågar),
     bocken = elcentral-kollen __check, chevron = eljour-block __chev, i-ikonen = elcentral info-ruta, varning = eljour __safety.
+    Tillagda 2026-09-12: ik-camera (fotobedomningen eyebrow, ersätter ik-search), ik-lamp / ik-kitchen / ik-bolt-alert (headerns mega-meny:
+    Belysning, Kök och badrum, Akut och service; källans Shovel/light-bulb/window laddas från ampy.se), ik-linkedin / ik-instagram / ik-facebook (footern).
   -->
   <symbol id="ik-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="ik-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M17 7H7M17 7v10"/></symbol>
@@ -30,4 +33,11 @@
   <symbol id="ik-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="ik-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m21 8-8 5.2a1.9 1.9 0 0 1-2 0L3 8"/></symbol>
   <symbol id="ik-google" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.2 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C41.4 34.8 44 29.9 44 24c0-1.3-.1-2.6-.4-3.9z"/></symbol>
+  <symbol id="ik-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.6-2.5h6.8L17 8h3a1.5 1.5 0 0 1 1.5 1.5V18a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 18V9.5A1.5 1.5 0 0 1 4 8Z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+  <symbol id="ik-lamp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.7 17c-.1-1-.5-1.7-1.2-2.4A5.6 5.6 0 0 1 6.5 10.3a5.5 5.5 0 0 1 11 0c0 1.6-.7 3-2 4.3-.7.7-1.1 1.4-1.2 2.4"/><path d="M9.5 20h5M10.5 22.5h3"/></symbol>
+  <symbol id="ik-kitchen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5V7M9.5 3.5h5"/><path d="M5 12.5c0-3.2 3.1-5.5 7-5.5s7 2.3 7 5.5"/><path d="M3.5 12.5h17"/><path d="M17 12.5v2.5a3 3 0 0 1-3 3h-1.5v2.5"/></symbol>
+  <symbol id="ik-bolt-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M13 6.5 8 13h4l-1 4.5 5-6.5h-4l1-4.5Z"/></symbol>
+  <symbol id="ik-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5h-3V21h3V8.5ZM5 3.5a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5ZM21 13.4c0-3.4-1.8-5.2-4.4-5.2-1.9 0-2.9 1-3.4 1.8V8.5H10V21h3.2v-6.2c0-1.6.6-2.7 2-2.7 1.3 0 1.7 1 1.7 2.6V21H21v-7.6Z"/></symbol>
+  <symbol id="ik-instagram" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c2.4 0 2.7 0 3.7.1 2.6.1 4.1 1.6 4.2 4.2.1 1 .1 1.3.1 3.7s0 2.7-.1 3.7c-.1 2.6-1.6 4.1-4.2 4.2-1 .1-1.3.1-3.7.1s-2.7 0-3.7-.1c-2.6-.1-4.1-1.6-4.2-4.2C4 14.7 4 14.4 4 12s0-2.7.1-3.7C4.2 5.7 5.7 4.2 8.3 4.1 9.3 4 9.6 4 12 4Zm0 2c-2.4 0-2.6 0-3.6.1-1.6.1-2.3.8-2.4 2.4C6 8.4 6 8.6 6 11v2c0 2.4 0 2.6.1 3.6.1 1.6.8 2.3 2.4 2.4 1 .1 1.2.1 3.6.1s2.6 0 3.6-.1c1.6-.1 2.3-.8 2.4-2.4.1-1 .1-1.2.1-3.6v-2c0-2.4 0-2.6-.1-3.6-.1-1.6-.8-2.3-2.4-2.4C14.6 5 14.4 5 12 5Zm0 3.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6Zm0 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6Zm4-3.1a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8Z"/></symbol>
+  <symbol id="ik-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.2c0-.9.3-1.4 1.5-1.4h1.4V5.1c-.3 0-1.1-.1-2.1-.1-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.6v7h2.9Z"/></symbol>
 </svg>

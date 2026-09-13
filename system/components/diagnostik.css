@@ -67,7 +67,7 @@
 .ampy-diag__rail-actions > .ampy-btn { flex: 1 1 0; min-width: 0; }                                                 /* källa: två lika breda knappar, label vänster / ikon höger (--block) */
 .ampy-diag__rail-stat { margin: var(--ampy-space-xs) 0 0; font-size: var(--ampy-text-small); font-weight: var(--ampy-w-ui); line-height: 1.6; color: var(--ampy-ink-muted); max-width: var(--ampy-measure-lead); }   /* källa 14/450 -> small 16/14.1 400 */
 .ampy-diag__rail-stat a { color: inherit; text-decoration: none; }
-.ampy-diag__rail-stat a:hover { color: var(--ampy-ink); text-decoration: underline; text-underline-offset: 2px; }
+.ampy-diag__rail-stat a:hover, .ampy-diag__rail-stat a.is-hover { color: var(--ampy-ink); text-decoration: underline; text-underline-offset: 2px; }
 .ampy-diag__rail-ask { display: none; margin: 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-medium); line-height: 1.4; color: var(--ampy-ink); }   /* "Hellre prata med en elektriker direkt?" 17/500, bara mobil */
 /* Mobil: railen packas upp (display: contents) och ordnas runt kortet: H1, lead, KORTET, ask, knappar, stat (elcentralkollen.css:243-270) */
 @container ampy-diag (max-width: 939.98px) {
@@ -117,7 +117,7 @@
 .ampy-diag__step.is-current { width: 28px; background: var(--ampy-action-strong); }
 .ampy-diag__back, .ampy-diag__restart { display: inline-flex; align-items: center; gap: var(--ampy-space-3xs); min-height: 44px; padding: var(--ampy-space-4xs) 0; margin: 0; border: 0; background: none; cursor: pointer; font-family: var(--ampy-font); font-size: var(--_fine); font-weight: var(--ampy-w-ui); color: var(--ampy-ink-muted); border-radius: var(--ampy-radius-small); transition: color var(--ampy-dur-fast) var(--ampy-ease); }
 .ampy-diag__back svg { width: 16px; height: 16px; transform: rotate(180deg); }   /* spritens pil pekar höger; "Tillbaka" pekar vänster */
-.ampy-diag__back:hover, .ampy-diag__restart:hover { color: var(--ampy-action-strong); }
+.ampy-diag__back:hover, .ampy-diag__back.is-hover, .ampy-diag__restart:hover, .ampy-diag__restart.is-hover { color: var(--ampy-action-strong); }
 .ampy-diag__back:focus-visible, .ampy-diag__restart:focus-visible { outline: 2px solid var(--ampy-focus); outline-offset: 2px; }
 .ampy-diag__restart { font-size: var(--ampy-text-eyebrow); }                     /* källa: "Börja om" 12, nedtonad (aldrig en feltryck-magnet) */
 .ampy-diag__crumb-job { font-size: var(--ampy-text-label); font-weight: var(--ampy-w-strong); color: var(--ampy-ink); }   /* elkollen: crumb bär jobbtiteln på beskedet */
@@ -181,7 +181,7 @@
 .ampy-diag__finding-label { flex: 1 1 auto; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-medium); line-height: 1.5; }   /* källa 18/15 500 */
 .ampy-diag__finding-chevron { flex-shrink: 0; width: 18px; height: 18px; margin-top: 4px; color: var(--ampy-ink-faint); transition: transform var(--ampy-dur-base) var(--ampy-ease); }
 .ampy-diag__finding.is-open .ampy-diag__finding-chevron { transform: rotate(180deg); }
-.ampy-diag__finding-head:hover .ampy-diag__finding-chevron { color: var(--ampy-ink-muted); }
+.ampy-diag__finding-head:hover .ampy-diag__finding-chevron, .ampy-diag__finding-head.is-hover .ampy-diag__finding-chevron { color: var(--ampy-ink-muted); }
 .ampy-diag__finding-head:focus-visible { outline: 0; box-shadow: var(--ampy-focus-ring); border-radius: var(--ampy-radius-small); }
 .ampy-diag__finding-detail { padding-left: calc(20px + var(--ampy-space-xs)); padding-bottom: var(--ampy-space-2xs); }
 .ampy-diag__finding-detail[hidden] { display: none; }
@@ -197,7 +197,7 @@
 .ampy-diag__factnote p { margin: 0; font-size: var(--_fine); line-height: 1.55; color: var(--ampy-ink-muted); max-width: var(--ampy-measure); }
 .ampy-diag__factnote p + p { margin-top: var(--ampy-space-3xs); }
 .ampy-diag__factnote a { color: var(--ampy-action-strong); text-decoration: underline; text-underline-offset: 2px; }
-.ampy-diag__factnote a:hover { color: var(--ampy-ink); }
+.ampy-diag__factnote a:hover, .ampy-diag__factnote a.is-hover { color: var(--ampy-ink); }
 
 /* ---------- Besked: trafikljus-board (elkollen behorighetskollen.css:1223-1290) ----------
    Kortet bär data-verdict: 6 px sidostapel längs hela kortet + topp-wash 200/120, board = ikon + ord, tonad hårlinje. */
@@ -214,13 +214,13 @@
 .ampy-diag__board svg { flex-shrink: 0; width: 20px; height: 20px; color: var(--_v-accent, var(--ampy-ink)); }
 .ampy-diag__src { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--ampy-space-4xs); padding: var(--ampy-space-4xs) 0; font-size: var(--ampy-text-eyebrow); font-weight: var(--ampy-w-ui); color: var(--ampy-ink-faint); text-decoration: none; transition: color var(--ampy-dur-fast) var(--ampy-ease); }   /* elkollen __verdict-src 12 tertiär + extern-ikon 13 ; bara GUL/RÖD */
 .ampy-diag__src svg { width: 13px; height: 13px; opacity: .75; flex-shrink: 0; }
-.ampy-diag__src:hover { color: var(--ampy-ink); }
-.ampy-diag__src:hover span { text-decoration: underline; text-underline-offset: 2px; }
+.ampy-diag__src:hover, .ampy-diag__src.is-hover { color: var(--ampy-ink); }
+.ampy-diag__src:hover span, .ampy-diag__src.is-hover span { text-decoration: underline; text-underline-offset: 2px; }
 .ampy-diag__src:focus-visible { outline: 0; box-shadow: var(--ampy-focus-ring); border-radius: var(--ampy-radius-small); }
 /* Tabbar (behorighetskollen.css:438-473): tunn understrykning, vikt 500 i båda lägena (ingen breddskuttning) */
 .ampy-diag__tabs { display: flex; gap: var(--ampy-space-m); margin: 0 0 var(--ampy-space-s); border-bottom: 1px solid var(--ampy-line); }
 .ampy-diag__tab { min-height: 44px; margin: 0 0 -1px; padding: 0 0 var(--ampy-space-2xs); border: 0; border-bottom: 2px solid transparent; background: none; cursor: pointer; font-family: var(--ampy-font); font-size: var(--ampy-text-small); font-weight: var(--ampy-w-medium); color: var(--ampy-ink-muted); transition: color var(--ampy-dur-fast) var(--ampy-ease), border-color var(--ampy-dur-fast) var(--ampy-ease); }
-.ampy-diag__tab:hover { color: var(--ampy-ink); }
+.ampy-diag__tab:hover, .ampy-diag__tab.is-hover { color: var(--ampy-ink); }
 .ampy-diag__tab[aria-selected="true"] { color: var(--ampy-ink); border-bottom-color: var(--_v-accent, var(--ampy-action)); }
 .ampy-diag__tab:focus-visible { outline: 0; box-shadow: 0 -2px 0 var(--ampy-action-strong) inset; }
 .ampy-diag__tab-body { padding-left: var(--ampy-space-2xs); margin-bottom: var(--ampy-space-s); }

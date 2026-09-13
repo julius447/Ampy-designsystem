@@ -34,6 +34,8 @@
    · .ampy-quick/.ampy-faq/.ampy-table/.ampy-byline/.ampy-toc/.ampy-callout = article-template src/ + handover-ampy-tabell/ampy-tabell.css (auk 2)
    · .ampy-timeline     = offer-accepted styles.css:81-104 (.oa__steps, auk 3: enda belägget)
    · .ampy-booking      = booking-confirmation assets/bokning.css (.bk-card/.bk-when/.bk-fact/.bk-row/.bk-total, auk 2)
+   · .ampy-afk__form/__stapel/__submit = fotobedomningen v2/dist/afk-styles.css:184-262 (formläget "fem staplar, en tänd", auk 2)
+   · .ampy-tick         = thank-you styles.css:49-58 + index.html:21-27 (bekräftelse-bocken, auk 2)
 
    Beroenden (S2): .ampy-btn (--primary/--ring/--secondary/--ghost/--compact/--block, __icon, __chip),
    .ampy-eyebrow, .ampy-tag (--live, __pulse), .ampy-proof, .ampy-quote, .ampy-list--check (--compact),
@@ -240,13 +242,14 @@
   display: flex; flex-direction: column;
   min-height: 360px; height: 100%;             /* delivery css:43 */
   padding: var(--ampy-space-m) var(--ampy-space-m) var(--ampy-space-l);   /* delivery css:44 m/m/l */
-  border-radius: var(--ampy-radius-card);      /* delivery css:45 legacy --radius 16 -> card 20/16.3 */
-  background: var(--ampy-bg-dark);             /* delivery css:46 -27deg #0b0f30 -> #2d516d = drift (B9: platt midnight) */
+  border-radius: 16px;                          /* delivery css:45 legacy --radius 16 ordagrant (auk 1, V1 LÅST) ; card-token 20 = --flat (B4) */
+  background: linear-gradient(-27deg, #0b0f30 0%, #2d516d 60%);   /* delivery css:46 ordagrant (auk 1, V1 LÅST) ; #2d516d = tredje navyn utan token, se B9 */
   color: var(--ampy-on-dark);
   box-shadow: var(--ampy-shadow-card);         /* delivery css:48 0 0 16px rgba(190,190,190,.14) = drift (B10) */
   position: relative; margin: 0;
   font-family: var(--ampy-font);
 }
+.ampy-testimonial--flat { background: var(--ampy-bg-dark); border-radius: var(--ampy-radius-card); }   /* B9/B4-alternativet (platt midnight, radie 20): visas bredvid kanon tills Julius svarat (granskning S4-7) */
 .ampy-testimonial__top { display: flex; align-items: center; justify-content: space-between; min-height: 24px; }
 .ampy-testimonial__quote { font-size: 56px; line-height: 1; font-weight: var(--ampy-w-strong); color: var(--apneon-mint); opacity: .55; height: 24px; margin-top: -4px; user-select: none; }   /* delivery css:53-58 */
 .ampy-testimonial__google { width: 22px; height: 22px; flex: 0 0 auto; }
@@ -707,7 +710,9 @@
 .ampy-hero1 { padding: 20px 26px 30px; background: var(--ampy-bg-page); }   /* style.css section-padding 20/26/30 */
 .ampy-hero1 .ampy-frame { border-radius: 22px; }   /* style.css:192 radie 22 (18 mobil) ; card-token = 20 */
 .ampy-hero1__stack { display: flex; flex-direction: column; align-items: flex-start; }
-.ampy-hero1__stack .ampy-display { margin: 0 0 18px; }          /* style.css h1 -> lead 18 */
+.ampy-hero1__stack .ampy-display { margin: 0 0 18px; max-width: none; text-shadow: none; }   /* style.css h1 -> lead 18 ; som <p> (S4-15): ingen mått-/skuggärvning från p-reglerna */
+.ampy-hero1__stack .ampy-display br { display: none; }          /* style.css:232-233: H1-brytningen bara från 993 (mobilen bryter fritt, ingen orphan-rad) */
+@media (min-width: 993px) { .ampy-hero1__stack .ampy-display br { display: inline; } }
 .ampy-hero1__stack .ampy-lead { margin: 0 0 32px; max-width: 54ch; }   /* lead -> CTA 32 ; A-lead 54ch */
 @media (max-width: 992px) { .ampy-hero1 .ampy-frame { border-radius: 18px; } }
 @media (max-width: 560px) {
@@ -739,7 +744,7 @@
 .ampy-hero2__crumbs a { color: inherit; text-decoration: none; }
 .ampy-hero2__crumbs span[aria-hidden] { opacity: .6; font-size: 8px; }
 .ampy-hero2__body { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
-.ampy-hero2__h1 { margin: 0 0 18px; font-size: var(--ampy-text-h1); font-weight: var(--ampy-w-display); line-height: var(--ampy-lh-display); letter-spacing: -0.008em; color: var(--ampy-on-dark); text-wrap: balance; }   /* primitives 34/40/48 700 -.008em */
+.ampy-hero2__h1, .ampy-on-dark p.ampy-hero2__h1 { margin: 0 0 18px; max-width: none; font-size: var(--ampy-text-h1); font-weight: var(--ampy-w-display); line-height: var(--ampy-lh-display); letter-spacing: -0.008em; color: var(--ampy-on-dark); text-wrap: balance; }   /* primitives 34/40/48 700 -.008em ; p-varianten: rollen får bäras av <p> när sidan redan har en h1 (S4-15) */
 .ampy-hero2__lead { margin: 0 0 32px; font-size: 20px; font-weight: var(--ampy-w-ui); line-height: 1.6; color: var(--ampy-on-dark-soft); max-width: 46ch; }   /* primitives lead 20/32 ; token lead = 17->22 (B18) */
 .ampy-hero2__actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 44px; }   /* CTA -> proof 44 */
 .ampy-hero2__media { position: relative; z-index: 1; border-radius: var(--ampy-radius-card); overflow: hidden; aspect-ratio: 1 / 1; }
@@ -810,9 +815,9 @@
 
 /* =========================================================================
    14. FÖRE/EFTER (fore-efter-cro .ampy-foreefter, riktning A "Reglaget")
-   Två kvadratiska ramar, FÖRE klippt med clip-path via --ampy-ba-pos, chip, söm, handtag, ledtråd, range 44.
+   Två kvadratiska ramar, FÖRE klippt med clip-path via --_pos (registrerad, komponent-egen; hette --ampy-ba-pos, bytt per granskning TOKENS-1), chip, söm, handtag, ledtråd, range 44.
    ========================================================================= */
-@property --ampy-ba-pos { syntax: "<percentage>"; inherits: true; initial-value: 35%; }
+@property --_pos { syntax: "<percentage>"; inherits: true; initial-value: 35%; }
 .ampy-ba {
   container-type: inline-size; container-name: ampyba;
   position: relative;
@@ -825,7 +830,7 @@
 .ampy-ba__accent { position: relative; white-space: nowrap; }
 .ampy-ba__accent::after { content: ""; position: absolute; left: 0; right: 0; bottom: -0.04em; height: 0.075em; border-radius: var(--ampy-radius-pill); background: var(--ampy-ink); }   /* fe:88 understrykning som linje */
 .ampy-ba__pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--ampy-space-m); align-items: start; }
-.ampy-ba__fig { container-type: inline-size; container-name: ampybafig; margin: 0; --ampy-ba-pos: 35%; }
+.ampy-ba__fig { container-type: inline-size; container-name: ampybafig; margin: 0; --_pos: 35%; }
 .ampy-ba__fig:only-child { max-width: 620px; margin-inline: auto; }
 .ampy-ba__frame {
   position: relative; aspect-ratio: 1 / 1; border-radius: var(--ampy-radius-card); overflow: hidden;
@@ -836,14 +841,14 @@
 .ampy-ba__frame::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(9,11,50,.07); pointer-events: none; z-index: 7; }
 .ampy-ba__layer { position: absolute; inset: 0; }
 .ampy-ba__layer > img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; user-select: none; }
-.ampy-ba__layer--fore { clip-path: inset(0 calc(100% - var(--ampy-ba-pos)) 0 0); z-index: 2; }
-.ampy-ba__chips { position: absolute; inset: 0; z-index: 5; pointer-events: none; clip-path: inset(0 0 0 var(--ampy-ba-pos)); }
-.ampy-ba__seam { position: absolute; top: 0; bottom: 0; left: var(--ampy-ba-pos); width: 2px; margin-left: -1px; background: var(--appure-white); box-shadow: 0 0 0 1px rgba(9,11,50,.18), 0 0 22px rgba(9,11,50,.28); pointer-events: none; z-index: 4; }
-.ampy-ba__handle { position: absolute; top: 50%; left: var(--ampy-ba-pos); transform: translate(-50%, -50%); width: 52px; height: 52px; border-radius: var(--ampy-radius-pill); background: var(--appure-white); box-shadow: 0 3px 16px rgba(9,11,50,.32); display: grid; place-items: center; color: var(--ampy-ink); pointer-events: none; z-index: 6; }
+.ampy-ba__layer--fore { clip-path: inset(0 calc(100% - var(--_pos)) 0 0); z-index: 2; }
+.ampy-ba__chips { position: absolute; inset: 0; z-index: 5; pointer-events: none; clip-path: inset(0 0 0 var(--_pos)); }
+.ampy-ba__seam { position: absolute; top: 0; bottom: 0; left: var(--_pos); width: 2px; margin-left: -1px; background: var(--appure-white); box-shadow: 0 0 0 1px rgba(9,11,50,.18), 0 0 22px rgba(9,11,50,.28); pointer-events: none; z-index: 4; }
+.ampy-ba__handle { position: absolute; top: 50%; left: var(--_pos); transform: translate(-50%, -50%); width: 52px; height: 52px; border-radius: var(--ampy-radius-pill); background: var(--appure-white); box-shadow: 0 3px 16px rgba(9,11,50,.32); display: grid; place-items: center; color: var(--ampy-ink); pointer-events: none; z-index: 6; }
 .ampy-ba__handle::before { content: ""; position: absolute; inset: -5px; border-radius: inherit; border: 1px solid rgba(255,255,255,.55); }
 .ampy-ba__handle svg { width: 23px; height: 23px; }
 .ampy-ba__fig:has(.ampy-ba__range:focus-visible) .ampy-ba__handle { box-shadow: 0 3px 16px rgba(9,11,50,.32), 0 0 0 4px var(--ampy-action); }
-.ampy-ba__hint { position: absolute; left: clamp(102px, var(--ampy-ba-pos), calc(100% - 102px)); top: calc(50% + 46px); transform: translateX(-50%); margin: 0; padding: 7px 14px; border-radius: var(--ampy-radius-pill);
+.ampy-ba__hint { position: absolute; left: clamp(102px, var(--_pos), calc(100% - 102px)); top: calc(50% + 46px); transform: translateX(-50%); margin: 0; padding: 7px 14px; border-radius: var(--ampy-radius-pill);
   background: var(--ampy-bg-glass-dark); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: var(--ampy-on-dark);
   font-size: var(--ampy-text-small); font-weight: var(--ampy-w-ui); line-height: 1; white-space: nowrap; pointer-events: none; z-index: 6; transition: opacity 250ms var(--ampy-ease); }
 .ampy-ba__fig.is-touched .ampy-ba__hint { opacity: 0; }
@@ -852,15 +857,15 @@
 .ampy-ba__chip--fore { background: var(--ampy-bg-glass-dark); color: var(--ampy-on-dark); border: 1px solid rgba(255,255,255,.16); -webkit-backdrop-filter: blur(10px) saturate(150%); backdrop-filter: blur(10px) saturate(150%); }
 .ampy-ba__chip--efter { right: var(--ampy-space-xs); left: auto; background: var(--apneon-mint); color: var(--ampy-ink); }
 .ampy-ba__range { display: block; width: 100%; height: 44px; margin: var(--ampy-space-2xs) 0 0; padding: 0; background: transparent; border: 0; -webkit-appearance: none; appearance: none; touch-action: pan-y pinch-zoom; cursor: ew-resize; }
-.ampy-ba__range::-webkit-slider-runnable-track { height: 6px; border-radius: var(--ampy-radius-pill); background: linear-gradient(90deg, rgba(9,11,50,.22) 0 var(--ampy-ba-pos), var(--ampy-action) var(--ampy-ba-pos) 100%); }
-.ampy-ba__range::-moz-range-track { height: 6px; border-radius: var(--ampy-radius-pill); background: linear-gradient(90deg, rgba(9,11,50,.22) 0 var(--ampy-ba-pos), var(--ampy-action) var(--ampy-ba-pos) 100%); }
+.ampy-ba__range::-webkit-slider-runnable-track { height: 6px; border-radius: var(--ampy-radius-pill); background: linear-gradient(90deg, rgba(9,11,50,.22) 0 var(--_pos), var(--ampy-action) var(--_pos) 100%); }
+.ampy-ba__range::-moz-range-track { height: 6px; border-radius: var(--ampy-radius-pill); background: linear-gradient(90deg, rgba(9,11,50,.22) 0 var(--_pos), var(--ampy-action) var(--_pos) 100%); }
 .ampy-ba__range::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; margin-top: -10px; border-radius: var(--ampy-radius-pill); background: var(--appure-white); border: 2px solid var(--ampy-ink); box-shadow: 0 2px 6px rgba(9,11,50,.3); cursor: ew-resize; }
 .ampy-ba__range::-moz-range-thumb { width: 26px; height: 26px; border-radius: var(--ampy-radius-pill); background: var(--appure-white); border: 2px solid var(--ampy-ink); box-shadow: 0 2px 6px rgba(9,11,50,.3); cursor: ew-resize; }
 .ampy-ba__range:focus { outline: none; }
 .ampy-ba__range:focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 4px; border-radius: var(--ampy-radius-pill); }   /* fe: teal -> navy (B14) */
 .ampy-ba__tagline { max-width: 62ch; margin: var(--ampy-space-l) auto 0; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-ui); line-height: 1.45; color: rgba(9,11,50,.78); text-align: center; text-wrap: balance; }
 .ampy-ba__sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.ampy-ba__fig.is-smooth { transition: --ampy-ba-pos 260ms cubic-bezier(.22,.61,.36,1); }   /* fe: bara vid tangentbord/klick, aldrig under drag */
+.ampy-ba__fig.is-smooth { transition: --_pos 260ms cubic-bezier(.22,.61,.36,1); }   /* fe: bara vid tangentbord/klick, aldrig under drag */
 @container ampyba (max-width: 680px) { .ampy-ba__pair { grid-template-columns: 1fr; gap: var(--ampy-space-s); } }
 @container ampybafig (max-width: 420px) { .ampy-ba__handle { width: 46px; height: 46px; } .ampy-ba__chip { padding: 7px 12px; } }
 @media (prefers-reduced-motion: reduce) { .ampy-ba__fig.is-smooth { transition: none; } .ampy-ba__hint { transition: none; } }
@@ -944,6 +949,40 @@
 @keyframes ampyAfkPuls { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
 @container ampyafk (min-width: 900px) { .ampy-afk__card { padding-block: 32px; } }   /* källans tvåkolumns-kort (480 | 724, H2 36) är inte klonat: kortet förblir 358 */
 @media (prefers-reduced-motion: reduce) { .ampy-afk__glyf--puls svg { animation: none; } }
+/* 16b. FORMLÄGET: "fem staplar, en tänd" (afk-styles.css:184-262). Fotoruta + tre fält = fyra identiska kalla
+   52 px-staplar (r12, sky-mist, 1 px kontrollkant); femte stapeln är submiten: 58 px, r16, blockets ENDA gradient/skugga. */
+.ampy-afk__form { display: block; margin: 0; }
+.ampy-afk__stapel { display: flex; align-items: center; gap: 12px; width: 100%; height: 52px; padding: 0 16px; margin: 0;
+  background: var(--ampy-bg-subtle); border: 1px solid var(--ampy-ink-faint); border-radius: var(--ampy-radius-field);   /* afk:184-195: #f5f9ff + kant #5f6480 (5,80:1) -> ink-faint 4,80:1 (>= 3:1 för kontrollkant) ; 52 exakt = drift mot --ampy-field-h 48 */
+  font-family: inherit; font-size: 17px; font-weight: var(--ampy-w-ui); line-height: 1.2; color: var(--ampy-ink);
+  -webkit-appearance: none; appearance: none; transition: border-color .16s ease, background-color .16s ease, box-shadow .16s ease; }
+.ampy-afk__foto { display: flex; margin: 0 0 8px; }
+.ampy-afk__stapel--foto { padding: 0 16px 0 8px; cursor: pointer; position: relative; }
+.ampy-afk__chip { flex: 0 0 auto; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: var(--apteal-tint); border-radius: 10px; color: var(--ampy-action-strong); }   /* afk:199-204 ; radie 10 saknar token */
+.ampy-afk__chip svg { width: 20px; height: 20px; }
+.ampy-afk__stapel-text { font-weight: var(--ampy-w-medium); }
+.ampy-afk__fil { position: absolute; width: 1px; height: 1px; opacity: 0; clip-path: inset(50%); pointer-events: none; }   /* afk:208-211: dold men KVAR i flödet */
+.ampy-afk__stapel--foto:focus-within { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+.ampy-afk__ansvar--l1 { margin: 0 0 16px; }
+.ampy-afk__falt { margin: 0 0 14px; }
+.ampy-afk__label { display: block; margin: 0 0 6px; font-size: 15px; font-weight: var(--ampy-w-medium); line-height: 20px; color: var(--apnavy-ink); }   /* afk:219-223 */
+.ampy-afk__input { display: block; }
+.ampy-afk__input::placeholder { color: var(--ampy-ink-muted); }
+.ampy-afk__input:focus-visible, .ampy-afk__stapel:focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+.ampy-afk__submit { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 58px; padding: 11px 22px; margin: 0 0 14px;
+  border: 0; border-radius: var(--ampy-radius-button); font-family: var(--ampy-font); font-size: var(--ampy-text-button); font-weight: var(--ampy-w-medium); line-height: 1;
+  color: var(--ampy-action-gradient-on); background: var(--ampy-action-gradient); box-shadow: var(--ampy-shadow-button); cursor: pointer; white-space: normal;
+  transition: transform .16s ease, box-shadow .16s ease, filter .16s ease; -webkit-tap-highlight-color: transparent; }   /* afk:240-253 = CTA-bibliotekets 58/16/gradient, naken pil */
+.ampy-afk__submit svg { flex: 0 0 auto; width: 18px; height: 18px; transition: transform .16s ease; }
+.ampy-afk__submit:focus-visible { outline: 3px solid var(--ampy-focus); outline-offset: 3px; }
+.ampy-afk__submit:active { transform: translateY(0); filter: saturate(1.05); }
+.ampy-afk__candour { margin: 0; font-size: 15px; font-weight: var(--ampy-w-body); line-height: 1.5; color: var(--ampy-ink-muted); }   /* afk:260-262: candour under submiten på alla vyer */
+@media (hover: hover) {
+  .ampy-afk__stapel--foto:hover, .ampy-afk__input:hover { background: var(--ampy-bg-surface); border-color: var(--ampy-ink); }
+  .ampy-afk__submit:hover { transform: translateY(-1px); box-shadow: var(--ampy-shadow-button-hover); }
+  .ampy-afk__submit:hover svg { transform: scale(1.18); }
+}
+@media (prefers-reduced-motion: reduce) { .ampy-afk__submit, .ampy-afk__submit svg, .ampy-afk__stapel, .ampy-afk__input { transition: none; transform: none; } }
 
 /* =========================================================================
    17. VISSTE DU ATT (visste-du-att.css): midnight-kort med kicker + blixt, H2, text, lampa. Lätt register.
@@ -962,7 +1001,7 @@
   background: radial-gradient(58% 70% at 88% 18%, rgba(0,169,145,.42), transparent 70%), radial-gradient(46% 56% at 96% 4%, rgba(85,255,154,.18), transparent 72%); }   /* vda:30-32 ; B9: enda blocket utanför kitet som behåller glöden (slutaudit GO) */
 .ampy-vda__content, .ampy-vda__media { position: relative; z-index: 1; }
 .ampy-vda__content { display: flex; flex-direction: column; gap: var(--ampy-space-s); }
-.ampy-vda__kicker { display: flex; align-items: center; gap: 8px; margin: 0; font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-medium); line-height: 1.2; color: var(--ampy-action); }   /* vda:41 --aptext-l 24/500 teal -> h3 22 (teal som STOR text, 6,4:1 på midnight) */
+.ampy-vda__kicker { display: flex; align-items: center; gap: 8px; margin: 0; font-size: var(--ampy-text-h3); font-weight: var(--ampy-w-medium); line-height: 1.2; color: var(--ampy-action); }   /* vda:52 --aptext-l 24/500 teal -> h3 22 ; teal core som text på midnight (6,41:1) tillåtet per B21: kicker >= 16 px där källan gör så ; på ljus yta aldrig */
 .ampy-vda__kicker svg { flex: none; width: 18px; height: 18px; }
 .ampy-vda__heading { margin: 0; font-size: var(--ampy-text-h2); font-weight: var(--ampy-w-heading); line-height: var(--ampy-lh-heading); color: var(--ampy-on-dark); text-wrap: balance; }
 .ampy-vda__text { margin: 0; max-width: 54ch; font-size: var(--ampy-text-body); font-weight: var(--ampy-w-body); line-height: var(--ampy-lh-body); color: rgba(255,255,255,.82); }   /* vda:65 .82 (token muted = .66, soft = .92) */
@@ -976,7 +1015,7 @@
   .ampy-vda__bulb { max-width: 120px; }
   .ampy-vda__card::before { background: radial-gradient(70% 42% at 50% 8%, rgba(0,169,145,.40), transparent 70%); }
 }
-@media (max-width: 480px) { .ampy-vda { padding: var(--ampy-space-l) var(--ampy-space-s); } .ampy-vda__card { padding: var(--ampy-space-l); } .ampy-vda__bulb { max-width: 96px; } .ampy-vda__kicker { font-size: var(--ampy-text-body); } }
+@media (max-width: 480px) { .ampy-vda { padding: var(--ampy-space-l) var(--ampy-space-s); } .ampy-vda__card { padding: var(--ampy-space-l); } .ampy-vda__bulb { max-width: 96px; } .ampy-vda__kicker { font-size: var(--ampy-text-body); } }   /* 16,1 px @390 = B21-golvet 16 */
 
 /* =========================================================================
    18. ARTIKELKOMPONENTER (article-template): snabbfakta, FAQ, tabell, byline, TOC, callout
@@ -1065,7 +1104,7 @@
   box-shadow: 0 18px 44px rgba(9,11,50,.09), inset 0 1px 0 rgba(255,255,255,.6); padding: clamp(24px, 3vw, 32px) clamp(16px, 3.2vw, 32px); }
 .ampy-booking__card > * + * { margin-top: 16px; }
 .ampy-booking__cap { margin: 0; font-size: var(--ampy-text-eyebrow); font-weight: var(--ampy-w-display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ampy-ink-faint); }   /* bk: 12/700 .12em #646b88 */
-.ampy-booking__day { margin: 0; font-size: var(--ampy-text-h1); font-weight: var(--ampy-w-strong); letter-spacing: -0.025em; line-height: 1.05; color: var(--ampy-ink); text-wrap: balance; }   /* bk: clamp(30,5.5vw,46)/600 -> h1 31->48 */
+.ampy-booking__day { margin: 0; max-width: none; font-size: var(--ampy-text-h1); font-weight: var(--ampy-w-strong); letter-spacing: -0.025em; line-height: 1.05; color: var(--ampy-ink); text-wrap: balance; }   /* bk: clamp(30,5.5vw,46)/600 -> h1 31->48 */
 .ampy-booking__rel { display: block; color: var(--ampy-action-strong); }   /* bk: teal-ink #016a5d -> teal-deep */
 .ampy-booking__facts { display: flex; flex-direction: column; gap: 16px; padding-top: 24px; border-top: 1px solid var(--ampy-line); }
 .ampy-booking__fact { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 16px; align-items: start; }
@@ -1093,6 +1132,27 @@
 .ampy-booking__tlbl span { font-size: var(--ampy-text-fine); font-weight: var(--ampy-w-medium); color: var(--ampy-action-strong); }
 .ampy-booking__tamt { font-size: clamp(26px, 3.4vw, 30px); font-weight: var(--ampy-w-display); letter-spacing: -0.02em; color: var(--ampy-ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
 @media (max-width: 480px) { .ampy-booking__total { flex-direction: column; align-items: flex-start; } }
+
+/* =========================================================================
+   20. BEKRÄFTELSE-BOCKEN (thank-you styles.css:49-58 + index.html:21-27, auk 2)
+   104/88 px, disc-pop 640 ms, bocken ritas 560 ms efter 300 ms, halo 4 s oändlig. Reduced motion: statisk, ritad.
+   ========================================================================= */
+.ampy-tick { --_ease: cubic-bezier(.16,.84,.44,1); --_ease-soft: cubic-bezier(.33,1,.68,1);   /* thank-you --at-ease/--at-ease-soft ; saknar token (--ampy-ease-out är annan kurva) */
+  position: relative; width: clamp(88px, 11vw, 104px); height: clamp(88px, 11vw, 104px); display: grid; place-items: center; }
+.ampy-tick__svg { position: relative; z-index: 2; width: 100%; height: 100%; overflow: visible; display: block; }
+.ampy-tick__halo { position: absolute; inset: 6%; z-index: 1; border-radius: var(--ampy-radius-pill);
+  background: radial-gradient(circle, rgba(85,255,154,.30) 0%, rgba(85,255,154,0) 72%);   /* neonmint .30 -> 0 */
+  animation: ampyTickHalo 4s var(--_ease-soft) infinite; }
+.ampy-tick__disc { transform-origin: center; animation: ampyTickDisc 640ms var(--_ease) both; }
+.ampy-tick__mark { stroke-dasharray: 120; stroke-dashoffset: 120; animation: ampyTickMark 560ms var(--_ease) 300ms both; }
+@keyframes ampyTickDisc { 0% { transform: scale(.62); opacity: 0; } 62% { transform: scale(1.05); } 100% { transform: scale(1); opacity: 1; } }
+@keyframes ampyTickMark { to { stroke-dashoffset: 0; } }
+@keyframes ampyTickHalo { 0% { transform: scale(.8); opacity: 0; } 34% { opacity: .8; } 100% { transform: scale(1.4); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .ampy-tick__disc, .ampy-tick__mark, .ampy-tick__halo { animation: none !important; }
+  .ampy-tick__mark { stroke-dashoffset: 0; }
+  .ampy-tick__halo { opacity: .5; transform: scale(1.1); }
+}
 
 /* ---------- Reduced motion (samlat för block.css) ---------- */
 @media (prefers-reduced-motion: reduce) {
